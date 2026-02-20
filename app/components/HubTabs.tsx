@@ -67,19 +67,16 @@ export default function HubTabs({ ticker, reports }: HubTabsProps) {
                                     cleanMarkdown = cleanMarkdown.replace(/<!--[\s\S]*?-->/g, '');
 
                                     return (
-                                        <div key={report.id} className="border border-zinc-800 rounded-xl overflow-hidden bg-black transition-all">
-                                            <button
-                                                onClick={() => setOpenReport(isOpen ? null : report.id)}
-                                                className="w-full text-left bg-zinc-900 border-b border-zinc-800/0 hover:bg-zinc-800 p-6 flex flex-col md:flex-row md:items-center justify-between gap-6 transition-all"
-                                            >
+                                        <Link key={report.id} href={`/report/${report.id}`} className="block border border-zinc-800 rounded-xl overflow-hidden bg-black transition-all hover:border-emerald-500/50 hover:shadow-[0_0_15px_rgba(16,185,129,0.1)] group">
+                                            <div className="w-full text-left bg-zinc-900/40 group-hover:bg-zinc-800/80 p-6 flex flex-col md:flex-row md:items-center justify-between gap-6 transition-all">
                                                 <div className="flex-1">
                                                     <div className="flex items-center gap-3 mb-2">
-                                                        <Calendar className="w-4 h-4 text-zinc-500" />
+                                                        <Calendar className="w-4 h-4 text-emerald-500/50" />
                                                         <span className="text-xs font-mono text-zinc-400 font-bold uppercase tracking-widest">
                                                             REPORT #{report.id} • {new Date(report.created_at).toISOString().split('T')[0]}
                                                         </span>
                                                     </div>
-                                                    <h4 className="text-lg font-bold text-white group-hover:text-emerald-400 transition-colors">
+                                                    <h4 className="text-lg font-bold text-white group-hover:text-emerald-400 transition-colors flex items-center gap-2">
                                                         Deep Research: {report.ticker} Architecture
                                                     </h4>
                                                 </div>
@@ -94,27 +91,10 @@ export default function HubTabs({ ticker, reports }: HubTabsProps) {
                                                         <span className={`text-2xl font-black font-mono leading-none ${isGood ? 'text-emerald-400' : isBad ? 'text-rose-500' : 'text-yellow-500'}`}>{score}</span>
                                                         <span className="text-[10px] text-zinc-500 uppercase mt-1 font-bold">Score</span>
                                                     </div>
-                                                    <ChevronDown className={`w-5 h-5 text-zinc-500 transition-transform ${isOpen ? "rotate-180" : ""}`} />
+                                                    <ArrowRight className="w-5 h-5 text-zinc-600 group-hover:text-emerald-400 group-hover:translate-x-1 transition-all" />
                                                 </div>
-                                            </button>
-
-                                            {isOpen && (
-                                                <div className="p-6 md:p-10 bg-[#0a0a0a] border-t border-zinc-800 animate-in slide-in-from-top-2 duration-200">
-                                                    <div className="prose prose-invert prose-emerald max-w-none prose-headings:font-black prose-h1:text-4xl prose-h2:text-3xl prose-p:leading-loose prose-p:text-gray-300 prose-p:mb-6 prose-li:mb-2 prose-a:text-emerald-400">
-                                                        {cleanMarkdown ? (
-                                                            <ReactMarkdown remarkPlugins={[remarkBreaks]}>{cleanMarkdown}</ReactMarkdown>
-                                                        ) : (
-                                                            <pre className="font-mono text-gray-500 whitespace-pre-wrap">{report.analysis_text}</pre>
-                                                        )}
-                                                    </div>
-                                                    <div className="mt-10 pt-8 border-t border-zinc-800 flex justify-end">
-                                                        <Link href={`/report/${report.id}`} className="px-6 py-3 bg-zinc-900 border border-zinc-700 hover:border-emerald-500 hover:text-emerald-400 rounded-lg transition-colors text-sm font-bold tracking-widest uppercase flex items-center gap-2">
-                                                            View Full Dedicated Page <ArrowRight className="w-4 h-4" />
-                                                        </Link>
-                                                    </div>
-                                                </div>
-                                            )}
-                                        </div>
+                                            </div>
+                                        </Link>
                                     );
                                 })}
                             </div>

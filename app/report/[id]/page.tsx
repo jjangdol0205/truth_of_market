@@ -48,9 +48,12 @@ export default async function ReportPage({ params }: { params: Promise<{ id: str
     if (scoreObj.total >= 80) scoreColor = "text-[#00FF41]"; // High score is good/buy
     else if (scoreObj.total <= 30) scoreColor = "text-red-500"; // Low score is bad/sell
 
-    // BUG 1: Paywall Not Working (Force Test Mode)
-    // Hardcoded test variable as requested
-    const isProUser = false;
+    // Check if the current user is the admin to bypass the paywall
+    const { data: { session } } = await supabase.auth.getSession();
+    const isAdmin = session?.user?.email === "beable9489@gmail.com";
+
+    // Regular Paywall logic + Admin Bypass
+    const isProUser = isAdmin || false;
 
     return (
         <div className="max-w-4xl mx-auto mt-10 p-6 space-y-8 mb-20">
