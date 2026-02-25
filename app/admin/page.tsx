@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Search, Upload, AlertTriangle, Loader2, Trash2, Database, ShieldAlert, Folder, FolderOpen, ChevronRight, FileText, TrendingUp, Calendar, Users, Star, UserCircle, BadgeCheck } from "lucide-react";
+import { Search, Upload, AlertTriangle, Loader2, Trash2, Database, ShieldAlert, Folder, FolderOpen, ChevronRight, FileText, TrendingUp, Calendar, Users, Star, UserCircle, BadgeCheck, MessageSquare, CheckCircle } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { analyzeTicker } from "../actions";
@@ -27,6 +27,10 @@ export default function AdminPage() {
     // For user management
     const [profiles, setProfiles] = useState<any[]>([]);
     const [fetchingProfiles, setFetchingProfiles] = useState(true);
+
+    // For company requests
+    const [companyRequests, setCompanyRequests] = useState<any[]>([]);
+    const [fetchingRequests, setFetchingRequests] = useState(true);
 
     const toggleFolder = (t: string) => {
         setOpenFolders(prev => ({ ...prev, [t]: !prev[t] }));
@@ -65,6 +69,19 @@ export default function AdminPage() {
                     console.error("Failed to fetch users");
                 }
                 setFetchingProfiles(false);
+
+                // Fetch Company Requests
+                setFetchingRequests(true);
+                try {
+                    const { data: reqData } = await supabase
+                        .from('company_requests')
+                        .select('id, company_name, ticker, status, created_at')
+                        .order('created_at', { ascending: false });
+                    if (reqData) setCompanyRequests(reqData);
+                } catch (e) {
+                    console.error("Failed to fetch company requests", e);
+                }
+                setFetchingRequests(false);
             } else {
                 setIsAuthorized(false);
                 setTimeout(() => {
@@ -109,6 +126,22 @@ export default function AdminPage() {
         } else {
             console.error("Failed to delete report", error);
             alert("삭제 실패 (Delete failed): \nSupabase Row Level Security (RLS) 정책 때문일 가능성이 높습니다. Supabase 대시보드에서 'reports' 테이블의 Delete 권한 정책을 허용하거나 RLS를 활성화/수정해주세요.");
+        }
+    };
+
+    const handleDeleteRequest = async (id: string) => {
+        if (!confirm("Are you sure you want to delete this company request?")) return;
+
+        const { error } = await supabase
+            .from('company_requests')
+            .delete()
+            .eq('id', id);
+
+        if (!error) {
+            setCompanyRequests(prev => prev.filter(r => r.id !== id));
+        } else {
+            console.error("Failed to delete request", error);
+            alert("삭제 실패: 권한 문제일 수 있습니다. (SQL Editor에서 추가한 Delete Policy 실행 필요)");
         }
     };
 
@@ -383,6 +416,68 @@ export default function AdminPage() {
                                     );
                                 });
                             })()}
+                        </div>
+                    )}
+                </div>
+            </div>
+
+            {/* Company Requests Database */}
+            <div className="bg-[#111] border border-[#333] rounded-xl overflow-hidden shadow-2xl mb-12">
+                <div className="p-6 border-b border-[#333] flex justify-between items-center bg-[#151515]">
+                    <h2 className="text-xl font-bold flex items-center text-white">
+                        <MessageSquare className="w-5 h-5 mr-3 text-blue-500" />
+                        User Company Requests
+                    </h2>
+                    <span className="text-zinc-500 font-mono text-sm">{companyRequests.length} Requests</span>
+                </div>
+
+                <div className="bg-[#09090b]">
+                    {fetchingRequests ? (
+                        <div className="p-12 text-center text-zinc-500">
+                            <Loader2 className="w-8 h-8 animate-spin mx-auto mb-3" />
+                            Loading requests...
+                        </div>
+                    ) : companyRequests.length === 0 ? (
+                        <div className="p-12 text-center text-zinc-500">
+                            <CheckCircle className="w-10 h-10 mx-auto mb-4 opacity-50" />
+                            No incoming requests at the moment.
+                        </div>
+                    ) : (
+                        <div className="overflow-x-auto">
+                            <table className="w-full text-left text-sm whitespace-nowrap">
+                                <thead className="bg-[#18181b] border-b border-[#333]">
+                                    <tr>
+                                        <th className="px-6 py-4 font-mono text-zinc-500 uppercase tracking-widest text-xs font-bold">Company Name</th>
+                                        <th className="px-6 py-4 font-mono text-zinc-500 uppercase tracking-widest text-xs font-bold">Ticker</th>
+                                        <th className="px-6 py-4 font-mono text-zinc-500 uppercase tracking-widest text-xs font-bold">Status</th>
+                                        <th className="px-6 py-4 font-mono text-zinc-500 uppercase tracking-widest text-xs font-bold">Requested On</th>
+                                        <th className="px-6 py-4 text-right">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="divide-y divide-zinc-800">
+                                    {companyRequests.map((req) => (
+                                        <tr key={req.id} className="hover:bg-zinc-900/50 transition-colors">
+                                            <td className="px-6 py-4 text-white font-bold">{req.company_name}</td>
+                                            <td className="px-6 py-4 font-mono text-zinc-400">{req.ticker || '-'}</td>
+                                            <td className="px-6 py-4">
+                                                <span className="inline-flex items-center px-2 py-1 rounded bg-blue-500/10 border border-blue-500/20 text-blue-400 font-bold text-xs uppercase tracking-wider">
+                                                    {req.status}
+                                                </span>
+                                            </td>
+                                            <td className="px-6 py-4">
+                                                <span className="text-zinc-500 font-mono text-xs">
+                                                    {new Date(req.created_at).toLocaleString()}
+                                                </span>
+                                            </td>
+                                            <td className="px-6 py-4 text-right">
+                                                <button onClick={() => handleDeleteRequest(req.id)} className="p-1.5 text-zinc-600 hover:text-rose-500 hover:bg-rose-500/10 rounded transition-colors" title="Delete Request">
+                                                    <Trash2 className="w-4 h-4" />
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
                         </div>
                     )}
                 </div>
