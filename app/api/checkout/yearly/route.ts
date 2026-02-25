@@ -1,13 +1,12 @@
-import { NextResponse } from 'next/server';
+import { NextResponse, NextRequest } from 'next/server';
 import { createClient } from '../../../../utils/supabase/server';
 
-export async function GET() {
+export async function GET(req: NextRequest) {
     const supabase = await createClient();
     const { data: { session } } = await supabase.auth.getSession();
 
     if (!session) {
-        const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000');
-        return NextResponse.redirect(new URL('/?login=true', baseUrl));
+        return NextResponse.redirect(new URL('/?login=true', req.url));
     }
 
     const userId = session.user.id;
