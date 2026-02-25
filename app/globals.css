@@ -24,3 +24,15 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #3f3f46;
 }
+
+/* ANTI-COPY & ANTI-PRINT PROTECTION */
+@media print {
+  body {
+    display: none !important;
+  }
+}
+
+.no-select {
+  user-select: none;
+  -webkit-user-select: none;
+}

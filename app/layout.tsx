@@ -3,6 +3,7 @@ import { JetBrains_Mono } from "next/font/google"; // Changed font
 import "./globals.css";
 import TopNav from "./components/TopNav";
 import DisableCopy from "@/components/DisableCopy";
+import PromoBanner from "./components/PromoBanner";
 
 const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"] }); // Initialize font
 
@@ -11,6 +12,8 @@ export const metadata: Metadata = {
   description: "Data-driven financial analysis powered by AI.",
 };
 
+import { GoogleTagManager } from '@next/third-parties/google';
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -18,9 +21,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
+      <GoogleTagManager gtmId="GTM-W9538SHJ" />
       <body className={`${jetbrainsMono.className} bg-black text-white antialiased`}>
         <DisableCopy />
         <div className="min-h-screen flex flex-col">
+          <PromoBanner />
           {/* Header */}
           <TopNav />
 

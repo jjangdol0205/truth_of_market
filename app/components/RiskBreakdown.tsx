@@ -7,9 +7,10 @@ interface ComponentProps {
         insider: number;
         valuation: number;
     };
+    isPro?: boolean;
 }
 
-const RiskBreakdown: React.FC<ComponentProps> = ({ breakdown }) => {
+const RiskBreakdown: React.FC<ComponentProps> = ({ breakdown, isPro = false }) => {
     if (!breakdown) return null;
 
     const maxScores = {
@@ -27,29 +28,39 @@ const RiskBreakdown: React.FC<ComponentProps> = ({ breakdown }) => {
     };
 
     return (
-        <div className="space-y-3 mt-4 font-mono text-xs">
-            {Object.entries(breakdown).map(([key, score]) => {
-                const max = maxScores[key as keyof typeof maxScores] || 100;
-                const color = getColor(score, max);
-                const width = `${(score / max) * 100}%`;
+        <div className="relative mt-4 font-mono text-xs">
+            {!isPro && (
+                <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-black/50 backdrop-blur-[4px] rounded-lg">
+                    <a href="/pricing" className="bg-zinc-900 border border-zinc-700 px-4 py-2 rounded-full shadow-xl flex items-center gap-2 text-white hover:bg-zinc-800 transition-colors">
+                        <span className="text-emerald-500">🔒</span> PRO 모델로 리스크 점수 보기
+                    </a>
+                </div>
+            )}
 
-                return (
-                    <div key={key}>
-                        <div className="flex justify-between mb-1 text-gray-400 uppercase">
-                            <span>{key} Analysis</span>
-                            <span className={score > max / 2 ? 'text-red-400' : 'text-gray-400'}>
-                                {score} / {max}
-                            </span>
+            <div className="space-y-3">
+                {Object.entries(breakdown).map(([key, score]) => {
+                    const max = maxScores[key as keyof typeof maxScores] || 100;
+                    const color = getColor(score, max);
+                    const width = `${(score / max) * 100}%`;
+
+                    return (
+                        <div key={key}>
+                            <div className="flex justify-between mb-1 text-gray-400 uppercase">
+                                <span>{key} Analysis</span>
+                                <span className={score > max / 2 ? 'text-red-400' : 'text-gray-400'}>
+                                    {isPro ? `${score} / ${max}` : `?? / ${max}`}
+                                </span>
+                            </div>
+                            <div className="w-full bg-[#111] h-2 rounded overflow-hidden border border-[#333]">
+                                <div
+                                    className={`h-full ${isPro ? color : 'bg-zinc-700'} transition-all duration-1000`}
+                                    style={{ width: isPro ? width : '50%' }}
+                                ></div>
+                            </div>
                         </div>
-                        <div className="w-full bg-[#111] h-2 rounded overflow-hidden border border-[#333]">
-                            <div
-                                className={`h-full ${color} transition-all duration-1000`}
-                                style={{ width }}
-                            ></div>
-                        </div>
-                    </div>
-                );
-            })}
+                    );
+                })}
+            </div>
         </div>
     );
 };

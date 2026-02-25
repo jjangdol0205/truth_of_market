@@ -4,6 +4,7 @@ import { ArrowLeft, Activity } from "lucide-react";
 import TradingViewWidget from "../../../components/TradingViewWidget";
 import HubTabs from "../../components/HubTabs";
 import ReportCard from "../../components/ReportCard";
+import CompanyLogo from "../../../components/CompanyLogo";
 
 // Ensure dynamic fetching so pricing/reports are fresh
 export const revalidate = 0;
@@ -78,8 +79,6 @@ export default async function CompanyHubPage({ params }: { params: Promise<{ tic
     const isTargetPositive = upsidePercent >= 0;
     const targetColorClass = isTargetPositive ? "text-emerald-400" : "text-rose-400";
 
-    const logoUrl = `https://logo.clearbit.com/${ticker.toLowerCase()}.com`;
-
     return (
         <div className="max-w-6xl mx-auto mt-10 p-6 space-y-8 mb-20 font-sans">
             <Link href="/" className="flex items-center text-zinc-500 hover:text-white transition group w-fit font-mono text-sm tracking-widest uppercase">
@@ -93,10 +92,9 @@ export default async function CompanyHubPage({ params }: { params: Promise<{ tic
 
                 <header className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 relative z-10">
                     <div className="flex items-center gap-5">
-                        <img
-                            src={ticker === 'TSLA' ? 'https://upload.wikimedia.org/wikipedia/commons/e/e8/Tesla_logo.png' : logoUrl}
-                            alt={`${ticker} logo`}
-                            className="w-20 h-20 rounded-2xl object-contain bg-white p-2 shadow-lg"
+                        <CompanyLogo
+                            ticker={ticker}
+                            className="w-20 h-20 rounded-full object-contain bg-white p-1.5 shadow-lg shrink-0"
                         />
                         <div>
                             <h1 className="text-5xl font-black tracking-tighter text-white mb-1">

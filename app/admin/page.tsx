@@ -6,10 +6,11 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { analyzeTicker } from "../actions";
 import TerminalLoader from "../components/TerminalLoader";
-import { supabase } from "../lib/supabase";
+import { createClient } from "../../utils/supabase/client";
 
 export default function AdminPage() {
     const router = useRouter();
+    const supabase = createClient();
     const [isAuthorized, setIsAuthorized] = useState<boolean | null>(null);
 
     const [ticker, setTicker] = useState("");

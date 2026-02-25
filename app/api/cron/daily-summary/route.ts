@@ -63,10 +63,10 @@ Here is the raw closing data for the major indices:
 ${marketDataStr}
 
 Instructions:
-1. Write exactly 3 paragraphs.
-2. Paragraph 1: Executive Summary. Did the market go up or down? What was the overall sentiment (e.g., Risk-On, Risk-Off, Choppy)?
-3. Paragraph 2: Key Drivers. Invent a plausible narrative based strictly on standard macro factors if no news is provided (e.g. inflation concerns, tech rally, rotation into small caps). 
-4. Paragraph 3: The AI Verdict. Give a 1-sentence forward-looking thought or technical warning.
+1. Write exactly 3 sections (can use bullet points).
+2. Section 1: Executive Summary & Indices. Summarize if the market went up or down, the overall sentiment, AND explicitly list the 1-day percentage change for the S&P 500, NASDAQ, and Dow Jones using the raw data provided above.
+3. Section 2: Top 3 Market Drivers. Identify and list the 3 most important news headlines, macro events, or sector shifts that drove the US market today. Use bullet points for these 3 items.
+4. Section 3: The AI Verdict. Give a 1-sentence forward-looking thought or technical warning.
 5. Format the text nicely in Markdown. Use bolding for key terms. DO NOT use emojis. Write entirely in English.
 
 Title Requirement:

@@ -8,6 +8,9 @@ import ScoreGauge from "../../../components/ScoreGauge";
 import TradingViewWidget from "../../../components/TradingViewWidget";
 import CheckoutButton from "../../components/CheckoutButton";
 import { createClient } from "../../../utils/supabase/server";
+import ShareButtons from "../../components/ShareButtons";
+import LeadMagnet from "../../components/LeadMagnet";
+import CompanyLogo from "../../../components/CompanyLogo";
 
 // Force dynamic rendering since we are fetching data that changes
 export const dynamic = "force-dynamic";
@@ -54,8 +57,19 @@ export default async function ReportPage({ params }: { params: Promise<{ id: str
     const { data: { session } } = await supabaseServer.auth.getSession();
     const isAdmin = session?.user?.email === "beable9489@gmail.com";
 
+    // Query profiles table for matching user
+    let isDbPro = false;
+    if (session?.user?.id) {
+        const { data: profile } = await supabaseServer
+            .from('profiles')
+            .select('is_pro')
+            .eq('id', session.user.id)
+            .single();
+        if (profile?.is_pro) isDbPro = true;
+    }
+
     // Regular Paywall logic + Admin Bypass + NVDA Free Sample
-    const isProUser = isAdmin || report.ticker === 'NVDA' || false;
+    const isProUser = isAdmin || isDbPro || report.ticker === 'NVDA' || false;
 
     return (
         <div className="max-w-4xl mx-auto mt-10 p-6 space-y-8 mb-20">
@@ -68,10 +82,9 @@ export default async function ReportPage({ params }: { params: Promise<{ id: str
                 <div className="flex justify-between items-start">
                     <div>
                         <div className="flex items-center gap-4 mb-2">
-                            <img
-                                src={report.ticker === 'TSLA' ? 'https://upload.wikimedia.org/wikipedia/commons/e/e8/Tesla_logo.png' : `https://logo.clearbit.com/${report.ticker.toLowerCase()}.com`}
-                                alt={`${report.ticker} logo`}
-                                className="w-16 h-16 rounded-2xl object-contain bg-white p-2 shadow-lg"
+                            <CompanyLogo
+                                ticker={report.ticker}
+                                className="w-16 h-16 rounded-full object-contain bg-white p-1 shadow-lg shrink-0"
                             />
                             <h1 className="text-6xl font-black tracking-tighter">
                                 {report.ticker === 'TSLA' ? 'TESLA' : report.ticker} <span className="text-4xl text-zinc-600">({report.ticker})</span>
@@ -80,13 +93,23 @@ export default async function ReportPage({ params }: { params: Promise<{ id: str
                         <p className="text-gray-500 text-sm mb-4">
                             ANALYSIS REPORT #{report.id} • {new Date(report.created_at).toISOString().split('T')[0]}
                         </p>
-                        <div className="inline-block px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-md">
-                            <p className="text-sm text-zinc-400 mb-1">Verdict</p>
-                            <p className={`text-2xl font-bold ${report.verdict === 'BUY' ? 'text-[#00FF41]' : report.verdict === 'SELL' ? 'text-red-500' : 'text-yellow-500'}`}>
-                                {report.verdict || "N/A"}
-                            </p>
+                        <div className="flex flex-wrap items-center gap-4 mb-4">
+                            <div className="inline-block px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-md">
+                                <p className="text-sm text-zinc-400 mb-1">Verdict</p>
+                                <p className={`text-xl font-bold ${report.verdict === 'BUY' ? 'text-[#00FF41]' : report.verdict === 'SELL' ? 'text-red-500' : 'text-yellow-500'}`}>
+                                    {report.verdict || "N/A"}
+                                </p>
+                            </div>
+
+                            {/* Share Buttons (Viral Loop) */}
+                            <ShareButtons
+                                url={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://truthofmarket.com'}/report/${report.id}`}
+                                title={`${report.ticker} AI Deep Analysis Report | Truth of Market`}
+                                description={report.one_line_summary || "Wall street lies exposed."}
+                            />
                         </div>
                     </div>
+                    {/* Pass isPro to any premium components if added later */}
                     <ScoreGauge scoreObj={scoreObj} scoreColor={scoreColor} />
                 </div>
             </header>
@@ -152,23 +175,49 @@ export default async function ReportPage({ params }: { params: Promise<{ id: str
             {/* The Paywall Logic */}
             <section className="mt-12">
                 {!isProUser ? (
-                    // FREE USER STATE: Do NOT render markdown, show huge CTA
-                    <div className="w-full flex flex-col items-center justify-center bg-[#111] border border-[#333] p-12 rounded-2xl shadow-2xl">
-                        <div className="bg-zinc-900/90 backdrop-blur-xl border border-zinc-700/50 p-10 rounded-2xl max-w-xl text-center shadow-2xl w-full">
-                            <div className="w-20 h-20 bg-gradient-to-br from-amber-400 to-orange-600 rounded-3xl mx-auto flex items-center justify-center mb-8 shadow-lg shadow-orange-500/20">
-                                <Lock className="w-10 h-10 text-black" />
+                    // FREE USER STATE: Render a fake blurred background behind the CTA
+                    <div className="relative w-full bg-[#111] border border-[#333] rounded-2xl shadow-2xl overflow-hidden mt-8">
+                        {/* Fake Blurred Content Background */}
+                        <div className="absolute inset-0 pointer-events-none select-none blur-[6px] opacity-40 px-10 py-12">
+                            <div className="prose prose-invert prose-lg max-w-none">
+                                <h1 className="text-gray-200">Deep Research & Institutional Flow Breakdown</h1>
+                                <h2>1. Insider Divergence Metrics</h2>
+                                <p className="text-gray-400">Our deep analysis indicates severe divergence between institutional block trades and retail volume. Over the past 72 hours, dark pool distribution has surged by 450%, indicating quiet off-loading by smart money.</p>
+                                <div className="w-full h-32 bg-zinc-800 rounded-lg animate-pulse my-6"></div>
+                                <h2>2. 10Q Financial Irregularities</h2>
+                                <p className="text-gray-400">Scanning the latest SEC filings, we found 3 critical red flags regarding inventory turnover and accounts receivable that the CEO deliberately minimized during the latest earnings call...</p>
+                                <ul>
+                                    <li className="text-gray-400 font-mono text-sm bg-zinc-900 p-2 border border-zinc-800 rounded mt-2">Divergence Alert: Q3 Operating Margins...</li>
+                                    <li className="text-gray-400 font-mono text-sm bg-zinc-900 p-2 border border-zinc-800 rounded mt-2">Smart Money Index (SMI): Neutral/Bearish...</li>
+                                    <li className="text-gray-400 font-mono text-sm bg-zinc-900 p-2 border border-zinc-800 rounded mt-2">Volume Profile: Heavy resistance at...</li>
+                                </ul>
                             </div>
+                        </div>
 
-                            <h3 className="text-3xl font-black bg-clip-text text-transparent bg-gradient-to-r from-amber-200 to-orange-400 mb-4 tracking-tight">
-                                🔓 Unlock Premium Report
-                            </h3>
+                        {/* Top CTA Overlay */}
+                        <div className="relative z-10 w-full flex flex-col items-center justify-center p-12 min-h-[500px] bg-gradient-to-b from-transparent via-[#111]/80 to-[#111]">
+                            <div className="bg-zinc-900/95 backdrop-blur-2xl border border-zinc-700 p-10 rounded-2xl max-w-xl text-center shadow-2xl w-full transform transition-all hover:scale-[1.02]">
+                                <div className="w-20 h-20 bg-gradient-to-br from-amber-400 to-orange-600 rounded-3xl mx-auto flex items-center justify-center mb-8 shadow-lg shadow-orange-500/20">
+                                    <Lock className="w-10 h-10 text-black shadow-inner" />
+                                </div>
 
-                            <p className="text-zinc-400 mb-10 text-lg leading-relaxed font-medium">
-                                Subscribe to unlock full 10-step fundamental and technical analysis.<br />
-                                <span className="text-zinc-500 text-sm mt-3 block font-normal">(Including Wall Street smart money tracking techniques)</span>
-                            </p>
+                                <h3 className="text-3xl font-black bg-clip-text text-transparent bg-gradient-to-r from-amber-200 to-orange-400 mb-4 tracking-tight">
+                                    🔓 Unlock Premium Analysis
+                                </h3>
 
-                            <CheckoutButton />
+                                <p className="text-zinc-400 mb-8 text-lg leading-relaxed font-medium">
+                                    Subscribe to instantly reveal the hidden institutional flow, 10-step fundamental Breakdown, and 10Q reality checks.<br />
+                                    <span className="text-zinc-500 text-sm mt-4 block font-normal flex items-center justify-center gap-2">
+                                        <span className="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
+                                        Don't trade blind. See what Wall Street sees.
+                                    </span>
+                                </p>
+
+                                <Link href="/pricing" className="block w-full bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-400 hover:to-orange-500 text-black font-extrabold py-4 rounded-xl shadow-[0_0_20px_rgba(245,158,11,0.4)] hover:shadow-[0_0_30px_rgba(245,158,11,0.6)] transition-all text-lg mb-4">
+                                    View Pro Plans (From $9.99)
+                                </Link>
+                                <p className="text-zinc-500 text-xs text-center">Cancel anytime. Instant access guaranteed.</p>
+                            </div>
                         </div>
                     </div>
                 ) : (
@@ -185,6 +234,11 @@ export default async function ReportPage({ params }: { params: Promise<{ id: str
                         </div>
                     </div>
                 )}
+            </section>
+
+            {/* Newsletter Subscription (Retention Loop) */}
+            <section className="mt-20">
+                <LeadMagnet />
             </section>
         </div>
     );

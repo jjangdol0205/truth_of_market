@@ -2,6 +2,12 @@ import Link from "next/link";
 import { supabase } from "./lib/supabase";
 import ReportCard from "./components/ReportCard";
 import StockCard from "../components/StockCard";
+import LeadMagnet from "./components/LeadMagnet";
+import DailyBriefing from "../components/DailyBriefing";
+import HeroSearch from "../components/HeroSearch";
+import SocialProof from "../components/SocialProof";
+import HowItWorks from "../components/HowItWorks";
+import MiniPricing from "../components/MiniPricing";
 
 // 30초마다 데이터 갱신 (ISR)
 export const revalidate = 0;
@@ -19,6 +25,15 @@ export default async function Home() {
 
   // Determine Unique Tickers from DB
   const uniqueTickers = Array.from(new Set((reports || []).map(r => r.ticker)));
+
+  // Fetch Latest Daily Market Summary
+  const { data: globalSummaries } = await supabase
+    .from('market_summaries')
+    .select('*')
+    .order('date', { ascending: false })
+    .limit(1);
+
+  const dailySummary = globalSummaries && globalSummaries.length > 0 ? globalSummaries[0] : null;
 
   // 2. Fetch Live Quotes from Yahoo Finance Native API for Dynamic Output
   let quotesData: any[] = [];
@@ -57,7 +72,6 @@ export default async function Home() {
     return {
       ticker: ticker,
       name: ticker, // Fallback name to Ticker string
-      logoUrl: `https://logo.clearbit.com/${ticker.toLowerCase()}.com`,
       price: liveData?.price || 0,
       changePercent: liveData?.changePercent || 0
     };
@@ -81,7 +95,10 @@ export default async function Home() {
         <p className="text-zinc-400 text-lg max-w-2xl mx-auto leading-relaxed">
           Generate Wall Street-level fundamental and technical analysis in just 10 seconds.
         </p>
-        <div className="flex justify-center gap-4 mt-8">
+
+        <HeroSearch />
+
+        <div className="flex justify-center gap-4 mt-12">
           <span className="px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-xs font-mono text-zinc-500 flex items-center shadow-lg shadow-black/50">
             <span className="w-2 h-2 rounded-full bg-emerald-500 mr-2 animate-pulse"></span>
             SYSTEM ONLINE
@@ -91,6 +108,9 @@ export default async function Home() {
           </span>
         </div>
       </section>
+
+      {/* Daily Briefing (FREE CONTENT) */}
+      <DailyBriefing summary={dailySummary} />
 
       {/* Trending Stocks Grid (New Dashboard Section) */}
       <section className="mb-20">
@@ -106,7 +126,7 @@ export default async function Home() {
                 name={stock.name}
                 price={stock.price}
                 changePercent={stock.changePercent}
-                logoUrl={stock.logoUrl}
+                isFreeSample={stock.ticker === 'NVDA'}
               />
             ))}
           </div>
@@ -115,6 +135,20 @@ export default async function Home() {
             NO AVAILABLE COMPANIES DETECTED IN DATABASE.
           </div>
         )}
+      </section>
+
+      {/* Social Proof & Track Record */}
+      <SocialProof />
+
+      {/* Product Education */}
+      <HowItWorks />
+
+      {/* Final Pricing Anchor */}
+      <MiniPricing />
+
+      {/* Lead Magnet Section */}
+      <section className="mb-20">
+        <LeadMagnet />
       </section>
 
     </div>

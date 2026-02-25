@@ -184,20 +184,6 @@ export default function ReportCard({ report }: ReportCardProps) {
 
             </div>
 
-    // Footer: Link to Full Report
-            {
-                report.detailed_report && (
-                    <div className="border-t border-[#27272a] bg-[#09090b]">
-                        <a
-                            href={`/report/${report.id}`}
-                            className="w-full py-4 text-xs font-bold text-zinc-500 hover:text-white hover:bg-[#18181b] transition-all uppercase tracking-widest flex items-center justify-center gap-2"
-                        >
-                            Read Full Deep Research Report
-                            <span className="text-[10px]">→</span>
-                        </a>
-                    </div>
-                )
-            }
         </div >
     );
 }
