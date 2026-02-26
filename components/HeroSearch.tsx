@@ -34,16 +34,16 @@ export default function HeroSearch() {
                 </button>
             </form>
 
-            <div className="flex gap-3 mt-4">
+            <div className="flex flex-col sm:flex-row gap-3 mt-4 w-full sm:w-auto px-4 sm:px-0">
                 <button
                     onClick={() => router.push('/hub/NVDA')}
-                    className="bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 px-6 py-2.5 rounded-full text-sm font-bold shadow-[0_4px_14px_0_rgb(0,0,0,39%)] text-white transition-all hover:-translate-y-0.5"
+                    className="w-full sm:w-auto bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 px-6 py-2.5 rounded-full text-sm font-bold shadow-[0_4px_14px_0_rgb(0,0,0,39%)] text-white transition-all hover:-translate-y-0.5"
                 >
                     🎁 GET FREE NVDA REPORT
                 </button>
                 <button
                     onClick={() => router.push('/pricing')}
-                    className="bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-400 hover:to-orange-500 text-black px-6 py-2.5 rounded-full text-sm font-black shadow-[0_0_15px_rgba(245,158,11,0.4)] transition-all hover:-translate-y-0.5"
+                    className="w-full sm:w-auto bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-400 hover:to-orange-500 text-black px-6 py-2.5 rounded-full text-sm font-black shadow-[0_0_15px_rgba(245,158,11,0.4)] transition-all hover:-translate-y-0.5"
                 >
                     🚀 UNLOCK ALL REPORTS
                 </button>

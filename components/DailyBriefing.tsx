@@ -14,7 +14,7 @@ export default function DailyBriefing({ summary }: DailyBriefingProps) {
 
     return (
         <section className="mb-20">
-            <h3 className="text-2xl font-bold text-white flex items-center gap-2 mb-6">
+            <h3 className="text-2xl font-bold text-white flex flex-wrap items-center gap-2 mb-6">
                 <span className="text-xl">🌎</span> Daily Market Briefing <span className="text-xs bg-emerald-500/20 text-emerald-500 border border-emerald-500/30 px-2 py-0.5 rounded-full font-bold ml-2 animate-pulse whitespace-nowrap">FREE TODAY</span>
             </h3>
             <div className="bg-[#111] border border-[#333] rounded-2xl p-8 hover:border-zinc-700 transition-colors shadow-2xl relative overflow-hidden group">

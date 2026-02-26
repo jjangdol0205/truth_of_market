@@ -98,7 +98,7 @@ export default async function Home() {
 
         <HeroSearch />
 
-        <div className="flex justify-center gap-4 mt-12">
+        <div className="flex flex-wrap justify-center gap-4 mt-12 px-2">
           <span className="px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-xs font-mono text-zinc-500 flex items-center shadow-lg shadow-black/50">
             <span className="w-2 h-2 rounded-full bg-emerald-500 mr-2 animate-pulse"></span>
             SYSTEM ONLINE
