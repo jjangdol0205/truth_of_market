@@ -77,11 +77,11 @@ export default async function Home() {
     };
   });
 
-  // Sort exactly to put NVDA first
+  // Sort by daily return rate descending, but keep NVDA at the top
   trendingStocks.sort((a, b) => {
     if (a.ticker === 'NVDA') return -1;
     if (b.ticker === 'NVDA') return 1;
-    return 0;
+    return b.changePercent - a.changePercent;
   });
 
   return (
