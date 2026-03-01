@@ -130,7 +130,6 @@ export default async function Home() {
                 name={stock.name}
                 price={stock.price}
                 changePercent={stock.changePercent}
-                isFreeSample={stock.ticker === 'NVDA'}
               />
             ))}
           </div>

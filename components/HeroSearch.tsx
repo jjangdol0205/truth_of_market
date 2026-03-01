@@ -33,6 +33,7 @@ export default function HeroSearch() {
                     <Search className="w-5 h-5 font-bold" />
                 </button>
             </form>
+            <p className="text-zinc-500 text-sm mt-0 mb-2">* Note: Currently only companies listed in the Trending Companies board below are available for search.</p>
 
             <div className="flex flex-col sm:flex-row gap-3 mt-4 w-full sm:w-auto px-4 sm:px-0">
                 <button
