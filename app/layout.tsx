@@ -35,7 +35,9 @@ export default function RootLayout({
       <body className={`${jetbrainsMono.className} bg-black text-white antialiased`}>
         <DisableCopy />
         <div className="min-h-screen flex flex-col">
-          {/* <PromoBanner /> */}
+          <div className="hidden">
+            <PromoBanner />
+          </div>
           {/* Header */}
           <TopNav />
 

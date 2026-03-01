@@ -144,10 +144,12 @@ export default async function Home() {
       <HowItWorks />
 
       {/* Final Pricing Anchor */}
-      {/* <MiniPricing /> */}
+      <div className="hidden">
+        <MiniPricing />
+      </div>
 
       {/* Lead Magnet Section */}
-      <section className="mb-20">
+      <section className="mb-20 hidden">
         <LeadMagnet />
       </section>
 

@@ -68,8 +68,32 @@ export default function TopNav() {
                     TRUTH_OF_MARKET<span className="animate-pulse">_</span>
                 </Link>
                 <nav className="flex items-center text-sm text-gray-400 font-medium font-mono gap-6">
-                    <Link href="/" className="cursor-pointer hover:text-white transition-colors hidden md:inline">REPORTS</Link>
+                    <Link href="/pricing" className="cursor-pointer hover:text-white transition-colors hidden">PRICING</Link>
                     <Link href="/about" className="cursor-pointer hover:text-white transition-colors hidden md:inline">ABOUT</Link>
+
+                    {/* Hidden Pricing/Pro elements */}
+                    <Link href="/pricing" className="hidden bg-gradient-to-r from-amber-500 to-yellow-600 text-black font-bold px-4 py-1.5 rounded-full items-center gap-1">
+                        <span className="text-lg leading-none">👑</span> UPGRADE TO PRO
+                    </Link>
+
+                    <div className="w-px h-4 bg-zinc-700 mx-2 hidden"></div>
+
+                    {user ? (
+                        <div className="hidden items-center gap-4">
+                            <span className="text-zinc-300 hidden sm:inline" title={user.email || ""}>
+                                {user.email?.split("@")[0]}
+                            </span>
+                            <button onClick={() => setIsRequestModalOpen(true)} className="text-zinc-400 hover:text-white">Request Analysis</button>
+                            <button onClick={handleLogout} className="text-rose-500 hover:bg-rose-500/10 px-3 py-1 rounded">Logout</button>
+                        </div>
+                    ) : (
+                        <button
+                            onClick={() => setIsAuthModalOpen(true)}
+                            className="hidden bg-white text-black font-bold px-4 py-1.5 rounded"
+                        >
+                            Login
+                        </button>
+                    )}
                 </nav>
             </header>
 

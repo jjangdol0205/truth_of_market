@@ -41,7 +41,13 @@ export default function HeroSearch() {
                 >
                     🎁 GET FREE NVDA REPORT
                 </button>
-                {/* Unlock All Reports button removed for AdSense */}
+                {/* Unlock All Reports button restored but hidden */}
+                <button
+                    onClick={() => router.push('/pricing')}
+                    className="hidden w-full sm:w-auto bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-400 hover:to-orange-500 text-black px-6 py-2.5 rounded-full text-sm font-black shadow-[0_0_15px_rgba(245,158,11,0.4)] transition-all hover:-translate-y-0.5"
+                >
+                    🚀 UNLOCK ALL REPORTS
+                </button>
             </div>
         </div>
     );
