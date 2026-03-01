@@ -79,11 +79,16 @@ export default function TopNav() {
                     <div className="w-px h-4 bg-zinc-700 mx-2 hidden"></div>
 
                     {user ? (
-                        <div className="hidden items-center gap-4">
+                        <div className="flex items-center gap-4">
                             <span className="text-zinc-300 hidden sm:inline" title={user.email || ""}>
                                 {user.email?.split("@")[0]}
                             </span>
-                            <button onClick={() => setIsRequestModalOpen(true)} className="text-zinc-400 hover:text-white">Request Analysis</button>
+                            {/* Admin Page Link for beable9489@gmail.com */}
+                            {user.email === "beable9489@gmail.com" && (
+                                <Link href="/admin" className="text-emerald-400 hover:text-emerald-300 font-bold ml-2">
+                                    ADMIN DASHBOARD
+                                </Link>
+                            )}
                             <button onClick={handleLogout} className="text-rose-500 hover:bg-rose-500/10 px-3 py-1 rounded">Logout</button>
                         </div>
                     ) : (

@@ -17,7 +17,8 @@ export default async function Home() {
   const { data: reports, error } = await supabase
     .from('reports')
     .select('*')
-    .order('created_at', { ascending: false });
+    .order('created_at', { ascending: false })
+    .limit(100); // Increased limit to ensure we discover all unique tickers
 
   if (error) {
     console.error("Error fetching reports:", JSON.stringify(error, null, 2));
@@ -53,6 +54,8 @@ export default async function Home() {
             const previousClose = meta.chartPreviousClose;
             const changePercent = ((price - previousClose) / previousClose) * 100;
             return { symbol: ticker, price, changePercent };
+          } else {
+            console.error(`Yahoo meta missing for ${ticker}:`, JSON.stringify(data).substring(0, 100));
           }
         } catch (e) {
           console.error(`Failed to fetch ${ticker}`, e);
@@ -69,13 +72,14 @@ export default async function Home() {
   // Merge the fetched data with our dynamic watchlist details
   const trendingStocks = uniqueTickers.map(ticker => {
     const liveData = quotesData.find(q => q.symbol === ticker);
+    // Even if Yahoo finance fails (price=0), we still render the stock card
     return {
       ticker: ticker,
       name: ticker, // Fallback name to Ticker string
       price: liveData?.price || 0,
       changePercent: liveData?.changePercent || 0
     };
-  });
+  }).filter(Boolean); // Ensure no nulls
 
   // Sort by daily return rate descending, but keep NVDA at the top
   trendingStocks.sort((a, b) => {
