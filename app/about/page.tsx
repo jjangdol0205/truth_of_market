@@ -51,12 +51,7 @@ export default function AboutPage() {
                     </div>
                 </div>
 
-                {/* CTA */}
-                <div className="pt-12">
-                    <Link href="/api/checkout" className="inline-block bg-[#00FF41] text-black font-black px-12 py-4 rounded-xl text-lg hover:bg-emerald-400 hover:scale-105 active:scale-95 transition-all shadow-[0_0_40px_-10px_#00FF41]">
-                        UPGRADE TO PRO ACCESS
-                    </Link>
-                </div>
+                {/* CTA Removed for AdSense */}
 
             </div>
         </div>

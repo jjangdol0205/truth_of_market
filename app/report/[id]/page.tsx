@@ -68,8 +68,8 @@ export default async function ReportPage({ params }: { params: Promise<{ id: str
         if (profile?.is_pro) isDbPro = true;
     }
 
-    // Regular Paywall logic + Admin Bypass + NVDA Free Sample
-    const isProUser = isAdmin || isDbPro || report.ticker === 'NVDA' || false;
+    // Regular Paywall logic + Admin Bypass + NVDA Free Sample (OVERRIDDEN FOR ADSENSE APPROVAL)
+    const isProUser = true;
 
     return (
         <div className="max-w-4xl mx-auto mt-10 p-6 space-y-8 mb-20">

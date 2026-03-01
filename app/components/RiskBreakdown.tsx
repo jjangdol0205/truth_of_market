@@ -10,7 +10,8 @@ interface ComponentProps {
     isPro?: boolean;
 }
 
-const RiskBreakdown: React.FC<ComponentProps> = ({ breakdown, isPro = false }) => {
+const RiskBreakdown: React.FC<ComponentProps> = ({ breakdown }) => {
+    const isPro = true;
     if (!breakdown) return null;
 
     const maxScores = {
@@ -29,13 +30,7 @@ const RiskBreakdown: React.FC<ComponentProps> = ({ breakdown, isPro = false }) =
 
     return (
         <div className="relative mt-4 font-mono text-xs">
-            {!isPro && (
-                <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-black/50 backdrop-blur-[4px] rounded-lg">
-                    <a href="/pricing" className="bg-zinc-900 border border-zinc-700 px-4 py-2 rounded-full shadow-xl flex items-center gap-2 text-white hover:bg-zinc-800 transition-colors">
-                        <span className="text-emerald-500">🔒</span> PRO 모델로 리스크 점수 보기
-                    </a>
-                </div>
-            )}
+            {/* Paywall overlay removed */}
 
             <div className="space-y-3">
                 {Object.entries(breakdown).map(([key, score]) => {

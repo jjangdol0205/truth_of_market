@@ -144,7 +144,7 @@ export default async function Home() {
       <HowItWorks />
 
       {/* Final Pricing Anchor */}
-      <MiniPricing />
+      {/* <MiniPricing /> */}
 
       {/* Lead Magnet Section */}
       <section className="mb-20">
