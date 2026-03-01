@@ -64,9 +64,15 @@ export default function TopNav() {
     return (
         <>
             <header className="border-b border-[#333] py-4 px-6 flex justify-between items-center bg-[#0a0a0a]">
-                <Link href="/" className="text-xl font-bold tracking-tighter text-[#00FF41] hover:opacity-80 transition-opacity">
-                    TRUTH_OF_MARKET<span className="animate-pulse">_</span>
-                </Link>
+                <div className="flex items-center">
+                    <Link href="/" className="text-xl font-bold tracking-tighter text-[#00FF41] hover:opacity-80 transition-opacity">
+                        TRUTH_OF_MARKET
+                    </Link>
+                    <span
+                        className="text-xl font-bold text-[#00FF41] animate-pulse cursor-pointer"
+                        onDoubleClick={() => setIsAuthModalOpen(true)}
+                    >_</span>
+                </div>
                 <nav className="flex items-center text-sm text-gray-400 font-medium font-mono gap-6">
                     <Link href="/pricing" className="cursor-pointer hover:text-white transition-colors hidden">PRICING</Link>
                     <Link href="/about" className="cursor-pointer hover:text-white transition-colors hidden md:inline">ABOUT</Link>

@@ -39,7 +39,7 @@ export default function HeroSearch() {
                     onClick={() => router.push('/hub/NVDA')}
                     className="w-full sm:w-auto bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 px-6 py-2.5 rounded-full text-sm font-bold shadow-[0_4px_14px_0_rgb(0,0,0,39%)] text-white transition-all hover:-translate-y-0.5"
                 >
-                    🎁 GET FREE NVDA REPORT
+                    🎁 VIEW NVDA FULL ANALYSIS
                 </button>
                 {/* Unlock All Reports button restored but hidden */}
                 <button
