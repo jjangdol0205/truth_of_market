@@ -20,6 +20,9 @@ export default function AdminPage() {
     const [result, setResult] = useState("");
 
     // For Daily Briefing Editor
+    const [briefings, setBriefings] = useState<any[]>([]);
+    const [fetchingBriefings, setFetchingBriefings] = useState(true);
+    const [editingBriefingId, setEditingBriefingId] = useState<any>(null);
     const [briefingTitle, setBriefingTitle] = useState("");
     const [briefingContent, setBriefingContent] = useState("");
     const [briefingDate, setBriefingDate] = useState(new Date().toISOString().split('T')[0]);
@@ -56,6 +59,19 @@ export default function AdminPage() {
         setFetchingReports(false);
     };
 
+    const fetchBriefings = async () => {
+        setFetchingBriefings(true);
+        const { data, error } = await supabase
+            .from('market_summaries')
+            .select('*')
+            .order('created_at', { ascending: false });
+
+        if (!error && data) {
+            setBriefings(data);
+        }
+        setFetchingBriefings(false);
+    };
+
     useEffect(() => {
         // Enforce Admin Security
         const checkAuth = async () => {
@@ -65,6 +81,7 @@ export default function AdminPage() {
             if (email === "beable9489@gmail.com") {
                 setIsAuthorized(true);
                 fetchReports();
+                fetchBriefings();
 
                 // Fetch Users
                 setFetchingProfiles(true);
@@ -184,21 +201,60 @@ export default function AdminPage() {
             return;
         }
         setPublishingBriefing(true);
-        const { error } = await supabase.from('market_summaries').insert([
-            {
-                title: briefingTitle,
-                content: briefingContent,
-                date: briefingDate,
-            }
-        ]);
-        if (error) {
-            alert("Failed to publish briefing. It might be due to RLS policies. " + error.message);
+        let error;
+
+        if (editingBriefingId) {
+            const { error: updateError } = await supabase
+                .from('market_summaries')
+                .update({
+                    title: briefingTitle,
+                    content: briefingContent,
+                    date: briefingDate,
+                })
+                .eq('id', editingBriefingId);
+            error = updateError;
         } else {
-            alert("Daily Market Briefing published successfully!");
+            const { error: insertError } = await supabase.from('market_summaries').insert([
+                {
+                    title: briefingTitle,
+                    content: briefingContent,
+                    date: briefingDate,
+                }
+            ]);
+            error = insertError;
+        }
+
+        if (error) {
+            alert((editingBriefingId ? "Failed to update briefing. " : "Failed to publish briefing. ") + "It might be due to RLS policies. " + error.message);
+        } else {
+            alert(editingBriefingId ? "Daily Market Briefing updated successfully!" : "Daily Market Briefing published successfully!");
             setBriefingTitle("");
             setBriefingContent("");
+            setEditingBriefingId(null);
+            fetchBriefings();
         }
         setPublishingBriefing(false);
+    };
+
+    const handleDeleteBriefing = async (id: any) => {
+        if (!confirm("Are you sure you want to delete this briefing?")) return;
+
+        const { error } = await supabase
+            .from('market_summaries')
+            .delete()
+            .eq('id', id);
+
+        if (!error) {
+            fetchBriefings();
+            if (editingBriefingId === id) {
+                setBriefingTitle("");
+                setBriefingContent("");
+                setEditingBriefingId(null);
+            }
+        } else {
+            console.error("Failed to delete briefing", error);
+            alert("삭제 실패: RLS 정책 등을 확인하세요.");
+        }
     };
 
     const handleAutoGenerateBriefing = async () => {
@@ -348,11 +404,11 @@ export default function AdminPage() {
             </div>
 
             {/* Daily Market Briefing Editor */}
-            <div className="bg-[#111] p-6 border border-[#333] rounded-xl space-y-6 shadow-2xl mt-12">
+            <div id="briefing-editor" className="bg-[#111] p-6 border border-[#333] rounded-xl space-y-6 shadow-2xl mt-12 scroll-mt-24">
                 <div className="flex justify-between items-center">
                     <h2 className="text-xl font-bold flex items-center text-white">
                         <FileText className="w-5 h-5 mr-2 text-emerald-500" />
-                        Create Daily Market Briefing
+                        {editingBriefingId ? "Edit Daily Market Briefing" : "Create Daily Market Briefing"}
                     </h2>
                     <button
                         onClick={handleAutoGenerateBriefing}
@@ -397,16 +453,87 @@ export default function AdminPage() {
                         />
                     </div>
 
-                    <div className="flex justify-end">
+                    <div className="flex justify-end gap-4">
+                        {editingBriefingId && (
+                            <button
+                                onClick={() => {
+                                    setBriefingTitle("");
+                                    setBriefingContent("");
+                                    setEditingBriefingId(null);
+                                    setBriefingDate(new Date().toISOString().split('T')[0]);
+                                }}
+                                className="text-zinc-400 font-bold px-8 py-3 rounded-lg flex items-center transition-all bg-zinc-900 border border-zinc-700 hover:text-white"
+                            >
+                                CANCEL
+                            </button>
+                        )}
                         <button
                             onClick={handlePublishBriefing}
                             disabled={publishingBriefing}
                             className="text-black font-bold px-8 py-3 rounded-lg flex items-center transition-all bg-[#00FF41] hover:bg-green-400 disabled:opacity-50"
                         >
                             {publishingBriefing ? <Loader2 className="animate-spin mr-2 w-5 h-5" /> : <Upload className="w-5 h-5 mr-2" />}
-                            PUBLISH BRIEFING
+                            {editingBriefingId ? "UPDATE BRIEFING" : "PUBLISH BRIEFING"}
                         </button>
                     </div>
+                </div>
+            </div>
+
+            {/* Published Briefings List */}
+            <div className="bg-[#111] border border-[#333] rounded-xl overflow-hidden shadow-2xl mt-12 mb-12">
+                <div className="p-6 border-b border-[#333] flex justify-between items-center bg-[#151515]">
+                    <h2 className="text-xl font-bold flex items-center text-white">
+                        <FileText className="w-5 h-5 mr-3 text-emerald-500" />
+                        Published Briefings
+                    </h2>
+                    <span className="text-zinc-500 font-mono text-sm">{briefings.length} Briefings</span>
+                </div>
+                <div className="bg-[#09090b]">
+                    {fetchingBriefings ? (
+                        <div className="p-12 text-center text-zinc-500">
+                            <Loader2 className="w-8 h-8 animate-spin mx-auto mb-3" />
+                            Loading briefings...
+                        </div>
+                    ) : briefings.length === 0 ? (
+                        <div className="p-12 text-center text-zinc-500">
+                            <AlertTriangle className="w-10 h-10 mx-auto mb-4 opacity-50 text-emerald-500" />
+                            No briefings found.
+                        </div>
+                    ) : (
+                        <div className="divide-y divide-zinc-800">
+                            {briefings.map((b) => (
+                                <div key={b.id} className="flex flex-col sm:flex-row sm:items-center justify-between p-4 hover:bg-zinc-900/50 transition-colors gap-4">
+                                    <div className="flex flex-col">
+                                        <h3 className="text-white font-bold">{b.title}</h3>
+                                        <span className="text-zinc-500 font-mono text-xs mt-1">
+                                            {b.date || new Date(b.created_at).toISOString().split('T')[0]}
+                                        </span>
+                                    </div>
+                                    <div className="flex items-center gap-3">
+                                        <button
+                                            onClick={() => {
+                                                setBriefingTitle(b.title);
+                                                setBriefingContent(b.content);
+                                                setBriefingDate(b.date || new Date(b.created_at).toISOString().split('T')[0]);
+                                                setEditingBriefingId(b.id);
+                                                window.location.hash = '#briefing-editor';
+                                            }}
+                                            className="px-4 py-2 bg-zinc-800 hover:bg-emerald-900/50 hover:text-emerald-400 text-xs text-zinc-300 rounded font-bold transition-all border border-zinc-700 hover:border-emerald-500/50"
+                                        >
+                                            EDIT
+                                        </button>
+                                        <button
+                                            onClick={() => handleDeleteBriefing(b.id)}
+                                            className="p-2 text-zinc-600 hover:text-rose-500 hover:bg-rose-500/10 rounded transition-colors"
+                                            title="Delete Briefing"
+                                        >
+                                            <Trash2 className="w-4 h-4" />
+                                        </button>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    )}
                 </div>
             </div>
 
