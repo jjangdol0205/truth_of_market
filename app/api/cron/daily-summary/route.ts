@@ -2,8 +2,12 @@ import { NextResponse } from 'next/server';
 import { supabase } from "../../../lib/supabase";
 
 // We import the AI SDK for Gemini
-import { google } from "@ai-sdk/google";
+import { createGoogleGenerativeAI } from "@ai-sdk/google";
 import { generateText } from "ai";
+
+const google = createGoogleGenerativeAI({
+    apiKey: process.env.GEMINI_API_KEY || process.env.GOOGLE_GENERATIVE_AI_API_KEY,
+});
 
 // Vercel Cron will hit this URL automatically
 export async function GET(req: Request) {
@@ -78,7 +82,7 @@ Content begins on the next line.
         const model = google("gemini-1.5-pro");
 
         const { text } = await generateText({
-            model: model,
+            model: google("gemini-2.5-pro"),
             prompt: prompt,
             temperature: 0.7,
         });
