@@ -269,20 +269,23 @@ export async function autoGenerateBriefing() {
     
     Using Google Search, find the top 3-4 most important financial news stories, market indices performance (S&P 500, Nasdaq), and key sector movements that happened over the last 24 hours.
     
-    Output strictly in JSON format.
+    Output strictly in the following JSON format.
     
     {
-       "title": "A punchy, exciting Wall Street Journal style headline (e.g. 'Tech Rally Falters as Bond Yields Spike; Nvidia Defies Gravity')",
-       "content": "A beautifully formatted markdown string. Start with a short executive summary. Then use markdown headers (###), bullet points, and bold text to summarize the 3-4 key market events. Ensure paragraphs are short and easy to read."
+       "title": "A punchy, exciting Wall Street Journal style headline (e.g. 'Tech Rally Falters as Bond Yields Spike')",
+       "content": "A beautifully formatted markdown string. Start with a short executive summary.\\n\\nThen use markdown headers (###), bullet points, and bold text to summarize the 3-4 key market events."
     }
     
-    CRITICAL: Output ONLY valid JSON. Escape all newlines as \\n and double quotes as \\" within the content string. Do not wrap in markdown tags like \`\`\`json.
+    CRITICAL INSTRUCTION: You MUST output valid JSON. Do not include raw newlines inside the strings, use \\n for line breaks. Escape all double quotes inside the content string. Your response should parse successfully with JSON.parse().
     `;
 
     try {
         const model = genAI.getGenerativeModel({
             model: "gemini-2.5-flash",
-            tools: [{ googleSearch: {} }] as any
+            tools: [{ googleSearch: {} }] as any,
+            generationConfig: {
+                responseMimeType: "application/json",
+            }
         }, { apiVersion: "v1beta" });
 
         const result = await model.generateContent(prompt);
