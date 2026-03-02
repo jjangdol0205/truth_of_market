@@ -19,6 +19,12 @@ export default function AdminPage() {
     const [loading, setLoading] = useState(false);
     const [result, setResult] = useState("");
 
+    // For Daily Briefing Editor
+    const [briefingTitle, setBriefingTitle] = useState("");
+    const [briefingContent, setBriefingContent] = useState("");
+    const [briefingDate, setBriefingDate] = useState(new Date().toISOString().split('T')[0]);
+    const [publishingBriefing, setPublishingBriefing] = useState(false);
+
     // For reports list
     const [reports, setReports] = useState<any[]>([]);
     const [fetchingReports, setFetchingReports] = useState(true);
@@ -171,6 +177,29 @@ export default function AdminPage() {
         }
     };
 
+    const handlePublishBriefing = async () => {
+        if (!briefingTitle || !briefingContent) {
+            alert("Title and content are required.");
+            return;
+        }
+        setPublishingBriefing(true);
+        const { error } = await supabase.from('market_summaries').insert([
+            {
+                title: briefingTitle,
+                content: briefingContent,
+                date: briefingDate,
+            }
+        ]);
+        if (error) {
+            alert("Failed to publish briefing. It might be due to RLS policies. " + error.message);
+        } else {
+            alert("Daily Market Briefing published successfully!");
+            setBriefingTitle("");
+            setBriefingContent("");
+        }
+        setPublishingBriefing(false);
+    };
+
     return (
         <div className="max-w-4xl mx-auto mt-10 space-y-8 p-4 font-sans text-gray-100 mb-20">
             {/* Header */}
@@ -185,6 +214,15 @@ export default function AdminPage() {
                     <Upload className="w-5 h-5 mr-2 text-[#00FF41]" />
                     Initialize New Analysis
                 </h2>
+
+                <div className="flex flex-wrap gap-2 mt-2 mb-4">
+                    <span className="text-zinc-500 font-mono text-xs flex items-center mr-2">RECOMMENDED:</span>
+                    {["AAPL", "MSFT", "GOOGL", "AMZN", "NVDA", "META", "TSLA", "PLTR", "SOUN", "SMCI"].map(t => (
+                        <button key={t} onClick={() => setTicker(t)} className="px-2.5 py-1 bg-zinc-800 hover:bg-emerald-900/50 hover:text-emerald-400 hover:border-emerald-500/50 border border-transparent text-xs text-zinc-300 rounded font-mono transition-all">
+                            {t}
+                        </button>
+                    ))}
+                </div>
 
                 {/* Report Type Toggle */}
                 <div className="flex bg-black rounded-lg p-1 border border-[#333] w-fit">
@@ -289,6 +327,61 @@ export default function AdminPage() {
                         </div>
                     </div>
                 ) : null}
+            </div>
+
+            {/* Daily Market Briefing Editor */}
+            <div className="bg-[#111] p-6 border border-[#333] rounded-xl space-y-6 shadow-2xl mt-12">
+                <div className="flex justify-between items-center">
+                    <h2 className="text-xl font-bold flex items-center text-white">
+                        <FileText className="w-5 h-5 mr-2 text-emerald-500" />
+                        Create Daily Market Briefing
+                    </h2>
+                </div>
+
+                <div className="space-y-4">
+                    <div className="flex gap-4 flex-col md:flex-row">
+                        <div className="flex-1 space-y-2">
+                            <label className="text-xs font-mono text-zinc-500 font-bold uppercase tracking-widest block">Briefing Title</label>
+                            <input
+                                type="text"
+                                placeholder="e.g. Market Rallies After Earnings Surprises..."
+                                className="w-full bg-black border border-[#333] p-3 rounded-lg text-white focus:border-emerald-500 outline-none transition-all"
+                                value={briefingTitle}
+                                onChange={(e) => setBriefingTitle(e.target.value)}
+                            />
+                        </div>
+                        <div className="w-full md:w-48 space-y-2">
+                            <label className="text-xs font-mono text-zinc-500 font-bold uppercase tracking-widest block">Date</label>
+                            <input
+                                type="date"
+                                className="w-full bg-black border border-[#333] p-3 rounded-lg text-white focus:border-emerald-500 outline-none transition-all font-mono"
+                                value={briefingDate}
+                                onChange={(e) => setBriefingDate(e.target.value)}
+                            />
+                        </div>
+                    </div>
+
+                    <div className="space-y-2">
+                        <label className="text-xs font-mono text-zinc-500 font-bold uppercase tracking-widest block">Markdown Content</label>
+                        <textarea
+                            placeholder="Write your briefing content here... Use markdown for formatting (**bold**, - bullets, etc.)"
+                            className="w-full h-64 bg-black border border-[#333] p-4 rounded-lg text-zinc-300 focus:border-emerald-500 outline-none transition-all font-sans leading-relaxed resize-y"
+                            value={briefingContent}
+                            onChange={(e) => setBriefingContent(e.target.value)}
+                        />
+                    </div>
+
+                    <div className="flex justify-end">
+                        <button
+                            onClick={handlePublishBriefing}
+                            disabled={publishingBriefing}
+                            className="text-black font-bold px-8 py-3 rounded-lg flex items-center transition-all bg-[#00FF41] hover:bg-green-400 disabled:opacity-50"
+                        >
+                            {publishingBriefing ? <Loader2 className="animate-spin mr-2 w-5 h-5" /> : <Upload className="w-5 h-5 mr-2" />}
+                            PUBLISH BRIEFING
+                        </button>
+                    </div>
+                </div>
             </div>
 
             {/* Archive Management Table -> Folder Tree Overhaul */}
