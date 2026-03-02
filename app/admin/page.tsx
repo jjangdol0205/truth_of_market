@@ -1,10 +1,10 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Search, Upload, AlertTriangle, Loader2, Trash2, Database, ShieldAlert, Folder, FolderOpen, ChevronRight, FileText, TrendingUp, Calendar, Users, Star, UserCircle, BadgeCheck, MessageSquare, CheckCircle } from "lucide-react";
+import { Search, Upload, AlertTriangle, Loader2, Trash2, Database, ShieldAlert, Folder, FolderOpen, ChevronRight, FileText, TrendingUp, Calendar, Users, Star, UserCircle, BadgeCheck, MessageSquare, CheckCircle, Sparkles } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { analyzeTicker } from "../actions";
+import { analyzeTicker, autoGenerateBriefing } from "../actions";
 import TerminalLoader from "../components/TerminalLoader";
 import { createClient } from "../../utils/supabase/client";
 
@@ -24,6 +24,7 @@ export default function AdminPage() {
     const [briefingContent, setBriefingContent] = useState("");
     const [briefingDate, setBriefingDate] = useState(new Date().toISOString().split('T')[0]);
     const [publishingBriefing, setPublishingBriefing] = useState(false);
+    const [generatingBriefing, setGeneratingBriefing] = useState(false);
 
     // For reports list
     const [reports, setReports] = useState<any[]>([]);
@@ -200,6 +201,23 @@ export default function AdminPage() {
         setPublishingBriefing(false);
     };
 
+    const handleAutoGenerateBriefing = async () => {
+        setGeneratingBriefing(true);
+        try {
+            const result = await autoGenerateBriefing();
+            if (result.error) {
+                alert("Failed to generate: " + result.error);
+            } else if (result.title && result.content) {
+                setBriefingTitle(result.title);
+                setBriefingContent(result.content);
+            }
+        } catch (e: any) {
+            alert("An error occurred during generation.");
+        } finally {
+            setGeneratingBriefing(false);
+        }
+    };
+
     return (
         <div className="max-w-4xl mx-auto mt-10 space-y-8 p-4 font-sans text-gray-100 mb-20">
             {/* Header */}
@@ -336,6 +354,14 @@ export default function AdminPage() {
                         <FileText className="w-5 h-5 mr-2 text-emerald-500" />
                         Create Daily Market Briefing
                     </h2>
+                    <button
+                        onClick={handleAutoGenerateBriefing}
+                        disabled={generatingBriefing}
+                        className="bg-amber-500/10 border border-amber-500/30 text-amber-500 hover:bg-amber-500/20 px-4 py-2 rounded-lg text-sm font-bold flex items-center transition-all disabled:opacity-50"
+                    >
+                        {generatingBriefing ? <Loader2 className="w-4 h-4 mr-2 animate-spin" /> : <Sparkles className="w-4 h-4 mr-2" />}
+                        {generatingBriefing ? "GENERATING..." : "AUTO GENERATE"}
+                    </button>
                 </div>
 
                 <div className="space-y-4">

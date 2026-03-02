@@ -255,3 +255,55 @@ export async function analyzeTicker(ticker: string, reportType: "research" | "ea
     // Return detailed error log to user
     return `Error: All models failed to analyze.\n\n[Details]\n${errorLog.join("\n")}`;
 }
+
+export async function autoGenerateBriefing() {
+    const apiKey = process.env.GEMINI_API_KEY;
+    if (!apiKey) return { error: "API Key not found." };
+
+    const genAI = new GoogleGenerativeAI(apiKey);
+    const today = new Date().toISOString().split('T')[0];
+
+    const prompt = `
+    You are the Chief Market Strategist for an elite AI-powered investment platform.
+    Your task is to write the "Daily Market Briefing" for today, ${today}.
+    
+    Using Google Search, find the top 3-4 most important financial news stories, market indices performance (S&P 500, Nasdaq), and key sector movements that happened over the last 24 hours.
+    
+    Output strictly in JSON format.
+    
+    {
+       "title": "A punchy, exciting Wall Street Journal style headline (e.g. 'Tech Rally Falters as Bond Yields Spike; Nvidia Defies Gravity')",
+       "content": "A beautifully formatted markdown string. Start with a short executive summary. Then use markdown headers (###), bullet points, and bold text to summarize the 3-4 key market events. Ensure paragraphs are short and easy to read."
+    }
+    
+    CRITICAL: Output ONLY valid JSON. Escape all newlines as \\n and double quotes as \\" within the content string. Do not wrap in markdown tags like \`\`\`json.
+    `;
+
+    try {
+        const model = genAI.getGenerativeModel({
+            model: "gemini-2.5-flash",
+            tools: [{ googleSearch: {} }] as any
+        }, { apiVersion: "v1beta" });
+
+        const result = await model.generateContent(prompt);
+        const text = result.response.text();
+
+        let cleanText = text.replace(/```json/gi, '').replace(/```/g, '').trim();
+        const start = cleanText.indexOf('{');
+        const end = cleanText.lastIndexOf('}');
+        if (start !== -1 && end !== -1) {
+            cleanText = cleanText.substring(start, end + 1);
+        }
+
+        const data = JSON.parse(cleanText);
+
+        if (!data.title || !data.content) {
+            throw new Error("Missing title or content in AI response");
+        }
+
+        return { title: data.title, content: data.content };
+    } catch (e: any) {
+        console.error("Auto-generate briefing failed:", e);
+        return { error: e.message || "Failed to generate briefing." };
+    }
+}
