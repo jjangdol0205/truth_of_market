@@ -3,17 +3,17 @@ import { supabase } from '../lib/supabase';
 export const dynamic = 'force-dynamic';
 
 export async function GET() {
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://truthofmarket.com';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://truthofmarket.com';
 
-    const { data: reports } = await supabase
-        .from('reports')
-        .select('id, ticker, one_line_summary, created_at')
-        .order('created_at', { ascending: false })
-        .limit(50); // Fetch latest 50 for RSS
+  const { data: reports } = await supabase
+    .from('reports')
+    .select('id, ticker, one_line_summary, created_at')
+    .order('created_at', { ascending: false })
+    .limit(50); // Fetch latest 50 for RSS
 
-    const itemsXml = (reports || [])
-        .map(
-            (report) => `
+  const itemsXml = (reports || [])
+    .map(
+      (report) => `
     <item>
       <title><![CDATA[${report.ticker} AI Deep Analysis Report]]></title>
       <link>${baseUrl}/report/${report.id}</link>
@@ -21,11 +21,11 @@ export async function GET() {
       <pubDate>${new Date(report.created_at).toUTCString()}</pubDate>
       <guid>${baseUrl}/report/${report.id}</guid>
     </item>`
-        )
-        .join('');
+    )
+    .join('');
 
-    const rssFeed = `<?xml version="1.0" encoding="UTF-8" ?>
-  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  const rssFeed = `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>Truth of Market | Wall Street Lies Exposed</title>
     <link>${baseUrl}</link>
@@ -33,13 +33,13 @@ export async function GET() {
     <language>en-us</language>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     <atom:link href="${baseUrl}/rss.xml" rel="self" type="application/rss+xml"/>
-    ${itemsXml}
+${itemsXml}
   </channel>
-  </rss>`;
+</rss>`;
 
-    return new Response(rssFeed, {
-        headers: {
-            'Content-Type': 'application/rss+xml; charset=utf-8',
-        },
-    });
+  return new Response(rssFeed, {
+    headers: {
+      'Content-Type': 'application/xml; charset=utf-8',
+    },
+  });
 }
