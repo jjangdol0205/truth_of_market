@@ -20,21 +20,21 @@ export default function PricingTable() {
             title: "Daily Pass",
             price: "$9.99",
             period: "/ day",
-            url: "https://truthofmarket1.lemonsqueezy.com/checkout/buy/d6ff594c-8578-4681-9381-d3bf70ed2be9",
+            url: "/api/checkout/daily",
             desc: "Full access for 24 hours."
         },
         monthly: {
             title: "Pro Monthly",
             price: "$29.99",
             period: "/ month",
-            url: "https://truthofmarket1.lemonsqueezy.com/checkout/buy/f862ca9a-60de-4653-b5d5-18b0318748d0",
+            url: "/api/checkout/monthly",
             desc: "Unrestricted access to Wall Street intelligence."
         },
         yearly: {
             title: "Pro Yearly",
             price: "$299.99",
             period: "/ year",
-            url: "https://truthofmarket1.lemonsqueezy.com/checkout/buy/3c33985c-7f85-4427-b754-5e97ccd70f6d",
+            url: "/api/checkout/yearly",
             desc: "Best value. Secure your alpha for the entire year."
         }
     };
@@ -42,10 +42,6 @@ export default function PricingTable() {
     const currentPlan = plans[billingCycle];
 
     let finalCheckoutUrl = currentPlan.url;
-    if (userEmail) {
-        // Appending standard email field + custom metadata for the webhook
-        finalCheckoutUrl += `?checkout[email]=${encodeURIComponent(userEmail)}&checkout[custom][email]=${encodeURIComponent(userEmail)}`;
-    }
 
     return (
         <div className="flex flex-col items-center">

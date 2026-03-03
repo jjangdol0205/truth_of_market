@@ -283,9 +283,6 @@ export async function autoGenerateBriefing() {
         const model = genAI.getGenerativeModel({
             model: "gemini-2.5-flash",
             tools: [{ googleSearch: {} }] as any,
-            generationConfig: {
-                responseMimeType: "application/json",
-            }
         }, { apiVersion: "v1beta" });
 
         const result = await model.generateContent(prompt);

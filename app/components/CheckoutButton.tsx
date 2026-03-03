@@ -29,13 +29,8 @@ export default function CheckoutButton() {
             return;
         }
 
-        // Redirect to Lemon Squeezy Checkout
-        // IMPORTANT: Replace 'https://your-store.lemonsqueezy.com/buy/YOUR_VARIANT_ID' 
-        // with your ACTUAL Lemon Squeezy product URL
-        const checkoutUrl = new URL("https://your-store.lemonsqueezy.com/checkout/buy/VARIANT_ID");
-        checkoutUrl.searchParams.set("checkout[email]", email);
-
-        window.location.href = checkoutUrl.toString();
+        // Redirect to Pricing Page for user to select a plan
+        window.location.href = "/pricing";
     };
 
     return (
