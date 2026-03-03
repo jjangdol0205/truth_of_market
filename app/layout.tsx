@@ -12,6 +12,9 @@ const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"] }); // Initialize font
 export const metadata: Metadata = {
   title: "Truth of Market | Wall Street Lies Exposed",
   description: "Data-driven financial analysis powered by AI.",
+  verification: {
+    google: "KjkX-zWjuxmckvBpxZXF-DSQyDpIWvZPNuV7YrNBxjk",
+  },
 };
 
 import { GoogleTagManager } from '@next/third-parties/google';
@@ -30,6 +33,15 @@ export default function RootLayout({
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />
+        <Script id="clarity-script" strategy="afterInteractive">
+          {`
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "vpuatcf091");
+          `}
+        </Script>
       </head>
       <GoogleTagManager gtmId="GTM-W9538SHJ" />
       <body className={`${jetbrainsMono.className} bg-black text-white antialiased`}>
