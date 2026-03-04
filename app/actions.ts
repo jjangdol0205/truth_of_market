@@ -295,14 +295,16 @@ export async function autoGenerateBriefing() {
     
     {
        "title": "A punchy, exciting Wall Street Journal style headline (e.g. 'Tech Rally Falters as Bond Yields Spike')",
-       "content": "A beautifully formatted markdown string. Start with a short executive summary.\\n\\nThen use markdown headers (###), bullet points, and bold text to summarize the 3-4 key market events."
+       "content": "A beautifully formatted string of normal text. Start with a short executive summary.\\n\\nThen summarize the 3-4 key market events using clean bullet points."
     }
     
     CRITICAL INSTRUCTION: You MUST output valid JSON. Do not include raw newlines inside the strings, use \\n for line breaks. Escape all double quotes inside the content string. Your response should parse successfully with JSON.parse().
     
     CRITICAL FORMATTING INSTRUCTION: 
-    - DO NOT use the \`### **Text**\` format. If you use a header, use \`### Text\` directly without bolding the header itself.
-    - Format sector movements cleanly, e.g., \`- **Tech:** Apple surged... \`
+    - DO NOT use Markdown headers like "### ".
+    - DO NOT use Markdown bolding like "**text**".
+    - Simply write the text cleanly as plain text with standard line breaks and bullet points.
+    - Example of a clean bullet point: "- Tech Sector: Apple surged due to..."
     `;
 
     try {
