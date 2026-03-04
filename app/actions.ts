@@ -263,11 +263,33 @@ export async function autoGenerateBriefing() {
     const genAI = new GoogleGenerativeAI(apiKey);
     const today = new Date().toISOString().split('T')[0];
 
+    let indexContext = "";
+    try {
+        const symbols = ['^GSPC', '^IXIC', '^DJI'];
+        const indexData = await Promise.all(symbols.map(async (sym) => {
+            const res = await fetch(`https://query1.finance.yahoo.com/v8/finance/chart/${sym}?interval=1d&range=1d`, { headers: { 'User-Agent': 'Mozilla/5.0' } });
+            const data = await res.json();
+            const result = data?.chart?.result?.[0];
+            if (result) {
+                const name = result.meta.shortName;
+                const price = result.meta.regularMarketPrice;
+                const prevClose = result.meta.chartPreviousClose;
+                const change = price - prevClose;
+                const changePercent = (change / prevClose) * 100;
+                return `${name}: ${price.toFixed(2)} (${change > 0 ? '+' : ''}${change.toFixed(2)}, ${change > 0 ? '+' : ''}${changePercent.toFixed(2)}%)`;
+            }
+            return "";
+        }));
+        indexContext = `\nREAL-TIME INDEX DATA FOR TODAY:\n${indexData.filter(Boolean).join('\n')}\n(You MUST use these exact numbers when mentioning the indices.)\n`;
+    } catch (err) {
+        console.error("Failed to fetch index data for briefing:", err);
+    }
+
     const prompt = `
     You are the Chief Market Strategist for an elite AI-powered investment platform.
     Your task is to write the "Daily Market Briefing" for today, ${today}.
-    
-    Using Google Search, find the top 3-4 most important financial news stories, market indices performance (S&P 500, Nasdaq), and key sector movements that happened over the last 24 hours.
+    ${indexContext}
+    Using Google Search, find the top 3-4 most important financial news stories, market indices performance (S&P 500, Nasdaq, Dow Jones), and key sector movements that happened over the last 24 hours.
     
     Output strictly in the following JSON format.
     
@@ -277,6 +299,10 @@ export async function autoGenerateBriefing() {
     }
     
     CRITICAL INSTRUCTION: You MUST output valid JSON. Do not include raw newlines inside the strings, use \\n for line breaks. Escape all double quotes inside the content string. Your response should parse successfully with JSON.parse().
+    
+    CRITICAL FORMATTING INSTRUCTION: 
+    - DO NOT use the \`### **Text**\` format. If you use a header, use \`### Text\` directly without bolding the header itself.
+    - Format sector movements cleanly, e.g., \`- **Tech:** Apple surged... \`
     `;
 
     try {
