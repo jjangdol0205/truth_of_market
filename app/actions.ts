@@ -291,17 +291,15 @@ export async function autoGenerateBriefing() {
     ${indexContext}
     Using Google Search, find the top 3-4 most important financial news stories, market indices performance (S&P 500, Nasdaq, Dow Jones), and key sector movements that happened over the last 24 hours.
     
-    Output strictly in the following JSON format.
+    CRITICAL INSTRUCTION: You MUST output your response EXACTLY in the following format. Do not use JSON.
     
-    {
-       "title": "A punchy, exciting Wall Street Journal style headline (e.g. 'Tech Rally Falters as Bond Yields Spike')",
-       "content": "A beautifully formatted string of normal text. Start with a short executive summary.\\n\\nThen summarize the 3-4 key market events using clean bullet points."
-    }
-    
-    CRITICAL INSTRUCTION: You MUST output valid JSON. Do not include raw newlines inside the strings, use \\n for line breaks. Escape all double quotes inside the content string. Your response should parse successfully with JSON.parse().
+    TITLE: A punchy, exciting Wall Street Journal style headline (e.g. Tech Rally Falters as Bond Yields Spike)
+    CONTENT:
+    A beautifully formatted string of normal text. Start with a short executive summary.
+    Then summarize the 3-4 key market events using clean bullet points.
     
     CRITICAL FORMATTING INSTRUCTION: 
-    - DO NOT use Markdown headers like "### ".
+    - DO NOT use JSON. Do not use Markdown headers like "### ".
     - DO NOT use Markdown bolding like "**text**".
     - Simply write the text cleanly as plain text with standard line breaks and bullet points.
     - Example of a clean bullet point: "- Tech Sector: Apple surged due to..."
@@ -316,20 +314,36 @@ export async function autoGenerateBriefing() {
         const result = await model.generateContent(prompt);
         const text = result.response.text();
 
-        let cleanText = text.replace(/```json/gi, '').replace(/```/g, '').trim();
-        const start = cleanText.indexOf('{');
-        const end = cleanText.lastIndexOf('}');
-        if (start !== -1 && end !== -1) {
-            cleanText = cleanText.substring(start, end + 1);
+        let title = "";
+        let content = "";
+
+        const titleMatch = text.match(/TITLE:\s*([^\n]+)/i);
+        const contentMatch = text.match(/CONTENT:\s*([\s\S]+)/i);
+
+        if (titleMatch && contentMatch) {
+            title = titleMatch[1].trim();
+            // remove any trailing backticks or quotes if they somehow exist
+            content = contentMatch[1].replace(/^\`\`\`|\`\`\`$/g, '').trim();
+        } else {
+            // Fallback: try parsing as JSON just in case LLM ignored instructions
+            let cleanText = text.replace(/```json/gi, '').replace(/```/g, '').trim();
+            const start = cleanText.indexOf('{');
+            const end = cleanText.lastIndexOf('}');
+            if (start !== -1 && end !== -1) {
+                cleanText = cleanText.substring(start, end + 1);
+                const data = JSON.parse(cleanText);
+                title = data.title;
+                content = data.content;
+            } else {
+                throw new Error("Failed to parse AI response format. Expected TITLE: and CONTENT:");
+            }
         }
 
-        const data = JSON.parse(cleanText);
-
-        if (!data.title || !data.content) {
+        if (!title || !content) {
             throw new Error("Missing title or content in AI response");
         }
 
-        return { title: data.title, content: data.content };
+        return { title, content };
     } catch (e: any) {
         console.error("Auto-generate briefing failed:", e);
         return { error: e.message || "Failed to generate briefing." };
