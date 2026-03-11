@@ -75,6 +75,7 @@ export default function TopNav() {
                 </div>
                 <nav className="flex items-center text-sm text-gray-400 font-medium font-mono gap-6">
                     <Link href="/" className="cursor-pointer hover:text-white transition-colors hidden md:inline">HOME</Link>
+                    <Link href="/briefings" className="cursor-pointer hover:text-white transition-colors hidden md:inline">BRIEFINGS</Link>
                     <Link href="/pricing" className="cursor-pointer hover:text-white transition-colors hidden">PRICING</Link>
                     <Link href="/about" className="cursor-pointer hover:text-white transition-colors hidden md:inline">ABOUT</Link>
 
