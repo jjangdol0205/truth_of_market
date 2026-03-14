@@ -9,8 +9,8 @@ import SocialProof from "../components/SocialProof";
 import HowItWorks from "../components/HowItWorks";
 import MiniPricing from "../components/MiniPricing";
 
-// 30초마다 데이터 갱신 (ISR)
-export const revalidate = 0;
+// 5분마다 데이터 갱신 (ISR, 크롤링 봇 타임아웃 방지)
+export const revalidate = 300;
 
 export default async function Home() {
   // 1. Fetch reports from Supabase
@@ -46,7 +46,16 @@ export default async function Home() {
         const url = `https://query1.finance.yahoo.com/v8/finance/chart/${queryTicker}?interval=1d&range=1d`;
 
         try {
-          const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' }, next: { revalidate: 60 } });
+          const controller = new AbortController();
+          const timeoutId = setTimeout(() => controller.abort(), 4000); // 4 second timeout
+
+          const res = await fetch(url, { 
+            headers: { 'User-Agent': 'Mozilla/5.0' }, 
+            next: { revalidate: 300 },
+            signal: controller.signal
+          });
+          clearTimeout(timeoutId);
+
           const data = await res.json();
           const meta = data?.chart?.result?.[0]?.meta;
           if (meta) {
@@ -55,10 +64,10 @@ export default async function Home() {
             const changePercent = ((price - previousClose) / previousClose) * 100;
             return { symbol: ticker, price, changePercent };
           } else {
-            console.error(`Yahoo meta missing for ${ticker}:`, JSON.stringify(data).substring(0, 100));
+            console.error(`Yahoo meta missing for ${ticker}`);
           }
-        } catch (e) {
-          console.error(`Failed to fetch ${ticker}`, e);
+        } catch (e: any) {
+          console.error(`Failed to fetch ${ticker}`, e.message);
         }
         return { symbol: ticker, price: 0, changePercent: 0 };
       });
