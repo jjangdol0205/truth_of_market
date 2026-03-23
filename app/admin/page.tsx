@@ -42,6 +42,8 @@ export default function AdminPage() {
     const [companyRequests, setCompanyRequests] = useState<any[]>([]);
     const [fetchingRequests, setFetchingRequests] = useState(true);
 
+    const [recommendedTickers, setRecommendedTickers] = useState<string[]>([]);
+
     const toggleFolder = (t: string) => {
         setOpenFolders(prev => ({ ...prev, [t]: !prev[t] }));
     };
@@ -116,6 +118,23 @@ export default function AdminPage() {
 
         checkAuth();
     }, [router]);
+
+    useEffect(() => {
+        const pool = [
+            "AAPL", "MSFT", "GOOGL", "AMZN", "NVDA", "META", "TSLA", "PLTR", "SOUN", "SMCI",
+            "AMD", "NFLX", "INTC", "QCOM", "AVGO", "CRWD", "SNOW", "PANW", "ADBE", "CRM",
+            "ARM", "ASML", "TSM", "UBER", "ABNB", "SPOT", "SHOP", "SQ", "COIN", "DKNG",
+            "RBLX", "DDOG", "NET", "MDB", "NOW", "WDAY", "ZS", "CRSR", "U", "ROKU"
+        ];
+        // Fisher-Yates shuffle
+        let currentIndex = pool.length, randomIndex;
+        while (currentIndex !== 0) {
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex--;
+            [pool[currentIndex], pool[randomIndex]] = [pool[randomIndex], pool[currentIndex]];
+        }
+        setRecommendedTickers(pool.slice(0, 10));
+    }, []);
 
     // Don't render the dashboard until auth is resolved completely
     if (isAuthorized === null) {
@@ -291,11 +310,17 @@ export default function AdminPage() {
 
                 <div className="flex flex-wrap gap-2 mt-2 mb-4">
                     <span className="text-zinc-500 font-mono text-xs flex items-center mr-2">RECOMMENDED:</span>
-                    {["AAPL", "MSFT", "GOOGL", "AMZN", "NVDA", "META", "TSLA", "PLTR", "SOUN", "SMCI"].map(t => (
+                    {recommendedTickers.length > 0 ? recommendedTickers.map(t => (
                         <button key={t} onClick={() => setTicker(t)} className="px-2.5 py-1 bg-zinc-800 hover:bg-emerald-900/50 hover:text-emerald-400 hover:border-emerald-500/50 border border-transparent text-xs text-zinc-300 rounded font-mono transition-all">
                             {t}
                         </button>
-                    ))}
+                    )) : (
+                        <div className="flex gap-2">
+                            {[...Array(10)].map((_, i) => (
+                                <div key={i} className="h-6 w-12 bg-zinc-800/50 rounded animate-pulse"></div>
+                            ))}
+                        </div>
+                    )}
                 </div>
 
                 {/* Report Type Toggle */}

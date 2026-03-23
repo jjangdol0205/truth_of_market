@@ -1,0 +1,17 @@
+name: Generate Daily Market Briefing
+
+on:
+  schedule:
+    # Runs at 21:15 UTC every Monday through Friday (US market trading days)
+    # This corresponds to 4:15 PM EST / 5:15 PM EDT (shortly after US market close).
+    - cron: '15 21 * * 1-5'
+  workflow_dispatch: # Allows you to manually trigger it from the GitHub UI
+
+jobs:
+  run-daily-briefing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Daily Summary Generation API
+        run: |
+          curl -S -f -X GET "https://truthofmarket.com/api/cron/daily-summary" \
+            -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}"
