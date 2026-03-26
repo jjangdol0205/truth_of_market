@@ -17,11 +17,11 @@ export async function GET(req: Request) {
         // 1. Basic Security: Ensure the request comes from Vercel's Cron Infrastructure
         // Vercel sends a specific Authorization header with the cron secret we set
         const authHeader = req.headers.get('authorization');
-        const cronSecret = process.env.CRON_SECRET;
+        const apiSecretKey = process.env.API_SECRET_KEY;
 
-        // Disable this check locally or if secret isn't set for easy manual testing during dev.
-        // In production, ALWAYS set CRON_SECRET in Vercel.
-        if (cronSecret && authHeader !== `Bearer ${cronSecret}`) {
+        // In production, ALWAYS set API_SECRET_KEY in Vercel.
+        // We use API_SECRET_KEY instead of CRON_SECRET because Vercel automatically overwrites CRON_SECRET.
+        if (apiSecretKey && authHeader !== `Bearer ${apiSecretKey}`) {
             return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
         }
 
