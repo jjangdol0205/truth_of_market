@@ -13,5 +13,5 @@ jobs:
     steps:
       - name: Trigger Daily Summary Generation API
         run: |
-          curl -S -f -X GET "https://truthofmarket.com/api/cron/daily-summary" \
+          curl -S -f -L -X GET "https://truthofmarket.com/api/cron/daily-summary" \
             -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}"
