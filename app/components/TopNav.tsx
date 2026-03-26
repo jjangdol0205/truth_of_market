@@ -78,6 +78,7 @@ export default function TopNav() {
                     <Link href="/briefings" className="cursor-pointer hover:text-white transition-colors hidden md:inline">BRIEFINGS</Link>
                     <Link href="/pricing" className="cursor-pointer hover:text-white transition-colors hidden">PRICING</Link>
                     <Link href="/about" className="cursor-pointer hover:text-white transition-colors hidden md:inline">ABOUT</Link>
+                    <Link href="/deals" className="cursor-pointer text-blue-400 hover:text-blue-300 font-bold transition-colors hidden md:inline">DEALS (BETA)</Link>
 
                     {/* Hidden Pricing/Pro elements */}
                     <Link href="/pricing" className="hidden bg-gradient-to-r from-amber-500 to-yellow-600 text-black font-bold px-4 py-1.5 rounded-full items-center gap-1">

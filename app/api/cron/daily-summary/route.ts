@@ -9,6 +9,8 @@ const google = createGoogleGenerativeAI({
     apiKey: process.env.GEMINI_API_KEY || process.env.GOOGLE_GENERATIVE_AI_API_KEY,
 });
 
+export const maxDuration = 60; // Extend Vercel Serverless timeout to maximum allowed (Free/Hobby tier)
+
 // Vercel Cron will hit this URL automatically
 export async function GET(req: Request) {
     try {
@@ -79,10 +81,9 @@ TITLE: [Your creative but professional title here]
 Content begins on the next line.
 `;
 
-        const model = google("gemini-1.5-pro");
-
         const { text } = await generateText({
-            model: google("gemini-2.5-pro"),
+            // SWITCHED to Flash for ultra-fast execution preventing Vercel timeouts (10s limit)
+            model: google("gemini-2.5-flash"),
             prompt: prompt,
             temperature: 0.7,
         });
