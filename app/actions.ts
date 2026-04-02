@@ -16,6 +16,28 @@ export async function analyzeTicker(ticker: string, reportType: "research" | "ea
         console.error("Ticker validation fetch failed, proceeding anyway...", err);
     }
 
+    // Fetch Real-time Valuation Data from Supabase to inject into LLM
+    let valuationContext = "Valuation Data Not Available.";
+    try {
+        const { data: forwardData } = await supabase
+            .from('forward_metrics')
+            .select('forward_pe, forward_eps, current_price')
+            .eq('ticker', ticker)
+            .order('date', { ascending: false })
+            .limit(1);
+
+        if (forwardData && forwardData.length > 0) {
+            const metrics = forwardData[0];
+            valuationContext = `REAL-TIME VALUATION METRICS:
+            - Current Stock Price: $${metrics.current_price}
+            - Forward EPS (Analyst Consensus): $${metrics.forward_eps}
+            - Forward P/E Multiple: ${metrics.forward_pe}x
+            Please explicitly evaluate this P/E multiple in your Valuation chapter. Is it undervalued or overvalued compared to its growth potential?`;
+        }
+    } catch (err) {
+        console.error("Valuation Context fetch failed.", err);
+    }
+
     // 1. 비밀 금고(.env.local)에서 키 꺼내기
     const apiKey = process.env.GEMINI_API_KEY;
     // Add dynamically current Date to anchor the AI to the live present timeline
@@ -49,7 +71,8 @@ export async function analyzeTicker(ticker: string, reportType: "research" | "ea
     **CURRENT DATE (CRITICAL): The current date today is ${today}. All data, financial analysis, quarter reports, and trend projections MUST be calculated up to ${today}. Do NOT use 2024 data. YOU ARE IN THE YEAR 2026. USE THE LATEST AVAILABLE DATA UP TO ${today}.**
     - **TODAY IS ${today}. YOU ARE IN THE YEAR 2026.**
     - All of your analytics, fundamental health checks, trailing twelves months (TTM), and macro context MUST reflect the reality up to and including **${today}**.
-    - DO NOT use old data from 2024. Pull the most recent earnings, the most recent product releases, and the absolute latest market conditions.
+    
+    ${valuationContext}
 
     **STRICT SOURCE REQUIREMENT**:
     - Use \`Google Search\` to find the absolute latest real-time data and news for ${ticker} up to ${today}.

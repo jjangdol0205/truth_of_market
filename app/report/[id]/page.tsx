@@ -11,7 +11,7 @@ import { createClient } from "../../../utils/supabase/server";
 import ShareButtons from "../../components/ShareButtons";
 import LeadMagnet from "../../components/LeadMagnet";
 import CompanyLogo from "../../../components/CompanyLogo";
-
+import ValuationChart from "../../../components/ValuationChart";
 // Force dynamic rendering since we are fetching data that changes
 export const dynamic = "force-dynamic";
 
@@ -43,6 +43,20 @@ export default async function ReportPage({ params }: { params: Promise<{ id: str
             }
         }
     }
+
+    // Fetch Valuation Data for the chart
+    const { data: forwardData } = await supabase
+        .from('forward_metrics')
+        .select('forward_pe')
+        .eq('ticker', report.ticker)
+        .order('date', { ascending: false })
+        .limit(1);
+
+    const { data: trailingData } = await supabase
+        .from('trailing_pe')
+        .select('*')
+        .eq('ticker', report.ticker)
+        .order('date', { ascending: true });
 
     // Remove all HTML comments completely from the markdown to prevent any leaks
     cleanMarkdown = cleanMarkdown.replace(/<!--[\s\S]*?-->/g, '');
@@ -124,6 +138,17 @@ export default async function ReportPage({ params }: { params: Promise<{ id: str
                     {report.one_line_summary || "No executive summary available."}
                 </p>
             </section>
+
+            {/* Valuation Chart (New Premium Section) */}
+            {(trailingData && trailingData.length > 0) && (
+                 <section className="mb-6">
+                    <ValuationChart 
+                        historicalPE={trailingData} 
+                        forwardPE={forwardData?.[0]?.forward_pe || null} 
+                        ticker={report.ticker} 
+                    />
+                 </section>
+            )}
 
             {/* Bull vs Bear Split */}
             <section className="grid grid-cols-1 md:grid-cols-2 gap-6">

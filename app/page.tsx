@@ -7,8 +7,9 @@ import DailyBriefing from "../components/DailyBriefing";
 import HeroSearch from "../components/HeroSearch";
 import SocialProof from "../components/SocialProof";
 import HowItWorks from "../components/HowItWorks";
-import MiniPricing from "../components/MiniPricing";
-
+import MiniPricing from "../components/MiniPricing"; 
+import FearAndGreedGauge from "../components/FearAndGreedGauge";
+import ValuationScreener from "../components/ValuationScreener";
 // 5분마다 데이터 갱신 (ISR, 크롤링 봇 타임아웃 방지)
 export const revalidate = 300;
 
@@ -36,6 +37,21 @@ export default async function Home() {
 
   const dailySummary = globalSummaries && globalSummaries.length > 0 ? globalSummaries[0] : null;
 
+  // 1.5 Fetch Latest Fear and Greed Index
+  const { data: fgData } = await supabase
+    .from('fear_and_greed')
+    .select('*')
+    .order('timestamp', { ascending: false })
+    .limit(1);
+  const fearAndGreed = fgData && fgData.length > 0 ? fgData[0] : null;
+
+  // 1.6 Fetch Undervalued Stocks (Screener)
+  const { data: undervalued } = await supabase
+    .from('forward_metrics')
+    .select('ticker, forward_pe, current_price')
+    .gt('forward_pe', 0)
+    .order('forward_pe', { ascending: true })
+    .limit(5);
   // 2. Fetch Live Quotes from Yahoo Finance Native API for Dynamic Output
   let quotesData: any[] = [];
   if (uniqueTickers.length > 0) {
@@ -120,8 +136,21 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Daily Briefing (FREE CONTENT) */}
-      <DailyBriefing summary={dailySummary} />
+      {/* Market Sentiments & Briefings Layout */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-20 items-stretch">
+        <div className="lg:col-span-2">
+          {/* Daily Briefing (FREE CONTENT) */}
+          <DailyBriefing summary={dailySummary} />
+        </div>
+        <div className="flex flex-col gap-6">
+          <div className="flex-1">
+            <FearAndGreedGauge score={fearAndGreed?.score || 50} rating={fearAndGreed?.rating || 'NEUTRAL'} />
+          </div>
+          <div className="flex-1">
+            <ValuationScreener stocks={undervalued || []} />
+          </div>
+        </div>
+      </div>
 
       {/* Trending Stocks Grid (New Dashboard Section) */}
       <section className="mb-20">

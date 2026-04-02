@@ -1,0 +1,44 @@
+name: Daily Market Metrics Crawler
+
+on:
+  schedule:
+    # 매일 UTC 0시 (한국시간 오전 9시)에 실행하여 갱신 데이터 확보
+    - cron: '0 0 * * *'
+  workflow_dispatch: # 수동 실행을 위한 버튼 활성화
+
+jobs:
+  run-crawler:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install tsx for running scripts
+        run: npm install -g tsx
+
+      - name: Run CNN Fear and Greed Scraper
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+        run: npx tsx scripts/fetch_fear_and_greed.ts
+
+      - name: Run Strategy A (Forward Metrics)
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+        run: npx tsx scripts/fetch_forward_metrics_strategy_A.ts
+
+      - name: Run Strategy B (Trailing P/E Simulation)
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+        run: npx tsx scripts/fetch_trailing_pe_strategy_B.ts
