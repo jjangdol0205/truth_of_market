@@ -30,3 +30,25 @@ CREATE TABLE IF NOT EXISTS public.trailing_pe (
     created_at TIMESTAMPTZ DEFAULT NOW(),
     UNIQUE(date, ticker)
 );
+
+-- ==========================================
+-- ✅ Supabase 보안 경고 (RLS Disabled in Public) 해결을 위한 정책 설정
+-- ==========================================
+
+-- 1. fear_and_greed 테이블 RLS 활성화 및 권한 부여
+ALTER TABLE public.fear_and_greed ENABLE ROW LEVEL SECURITY;
+CREATE POLICY "Allow public select on fear_and_greed" ON public.fear_and_greed FOR SELECT USING (true);
+CREATE POLICY "Allow public insert on fear_and_greed" ON public.fear_and_greed FOR INSERT WITH CHECK (true);
+CREATE POLICY "Allow public update on fear_and_greed" ON public.fear_and_greed FOR UPDATE USING (true) WITH CHECK (true);
+
+-- 2. forward_metrics 테이블 RLS 활성화 및 권한 부여
+ALTER TABLE public.forward_metrics ENABLE ROW LEVEL SECURITY;
+CREATE POLICY "Allow public select on forward_metrics" ON public.forward_metrics FOR SELECT USING (true);
+CREATE POLICY "Allow public insert on forward_metrics" ON public.forward_metrics FOR INSERT WITH CHECK (true);
+CREATE POLICY "Allow public update on forward_metrics" ON public.forward_metrics FOR UPDATE USING (true) WITH CHECK (true);
+
+-- 3. trailing_pe 테이블 RLS 활성화 및 권한 부여
+ALTER TABLE public.trailing_pe ENABLE ROW LEVEL SECURITY;
+CREATE POLICY "Allow public select on trailing_pe" ON public.trailing_pe FOR SELECT USING (true);
+CREATE POLICY "Allow public insert on trailing_pe" ON public.trailing_pe FOR INSERT WITH CHECK (true);
+CREATE POLICY "Allow public update on trailing_pe" ON public.trailing_pe FOR UPDATE USING (true) WITH CHECK (true);
