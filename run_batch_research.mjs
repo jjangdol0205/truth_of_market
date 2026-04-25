@@ -67,28 +67,15 @@ async function analyzeTicker(ticker) {
     \`\`\`
 
     **PART 2: DETAILED REPORT (MARKDOWN)**
-    Immediately below the JSON block, write the 10-chapter Detailed Report in standard Markdown.
-    - Provide deep, expansive analysis, analogies, and specific data points. (Aim for 150-200 words per chapter).
-    - **CRITICAL FORMATTING INSTRUCTIONS (Readability)**: 
-      1. Format the report to look like a premium **Wall Street Journal** newsletter.
+    Immediately below the JSON block, write a comprehensive, data-driven analysis report in standard Markdown.
+    - Provide deep, expansive analysis, analogies, and specific data points.
+    - **CRITICAL FORMATTING INSTRUCTIONS (Readability & E-E-A-T)**: 
+      1. Format the report to look like a premium **Wall Street Quant Analyst** newsletter. Write with authority, expertise, and a highly analytical tone.
       2. You MUST use frequent **DOUBLE NEWLINES** to break apart paragraphs. Never write giant walls of text. Make the text highly readable for subscribers constraint to 3-4 sentences per paragraph.
       3. Use rich markdown: **Bold** key metrics, utilize bullet point lists, and use blockquotes (\`>\`) to highlight key takeaways.
-    - **Chapter 8**: Identify EMAs, Base Building, 4-Stage Cycle, and Bear Traps concisely.
+      4. **TABLES ARE MANDATORY**: You MUST include at least TWO Markdown Tables in your report (e.g., Peer Comparison, Key Financial Metrics, or Valuation Multiples) to make the data visually digestible.
+    - **DYNAMIC STRUCTURE (CRITICAL)**: DO NOT use generic chapter titles like "Chapter 1", "Chapter 2" or "Table of Contents". You MUST create highly engaging, specific, click-worthy \`##\` (H2) and \`###\` (H3) subtitles tailored to the company's current narrative and financial situation (e.g., "The iPhone 16 Supercycle: A Margin Expanding Reality", "Technical Breakout or Bear Trap?"). Every report must have a unique flow and structure.
     - **CRITICAL**: The output MUST be strictly in ENGLISH.
-
-    # Table of Contents
-    Prologue: Welcome to the World of Investing
-    ## Chapter 1. Financial Health Checkup
-    ## Chapter 2. Industry Analysis
-    ## Chapter 3. Why This Company?
-    ## Chapter 4. 10-K Breakdown
-    ## Chapter 5. Business Model Analysis
-    ## Chapter 6. Core Competitive Advantage
-    ## Chapter 7. Top Catalysts
-    ## Chapter 8. Technical Analysis: Smart Money Tracks 🎯
-    ## Chapter 9. Potential Risks
-    ## Chapter 10. Valuation
-    [Outro] Epilogue: Investing with Conviction
     `;
 
     try {

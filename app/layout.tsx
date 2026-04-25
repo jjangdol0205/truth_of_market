@@ -28,12 +28,6 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <head>
         <link rel="alternate" type="application/rss+xml" title="Truth of Market RSS Feed" href="/rss.xml" />
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4633321310054654"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
         <Script id="clarity-script" strategy="afterInteractive">
           {`
             (function(c,l,a,r,i,t,y){
@@ -48,9 +42,7 @@ export default function RootLayout({
       <body className={`${jetbrainsMono.className} bg-black text-white antialiased`}>
         <DisableCopy />
         <div className="min-h-screen flex flex-col">
-          <div className="hidden">
-            <PromoBanner />
-          </div>
+          <PromoBanner />
           {/* Header */}
           <TopNav />
 
@@ -62,6 +54,7 @@ export default function RootLayout({
           {/* Footer */}
           <footer className="border-t border-[#333] py-8 text-center bg-[#0a0a0a]">
             <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 mb-4">
+              <Link href="/about" className="text-gray-400 hover:text-emerald-500 transition-colors text-sm font-mono">About Us</Link>
               <Link href="/blog" className="text-gray-400 hover:text-emerald-500 transition-colors text-sm font-mono">Blog</Link>
               <Link href="/methodology" className="text-gray-400 hover:text-emerald-500 transition-colors text-sm font-mono">Methodology</Link>
               <Link href="/disclaimer" className="text-rose-500/80 hover:text-rose-500 transition-colors text-sm font-mono font-bold">Disclaimer</Link>

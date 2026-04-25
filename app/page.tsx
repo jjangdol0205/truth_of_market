@@ -183,28 +183,14 @@ export default async function Home() {
       <HowItWorks />
 
       {/* Final Pricing Anchor */}
-      <div className="hidden">
-        <MiniPricing />
-      </div>
+      <MiniPricing />
 
       {/* Lead Magnet Section */}
-      <section className="mb-20 hidden">
+      <section className="mb-20">
         <LeadMagnet />
       </section>
 
-      {/* SEO Depth Content for AdSense Approval */}
-      <section className="mt-24 pt-12 border-t border-zinc-900 prose prose-invert max-w-none text-zinc-400 font-sans text-sm pb-12">
-        <h2 className="text-zinc-200 text-xl font-bold mb-4 font-mono">Uncovering Wall Street&apos;s Hidden Mechanics with AI</h2>
-        <p className="mb-4">
-          Truth of Market is a cutting-edge financial research platform that leverages artificial intelligence to analyze unstructured institutional data. Traditional retail investors are often left at a severe disadvantage, relying on delayed SEC filings or biased analyst ratings. Our proprietary ingestion engines monitor dark pool prints, options flow anomalies, and linguistic sentiment shifts in corporate earnings calls.
-        </p>
-        <p className="mb-4">
-          By utilizing advanced Natural Language Processing (NLP) on millions of documents, our system assigns an objective <strong>Investment Risk Score</strong> to major equities. We believe in total transparency and data democratization. Whether you are looking for deep-value opportunities through our valuation screener or trying to detect institutional distribution before a major sell-off, our mission is to provide you with the unvarnished reality of the global markets.
-        </p>
-        <p>
-          <em>Please note: All analysis, reports, and scores provided by Truth of Market are strictly for educational and informational purposes. We do not provide financial advice. Trading equities and derivatives carries substantial risk.</em>
-        </p>
-      </section>
+
 
     </div>
   );

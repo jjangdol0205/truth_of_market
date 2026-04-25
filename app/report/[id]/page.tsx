@@ -12,6 +12,7 @@ import ShareButtons from "../../components/ShareButtons";
 import LeadMagnet from "../../components/LeadMagnet";
 import CompanyLogo from "../../../components/CompanyLogo";
 import ValuationChart from "../../../components/ValuationChart";
+import AffiliateBanner from "../../components/AffiliateBanner";
 // Force dynamic rendering since we are fetching data that changes
 export const dynamic = "force-dynamic";
 
@@ -82,8 +83,8 @@ export default async function ReportPage({ params }: { params: Promise<{ id: str
         if (profile?.is_pro) isDbPro = true;
     }
 
-    // Regular Paywall logic + Admin Bypass + NVDA Free Sample (OVERRIDDEN FOR ADSENSE APPROVAL)
-    const isProUser = true;
+    // Regular Paywall logic + Admin Bypass
+    const isProUser = isAdmin || isDbPro;
 
     return (
         <div className="max-w-4xl mx-auto mt-10 p-6 space-y-8 mb-20">
@@ -138,6 +139,9 @@ export default async function ReportPage({ params }: { params: Promise<{ id: str
                     {report.one_line_summary || "No executive summary available."}
                 </p>
             </section>
+
+            {/* Affiliate Marketing Integration (CPA) */}
+            <AffiliateBanner ticker={report.ticker} />
 
             {/* Valuation Chart (New Premium Section) */}
             {(trailingData && trailingData.length > 0) && (
