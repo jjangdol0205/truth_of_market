@@ -1,10 +1,9 @@
 name: Daily Market Metrics Crawler
 
 on:
-  schedule:
-    # 매일 UTC 0시 (한국시간 오전 9시)에 실행하여 갱신 데이터 확보
-    - cron: '0 0 * * *'
-  workflow_dispatch: # 수동 실행을 위한 버튼 활성화
+  # schedule:
+  #   - cron: '0 0 * * *'
+  workflow_dispatch: # 수동 실행만 가능하도록 변경
 
 jobs:
   run-crawler:
