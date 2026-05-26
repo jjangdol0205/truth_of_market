@@ -103,17 +103,25 @@
           </ul>
         </nav>
 
-        <!-- AI 비서 카카오톡 공유 패널 -->
-        <div class="sidebar-card kakao-panel">
-          <div class="kakao-panel-header">
-            <h4><i class="fa-solid fa-comment kakaotalk-color"></i> 카카오톡 공유 비서</h4>
-            <span class="status-dot active" id="kakaoStatus">준비완료</span>
+        <!-- AI 비서 스터디 공유 패널 -->
+        <div class="sidebar-card share-panel">
+          <div class="share-panel-header">
+            <h4><i class="fa-solid fa-share-nodes" style="color: hsl(var(--accent-cyan));"></i> 스터디 공유 비서</h4>
+            <span class="status-dot active" id="shareStatus">준비완료</span>
           </div>
-          <p class="kakao-desc">실시간 AI 학습 노트를 카카오톡으로 원클릭 공유해 보세요. 미려한 템플릿 텍스트가 복사되어 친구나 스터디 그룹방에 간편히 붙여넣을 수 있습니다.</p>
-          <button id="sendKakaoBriefingBtn" class="kakaotalk-btn pulse-effect" style="width: 100%; justify-content: center; border: none; padding: 12px; font-size: 0.95rem;">
-            <i class="fa-solid fa-copy"></i> 오늘 경제 브리핑 전체 복사
+          <p class="kakao-desc">실시간 AI 학습 노트를 카카오톡이나 텔레그램으로 편리하게 내보내 보세요. 매일 아침 글로벌 투자 요약 브리핑도 지원합니다.</p>
+          
+          <!-- 카카오톡 복사 버튼 -->
+          <button id="sendKakaoBriefingBtn" class="kakaotalk-btn pulse-effect" style="width: 100%; justify-content: center; border: none; padding: 12px; font-size: 0.92rem; margin-bottom: 8px;">
+            <i class="fa-solid fa-copy"></i> 카카오톡 브리핑 복사
           </button>
-          <div class="briefing-time-info"><i class="fa-regular fa-lightbulb"></i> 복사 후 카카오톡 대화방에 붙여넣기(Ctrl+V) 하세요!</div>
+          
+          <!-- 텔레그램 발송 버튼 -->
+          <button id="sendTgBriefingBtn" class="telegram-btn" style="width: 100%; justify-content: center; border: none; padding: 12px; font-size: 0.92rem;">
+            <i class="fa-solid fa-paper-plane"></i> 텔레그램 브리핑 발송
+          </button>
+          
+          <div class="briefing-time-info" style="margin-top: 10px;"><i class="fa-regular fa-clock"></i> 매일 오전 8시 텔레그램 자동 뉴스 브리핑 발송</div>
         </div>
 
         <!-- 퀵 노트 위젯 -->
@@ -228,8 +236,9 @@
 
         <div class="modal-footer">
           <div class="footer-left">
-            <button id="modalBookmarkBtn" class="secondary-btn"><i class="fa-regular fa-star"></i> 스터디 보관함 저장</button>
-            <button id="modalKakaotalkShareBtn" class="kakaotalk-btn"><i class="fa-solid fa-comment"></i> 카카오톡 공유</button>
+            <button id="modalBookmarkBtn" class="secondary-btn"><i class="fa-regular fa-star"></i> 보관함 저장</button>
+            <button id="modalKakaotalkShareBtn" class="kakaotalk-btn"><i class="fa-solid fa-comment"></i> 카카오톡</button>
+            <button id="modalTgShareBtn" class="telegram-btn"><i class="fa-brands fa-telegram"></i> 텔레그램</button>
           </div>
           <div class="footer-right">
             <a href="#" id="modalOriginalLink" target="_blank" class="text-link-btn">기사 원문 읽기 <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
@@ -255,6 +264,10 @@
               <div class="api-status-card">
                 <span class="status-name">Gemini AI API</span>
                 <span id="geminiStatusLabel" class="status-value loading">확인 중...</span>
+              </div>
+              <div class="api-status-card">
+                <span class="status-name">Telegram Bot</span>
+                <span id="telegramStatusLabel" class="status-value loading">확인 중...</span>
               </div>
               <div class="api-status-card">
                 <span class="status-name">카카오톡 공유</span>
