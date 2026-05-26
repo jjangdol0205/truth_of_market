@@ -103,17 +103,17 @@
           </ul>
         </nav>
 
-        <!-- AI 비서 텔레그램 요약 패널 -->
-        <div class="sidebar-card tg-panel">
-          <div class="tg-panel-header">
-            <h4><i class="fa-brands fa-telegram telegram-color"></i> 텔레그램 스터디 비서</h4>
-            <span class="status-dot active" id="tgStatus">연동대기</span>
+        <!-- AI 비서 카카오톡 공유 패널 -->
+        <div class="sidebar-card kakao-panel">
+          <div class="kakao-panel-header">
+            <h4><i class="fa-solid fa-comment kakaotalk-color"></i> 카카오톡 공유 비서</h4>
+            <span class="status-dot active" id="kakaoStatus">준비완료</span>
           </div>
-          <p class="tg-desc">설정된 텔레그램 대화방으로 전체 기사 브리핑을 전송하거나 특정 기사의 AI 핵심 노트를 공유할 수 있습니다.</p>
-          <button id="sendTgBriefingBtn" class="primary-btn pulse-effect">
-            <i class="fa-solid fa-paper-plane"></i> 텔레그램 일일 브리핑 발송
+          <p class="kakao-desc">실시간 AI 학습 노트를 카카오톡으로 원클릭 공유해 보세요. 미려한 템플릿 텍스트가 복사되어 친구나 스터디 그룹방에 간편히 붙여넣을 수 있습니다.</p>
+          <button id="sendKakaoBriefingBtn" class="kakaotalk-btn pulse-effect" style="width: 100%; justify-content: center; border: none; padding: 12px; font-size: 0.95rem;">
+            <i class="fa-solid fa-copy"></i> 오늘 경제 브리핑 전체 복사
           </button>
-          <div class="briefing-time-info"><i class="fa-regular fa-clock"></i> 매일 오전 8시 자동 뉴스 발송 활성화</div>
+          <div class="briefing-time-info"><i class="fa-regular fa-lightbulb"></i> 복사 후 카카오톡 대화방에 붙여넣기(Ctrl+V) 하세요!</div>
         </div>
 
         <!-- 퀵 노트 위젯 -->
@@ -229,7 +229,7 @@
         <div class="modal-footer">
           <div class="footer-left">
             <button id="modalBookmarkBtn" class="secondary-btn"><i class="fa-regular fa-star"></i> 스터디 보관함 저장</button>
-            <button id="modalTgShareBtn" class="telegram-btn"><i class="fa-brands fa-telegram"></i> 텔레그램 공유</button>
+            <button id="modalKakaotalkShareBtn" class="kakaotalk-btn"><i class="fa-solid fa-comment"></i> 카카오톡 공유</button>
           </div>
           <div class="footer-right">
             <a href="#" id="modalOriginalLink" target="_blank" class="text-link-btn">기사 원문 읽기 <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
@@ -257,8 +257,8 @@
                 <span id="geminiStatusLabel" class="status-value loading">확인 중...</span>
               </div>
               <div class="api-status-card">
-                <span class="status-name">Telegram Bot</span>
-                <span id="telegramStatusLabel" class="status-value loading">확인 중...</span>
+                <span class="status-name">카카오톡 공유</span>
+                <span id="kakaotalkStatusLabel" class="status-value active">작동 중</span>
               </div>
             </div>
             <p class="settings-help-text"><i class="fa-solid fa-info-circle"></i> API 설정은 프로젝트 루트 디렉토리의 <code>.env</code> 파일에서 안전하게 관리할 수 있습니다.</p>

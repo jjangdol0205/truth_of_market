@@ -112,11 +112,17 @@ function setupEventListeners() {
   // 커스텀 RSS 피드 추가 폼 제출
   document.getElementById('addFeedForm').addEventListener('submit', handleAddCustomFeed);
 
-  // 텔레그램 일일 브리핑 수동 전송 버튼
-  document.getElementById('sendTgBriefingBtn').addEventListener('click', handleTelegramBriefing);
+  // 카카오톡 일일 브리핑 복사 버튼
+  const sendKakaoBtn = document.getElementById('sendKakaoBriefingBtn');
+  if (sendKakaoBtn) {
+    sendKakaoBtn.addEventListener('click', handleKakaoBriefing);
+  }
 
-  // 모달 내 텔레그램 개별 공유 버튼
-  document.getElementById('modalTgShareBtn').addEventListener('click', handleShareCurrentArticleToTelegram);
+  // 모달 내 카카오톡 개별 공유 버튼
+  const modalKakaoBtn = document.getElementById('modalKakaotalkShareBtn');
+  if (modalKakaoBtn) {
+    modalKakaoBtn.addEventListener('click', handleShareCurrentArticleToKakaotalk);
+  }
 
   // 모달 내 북마크 스크랩 버튼
   document.getElementById('modalBookmarkBtn').addEventListener('click', handleToggleModalBookmark);
@@ -379,44 +385,176 @@ function showAiAnalysisResult(analysis) {
   });
 }
 
-// 5. 텔레그램 연동 로직
-async function handleTelegramBriefing(e) {
+// 5. 카카오톡 공유 비서 및 클립보드 복사 로직
+function showToast(message, duration = 3500) {
+  let toast = document.getElementById('custom-toast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'custom-toast';
+    toast.style.position = 'fixed';
+    toast.style.bottom = '30px';
+    toast.style.left = '50%';
+    toast.style.transform = 'translateX(-50%) translateY(20px)';
+    toast.style.background = 'hsla(var(--bg-secondary), 0.95)';
+    toast.style.backdropFilter = 'blur(16px)';
+    toast.style.border = '1px solid hsla(var(--accent-cyan), 0.5)';
+    toast.style.color = 'white';
+    toast.style.padding = '12px 24px';
+    toast.style.borderRadius = '12px';
+    toast.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px hsla(var(--accent-cyan), 0.2)';
+    toast.style.zIndex = '10000';
+    toast.style.fontSize = '0.95rem';
+    toast.style.fontWeight = '500';
+    toast.style.display = 'flex';
+    toast.style.alignItems = 'center';
+    toast.style.gap = '8px';
+    toast.style.transition = 'all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+    toast.style.opacity = '0';
+    document.body.appendChild(toast);
+  }
+  
+  toast.innerHTML = `<i class="fa-solid fa-circle-check" style="color: hsl(var(--accent-cyan)); font-size: 1.1rem;"></i> ${message}`;
+  
+  setTimeout(() => {
+    toast.style.opacity = '1';
+    toast.style.transform = 'translateX(-50%) translateY(0)';
+  }, 50);
+  
+  if (toast.timeoutId) {
+    clearTimeout(toast.timeoutId);
+  }
+  
+  toast.timeoutId = setTimeout(() => {
+    toast.style.opacity = '0';
+    toast.style.transform = 'translateX(-50%) translateY(20px)';
+  }, duration);
+}
+
+// 클립보드 복사 헬퍼 함수
+function copyToClipboard(text, successMessage) {
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text)
+      .then(() => {
+        showToast(successMessage);
+        launchKakaotalkIfMobile();
+      })
+      .catch(err => {
+        console.error('Clipboard copy failed:', err);
+        fallbackCopyToClipboard(text, successMessage);
+      });
+  } else {
+    fallbackCopyToClipboard(text, successMessage);
+  }
+}
+
+function fallbackCopyToClipboard(text, successMessage) {
+  try {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.style.position = 'fixed';
+    document.body.appendChild(textarea);
+    textarea.select();
+    const successful = document.execCommand('copy');
+    document.body.removeChild(textarea);
+    if (successful) {
+      showToast(successMessage);
+      launchKakaotalkIfMobile();
+    } else {
+      throw new Error('Fallback copy failed');
+    }
+  } catch (err) {
+    alert('📋 클립보드 복사에 실패했습니다. 수동으로 복사해주세요.');
+  }
+}
+
+function launchKakaotalkIfMobile() {
+  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  if (isMobile) {
+    setTimeout(() => {
+      window.location.href = 'kakaotalk://';
+    }, 800);
+  }
+}
+
+// 오늘 경제 브리핑 전체 내용 복사
+async function handleKakaoBriefing(e) {
   const btn = e.currentTarget;
   const originalHtml = btn.innerHTML;
   
   btn.disabled = true;
-  btn.innerHTML = `<i class="fa-solid fa-circle-notch animate-spin"></i> 분석 및 텔레그램 발송 중...`;
+  btn.innerHTML = `<i class="fa-solid fa-spinner animate-spin"></i> 요약 및 브리핑 생성 중...`;
 
   try {
-    const response = await fetch('/api/telegram/share', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        title: "실시간 종합 투자 브리핑",
-        summary: ["금일 최고 가치의 거시경제지표 및 시장 투자 정보 취합 전송", "상세 항목은 하단 웹 아카이브 링크 참고"],
-        implications: ["텔레그램을 통한 주요 외신 핵심 3줄 스터디 일일 지원"],
-        link: "http://localhost:3000",
-        sourceName: "InvestArchive 시스템 자동 뉴스레터"
-      })
-    });
-
-    const result = await response.json();
-    if (result.success) {
-      alert('🔔 성공: 텔레그램 일일 스터디 브리핑 발송이 완료되었습니다!');
-    } else {
-      alert('⚠️ 발송 실패: ' + result.message);
+    const topNews = state.articles.slice(0, 5);
+    if (topNews.length === 0) {
+      alert('⚠️ 아직 실시간 뉴스가 로드되지 않았습니다. 새로고침 후 다시 시도해 주세요.');
+      return;
     }
+
+    let briefText = `🚀 [InvestArchive 투자 핵심 뉴스 일일 브리핑] 🚀\n`;
+    briefText += `📅 일시: ${new Date().toLocaleDateString('ko-KR')} | AI 분석 요약 아카이브\n`;
+    briefText += `━━━━━━━━━━━━━━━━━━━━━\n\n`;
+
+    for (let i = 0; i < topNews.length; i++) {
+      const item = topNews[i];
+      let analysis = null;
+      
+      const cached = state.bookmarks.find(b => b.id === item.id && b.aiAnalysis) || state.aiCache[item.id];
+      if (cached) {
+        analysis = cached.aiAnalysis;
+      } else {
+        try {
+          const response = await fetch('/api/analyze', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ title: item.title, description: item.description, lang: item.lang })
+          });
+          const result = await response.json();
+          if (result.success && result.data) {
+            analysis = result.data;
+            state.aiCache[item.id] = { ...item, aiAnalysis: analysis };
+          }
+        } catch (err) {
+          console.warn(`기사 요약 실패:`, err.message);
+        }
+      }
+
+      const finalTitle = analysis ? analysis.translatedTitle : item.title;
+      briefText += `${i + 1}. 📰 *${finalTitle}* (${item.sourceName})\n`;
+      
+      if (analysis) {
+        analysis.summary.forEach(sum => {
+          briefText += `  • ${sum}\n`;
+        });
+        briefText += `  💡 *투자 시사점:*\n`;
+        analysis.implications.forEach(imp => {
+          briefText += `    - ${imp}\n`;
+        });
+      } else {
+        briefText += `  • ${item.description ? item.description.substring(0, 120) + '...' : '상세 기사 설명 없음'}\n`;
+      }
+      briefText += `  🔗 [기사 원문]: ${item.link}\n\n`;
+    }
+
+    briefText += `━━━━━━━━━━━━━━━━━━━━━\n`;
+    briefText += `✍️ 대시보드 바로가기: ${window.location.origin}\n`;
+    briefText += `스마트한 안목으로 성공적인 하루 투자를 만들어가시길 바랍니다! 📈`;
+
+    copyToClipboard(briefText, '📋 일일 브리핑이 클립보드에 복사되었습니다! 카카오톡에 붙여넣어 공유하세요.');
   } catch (error) {
-    alert('❌ 에러: 서버에 연결할 수 없거나 전송 중 오류가 발생했습니다.');
+    console.error(error);
+    alert('❌ 브리핑 생성 과정 중 오류가 발생했습니다.');
   } finally {
     btn.disabled = false;
     btn.innerHTML = originalHtml;
   }
 }
 
-// 모달 내 기사 개별 텔레그램 스터디 공유
-async function handleShareCurrentArticleToTelegram() {
+// 모달 내 현재 기사 카카오톡 스터디 노트 공유
+function handleShareCurrentArticleToKakaotalk() {
   const article = state.currentSelectedArticle;
+  if (!article) return;
+
   const aiData = state.aiCache[article.id] || state.bookmarks.find(b => b.id === article.id);
 
   if (!aiData || !aiData.aiAnalysis) {
@@ -424,36 +562,25 @@ async function handleShareCurrentArticleToTelegram() {
     return;
   }
 
-  const btn = document.getElementById('modalTgShareBtn');
-  const originalHtml = btn.innerHTML;
-  btn.disabled = true;
-  btn.innerHTML = `<i class="fa-solid fa-spinner animate-spin"></i> 전송 중...`;
+  const analysis = aiData.aiAnalysis;
+  let shareText = `📌 [투자 스터디 노트 공유] 📌\n`;
+  shareText += `📰 *${analysis.translatedTitle}* (${article.sourceName})\n\n`;
+  
+  shareText += `📝 *핵심 요약 (3줄):*\n`;
+  analysis.summary.forEach(sum => {
+    shareText += `• ${sum}\n`;
+  });
+  
+  shareText += `\n💡 *투자 시사점:*\n`;
+  analysis.implications.forEach(imp => {
+    shareText += `  - ${imp}\n`;
+  });
+  
+  shareText += `\n🔗 *기사 원문 읽기:*\n${article.link}\n`;
+  shareText += `━━━━━━━━━━━━━━━━━━━━━\n`;
+  shareText += `✍️ InvestArchive AI Study Dashboard`;
 
-  try {
-    const response = await fetch('/api/telegram/share', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        title: aiData.aiAnalysis.translatedTitle,
-        summary: aiData.aiAnalysis.summary,
-        implications: aiData.aiAnalysis.implications,
-        link: article.link,
-        sourceName: article.sourceName
-      })
-    });
-
-    const result = await response.json();
-    if (result.success) {
-      alert('✈️ 텔레그램으로 학습 노트 공유가 완료되었습니다!');
-    } else {
-      alert('⚠️ 전송 오류: ' + result.message);
-    }
-  } catch (error) {
-    alert('❌ 전송 실패: 서버에 접속할 수 없습니다.');
-  } finally {
-    btn.disabled = false;
-    btn.innerHTML = originalHtml;
-  }
+  copyToClipboard(shareText, '💛 스터디 노트가 복사되었습니다! 카카오톡 대화방에 붙여넣기(Ctrl+V) 하세요.');
 }
 
 // 6. 스터디 보관함(북마크) 컨트롤
@@ -595,13 +722,11 @@ function renderCustomFeedsList() {
 // 8. 설정 내 API 연동 검증
 async function checkApiStatus() {
   const geminiEl = document.getElementById('geminiStatusLabel');
-  const telegramEl = document.getElementById('telegramStatusLabel');
-  const tgPanelStatus = document.getElementById('tgStatus');
+  const kakaoEl = document.getElementById('kakaotalkStatusLabel');
+  const kakaoPanelStatus = document.getElementById('kakaoStatus');
 
   geminiEl.className = 'status-value loading';
   geminiEl.innerText = '검사 중...';
-  telegramEl.className = 'status-value loading';
-  telegramEl.innerText = '검사 중...';
 
   try {
     const response = await fetch('/api/status');
@@ -616,28 +741,21 @@ async function checkApiStatus() {
         geminiEl.className = 'status-value inactive';
         geminiEl.innerText = 'API 키 누락';
       }
-
-      // Telegram Bot 상태 업데이트
-      if (result.telegramActive) {
-        telegramEl.className = 'status-value active';
-        telegramEl.innerText = '연동 성공';
-        tgPanelStatus.className = 'status-dot active';
-        tgPanelStatus.innerText = '연동 성공';
-      } else {
-        telegramEl.className = 'status-value inactive';
-        telegramEl.innerText = '설정 누락';
-        tgPanelStatus.className = 'status-dot error';
-        tgPanelStatus.innerText = '미연동';
-      }
     }
   } catch (error) {
     console.error('API Status check error:', error);
     geminiEl.className = 'status-value inactive';
     geminiEl.innerText = '서버 에러';
-    telegramEl.className = 'status-value inactive';
-    telegramEl.innerText = '서버 에러';
-    tgPanelStatus.className = 'status-dot error';
-    tgPanelStatus.innerText = '오프라인';
+  }
+
+  // 카카오톡 공유는 항상 준비 상태임 (클립보드 방식)
+  if (kakaoEl) {
+    kakaoEl.className = 'status-value active';
+    kakaoEl.innerText = '작동 중';
+  }
+  if (kakaoPanelStatus) {
+    kakaoPanelStatus.className = 'status-dot active';
+    kakaoPanelStatus.innerText = '준비완료';
   }
 }
 

@@ -188,21 +188,24 @@ button {
   color: hsl(var(--accent-cyan));
 }
 
-.telegram-btn {
-  background: linear-gradient(135deg, #0088cc, #00a2ed);
-  color: white;
+.kakaotalk-btn {
+  background: linear-gradient(135deg, #FEE500, #FADA0A);
+  color: #191919 !important;
   font-weight: 600;
   padding: 10px 18px;
   border-radius: 10px;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  box-shadow: 0 4px 15px -3px rgba(0, 136, 204, 0.4);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  box-shadow: 0 4px 15px -3px rgba(254, 229, 0, 0.4);
 }
-.telegram-btn:hover {
+.kakaotalk-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px -3px rgba(0, 136, 204, 0.6);
-  filter: brightness(1.1);
+  box-shadow: 0 6px 20px -3px rgba(254, 229, 0, 0.6);
+  filter: brightness(1.05);
 }
 
 .icon-btn {
@@ -442,22 +445,22 @@ button {
   padding: 20px;
 }
 
-.tg-panel {
-  border-color: hsla(190, 80%, 40%, 0.3);
-  background-image: linear-gradient(135deg, hsla(190, 80%, 35%, 0.05), transparent);
+.kakao-panel {
+  border-color: hsla(45, 95%, 45%, 0.3);
+  background-image: linear-gradient(135deg, hsla(45, 95%, 40%, 0.05), transparent);
 }
 
-.telegram-color {
-  color: #0088cc;
+.kakaotalk-color {
+  color: #FEE500;
 }
 
-.tg-panel-header {
+.kakao-panel-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
 }
-.tg-panel-header h4 {
+.kakao-panel-header h4 {
   font-size: 0.9rem;
   display: flex;
   align-items: center;
@@ -491,7 +494,7 @@ button {
   color: hsl(var(--accent-red));
 }
 
-.tg-desc {
+.kakao-desc {
   font-size: 0.78rem;
   color: hsl(var(--text-muted));
   line-height: 1.5;
@@ -1157,7 +1160,7 @@ button {
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .sidebar-nav, .tg-panel, .study-tip-panel {
+  .sidebar-nav, .kakao-panel, .study-tip-panel {
     flex: 1 1 300px;
   }
 }
