@@ -1,4 +1,4 @@
-const CACHE_NAME = 'invest-archive-v1';
+const CACHE_NAME = 'invest-archive-v2';
 const ASSETS_TO_CACHE = [
   '/',
   '/index.html',
