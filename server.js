@@ -202,27 +202,6 @@ async function analyzeArticleWithGemini(title, description, lang) {
     return aiCache[cacheKey];
   }
 
-  // --- [과금 방지 임시 우회] 6월 1일 전까지는 API 호출을 하지 않고 데모 모드로 동작하여 과금을 차단합니다.
-  const now = new Date();
-  const limitDate = new Date('2026-06-01T00:00:00+09:00'); // 2026년 6월 1일 자정 (KST)
-  
-  if (now < limitDate) {
-    console.log(`⚠️ [과금 방지 활성화] 6월 1일 이전이므로 새로운 기사 요약 API 호출을 차단하고 데모 데이터를 반환합니다.`);
-    const isEnglish = lang === 'en';
-    return {
-      translatedTitle: isEnglish ? `[임시 무료모드] ${title}` : title,
-      summary: [
-        "현재 API 과금 방지 임시 무료 모드(6월 1일까지)가 활성화되어 있습니다.",
-        "새로운 기사 분석을 위한 Gemini API 호출이 일시적으로 제한됩니다.",
-        `원문 제목: ${title}`
-      ],
-      implications: [
-        "6월 1일 이후 원래의 Gemini AI 분석이 자동으로 다시 재개됩니다.",
-        "이미 분석 완료된 기존 기사들은 캐시를 통해 정상적으로 확인하실 수 있습니다."
-      ]
-    };
-  }
-
   if (!genAI) {
     // Gemini API Key가 없는 경우의 Mock 데모 데이터 반환
     const isEnglish = lang === 'en';
@@ -242,7 +221,7 @@ async function analyzeArticleWithGemini(title, description, lang) {
 
   try {
     const model = genAI.getGenerativeModel({
-      model: 'gemini-3.5-flash',
+      model: 'gemini-1.5-flash',
       generationConfig: { responseMimeType: "application/json" }
     });
 
