@@ -232,11 +232,15 @@ function renderArticles() {
 
   // 실시간 검색 키워드 필터링 적용
   if (state.searchQuery) {
-    filtered = filtered.filter(art => 
-      art.title.toLowerCase().includes(state.searchQuery) || 
-      art.description.toLowerCase().includes(state.searchQuery) ||
-      (art.translatedTitle && art.translatedTitle.toLowerCase().includes(state.searchQuery))
-    );
+    filtered = filtered.filter(art => {
+      const titleText = art.title || '';
+      const descText = art.description || '';
+      const transTitleText = art.translatedTitle || '';
+      
+      return titleText.toLowerCase().includes(state.searchQuery) || 
+             descText.toLowerCase().includes(state.searchQuery) ||
+             transTitleText.toLowerCase().includes(state.searchQuery);
+    });
   }
 
   // 기사 건수 출력
