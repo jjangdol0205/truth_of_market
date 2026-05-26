@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>투자 스터디 뉴스 아카이브 & AI 비서</title>
+  <!-- SEO 메타 태그 -->
+  <meta name="description" content="국내외 주요 언론사 실시간 경제 뉴스를 수집하고 Google Gemini AI를 활용하여 번역, 요약 및 투자 시사점을 제공하는 나만의 투자 연구소.">
+  
+  <!-- 구글 폰트 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- 폰트어썸 아이콘 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- 커스텀 CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+  <!-- 배경 그라디언트 요소들 -->
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+  <div class="bg-glow bg-glow-3"></div>
+
+  <!-- 전체 레이아웃 컨테이너 -->
+  <div class="app-container">
+    
+    <!-- 1. 헤더 (Navbar) -->
+    <header class="app-header">
+      <div class="logo-container">
+        <div class="logo-icon"><i class="fa-solid fa-chart-line"></i></div>
+        <div class="logo-text">
+          <h1>INVEST<span class="highlight">ARCHIVE</span></h1>
+          <span class="sub-logo">AI Study & News Briefing</span>
+        </div>
+      </div>
+
+      <!-- 실시간 시황 티커 (Mocking & Animation) -->
+      <div class="market-ticker-container">
+        <div class="ticker-wrapper">
+          <div class="ticker-item"><span class="ticker-label">KOSPI</span> <span class="ticker-val up">2,682.40 ▲ 1.12%</span></div>
+          <div class="ticker-item"><span class="ticker-label">NASDAQ</span> <span class="ticker-val up">16,742.30 ▲ 0.85%</span></div>
+          <div class="ticker-item"><span class="ticker-label">S&P 500</span> <span class="ticker-val up">5,304.72 ▲ 0.64%</span></div>
+          <div class="ticker-item"><span class="ticker-label">원/달러</span> <span class="ticker-val down">1,358.50 ▼ 0.35%</span></div>
+          <div class="ticker-item"><span class="ticker-label">국제유가(WTI)</span> <span class="ticker-val down">78.20 ▼ 0.45%</span></div>
+          <div class="ticker-item"><span class="ticker-label">미 10년물 국채</span> <span class="ticker-val up">4.42% ▲ 0.02%</span></div>
+        </div>
+      </div>
+
+      <!-- 헤더 우측 메뉴 -->
+      <div class="header-actions">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="searchInput" placeholder="투자 키워드 검색 (예: 금리, AI, 엔비디아)...">
+        </div>
+        <button id="themeToggle" class="icon-btn" title="테마 변경"><i class="fa-solid fa-moon"></i></button>
+        <button id="settingsBtn" class="icon-btn" title="설정"><i class="fa-solid fa-gear"></i></button>
+      </div>
+    </header>
+
+    <!-- 2. 본문 컨텐츠 레이아웃 -->
+    <main class="app-content">
+      
+      <!-- 2.1 좌측 사이드바 (필터 & 텔레그램 컨트롤) -->
+      <aside class="app-sidebar">
+        
+        <!-- 네비게이션 섹션 -->
+        <nav class="sidebar-nav">
+          <h3 class="nav-title"><i class="fa-solid fa-layer-group"></i> 카테고리 필터</h3>
+          <ul class="nav-list">
+            <li class="nav-item active" data-filter="all">
+              <i class="fa-solid fa-newspaper"></i> <span>전체 뉴스 피드</span>
+            </li>
+            <li class="nav-item" data-filter="Markets">
+              <i class="fa-solid fa-globe"></i> <span>글로벌 투자 & 시장 (US)</span>
+            </li>
+            <li class="nav-item" data-filter="Macro">
+              <i class="fa-solid fa-chart-pie"></i> <span>국내 거시경제 (KR)</span>
+            </li>
+            <li class="nav-item" data-filter="Tech">
+              <i class="fa-solid fa-laptop-code"></i> <span>테크 & 미래 산업 (US)</span>
+            </li>
+            <li class="nav-item" data-filter="custom">
+              <i class="fa-solid fa-square-plus"></i> <span>나만의 등록 피드</span>
+            </li>
+          </ul>
+
+          <h3 class="nav-title"><i class="fa-solid fa-bookmark"></i> 스터디 아카이브</h3>
+          <ul class="nav-list">
+            <li class="nav-item" data-filter="bookmarks">
+              <i class="fa-solid fa-book-bookmark"></i> <span>보관한 AI 학습노트</span>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- AI 비서 텔레그램 요약 패널 -->
+        <div class="sidebar-card tg-panel">
+          <div class="tg-panel-header">
+            <h4><i class="fa-brands fa-telegram telegram-color"></i> 텔레그램 스터디 비서</h4>
+            <span class="status-dot active" id="tgStatus">연동대기</span>
+          </div>
+          <p class="tg-desc">설정된 텔레그램 대화방으로 전체 기사 브리핑을 전송하거나 특정 기사의 AI 핵심 노트를 공유할 수 있습니다.</p>
+          <button id="sendTgBriefingBtn" class="primary-btn pulse-effect">
+            <i class="fa-solid fa-paper-plane"></i> 텔레그램 일일 브리핑 발송
+          </button>
+          <div class="briefing-time-info"><i class="fa-regular fa-clock"></i> 매일 오전 8시 자동 뉴스 발송 활성화</div>
+        </div>
+
+        <!-- 퀵 노트 위젯 -->
+        <div class="sidebar-card study-tip-panel">
+          <h4><i class="fa-solid fa-graduation-cap"></i> 투자 학습 가이드</h4>
+          <ul class="study-tips">
+            <li>영문 금융 뉴스는 <strong>AI 스터디</strong>를 클릭하면 고품격 한글 번역과 투자 요약본을 제공합니다.</li>
+            <li>정기 스터디를 위해 관심 있는 기사를 보관함에 담고 텔레그램 채널에 스터디 그룹원들과 공유하세요.</li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- 2.2 메인 뉴스 그리드 리스트 -->
+      <section class="main-news-section">
+        <div class="section-header">
+          <h2 id="currentCategoryTitle">전체 실시간 투자 뉴스</h2>
+          <div class="news-meta-controls">
+            <span class="article-count" id="articleCount">로딩 중...</span>
+            <button id="refreshNewsBtn" class="refresh-btn"><i class="fa-solid fa-arrows-rotate"></i> 새로고침</button>
+          </div>
+        </div>
+
+        <!-- 뉴스 로딩 스피너 -->
+        <div class="loading-container" id="newsLoading">
+          <div class="spinner"></div>
+          <p>실시간 언론사 경제 및 투자 RSS 피드를 가져오는 중입니다...</p>
+        </div>
+
+        <!-- 에러 메시지 뷰 -->
+        <div class="error-container hidden" id="newsError">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          <p>뉴스 데이터를 가져오는 도중 문제가 발생했습니다.</p>
+          <button id="errorRetryBtn" class="retry-btn">다시 시도</button>
+        </div>
+
+        <!-- 빈 뉴스 목록 안내 -->
+        <div class="empty-container hidden" id="newsEmpty">
+          <i class="fa-solid fa-folder-open"></i>
+          <p id="emptyMessage">표시할 투자 뉴스가 없습니다.</p>
+        </div>
+
+        <!-- 실제 뉴스 카드가 배치될 그리드 -->
+        <div class="news-grid" id="newsGrid">
+          <!-- JS 동적 생성 영역 -->
+        </div>
+      </section>
+    </main>
+
+    <!-- 3. 모달 레이어 모음 -->
+    
+    <!-- 3.1 AI 스터디 및 요약 팝업 모달 -->
+    <div id="aiStudyModal" class="modal-overlay hidden">
+      <div class="modal-card study-modal-card">
+        <div class="modal-header">
+          <div class="modal-title-wrap">
+            <span class="modal-badge"><i class="fa-solid fa-wand-magic-sparkles animate-sparkle"></i> AI INVESTMENT STUDY NOTE</span>
+            <h3 id="modalOriginalTitle">원본 기사 제목</h3>
+          </div>
+          <button class="close-modal-btn" onclick="closeModal('aiStudyModal')"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        
+        <div class="modal-body">
+          <!-- 기사 정보 바 -->
+          <div class="modal-article-info">
+            <span id="modalSource"><i class="fa-solid fa-newspaper"></i> 조선일보</span>
+            <span id="modalDate"><i class="fa-regular fa-clock"></i> 2시간 전</span>
+            <span id="modalLangBadge" class="lang-badge">KR</span>
+          </div>
+
+          <!-- 기사 내용 요약문 -->
+          <div class="original-snippet-box">
+            <h4><i class="fa-solid fa-align-left"></i> 기사 초안 / 본문 요약</h4>
+            <p id="modalSnippet">기사 본문 내용 요약...</p>
+          </div>
+
+          <!-- AI 분석 로딩 영역 -->
+          <div class="ai-loading-container" id="aiLoading">
+            <div class="ai-spinner"></div>
+            <p>구글 Gemini AI가 기사를 분석하여 <strong>번역, 3줄 핵심 요약, 투자자 시사점</strong>을 도출하고 있습니다...</p>
+          </div>
+
+          <!-- AI 분석 완료 영역 -->
+          <div class="ai-analysis-result hidden" id="aiResult">
+            
+            <!-- 한글 번역 제목 -->
+            <div class="analysis-section translated-title-section">
+              <h4><i class="fa-solid fa-language"></i> 국문 번역 제목</h4>
+              <div class="highlight-text-box" id="aiTranslatedTitle">번역된 뉴스 제목</div>
+            </div>
+
+            <!-- 핵심 3줄 요약 -->
+            <div class="analysis-section">
+              <h4><i class="fa-solid fa-list-check"></i> 투자 핵심 요약 (3줄)</h4>
+              <ul class="summary-list" id="aiSummaryList">
+                <li>핵심 요약 포인트 1</li>
+                <li>핵심 요약 포인트 2</li>
+                <li>핵심 요약 포인트 3</li>
+              </ul>
+            </div>
+
+            <!-- 투자 시사점 및 기회/리스크 -->
+            <div class="analysis-section implications-section">
+              <h4><i class="fa-solid fa-lightbulb"></i> 투자자 관점 시사점</h4>
+              <ul class="implications-list" id="aiImplicationsList">
+                <li>시장 영향 및 투자 기회 요소</li>
+                <li>경계해야 할 리스크 및 추가 관전 포인트</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <div class="footer-left">
+            <button id="modalBookmarkBtn" class="secondary-btn"><i class="fa-regular fa-star"></i> 스터디 보관함 저장</button>
+            <button id="modalTgShareBtn" class="telegram-btn"><i class="fa-brands fa-telegram"></i> 텔레그램 공유</button>
+          </div>
+          <div class="footer-right">
+            <a href="#" id="modalOriginalLink" target="_blank" class="text-link-btn">기사 원문 읽기 <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <button class="primary-btn" onclick="closeModal('aiStudyModal')">스터디 완료</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3.2 설정 및 나만의 피드(RSS) 관리 모달 -->
+    <div id="settingsModal" class="modal-overlay hidden">
+      <div class="modal-card settings-modal-card">
+        <div class="modal-header">
+          <h3><i class="fa-solid fa-gear"></i> 시스템 설정 및 피드 관리</h3>
+          <button class="close-modal-btn" onclick="closeModal('settingsModal')"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        
+        <div class="modal-body">
+          <!-- API 연동 확인 섹션 -->
+          <div class="settings-section">
+            <h4><i class="fa-solid fa-network-wired"></i> API 연동 상태</h4>
+            <div class="api-status-grid">
+              <div class="api-status-card">
+                <span class="status-name">Gemini AI API</span>
+                <span id="geminiStatusLabel" class="status-value loading">확인 중...</span>
+              </div>
+              <div class="api-status-card">
+                <span class="status-name">Telegram Bot</span>
+                <span id="telegramStatusLabel" class="status-value loading">확인 중...</span>
+              </div>
+            </div>
+            <p class="settings-help-text"><i class="fa-solid fa-info-circle"></i> API 설정은 프로젝트 루트 디렉토리의 <code>.env</code> 파일에서 안전하게 관리할 수 있습니다.</p>
+          </div>
+
+          <!-- 나만의 RSS 피드 관리 섹션 -->
+          <div class="settings-section">
+            <h4><i class="fa-solid fa-rss"></i> 나만의 뉴스 피드 관리 (투자 RSS)</h4>
+            
+            <!-- 피드 추가 폼 -->
+            <form id="addFeedForm" class="add-feed-form">
+              <div class="form-group">
+                <input type="text" id="newFeedName" placeholder="피드 이름 (예: 한경 테크)" required>
+              </div>
+              <div class="form-group url-group">
+                <input type="url" id="newFeedUrl" placeholder="RSS 피드 XML 주소 URL" required>
+                <button type="submit" id="addFeedSubmitBtn" class="primary-btn">추가</button>
+              </div>
+            </form>
+
+            <div id="feedValidationMsg" class="feed-validation-msg hidden">유효성 검사 메시지...</div>
+
+            <!-- 현재 등록 피드 리스트 -->
+            <div class="custom-feeds-list-container">
+              <h5>현재 등록된 커스텀 피드 목록</h5>
+              <ul class="custom-feeds-list" id="customFeedsList">
+                <!-- JS 동적 생성 -->
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button class="primary-btn" onclick="closeModal('settingsModal')">저장 및 닫기</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 푸터 -->
+  <footer class="app-footer-text">
+    <p>© 2026 InvestArchive. Powered by Google Gemini & Express. designed for premium investment study.</p>
+  </footer>
+
+  <!-- 커스텀 JS 파일 로드 -->
+  <script src="app.js"></script>
+</body>
+</html>
