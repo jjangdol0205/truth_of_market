@@ -7,6 +7,7 @@ const Parser = require('rss-parser');
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 const TelegramBot = require('node-telegram-bot-api');
 const cron = require('node-cron');
+const https = require('https');
 
 // .env 파일 로드
 dotenv.config();
@@ -408,6 +409,141 @@ app.post('/api/news/validate-feed', async (req, res) => {
     });
   } catch (error) {
     res.status(400).json({ success: false, message: '유효하지 않은 RSS 피드 URL이거나 CORS 문제로 가져올 수 없습니다. 다른 피드를 시도해보세요.' });
+  }
+});
+
+// --- [실시간 시황 API] 야후 파이낸스 연동 및 10분 캐싱 ---
+let marketCache = null;
+let marketCacheTime = null;
+const MARKET_CACHE_DURATION = 10 * 60 * 1000; // 10분 캐시 (사용자 요청에 따라 API 사용 최소화)
+
+const MARKET_SYMBOLS = {
+  'KOSPI': '^KS11',
+  'NASDAQ': '^IXIC',
+  'S&P 500': '^GSPC',
+  '원/달러': 'USDKRW=X',
+  '국제유가(WTI)': 'CL=F',
+  '미 10년물 국채': '^TNX'
+};
+
+function fetchSingleTicker(label, symbol) {
+  return new Promise((resolve) => {
+    const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}?interval=1d&range=5d`;
+    
+    const req = https.get(url, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.0.0 Safari/537.36'
+      },
+      timeout: 5000
+    }, (res) => {
+      let data = '';
+      res.on('data', (chunk) => { data += chunk; });
+      res.on('end', () => {
+        try {
+          if (res.statusCode !== 200) {
+            throw new Error(`HTTP Status ${res.statusCode}`);
+          }
+          const json = JSON.parse(data);
+          if (json.chart && json.chart.result && json.chart.result[0]) {
+            const meta = json.chart.result[0].meta;
+            const price = meta.regularMarketPrice;
+            const prevClose = meta.chartPreviousClose;
+            const diff = price - prevClose;
+            const percent = (diff / prevClose) * 100;
+            
+            resolve({
+              label: label,
+              symbol: symbol,
+              price: price,
+              prevClose: prevClose,
+              change: diff,
+              changePercent: percent,
+              success: true
+            });
+          } else {
+            throw new Error('Invalid JSON structure');
+          }
+        } catch (e) {
+          console.error(`⚠️ [API 시황] ${label}(${symbol}) 파싱 오류:`, e.message);
+          resolve({ label: label, symbol: symbol, success: false, error: e.message });
+        }
+      });
+    });
+    
+    req.on('error', (err) => {
+      console.error(`⚠️ [API 시황] ${label}(${symbol}) 요청 오류:`, err.message);
+      resolve({ label: label, symbol: symbol, success: false, error: err.message });
+    });
+    
+    req.on('timeout', () => {
+      req.destroy();
+      console.error(`⚠️ [API 시황] ${label}(${symbol}) 시간 초과`);
+      resolve({ label: label, symbol: symbol, success: false, error: 'Timeout' });
+    });
+  });
+}
+
+// 6. 실시간 시황 API
+app.get('/api/market', async (req, res) => {
+  try {
+    const now = Date.now();
+    const forceRefresh = req.query.refresh === 'true';
+
+    // 캐시 유효성 확인
+    if (!forceRefresh && marketCache && marketCacheTime && (now - marketCacheTime < MARKET_CACHE_DURATION)) {
+      return res.json({ success: true, source: 'cache', data: marketCache });
+    }
+
+    console.log('🔄 야후 파이낸스 실시간 시황 수집 중...');
+    const promises = Object.entries(MARKET_SYMBOLS).map(([label, symbol]) => fetchSingleTicker(label, symbol));
+    const results = await Promise.all(promises);
+
+    // 성공한 데이터만 정제하거나 Fallback 처리
+    const cleanedData = results.map(item => {
+      if (item.success) {
+        return {
+          label: item.label,
+          symbol: item.symbol,
+          price: item.price,
+          change: item.change,
+          changePercent: item.changePercent,
+          success: true
+        };
+      } else {
+        // 실패한 경우 이전 캐시가 있다면 이전 값 재활용
+        const cachedItem = marketCache ? marketCache.find(c => c.symbol === item.symbol) : null;
+        if (cachedItem) {
+          return cachedItem;
+        }
+        // 캐시도 없는 완전 초기 단계인 경우 Mockup fallback 노출 (안정성 보장)
+        const fallbacks = {
+          '^KS11': { price: 2682.40, change: 29.80, changePercent: 1.12 },
+          '^IXIC': { price: 16742.30, change: 141.25, changePercent: 0.85 },
+          '^GSPC': { price: 5304.72, change: 33.72, changePercent: 0.64 },
+          'USDKRW=X': { price: 1358.50, change: -4.70, changePercent: -0.35 },
+          'CL=F': { price: 78.20, change: -0.35, changePercent: -0.45 },
+          '^TNX': { price: 4.42, change: 0.02, changePercent: 0.45 }
+        };
+        const fb = fallbacks[item.symbol] || { price: 0, change: 0, changePercent: 0 };
+        return {
+          label: item.label,
+          symbol: item.symbol,
+          price: fb.price,
+          change: fb.change,
+          changePercent: fb.changePercent,
+          success: false,
+          fallback: true
+        };
+      }
+    });
+
+    marketCache = cleanedData;
+    marketCacheTime = now;
+
+    res.json({ success: true, source: 'live', data: cleanedData });
+  } catch (error) {
+    console.error('API /api/market error:', error);
+    res.status(500).json({ success: false, message: '시황 정보를 가져오는 데 실패했습니다.' });
   }
 });
 

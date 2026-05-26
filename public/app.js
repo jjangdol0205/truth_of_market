@@ -19,7 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
   loadLocalStorage();
   setupEventListeners();
   fetchNews();
+  fetchMarketTicker();
   checkApiStatus();
+
+  // 사용자 요청에 따라 API 사용량을 최소화하기 위해 10분마다 시황을 자동 갱신합니다.
+  setInterval(fetchMarketTicker, 10 * 60 * 1000);
 });
 
 // 테마 초기화 (기본 다크모드)
@@ -687,4 +691,52 @@ function getRelativeTime(isoString) {
   if (diffDays < 7) return `${diffDays}일 전`;
   
   return date.toLocaleDateString('ko-KR', { month: 'short', day: 'numeric' });
+}
+
+// 실시간 시황 티커 가져오기 (야후 파이낸스 연동)
+async function fetchMarketTicker() {
+  const tickerEl = document.getElementById('marketTicker');
+  if (!tickerEl) return;
+
+  try {
+    const response = await fetch('/api/market');
+    const result = await response.json();
+
+    if (result.success && result.data) {
+      tickerEl.innerHTML = '';
+      
+      result.data.forEach(item => {
+        const itemEl = document.createElement('div');
+        itemEl.className = 'ticker-item';
+        
+        const isUp = item.change >= 0;
+        const trendClass = isUp ? 'up' : 'down';
+        const trendSymbol = isUp ? '▲' : '▼';
+        
+        let formattedPrice = '';
+        
+        if (item.symbol === '^TNX') {
+          formattedPrice = item.price.toFixed(3) + '%';
+        } else if (item.symbol === 'CL=F') {
+          formattedPrice = '$' + item.price.toFixed(2);
+        } else if (item.symbol === 'USDKRW=X') {
+          formattedPrice = item.price.toLocaleString('ko-KR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + '원';
+        } else {
+          formattedPrice = item.price.toLocaleString('ko-KR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        }
+        
+        const formattedPercent = Math.abs(item.changePercent).toFixed(2) + '%';
+        
+        itemEl.innerHTML = `
+          <span class="ticker-label">${item.label}</span>
+          <span class="ticker-val ${trendClass}">
+            ${formattedPrice} ${trendSymbol} ${formattedPercent}
+          </span>
+        `;
+        tickerEl.appendChild(itemEl);
+      });
+    }
+  } catch (error) {
+    console.error('⚠️ [티커 연동 실패] 시황 정보를 갱신하지 못했습니다:', error);
+  }
 }
