@@ -52,6 +52,33 @@ function setupEventListeners() {
   // 테마 전환 버튼
   document.getElementById('themeToggle').addEventListener('click', toggleTheme);
 
+  // 로고 클릭 시 홈(전체 뉴스 피드 및 검색 초기화)으로 이동
+  const logoBtn = document.getElementById('logoContainer');
+  if (logoBtn) {
+    logoBtn.addEventListener('click', () => {
+      state.currentFilter = 'all';
+      state.searchQuery = '';
+      
+      const searchInput = document.getElementById('searchInput');
+      if (searchInput) searchInput.value = '';
+      
+      const navItems = document.querySelectorAll('.nav-item');
+      navItems.forEach(nav => {
+        if (nav.getAttribute('data-filter') === 'all') {
+          nav.classList.add('active');
+        } else {
+          nav.classList.remove('active');
+        }
+      });
+      
+      const titleEl = document.getElementById('currentCategoryTitle');
+      if (titleEl) titleEl.innerText = '전체 실시간 투자 뉴스';
+      
+      renderArticles();
+      showToast('🏠 홈 화면으로 이동했습니다.');
+    });
+  }
+
   // 설정 버튼 및 모달 닫기
   document.getElementById('settingsBtn').addEventListener('click', () => {
     openModal('settingsModal');

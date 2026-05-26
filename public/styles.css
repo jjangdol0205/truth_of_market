@@ -280,6 +280,13 @@ button {
   display: flex;
   align-items: center;
   gap: 12px;
+  cursor: pointer;
+  user-select: none;
+  transition: var(--transition-fast);
+}
+.logo-container:hover {
+  opacity: 0.85;
+  transform: scale(1.02);
 }
 
 .logo-icon {
