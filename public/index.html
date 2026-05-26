@@ -17,6 +17,14 @@
   
   <!-- 커스텀 CSS -->
   <link rel="stylesheet" href="styles.css">
+  
+  <!-- PWA (모바일 앱 홈화면 추가) 설정 -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#090d16">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="InvestArchive">
+  <link rel="apple-touch-icon" href="icon-192.png">
 </head>
 <body class="dark-theme">
   <!-- 배경 그라디언트 요소들 -->
@@ -298,5 +306,16 @@
 
   <!-- 커스텀 JS 파일 로드 -->
   <script src="app.js"></script>
+
+  <!-- PWA 서비스 워커 등록 스크립트 -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then((reg) => console.log('🤖 [PWA] 서비스 워커 등록 완료:', reg.scope))
+          .catch((err) => console.warn('🤖 [PWA] 서비스 워커 등록 실패:', err));
+      });
+    }
+  </script>
 </body>
 </html>
