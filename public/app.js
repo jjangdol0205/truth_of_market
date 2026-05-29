@@ -626,35 +626,74 @@ function handleShareCurrentArticleToKakaotalk() {
   copyToClipboard(shareText, '💛 스터디 노트가 복사되었습니다! 카카오톡 대화방에 붙여넣기(Ctrl+V) 하세요.');
 }
 
-// 5.1 텔레그램 연동 로직
+// 5.1 텔레그램 브리핑 복사 로직
 async function handleTelegramBriefing(e) {
   const btn = e.currentTarget;
   const originalHtml = btn.innerHTML;
   
   btn.disabled = true;
-  btn.innerHTML = `<i class="fa-solid fa-spinner animate-spin"></i> 분석 및 텔레그램 발송 중...`;
+  btn.innerHTML = `<i class="fa-solid fa-spinner animate-spin"></i> 요약 및 브리핑 생성 중...`;
 
   try {
-    const response = await fetch('/api/telegram/share', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        title: "실시간 종합 투자 브리핑",
-        summary: ["금일 최고 가치의 거시경제지표 및 시장 투자 정보 취합 전송", "상세 항목은 하단 웹 아카이브 링크 참고"],
-        implications: ["텔레그램을 통한 주요 외신 핵심 3줄 스터디 일일 지원"],
-        link: window.location.origin,
-        sourceName: "InvestArchive 시스템 자동 뉴스레터"
-      })
-    });
-
-    const result = await response.json();
-    if (result.success) {
-      showToast('✈️ 성공: 텔레그램 일일 스터디 브리핑 발송이 완료되었습니다!');
-    } else {
-      alert('⚠️ 발송 실패: ' + result.message);
+    const topNews = state.articles.slice(0, 5);
+    if (topNews.length === 0) {
+      alert('⚠️ 아직 실시간 뉴스가 로드되지 않았습니다. 새로고침 후 다시 시도해 주세요.');
+      return;
     }
+
+    let briefText = `🚀 [InvestArchive 투자 핵심 뉴스 일일 브리핑] 🚀\n`;
+    briefText += `📅 일시: ${new Date().toLocaleDateString('ko-KR')} | AI 분석 요약 아카이브\n`;
+    briefText += `━━━━━━━━━━━━━━━━━━━━━\n\n`;
+
+    for (let i = 0; i < topNews.length; i++) {
+      const item = topNews[i];
+      let analysis = null;
+      
+      const cached = state.bookmarks.find(b => b.id === item.id && b.aiAnalysis) || state.aiCache[item.id];
+      if (cached) {
+        analysis = cached.aiAnalysis;
+      } else {
+        try {
+          const response = await fetch('/api/analyze', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ title: item.title, description: item.description, lang: item.lang })
+          });
+          const result = await response.json();
+          if (result.success && result.data) {
+            analysis = result.data;
+            state.aiCache[item.id] = { ...item, aiAnalysis: analysis };
+          }
+        } catch (err) {
+          console.warn(`기사 요약 실패:`, err.message);
+        }
+      }
+
+      const finalTitle = analysis ? analysis.translatedTitle : item.title;
+      briefText += `${i + 1}. 📰 *${finalTitle}* (${item.sourceName})\n`;
+      
+      if (analysis) {
+        analysis.summary.forEach(sum => {
+          briefText += `  • ${sum}\n`;
+        });
+        briefText += `  💡 *투자 시사점:*\n`;
+        analysis.implications.forEach(imp => {
+          briefText += `    - ${imp}\n`;
+        });
+      } else {
+        briefText += `  • ${item.description ? item.description.substring(0, 120) + '...' : '상세 기사 설명 없음'}\n`;
+      }
+      briefText += `  🔗 [기사 원문]: ${item.link}\n\n`;
+    }
+
+    briefText += `━━━━━━━━━━━━━━━━━━━━━\n`;
+    briefText += `✍️ 대시보드 바로가기: ${window.location.origin}\n`;
+    briefText += `스마트한 안목으로 성공적인 하루 투자를 만들어가시길 바랍니다! 📈`;
+
+    copyToClipboard(briefText, '📋 일일 브리핑이 클립보드에 복사되었습니다! 텔레그램에 붙여넣어 공유하세요.');
   } catch (error) {
-    alert('❌ 에러: 서버에 연결할 수 없거나 전송 중 오류가 발생했습니다.');
+    console.error(error);
+    alert('❌ 브리핑 생성 과정 중 오류가 발생했습니다.');
   } finally {
     btn.disabled = false;
     btn.innerHTML = originalHtml;

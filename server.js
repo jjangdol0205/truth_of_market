@@ -5,8 +5,6 @@ const path = require('path');
 const fs = require('fs');
 const Parser = require('rss-parser');
 const { GoogleGenerativeAI } = require('@google/generative-ai');
-const TelegramBot = require('node-telegram-bot-api');
-const cron = require('node-cron');
 const https = require('https');
 
 // .env 파일 로드
@@ -87,56 +85,7 @@ if (process.env.GEMINI_API_KEY) {
   console.log('⚠️ Warning: GEMINI_API_KEY가 설정되지 않았습니다. AI 요약 및 번역 기능은 데모 모드로 동작합니다.');
 }
 
-// 텔레그램 봇 초기화
-let bot = null;
-const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
-const CHAT_ID = process.env.TELEGRAM_CHAT_ID;
 
-if (BOT_TOKEN) {
-  try {
-    bot = new TelegramBot(BOT_TOKEN, { polling: true });
-    console.log('✅ 텔레그램 봇이 활성화되었습니다.');
-    
-    // 텔레그램 봇 명령어 처리
-    bot.onText(/\/start/, (msg) => {
-      const chatId = msg.chat.id;
-      bot.sendMessage(chatId, `안녕하세요! 📈 투자 스터디 뉴스 봇입니다.\n\n현재 채팅방의 ID는 \`${chatId}\` 입니다.\n매일 아침 글로벌 경제 및 투자 요약 브리핑을 받아보시려면 이 ID를 서버 .env 파일의 \`TELEGRAM_CHAT_ID\`에 설정해주세요.\n\n사용 가능 명령어:\n/today - 당일 실시간 투자 뉴스 주요 브리핑 받기\n/brief - 경제 요약 브리핑 받기`, { parse_mode: 'Markdown' });
-    });
-
-    bot.onText(/\/(today|brief)/, async (msg) => {
-      const chatId = msg.chat.id;
-      bot.sendMessage(chatId, '🔄 실시간 투자 뉴스를 수집하고 AI 분석을 시작합니다. 잠시만 기다려주세요 (약 10~15초 소요)...');
-      
-      try {
-        const briefingMessage = await generateBriefingMessage(5);
-        bot.sendMessage(chatId, briefingMessage, { parse_mode: 'Markdown', disable_web_page_preview: true });
-      } catch (error) {
-        console.error('Telegram bot brief error:', error);
-        bot.sendMessage(chatId, '❌ 뉴스 브리핑 생성 도중 오류가 발생했습니다. Gemini API 키 및 네트워크 연결 상태를 확인해주세요.');
-      }
-    });
-
-  } catch (error) {
-    console.error('❌ 텔레그램 봇 초기화 오류:', error.message);
-  }
-} else {
-  console.log('⚠️ Warning: TELEGRAM_BOT_TOKEN이 설정되지 않았습니다. 텔레그램 봇 기능이 비활성화됩니다.');
-}
-
-// 매일 오전 8시 자동 뉴스 브리핑 발송 스케줄러 (node-cron)
-const cronSchedule = process.env.CRON_SCHEDULE || '0 8 * * *';
-cron.schedule(cronSchedule, async () => {
-  if (bot && CHAT_ID) {
-    console.log('⏰ 스케줄링 작동: 텔레그램 일일 투자 브리핑 자동 발송을 시작합니다.');
-    try {
-      const briefingMessage = await generateBriefingMessage(5);
-      await bot.sendMessage(CHAT_ID, briefingMessage, { parse_mode: 'Markdown', disable_web_page_preview: true });
-      console.log('✅ 텔레그램 일일 브리핑 전송 완료!');
-    } catch (error) {
-      console.error('❌ 스케줄러 전송 실패:', error);
-    }
-  }
-});
 
 // 고유 ID 생성용 해시 함수 (Djb2 - 충돌 방지)
 function generateUniqueId(str) {
@@ -349,45 +298,7 @@ app.post('/api/analyze', async (req, res) => {
   }
 });
 
-// 3. 텔레그램 수동 공유 API
-app.post('/api/telegram/share', async (req, res) => {
-  const { title, summary, implications, link, sourceName } = req.body;
-  
-  if (!bot || !CHAT_ID) {
-    return res.status(400).json({ 
-      success: false, 
-      message: '서버에 텔레그램 봇 토큰(TELEGRAM_BOT_TOKEN) 및 수신 Chat ID(TELEGRAM_CHAT_ID) 설정이 구성되지 않았습니다.' 
-    });
-  }
 
-  try {
-    let message = `📌 *[투자 스터디 노트 공유]* 📌\n`;
-    message += `📰 *${title}* (${sourceName})\n\n`;
-    
-    message += `📝 *핵심 요약:*\n`;
-    if (Array.isArray(summary)) {
-      summary.forEach(sum => { message += `• ${sum}\n`; });
-    } else {
-      message += `• ${summary}\n`;
-    }
-    
-    message += `\n💡 *투자 시사점:*\n`;
-    if (Array.isArray(implications)) {
-      implications.forEach(imp => { message += `  - ${imp}\n`; });
-    } else {
-      message += `  - ${implications}\n`;
-    }
-    
-    message += `\n🔗 [기사 원문 읽기](${link})\n`;
-    message += `━━━━━━━━━━━━━━━━━━━━━`;
-
-    await bot.sendMessage(CHAT_ID, message, { parse_mode: 'Markdown', disable_web_page_preview: true });
-    res.json({ success: true, message: '텔레그램 채널로 스터디 노트가 발송되었습니다!' });
-  } catch (error) {
-    console.error('Telegram share API error:', error);
-    res.status(500).json({ success: false, message: '텔레그램 전송에 실패했습니다: ' + error.message });
-  }
-});
 
 // 4. 커스텀 RSS 피드 추가/검증 API
 app.post('/api/news/validate-feed', async (req, res) => {
@@ -551,8 +462,7 @@ app.get('/api/market', async (req, res) => {
 app.get('/api/status', (req, res) => {
   res.json({
     success: true,
-    geminiActive: !!genAI,
-    telegramActive: !!bot && !!CHAT_ID
+    geminiActive: !!genAI
   });
 });
 

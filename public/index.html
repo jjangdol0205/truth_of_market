@@ -109,19 +109,17 @@
             <h4><i class="fa-solid fa-share-nodes" style="color: hsl(var(--accent-cyan));"></i> 스터디 공유 비서</h4>
             <span class="status-dot active" id="shareStatus">준비완료</span>
           </div>
-          <p class="kakao-desc">실시간 AI 학습 노트를 카카오톡이나 텔레그램으로 편리하게 내보내 보세요. 매일 아침 글로벌 투자 요약 브리핑도 지원합니다.</p>
+          <p class="kakao-desc">실시간 AI 학습 노트를 카카오톡이나 텔레그램으로 편리하게 내보내 보세요.</p>
           
           <!-- 카카오톡 복사 버튼 -->
           <button id="sendKakaoBriefingBtn" class="kakaotalk-btn pulse-effect" style="width: 100%; justify-content: center; border: none; padding: 12px; font-size: 0.92rem; margin-bottom: 8px;">
             <i class="fa-solid fa-copy"></i> 카카오톡 브리핑 복사
           </button>
           
-          <!-- 텔레그램 발송 버튼 -->
+          <!-- 텔레그램 복사 버튼 -->
           <button id="sendTgBriefingBtn" class="telegram-btn" style="width: 100%; justify-content: center; border: none; padding: 12px; font-size: 0.92rem;">
-            <i class="fa-solid fa-paper-plane"></i> 텔레그램 브리핑 발송
+            <i class="fa-solid fa-copy"></i> 텔레그램 브리핑 복사
           </button>
-          
-          <div class="briefing-time-info" style="margin-top: 10px;"><i class="fa-regular fa-clock"></i> 매일 오전 8시 텔레그램 자동 뉴스 브리핑 발송</div>
         </div>
 
         <!-- 퀵 노트 위젯 -->
@@ -264,10 +262,6 @@
               <div class="api-status-card">
                 <span class="status-name">Gemini AI API</span>
                 <span id="geminiStatusLabel" class="status-value loading">확인 중...</span>
-              </div>
-              <div class="api-status-card">
-                <span class="status-name">Telegram Bot</span>
-                <span id="telegramStatusLabel" class="status-value loading">확인 중...</span>
               </div>
               <div class="api-status-card">
                 <span class="status-name">카카오톡 공유</span>
