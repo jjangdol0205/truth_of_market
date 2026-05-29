@@ -661,8 +661,8 @@ async function handleTelegramBriefing(e) {
   }
 }
 
-// 모달 내 기사 개별 텔레그램 스터디 공유
-async function handleShareCurrentArticleToTelegram() {
+// 모달 내 기사 개별 텔레그램 스터디 공유 (카카오톡 공유처럼 클립보드 복사 방식으로 변경)
+function handleShareCurrentArticleToTelegram() {
   const article = state.currentSelectedArticle;
   if (!article) return;
   
@@ -673,40 +673,25 @@ async function handleShareCurrentArticleToTelegram() {
     return;
   }
 
-  const btn = document.getElementById('modalTgShareBtn');
-  const originalHtml = btn ? btn.innerHTML : '';
-  if (btn) {
-    btn.disabled = true;
-    btn.innerHTML = `<i class="fa-solid fa-spinner animate-spin"></i> 전송 중...`;
-  }
+  const analysis = aiData.aiAnalysis;
+  let shareText = `📌 [투자 스터디 노트 공유] 📌\n`;
+  shareText += `📰 *${analysis.translatedTitle}* (${article.sourceName})\n\n`;
+  
+  shareText += `📝 *핵심 요약 (3줄):*\n`;
+  analysis.summary.forEach(sum => {
+    shareText += `• ${sum}\n`;
+  });
+  
+  shareText += `\n💡 *투자 시사점:*\n`;
+  analysis.implications.forEach(imp => {
+    shareText += `  - ${imp}\n`;
+  });
+  
+  shareText += `\n🔗 *기사 원문 읽기:*\n${article.link}\n`;
+  shareText += `━━━━━━━━━━━━━━━━━━━━━\n`;
+  shareText += `✍️ InvestArchive AI Study Dashboard`;
 
-  try {
-    const response = await fetch('/api/telegram/share', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        title: aiData.aiAnalysis.translatedTitle,
-        summary: aiData.aiAnalysis.summary,
-        implications: aiData.aiAnalysis.implications,
-        link: article.link,
-        sourceName: article.sourceName
-      })
-    });
-
-    const result = await response.json();
-    if (result.success) {
-      showToast('✈️ 텔레그램으로 학습 노트 공유가 완료되었습니다!');
-    } else {
-      alert('⚠️ 전송 오류: ' + result.message);
-    }
-  } catch (error) {
-    alert('❌ 전송 실패: 서버에 접속할 수 없습니다.');
-  } finally {
-    if (btn) {
-      btn.disabled = false;
-      btn.innerHTML = originalHtml;
-    }
-  }
+  copyToClipboard(shareText, '💙 스터디 노트가 복사되었습니다! 텔레그램 대화방에 붙여넣기(Ctrl+V) 하세요.');
 }
 
 // 6. 스터디 보관함(북마크) 컨트롤
