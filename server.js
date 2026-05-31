@@ -81,12 +81,12 @@ loadNewsArchive();
 
 // 국내외 주요 투자/경제 RSS 피드 목록
 const NEWS_SOURCES = [
-  // 국내 언론사 (경제/금융/증권 섹션)
-  { id: 'chosun', name: '조선일보 경제', lang: 'ko', category: 'Macro', url: 'https://www.chosun.com/arc/outboundfeeds/rss/category/economy/?outputType=xml' },
-  { id: 'hankyung-eco', name: '한국경제 경제', lang: 'ko', category: 'Macro', url: 'https://www.hankyung.com/feed/economy' },
-  { id: 'hankyung-fin', name: '한국경제 증권', lang: 'ko', category: 'Macro', url: 'https://www.hankyung.com/feed/finance' },
-  { id: 'maekyung', name: '매일경제 경제', lang: 'ko', category: 'Macro', url: 'https://www.mk.co.kr/rss/30100041/' },
-  { id: 'donga', name: '동아일보 경제', lang: 'ko', category: 'Macro', url: 'http://rss.donga.com/economy.xml' },
+  // 국내 언론사 (구글 뉴스를 통한 우회 수집: 해외 서버 IP 차단 원천 방지)
+  { id: 'chosun', name: '조선일보 경제', lang: 'ko', category: 'Macro', url: 'https://news.google.com/rss/search?q=source:%22%EC%A1%B0%EC%84%A0%EC%9D%BC%EB%B3%B4%22+economy&hl=ko&gl=KR&ceid=KR:ko' },
+  { id: 'hankyung-eco', name: '한국경제 경제', lang: 'ko', category: 'Macro', url: 'https://news.google.com/rss/search?q=source:%22%ED%95%9C%EA%B5%AD%EA%B2%BD%EC%A0%9C%22+economy&hl=ko&gl=KR&ceid=KR:ko' },
+  { id: 'hankyung-fin', name: '한국경제 증권', lang: 'ko', category: 'Macro', url: 'https://news.google.com/rss/search?q=source:%22%ED%95%9C%EA%B5%AD%EA%B2%BD%EC%A0%9C%22+finance&hl=ko&gl=KR&ceid=KR:ko' },
+  { id: 'maekyung', name: '매일경제 경제', lang: 'ko', category: 'Macro', url: 'https://news.google.com/rss/search?q=source:%22%EB%A7%A4%EC%9D%BC%EA%B2%BD%EC%A0%9C%22+economy&hl=ko&gl=KR&ceid=KR:ko' },
+  { id: 'donga', name: '동아일보 경제', lang: 'ko', category: 'Macro', url: 'https://news.google.com/rss/search?q=source:%22%EB%8F%99%EC%95%8A%EC%9D%BC%EB%B3%B4%22+economy&hl=ko&gl=KR&ceid=KR:ko' },
 
   // 국외 언론사 (구글 뉴스를 통한 경제/투자 분야 타겟팅)
   { 

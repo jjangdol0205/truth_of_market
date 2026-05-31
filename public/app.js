@@ -17,11 +17,27 @@ const state = {
 
 // 1. 초기 로드 및 이벤트 리스너 설정
 document.addEventListener('DOMContentLoaded', () => {
-  // 관리자(시크릿) 모드 확인 (?admin=true 또는 ?mode=admin)
+  // 관리자(시크릿) 모드 확인 (?admin=true, ?admin=false, ?mode=admin, ?mode=user)
   const urlParams = new URLSearchParams(window.location.search);
-  state.isAdmin = urlParams.get('admin') === 'true' || urlParams.get('mode') === 'admin';
-  if (state.isAdmin) {
-    console.log('👑 [관리자 모드 활성화] 새로운 기사의 AI 요약 권한이 승인되었습니다.');
+  const adminParam = urlParams.get('admin');
+  const modeParam = urlParams.get('mode');
+  
+  if (adminParam === 'true' || modeParam === 'admin') {
+    // 관리자 진입 파라미터 감지 -> 로컬스토리지에 영구 기억하여 iframe 포워딩 유실 전면 방지
+    localStorage.setItem('admin_verified', 'true');
+    state.isAdmin = true;
+    console.log('👑 [관리자 모드 활성화 & 영구 기억] 새로운 기사의 AI 요약 권한이 승인되었습니다.');
+  } else if (adminParam === 'false' || modeParam === 'user') {
+    // 관리자 수동 비활성화 파라미터 감지 -> 권한 폐기
+    localStorage.removeItem('admin_verified');
+    state.isAdmin = false;
+    console.log('🚪 [관리자 모드 비활성화] 일반 사용자 세션으로 전환되었습니다.');
+  } else {
+    // 파라미터가 유실되었거나 없는 평이한 접속 -> 로컬스토리지에서 복원
+    state.isAdmin = localStorage.getItem('admin_verified') === 'true';
+    if (state.isAdmin) {
+      console.log('👑 [관리자 모드 자동 유지] 저장된 영구 권한을 사용하여 관리자 세션을 지속합니다.');
+    }
   }
 
   initTheme();
