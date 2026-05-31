@@ -288,6 +288,7 @@ async function generateBriefingMessage(count = 5) {
 app.get('/api/news', async (req, res) => {
   try {
     const forceRefresh = req.query.refresh === 'true';
+    const isAdmin = req.query.admin === 'true'; // 관리자 모드 감지
     
     // 사용자가 대시보드에서 '새로고침'을 수동으로 누른 경우 즉시 백그라운드 수집 실행
     if (forceRefresh) {
@@ -295,9 +296,14 @@ app.get('/api/news', async (req, res) => {
       await archiveDailyNews();
     }
 
-    // 로컬 아카이브에서 수집된 모든 기사 데이터를 최신 날짜 순으로 정렬하여 반환 (1ms 이내 반환)
-    const articlesList = Object.values(newsArchive).sort((a, b) => new Date(b.date) - new Date(a.date));
+    // 로컬 아카이브에서 수집된 모든 기사 데이터를 최신 날짜 순으로 정렬하여 반환
+    let articlesList = Object.values(newsArchive).sort((a, b) => new Date(b.date) - new Date(a.date));
     
+    // [프리미엄 큐레이션] 일반 사용자에게는 오직 관리자가 분석(요약/번역)을 승인한 기사들만 리스트 노출!
+    if (!isAdmin) {
+      articlesList = articlesList.filter(article => article.aiAnalysis && article.aiAnalysis.translatedTitle);
+    }
+
     res.json({ success: true, source: 'archive', data: articlesList });
   } catch (error) {
     console.error('API /api/news error:', error);

@@ -191,7 +191,12 @@ async function fetchNews(forceRefresh = false) {
   emptyEl.classList.add('hidden');
 
   try {
-    const url = '/api/news' + (forceRefresh ? '?refresh=true' : '');
+    const params = [];
+    if (forceRefresh) params.push('refresh=true');
+    if (state.isAdmin) params.push('admin=true');
+    const queryString = params.length > 0 ? '?' + params.join('&') : '';
+    
+    const url = '/api/news' + queryString;
     const response = await fetch(url);
     const result = await response.json();
 
