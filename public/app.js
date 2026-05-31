@@ -3,6 +3,7 @@
    ========================================================================= */
 
 // 전역 상태 객체
+// 전역 상태 객체
 const state = {
   articles: [],        // 수집된 국내외 뉴스 기사
   customFeeds: [],     // 사용자가 추가한 커스텀 RSS 피드 리스트
@@ -10,11 +11,19 @@ const state = {
   currentFilter: 'all',// 현재 선택된 카테고리 필터 (all, Markets, Macro, Tech, custom, bookmarks)
   searchQuery: '',     // 검색 필터 텍스트
   currentSelectedArticle: null, // 현재 AI 모달에 활성화된 기사
-  aiCache: {}          // 이번 세션에 로드된 기사의 AI 분석 결과 캐시 (동일 기사 중복 호출 방지)
+  aiCache: {},         // 이번 세션에 로드된 기사의 AI 분석 결과 캐시 (동일 기사 중복 호출 방지)
+  isAdmin: false       // 관리자 분석 권한 모드 여부
 };
 
 // 1. 초기 로드 및 이벤트 리스너 설정
 document.addEventListener('DOMContentLoaded', () => {
+  // 관리자(시크릿) 모드 확인 (?admin=true 또는 ?mode=admin)
+  const urlParams = new URLSearchParams(window.location.search);
+  state.isAdmin = urlParams.get('admin') === 'true' || urlParams.get('mode') === 'admin';
+  if (state.isAdmin) {
+    console.log('👑 [관리자 모드 활성화] 새로운 기사의 AI 요약 권한이 승인되었습니다.');
+  }
+
   initTheme();
   loadLocalStorage();
   setupEventListeners();
@@ -361,8 +370,8 @@ async function openAiStudyModal(articleId) {
   aiResultEl.classList.add('hidden');
 
   // 캐시 확인 또는 로컬스토리지 보관 기록 확인 (이미 완료된 AI분석은 2초 딜레이 모션만 주고 바로 출력)
-  const savedStudy = state.bookmarks.find(b => b.id === articleId && b.aiAnalysis) || state.aiCache[articleId];
-  if (savedStudy) {
+  const savedStudy = state.bookmarks.find(b => b.id === articleId && b.aiAnalysis) || state.aiCache[articleId] || (article.aiAnalysis ? article : null);
+  if (savedStudy && savedStudy.aiAnalysis) {
     // 0.6초 뒤 시각적 자연스러움을 위해 캐시 출력
     setTimeout(() => {
       showAiAnalysisResult(savedStudy.aiAnalysis);
@@ -370,7 +379,34 @@ async function openAiStudyModal(articleId) {
     return;
   }
 
-  // 실시간 AI 분석 호출 (백엔드 /api/analyze 호출)
+  // 캐시에 없는 완전히 새로운 신규 기사인데, 관리자가 아닌 일반 사용자라면 차단 및 대기 뷰 표출!
+  if (!state.isAdmin) {
+    setTimeout(() => {
+      aiLoadingEl.classList.add('hidden');
+      aiResultEl.classList.remove('hidden');
+      
+      document.getElementById('aiTranslatedTitle').innerHTML = `💡 AI 투자 스터디 노트 준비 중`;
+      document.getElementById('aiSummaryList').innerHTML = `
+        <li style="list-style-type: none; margin-left: 0; padding-left: 0; color: hsl(var(--text-muted)); font-size: 0.9rem;">
+          <i class="fa-solid fa-hourglass-half" style="color: hsl(var(--accent-gold)); margin-right: 8px;"></i>
+          아직 이 최신 경제 기사의 AI 핵심 요약 노트가 발행되지 않았습니다.
+        </li>
+        <li style="list-style-type: none; margin-left: 0; padding-left: 0; color: hsl(var(--text-muted)); font-size: 0.9rem; margin-top: 12px; line-height: 1.6;">
+          <i class="fa-solid fa-bullhorn" style="color: hsl(var(--accent-cyan)); margin-right: 8px;"></i>
+          관리자가 실시간 기사 분석 및 가동을 완료하는 대로, <strong>이 자리에 스터디 노트가 자동으로 즉시 공개</strong>됩니다! 조금만 기다려주세요.
+        </li>
+      `;
+      document.getElementById('aiImplicationsList').innerHTML = `
+        <li style="list-style-type: none; margin-left: 0; padding-left: 0; color: hsl(var(--text-muted)); font-size: 0.9rem;">
+          <i class="fa-solid fa-chart-line" style="color: hsl(var(--accent-cyan)); margin-right: 8px;"></i>
+          거시경제적 관점 시사점 분석도 함께 연동되어 게재됩니다.
+        </li>
+      `;
+    }, 600);
+    return;
+  }
+
+  // 관리자(state.isAdmin === true) 인 경우에만 실제 실시간 API 호출 가동!
   try {
     const response = await fetch('/api/analyze', {
       method: 'POST',
@@ -383,7 +419,8 @@ async function openAiStudyModal(articleId) {
         link: article.link || '',
         sourceName: article.sourceName || '국내외 경제지',
         date: article.date || new Date().toISOString(),
-        category: article.category || 'Macro'
+        category: article.category || 'Macro',
+        isAdmin: true // 관리자 권한 전송
       })
     });
     

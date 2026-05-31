@@ -307,12 +307,28 @@ app.get('/api/news', async (req, res) => {
 
 // 2. 기사 AI 번역 & 요약 분석 API (아카이브 기사에 AI 연구 분석 기록 업데이트)
 app.post('/api/analyze', async (req, res) => {
-  const { id, title, description, lang, link, sourceName, date, category } = req.body;
+  const { id, title, description, lang, link, sourceName, date, category, isAdmin } = req.body;
   if (!title) {
     return res.status(400).json({ success: false, message: '기사 제목이 필요합니다.' });
   }
 
   try {
+    // [비용 100% 절감] 이미 아카이브에 AI 분석 결과가 존재한다면 권한(isAdmin)과 무관하게 무조건 캐시 즉각 리턴! (API 비용 0회)
+    if (id && newsArchive[id] && newsArchive[id].aiAnalysis) {
+      return res.json({ success: true, data: newsArchive[id].aiAnalysis });
+    }
+    if (id && aiCache[id] && aiCache[id].aiAnalysis) {
+      return res.json({ success: true, data: aiCache[id].aiAnalysis });
+    }
+
+    // 캐시에 없는 완전히 신규 기사인데, 관리자가 아닌 일반 방문자가 AI 분석을 요청하는 경우 원천 차단!
+    if (!isAdmin) {
+      return res.status(403).json({ 
+        success: false, 
+        message: '새로운 기사의 AI 요약 분석은 관리자만 승인하고 가동할 수 있습니다.' 
+      });
+    }
+
     const analysis = await analyzeArticleWithGemini(title, description || '', lang || 'ko');
     
     // [아카이브 연동] 기사 ID가 매칭되는 경우 영구 뉴스 아카이브 파일에 AI 분석 결과를 함께 기록 보존!
