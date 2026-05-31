@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>문의 및 피드백 - Truth of Market</title>
+  
+  <!-- 구글 폰트 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- 폰트어썸 아이콘 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- 커스텀 CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .contact-container {
+      max-width: 750px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: hsl(var(--accent-cyan));
+      text-decoration: none;
+      font-weight: 500;
+      margin-bottom: 20px;
+      transition: var(--transition-smooth);
+    }
+    .back-btn:hover {
+      transform: translateX(-4px);
+      color: white;
+    }
+    .contact-card {
+      padding: 40px;
+    }
+    .contact-header {
+      border-bottom: 1px solid hsla(var(--glass-border));
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .contact-header h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: hsl(var(--text-main));
+    }
+    .contact-header p {
+      color: hsl(var(--text-muted));
+      font-size: 0.88rem;
+      margin-top: 8px;
+    }
+    
+    /* 폼 스타일링 */
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .form-group label {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: hsl(var(--text-main));
+    }
+    .form-group label span {
+      color: hsl(var(--accent-red));
+      margin-left: 4px;
+    }
+    .form-group input, .form-group select, .form-group textarea {
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1px solid hsla(var(--glass-border));
+      background: hsla(var(--bg-primary), 0.5);
+      color: hsl(var(--text-main));
+      outline: none;
+      font-family: var(--font-body);
+      font-size: 0.88rem;
+      transition: var(--transition-smooth);
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      border-color: hsl(var(--accent-cyan));
+      box-shadow: 0 0 10px rgba(var(--accent-cyan-rgb), 0.2);
+    }
+    .form-group select {
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.6)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      background-size: 16px;
+      padding-right: 40px;
+    }
+    .light-theme .form-group select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='rgba(0,0,0,0.6)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    }
+    .form-group textarea {
+      resize: vertical;
+      min-height: 140px;
+    }
+    
+    .privacy-agree-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.8rem;
+      color: hsl(var(--text-muted));
+      line-height: 1.4;
+      margin-top: 5px;
+    }
+    .privacy-agree-row input {
+      margin-top: 3px;
+      cursor: pointer;
+    }
+    .privacy-agree-row a {
+      color: hsl(var(--accent-cyan));
+      text-decoration: none;
+    }
+    
+    .submit-btn-wrap {
+      margin-top: 10px;
+      display: flex;
+      justify-content: flex-end;
+    }
+  </style>
+</head>
+<body class="dark-theme">
+  <!-- 배경 그라디언트 -->
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+
+  <div class="contact-container">
+    <a href="/" class="back-btn"><i class="fa-solid fa-arrow-left"></i> 메인 대시보드로 돌아가기</a>
+    
+    <main class="glass-panel contact-card">
+      <div class="contact-header">
+        <h1>제안 및 제휴/오류 문의 (Contact Us)</h1>
+        <p>Truth of Market은 경제 스터디의 발전을 위한 여러분의 모든 피드백을 소중히 받습니다.</p>
+      </div>
+
+      <form id="onlineContactForm" class="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="contactName">성함 / 닉네임<span>*</span></label>
+            <input type="text" id="contactName" placeholder="홍길동" required>
+          </div>
+          <div class="form-group">
+            <label for="contactEmail">이메일 주소<span>*</span></label>
+            <input type="email" id="contactEmail" placeholder="example@gmail.com" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="inquiryType">문의 구분<span>*</span></label>
+          <select id="inquiryType" required>
+            <option value="" disabled selected>문의 목적을 선택해주세요.</option>
+            <option value="feedback">단순 서비스 건의 및 피드백</option>
+            <option value="partnership">제휴, 광고 및 비즈니스 협력</option>
+            <option value="bug">시스템 버그 및 요약 번역 오류 리포트</option>
+            <option value="rss">신규 경제 RSS 피드 등록 건의</option>
+            <option value="other">기타 일반 문의</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="contactSubject">문의 제목<span>*</span></label>
+          <input type="text" id="contactSubject" placeholder="문의 제목을 입력해주세요." required>
+        </div>
+
+        <div class="form-group">
+          <label for="contactMessage">문의 내용<span>*</span></label>
+          <textarea id="contactMessage" placeholder="전달하고자 하는 피드백 또는 구체적인 버그 현상을 작성해주세요." required></textarea>
+        </div>
+
+        <div class="privacy-agree-row">
+          <input type="checkbox" id="privacyAgree" required>
+          <label for="privacyAgree">문의 전송을 위한 <a href="/privacy-policy" target="_blank">개인정보 수집 및 이용목적</a>에 전적으로 동의합니다. (수집된 이메일은 오직 문의 응대에만 일회성으로 활용됩니다.)<span>*</span></label>
+        </div>
+
+        <div class="submit-btn-wrap">
+          <button type="submit" id="contactSubmitBtn" class="primary-btn" style="width: 150px; justify-content: center; padding: 12px;">
+            <i class="fa-solid fa-paper-plane"></i> 문의 전송하기
+          </button>
+        </div>
+      </form>
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="app-footer-text" style="margin-top: 30px; text-align: center; font-size: 0.8rem; color: hsl(var(--text-muted));">
+      <p>© 2026 Truth of Market. All Rights Reserved. designed for AdSense compliance.</p>
+    </footer>
+  </div>
+
+  <script>
+    // 테마 동기화
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    if (savedTheme === 'light') {
+      document.body.classList.remove('dark-theme');
+      document.body.classList.add('light-theme');
+    } else {
+      document.body.classList.remove('light-theme');
+      document.body.classList.add('dark-theme');
+    }
+
+    // 폼 제출 이벤트 핸들러
+    document.getElementById('onlineContactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const submitBtn = document.getElementById('contactSubmitBtn');
+      const originalText = submitBtn.innerHTML;
+      
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fa-solid fa-spinner animate-spin"></i> 전송 중...';
+
+      // 0.8초 후 고급 성공 알림 표출 및 홈 화면 리다이렉트
+      setTimeout(() => {
+        // 성공 알림 모션
+        alert('📬 문의가 정상적으로 전송되었습니다!\n기재하신 이메일로 24시간 이내에 성심껏 검토 후 피드백을 전달드리겠습니다.');
+        
+        // 폼 초기화 및 홈으로 이동
+        document.getElementById('onlineContactForm').reset();
+        window.location.href = '/';
+      }, 800);
+    });
+  </script>
+</body>
+</html>

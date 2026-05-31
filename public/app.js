@@ -1,5 +1,5 @@
 /* ==========================================================================
-   InvestArchive - Premium Frontend JavaScript (Modular & Clean)
+   Truth of Market - Premium Frontend JavaScript (Modular & Clean)
    ========================================================================= */
 
 // 전역 상태 객체
@@ -376,9 +376,14 @@ async function openAiStudyModal(articleId) {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
+        id: article.id,
         title: article.title,
-        description: article.description,
-        lang: article.lang
+        description: article.description || '',
+        lang: article.lang || 'ko',
+        link: article.link || '',
+        sourceName: article.sourceName || '국내외 경제지',
+        date: article.date || new Date().toISOString(),
+        category: article.category || 'Macro'
       })
     });
     
@@ -534,7 +539,7 @@ async function handleKakaoBriefing(e) {
       return;
     }
 
-    let briefText = `🚀 [InvestArchive 투자 핵심 뉴스 일일 브리핑] 🚀\n`;
+    let briefText = `🚀 [Truth of Market 투자 핵심 뉴스 일일 브리핑] 🚀\n`;
     briefText += `📅 일시: ${new Date().toLocaleDateString('ko-KR')} | AI 분석 요약 아카이브\n`;
     briefText += `━━━━━━━━━━━━━━━━━━━━━\n\n`;
 
@@ -550,7 +555,16 @@ async function handleKakaoBriefing(e) {
           const response = await fetch('/api/analyze', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ title: item.title, description: item.description, lang: item.lang })
+            body: JSON.stringify({
+              id: item.id,
+              title: item.title,
+              description: item.description || '',
+              lang: item.lang || 'ko',
+              link: item.link || '',
+              sourceName: item.sourceName || '국내외 경제지',
+              date: item.date || new Date().toISOString(),
+              category: item.category || 'Macro'
+            })
           });
           const result = await response.json();
           if (result.success && result.data) {
@@ -621,7 +635,7 @@ function handleShareCurrentArticleToKakaotalk() {
   
   shareText += `\n🔗 *기사 원문 읽기:*\n${article.link}\n`;
   shareText += `━━━━━━━━━━━━━━━━━━━━━\n`;
-  shareText += `✍️ InvestArchive AI Study Dashboard`;
+  shareText += `✍️ Truth of Market AI Study Dashboard`;
 
   copyToClipboard(shareText, '💛 스터디 노트가 복사되었습니다! 카카오톡 대화방에 붙여넣기(Ctrl+V) 하세요.');
 }
@@ -641,7 +655,7 @@ async function handleTelegramBriefing(e) {
       return;
     }
 
-    let briefText = `🚀 [InvestArchive 투자 핵심 뉴스 일일 브리핑] 🚀\n`;
+    let briefText = `🚀 [Truth of Market 투자 핵심 뉴스 일일 브리핑] 🚀\n`;
     briefText += `📅 일시: ${new Date().toLocaleDateString('ko-KR')} | AI 분석 요약 아카이브\n`;
     briefText += `━━━━━━━━━━━━━━━━━━━━━\n\n`;
 
@@ -657,7 +671,16 @@ async function handleTelegramBriefing(e) {
           const response = await fetch('/api/analyze', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ title: item.title, description: item.description, lang: item.lang })
+            body: JSON.stringify({
+              id: item.id,
+              title: item.title,
+              description: item.description || '',
+              lang: item.lang || 'ko',
+              link: item.link || '',
+              sourceName: item.sourceName || '국내외 경제지',
+              date: item.date || new Date().toISOString(),
+              category: item.category || 'Macro'
+            })
           });
           const result = await response.json();
           if (result.success && result.data) {
@@ -728,7 +751,7 @@ function handleShareCurrentArticleToTelegram() {
   
   shareText += `\n🔗 *기사 원문 읽기:*\n${article.link}\n`;
   shareText += `━━━━━━━━━━━━━━━━━━━━━\n`;
-  shareText += `✍️ InvestArchive AI Study Dashboard`;
+  shareText += `✍️ Truth of Market AI Study Dashboard`;
 
   copyToClipboard(shareText, '💙 스터디 노트가 복사되었습니다! 텔레그램 대화방에 붙여넣기(Ctrl+V) 하세요.');
 }

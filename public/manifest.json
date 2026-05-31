@@ -1,6 +1,6 @@
 {
-  "name": "InvestArchive - AI 투자 스터디",
-  "short_name": "InvestArchive",
+  "name": "Truth of Market - AI 투자 스터디",
+  "short_name": "Truth of Market",
   "description": "국내외 주요 경제 뉴스를 AI로 요약하고 번역하여 학습하는 개인화 투자 스터디 포털",
   "start_url": "/",
   "display": "standalone",

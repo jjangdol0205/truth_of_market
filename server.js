@@ -21,12 +21,8 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// 캐시 변수 설정 (10분 캐시)
-let newsCache = null;
-let cacheTime = null;
-const CACHE_DURATION = 10 * 60 * 1000; // 10분
-
-// --- [API 최소화] 영구 AI 요약 로컬 캐시 파일 ---
+// --- [API 최소화 및 캐싱 고도화] ---
+// 기존 메모리 캐시를 제거하고 일일 뉴스 영구 아카이브 파일을 사용합니다.
 const CACHE_FILE = path.join(__dirname, 'ai-cache.json');
 let aiCache = {};
 
@@ -52,8 +48,36 @@ function saveAiCache() {
   }
 }
 
-// 서버 시작 시 캐시 로드
+// --- [영구 뉴스 아카이브 시스템] ---
+// 매번 접속 시 RSS를 파싱하는 대신, 하루에 한 번 백엔드에서 RSS를 파싱하여 아카이브에 영구 저장하고 보존합니다.
+const ARCHIVE_FILE = path.join(__dirname, 'news-archive.json');
+let newsArchive = {};
+
+function loadNewsArchive() {
+  try {
+    if (fs.existsSync(ARCHIVE_FILE)) {
+      newsArchive = JSON.parse(fs.readFileSync(ARCHIVE_FILE, 'utf8'));
+      console.log(`💾 [아카이브] 로컬 뉴스 아카이브 ${Object.keys(newsArchive).length}건을 성공적으로 불러왔습니다.`);
+    } else {
+      newsArchive = {};
+    }
+  } catch (e) {
+    console.error('⚠️ 뉴스 아카이브 로드 실패:', e.message);
+    newsArchive = {};
+  }
+}
+
+function saveNewsArchive() {
+  try {
+    fs.writeFileSync(ARCHIVE_FILE, JSON.stringify(newsArchive, null, 2), 'utf8');
+  } catch (e) {
+    console.error('⚠️ 뉴스 아카이브 저장 실패:', e.message);
+  }
+}
+
+// 서버 시작 시 캐시 및 아카이브 파일 로드
 loadAiCache();
+loadNewsArchive();
 
 // 국내외 주요 투자/경제 RSS 피드 목록
 const NEWS_SOURCES = [
@@ -260,38 +284,62 @@ async function generateBriefingMessage(count = 5) {
 
 // === API 라우트 정의 ===
 
-// 1. 뉴스 피드 통합 목록 조회 API
+// 1. 뉴스 피드 통합 목록 조회 API (영구 아카이브 데이터 전면 로드)
 app.get('/api/news', async (req, res) => {
   try {
-    const now = Date.now();
+    const forceRefresh = req.query.refresh === 'true';
     
-    // 캐시 유효성 확인
-    if (newsCache && cacheTime && (now - cacheTime < CACHE_DURATION)) {
-      return res.json({ success: true, source: 'cache', data: newsCache });
+    // 사용자가 대시보드에서 '새로고침'을 수동으로 누른 경우 즉시 백그라운드 수집 실행
+    if (forceRefresh) {
+      console.log('🔄 [새로고침 요청] 실시간 RSS 수집 및 아카이빙 즉시 실행...');
+      await archiveDailyNews();
     }
 
-    console.log('🔄 실시간 RSS 뉴스 피드 수집 중...');
-    const freshNews = await fetchAllNews();
+    // 로컬 아카이브에서 수집된 모든 기사 데이터를 최신 날짜 순으로 정렬하여 반환 (1ms 이내 반환)
+    const articlesList = Object.values(newsArchive).sort((a, b) => new Date(b.date) - new Date(a.date));
     
-    newsCache = freshNews;
-    cacheTime = now;
-
-    res.json({ success: true, source: 'live', data: freshNews });
+    res.json({ success: true, source: 'archive', data: articlesList });
   } catch (error) {
     console.error('API /api/news error:', error);
     res.status(500).json({ success: false, message: '뉴스를 수집하는 데 실패했습니다.' });
   }
 });
 
-// 2. 기사 AI 번역 & 요약 분석 API
+// 2. 기사 AI 번역 & 요약 분석 API (아카이브 기사에 AI 연구 분석 기록 업데이트)
 app.post('/api/analyze', async (req, res) => {
-  const { title, description, lang } = req.body;
+  const { id, title, description, lang, link, sourceName, date, category } = req.body;
   if (!title) {
     return res.status(400).json({ success: false, message: '기사 제목이 필요합니다.' });
   }
 
   try {
     const analysis = await analyzeArticleWithGemini(title, description || '', lang || 'ko');
+    
+    // [아카이브 연동] 기사 ID가 매칭되는 경우 영구 뉴스 아카이브 파일에 AI 분석 결과를 함께 기록 보존!
+    if (id) {
+      const updatedArticle = {
+        id,
+        title,
+        description: description || '',
+        lang: lang || 'ko',
+        link: link || '',
+        sourceName: sourceName || '국내외 경제지',
+        date: date || new Date().toISOString(),
+        category: category || 'Macro',
+        aiAnalysis: analysis
+      };
+
+      // 1. 뉴스 아카이브에 영구 기록
+      newsArchive[id] = updatedArticle;
+      saveNewsArchive();
+
+      // 2. 검색봇 연동을 위해 기존 AI 스크랩 캐시에도 동시 저장
+      aiCache[id] = updatedArticle;
+      saveAiCache();
+
+      console.log(`💾 [아카이브 업데이트] 기사 "${title.substring(0, 15)}..."의 AI 분석 데이터가 아카이브에 영구 병합되었습니다.`);
+    }
+
     res.json({ success: true, data: analysis });
   } catch (error) {
     res.status(500).json({ success: false, message: error.message });
@@ -466,10 +514,411 @@ app.get('/api/status', (req, res) => {
   });
 });
 
-// 서버 실행
-app.listen(PORT, () => {
+// --- [애드센스 승인용 정적 신뢰 요소 페이지 라우팅] ---
+app.get('/privacy-policy', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'privacy-policy.html'));
+});
+
+app.get('/terms', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'terms.html'));
+});
+
+app.get('/about', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'about.html'));
+});
+
+app.get('/contact', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'contact.html'));
+});
+
+// --- [추가 요구사항] 구글 서치콘솔 자동 등록 동적 sitemap.xml 제너레이터 ---
+app.get('/sitemap.xml', (req, res) => {
+  const protocol = req.headers['x-forwarded-proto'] || req.protocol;
+  const baseUrl = `${protocol}://${req.headers.host}`;
+  const currentDate = new Date().toISOString().split('T')[0];
+
+  let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
+  xml += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
+
+  // 1. 고정 정적 신뢰성 페이지 추가
+  const staticUrls = [
+    { loc: '', changefreq: 'daily', priority: '1.0' },
+    { loc: '/about', changefreq: 'weekly', priority: '0.8' },
+    { loc: '/contact', changefreq: 'weekly', priority: '0.8' },
+    { loc: '/privacy-policy', changefreq: 'monthly', priority: '0.5' },
+    { loc: '/terms', changefreq: 'monthly', priority: '0.5' }
+  ];
+
+  staticUrls.forEach(url => {
+    xml += `  <url>\n`;
+    xml += `    <loc>${baseUrl}${url.loc}</loc>\n`;
+    xml += `    <lastmod>${currentDate}</lastmod>\n`;
+    xml += `    <changefreq>${url.changefreq}</changefreq>\n`;
+    xml += `    <priority>${url.priority}</priority>\n`;
+    xml += `  </url>\n`;
+  });
+
+  // 2. [SEO 극대화] AI 요약 분석이 완결된 모든 개별 기사를 사이트맵에 동적 바인딩
+  Object.keys(newsArchive).forEach(key => {
+    const article = newsArchive[key];
+    // AI 분석이 한 번이라도 수행되어 완결된 기사들만 구글 크롤러의 수집 대상으로 노출!
+    if (article && article.aiAnalysis && article.id === key) {
+      let lastMod = currentDate;
+      try {
+        if (article.date) {
+          lastMod = new Date(article.date).toISOString().split('T')[0];
+        }
+      } catch (e) {
+        lastMod = currentDate;
+      }
+
+      xml += `  <url>\n`;
+      xml += `    <loc>${baseUrl}/article/${article.id}</loc>\n`;
+      xml += `    <lastmod>${lastMod}</lastmod>\n`;
+      xml += `    <changefreq>weekly</changefreq>\n`;
+      xml += `    <priority>0.6</priority>\n`;
+      xml += `  </url>\n`;
+    }
+  });
+
+  xml += `</urlset>`;
+
+  res.header('Content-Type', 'application/xml');
+  res.send(xml);
+});
+
+// --- [SEO 극대화] 구글 봇 크롤링 대응용 프리미엄 서버 렌더링(SSR) 기사 상세 페이지 ---
+app.get('/article/:id', (req, res) => {
+  const articleId = req.params.id;
+  // 아카이브에서 먼저 확인하고 없는 경우 구 캐시에서 검사 진행
+  const article = newsArchive[articleId] || aiCache[articleId];
+
+  if (!article || !article.aiAnalysis) {
+    return res.status(404).send(`
+      <!DOCTYPE html>
+      <html lang="ko">
+      <head>
+        <meta charset="UTF-8">
+        <title>기사를 찾을 수 없습니다 - Truth of Market</title>
+        <style>
+          body { background-color: #090d16; color: #fff; font-family: sans-serif; text-align: center; padding-top: 100px; }
+          a { color: #0cdab1; text-decoration: none; font-weight: bold; }
+        </style>
+      </head>
+      <body>
+        <h1>404 - 기사를 찾을 수 없거나 아직 AI 스터디 분석이 실행되지 않았습니다.</h1>
+        <p><a href="/">홈화면으로 돌아가기</a></p>
+      </body>
+      </html>
+    `);
+  }
+
+  const analysis = article.aiAnalysis;
+  const originalTitle = article.title;
+  const sourceName = article.sourceName;
+  
+  let dateStr = '최근 수집';
+  try {
+    if (article.date) {
+      dateStr = new Date(article.date).toLocaleDateString('ko-KR', {
+        year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit'
+      });
+    }
+  } catch (e) {}
+
+  const snippet = article.description || '기사 본문 설명이 없습니다. 원본 보기를 클릭하여 기사 세부 내용을 읽어보실 수 있습니다.';
+  const link = article.link || '#';
+  const category = article.category || 'Macro';
+  const isEn = article.lang === 'en';
+  const flag = isEn ? '🇺🇸 US News' : '🇰🇷 KR News';
+
+  const summaryHtml = analysis.summary.map(sum => `<li>${sum}</li>`).join('\n');
+  const implicationsHtml = analysis.implications.map(imp => `<li>${imp}</li>`).join('\n');
+
+  const html = `
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${analysis.translatedTitle} - Truth of Market Premium AI 투자 스터디 노트</title>
+  
+  <!-- SEO 메타 태그 -->
+  <meta name="description" content="${analysis.summary.join(' | ').substring(0, 155)}...">
+  <meta name="keywords" content="투자, 주식, 경제, ${sourceName}, 번역, AI 요약, Truth of Market, 경제 뉴스">
+  
+  <!-- 오픈 그래프 (소셜 미디어 공유용) -->
+  <meta property="og:title" content="${analysis.translatedTitle} | Truth of Market">
+  <meta property="og:description" content="${analysis.summary[0]}">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="/article/${articleId}">
+  <meta property="og:site_name" content="Truth of Market">
+  
+  <!-- 구글 폰트 & 아이콘 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    .article-page-container {
+      max-width: 850px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: hsl(var(--accent-cyan));
+      text-decoration: none;
+      font-weight: 500;
+      margin-bottom: 25px;
+      transition: var(--transition-smooth);
+      font-size: 0.95rem;
+    }
+    .back-btn:hover {
+      transform: translateX(-4px);
+      color: white;
+    }
+    .article-card {
+      padding: 40px;
+    }
+    .article-header {
+      border-bottom: 1px solid hsla(var(--glass-border));
+      padding-bottom: 24px;
+      margin-bottom: 30px;
+    }
+    .article-title {
+      font-size: 1.9rem;
+      font-weight: 700;
+      line-height: 1.4;
+      margin: 15px 0;
+      color: hsl(var(--text-main));
+    }
+    .original-title {
+      font-size: 1.1rem;
+      color: hsl(var(--text-muted));
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+    .article-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.85rem;
+      color: hsl(var(--text-muted));
+      align-items: center;
+    }
+    .analysis-section {
+      margin-top: 30px;
+      padding: 24px;
+      border-radius: 12px;
+      background: hsla(var(--bg-primary), 0.3);
+      border: 1px solid hsla(var(--glass-border), 0.5);
+    }
+    .analysis-section h4 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: hsl(var(--accent-cyan));
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .analysis-section ul {
+      padding-left: 20px;
+      line-height: 1.7;
+    }
+    .analysis-section li {
+      margin-bottom: 10px;
+      color: hsl(var(--text-main));
+    }
+    .implications-section h4 {
+      color: hsl(var(--accent-gold));
+    }
+    .original-snippet-box {
+      margin-top: 30px;
+      padding: 24px;
+      border-radius: 12px;
+      background: hsla(var(--bg-secondary), 0.3);
+      border: 1px solid hsla(var(--glass-border), 0.3);
+    }
+    .original-snippet-box h4 {
+      font-size: 1rem;
+      margin-bottom: 12px;
+      color: hsl(var(--text-muted));
+    }
+    .original-snippet-box p {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: hsl(var(--text-muted));
+    }
+    .action-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 40px;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .adsense-placement {
+      margin: 30px 0;
+      border: 1px dashed hsla(var(--accent-cyan), 0.3);
+      background: hsla(var(--bg-secondary), 0.5);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+      color: hsl(var(--text-muted));
+      font-size: 0.8rem;
+      position: relative;
+    }
+    .adsense-placement::before {
+      content: 'SPONSORED ADVERTISEMENTS';
+      display: block;
+      font-size: 0.65rem;
+      letter-spacing: 1.5px;
+      margin-bottom: 12px;
+      color: hsla(var(--accent-cyan), 0.6);
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body class="dark-theme">
+  <!-- 배경 그라디언트 -->
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+
+  <div class="article-page-container">
+    <a href="/" class="back-btn"><i class="fa-solid fa-arrow-left"></i> 실시간 대시보드로 돌아가기</a>
+    
+    <article class="glass-panel article-card">
+      <div class="article-header">
+        <div class="article-meta">
+          <span class="source-badge">${sourceName}</span>
+          <span class="lang-flag">${flag}</span>
+          <span class="category-badge" style="background: hsla(var(--glass-border), 0.5); padding: 3px 8px; border-radius: 6px; font-size: 0.72rem; color: hsl(var(--text-main));"><i class="fa-solid fa-folder"></i> ${category}</span>
+        </div>
+        <h1 class="article-title">${analysis.translatedTitle}</h1>
+        <div class="original-title">원문 기사명: ${originalTitle}</div>
+        <div class="article-meta">
+          <span><i class="fa-regular fa-calendar-days"></i> 수집일시: ${dateStr}</span>
+        </div>
+      </div>
+
+      <!-- 상단 애드센스 광고 (모크배너) -->
+      <div class="adsense-placement">
+        <p>Google AdSense Banner - Responsive Ad Slot (Header)</p>
+      </div>
+
+      <!-- 핵심 3줄 요약 -->
+      <div class="analysis-section">
+        <h4><i class="fa-solid fa-list-check"></i> AI 투자 핵심 요약 (3줄)</h4>
+        <ul>
+          ${summaryHtml}
+        </ul>
+      </div>
+
+      <!-- 투자 시사점 -->
+      <div class="analysis-section implications-section">
+        <h4><i class="fa-solid fa-lightbulb"></i> 투자자 관점 시사점</h4>
+        <ul>
+          ${implicationsHtml}
+        </ul>
+      </div>
+
+      <!-- 중단 애드센스 광고 (모크배너) -->
+      <div class="adsense-placement">
+        <p>Google AdSense Banner - Content Middle In-Feed Ad Slot</p>
+      </div>
+
+      <!-- 기사 본문 초안/요약 -->
+      <div class="original-snippet-box">
+        <h4><i class="fa-solid fa-align-left"></i> 기사 초안 / 본문 요약</h4>
+        <p>${snippet}</p>
+      </div>
+
+      <div class="action-row">
+        <a href="${link}" target="_blank" class="primary-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> 언론사 기사 원문 정독하기</a>
+      </div>
+    </article>
+
+    <!-- 하단 애드센스 광고 -->
+    <div class="adsense-placement">
+      <p>Google AdSense Banner - Footer Bottom Ad Slot</p>
+    </div>
+
+    <!-- 법적 면책고지 푸터 -->
+    <footer class="app-footer-text" style="margin-top: 40px; text-align: center; font-size: 0.8rem; color: hsl(var(--text-muted)); line-height: 1.6;">
+      <p>© 2026 Truth of Market. Powered by Google Gemini & Express.</p>
+      <p style="margin-top: 15px; font-size: 0.72rem; max-width: 700px; margin-left: auto; margin-right: auto; color: hsl(var(--text-muted));">
+        <strong>면책 조항 (Disclaimer):</strong> 본 웹사이트에서 제공하는 모든 분석 정보 및 AI 요약자료는 단순 학습, 교육 및 연구를 돕기 위해 무상으로 제공되는 스터디 참고용 자료입니다. 당사는 수집된 기사의 완성도, 진실성, 완전성을 대리 보장하지 않으며, 어떠한 종목의 추천이나 권유를 행하지 않습니다. 모든 금융 거래 및 최종 투자 의사결정에 따르는 위험과 책임은 전적으로 거래 당사자 본인에게 귀속됩니다.
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
+  `;
+  res.send(html);
+});
+
+// --- [영구 아카이브] 일일 백그라운드 RSS 뉴스 정밀 수집기 ---
+async function archiveDailyNews() {
+  console.log('🔄 [아카이브] 백그라운드 실시간 RSS 수집 및 아카이빙 작업 구동 중...');
+  try {
+    const freshNews = await fetchAllNews();
+    let newCount = 0;
+
+    freshNews.forEach(article => {
+      // 신규 기사인 경우 아카이브 등록
+      if (!newsArchive[article.id]) {
+        newsArchive[article.id] = {
+          ...article,
+          aiAnalysis: null // 초기 상태는 AI 분석 미실행
+        };
+        newCount++;
+      } else {
+        // 이미 저장된 기사는 기존의 소중한 aiAnalysis 결과를 온전히 유지
+        newsArchive[article.id] = {
+          ...article,
+          aiAnalysis: newsArchive[article.id].aiAnalysis || null
+        };
+      }
+    });
+
+    // 로컬 보존 파일 용량 최소화를 위해 보존 기사는 최근 1000개 기사로 제한
+    const sortedKeys = Object.keys(newsArchive).sort((a, b) => {
+      return new Date(newsArchive[b].date) - new Date(newsArchive[a].date);
+    });
+
+    if (sortedKeys.length > 1000) {
+      const keysToDelete = sortedKeys.slice(1000);
+      keysToDelete.forEach(k => delete newsArchive[k]);
+    }
+
+    saveNewsArchive();
+    console.log(`✅ [아카이브] 수집 완료. 신규 유입: ${newCount}건, 로컬 총 영구 보존 뉴스: ${Object.keys(newsArchive).length}건`);
+  } catch (error) {
+    console.error('❌ [아카이브] 일일 RSS 수집 오류:', error.message);
+  }
+}
+
+// 서버 실행 및 백그라운드 예약 작업 활성화
+app.listen(PORT, async () => {
   console.log(`==================================================`);
   console.log(`📈 Investment Study News Dashboard server running!`);
   console.log(`👉 Web Portal: http://localhost:${PORT}`);
   console.log(`==================================================`);
+
+  // 서버 부팅 시점에 즉각 1회 RSS 수집을 수행하여 로컬 아카이브 데이터 최신 상태로 강제 갱신
+  console.log('🏁 [시스템 부팅] 로컬 아카이브 초기화 및 데이터 최신 갱신 중...');
+  await archiveDailyNews();
+
+  // 24시간에 한 번씩 주기적으로 자동 백그라운드 RSS 파싱 및 수집을 수행하는 타이머 동작 (사용자 접속 시 불필요 오버헤드 0%)
+  const TWENTY_FOUR_HOURS = 24 * 60 * 60 * 1000;
+  setInterval(async () => {
+    await archiveDailyNews();
+  }, TWENTY_FOUR_HOURS);
+  console.log(`⏰ [스케줄링 완료] 24시간 백그라운드 자동 수집 사이클 타이머가 실행되었습니다.`);
 });

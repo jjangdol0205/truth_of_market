@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>소개 및 운영팀 - Truth of Market</title>
+  
+  <!-- 구글 폰트 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- 폰트어썸 아이콘 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- 커스텀 CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .about-container {
+      max-width: 950px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: hsl(var(--accent-cyan));
+      text-decoration: none;
+      font-weight: 500;
+      margin-bottom: 20px;
+      transition: var(--transition-smooth);
+    }
+    .back-btn:hover {
+      transform: translateX(-4px);
+      color: white;
+    }
+    .about-card {
+      padding: 45px;
+    }
+    .about-header {
+      border-bottom: 1px solid hsla(var(--glass-border));
+      padding-bottom: 25px;
+      margin-bottom: 35px;
+      text-align: center;
+    }
+    .about-header h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      font-family: var(--font-display);
+      letter-spacing: 1px;
+    }
+    .about-header p {
+      color: hsl(var(--text-muted));
+      font-size: 0.95rem;
+      margin-top: 8px;
+    }
+    
+    /* 그리드 배치 */
+    .profile-section {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 30px;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+    .profile-avatar-box {
+      width: 220px;
+      height: 220px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, hsla(var(--accent-cyan), 0.2), hsla(var(--accent-gold), 0.2));
+      border: 1px solid hsla(var(--glass-border));
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: hsl(var(--accent-cyan));
+      font-size: 4rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .profile-avatar-box span {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: hsl(var(--text-muted));
+      letter-spacing: 1px;
+      margin-top: 15px;
+      font-family: var(--font-display);
+    }
+    
+    .profile-intro h3 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: hsl(var(--accent-cyan));
+    }
+    .profile-intro p {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: hsl(var(--text-main));
+      margin-bottom: 12px;
+    }
+
+    .tech-stack-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      color: hsl(var(--text-main));
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+    .tech-card {
+      background: hsla(var(--bg-primary), 0.4);
+      border: 1px solid hsla(var(--glass-border), 0.5);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      transition: var(--transition-smooth);
+    }
+    .tech-card:hover {
+      transform: translateY(-3px);
+      border-color: hsla(var(--accent-cyan), 0.4);
+    }
+    .tech-card i {
+      font-size: 2.2rem;
+      margin-bottom: 12px;
+      background: linear-gradient(135deg, hsl(var(--accent-cyan)), hsl(var(--accent-gold)));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .tech-card h5 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: hsl(var(--text-main));
+    }
+    .tech-card p {
+      font-size: 0.78rem;
+      color: hsl(var(--text-muted));
+      line-height: 1.4;
+    }
+    
+    .vision-box {
+      border-top: 1px solid hsla(var(--glass-border));
+      padding-top: 30px;
+      margin-top: 30px;
+      line-height: 1.8;
+      font-size: 0.95rem;
+    }
+    .vision-box h4 {
+      font-size: 1.15rem;
+      color: hsl(var(--accent-gold));
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body class="dark-theme">
+  <!-- 배경 그라디언트 -->
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+
+  <div class="about-container">
+    <a href="/" class="back-btn"><i class="fa-solid fa-arrow-left"></i> 메인 대시보드로 돌아가기</a>
+    
+    <main class="glass-panel about-card">
+      <div class="about-header">
+        <h1>ABOUT <span class="highlight">TRUTHOFMARKET</span></h1>
+        <p>글로벌 경제의 흐름을 읽는 스마트한 안목, 기술과 금융 지식의 만남</p>
+      </div>
+
+      <!-- 프로필 및 E-E-A-T 검증 섹션 -->
+      <section class="profile-section">
+        <div class="profile-avatar-box">
+          <i class="fa-solid fa-user-tie"></i>
+          <span>PORTAL ARCHITECT</span>
+        </div>
+        <div class="profile-intro">
+          <h3>안녕하세요! Truth of Market 운영팀 입니다.</h3>
+          <p><strong>Truth of Market</strong>(truthofmarket.com)은 급격하게 재편되는 글로벌 매크로 경제 지형도와 하이테크 성장 기업들의 핵심 흐름을 기술을 통해 한눈에 파악하기 위해 직접 제작한 <strong>금융/투자 전문 뉴스 분석 연구소</strong>입니다.</p>
+          <p>월스트리트저널(WSJ), 블룸버그(Bloomberg), 로이터(Reuters), 한국경제, 매일경제 등 동서양의 선두 경제 언론사들의 핵심 시각을 AI 지능형 요약본으로 실시간 통합 수집하여 영문 번역의 장벽을 제거하고 투자 연구 능률을 극대화합니다.</p>
+          <p>저는 단순한 기사 취합에 멈추지 않고, 인공지능이 뉴스 본문 배후의 <strong>'금융학적 맥락(Context)'</strong>과 <strong>'거시적 시사점(Implications)'</strong>을 체계적으로 도출할 수 있도록 프롬프트 엔지니어링을 구조화하여 최적의 학습 플랫폼을 구현했습니다.</p>
+        </div>
+      </section>
+
+      <!-- 핵심 기술 요소 -->
+      <h3 class="tech-stack-title"><i class="fa-solid fa-layer-group" style="color: hsl(var(--accent-cyan));"></i> 핵심 기술 스택 및 데이터 흐름</h3>
+      <section class="tech-grid">
+        <div class="tech-card">
+          <i class="fa-solid fa-square-rss"></i>
+          <h5>실시간 RSS 파서</h5>
+          <p>국내외 저명한 경제 및 투자 미디어로부터 매 10분 주기 정밀 피드 로드 및 통합 정렬</p>
+        </div>
+        <div class="tech-card">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <h5>Google Gemini AI</h5>
+          <p>Gemini 2.5 Flash 모델 연동. 영문 타이틀 자연어 국문 변역 및 3줄 스터디 노트 요약</p>
+        </div>
+        <div class="tech-card">
+          <i class="fa-solid fa-chart-line"></i>
+          <h5>실시간 시황 연동</h5>
+          <p>Yahoo Finance 실시간 차트 데이터를 연동한 핵심 거시 지표 10분 주기 트래킹</p>
+        </div>
+        <div class="tech-card">
+          <i class="fa-solid fa-share-nodes"></i>
+          <h5>소셜 스터디 허브</h5>
+          <p>분석 결과를 원클릭 카카오톡 및 텔레그램으로 복사 공유하여 투자 그룹 학습 지원</p>
+        </div>
+      </section>
+
+      <!-- 비전 및 운영 철학 -->
+      <div class="vision-box">
+        <h4><i class="fa-solid fa-graduation-cap"></i> 운영 철학 및 E-E-A-T 약속</h4>
+        <p>현대 투자 시장은 정보의 부족보다 <strong>'정보의 과잉(Information Overload)'</strong>이 문제인 시대입니다. 하루에만 수천 개씩 쏟아지는 뉴스 중에서 어떤 이벤트가 시장에 실질적인 충격을 미치고 어떤 산업에 위기와 기회를 부여하는지 스스로 선별해내기는 매우 어렵습니다.</p>
+        <p>Truth of Market은 <strong>'현명한 투자 연구를 위한 나만의 AI 비서'</strong>라는 가치관 아래, 정제된 데이터를 가장 아름다운 인터페이스(Premium UI)로 서빙하기 위한 지속적인 기능 개선을 이어나가고 있습니다. 또한 이용자의 어떠한 개인정보나 불필요한 데이터를 저장하지 않는 <strong>데이터 친환경적이고 신뢰도 높은 서비스</strong>를 지향합니다.</p>
+        <p>서비스에 대한 기능 개선, 신규 투자 RSS 매칭 피드 건의 및 기술 협력에 대한 문의는 언제나 활짝 열려 있습니다. 메인 화면의 문의 양식이나 메일을 통해 제안해 주시면 성심껏 조율해 반영하겠습니다.</p>
+      </div>
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="app-footer-text" style="margin-top: 30px; text-align: center; font-size: 0.8rem; color: hsl(var(--text-muted));">
+      <p>© 2026 Truth of Market. All Rights Reserved. designed for AdSense compliance.</p>
+    </footer>
+  </div>
+
+  <script>
+    // 테마 동기화
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    if (savedTheme === 'light') {
+      document.body.classList.remove('dark-theme');
+      document.body.classList.add('light-theme');
+    } else {
+      document.body.classList.remove('light-theme');
+      document.body.classList.add('dark-theme');
+    }
+  </script>
+</body>
+</html>
