@@ -190,6 +190,18 @@ function setupEventListeners() {
 
   // 모달 내 북마크 스크랩 버튼
   document.getElementById('modalBookmarkBtn').addEventListener('click', handleToggleModalBookmark);
+
+  // 설정 모달 내 관리자 시크릿 패스코드 인증 버튼
+  const verifyBtn = document.getElementById('adminVerifyBtn');
+  if (verifyBtn) {
+    verifyBtn.addEventListener('click', handleAdminPasscodeVerification);
+  }
+
+  // 설정 모달 내 관리자 권한 해제 버튼
+  const logoutBtn = document.getElementById('adminLogoutBtn');
+  if (logoutBtn) {
+    logoutBtn.addEventListener('click', handleAdminLogout);
+  }
 }
 
 // === 코어 비즈니스 로직 함수 ===
@@ -1007,6 +1019,87 @@ async function checkApiStatus() {
   if (sharePanelStatus) {
     sharePanelStatus.className = 'status-dot active';
     sharePanelStatus.innerText = '준비완료';
+  }
+
+  // 관리자 권한 관리 패널 UI 갱신 호출
+  updateAdminAuthPanelUI();
+}
+
+// 관리자 권한 관리 UI 전환 헬퍼
+function updateAdminAuthPanelUI() {
+  const formArea = document.getElementById('adminAuthFormArea');
+  const activeArea = document.getElementById('adminActiveArea');
+  const msgEl = document.getElementById('adminVerifyMsg');
+  const passcodeField = document.getElementById('adminPasscode');
+
+  if (msgEl) msgEl.classList.add('hidden');
+  if (passcodeField) passcodeField.value = '';
+
+  if (state.isAdmin) {
+    if (formArea) formArea.classList.add('hidden');
+    if (activeArea) activeArea.classList.remove('hidden');
+  } else {
+    if (formArea) formArea.classList.remove('hidden');
+    if (activeArea) activeArea.classList.add('hidden');
+  }
+}
+
+// 관리자 패스코드 실시간 검증 수행
+async function handleAdminPasscodeVerification() {
+  const passcodeField = document.getElementById('adminPasscode');
+  const msgEl = document.getElementById('adminVerifyMsg');
+  const verifyBtn = document.getElementById('adminVerifyBtn');
+
+  if (!passcodeField || !passcodeField.value.trim()) {
+    alert('패스코드를 입력해주세요.');
+    return;
+  }
+
+  const passcode = passcodeField.value.trim();
+  msgEl.classList.remove('hidden', 'success', 'error');
+  msgEl.innerText = '인증 처리 중...';
+  verifyBtn.disabled = true;
+
+  try {
+    const response = await fetch('/api/admin/verify', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ passcode })
+    });
+
+    const result = await response.json();
+    if (result.success) {
+      localStorage.setItem('admin_verified', 'true');
+      state.isAdmin = true;
+      
+      msgEl.className = 'feed-validation-msg success';
+      msgEl.innerText = '✅ 관리자 권한 승인 성공! 페이지를 동기화합니다.';
+      
+      showToast('👑 관리자 권한이 승인되었습니다!');
+      
+      setTimeout(() => {
+        window.location.reload();
+      }, 800);
+    } else {
+      throw new Error(result.message);
+    }
+  } catch (error) {
+    msgEl.className = 'feed-validation-msg error';
+    msgEl.innerText = '❌ 인증 실패: ' + (error.message || '패스코드가 잘못되었습니다.');
+  } finally {
+    verifyBtn.disabled = false;
+  }
+}
+
+// 관리자 권한 해제 로그아웃
+function handleAdminLogout() {
+  if (confirm('정말로 관리자 권한을 해제하시겠습니까?')) {
+    localStorage.removeItem('admin_verified');
+    state.isAdmin = false;
+    showToast('🚪 일반 사용자 세션으로 전환되었습니다.');
+    setTimeout(() => {
+      window.location.href = window.location.origin;
+    }, 800);
   }
 }
 

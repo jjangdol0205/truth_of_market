@@ -308,6 +308,50 @@
             <p class="settings-help-text"><i class="fa-solid fa-info-circle"></i> API 설정은 프로젝트 루트 디렉토리의 <code>.env</code> 파일에서 안전하게 관리할 수 있습니다.</p>
           </div>
 
+          <!-- 관리자 권한 관리 섹션 (PWA 모바일 로그인 대응) -->
+          <div class="settings-section">
+            <h4><i class="fa-solid fa-user-shield"></i> 관리자 권한 관리</h4>
+            <div class="admin-auth-wrapper" id="adminAuthWrapper" style="padding: 16px; border-radius: 12px; background: hsla(var(--bg-primary), 0.3); border: 1px solid hsla(var(--glass-border), 0.5);">
+              <!-- JS 동적 생성 영역 (비인증 시 비밀번호 입력창 / 인증 시 해제 버튼) -->
+              <div id="adminAuthFormArea">
+                <p class="settings-help-text" style="margin-bottom: 12px; color: hsl(var(--text-muted)); font-size: 0.85rem;">모바일 앱 환경이나 iframe 도메인에서도 <strong>시크릿 패스코드</strong>를 입력하면 간편히 관리자 모드를 활성화할 수 있습니다.</p>
+                <div class="admin-login-row" style="display: flex; gap: 8px;">
+                  <input type="password" id="adminPasscode" placeholder="관리자 시크릿 패스코드 입력" style="flex: 1; padding: 10px 12px; border-radius: 8px; border: 1px solid hsla(var(--glass-border)); background: hsla(var(--bg-secondary), 0.5); color: white; font-size: 0.9rem;">
+                  <button type="button" id="adminVerifyBtn" class="primary-btn" style="padding: 10px 16px;">인증</button>
+                </div>
+              </div>
+              <div id="adminActiveArea" class="hidden">
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+                  <span style="font-size: 0.92rem; color: hsl(var(--accent-cyan)); font-weight: 600;"><i class="fa-solid fa-circle-check"></i> 관리자 권한이 성공적으로 활성화되었습니다.</span>
+                  <button type="button" id="adminLogoutBtn" class="secondary-btn active" style="padding: 8px 14px; font-size: 0.82rem;"><i class="fa-solid fa-arrow-right-from-bracket"></i> 권한 해제</button>
+                </div>
+              </div>
+              <div id="adminVerifyMsg" class="feed-validation-msg hidden" style="margin-top: 8px;"></div>
+            </div>
+          </div>
+
+          <!-- 모바일 투자 비서 PWA 앱 설치 안내 섹션 -->
+          <div class="settings-section" style="border-top: 1px solid hsla(var(--glass-border), 0.3); padding-top: 20px;">
+            <h4><i class="fa-solid fa-mobile-screen-button"></i> 모바일 투자 스터디 비서 앱 다운로드</h4>
+            <div class="pwa-install-card" style="padding: 18px; border-radius: 12px; background: linear-gradient(135deg, hsla(var(--accent-cyan), 0.05), hsla(var(--accent-gold), 0.05)); border: 1px solid hsla(var(--accent-cyan), 0.2);">
+              <p style="font-size: 0.88rem; line-height: 1.6; color: hsl(var(--text-main)); margin-bottom: 15px;">
+                <i class="fa-solid fa-circle-info" style="color: hsl(var(--accent-cyan)); margin-right: 6px;"></i>
+                본 웹앱은 <strong>PWA(프로그레시브 웹앱) 기술</strong>을 지원하여 기기 종류에 구애받지 않고 1초 만에 스마트폰 앱으로 다운로드 및 설치하여 사용할 수 있습니다.
+              </p>
+              
+              <div class="install-steps-wrapper" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 10px;">
+                <div class="install-step-box" style="padding: 12px; border-radius: 8px; background: hsla(var(--bg-secondary), 0.4); border: 1px solid hsla(var(--glass-border), 0.3);">
+                  <h5 style="color: white; font-size: 0.88rem; font-weight: 600; margin-bottom: 8px;"><i class="fa-brands fa-apple" style="color: #a3aaae;"></i> iPhone / iPad (Safari)</h5>
+                  <p style="font-size: 0.78rem; line-height: 1.5; color: hsl(var(--text-muted));">사파리 브라우저 하단 <strong>[공유 <i class="fa-solid fa-share-nodes"></i>]</strong> 버튼을 탭한 뒤, <strong>[홈 화면에 추가]</strong>를 선택하시면 앱 아이콘이 즉시 생성됩니다.</p>
+                </div>
+                <div class="install-step-box" style="padding: 12px; border-radius: 8px; background: hsla(var(--bg-secondary), 0.4); border: 1px solid hsla(var(--glass-border), 0.3);">
+                  <h5 style="color: white; font-size: 0.88rem; font-weight: 600; margin-bottom: 8px;"><i class="fa-brands fa-android" style="color: #3ddc84;"></i> 갤럭시 / 안드로이드 (Chrome)</h5>
+                  <p style="font-size: 0.78rem; line-height: 1.5; color: hsl(var(--text-muted));">크롬 브라우저 우측 상단 <strong>[점 3개 <i class="fa-solid fa-ellipsis-vertical"></i>]</strong> 메뉴를 탭한 뒤, <strong>[앱 설치]</strong>를 선택하시면 홈화면에 모바일 앱이 자동 다운로드됩니다.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <!-- 나만의 RSS 피드 관리 섹션 -->
           <div class="settings-section">
             <h4><i class="fa-solid fa-rss"></i> 나만의 뉴스 피드 관리 (투자 RSS)</h4>

@@ -528,6 +528,20 @@ app.get('/api/market', async (req, res) => {
   }
 });
 
+// 3. 관리자 시크릿 패스코드 검증 API (모바일 PWA 환경 대응)
+app.post('/api/admin/verify', (req, res) => {
+  const { passcode } = req.body;
+  const secretKey = process.env.ADMIN_SECRET_KEY || 'market777';
+
+  if (passcode === secretKey) {
+    console.log('🔑 [보안 승인] 모바일/설정 창을 통한 관리자 시크릿 인증이 성공했습니다.');
+    res.json({ success: true, message: '관리자 인증에 성공했습니다.' });
+  } else {
+    console.warn('⚠️ [보안 경고] 유효하지 않은 관리자 시크릿 패스코드 입력 시도 감지!');
+    res.status(401).json({ success: false, message: '올바르지 않은 패스코드입니다.' });
+  }
+});
+
 // 5. API 상태 진단 API
 app.get('/api/status', (req, res) => {
   res.json({
