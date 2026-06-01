@@ -75,9 +75,51 @@ function saveNewsArchive() {
   }
 }
 
+// --- [월간 API 예산 보호막 (Cost Shield) 관리 시스템] ---
+// 대표님의 Gemini API 한 달 비용 무료 범위(최대 20만원) 내에서 100% 안전하게 자동 자체 통제 보호막을 구동합니다.
+const BUDGET_FILE = path.join(__dirname, 'api-budget.json');
+let apiBudget = {
+  monthlyBudgetLimit: 75.0, // 대표님의 심리적 안심 한도 설정 ($75, 약 10만원. 20만원 한도 대비 50%의 보수적 안심선)
+  currentMonth: new Date().toISOString().substring(0, 7), // "YYYY-MM"
+  monthlyAccumulatedCost: 0.0,
+  totalApiCalls: 0
+};
+
+function loadApiBudget() {
+  try {
+    if (fs.existsSync(BUDGET_FILE)) {
+      apiBudget = JSON.parse(fs.readFileSync(BUDGET_FILE, 'utf8'));
+      
+      // 달이 바뀌었는지 체크하여 자동 초기화
+      const thisMonth = new Date().toISOString().substring(0, 7);
+      if (apiBudget.currentMonth !== thisMonth) {
+        console.log(`📅 [API 예산] 새로운 달(${thisMonth})이 시작되어 API 누적 비용 기록을 0원으로 자동 리셋합니다.`);
+        apiBudget.currentMonth = thisMonth;
+        apiBudget.monthlyAccumulatedCost = 0.0;
+        apiBudget.totalApiCalls = 0;
+        saveApiBudget();
+      }
+      console.log(`💾 [API 예산] 월간 비용 트래커 로드 완료: 한도 $${apiBudget.monthlyBudgetLimit} / 현재 $${apiBudget.monthlyAccumulatedCost.toFixed(5)} (${apiBudget.totalApiCalls}회 호출)`);
+    } else {
+      saveApiBudget();
+    }
+  } catch (e) {
+    console.error('⚠️ API 예산 파일 로드 실패:', e.message);
+  }
+}
+
+function saveApiBudget() {
+  try {
+    fs.writeFileSync(BUDGET_FILE, JSON.stringify(apiBudget, null, 2), 'utf8');
+  } catch (e) {
+    console.error('⚠️ API 예산 파일 저장 실패:', e.message);
+  }
+}
+
 // 서버 시작 시 캐시 및 아카이브 파일 로드
 loadAiCache();
 loadNewsArchive();
+loadApiBudget();
 
 // 국내외 주요 투자/경제 RSS 피드 목록
 const NEWS_SOURCES = [
@@ -179,6 +221,24 @@ async function analyzeArticleWithGemini(title, description, lang) {
     return aiCache[cacheKey];
   }
 
+  // [API COST SHIELD] 월간 예산 한도를 초과했거나 임계값 도달 시 즉각 API를 차단하고 안전하게 데모 모드로 폴백!
+  if (apiBudget.monthlyAccumulatedCost >= apiBudget.monthlyBudgetLimit) {
+    console.warn(`🚨 [API COST SHIELD ACTION] 월간 예산 한도($${apiBudget.monthlyBudgetLimit})에 도달하여 Google API 실시간 호출이 안전하게 자동 원천 차단되었습니다! 목업 데모 모드로 즉각 세이프 폴백합니다.`);
+    const isEnglish = lang === 'en';
+    return {
+      translatedTitle: isEnglish ? `[예산보호 데모] ${title} (번역본)` : title,
+      summary: [
+        "이것은 월간 예산 보호막(API Cost Shield)이 작동한 안전 요약 서비스입니다.",
+        "이번 달 설정된 구글 API 한도 예산을 소진하여 추가 과금 걱정 없이 데모 모드로 자동 폴백되었습니다.",
+        `원문 제목: ${title}`
+      ],
+      implications: [
+        "새로운 달이 시작되면 실시간 구글 Gemini API 연동 분석이 자동으로 정상 재개됩니다.",
+        "관리자 설정 파일(api-budget.json)에서 예산 한도(monthlyBudgetLimit)를 직접 상향 조정하실 수도 있습니다."
+      ]
+    };
+  }
+
   if (!genAI) {
     // Gemini API Key가 없는 경우의 Mock 데모 데이터 반환
     const isEnglish = lang === 'en';
@@ -231,6 +291,20 @@ async function analyzeArticleWithGemini(title, description, lang) {
     const responseText = result.response.text();
     const resultJson = JSON.parse(responseText);
     
+    // [비용 누적 계산: Gemini 2.5 Flash 요율 적용]
+    // 영단어 1자/한글 1자는 대략 1~1.5토큰. 안전하게 글자 수의 1.3배를 토큰으로 잡고 요율 곱함.
+    const inputTokens = Math.ceil((prompt.length + title.length + (description || '').length) * 1.3);
+    const outputTokens = Math.ceil(responseText.length * 1.3);
+    const inputCost = inputTokens * (0.075 / 1000000); // 100만 토큰당 $0.075
+    const outputCost = outputTokens * (0.30 / 1000000); // 100만 토큰당 $0.30
+    const totalCost = inputCost + outputCost;
+
+    apiBudget.monthlyAccumulatedCost += totalCost;
+    apiBudget.totalApiCalls += 1;
+    saveApiBudget();
+
+    console.log(`💸 [API 예산 차감] 1회 호출 성공! 비용: $${totalCost.toFixed(5)} (누적: $${apiBudget.monthlyAccumulatedCost.toFixed(5)} / 한도: $${apiBudget.monthlyBudgetLimit})`);
+
     // 로컬 파일 캐시에 영구 저장
     aiCache[cacheKey] = resultJson;
     saveAiCache();
@@ -550,7 +624,13 @@ app.post('/api/admin/verify', (req, res) => {
 app.get('/api/status', (req, res) => {
   res.json({
     success: true,
-    geminiActive: !!genAI
+    geminiActive: !!genAI,
+    apiBudget: {
+      limit: apiBudget.monthlyBudgetLimit,
+      accumulated: apiBudget.monthlyAccumulatedCost,
+      calls: apiBudget.totalApiCalls,
+      limitReached: apiBudget.monthlyAccumulatedCost >= apiBudget.monthlyBudgetLimit
+    }
   });
 });
 

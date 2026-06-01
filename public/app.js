@@ -990,6 +990,39 @@ async function checkApiStatus() {
         geminiEl.innerText = 'API 키 누락';
       }
 
+      // [API COST SHIELD UI 연동]
+      if (result.apiBudget) {
+        const budget = result.apiBudget;
+        const percent = Math.min((budget.accumulated / budget.limit) * 100, 100);
+        
+        const percentEl = document.getElementById('apiBudgetPercent');
+        const progressBarEl = document.getElementById('apiProgressBar');
+        const accumulatedEl = document.getElementById('apiAccumulatedCost');
+        const limitEl = document.getElementById('apiLimitCost');
+        const helpEl = document.getElementById('apiShieldHelp');
+
+        if (percentEl) percentEl.innerText = `${percent.toFixed(2)}% 사용 중`;
+        if (progressBarEl) progressBarEl.style.width = `${percent}%`;
+        if (accumulatedEl) accumulatedEl.innerText = `$${budget.accumulated.toFixed(5)}`;
+        if (limitEl) limitEl.innerText = `$${budget.limit.toFixed(2)}`;
+
+        if (helpEl) {
+          if (budget.limitReached) {
+            progressBarEl.style.background = 'hsl(var(--accent-red))';
+            helpEl.className = 'settings-help-text error';
+            helpEl.innerHTML = '<i class="fa-solid fa-triangle-exclamation" style="color: hsl(var(--accent-red));"></i> 월간 예산 한도를 초과하여 API 보호 모드가 활동 중입니다 (무료 모크 자동 전환).';
+          } else if (percent > 85) {
+            progressBarEl.style.background = 'hsl(var(--accent-gold))';
+            helpEl.className = 'settings-help-text warning';
+            helpEl.innerHTML = '<i class="fa-solid fa-circle-exclamation" style="color: hsl(var(--accent-gold));"></i> 월간 예산의 85% 이상을 사용하였습니다. 한도 도달 임박!';
+          } else {
+            progressBarEl.style.background = 'linear-gradient(90deg, hsl(var(--accent-cyan)), hsl(var(--accent-gold)))';
+            helpEl.className = 'settings-help-text';
+            helpEl.innerHTML = '<i class="fa-solid fa-circle-check" style="color: hsl(var(--accent-cyan));"></i> 한 달 API 안전 예산 한도 도달 시, 구글 과금을 100% 원천 예방하기 위해 즉각 무상 모크 데모 모드로 안전 차단 전환됩니다. (현재 안심 작동 중)';
+          }
+        }
+      }
+
       // Telegram Bot 상태 업데이트
       if (telegramEl) {
         if (result.telegramActive) {
