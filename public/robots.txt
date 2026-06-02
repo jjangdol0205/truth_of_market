@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Allow: /about
+Allow: /contact
+Allow: /privacy-policy
+Allow: /terms
+Allow: /sitemap.xml
+Allow: /article/*
+
+# 대표님의 실제 도메인 주소로 변경하여 구글 서치콘솔에 등록 시 검색 노출 속도를 비약적으로 상승시킵니다.
+# 예: Sitemap: https://yourdomain.com/sitemap.xml
+Sitemap: http://localhost:3000/sitemap.xml
