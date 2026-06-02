@@ -931,7 +931,7 @@ app.get('/article/:id', (req, res) => {
 
       <!-- 상단 애드센스 광고 (모크배너) -->
       <div class="adsense-placement">
-        <p>Google AdSense Banner - Responsive Ad Slot (Header)</p>
+        <p>PREMIUM SPONSOR - Partnership & Ad Slot (Header)</p>
       </div>
 
       <!-- 핵심 3줄 요약 -->
@@ -952,7 +952,7 @@ app.get('/article/:id', (req, res) => {
 
       <!-- 중단 애드센스 광고 (모크배너) -->
       <div class="adsense-placement">
-        <p>Google AdSense Banner - Content Middle In-Feed Ad Slot</p>
+        <p>PREMIUM SPONSOR - Content Middle In-Feed Ad Slot</p>
       </div>
 
       <!-- 기사 본문 초안/요약 -->
@@ -968,7 +968,7 @@ app.get('/article/:id', (req, res) => {
 
     <!-- 하단 애드센스 광고 -->
     <div class="adsense-placement">
-      <p>Google AdSense Banner - Footer Bottom Ad Slot</p>
+      <p>PREMIUM SPONSOR - Footer Bottom Ad Slot</p>
     </div>
 
     <!-- 법적 면책고지 푸터 -->

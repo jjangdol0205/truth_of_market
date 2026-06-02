@@ -10,3 +10,4 @@ node_modules/
 # 테스트 및 진단 스크래치 스크립트 제외
 test-*.js
 list-models.js
+raw-news.json
