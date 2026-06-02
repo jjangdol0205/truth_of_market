@@ -377,8 +377,10 @@ app.get('/api/news', async (req, res) => {
     // 로컬 아카이브에서 수집된 모든 기사 데이터를 최신 날짜 순으로 정렬하여 반환
     let articlesList = Object.values(newsArchive).sort((a, b) => new Date(b.date) - new Date(a.date));
     
-    // [프리미엄 큐레이션] 일반 사용자에게는 오직 관리자가 분석(요약/번역)을 승인한 기사들만 리스트 노출!
-    if (!isAdmin) {
+    // [프리미엄 큐레이션] 대표님의 요청에 따라 관리자/일반 사용자 상관없이 오직 AI 분석이 완료된 완성된 기사들만 기본 노출하여 무한 로딩 원천 방지!
+    // (디버깅 목적으로 ?all=true 파라미터가 명시적으로 들어온 경우에만 전체 원본 뉴스 노출 허용)
+    const showAll = req.query.all === 'true';
+    if (!showAll) {
       articlesList = articlesList.filter(article => article.aiAnalysis && article.aiAnalysis.translatedTitle);
     }
 
