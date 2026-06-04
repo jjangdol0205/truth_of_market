@@ -2797,5 +2797,609 @@
     "lang": "en",
     "category": "Markets",
     "aiAnalysis": null
+  },
+  "id_vobu25": {
+    "id": "id_vobu25",
+    "title": "Wall Street Is Going Gaga for SpaceX",
+    "link": "https://www.nytimes.com/2026/06/04/business/wall-street-jamie-dimon-spacex.html",
+    "description": "Jamie Dimon himself is planning to pitch investors on the offering of Elon Musk’s rocket company, as banks prepare to reap huge fees from the largest I.P.O. ever.",
+    "date": "2026-06-04T21:16:21.000Z",
+    "sourceId": "nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "aiAnalysis": null
+  },
+  "id_novox1": {
+    "id": "id_novox1",
+    "title": "Nose Gear on Boeing 787-9 Dreamliner Collapses, Injuring Several Workers",
+    "link": "https://www.nytimes.com/2026/06/04/world/europe/boeing-plane-nose-gear-collapse-frankfurt.html",
+    "description": "The airline Lufthansa said the cause of the accident at Frankfurt Airport was under investigation. The plane can weigh 279 tons at takeoff.",
+    "date": "2026-06-04T20:39:08.000Z",
+    "sourceId": "nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "aiAnalysis": {
+      "translatedTitle": "보잉의 끊이지 않는 품질 악재: 프랑크푸르트 공항에서 발생한 787-9 드림라이너 앞바퀴 붕괴 사고 파장",
+      "summary": [
+        "독일 프랑크푸르트 공항에서 지상 정비 작업을 진행 중이던 루프트한자 소속의 보잉 787-9 드림라이너 기종의 노즈 기어(앞바퀴 착륙 장치)가 갑작스럽게 함몰·붕괴하여 정비공 여러 명이 부상을 입는 사고가 발생했습니다.",
+        "보잉 787-9 드림라이너는 최대 이륙 중량이 279톤에 달하는 대형 플래그십 여객기로, 정비 및 제조 과정의 기계적 결함이나 품질 제어 프로토콜의 구멍이 있었는지 정밀 조사가 시작되었습니다.",
+        "문짝 이탈, 기체 결함에 이어 이번 랜딩 기어 함몰 사고까지 겹치면서 보잉의 품질 관리 신뢰도는 사상 최악의 바닥으로 격하되고 있으며, 글로벌 항공 규제 당국의 감시 수위가 극도로 상승했습니다."
+      ],
+      "implications": [
+        "보잉(BA)의 기체 인도 지연과 잇따른 소송 비용 지출에 따른 장기 실적 악화 리스크가 상존하므로 보잉 본주에 대한 투자는 피하고 철저한 관망세 유지가 타당합니다.",
+        "대신 글로벌 민항기 시장의 대체 불가한 2강 중 하나인 에어버스(Airbus)의 반사 수혜 모멘텀과 항공기 리스 및 중고 항공 부품 유지보수(MRO) 독점 사업 모델 기업들의 희소가치 상승에 주목하십시오."
+      ]
+    }
+  },
+  "id_rgmiee": {
+    "id": "id_rgmiee",
+    "title": "Wary of U.S., Carney Bets on AI Strategy for Canada",
+    "link": "https://www.nytimes.com/2026/06/04/world/canada/canada-national-ai-strategy.html",
+    "description": "The country on Thursday released a national artificial intelligence strategy that focuses on building its sovereign capability and protecting consumers.",
+    "date": "2026-06-04T20:32:44.000Z",
+    "sourceId": "nyt-tech",
+    "sourceName": "NYT 테크놀로지",
+    "lang": "en",
+    "category": "Tech",
+    "aiAnalysis": {
+      "translatedTitle": "미국 종속 탈피와 AI 주권: 마크 카니가 주도하는 캐나다의 독자적 국가 인공지능 육성 전략",
+      "summary": [
+        "전 영란은행 총재이자 캐나다 거시경제의 거물인 마크 카니가 주도하여, 미국의 거대 테크 기업(MS, 오픈AI, 구글 등)에 대한 종속을 막고 캐나다만의 독자적인 AI 생태계를 구축하기 위한 '국가 인공지능 전략'을 공식 출범했습니다.",
+        "이번 전략은 캐나다 자국 내 슈퍼컴퓨팅 인프라를 대폭 보강하고, 미국으로 유출되는 핵심 AI 인재들을 캐나다 국내에 락인(Lock-in)하기 위해 막대한 정부 예산 및 세제 혜택을 제공하는 것을 골자로 합니다.",
+        "캐나다 정부는 인공지능이 국가의 장기 생산성을 결정하는 안보 자산이라고 규정하며, 자국 소비자의 프라이버시 보호와 데이터 주권 사수를 미국 빅테크 규제의 최우선 방어선으로 설정했습니다."
+      ],
+      "implications": [
+        "미국 메가캡 빅테크 독주에 맞서 세계 각국(유럽, 캐나다, 중동 등)이 독자적인 '소브린 AI(Sovereign AI)' 인프라 구축 경쟁에 돌입함에 따라, 다국적 AI 컴퓨팅 인프라 설계와 엔비디아 외 대체 가속기 시장의 파이가 커질 것입니다.",
+        "캐나다 현지에서 국가 AI 인프라 수주를 전담할 현지 독점 SI(시스템 통합) 소프트웨어 상장사 및 공공 데이터 보안 클라우드 업체의 기업가치가 중장기 수혜를 누릴 것입니다."
+      ]
+    }
+  },
+  "id_n0bm3k": {
+    "id": "id_n0bm3k",
+    "title": "뉴욕증시, 반도체 랠리 숨고르기 속 혼조 마감…마이크론 8%↓ - 연합뉴스",
+    "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE14dmVSLUxuckhSZTVGcHZxSi1HeTRhOUJjLTVMUGpmbi1lNUhmaTVxaEV1aFdSTGo4d2ZOdHM3MEROaFBZMEJfamZ1VXBrY1pxeV9XQ2VBU01jUlXSAWBBVV95cUxNaXZvckozcktqU0RLRFJRUEl2dEtaRUdOQkk1MVVRcjVDUmExOVA5U0ViNGF6MWw0ZEl4dnNjb3VyVzFkcm84RVcwNVBjczRsSVM2ak1oZ3h5bmNDcDdIS2k?oc=5",
+    "description": "뉴욕증시, 반도체 랠리 숨고르기 속 혼조 마감…마이크론 8%↓  연합뉴스",
+    "date": "2026-06-04T20:15:31.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "반도체 랠리의 일시적 제동: 뉴욕증시 숨고르기 속 마이크론(Micron) 8% 폭락 원인 분석",
+      "summary": [
+        "기술주 중심의 뉴욕 증시가 단기 급등에 따른 피로감으로 반도체 랠리가 숨고르기에 들어간 가운데, 메모리 반도체 대표주인 마이크론의 주가가 8% 이상 폭락하며 기술주 섹터의 변동성을 키웠습니다.",
+        "마이크론의 폭락은 HBM(고대역폭 메모리) 생산 수율 개선 속도가 시장의 과도한 기대치에 미치지 못할 수 있다는 우려와, 스마트폰 및 PC 제조사들의 2분기 범용 D램 재고 조정 루머가 복합적으로 유도했습니다.",
+        "그러나 고성능 AI 서버용 HBM 및 기업용 고용량 SSD 수요라는 장기 펀더멘털의 훼손 징후는 나타나지 않아 차익 실현 빌미로 작용한 일시 수급 불안으로 보입니다."
+      ],
+      "implications": [
+        "HBM 시장 지배력과 수율 검증이 완료된 선두 메모리 기업(SK하이닉스, 삼성전자)의 밸류에이션 추이를 면밀히 비교하여 과도한 동반 급락 시점을 분할 매수 기회로 활용할 가치가 있습니다.",
+        "반도체 단기 변동성 확대를 감안하여 빅테크 포트폴리오 내에서 소프트웨어 플랫폼(마이크로소프트, 구글 등) B2B 수익 구조를 지닌 다변화된 종목들로 위험을 고르게 분산해야 합니다."
+      ]
+    }
+  },
+  "id_c96lwr": {
+    "id": "id_c96lwr",
+    "title": "\"세계 경제 '스파이크플레이션' 진입...에너지 쇼크·금리 발작\" - v.daum.net",
+    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBYalZLWU15UUtEUi12RG43Vy1aX3lJTHpTd044MmtJRFlCTkp5SUI0dVRrYVVEaVBlM3hreEpDclVXaC1SWmExYXZSQ2U3c3M?oc=5",
+    "description": "\"세계 경제 '스파이크플레이션' 진입...에너지 쇼크·금리 발작\"  v.daum.net",
+    "date": "2026-06-04T19:36:00.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "스파이크플레이션(Spikeflation) 공포 엄습: 에너지 쇼크와 금리 발작이 유발하는 새로운 인플레이션 징후",
+      "summary": [
+        "지정학적 긴장 격화와 기후 변화로 인한 공급망 마비가 겹치며 에너지와 원자재 가격이 일시적으로 급등(스파이크)하고, 이것이 전체 물가를 연속적으로 자극하는 '스파이크플레이션' 국면에 진입했습니다.",
+        "과거의 완만한 인플레이션과 달리 특정 충격에 의해 물가가 발작하듯 급상승한 후 높은 수준에서 장기 고착화되는 구조적 특징을 나타내고 있습니다.",
+        "글로벌 중앙은행들은 고금리를 장기 유지(Higher for Longer)해야 하는 압박에 직면해 있으며, 자본 시장의 금리 변동성 발작과 자산 가격 조정 강도가 빈번해지고 있습니다."
+      ],
+      "implications": [
+        "전통 채권의 인플레이션 방어 한계를 고려할 때, 원자재 가격 상승분을 판가에 전가할 수 있는 독점적 가격 결정력을 지닌 에너지 인프라 및 글로벌 귀금속(금, 은) 현물 지수 비중을 강화해야 합니다.",
+        "고금리 장기화로 리파이낸싱(부채 재조정) 비용이 폭증하는 고부채 중소형 성장주를 배제하고, 무부채 상태에서 막대한 현금성 자산을 보유해 이자 수익을 누리는 메가캡 빅테크 중심으로 방어선을 짜야 합니다."
+      ]
+    }
+  },
+  "id_1wwmspj": {
+    "id": "id_1wwmspj",
+    "title": "8000피 달성-역대 최대 수출 성과… ‘반도체 쏠림’ 양극화 해소 과제로 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE93dGtoMm5GdlIwWkxfVm9DdGRWRWRzb1hqSWZEOHR3LUhWR1BkcTdnLTlfRy1zanBxYmVYSXhteWtEaHRwaTZwelo4Q19pVVkxYi1sWGtUenJPTDFnc1EwRjNfTk9nX215ejdpTWxOUGVjWi13NEYw0gFmQVVfeXFMTnNGbzE5Zy04NWx4MjM4SXVzWEh6MHRXZkJJQTFORUx2MWlzOUtxc3c1NEtVNHFBYlJVZzZ2bXJuNnFXT1ZjVVh5QjJ1VkxHNUVPUEc1blZzbzNMdHhGekVodDFyWEFR?oc=5",
+    "description": "8000피 달성-역대 최대 수출 성과… ‘반도체 쏠림’ 양극화 해소 과제로  동아일보",
+    "date": "2026-06-04T19:30:00.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "수출 8000억 달러 달성의 역설: 역대 최대 성과 뒤에 감춰진 '반도체 독식'과 산업 양극화 경보",
+      "summary": [
+        "대한민국의 연간 수출 성과가 사상 최초로 8000억 달러를 달성하며 역대 최대 실적을 기록했으나, 전체 수출 성장세의 30% 이상을 반도체 단일 섹터가 이끌어 '반도체 쏠림 부작용'이 대두되었습니다.",
+        "반도체 호황에 힘입어 대기업 실적은 대폭 개선되었으나, 화학, 철강, 섬유 등 전통 제조업 분야 중소형 수출사들은 고원자재가와 고환율 직격탄을 맞아 심각한 채산성 악화를 겪고 있습니다.",
+        "이 같은 산업 양극화는 반도체 사이클이 꺾일 경우 국가 거시경제 전체가 흔들릴 수 있는 취약점을 드러내며, 수출 포트폴리오의 비(Non)반도체 부문 다변화가 시급한 과제임을 보여줍니다."
+      ],
+      "implications": [
+        "한국 증시 투자 시 반도체 독점 기업을 제외한 내수 소비재나 전통 굴뚝 제조업의 비중은 극도로 낮추고, 쏠림 부작용에서 안전한 반도체 핵심 서브 밸류체인 장비/소재 강소기업에 투자를 압축해야 합니다.",
+        "대외 무역 의존도가 높고 특정 업종 편중이 심한 한국 자산 시장의 특성을 극복하기 위해 다각화된 글로벌 상장지수펀드(ETF)나 해외 고배당 자산으로 원화 가치 절하 방어선을 확실히 구축하십시오."
+      ]
+    }
+  },
+  "id_12ryjxe": {
+    "id": "id_12ryjxe",
+    "title": "Netflix’s New Movie Strategy: Fewer, Better Films",
+    "link": "https://www.nytimes.com/2026/06/04/business/media/dan-lin-netflix-hollywood.html",
+    "description": "Dan Lin doesn’t fawn over stars or write blank checks. And he still greenlights more movies than anyone.",
+    "date": "2026-06-04T18:36:57.000Z",
+    "sourceId": "nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "aiAnalysis": null
+  },
+  "id_11o20y9": {
+    "id": "id_11o20y9",
+    "title": "‘60 Minutes’ Turmoil: What to Know After Scott Pelley’s Firing",
+    "link": "https://www.nytimes.com/2026/06/04/business/cbs-60-minutes-scott-pelley-bari-weiss.html",
+    "description": "Scott Pelley’s firing is the latest in a string of controversies and staffing shake-ups that have plagued CBS’s news division.",
+    "date": "2026-06-04T18:00:17.000Z",
+    "sourceId": "nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "aiAnalysis": null
+  },
+  "id_mbne7": {
+    "id": "id_mbne7",
+    "title": "Gwynne Shotwell, Elon Musk’s No. 2 at SpaceX, Is the Company’s Steady Hand",
+    "link": "https://www.nytimes.com/2026/06/04/technology/gwynne-shotwell-spacex.html",
+    "description": "Gwynne Shotwell, the president and chief operating officer, is the adult-in-the-room foil to Mr. Musk as SpaceX prepares for a blockbuster initial public offering.",
+    "date": "2026-06-04T17:32:09.000Z",
+    "sourceId": "nyt-tech",
+    "sourceName": "NYT 테크놀로지",
+    "lang": "en",
+    "category": "Tech",
+    "aiAnalysis": null
+  },
+  "id_1xh7ojx": {
+    "id": "id_1xh7ojx",
+    "title": "How LinkedIn Found Its Social Platform Era",
+    "link": "https://www.nytimes.com/2026/06/04/business/linkedin-social-media-influencers.html",
+    "description": "Celebrities and paid influencers have transformed the career-focused platform, which for some users, has become a job unto itself.",
+    "date": "2026-06-04T17:23:05.000Z",
+    "sourceId": "nyt-tech",
+    "sourceName": "NYT 테크놀로지",
+    "lang": "en",
+    "category": "Tech",
+    "aiAnalysis": null
+  },
+  "id_19ugvqn": {
+    "id": "id_19ugvqn",
+    "title": "Supreme Court Finds S.E.C. Can Strip Wrongdoers of Illegal Financial Gains, Even Without Proof of Victim Loss",
+    "link": "https://www.nytimes.com/2026/06/04/us/politics/supreme-court-sec-disgorgement.html",
+    "description": "The justices unanimously sided with the independent financial watchdog, finding that the agency could collect ill-gotten money, even if it could not show victims had suffered financial loss.",
+    "date": "2026-06-04T17:15:13.000Z",
+    "sourceId": "nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "aiAnalysis": null
+  },
+  "id_181kmwv": {
+    "id": "id_181kmwv",
+    "title": "American Farms Rely More Than Ever on the Troubled H-2A Visa Program",
+    "link": "https://www.nytimes.com/2026/06/04/business/economy/farms-h2a-visas-migrant-workers.html",
+    "description": "The Trump administration is allowing in more agricultural guest workers under the H-2A program, but preventing abuses is proving difficult.",
+    "date": "2026-06-04T16:18:56.000Z",
+    "sourceId": "nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "aiAnalysis": null
+  },
+  "id_11am9au": {
+    "id": "id_11am9au",
+    "title": "What Are A.I. Agents Actually Doing?",
+    "link": "https://www.nytimes.com/2026/06/04/technology/ai-agents-arena.html",
+    "description": "A San Francisco start-up called Arena found that people are most likely to use A.I. agents on the job, particularly if they are in the tech industry.",
+    "date": "2026-06-04T16:00:08.000Z",
+    "sourceId": "nyt-tech",
+    "sourceName": "NYT 테크놀로지",
+    "lang": "en",
+    "category": "Tech",
+    "aiAnalysis": {
+      "translatedTitle": "실리콘밸리의 팩트 체크: AI 에이전트는 실제로 현업에서 어떻게 쓰이고 있으며 어떤 부가가치를 내는가",
+      "summary": [
+        "샌프란시스코의 데이터 연구소 '아레나(Arena)'의 현장 조사 결과, AI 에이전트 기술은 단순 장난이나 개인 비서 수준을 넘어 테크 및 소프트웨어 엔지니어링 업계에서 코딩 자동화와 반복 문서 작성을 전담하는 실무 생산성 도구로 빠르게 정착하고 있습니다.",
+        "특히 전체 임직원의 80% 이상이 업무 프로세스 자동화를 위해 AI 에이전트를 실무 파이프라인에 통합했으며, 단순 정보 검색 중심에서 목표를 설정하면 알아서 최종 결과물까지 코딩·작성해 내는 자율 에이전트 활용 빈도가 폭증하고 있습니다.",
+        "이는 기업들이 대규모 인력 채용을 늘리는 대신, 고도로 숙련된 관리자 1명이 수십 명의 역할을 하는 가상 AI 직원 군단을 부려 아웃풋을 극대화하는 '극단의 비용 절감 경영' 패러다임을 확산시키고 있습니다."
+      ],
+      "implications": [
+        "직무당 노동 비용이 비싼 소프트웨어 개발, 디지털 마케팅, 고객 지원 솔루션 분야에서 AI 에이전트 자동화 SaaS를 성공적으로 안착시킨 기업들의 영업이익률 대폭 개선세를 포착해야 합니다.",
+        "단순 코딩이나 주입식 사무 업무 대행 시장의 둔화에 주목하여, AI가 대체할 수 없는 고도의 물리적 비즈니스 현장 관리 및 복합적인 의사결정력을 제공하는 전통 프리미엄 하이엔드 서비스 기업들의 매력을 재조정하십시오. "
+      ]
+    }
+  },
+  "id_yvnonr": {
+    "id": "id_yvnonr",
+    "title": "‘화폐’ 소생술 안통했다, 충격의 환율 1540원 - 중앙일보",
+    "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBfTlJKMmZqWGRyRVpVMFhtREl1ZmsxUHJFdXBLQ2hPamlYdzNPdUN5UDNzcVBiWGZXN1p4anZReTdRRkxWNmdNLUJJOW1lclBLZTFkUUdB?oc=5",
+    "description": "‘화폐’ 소생술 안통했다, 충격의 환율 1540원  중앙일보",
+    "date": "2026-06-04T15:02:00.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "외환시장 패닉과 환율 1540원 돌파: 통화당국의 방어선 붕괴 및 금융위기 이후 최악의 원화 약세 국면",
+      "summary": [
+        "한국 은행과 통화 당국의 대규모 미세 조정 및 구두 개입 조치에도 불구하고, 원·달러 환율이 1540원 선을 돌파하며 2008년 글로벌 금융위기 당시 극심했던 원화 약세 수준에 도달했습니다.",
+        "중동 전쟁 장기화에 따른 원자재 및 에너지 비용 불안, 미국의 고금리 동결 기조 지속, 그리고 외국인 투자자들의 한국 증시 대규모 순매도(7조 원 이상)가 복합적으로 원화 매도세를 부추겼습니다.",
+        "외환 시장 전문가들은 환율의 단기 지지선이 무너지면서 향후 심리적 저항선인 1600원대 진입 경고등이 켜진 것으로 판단하고 있습니다."
+      ],
+      "implications": [
+        "급격한 원화 구매력 훼손에 대응하여 포트폴리오 자산의 최소 40% 이상을 미국 기술주, 달러 예금, 달러 표시 채권 등 안전 달러화 자산으로 신속히 포지셔닝해야 합니다.",
+        "고환율 장기화로 인해 수입 비용 부담이 급등하는 내수 유통, 항공, 원자재 수입 제조업 비중을 전격 축소하고, 영업이익 환차익 수혜를 고스란히 입는 고부가가치 수출 강소기업으로 피신하십시오."
+      ]
+    }
+  },
+  "id_1gqzx3w": {
+    "id": "id_1gqzx3w",
+    "title": "원·달러 환율 1540원 돌파…금융위기 이후 최고 - 조선일보",
+    "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBQeTVVUzdzcWpVcUJNRzIzWHVMQUlNeXJqc1NLdEJQcW9DYTlkQlVBY0YzN24tZktrcjA5dE84WDA5b01IaFhrendtaDh1VGxyak5KX19EcEpWWm5EZEd2ckJYbUplTDU4MEow0gFuQVVfeXFMT1B3a1RGM19EUWRVaXRXUE5oZ25LTWp4ckx3RC00N3diUW14bGFRbEd5QVMyM1o3ZG1LWnVpZUZDWWdzNzJSMkE0dl8xT3c2czctYmpkTTh3MnZBQzNyV3dMVi1fUGlrbEZkSVAwcUE?oc=5",
+    "description": "원·달러 환율 1540원 돌파…금융위기 이후 최고  조선일보",
+    "date": "2026-06-04T15:00:00.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_n5jjl4": {
+    "id": "id_n5jjl4",
+    "title": "SpaceX IPO to Be Largest Ever at $135 Share Price",
+    "link": "https://www.nytimes.com/2026/06/03/technology/spacex-ipo-pricing.html",
+    "description": "The $135 share price means Elon Musk’s rocket maker is poised to exceed the 2019 initial public offering of Saudi Aramco in both valuation and money raised.",
+    "date": "2026-06-04T14:56:48.000Z",
+    "sourceId": "nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "aiAnalysis": {
+      "translatedTitle": "우주 산업의 역사적 상장: 스페이스X(SpaceX), 주당 135달러 공모가로 사우디 아람코 넘어서는 사상 최대 규모 IPO 시동",
+      "summary": [
+        "일론 머스크의 우주 탐사 기업 스페이스X가 주당 135달러의 공모가로 기업공개(IPO)를 본격 준비하고 있으며, 이는 기업가치와 조달 자금 모두에서 지난 2019년 사우디 아람코의 상장 기록을 넘어설 것으로 평가됩니다.",
+        "스페이스X의 궤도 발사 서비스 점유율 독점과 전 세계 위성 인터넷망인 스타링크(Starlink)의 캐시카우화가 성공적으로 안착하면서 시장의 투자 수요가 폭발적으로 몰리고 있습니다.",
+        "이번 상장은 전통 우주 항공 분야를 넘어 민간 우주 인터넷, 지구 궤도 물류, 그리고 차세대 심우주 탐사 인프라에 이르기까지 자본 시장의 유동성을 대거 빨아들이는 블랙홀이 될 전망입니다."
+      ],
+      "implications": [
+        "민간 우주 경제 생태계의 팽창이 가속화됨에 따라 스페이스X 밸류체인 직속 수혜를 입는 글로벌 안테나 소재, 위성 통신 부품 및 발사대 특수 합금 제조 상장 기업군의 장기적 성장에 주목하십시오.",
+        "글로벌 유동성이 스페이스X로 집중되면서 밸류에이션 부담이 있고 펀더멘털이 약한 군소 우주 테크 스타트업들은 자금 조달에 난항을 겪을 수 있으므로 독점력을 쥔 메이저 기업 위주로 투자 대상을 좁혀야 합니다."
+      ]
+    }
+  },
+  "id_1lpfap2": {
+    "id": "id_1lpfap2",
+    "title": "Can These ChatGPT Ads Make You Love A.I.?",
+    "link": "https://www.nytimes.com/2026/06/04/style/chatgpt-advertising-campaign-artificial-intelligence.html",
+    "description": "A campaign for ChatGPT relies on heartwarming retro vibes to sell a product that has become a source of concern for most Americans.",
+    "date": "2026-06-04T14:50:34.000Z",
+    "sourceId": "nyt-tech",
+    "sourceName": "NYT 테크놀로지",
+    "lang": "en",
+    "category": "Tech",
+    "aiAnalysis": null
+  },
+  "id_1oeib3q": {
+    "id": "id_1oeib3q",
+    "title": "The U.S.-Qatar Domination of Gas Left the World Dangerously Exposed",
+    "link": "https://www.nytimes.com/2026/06/04/business/gas-supply-usa-qatar.html",
+    "description": "Before the war, the global market for liquefied natural gas was increasingly commanded by just two countries, one of which has now been hobbled.",
+    "date": "2026-06-04T14:45:39.000Z",
+    "sourceId": "nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "aiAnalysis": null
+  },
+  "id_17z7pgv": {
+    "id": "id_17z7pgv",
+    "title": "Pace Gallery Cuts 50 Artists and 50 Staff Amid Art Market Challenges",
+    "link": "https://www.nytimes.com/2026/06/03/arts/design/pace-gallery-artist-cuts.html",
+    "description": "A challenging art market is forcing even an established player to contract.",
+    "date": "2026-06-04T14:33:38.000Z",
+    "sourceId": "nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "aiAnalysis": null
+  },
+  "id_icjvts": {
+    "id": "id_icjvts",
+    "title": "Who’s Excited for SpaceX’s I.P.O.? Space Nerds.",
+    "link": "https://www.nytimes.com/2026/06/04/technology/space-nerds-spacex-ipo.html",
+    "description": "Few are as delighted by the pending market debut as the vibrant community of space enthusiasts who want to push discovery of the final frontier.",
+    "date": "2026-06-04T14:08:43.000Z",
+    "sourceId": "nyt-tech",
+    "sourceName": "NYT 테크놀로지",
+    "lang": "en",
+    "category": "Tech",
+    "aiAnalysis": null
+  },
+  "id_ppgm8x": {
+    "id": "id_ppgm8x",
+    "title": "[경제]1,530원 뚫고 출발한 환율...야간거래 1,540원 돌파 - YTN",
+    "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1sdGNvMl9VTzdWODh6TUpjOVlIU1pRQkxEdjRlbXktMU1ESFIxTnVFNmNpdWtGTEF4a1dlUnFEWHJxWEl1M0M5NktHTUljU0stQThVU3IwNEtiREcyYUxRSEF0d0ZvMVo5bzNhcEl1RQ?oc=5",
+    "description": "[경제]1,530원 뚫고 출발한 환율...야간거래 1,540원 돌파  YTN",
+    "date": "2026-06-04T13:50:00.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_1vr8get": {
+    "id": "id_1vr8get",
+    "title": "‘Teachers Are Going to Hate It’: How Social Media Apps Hooked Teens at School",
+    "link": "https://www.nytimes.com/2026/06/04/us/social-media-schools.html",
+    "description": "Internal documents show how tech giants grabbed children’s attention throughout the day, a strategy that schools say has undermined education.",
+    "date": "2026-06-04T13:34:54.000Z",
+    "sourceId": "nyt-tech",
+    "sourceName": "NYT 테크놀로지",
+    "lang": "en",
+    "category": "Tech",
+    "aiAnalysis": null
+  },
+  "id_xfnsow": {
+    "id": "id_xfnsow",
+    "title": "Inside SpaceX’s Rockets-to-Riches I.P.O. Plan",
+    "link": "https://www.nytimes.com/2026/06/04/business/dealbook/spacex-ipo-record.html",
+    "description": "The latest prospectus by Elon Musk’s company underscores its confidence in its planned market debut. But skeptics see reasons for concern.",
+    "date": "2026-06-04T12:26:58.000Z",
+    "sourceId": "nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "aiAnalysis": null
+  },
+  "id_mzjg2f": {
+    "id": "id_mzjg2f",
+    "title": "외환당국 경고에도 1540원 뚫은 환율…1600원 경고등 켜졌다 - v.daum.net",
+    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFA4bGRyeW1zemVBcGhYdURNSWRYWGFHVm9sM3hBdWpqQXFLQ1JOdlFsa3NQNDlHRU5IcU5sX3JVZlF0SVpFNlJEYkhvSGZQa2s?oc=5",
+    "description": "외환당국 경고에도 1540원 뚫은 환율…1600원 경고등 켜졌다  v.daum.net",
+    "date": "2026-06-04T09:37:15.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_ua1w77": {
+    "id": "id_ua1w77",
+    "title": "환율, 야간거래서 1,540원 넘어…금융위기 이후 최고(종합2보) - 연합뉴스",
+    "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1RSUxfbDRXSV9kWVhOQ1RiZERnZU9TLW9lN2FTTlIzZFNwcW4wd2hna3dUZnJBMWc0Tjh1NE83bTJPbTh1NXdBeFZadlVYM0pIaDM4cllSekhhR0FpZG8zcNIBYEFVX3lxTE1RSUxfbDRXSV9kWVhOQ1RiZERnZU9TLW9lN2FTTlIzZFNwcW4wd2hna3dUZnJBMWc0Tjh1NE83bTJPbTh1NXdBeFZadlVYM0pIaDM4cllSekhhR0FpZG8zcA?oc=5",
+    "description": "환율, 야간거래서 1,540원 넘어…금융위기 이후 최고(종합2보)  연합뉴스",
+    "date": "2026-06-04T09:22:20.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_6iby8q": {
+    "id": "id_6iby8q",
+    "title": "The Do’s and Don’ts of Buying Used Tech Gadgets",
+    "link": "https://www.nytimes.com/2026/06/04/technology/personaltech/used-tech-refurbished.html",
+    "description": "With a shortage of some components driving up costs of consumer electronics, refurbished devices are an attractive alternative to buying new.",
+    "date": "2026-06-04T09:03:49.000Z",
+    "sourceId": "nyt-tech",
+    "sourceName": "NYT 테크놀로지",
+    "lang": "en",
+    "category": "Tech",
+    "aiAnalysis": null
+  },
+  "id_1ynyyq7": {
+    "id": "id_1ynyyq7",
+    "title": "The Small-Business Owners Managing Whole Armies of A.I. Employees",
+    "link": "https://www.nytimes.com/2026/06/04/magazine/ai-agents-openclaw-small-business.html",
+    "description": "When you turn A.I. agents loose on your finances, email and customers, what could possibly go wrong?",
+    "date": "2026-06-04T09:00:51.000Z",
+    "sourceId": "nyt-tech",
+    "sourceName": "NYT 테크놀로지",
+    "lang": "en",
+    "category": "Tech",
+    "aiAnalysis": null
+  },
+  "id_altnj6": {
+    "id": "id_altnj6",
+    "title": "외인 7조 순매도에 환율 1,540원 넘어…코스피 하락·금리 급등 - 연합뉴스",
+    "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE93WU5OcHlhWGgwQUxCS3ozVk9ON0R3ZjFWV1pFeXZEZXE3Wi1hYWFXQ3FfSWNTb2l5cU1wOEdMVXI3SWpwaU5kWFlrM2hhZ09vS2p0T0lFU2h6aGJObU9fX9IBYEFVX3lxTE93WU5OcHlhWGgwQUxCS3ozVk9ON0R3ZjFWV1pFeXZEZXE3Wi1hYWFXQ3FfSWNTb2l5cU1wOEdMVXI3SWpwaU5kWFlrM2hhZ09vS2p0T0lFU2h6aGJObU9fXw?oc=5",
+    "description": "외인 7조 순매도에 환율 1,540원 넘어…코스피 하락·금리 급등  연합뉴스",
+    "date": "2026-06-04T08:56:19.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_161o40t": {
+    "id": "id_161o40t",
+    "title": "코스피 8,600선 후퇴...환율 장중 1,530원 넘어 - YTN",
+    "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBsV2RaS1pkeV9OVHhON2dyV2tDTmFRRkV1ZmlhVzVYX0ZEcmd4Q0k5UUhNQmM5eF9INVhOVzdIdUVNeGVmQW5keEVhMnRobWdfNVctSVRoT0NPYWZkd2c?oc=5",
+    "description": "코스피 8,600선 후퇴...환율 장중 1,530원 넘어  YTN",
+    "date": "2026-06-04T07:44:00.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_980e8v": {
+    "id": "id_980e8v",
+    "title": "환율, 두 달여 만에 1,530원대…외국인 매도 속 고공행진(종합) - 연합뉴스",
+    "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFB0M1BKb24wUmNYNmxvNk84LWM4ekVtTHJVdnZjdW9JTTBZdkFDTnBfejJRT1ZmRDhzaTl3SEVFbGhvY1ducllyYnpCMmpCamt2VW9LNHl1NE5TTkdDUzFtbtIBYEFVX3lxTFB0M1BKb24wUmNYNmxvNk84LWM4ekVtTHJVdnZjdW9JTTBZdkFDTnBfejJRT1ZmRDhzaTl3SEVFbGhvY1ducllyYnpCMmpCamt2VW9LNHl1NE5TTkdDUzFtbg?oc=5",
+    "description": "환율, 두 달여 만에 1,530원대…외국인 매도 속 고공행진(종합)  연합뉴스",
+    "date": "2026-06-04T07:38:39.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_1wtgigp": {
+    "id": "id_1wtgigp",
+    "title": "치솟는 환율 - 연합뉴스",
+    "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBwOEljWHA3WHhVUWhjaHJYdjlzRWtNY1F2WXFiQWxsOXZMekxBQ1BoZ3IzQklhLUlJdEYyTmk1bHpLckptLV9Ib1R4VGFXY0FObXBkQ0ZyRUJPem9PcFFDddIBYEFVX3lxTFBwOEljWHA3WHhVUWhjaHJYdjlzRWtNY1F2WXFiQWxsOXZMekxBQ1BoZ3IzQklhLUlJdEYyTmk1bHpLckptLV9Ib1R4VGFXY0FObXBkQ0ZyRUJPem9PcFFDdQ?oc=5",
+    "description": "치솟는 환율  연합뉴스",
+    "date": "2026-06-04T07:09:19.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_1o6x1bt": {
+    "id": "id_1o6x1bt",
+    "title": "[그래픽] 원/달러 환율 추이 - 연합뉴스",
+    "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5TcGx6aG5xMGdNOWlNanE2RlRENW9JVmVpMmlOcy1Ra2hGQkR0dlJRbXlraUtUY3VaV29ZMWF2cElqNE44NUVtQjBaRDBtVFkyZndpcWc4NlA2NGJSWUpMcdIBYEFVX3lxTE5TcGx6aG5xMGdNOWlNanE2RlRENW9JVmVpMmlOcy1Ra2hGQkR0dlJRbXlraUtUY3VaV29ZMWF2cElqNE44NUVtQjBaRDBtVFkyZndpcWc4NlA2NGJSWUpMcQ?oc=5",
+    "description": "[그래픽] 원/달러 환율 추이  연합뉴스",
+    "date": "2026-06-04T07:01:52.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_ttkgi6": {
+    "id": "id_ttkgi6",
+    "title": "원달러 환율 13.3원 오른 1529.7원 마감... 튀르키예 리라보다 더 약세 - 조선일보",
+    "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOTnFTeGo4Ym9uanZIWjAydXl4Y3VTNmdCVDlQNF9OcE9WWlJmSm5DTlFOZGhCeGt2MHBVQml1blBMNVhDTmRyZkhZT0RjSGNnaU1FT3A1N3o2dUQyS1pWa21hZHZhV2IzYndJbXoxR3dqeDkwbHNRMGNPSGh0Q05sM2hWMDhxaTRFSUxfSHhR?oc=5",
+    "description": "원달러 환율 13.3원 오른 1529.7원 마감... 튀르키예 리라보다 더 약세  조선일보",
+    "date": "2026-06-04T06:41:08.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_1ox0m1h": {
+    "id": "id_1ox0m1h",
+    "title": "Flesh-Eating Pest Confirmed in U.S. Cattle",
+    "link": "https://www.nytimes.com/2026/06/03/business/new-world-screwworm-texas.html",
+    "description": "The New World screwworm was found in a calf in South Texas, the Agriculture Department said, the first case in the country since the 1960s.",
+    "date": "2026-06-04T02:14:23.000Z",
+    "sourceId": "nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "aiAnalysis": null
+  },
+  "id_pq56rw": {
+    "id": "id_pq56rw",
+    "title": "European Union Outlines Plan to Reduce Dependence on American Tech",
+    "link": "https://www.nytimes.com/2026/06/03/technology/european-union-tech-sovereignty.html",
+    "description": "The 27-nation European Union outlined how it hopes to expand the region’s data centers, semiconductors and cloud computing capabilities.",
+    "date": "2026-06-03T18:00:18.000Z",
+    "sourceId": "nyt-tech",
+    "sourceName": "NYT 테크놀로지",
+    "lang": "en",
+    "category": "Tech",
+    "aiAnalysis": null
+  },
+  "id_3djx2a": {
+    "id": "id_3djx2a",
+    "title": "원달러 환율, 야간거래서 1530원 돌파…금융위기 이후 최고 수준 - 중앙일보",
+    "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9Gc0lGRDlxVGY2ZlBCaUp0TUV5SUFiSl9wY3dGaC1uYlNDQ2NCYWdCaHdJeURPUlRnV0dIWjVyTGgzcHQxa0FWUjBtelNtOHVjNDl5RmlR?oc=5",
+    "description": "원달러 환율, 야간거래서 1530원 돌파…금융위기 이후 최고 수준  중앙일보",
+    "date": "2026-06-03T11:24:44.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_1rmcxoc": {
+    "id": "id_1rmcxoc",
+    "title": "Scientists Find Way to Supercharge Dangerous Computer ‘Worms’ With A.I.",
+    "link": "https://www.nytimes.com/2026/06/02/technology/scientists-find-way-to-supercharge-dangerous-computer-worms-with-ai.html",
+    "description": "Researchers at the University of Toronto showed how hackers could use artificial intelligence to create a program that could target any known flaw in the world’s computers.",
+    "date": "2026-06-03T00:37:55.000Z",
+    "sourceId": "nyt-tech",
+    "sourceName": "NYT 테크놀로지",
+    "lang": "en",
+    "category": "Tech",
+    "aiAnalysis": null
+  },
+  "id_zt4ss2": {
+    "id": "id_zt4ss2",
+    "title": "US corn planting seen down, soy acres up as Iran war inflates costs, analysts say - Reuters",
+    "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPbl9mYkt1ajlCa0l4S0stU2JYRlVUc3NJWERiTGtnRDFEMlRFMmtQb2RSMk9LZ2FfWUE5a1ZQNzZFRzFocExxWjdBSmlwanVac1JOQlRkR0t5ZlQzNE1XLWpwcXdPLWgxby1LTWo3R3BZRUFmWFdYZ1NNa3l0dlV6Wm1IUlJjelk1dXRyOC1EUF96SjBWemItQ2pJaUNvWkg1ZGQ0dEt1Ri1wTXF5V2Z2SU5hOVNVRXUyNE9LM25R?oc=5",
+    "description": "US corn planting seen down, soy acres up as Iran war inflates costs, analysts say  Reuters",
+    "date": "2026-03-27T07:00:00.000Z",
+    "sourceId": "global-invest",
+    "sourceName": "글로벌 투자 뉴스 (Reuters/Bloomberg/CNBC)",
+    "lang": "en",
+    "category": "Markets",
+    "aiAnalysis": null
+  },
+  "id_1w0mrgf": {
+    "id": "id_1w0mrgf",
+    "title": "K-shaped economy puts pressure on women, as lower pay and higher costs reduce spending - CNBC",
+    "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9fbHBTSGcwRkdPcF80ZzR0NmRoX0I4dkYwdW5zSFR3UlEwZF94Z25lWVRwN3NHa01tSDhuS25YM1ZMTmtzS3F1UnlmMHhEV0FyclZPVF9HMjlhY1A1ak9oaVRESnhUS1pac0Y40gFwQVVfeXFMUHBNSkM0ZWpzeDgydkJEbWVSV3JxdzZybGZ5amxIbTlWb2dUTmd5Mjh4SDhLd3h6dFNRcEVTOHJSemVTTThXWWEzYUFxVjVJTFFRMk81aDMxMDJfeVFzc2JiRGRPaEFWeWh3TjJmRnJKRQ?oc=5",
+    "description": "K-shaped economy puts pressure on women, as lower pay and higher costs reduce spending  CNBC",
+    "date": "2026-03-09T07:00:00.000Z",
+    "sourceId": "global-invest",
+    "sourceName": "글로벌 투자 뉴스 (Reuters/Bloomberg/CNBC)",
+    "lang": "en",
+    "category": "Markets",
+    "aiAnalysis": null
+  },
+  "id_nyze13": {
+    "id": "id_nyze13",
+    "title": "The Iran war has put the brakes on the next Bank of England rate cut - CNBC",
+    "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQX05PVGRlejhVcG1jTVZnUlQwdU9rZm9DelZpVW9scVRQNXgzWjdDSEZKZTZjWVR3R0REaG53RTZLYVotN3UzNExYTHl3VkF6SEFQeWhJN1l4ZlNaTmpIRkloUExtdGd5WnJkVHkyTnZBQkNORFo4LXVjV2Q0T2lpb3RTcVVWVGlSczE5eERyWHdaLXUxcFo1Uk9fRXo2Q2NMd0M4Z1p4WFBMNDjSAbABQVVfeXFMUHV4ZXA0SmMwN3liNF9uc29WRW5UWHlsRUpCbkV4OEdxNmNnYTYyclpTNHAtMFcweEZTY0F6NVVIQ3U3eG5Bdk05U3RKOU9sbnhZQTB1XzlGRDVHVEJnaXNTNlhBR3NscVJidEo3TVVIaEkzUzhPYmxvclY0dXl6Mm1tMHJLZmhPYy1uWHV3bnNsbExvY296NU9kTUVoem9Td0NnTHViS2xUaHNubnA3N3k?oc=5",
+    "description": "The Iran war has put the brakes on the next Bank of England rate cut  CNBC",
+    "date": "2026-03-09T07:00:00.000Z",
+    "sourceId": "global-invest",
+    "sourceName": "글로벌 투자 뉴스 (Reuters/Bloomberg/CNBC)",
+    "lang": "en",
+    "category": "Markets",
+    "aiAnalysis": null
+  },
+  "id_o98lvp": {
+    "id": "id_o98lvp",
+    "title": "Sustainable Debt Outlook 2026: Higher issuance with changing compositions - ING THINK economic and financial analysis | ING THINK",
+    "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNY1FNS1psSXUzdE5QZzNWc0JpUDJZT3Z4WXVLUUx1MkpmUnlvSDl3WnJjbkFGalc0MEVPUUVxOFRuVFRYS0lUeWEwOUo2OHV2Qk1ZbEFiZXZJRy1Rc3NOQVdlTGI5eTI3LVJzMkdvTGQtS01vRjVMQVNsc2wybmdFbHlkc1ktbVRJeVNrT0FXWXN2cVFwei1GQ0t5ckdtQnNzOFRoUm53MA?oc=5",
+    "description": "Sustainable Debt Outlook 2026: Higher issuance with changing compositions  ING THINK economic and financial analysis | ING THINK",
+    "date": "2026-02-05T08:00:00.000Z",
+    "sourceId": "global-invest",
+    "sourceName": "글로벌 투자 뉴스 (Reuters/Bloomberg/CNBC)",
+    "lang": "en",
+    "category": "Markets",
+    "aiAnalysis": null
+  },
+  "id_1iydkxi": {
+    "id": "id_1iydkxi",
+    "title": "Credit Futures: The Risk-Returns of Investment-Grade and High-Yield Bonds - CME Group",
+    "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOOHN2bXh1MUlDMGEzWlhxQWRUS1NGV3JNZlgwemdYQy1NSEZqTEhqNHV2NVFkVjR6OHhNdnpKOWRQOWhfZzgtQUpEUlJFcHlSR2dZVkJaVzM1M3pHeFNNTEV0UVJWTFhOSUNIRkZreG5FUEc1NXpIZTZXRnRxUnJ5UUdHNXZ2Um9yTVNhRWV0bnM2NENtR01BenlEdUlXWTQzNEhDdXFnWkdhSmlielNIQ2hOai1TcmEybWRtZUg1aHFmOGM3LWoxNVBHaVBfaDQ?oc=5",
+    "description": "Credit Futures: The Risk-Returns of Investment-Grade and High-Yield Bonds  CME Group",
+    "date": "2025-04-29T07:00:00.000Z",
+    "sourceId": "global-invest",
+    "sourceName": "글로벌 투자 뉴스 (Reuters/Bloomberg/CNBC)",
+    "lang": "en",
+    "category": "Markets",
+    "aiAnalysis": null
+  },
+  "id_6qp0x9": {
+    "id": "id_6qp0x9",
+    "title": "Explainer: What does Red Sea disruption mean for Europe's economy? - Reuters",
+    "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOb0lhcmtjc2lHbDNXTmgyY1N5ZXBoM3FxbUVzOXJuektjN1AxU3lkRGdfNElVNU1xZ0hsYWo4aUFvWGpUVE9Zc1Q1NjB2Z2lnMEhvUkxlVXZadjh1SFlIazRMQUUwRmMxMjYzOGdULXo1clBkalktQTM2YkQ4LU84ZGd4RW1fZFJER19VdUtMWHQxRU1TWnFFa1JZaTVWb2wtd2c?oc=5",
+    "description": "Explainer: What does Red Sea disruption mean for Europe's economy?  Reuters",
+    "date": "2024-01-23T08:00:00.000Z",
+    "sourceId": "global-invest",
+    "sourceName": "글로벌 투자 뉴스 (Reuters/Bloomberg/CNBC)",
+    "lang": "en",
+    "category": "Markets",
+    "aiAnalysis": null
   }
 }
