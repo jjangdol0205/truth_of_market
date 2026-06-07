@@ -169,9 +169,19 @@ function generateUniqueId(str) {
 async function fetchAllNews() {
   const allArticles = [];
 
+  // 최근 5일간의 누락 뉴스를 포함시키기 위해 구글 뉴스 검색 조건에 after 날짜 동적 적용
+  const fiveDaysAgo = new Date();
+  fiveDaysAgo.setDate(fiveDaysAgo.getDate() - 5);
+  const afterDateStr = `${fiveDaysAgo.getFullYear()}-${String(fiveDaysAgo.getMonth() + 1).padStart(2, '0')}-${String(fiveDaysAgo.getDate()).padStart(2, '0')}`;
+
   const fetchPromises = NEWS_SOURCES.map(async (source) => {
     try {
-      const feed = await parser.parseURL(source.url);
+      let targetUrl = source.url;
+      if (targetUrl.includes('news.google.com/rss/search')) {
+        // q= 뒤에 after:YYYY-MM-DD+ 를 붙여 최근 5일 기사를 확실히 긁어오도록 필터링
+        targetUrl = targetUrl.replace('q=', `q=after:${afterDateStr}+`);
+      }
+      const feed = await parser.parseURL(targetUrl);
       // [대폭 확대] 각 RSS 소스당 수집 범위를 10건에서 40건으로 대폭 확대하여 최신 뉴스 누락 원천 방지
       const items = feed.items.slice(0, 40).map(item => {
         // 날짜 파싱
