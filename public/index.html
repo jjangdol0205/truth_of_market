@@ -464,7 +464,22 @@
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('/sw.js')
-          .then((reg) => console.log('🤖 [PWA] 서비스 워커 등록 완료:', reg.scope))
+          .then((reg) => {
+            console.log('🤖 [PWA] 서비스 워커 등록 완료:', reg.scope);
+            
+            // 새 서비스 워커가 발견되어 업데이트 완료 시 페이지 자동 새로고침
+            reg.onupdatefound = () => {
+              const installingWorker = reg.installing;
+              installingWorker.onstatechange = () => {
+                if (installingWorker.state === 'installed') {
+                  if (navigator.serviceWorker.controller) {
+                    console.log('🤖 [PWA] 새로운 버전이 배포되어 페이지를 새로고침합니다.');
+                    window.location.reload();
+                  }
+                }
+              };
+            };
+          })
           .catch((err) => console.warn('🤖 [PWA] 서비스 워커 등록 실패:', err));
       });
     }
