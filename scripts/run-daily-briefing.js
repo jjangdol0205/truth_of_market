@@ -33,12 +33,17 @@ const BRIEFINGS_DIR = path.join(ROOT_DIR, 'briefings');
 
 // 뉴스 소스 (server.js와 완전히 100% 동일한 구성)
 const NEWS_SOURCES = [
-  { id: 'chosun', name: '조선일보 경제', lang: 'ko', category: 'Macro', url: 'https://news.google.com/rss/search?q=source:%22%EC%A1%B0%EC%84%A0%EC%9D%BC%EB%B3%B4%22+economy&hl=ko&gl=KR&ceid=KR:ko' },
-  { id: 'hankyung-eco', name: '한국경제 경제', lang: 'ko', category: 'Macro', url: 'https://news.google.com/rss/search?q=source:%22%ED%95%9C%EA%B5%AD%EA%B2%BD%EC%A0%9C%22+economy&hl=ko&gl=KR&ceid=KR:ko' },
-  { id: 'hankyung-fin', name: '한국경제 증권', lang: 'ko', category: 'Macro', url: 'https://news.google.com/rss/search?q=source:%22%ED%95%9C%EA%B5%AD%EA%B2%BD%EC%A0%9C%22+finance&hl=ko&gl=KR&ceid=KR:ko' },
-  { id: 'maekyung', name: '매일경제 경제', lang: 'ko', category: 'Macro', url: 'https://news.google.com/rss/search?q=source:%22%EB%A7%A4%EC%9D%BC%EA%B2%BD%EC%A0%9C%22+economy&hl=ko&gl=KR&ceid=KR:ko' },
-  { id: 'donga', name: '동아일보 경제', lang: 'ko', category: 'Macro', url: 'https://news.google.com/rss/search?q=source:%22%EB%8F%99%EC%95%8A%EC%9D%BC%EB%B3%B4%22+economy&hl=ko&gl=KR&ceid=KR:ko' },
+  // 국내 언론사 (구글 뉴스를 통한 우회 수집: 해외 서버 IP 차단 원천 방지)
+  { id: 'chosun', name: '조선일보 경제', lang: 'ko', category: 'Macro', url: 'https://news.google.com/rss/search?q=site:chosun.com+economy&hl=ko&gl=KR&ceid=KR:ko' },
+  { id: 'hankyung-eco', name: '한국경제 경제', lang: 'ko', category: 'Macro', url: 'https://news.google.com/rss/search?q=site:hankyung.com+economy&hl=ko&gl=KR&ceid=KR:ko' },
+  { id: 'hankyung-fin', name: '한국경제 증권', lang: 'ko', category: 'Macro', url: 'https://news.google.com/rss/search?q=site:hankyung.com+finance&hl=ko&gl=KR&ceid=KR:ko' },
+  { id: 'maekyung', name: '매일경제 경제', lang: 'ko', category: 'Macro', url: 'https://news.google.com/rss/search?q=site:mk.co.kr+economy&hl=ko&gl=KR&ceid=KR:ko' },
+  { id: 'donga', name: '동아일보 경제', lang: 'ko', category: 'Macro', url: 'https://news.google.com/rss/search?q=site:donga.com+economy&hl=ko&gl=KR&ceid=KR:ko' },
+  
+  // 종합 금융/투자 트렌드 (풍부한 최신 뉴스 공급용)
   { id: 'korean-markets-trend', name: '국내 금융/투자 종합 트렌드', lang: 'ko', category: 'Macro', url: 'https://news.google.com/rss/search?q=%EC%A5%9D%EC%8B%9D+OR+%EA%B8%88%EB%A6%AC+OR+%EB%B0%98%EB%8F%84%EC%B2%B4+OR+%EA%B1%B0%EC%8B%9C%EA%B2%BD%EC%A0%9C+OR+%ED%99%98%EC%9C%A8&hl=ko&gl=KR&ceid=KR:ko' },
+
+  // 국외 언론사 (구글 뉴스를 통한 경제/투자 분야 타겟팅)
   { 
     id: 'global-invest', 
     name: '글로벌 투자 뉴스 (Reuters/Bloomberg/CNBC)', 
@@ -297,56 +302,35 @@ async function run() {
   // 3. 신규 뉴스 아카이브 기입 및 분석 대상 선별
   console.log(`📊 수집 완료: 총 ${latestArticles.length}개의 최신 뉴스.`);
   
-  // 국내(ko)와 해외(en) 기사로 분리
-  const koreanNews = latestArticles.filter(a => a.lang === 'ko');
-  const englishNews = latestArticles.filter(a => a.lang === 'en');
+  // 국내(ko)와 해외(en) 기사 중 이미 AI 분석이 완료된 최신 기사를 선별 (각 3건씩, 총 6건)
+  // 실시간 API를 전혀 호출하지 않으므로 비용이 $0입니다.
+  const analyzedArticles = latestArticles.filter(art => {
+    const matched = newsArchive[art.id] || aiCache[art.id];
+    return matched && matched.aiAnalysis;
+  });
 
-  // 당일 요약할 기사 선정 (국내 3건 + 글로벌 3건 = 총 6건 최적의 밸런스 설정)
-  // 단, 이미 요약 완료된 캐시가 있다면 최대한 활용하고, 신규 기사는 최신 순으로 추가 분석
+  const koreanNews = analyzedArticles.filter(a => a.lang === 'ko');
+  const englishNews = analyzedArticles.filter(a => a.lang === 'en');
+
   const selectedToAnalyze = [];
+  
+  // 최신 분석 완료된 국내 뉴스 최대 3건 선별
+  const finalKoNews = koreanNews.slice(0, 3);
+  selectedToAnalyze.push(...finalKoNews.map(a => {
+    const matched = newsArchive[a.id] || aiCache[a.id];
+    return matched;
+  }));
 
-  // 우선적으로 분석되지 않은 최신 국내 뉴스 3건 선별
-  let koCount = 0;
-  for (const art of koreanNews) {
-    if (koCount >= 3) break;
-    // 아카이브에 있고 이미 분석된 적이 있다면 카운트만 채우고 추가
-    const isAnalyzed = (newsArchive[art.id] && newsArchive[art.id].aiAnalysis) || (aiCache[art.id] && aiCache[art.id].aiAnalysis);
-    selectedToAnalyze.push(art);
-    koCount++;
-  }
+  // 최신 분석 완료된 해외 뉴스 최대 3건 선별
+  const finalEnNews = englishNews.slice(0, 3);
+  selectedToAnalyze.push(...finalEnNews.map(a => {
+    const matched = newsArchive[a.id] || aiCache[a.id];
+    return matched;
+  }));
 
-  // 우선적으로 분석되지 않은 최신 해외 뉴스 3건 선별
-  let enCount = 0;
-  for (const art of englishNews) {
-    if (enCount >= 3) break;
-    selectedToAnalyze.push(art);
-    enCount++;
-  }
+  console.log(`💡 분석 완료된 기사 선별: 국내 ${finalKoNews.length}건, 해외 ${finalEnNews.length}건 (총 ${selectedToAnalyze.length}건)`);
 
-  console.log(`💡 투자 브리핑 요약 대상 선정: 국내 ${koCount}건, 해외 ${enCount}건 (총 ${selectedToAnalyze.length}건)`);
-
-  const analyzedList = [];
-
-  // 4. 선별 기사 AI 분석 순차 가동
-  for (let i = 0; i < selectedToAnalyze.length; i++) {
-    const article = selectedToAnalyze[i];
-    console.log(`\n[${i + 1}/${selectedToAnalyze.length}] "${article.sourceName}" 분석 중...`);
-    
-    const analysis = await analyzeArticle(article);
-    
-    // 아카이브 및 캐시 데이터 업데이트
-    const updatedArticle = {
-      ...article,
-      aiAnalysis: analysis
-    };
-
-    newsArchive[article.id] = updatedArticle;
-    aiCache[article.id] = updatedArticle;
-    analyzedList.push(updatedArticle);
-
-    // API 과용 리밋 및 레이트 제한 예방 대기 (0.5초)
-    await new Promise(r => setTimeout(r, 500));
-  }
+  const analyzedList = selectedToAnalyze;
 
   // 5. 로컬 전체 뉴스 데이터 정리 및 보존 (최대 1000개)
   latestArticles.forEach(art => {

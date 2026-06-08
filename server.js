@@ -152,14 +152,9 @@ const NEWS_SOURCES = [
   { id: 'nyt-tech', name: 'NYT 테크놀로지', lang: 'en', category: 'Tech', url: 'https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml' }
 ];
 
-// Gemini AI 초기화
+// Gemini AI 초기화 (과금 100% 차단을 위해 비활성화 및 오프라인 에이전트 주입 모드로 가동)
 let genAI = null;
-if (process.env.GEMINI_API_KEY) {
-  genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-  console.log('✅ Google Gemini AI 모듈이 성공적으로 로드되었습니다.');
-} else {
-  console.log('⚠️ Warning: GEMINI_API_KEY가 설정되지 않았습니다. AI 요약 및 번역 기능은 데모 모드로 동작합니다.');
-}
+console.log('🛡️ [API COST SHIELD] 시스템이 오프라인 에이전트 주입 전용 모드로 구동됩니다. 구글 API 비용 차감 100% 방지 완료.');
 
 
 
@@ -406,13 +401,13 @@ app.get('/api/news', async (req, res) => {
 
 // 2. 기사 AI 번역 & 요약 분석 API (아카이브 기사에 AI 연구 분석 기록 업데이트)
 app.post('/api/analyze', async (req, res) => {
-  const { id, title, description, lang, link, sourceName, date, category, isAdmin } = req.body;
+  const { id, title, description, lang } = req.body;
   if (!title) {
     return res.status(400).json({ success: false, message: '기사 제목이 필요합니다.' });
   }
 
   try {
-    // [비용 100% 절감] 이미 아카이브에 AI 분석 결과가 존재한다면 권한(isAdmin)과 무관하게 무조건 캐시 즉각 리턴! (API 비용 0회)
+    // [비용 100% 절감] 이미 아카이브에 AI 분석 결과가 존재한다면 즉각 캐시 리턴! (API 비용 0회)
     if (id && newsArchive[id] && newsArchive[id].aiAnalysis) {
       return res.json({ success: true, data: newsArchive[id].aiAnalysis });
     }
@@ -420,42 +415,11 @@ app.post('/api/analyze', async (req, res) => {
       return res.json({ success: true, data: aiCache[id].aiAnalysis });
     }
 
-    // 캐시에 없는 완전히 신규 기사인데, 관리자가 아닌 일반 방문자가 AI 분석을 요청하는 경우 원천 차단!
-    if (!isAdmin) {
-      return res.status(403).json({ 
-        success: false, 
-        message: '새로운 기사의 AI 요약 분석은 관리자만 승인하고 가동할 수 있습니다.' 
-      });
-    }
-
-    const analysis = await analyzeArticleWithGemini(title, description || '', lang || 'ko');
-    
-    // [아카이브 연동] 기사 ID가 매칭되는 경우 영구 뉴스 아카이브 파일에 AI 분석 결과를 함께 기록 보존!
-    if (id) {
-      const updatedArticle = {
-        id,
-        title,
-        description: description || '',
-        lang: lang || 'ko',
-        link: link || '',
-        sourceName: sourceName || '국내외 경제지',
-        date: date || new Date().toISOString(),
-        category: category || 'Macro',
-        aiAnalysis: analysis
-      };
-
-      // 1. 뉴스 아카이브에 영구 기록
-      newsArchive[id] = updatedArticle;
-      saveNewsArchive();
-
-      // 2. 검색봇 연동을 위해 기존 AI 스크랩 캐시에도 동시 저장
-      aiCache[id] = updatedArticle;
-      saveAiCache();
-
-      console.log(`💾 [아카이브 업데이트] 기사 "${title.substring(0, 15)}..."의 AI 분석 데이터가 아카이브에 영구 병합되었습니다.`);
-    }
-
-    res.json({ success: true, data: analysis });
+    // 구글 제미나이 API 호출을 전면 차단하고 오프라인 에이전트 생성 요약 모드로 통합합니다.
+    return res.json({ 
+      success: false, 
+      message: '이 기사의 AI 투자 스터디 노트는 아직 발행되지 않았습니다. AI 에이전트(Antigravity)가 오프라인에서 직접 분석하여 다음 릴리즈에 일괄 반영될 예정입니다.' 
+    });
   } catch (error) {
     res.status(500).json({ success: false, message: error.message });
   }

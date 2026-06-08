@@ -1769,5 +1769,281 @@
         "글로벌 유동성이 스페이스X로 집중되면서 밸류에이션 부담이 있고 펀더멘털이 약한 군소 우주 테크 스타트업들은 자금 조달에 난항을 겪을 수 있으므로 독점력을 쥔 메이저 기업 위주로 투자 대상을 좁혀야 합니다."
       ]
     }
+  },
+  "id_kt0il7": {
+    "id": "id_kt0il7",
+    "title": "Oil Surges, Asian Stocks Sink After Iran Strikes Israel",
+    "link": "https://www.nytimes.com/2026/06/07/business/oil-gas-stocks-iran.html",
+    "description": "Oil prices jumped and stocks plunged after Iran and Israel exchanged strikes, raising doubts about the future of fragile cease-fire in the Middle East.",
+    "date": "2026-06-08T06:12:49.000Z",
+    "sourceId": "nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "aiAnalysis": {
+      "translatedTitle": "이란-이스라엘 상호 공습에 유가 급등 및 아시아 증시 폭락",
+      "summary": [
+        "이란과 이스라엘의 상호 군사 공습으로 중동 내 임시 휴전 합의가 붕괴 위기에 처하며 지정학적 위기감이 고조되었습니다.",
+        "이 여파로 국제 유가는 급등세를 연출했고 아시아 증시는 투자 심리가 크게 위축되며 동반 폭락했습니다.",
+        "중동의 긴장이 장기화될 경우 글로벌 원자재 인플레이션 및 원유 공급 차질 압력이 지속될 수 있다는 진단입니다."
+      ],
+      "implications": [
+        "중동발 지정학적 위험 고조는 글로벌 위험자산 회피 심리를 자극하므로 포트폴리오 내 현금 및 안전자산 비중 확대를 권장합니다.",
+        "방산, 유가 급등 수혜주(원유 개발, 정유)가 단기적 헤지 수단으로 부각될 수 있으나 변동성에 주의하여 보수적으로 접근하십시오."
+      ]
+    }
+  },
+  "id_ey88zy": {
+    "id": "id_ey88zy",
+    "title": "OPEC Plus to Boost Oil Production as Ceasefire in Iran Remains Elusive",
+    "link": "https://www.nytimes.com/2026/06/07/business/opec-oil-production-iran-war.html",
+    "description": "The cartel’s move to increase output by 188,000 barrels per day is largely symbolic, with vast amounts of the world’s oil stranded by the effective shutdown of the Strait of Hormuz.",
+    "date": "2026-06-08T03:11:43.000Z",
+    "sourceId": "nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "aiAnalysis": {
+      "translatedTitle": "OPEC 플러스 증산 결정에도 호르무즈 해협 마비에 실효성 의문",
+      "summary": [
+        "OPEC+ 카르텔은 원유 공급 확대를 위해 하루 188,000배럴의 증산을 결정했으나 이는 상징적 조치에 불과하다는 평가입니다.",
+        "이란의 휴전 협상이 난항을 겪으며 핵심 원유 수송로인 호르무즈 해협의 실질적 폐쇄로 인해 글로벌 원유 공급망이 마비되었습니다.",
+        "증산량에 비해 해협 봉쇄로 공급이 묶인 물량이 압도적으로 많아 유가 하방 압력으로 작용하기 어려운 상황입니다."
+      ],
+      "implications": [
+        "물리적 유통로 차단은 인플레이션의 추가 압력을 높여 연준의 금리 인하 결정을 지연시킬 수 있는 거시경제 악재입니다.",
+        "공급망 차단 장기화 시 에너지 관련 ETF(XLE 등) 및 해운 선사들의 운임 지수 급등 수혜 가능성을 눈여겨보십시오."
+      ]
+    }
+  },
+  "id_dif3vc": {
+    "id": "id_dif3vc",
+    "title": "원·달러 환율 1555.2원 개장…당국 개입에도 거세지는 강달러 - v.daum.net",
+    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE54cDgyZVpqbUxwbzZnUEtmM1hQeHVLYnJ5bERDX1NPdTlMSTFiWExhN2RXQVJBSWw0dnRFZnNGZjEwdWs1TWdpMTROM3dSa0k?oc=5",
+    "description": "원·달러 환율 1555.2원 개장…당국 개입에도 거세지는 강달러  v.daum.net",
+    "date": "2026-06-08T00:44:02.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "원·달러 환율 1555.2원 폭등 개장…외환당국 개입 무력화하는 초강달러",
+      "summary": [
+        "서울 외환시장에서 원·달러 환율이 1555.2원에 개장하며 리먼 브러더스 사태 수준의 환율 쇼크가 재차 불거졌습니다.",
+        "외환당국의 적극적인 구두 개입과 미세조정(스무딩 오퍼레이션)에도 불구하고 미국의 고금리 장기화 우려로 강달러 기조가 거세지고 있습니다.",
+        "원화 약세 가속화로 수입 물가 상승 압력이 급증하며 국내 물가 안정 기조에 적신호가 켜졌습니다."
+      ],
+      "implications": [
+        "원화 가치 급락은 외국인 자금의 국내 증시 이탈을 자극하므로 코스피 시가총액 상위주에 대한 비중 조절이 필요합니다.",
+        "달러 자산 보유 비율을 늘리거나, 고환율 수혜를 누리는 대미 수출 중심주(자동차, 전력기기) 중심으로 압축 투자 전략을 고려하십시오."
+      ]
+    }
+  },
+  "id_rosk9n": {
+    "id": "id_rosk9n",
+    "title": "젠슨황 방한도 넘지 못한 금리·환율 우려…반도체發 투매에 코스피 급락 - 인베스트조선",
+    "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNTGxWV3ZFbFZka0V1RXVyQW1ENkp1anZkSDVpdU5Fa0hkZ2hiaXBYeDM5c3RldlN1SEtMRDFuVG05RVB4b2thdGFzNGxtV0drRnh0V3lzeUpNaVg2Y01pcEcxRjlZOWRiS2tCRFpiaW1tWll3X0M4dW1INnFRdFc0cTJqdw?oc=5",
+    "description": "젠슨황 방한도 넘지 못한 금리·환율 우려…반도체發 투매에 코스피 급락  인베스트조선",
+    "date": "2026-06-08T00:43:00.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "젠슨 황 방한 호재 덮은 고금리·환율 공포…반도체 투매에 코스피 동반 급락",
+      "summary": [
+        "엔비디아 CEO 젠슨 황의 방한 및 K-반도체 협력 호재에도 불구하고, 치솟는 환율과 글로벌 고금리 우려를 극복하지 못했습니다.",
+        "미국의 매파적 금리 전망 여파로 기관과 외국인의 반도체 동반 투매가 출현하며 코스피가 급락 마감했습니다.",
+        "글로벌 매크로 불안정이 삼성전자와 SK하이닉스 등 대형 IT 기술주들의 개별 호재를 압도하는 장세가 펼쳐지고 있습니다."
+      ],
+      "implications": [
+        "대형 반도체주의 조정은 일시적 현상보다 매크로 수급 악화에 기인하므로 저점 매수 타이밍을 섣불리 잡지 말고 지지선 확인이 우선입니다.",
+        "환율 안정이 선행되기 전까지는 국내 IT 대형주보다는 단기 채권이나 고배당주 위주로 방어선을 구축하는 것이 유리합니다."
+      ]
+    }
+  },
+  "id_1fppaid": {
+    "id": "id_1fppaid",
+    "title": "[클릭 e종목]\"가격 사이클 끝나간다…반도체 투자 중심축 '소부장'으로 이동 전망\" - v.daum.net",
+    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5MOVhEYkZHRlp1TUpSb1Z1bnBScVpoS2F5UGJtNEJlVFdCcWRXeWs1eUtWYUhobkpaRXJiaS1FNjBqeFVOckxmTXphM1BDcjg?oc=5",
+    "description": "[클릭 e종목]\"가격 사이클 끝나간다…반도체 투자 중심축 '소부장'으로 이동 전망\"  v.daum.net",
+    "date": "2026-06-08T00:46:06.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "반도체 투자 중심축 '소부장' 이동 전망…메모리 가격 사이클 정점 우려",
+      "summary": [
+        "글로벌 메모리 반도체 가격의 급격한 상승 사이클이 정점에 도달했다는 우려 속에 장비 및 소부장으로의 중심축 이동이 예상됩니다.",
+        "증권가는 칩 제조사들의 밸류에이션 부담이 커진 만큼, 차세대 반도체 공정에 필수적인 핵심 소재·부품·장비(소부장) 기업들의 경쟁력에 주목하고 있습니다.",
+        "미세공정 및 HBM(고대역폭메모리) 패키징 분야의 독점적 기술을 가진 소부장 기업들의 가치가 부각될 것이라는 분석입니다."
+      ],
+      "implications": [
+        "반도체 포트폴리오를 대형 메모리 제조사에서 미세화·패키징 관련 강소 기업(한미반도체, 이오테크닉스 등)으로 점진적 리밸런싱할 시점입니다.",
+        "공정 미세화 트렌드는 가격 사이클과 무관하게 장기 성장하므로 기술 독점력이 입증된 중소형주에 선별적으로 분할 매수하십시오."
+      ]
+    }
+  },
+  "id_jrjywb": {
+    "id": "id_jrjywb",
+    "title": "외국인의 역대급 국내증시 탈출 환율 추가 상승 나올 수 있다 - 연합인포맥스",
+    "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1XaHVoS1VVVWVuNkxDU015TmJadDZNVFB1dXR4MGVLaVFLVVQzZmlfNFdDMU5MOEVCQWN4MmJucVpxN3BGSER4VHF4UnE1MU5icHJJSTMyU1NZQVNUYk5nakNEdV96THFJT3d4QVpxcXPSAXRBVV95cUxPSmNmeFBvWFd3WlhqVng1cEp5dndleHFzZ21hek83MXhLdW1SLUtNX1pIV2QtRzR6cm5sekVhaWx3WHZlVVNhSGcwc2VSQVhUSy1vQnRGQllqZXd4UnVyZ3VGUFBKZ2J6YUlWWFg0TURnaE91UA?oc=5",
+    "description": "외국인의 역대급 국내증시 탈출 환율 추가 상승 나올 수 있다  연합인포맥스",
+    "date": "2026-06-07T23:53:24.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "외국인의 역대급 국내 주식 매도…원·달러 환율 추가 상승 리스크 경고",
+      "summary": [
+        "외국인 투자자들이 국내 주식시장에서 역대급 규모의 순매도를 기록하며 자금을 빠르게 달러로 환전해 유출하고 있습니다.",
+        "이러한 대규모 매도세는 외환시장의 원화 공급을 늘려 환율을 추가적으로 끌어올리는 압력으로 작용하고 있습니다.",
+        "글로벌 펀드들이 신흥국 자산 비중을 줄이고 안전 자산인 미 달러화 자산으로 자금을 회수하는 현상이 뚜렷해지고 있습니다."
+      ],
+      "implications": [
+        "외국인의 순매도가 멈추고 순매수로 전환하는 신호(환율 안정)가 나올 때까지 주식 비중을 최소화하고 보수적으로 관망해야 합니다.",
+        "국내 원화 기반 자산의 가치 하락에 방어하기 위해 미국 국채 펀드나 달러 RP 등 외화 예금 비중을 선제적으로 늘리십시오."
+      ]
+    }
+  },
+  "id_yrkum7": {
+    "id": "id_yrkum7",
+    "title": "9000 바라보던 코스피 급제동… 빚투·레버리지 개미 비명 - 조선일보",
+    "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOdE5fa3A0TzdLeTluZUlZcnhHVlh4ODNIbHRBenBGRnhkeGFxUW5QXzctN2k1eE04TUVCNWpGX1NsQUFlYUtWekgwLUtfYzNRbjlxTEE5M1JMTzB2eUhQWV9aQW9KT045VUtmcUNQaWx3VTNKaGVnYzY4RVY4WV9JOA?oc=5",
+    "description": "9000 바라보던 코스피 급제동… 빚투·레버리지 개미 비명  조선일보",
+    "date": "2026-06-07T23:52:00.000Z",
+    "sourceId": "chosun",
+    "sourceName": "조선일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "코스피 9000 꿈꾸던 개미들의 비명…신용융자·레버리지 '반대매매' 비상",
+      "summary": [
+        "글로벌 랠리에 편승해 낙관론이 팽배하던 코스피 시장이 급제동이 걸리면서 레버리지를 일으킨 개인 투자자들의 피해가 속출하고 있습니다.",
+        "주가 급락으로 신용공여 담보비율을 맞추지 못한 계좌들의 반대매매 물량이 쏟아지며 주가 하락을 더욱 부추기는 악순환이 발생하고 있습니다.",
+        "시장 탐욕 지수가 극에 달한 시점에 발생한 급격한 매크로 조정으로 신용 거래 비중이 높았던 업종의 낙폭이 극대화되고 있습니다."
+      ],
+      "implications": [
+        "레버리지 청산에 따른 투매 물량이 완전히 소화되기 전까지는 시장의 하방 변동성이 커지므로 신규 진입을 극도로 경계해야 합니다.",
+        "신용 잔고율이 지나치게 높은 개별 종목들은 반대매매 리스크가 존재하므로, 재무 구조가 건전하고 신용 비율이 낮은 종목으로 대피하십시오."
+      ]
+    }
+  },
+  "id_1taumhu": {
+    "id": "id_1taumhu",
+    "title": "트럼프, 워시 연준 의장에 “금리 인하하라” 압박 - 전자신문",
+    "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1rckd2Ny12UlJ6S2hTd1dadXhCcnJzUElDVzJ4ZEdnREREdXkwSkpnVXVnTmczS1M5T1hPTUhMRmQ4V0xscFctSks5eWk2dw?oc=5",
+    "description": "트럼프, 워시 연준 의장에 “금리 인하하라” 압박  전자신문",
+    "date": "2026-06-07T23:48:33.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "트럼프의 연준 압박 심화…연준 의장 지명 유력자 워시에게 금리 인하 요구",
+      "summary": [
+        "도널드 트럼프 전 대통령이 유력한 차기 연준 의장 후보인 케빈 워시에게 금리를 조속히 인하할 것을 강력히 압박하고 나섰습니다.",
+        "이는 연방준비제도(Fed)의 독립성을 훼손하고 정치적 영향력 하에 두려는 의도로 해석되어 채권 시장에 파장을 일으키고 있습니다.",
+        "트럼프 당선 시 저금리와 인플레이션 용인 정책이 적극적으로 추진될 것이라는 시장의 우려와 기대가 혼재하는 양상입니다."
+      ],
+      "implications": [
+        "정치적 압박에 따른 금리 인하 가능성은 중장기적으로 통화 가치 하락과 고인플레이션을 유발하므로 금(Gold) 및 실물 자산 편입을 추천합니다.",
+        "미국 국채의 금리 변동성이 더욱 커질 수 있어 장기 국채 투자 시 정치적 리스크 프리미엄을 반영한 보수적인 듀레이션 조절이 필요합니다."
+      ]
+    }
+  },
+  "id_bbbqht": {
+    "id": "id_bbbqht",
+    "title": "나스닥 4% 투매…① 메모리 정점? ② 메타도 증자? ③ 머스크 거부한 S&P [김현석의 월스트리트나우] - 한국경제",
+    "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFB5a3F6ZUFMWHZmU3RrNWQwdnNfdzQwc1A4R1U1bmMyYzF6VGZQaVJKd2tIbFdYSG4xM3NmZnlQb3BXUlRSSDJzVXhBUXdtSWR0eTZSNXMzX3hjQdIBVEFVX3lxTFB2ZXozQndfQTRKMjdmaDJUdHhwR2w0M0NQUlJUV3NuOV9abDlZQkVvNFIyZXhGMDhybEk0V0JWaWZlRjBIbnl3d3VqejNnTXlleTBRdg?oc=5",
+    "description": "나스닥 4% 투매…① 메모리 정점? ② 메타도 증자? ③ 머스크 거부한 S&P [김현석의 월스트리트나우]  한국경제",
+    "date": "2026-06-05T23:22:51.000Z",
+    "sourceId": "hankyung-fin",
+    "sourceName": "한국경제 증권",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "나스닥 4% 폭락 쇼크…메모리 정점 우려와 빅테크 증자 리스크 악재 겹쳐",
+      "summary": [
+        "뉴욕증시에서 나스닥 지수가 4% 넘게 투매되며 기술주 중심의 강력한 조정 장세가 출현했습니다.",
+        "반도체 D램 가격 상승 둔화에 따른 '메모리 피크아웃' 우려와 메타(Meta) 등 빅테크 기업들의 인프라 투자를 위한 대규모 자금 조달(증자) 리스크가 투심을 강타했습니다.",
+        "더불어 일론 머스크의 인공지능 회사 xAI의 가치가 부각되는 반면, 기존 S&P 편입 기업들에 대한 회의론이 겹쳐 매도 압력이 커졌습니다."
+      ],
+      "implications": [
+        "빅테크 기업들의 AI 자본 지출(CAPEX) 확대 모멘텀이 둔화되거나 주주가치 희석 우려가 발생했으므로 당분간 대형 테크주의 비중을 낮추십시오.",
+        "기술주의 단기 밸류에이션 리스크가 해소되는 국면을 기다리며 헬스케어나 필수소비재 등 방어 섹터로 자금을 일시 대피하는 전략이 유리합니다."
+      ]
+    }
+  },
+  "id_vobu25": {
+    "id": "id_vobu25",
+    "title": "Wall Street Is Going Gaga for SpaceX",
+    "link": "https://www.nytimes.com/2026/06/04/business/wall-street-jamie-dimon-spacex.html",
+    "description": "Jamie Dimon himself is planning to pitch investors on the offering of Elon Musk’s rocket company, as banks prepare to reap huge fees from the largest I.P.O. ever.",
+    "date": "2026-06-05T02:30:28.000Z",
+    "sourceId": "nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "aiAnalysis": {
+      "translatedTitle": "월가의 스페이스X 상장 광풍…제이미 다이먼 주도로 역사적 IPO 추진",
+      "summary": [
+        "JP모건의 제이미 다이먼 회장이 직접 투자자 유치 전면에 나서며 일론 머스크의 스페이스X IPO(기업공개)를 주도하고 있습니다.",
+        "사상 최대 규모의 상장을 앞두고 주요 글로벌 투자은행(IB)들은 엄청난 중개 수수료 수입을 올리기 위해 치열한 각축전을 벌이고 있습니다.",
+        "스페이스X의 독보적인 로켓 재사용 기술과 스타링크 서비스의 유료 가입자 폭증이 밸류에이션을 극대화시키는 핵심 원동력입니다."
+      ],
+      "implications": [
+        "스페이스X의 역사적 상장은 항공우주 섹터 전반의 밸류에이션을 재평가할 것이므로, 관련 우주 인프라 상장 기업군의 지분을 선제 확보하십시오.",
+        "다만 초대형 공모주 유입으로 인해 기존 IT 기술주들의 기관 수급이 일시적으로 분산될 수 있는 단기 수급 교란 요인에 유의해야 합니다."
+      ]
+    }
+  },
+  "id_7znyz2": {
+    "id": "id_7znyz2",
+    "title": "Elon Musk Dominates List of Highest Paid C.E.O.s",
+    "link": "https://www.nytimes.com/2026/06/05/business/highest-paid-ceos-elon-musk.html",
+    "description": "Executive compensation is accelerating while rank-and-file workers lag, widening the pay gap in corporate America.",
+    "date": "2026-06-05T23:49:22.000Z",
+    "sourceId": "nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "aiAnalysis": {
+      "translatedTitle": "일론 머스크 등 초고액 연봉 CEO 집권…미국 기업 내 양극화 심화",
+      "summary": [
+        "일론 머스크를 비롯한 미국의 주요 대기업 CEO들의 보수가 사상 최고 속도로 가속화되며 상위권 연봉 독식이 이어지고 있습니다.",
+        "반면 일반 직원들의 실질 임금 상승률은 인플레이션 대비 크게 미치지 못해 미국 기업 내 임금 격차가 극단적으로 벌어지고 있습니다.",
+        "이러한 양극화 현상은 주주 가치 극대화와 임직원 보상 간의 도덕적 해이 논란을 재점화하고 있습니다."
+      ],
+      "implications": [
+        "사회적 책임(ESG) 관점에서 임원 보수가 과도하고 노사 갈등 리스크가 높은 기업들은 장기 평판 리스크에 노출될 수 있으므로 주의 깊게 스크리닝하십시오.",
+        "생산성 향상 대비 인건비 비중 통제가 효율적인 고부가가치 소프트웨어 및 정밀 제조 부문의 마진율 우위를 선호하는 전략이 유리합니다."
+      ]
+    }
+  },
+  "id_mzjg2f": {
+    "id": "id_mzjg2f",
+    "title": "외환당국 경고에도 1540원 뚫은 환율…1600원 경고등 켜졌다 - v.daum.net",
+    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFA4bGRyeW1zemVBcGhYdURNSWRYWGFHVm9sM3hBdWpqQXFLQ1JOdlFsa3NQNDlHRU5IcU5sX3JVZlF0SVpFNlJEYkhvSGZQa2s?oc=5",
+    "description": "외환당국 경고에도 1540원 뚫은 환율…1600원 경고등 켜졌다  v.daum.net",
+    "date": "2026-06-04T09:37:15.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "구두 경고 비웃으며 환율 1540원 폭발…금융위기 이후 최고치 경고등",
+      "summary": [
+        "기획재정부와 한국은행 등 금융당국의 적극적인 경고 메시지에도 불구하고 환율이 1540원선을 거침없이 돌파했습니다.",
+        "글로벌 신용평가사 및 외환 트레이더들은 2008년 글로벌 금융위기 당시의 환율 피크를 상기하며 원화 약세 장기화를 전망하고 있습니다.",
+        "미국의 기준금리 동결 전망 우위와 한국의 경상수지 둔화가 결합되어 원화 절하 압력을 물리적으로 방어하기 어려운 국면입니다."
+      ],
+      "implications": [
+        "외환보유고 방어를 위한 당국의 추가 시장 개입 강도에 따라 환율 변동성이 극대화될 수 있으므로 무리한 레버리지 투자를 전면 중단하십시오.",
+        "원화 약세로 고통받는 에너지, 원자재 수입 의존 국내 업종(전력, 항공, 철강)에 대한 투자를 피하고, 외화 가치 상승 수혜처로 포트폴리오를 피신시키십시오."
+      ]
+    }
   }
 }

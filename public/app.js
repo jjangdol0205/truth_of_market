@@ -412,69 +412,29 @@ async function openAiStudyModal(articleId) {
     return;
   }
 
-  // 캐시에 없는 완전히 새로운 신규 기사인데, 관리자가 아닌 일반 사용자라면 차단 및 대기 뷰 표출!
-  if (!state.isAdmin) {
-    setTimeout(() => {
-      aiLoadingEl.classList.add('hidden');
-      aiResultEl.classList.remove('hidden');
-      
-      document.getElementById('aiTranslatedTitle').innerHTML = `💡 AI 투자 스터디 노트 준비 중`;
-      document.getElementById('aiSummaryList').innerHTML = `
-        <li style="list-style-type: none; margin-left: 0; padding-left: 0; color: hsl(var(--text-muted)); font-size: 0.9rem;">
-          <i class="fa-solid fa-hourglass-half" style="color: hsl(var(--accent-gold)); margin-right: 8px;"></i>
-          아직 이 최신 경제 기사의 AI 핵심 요약 노트가 발행되지 않았습니다.
-        </li>
-        <li style="list-style-type: none; margin-left: 0; padding-left: 0; color: hsl(var(--text-muted)); font-size: 0.9rem; margin-top: 12px; line-height: 1.6;">
-          <i class="fa-solid fa-bullhorn" style="color: hsl(var(--accent-cyan)); margin-right: 8px;"></i>
-          관리자가 실시간 기사 분석 및 가동을 완료하는 대로, <strong>이 자리에 스터디 노트가 자동으로 즉시 공개</strong>됩니다! 조금만 기다려주세요.
-        </li>
-      `;
-      document.getElementById('aiImplicationsList').innerHTML = `
-        <li style="list-style-type: none; margin-left: 0; padding-left: 0; color: hsl(var(--text-muted)); font-size: 0.9rem;">
-          <i class="fa-solid fa-chart-line" style="color: hsl(var(--accent-cyan)); margin-right: 8px;"></i>
-          거시경제적 관점 시사점 분석도 함께 연동되어 게재됩니다.
-        </li>
-      `;
-    }, 600);
-    return;
-  }
-
-  // 관리자(state.isAdmin === true) 인 경우에만 실제 실시간 API 호출 가동!
-  try {
-    const response = await fetch('/api/analyze', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        id: article.id,
-        title: article.title,
-        description: article.description || '',
-        lang: article.lang || 'ko',
-        link: article.link || '',
-        sourceName: article.sourceName || '국내외 경제지',
-        date: article.date || new Date().toISOString(),
-        category: article.category || 'Macro',
-        isAdmin: true // 관리자 권한 전송
-      })
-    });
+  // 캐시에 없는 완전히 새로운 신규 기사라면 대기 뷰 표출! (비용 과금 방지를 위해 실시간 API 호출을 중단하고 오프라인 에이전트 요약 모드로 일원화)
+  setTimeout(() => {
+    aiLoadingEl.classList.add('hidden');
+    aiResultEl.classList.remove('hidden');
     
-    const result = await response.json();
-    if (result.success && result.data) {
-      // 분석 결과 캐싱
-      state.aiCache[articleId] = {
-        ...article,
-        aiAnalysis: result.data
-      };
-      showAiAnalysisResult(result.data);
-    } else {
-      throw new Error(result.message);
-    }
-  } catch (error) {
-    console.error('AI Study analysis error:', error);
-    aiLoadingEl.innerHTML = `
-      <i class="fa-solid fa-circle-exclamation" style="font-size: 2rem; color: hsl(var(--accent-red));"></i>
-      <p style="margin-top: 10px;">구글 AI 모듈을 작동하는 도중 에러가 발생했습니다.<br>서버의 Gemini API 키가 활성화되어 있는지 확인해주세요.</p>
+    document.getElementById('aiTranslatedTitle').innerHTML = `💡 AI 투자 스터디 노트 준비 중`;
+    document.getElementById('aiSummaryList').innerHTML = `
+      <li style="list-style-type: none; margin-left: 0; padding-left: 0; color: hsl(var(--text-muted)); font-size: 0.9rem;">
+        <i class="fa-solid fa-hourglass-half" style="color: hsl(var(--accent-gold)); margin-right: 8px;"></i>
+        아직 이 최신 경제 기사의 AI 핵심 요약 노트가 발행되지 않았습니다.
+      </li>
+      <li style="list-style-type: none; margin-left: 0; padding-left: 0; color: hsl(var(--text-muted)); font-size: 0.9rem; margin-top: 12px; line-height: 1.6;">
+        <i class="fa-solid fa-robot" style="color: hsl(var(--accent-cyan)); margin-right: 8px;"></i>
+        AI 에이전트(Antigravity)가 오프라인에서 기사 요약 분석을 정밀 수행하여, 다음 업데이트 시점에 사이트에 일괄 주입 및 갱신해 드립니다.
+      </li>
     `;
-  }
+    document.getElementById('aiImplicationsList').innerHTML = `
+      <li style="list-style-type: none; margin-left: 0; padding-left: 0; color: hsl(var(--text-muted)); font-size: 0.9rem;">
+        <i class="fa-solid fa-chart-line" style="color: hsl(var(--accent-cyan)); margin-right: 8px;"></i>
+        거시경제적 관점 시사점 분석도 에이전트 오프라인 갱신 시 함께 연동되어 게재됩니다.
+      </li>
+    `;
+  }, 600);
 }
 
 // AI 분석 결과 UI 표출
@@ -617,33 +577,9 @@ async function handleKakaoBriefing(e) {
       const item = topNews[i];
       let analysis = null;
       
-      const cached = state.bookmarks.find(b => b.id === item.id && b.aiAnalysis) || state.aiCache[item.id];
-      if (cached) {
+      const cached = state.bookmarks.find(b => b.id === item.id && b.aiAnalysis) || state.aiCache[item.id] || (item.aiAnalysis ? item : null);
+      if (cached && cached.aiAnalysis) {
         analysis = cached.aiAnalysis;
-      } else {
-        try {
-          const response = await fetch('/api/analyze', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              id: item.id,
-              title: item.title,
-              description: item.description || '',
-              lang: item.lang || 'ko',
-              link: item.link || '',
-              sourceName: item.sourceName || '국내외 경제지',
-              date: item.date || new Date().toISOString(),
-              category: item.category || 'Macro'
-            })
-          });
-          const result = await response.json();
-          if (result.success && result.data) {
-            analysis = result.data;
-            state.aiCache[item.id] = { ...item, aiAnalysis: analysis };
-          }
-        } catch (err) {
-          console.warn(`기사 요약 실패:`, err.message);
-        }
       }
 
       const finalTitle = analysis ? analysis.translatedTitle : item.title;
@@ -733,33 +669,9 @@ async function handleTelegramBriefing(e) {
       const item = topNews[i];
       let analysis = null;
       
-      const cached = state.bookmarks.find(b => b.id === item.id && b.aiAnalysis) || state.aiCache[item.id];
-      if (cached) {
+      const cached = state.bookmarks.find(b => b.id === item.id && b.aiAnalysis) || state.aiCache[item.id] || (item.aiAnalysis ? item : null);
+      if (cached && cached.aiAnalysis) {
         analysis = cached.aiAnalysis;
-      } else {
-        try {
-          const response = await fetch('/api/analyze', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              id: item.id,
-              title: item.title,
-              description: item.description || '',
-              lang: item.lang || 'ko',
-              link: item.link || '',
-              sourceName: item.sourceName || '국내외 경제지',
-              date: item.date || new Date().toISOString(),
-              category: item.category || 'Macro'
-            })
-          });
-          const result = await response.json();
-          if (result.success && result.data) {
-            analysis = result.data;
-            state.aiCache[item.id] = { ...item, aiAnalysis: analysis };
-          }
-        } catch (err) {
-          console.warn(`기사 요약 실패:`, err.message);
-        }
       }
 
       const finalTitle = analysis ? analysis.translatedTitle : item.title;

@@ -19,12 +19,17 @@ const OUTPUT_FILE = path.join(ROOT_DIR, 'raw-news.json');
 
 // 뉴스 소스 정의
 const NEWS_SOURCES = [
-  { id: 'chosun', name: '조선일보 경제', lang: 'ko', category: 'Macro', url: 'https://news.google.com/rss/search?q=source:%22%EC%A1%B0%EC%84%A0%EC%9D%BC%EB%B3%B4%22+economy&hl=ko&gl=KR&ceid=KR:ko' },
-  { id: 'hankyung-eco', name: '한국경제 경제', lang: 'ko', category: 'Macro', url: 'https://news.google.com/rss/search?q=source:%22%ED%95%9C%EA%B5%AD%EA%B2%BD%EC%A0%9C%22+economy&hl=ko&gl=KR&ceid=KR:ko' },
-  { id: 'hankyung-fin', name: '한국경제 증권', lang: 'ko', category: 'Macro', url: 'https://news.google.com/rss/search?q=source:%22%ED%95%9C%EA%B5%AD%EA%B2%BD%EC%A0%9C%22+finance&hl=ko&gl=KR&ceid=KR:ko' },
-  { id: 'maekyung', name: '매일경제 경제', lang: 'ko', category: 'Macro', url: 'https://news.google.com/rss/search?q=source:%22%EB%A7%A4%EC%9D%BC%EA%B2%BD%EC%A0%9C%22+economy&hl=ko&gl=KR&ceid=KR:ko' },
-  { id: 'donga', name: '동아일보 경제', lang: 'ko', category: 'Macro', url: 'https://news.google.com/rss/search?q=source:%22%EB%8F%99%EC%95%8A%EC%9D%BC%EB%B3%B4%22+economy&hl=ko&gl=KR&ceid=KR:ko' },
+  // 국내 언론사 (구글 뉴스를 통한 우회 수집: 해외 서버 IP 차단 원천 방지)
+  { id: 'chosun', name: '조선일보 경제', lang: 'ko', category: 'Macro', url: 'https://news.google.com/rss/search?q=site:chosun.com+economy&hl=ko&gl=KR&ceid=KR:ko' },
+  { id: 'hankyung-eco', name: '한국경제 경제', lang: 'ko', category: 'Macro', url: 'https://news.google.com/rss/search?q=site:hankyung.com+economy&hl=ko&gl=KR&ceid=KR:ko' },
+  { id: 'hankyung-fin', name: '한국경제 증권', lang: 'ko', category: 'Macro', url: 'https://news.google.com/rss/search?q=site:hankyung.com+finance&hl=ko&gl=KR&ceid=KR:ko' },
+  { id: 'maekyung', name: '매일경제 경제', lang: 'ko', category: 'Macro', url: 'https://news.google.com/rss/search?q=site:mk.co.kr+economy&hl=ko&gl=KR&ceid=KR:ko' },
+  { id: 'donga', name: '동아일보 경제', lang: 'ko', category: 'Macro', url: 'https://news.google.com/rss/search?q=site:donga.com+economy&hl=ko&gl=KR&ceid=KR:ko' },
+  
+  // 종합 금융/투자 트렌드 (풍부한 최신 뉴스 공급용)
   { id: 'korean-markets-trend', name: '국내 금융/투자 종합 트렌드', lang: 'ko', category: 'Macro', url: 'https://news.google.com/rss/search?q=%EC%A5%9D%EC%8B%9D+OR+%EA%B8%88%EB%A6%AC+OR+%EB%B0%98%EB%8F%84%EC%B2%B4+OR+%EA%B1%B0%EC%8B%9C%EA%B2%BD%EC%A0%9C+OR+%ED%99%98%EC%9C%A8&hl=ko&gl=KR&ceid=KR:ko' },
+
+  // 국외 언론사 (구글 뉴스를 통한 경제/투자 분야 타겟팅)
   { 
     id: 'global-invest', 
     name: '글로벌 투자 뉴스 (Reuters/Bloomberg/CNBC)', 
