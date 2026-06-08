@@ -52,6 +52,13 @@ function saveAiCache() {
 // 매번 접속 시 RSS를 파싱하는 대신, 하루에 한 번 백엔드에서 RSS를 파싱하여 아카이브에 영구 저장하고 보존합니다.
 const ARCHIVE_FILE = path.join(__dirname, 'news-archive.json');
 let newsArchive = {};
+let diagnosticLog = {
+  lastRun: null,
+  success: false,
+  errors: [],
+  urlsAttempted: [],
+  freshNewsCount: 0
+};
 
 function loadNewsArchive() {
   try {
@@ -168,6 +175,8 @@ function generateUniqueId(str) {
 // RSS 뉴스 수집 헬퍼 함수
 async function fetchAllNews() {
   const allArticles = [];
+  diagnosticLog.urlsAttempted = [];
+  diagnosticLog.errors = [];
 
   // 최근 5일간의 누락 뉴스를 포함시키기 위해 구글 뉴스 검색 조건에 after 날짜 동적 적용
   const fiveDaysAgo = new Date();
@@ -181,6 +190,7 @@ async function fetchAllNews() {
         // q= 뒤에 after:YYYY-MM-DD+ 를 붙여 최근 5일 기사를 확실히 긁어오도록 필터링
         targetUrl = targetUrl.replace('q=', `q=after:${afterDateStr}+`);
       }
+      diagnosticLog.urlsAttempted.push({ source: source.name, url: targetUrl });
       const feed = await parser.parseURL(targetUrl);
       // [대폭 확대] 각 RSS 소스당 수집 범위를 10건에서 40건으로 대폭 확대하여 최신 뉴스 누락 원천 방지
       const items = feed.items.slice(0, 40).map(item => {
@@ -213,6 +223,7 @@ async function fetchAllNews() {
       allArticles.push(...items);
     } catch (error) {
       console.error(`❌ [${source.name}] RSS 수집 오류:`, error.message);
+      diagnosticLog.errors.push({ source: source.name, error: error.message });
     }
   });
 
@@ -647,6 +658,17 @@ app.get('/api/status', (req, res) => {
   });
 });
 
+// 5.1 원격 백엔드 진단용 API
+app.get('/api/diagnostic', (req, res) => {
+  res.json({
+    success: true,
+    diagnostic: {
+      ...diagnosticLog,
+      archiveCount: Object.keys(newsArchive).length
+    }
+  });
+});
+
 // --- [애드센스 승인용 정적 신뢰 요소 페이지 라우팅] ---
 app.get('/privacy-policy', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'privacy-policy.html'));
@@ -999,6 +1021,7 @@ app.get('/article/:id', (req, res) => {
 // --- [영구 아카이브] 일일 백그라운드 RSS 뉴스 정밀 수집기 ---
 async function archiveDailyNews() {
   console.log('🔄 [아카이브] 백그라운드 실시간 RSS 수집 및 아카이빙 작업 구동 중...');
+  diagnosticLog.lastRun = new Date().toISOString();
   try {
     const freshNews = await fetchAllNews();
     let newCount = 0;
@@ -1031,9 +1054,13 @@ async function archiveDailyNews() {
     }
 
     saveNewsArchive();
+    diagnosticLog.success = true;
+    diagnosticLog.freshNewsCount = freshNews.length;
     console.log(`✅ [아카이브] 수집 완료. 신규 유입: ${newCount}건, 로컬 총 영구 보존 뉴스: ${Object.keys(newsArchive).length}건`);
   } catch (error) {
     console.error('❌ [아카이브] 일일 RSS 수집 오류:', error.message);
+    diagnosticLog.success = false;
+    diagnosticLog.errors.push({ source: 'global_archive', error: error.message });
   }
 }
 
