@@ -637,6 +637,7 @@ app.get('/api/status', (req, res) => {
   res.json({
     success: true,
     geminiActive: !!genAI,
+    version: '1.0.3-site-fix',
     apiBudget: {
       limit: apiBudget.monthlyBudgetLimit,
       accumulated: apiBudget.monthlyAccumulatedCost,
