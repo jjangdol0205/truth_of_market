@@ -17,9 +17,19 @@ const parser = new Parser({
 });
 
 // 미들웨어 설정
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
+
+// SSR 메인 페이지 라우트
+app.get('/', (req, res) => {
+  let articlesList = Object.values(newsArchive).sort((a, b) => new Date(b.date) - new Date(a.date));
+  // 애드센스 대응 완벽주의: 요약 완료된 프리미엄 기사만 사전 렌더링
+  const premiumArticles = articlesList.filter(art => art.aiAnalysis != null);
+  res.render('index', { articles: premiumArticles });
+});
 
 // --- [API 최소화 및 캐싱 고도화] ---
 // 기존 메모리 캐시를 제거하고 일일 뉴스 영구 아카이브 파일을 사용합니다.

@@ -43,7 +43,21 @@ document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   loadLocalStorage();
   setupEventListeners();
-  fetchNews();
+  
+  // SSR Hydration 로직
+  if (window.__INITIAL_DATA__ && window.__INITIAL_DATA__.length > 0) {
+    console.log('🚀 [SSR Hydration] 서버사이드 렌더링 데이터를 적용합니다.');
+    state.articles = window.__INITIAL_DATA__;
+    if (state.isAdmin) {
+      console.log('👑 [관리자 모드] 미요약 기사 조회를 위해 전체 뉴스를 로드합니다.');
+      fetchNews();
+    } else {
+      renderArticles();
+    }
+  } else {
+    fetchNews();
+  }
+
   fetchMarketTicker();
   checkApiStatus();
 

@@ -6,6 +6,7 @@
   <title>Truth of Market - AI 투자 스터디 뉴스 아카이브</title>
   <!-- SEO 메타 태그 -->
   <meta name="description" content="국내외 주요 언론사 실시간 경제 뉴스를 수집하고 Google Gemini AI를 활용하여 번역, 요약 및 투자 시사점을 제공하는 나만의 투자 연구소.">
+  <meta name="google-site-verification" content="KjkX-zWjuxmckvBpxZXF-DSQyDpIWvZPNuV7YrNBxjk" />
   
   <!-- 구글 폰트 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -200,7 +201,48 @@
 
         <!-- 실제 뉴스 카드가 배치될 그리드 -->
         <div class="news-grid" id="newsGrid">
-          <!-- JS 동적 생성 영역 -->
+          <% if (typeof articles !== 'undefined' && articles && articles.length > 0) { %>
+            <% articles.forEach(function(art) { 
+                 const isEn = art.lang === 'en';
+                 const flag = isEn ? '🇺🇸 US' : '🇰🇷 KR';
+                 let timeString = '';
+                 if (art.date) {
+                   const d = new Date(art.date);
+                   const now = new Date();
+                   const diffMs = now - d;
+                   const diffMins = Math.floor(diffMs / 60000);
+                   const diffHours = Math.floor(diffMs / 3600000);
+                   if (diffMins < 60) timeString = diffMins + '분 전';
+                   else if (diffHours < 24) timeString = diffHours + '시간 전';
+                   else timeString = d.toLocaleDateString('ko-KR');
+                 } else {
+                   timeString = '방금 전';
+                 }
+            %>
+              <div class="news-card" onclick="openAiStudyModal('<%= art.id %>')">
+                <div class="news-card-header">
+                  <span class="source-badge"><%= art.sourceName %></span>
+                  <span class="lang-flag"><%= flag %></span>
+                </div>
+                <h3><%= art.translatedTitle || art.title %></h3>
+                <p class="news-card-desc"><%= art.description || '본문 요약이 없는 기사입니다. AI 스터디 기능을 활용하여 상세 정보를 번역하고 파악해보세요.' %></p>
+                <div class="news-card-footer">
+                  <span class="news-time"><i class="fa-regular fa-calendar-days"></i> <%= timeString %></span>
+                  <div class="card-actions">
+                    <a href="<%= art.link %>" target="_blank" class="card-btn original-btn" onclick="event.stopPropagation();" title="기사 원문 링크 열기">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i> 원문 보기
+                    </a>
+                    <button class="card-btn bookmark-btn" onclick="event.stopPropagation(); toggleBookmark('<%= art.id %>')" title="보관함 저장">
+                      <i class="fa-regular fa-star"></i>
+                    </button>
+                    <button class="card-btn ai-btn" onclick="openAiStudyModal('<%= art.id %>')">
+                      <i class="fa-solid fa-wand-magic-sparkles"></i> AI 스터디
+                    </button>
+                  </div>
+                </div>
+              </div>
+            <% }); %>
+          <% } %>
         </div>
       </section>
     </main>
@@ -455,6 +497,11 @@
       </div>
     </div>
   </footer>
+
+  <!-- 초기 데이터 (SSR 연동용) -->
+  <script>
+    window.__INITIAL_DATA__ = <%- typeof articles !== 'undefined' ? JSON.stringify(articles) : '[]' %>;
+  </script>
 
   <!-- 커스텀 JS 파일 로드 -->
   <script src="app.js"></script>
