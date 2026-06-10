@@ -1705,7 +1705,18 @@
     "sourceName": "글로벌 투자 뉴스 (Reuters/Bloomberg/CNBC)",
     "lang": "en",
     "category": "Markets",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "시장 브리핑: 중동 긴장에도 AI와 실적 모멘텀이 증시 견인",
+      "summary": [
+        "중동 지역의 지정학적 긴장감 고조에도 불구하고 미국 증시가 상승세를 보임.",
+        "인공지능(AI) 관련주들의 강력한 실적 모멘텀이 시장의 우려를 상쇄함.",
+        "투자자들은 거시적 위험보다는 기업들의 펀더멘털과 AI 산업의 성장성에 주목하고 있음."
+      ],
+      "implications": [
+        "AI 섹터의 견고한 실적이 전체 시장의 안전판 역할을 지속할 가능성이 높음.",
+        "지정학적 리스크가 실물 경제에 직접적인 타격을 주지 않는 한 증시의 하방 경직성은 유지될 전망."
+      ]
+    }
   },
   "id_1ulhl99": {
     "id": "id_1ulhl99",
@@ -1783,7 +1794,18 @@
     "sourceName": "글로벌 투자 뉴스 (Reuters/Bloomberg/CNBC)",
     "lang": "en",
     "category": "Markets",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "대법원 트럼프 관세 판결 영향: 수십억 달러 환급 분쟁 시작에 따른 전망",
+      "summary": [
+        "미국 대법원이 트럼프 행정부 시절 부과된 관세와 관련된 판결을 내림.",
+        "이에 따라 수십억 달러 규모의 관세 환급을 둘러싼 기업들과 정부 간의 법적 분쟁이 본격화될 예정임.",
+        "수입업체들은 부당하게 징수된 관세의 반환을 요구하며 대규모 소송전을 준비 중임."
+      ],
+      "implications": [
+        "관세 환급이 현실화될 경우 관련 수입업체들의 수익성이 일시적으로 크게 개선될 수 있음.",
+        "무역 정책의 불확실성이 증가하며, 향후 정부의 관세 부과 권한에 대한 법적 제약이 강화될 가능성."
+      ]
+    }
   },
   "id_xekkib": {
     "id": "id_xekkib",
@@ -4310,7 +4332,18 @@
     "sourceName": "NYT 테크놀로지",
     "lang": "en",
     "category": "Tech",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "누가 스페이스X의 기업공개(IPO)를 기대하는가? 우주 덕후들.",
+      "summary": [
+        "스페이스X의 상장 가능성에 대해 우주 탐사와 기술에 열광하는 커뮤니티가 큰 기대를 보이고 있음.",
+        "일반 투자자뿐만 아니라 우주 산업의 발전을 지지하는 마니아층이 초기 투자 수요를 이끌 것으로 예상됨.",
+        "성공적인 IPO는 민간 우주 산업 전반에 막대한 자본 유입을 촉발할 수 있음."
+      ],
+      "implications": [
+        "스페이스X의 상장은 우주 항공 섹터 전체의 밸류에이션을 재평가하는 계기가 될 것임.",
+        "테슬라 초기 투자자들과 유사한 강력한 팬덤 기반의 장기 투자 자금이 유입될 가능성이 높음."
+      ]
+    }
   },
   "id_ppgm8x": {
     "id": "id_ppgm8x",
@@ -4461,7 +4494,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "외국인 7조 순매도에 환율 1,540원 돌파…코스피 하락·금리 급등",
+      "summary": [
+        "외국인 투자자들이 국내 증시에서 7조원 규모의 대규모 순매도를 기록함.",
+        "이에 따라 원/달러 환율이 장중 1,540원을 돌파하며 금융위기 이후 최고치를 경신함.",
+        "외국인 자금 이탈과 환율 급등이 맞물리며 코스피 지수가 크게 하락하고 시장 금리가 급등하는 등 금융시장 불안이 심화됨."
+      ],
+      "implications": [
+        "원화 가치 하락으로 인해 수입 물가 상승 및 국내 인플레이션 압력이 가중될 우려가 있음.",
+        "한국은행의 금리 인하 지연 및 시장 안정화 조치(외환시장 개입 등)가 임박했을 가능성이 높음."
+      ]
+    }
   },
   "id_161o40t": {
     "id": "id_161o40t",
@@ -7214,7 +7258,18 @@
     "sourceName": "조선일보 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "구윤철 '투기 거래가 환율 변동성 키워... 엄정 조치'",
+      "summary": [
+        "금융 당국이 최근의 급격한 환율 상승의 원인 중 하나로 외환 시장 내 투기적 거래를 지목함.",
+        "외환 당국은 투기 세력에 대해 엄정하게 조치하겠다는 강력한 경고 메시지를 발표함.",
+        "시장의 과도한 쏠림 현상을 방지하기 위해 모니터링을 강화하고 필요시 시장 안정화 조치를 단행할 것임을 시사함."
+      ],
+      "implications": [
+        "당국의 구두 개입과 실질적인 단속 강화로 인해 단기적으로 환율의 추가 급등세는 제한될 수 있음.",
+        "외환 당국의 미세조정(스무딩 오퍼레이션) 경계감으로 인해 외환 파생상품 거래 위축 예상."
+      ]
+    }
   },
   "id_cerl0x": {
     "id": "id_cerl0x",
@@ -7249,7 +7304,18 @@
     "sourceName": "조선일보 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "젠슨 황 또 '깐부 회동'... 최태원, SK하이닉스-SKT CEO 참석",
+      "summary": [
+        "엔비디아의 젠슨 황 CEO가 최태원 SK그룹 회장을 비롯한 SK하이닉스 및 SK텔레콤 경영진과 다시 회동함.",
+        "AI 반도체 밸류체인에서 핵심적인 역할을 하는 엔비디아와 고대역폭메모리(HBM) 선두주자인 SK하이닉스 간의 협력 강화가 논의된 것으로 보임.",
+        "SK텔레콤의 AI 인프라 사업 등 다양한 분야에서의 파트너십 확장 가능성도 제기됨."
+      ],
+      "implications": [
+        "SK하이닉스의 차세대 HBM 시장 내 독점적 지위와 엔비디아향 공급 물량이 더욱 확고해질 전망임.",
+        "SK그룹 전반의 AI 트랜스포메이션 및 글로벌 AI 인프라 시장 진출에 강력한 모멘텀으로 작용할 것임."
+      ]
+    }
   },
   "id_17qr8o2": {
     "id": "id_17qr8o2",
@@ -7399,7 +7465,18 @@
     "sourceName": "조선일보 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "Jensen Huang Visits PC Bang Again, Surprise Appearance with Kim Taek-jin for 'Aion 2'",
+      "summary": [
+        "Nvidia CEO Jensen Huang made another surprise visit to a Korean PC bang.",
+        "He was accompanied by NCSoft CEO Kim Taek-jin.",
+        "The visit featured a surprising showcase related to the upcoming game 'Aion 2'."
+      ],
+      "implications": [
+        "Highlights Nvidia's continued interest in the Korean gaming market.",
+        "Potential collaboration or technological showcase between Nvidia and NCSoft for 'Aion 2'."
+      ]
+    }
   },
   "id_cp28v6": {
     "id": "id_cp28v6",
@@ -8267,7 +8344,18 @@
     "sourceName": "NYT 비즈니스",
     "lang": "en",
     "category": "Markets",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "What to Know About the Jobs Report",
+      "summary": [
+        "The latest US jobs report provides crucial insights into the current state of the economy.",
+        "It details employment growth, unemployment rates, and wage inflation.",
+        "Investors are closely watching the data to gauge the Fed's next monetary policy moves."
+      ],
+      "implications": [
+        "Strong jobs data could delay anticipated interest rate cuts by the Federal Reserve.",
+        "Market volatility is expected across equities and bonds as traders digest the report."
+      ]
+    }
   },
   "id_1qhtwpy": {
     "id": "id_1qhtwpy",
@@ -8919,7 +9007,18 @@
     "sourceName": "글로벌 투자 뉴스 (Reuters/Bloomberg/CNBC)",
     "lang": "en",
     "category": "Markets",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "South Korean Won Falls to Weakest Level Since 2009",
+      "summary": [
+        "The South Korean won has plummeted to its lowest level against the US dollar since the 2009 financial crisis.",
+        "The currency's depreciation is driven by a strong dollar and domestic economic concerns.",
+        "This marks a significant milestone in the ongoing currency weakness for South Korea."
+      ],
+      "implications": [
+        "Increased costs for imported goods will likely exacerbate domestic inflation.",
+        "The Bank of Korea faces mounting pressure to intervene or adjust interest rates to stabilize the currency."
+      ]
+    }
   },
   "id_1i4z9jr": {
     "id": "id_1i4z9jr",
@@ -9735,7 +9834,18 @@
     "sourceName": "한국경제 증권",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "President Lee Expresses 'Deep Regret' Over Ballot Shortage, Calls for Accountability",
+      "summary": [
+        "President Lee addressed the recent shortage of ballots during the election.",
+        "He expressed deep regret over the situation, calling it a significant failure.",
+        "The President emphasized the need to hold those responsible accountable for the oversight."
+      ],
+      "implications": [
+        "The incident could damage public trust in the electoral process and administrative competence.",
+        "Expect administrative reforms or personnel changes within the election commission."
+      ]
+    }
   },
   "id_hx0jk4": {
     "id": "id_hx0jk4",
@@ -9931,7 +10041,18 @@
     "sourceName": "매일경제 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "Exchange Rate Breaches 1,500 Won Despite 9 Trillion Won Defense; FX Reserves Fall",
+      "summary": [
+        "The KRW/USD exchange rate has broken through the 1,500 won mark.",
+        "This depreciation occurred despite the government spending approximately 9 trillion won to defend the currency.",
+        "Consequently, South Korea's foreign exchange reserves have decreased again after just one month."
+      ],
+      "implications": [
+        "Highlights the limited effectiveness of direct market intervention against strong macroeconomic trends.",
+        "Further depletion of FX reserves may raise concerns about South Korea's financial stability."
+      ]
+    }
   },
   "id_1s07tz1": {
     "id": "id_1s07tz1",
@@ -10081,7 +10202,18 @@
     "sourceName": "글로벌 투자 뉴스 (Reuters/Bloomberg/CNBC)",
     "lang": "en",
     "category": "Markets",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "Nasdaq 100 Declines as Broadcom Tests AI Trade",
+      "summary": [
+        "The Nasdaq 100 experienced a decline as investors reassessed the AI-driven market rally.",
+        "Broadcom's performance and outlook served as a key test for the sustainability of AI tech trades.",
+        "Broader market sentiment shifted cautiously, impacting tech-heavy indices."
+      ],
+      "implications": [
+        "Suggests a potential cooling or consolidation phase for high-flying AI stocks.",
+        "Investors may start rotating capital out of tech and into more defensive sectors."
+      ]
+    }
   },
   "id_1o9bbvq": {
     "id": "id_1o9bbvq",
@@ -12246,7 +12378,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "Dollar Hits Two-Month High on Possibility of Fed Rate Hike",
+      "summary": [
+        "The US dollar has surged to its highest level in two months.",
+        "The rally is fueled by growing speculation that the Federal Reserve might raise interest rates again.",
+        "Stronger-than-expected economic data is driving this shift in monetary policy expectations."
+      ],
+      "implications": [
+        "A stronger dollar will continue to pressure emerging market currencies, including the Korean won.",
+        "Global borrowing costs tied to the US dollar may increase, straining international markets."
+      ]
+    }
   },
   "id_2er4na": {
     "id": "id_2er4na",
@@ -12258,7 +12401,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "Verbal Intervention at 1,550 Won Exchange Rate: What's Different From Late Last Year",
+      "summary": [
+        "Financial authorities conducted a joint verbal intervention at the director-general level as the exchange rate hit the 1,550 won range.",
+        "This move aims to curb excessive speculative betting against the South Korean won.",
+        "The market context and approach differ slightly from the interventions seen at the end of the previous year."
+      ],
+      "implications": [
+        "Signals the government's strong determination to prevent the won from falling further.",
+        "Traders will be cautious, potentially reducing short-term volatility in the KRW/USD pair."
+      ]
+    }
   },
   "id_3tdscs": {
     "id": "id_3tdscs",
@@ -12293,7 +12447,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "Rising Won-Dollar Exchange Rates and Currency Fluctuations",
+      "summary": [
+        "The Won-Yen exchange rate has fallen, but the Won-Dollar rate has sharply increased, trading in the 1520 won range.",
+        "Middle East tensions and the US interest rate outlook are primary drivers for the strong dollar.",
+        "The persistently high exchange rate is curbing dollar insurance sales and presenting challenges for the KOSPI rally, although some anticipate the return of foreign capital."
+      ],
+      "implications": [
+        "Businesses relying on imports may face higher costs, while investors must navigate increased forex volatility.",
+        "The Korean stock market might see fluctuating foreign capital flows depending on the stabilization of the exchange rate."
+      ]
+    }
   },
   "id_18hgsu9": {
     "id": "id_18hgsu9",
@@ -12445,8 +12610,7 @@
         "은행권의 BIS 비율 하락은 기업 대출의 보수적 태도 강화를 초래하여 한계 기업들의 자금줄이 마르는 연쇄 부실 리스크(Credit Crunch)로 이어질 수 있습니다.",
         "건전성 압박으로 인해 금융주들의 적극적인 주주환원(자사주 매입 및 배당 확대) 기대감이 단기적으로 한풀 꺾일 수 있음에 유의해야 합니다."
       ]
-    },
-    "translatedTitle": "역대급 환율 폭등·급락 파도에 시중은행 건전성 비상... 위험가중자산(RWA) 6조 원씩 출렁"
+    }
   },
   "id_2mmuu2": {
     "id": "id_2mmuu2",
@@ -12516,8 +12680,7 @@
         "메가급 혁신 테마(우주항공, 휴머노이드 로봇)에 편입된 국내 유망 부품/장비 기업들은 글로벌 대장주의 IPO 기대감만으로도 엄청난 주가 리레이팅을 경험할 수 있습니다.",
         "단기 실적보다는 독보적인 원천 기술을 글로벌 빅테크 기업에 납품할 수 있는지 여부가 핵심 투자 포인트(Key Factor)입니다."
       ]
-    },
-    "translatedTitle": "초대어급 혁신 기업들의 증시 등판 임박... 스페이스X·오픈AI부터 中 유니트리까지"
+    }
   },
   "id_zvoiso": {
     "id": "id_zvoiso",
@@ -12612,8 +12775,7 @@
         "AI 시대의 도래와 함께 소프트웨어 취약점을 노리는 지능형 사이버 공격이 급증하면서 글로벌 정보보안(사이버 시큐리티) 시장의 폭발적인 성장이 필연적입니다.",
         "인증, 클라우드 보안, AI 기반 해킹 방어 솔루션을 제공하는 글로벌 및 국내 선도 보안 기업들의 강력한 구조적 랠리(슈퍼사이클)가 전망됩니다."
       ]
-    },
-    "translatedTitle": "메타(Meta) AI 시스템의 치명적 결함 노출... 해커가 인스타그램 계정 쉽게 탈취"
+    }
   },
   "id_48nx7q": {
     "id": "id_48nx7q",
@@ -12669,10 +12831,10 @@
     "link": "https://www.nytimes.com/2026/06/09/business/energy-environment/general-motors-storage-batteries-electric-vehicles.html",
     "description": "The carmaker will follow Tesla in making components for large batteries used by electric utilities, data centers and other businesses to handle fluctuations in power supply and demand.",
     "date": "2026-06-09T23:29:08.000Z",
-    "sourceId": "nyt-biz",
-    "sourceName": "NYT 비즈니스",
+    "sourceId": "nyt-tech",
+    "sourceName": "NYT 테크놀로지",
     "lang": "en",
-    "category": "Markets",
+    "category": "Tech",
     "aiAnalysis": {
       "translatedTitle": "GM to Develop Energy Storage Batteries Amid Flagging EV Sales",
       "summary": [
@@ -12877,7 +13039,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "Samsung and SK Hynix Consider Semiconductor Investments in Honam and Chungcheong",
+      "summary": [
+        "Samsung Electronics and SK Hynix are actively considering building new semiconductor facilities in the Honam and Chungcheong regions.",
+        "These investments align with political initiatives for balanced regional growth, including an AI semiconductor cluster in Saemangeum.",
+        "This expansion would broaden the central region's semiconductor belt, boosting local development."
+      ],
+      "implications": [
+        "Massive tech investments could significantly revitalize the local economies of Honam and Chungcheong through job creation.",
+        "The decentralization of tech manufacturing from the capital region may improve national economic balance."
+      ]
+    }
   },
   "id_8k2t1f": {
     "id": "id_8k2t1f",
@@ -12913,7 +13086,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "Capital Shifts: Semiconductors vs Bio and Mixed US Markets",
+      "summary": [
+        "US stock markets closed mixed, with the Dow rising while the Nasdaq and semiconductor sectors showed weakness.",
+        "Domestically, capital has heavily favored semiconductors, causing a sharp drop in biotech stocks.",
+        "Investors are closely watching for signs of a rebound in the biotech sector amidst the concentration of funds in tech."
+      ],
+      "implications": [
+        "The biotech sector may offer undervalued investment opportunities if market sentiment rotates away from semiconductors.",
+        "Semiconductor stocks may face near-term volatility mirroring the weakness seen in US tech indices."
+      ]
+    }
   },
   "id_ayot1f": {
     "id": "id_ayot1f",
@@ -13283,10 +13467,10 @@
     "link": "https://www.nytimes.com/2026/06/09/business/apple-siri-ai-europe.html",
     "description": "A regulatory dispute has indefinitely delayed the release of Siri AI.",
     "date": "2026-06-09T18:29:08.000Z",
-    "sourceId": "nyt-biz",
-    "sourceName": "NYT 비즈니스",
+    "sourceId": "nyt-tech",
+    "sourceName": "NYT 테크놀로지",
     "lang": "en",
-    "category": "Markets",
+    "category": "Tech",
     "aiAnalysis": {
       "translatedTitle": "애플의 시리 AI 업그레이드가 유럽에서 출시되지 않는 이유",
       "summary": [
@@ -13423,7 +13607,7 @@
     "title": "삼성·SK, 전남·충남에 반도체 공장 검토 - 조선일보",
     "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQbjZIMXVXcmhUMzZPcTlHZm1peU8yUzFmTlgzdVlBQ0cyZThSQUxxZG9HOGFGNnVZdERScXRkRTMyRmlxb1E4aFo1d2M1VjU1R3MyNVVkcDZydk04XzJNUkhPWEpQcmdyQzgzdjBibHFVZ0d6YkhJcHk1TklSWGhDcDNNc3FrMEg5Z0ZWZ2RSaw?oc=5",
     "description": "삼성·SK, 전남·충남에 반도체 공장 검토  조선일보",
-    "date": "2026-06-09T15:56:00.000Z",
+    "date": "2026-06-09T16:04:59.000Z",
     "sourceId": "chosun",
     "sourceName": "조선일보 경제",
     "lang": "ko",
@@ -13678,10 +13862,10 @@
     "link": "https://www.nytimes.com/2026/06/08/business/energy-environment/iran-war-energy-oil.html",
     "description": "The Iran war is pushing countries to prioritize domestic energy in order to protect themselves from volatile oil and natural gas markets.",
     "date": "2026-06-09T15:06:06.000Z",
-    "sourceId": "nyt-biz",
-    "sourceName": "NYT 비즈니스",
+    "sourceId": "nyt-tech",
+    "sourceName": "NYT 테크놀로지",
     "lang": "en",
-    "category": "Markets",
+    "category": "Tech",
     "aiAnalysis": {
       "translatedTitle": "The Iran War is Forcing Energy-Importing Countries to Turn Inward",
       "summary": [
@@ -13722,10 +13906,10 @@
     "link": "https://www.nytimes.com/2026/06/09/technology/solvinity-kyndryl-blocked-deal-us-europe-rift.html",
     "description": "The Netherlands blocked a U.S. company from buying a Dutch firm that handles its national ID system, saying it would create a “threat to the public interest.”",
     "date": "2026-06-09T14:52:00.000Z",
-    "sourceId": "nyt-biz",
-    "sourceName": "NYT 비즈니스",
+    "sourceId": "nyt-tech",
+    "sourceName": "NYT 테크놀로지",
     "lang": "en",
-    "category": "Markets",
+    "category": "Tech",
     "aiAnalysis": {
       "translatedTitle": "Dutch Authorities Block $115 Million Deal by a U.S. Tech Company",
       "summary": [
@@ -13770,7 +13954,18 @@
     "sourceName": "NYT 비즈니스",
     "lang": "en",
     "category": "Markets",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "OpenAI Explores Potential Mega IPO",
+      "summary": [
+        "OpenAI is testing investor appetite for what could be another massive initial public offering in the AI space.",
+        "Analysts are assessing whether the market can absorb this offering alongside other anticipated IPOs from SpaceX and Anthropic.",
+        "This exploration highlights the immense funding requirements of foundational AI companies."
+      ],
+      "implications": [
+        "A successful IPO would provide OpenAI with massive capital, potentially accelerating its technological advancements and market dominance.",
+        "Becoming a public company would subject OpenAI to stricter financial scrutiny and demands for profitability."
+      ]
+    }
   },
   "id_1l8d78c": {
     "id": "id_1l8d78c",
@@ -14069,7 +14264,18 @@
     "sourceName": "매일경제 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "Potential Restrictions on Jeonse Loans for Non-Resident Single Homeowners",
+      "summary": [
+        "The government is considering restricting 'jeonse' loans for individuals who own a single home but do not reside in it.",
+        "This policy shift follows the President's targeted remarks aimed at curbing speculative practices in the housing market.",
+        "The measure is intended to stabilize real estate and rental prices by limiting leveraged investments."
+      ],
+      "implications": [
+        "Homeowners leveraging jeonse loans for real estate investments could face significant liquidity constraints.",
+        "The policy may alter supply dynamics in the rental market, potentially affecting overall housing accessibility."
+      ]
+    }
   },
   "id_b4af6v": {
     "id": "id_b4af6v",
@@ -14217,7 +14423,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "Falling KRW/USD Exchange Rate",
+      "summary": [
+        "The Won-to-Dollar exchange rate has recently experienced a downward trend.",
+        "Market participants are closely monitoring the shift in currency valuation.",
+        "The depreciation of the dollar could impact export-driven domestic companies."
+      ],
+      "implications": [
+        "Lower exchange rates reduce the cost of imported goods, potentially easing domestic inflation.",
+        "Exporters may face decreased price competitiveness in global markets."
+      ]
+    }
   },
   "id_tz4crz": {
     "id": "id_tz4crz",
@@ -15789,7 +16006,18 @@
     "sourceName": "매일경제 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "Convenience Store Snack Sales Jump 8x After Jensen Huang's Endorsement",
+      "summary": [
+        "A specific convenience store snack experienced an 8-fold surge in sales.",
+        "The massive increase was triggered after Nvidia CEO Jensen Huang was seen eating it.",
+        "This demonstrates the powerful marketing impact of prominent tech figures on consumer goods."
+      ],
+      "implications": [
+        "Retailers can capitalize on viral moments generated by high-profile personalities.",
+        "Brand visibility can shift unpredictably based on social media trends."
+      ]
+    }
   },
   "id_r28q23": {
     "id": "id_r28q23",
@@ -15940,7 +16168,18 @@
     "sourceName": "매일경제 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "KOSPI Plummets 5% to 7700 Level; Samsung Electronics Drops 6%",
+      "summary": [
+        "The KOSPI index experienced a severe 5% drop, falling to the 7700 level.",
+        "Tech giant Samsung Electronics led the decline with a sharp 6% decrease in its stock price.",
+        "The broad market sell-off indicates heightened investor panic and macroeconomic concerns."
+      ],
+      "implications": [
+        "Investors may adopt a risk-off sentiment, shifting capital to safer assets.",
+        "Major tech stocks are highly vulnerable to broader market and economic headwinds."
+      ]
+    }
   },
   "id_33nd3p": {
     "id": "id_33nd3p",
@@ -16309,8 +16548,7 @@
         "베트남, 인도네시아 등 해외 법인의 이익 기여도가 구조적으로 상승하고 있는 은행 및 플랫폼 기업(결제, 핀테크)들의 장기 성장 스토리(Valuation Premium)가 유효합니다.",
         "현지화 전략에 성공하여 글로벌 순이익 비중이 일정 궤도에 오른 대형 금융지주사에 대한 장기 투자 매력도가 부각됩니다."
       ]
-    },
-    "translatedTitle": "금감원, 위기 속에서도 기회 창출 모색... '금융사 해외 진출 지원 간담회' 개최"
+    }
   },
   "id_lghayi": {
     "id": "id_lghayi",
@@ -16380,8 +16618,7 @@
         "푸드테크는 인구 감소와 외식 인건비 상승을 헤지할 수 있는 필수 산업으로, 관련 로봇 자동화 및 AI 솔루션 기업들의 구조적 성장이 기대됩니다.",
         "이러한 포럼을 통해 대기업과 스타트업 간의 B2B 파트너십 및 M&A가 활성화될 가능성이 높습니다."
       ]
-    },
-    "translatedTitle": "성남산단, K-푸드테크 혁신 이끄는 'AI 리더스포럼' 출범... 참가자 대거 모집"
+    }
   },
   "id_1mxj1mq": {
     "id": "id_1mxj1mq",
@@ -16532,7 +16769,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "NY Stock Market Semiconductor Rebound Fails; Pressure on Samsung and SK Hynix",
+      "summary": [
+        "The US stock market failed to sustain a rebound in the semiconductor sector.",
+        "This global tech weakness is applying downward pressure on Korean chipmakers like Samsung Electronics and SK Hynix.",
+        "Market sentiment remains fragile amid uncertainties in tech demand and valuations."
+      ],
+      "implications": [
+        "Prolonged weakness in US tech stocks will heavily weigh on the Korean stock market.",
+        "Semiconductor companies may face challenges in maintaining their market valuations."
+      ]
+    }
   },
   "id_17s7erj": {
     "id": "id_17s7erj",
@@ -16794,8 +17042,7 @@
         "유가 하락은 인플레이션 압력을 완화시켜 채권 시장에 우호적으로 작용하지만, 미 연준의 매파적 스탠스가 상단을 제한하고 있습니다.",
         "금리 민감도가 높은 성장주 투자는 CPI 확인 전까지 보수적으로 접근하고, 단기 트레이딩 위주의 전략이 필요합니다."
       ]
-    },
-    "translatedTitle": "국채선물, 미국 채권 강세와 유가 하락 속에 혼조세 출발"
+    }
   },
   "id_y2o1jb": {
     "id": "id_y2o1jb",
@@ -16961,8 +17208,7 @@
         "반도체 팹(Fab) 신설 부지에 대한 정책 리스크는 반도체 장비 및 건설 인프라 관련주들의 단기적인 노이즈로 작용할 수 있습니다.",
         "결과적으로 기존 용인·평택 등 수도권 클러스터의 집적 효율을 극대화하는 방향으로 선회할 가능성이 높아 관련 수도권 거점 기업들의 지속적인 수혜가 예상됩니다."
       ]
-    },
-    "translatedTitle": "정치권은 띄우는데 기업은 \"글쎄\"... 충청·호남 반도체 공장 투자 논란"
+    }
   },
   "id_y6pr0m": {
     "id": "id_y6pr0m",
@@ -17317,8 +17563,7 @@
         "핵심 개발 인력의 이탈 우려와 서비스 셧다운 가능성은 카카오의 펀더멘털 신뢰도를 낮추며 주가의 강력한 하방 요인으로 작용합니다.",
         "경영 정상화 및 노사 갈등 봉합이라는 확실한 모멘텀이 확인되기 전까지는 카카오 그룹주 전반에 대한 보수적인 투자 관점을 견지해야 합니다."
       ]
-    },
-    "translatedTitle": "카카오 창사 이래 첫 전면 파업 돌입... 노조 측 \"참여 인원 1,000명 훌쩍 넘겨\""
+    }
   },
   "id_kyp7i7": {
     "id": "id_kyp7i7",
@@ -17479,8 +17724,7 @@
         "단기 변동성에도 불구하고 기업들의 이익 전망치(EPS)가 상향 조정되는 업종(반도체, 자동차 등)은 시장 수익률을 상회할 가능성이 높습니다.",
         "매크로 지표보다는 철저한 바텀업(Bottom-up) 방식을 통해 ROE가 구조적으로 개선되는 저평가 기업 발굴이 필요한 시점입니다."
       ]
-    },
-    "translatedTitle": "국내 주요 증시 지표 동향: 코스피 시가총액 및 EPS 현황"
+    }
   },
   "id_1rj4gma": {
     "id": "id_1rj4gma",
@@ -17503,8 +17747,7 @@
         "정부 정책의 후방 지원을 받는 직업 훈련 민간 기업 및 HR(인적자원관리) 에듀테크 관련 중소형주들의 중장기적인 시장 확대 기회로 연결될 수 있습니다.",
         "국내 노동 시장의 글로벌 기준 부합 노력이 강화되며, 기업들의 ESG(S, Social) 경영 평가 지표가 향후 투자 유치의 주요 잣대가 될 것입니다."
       ]
-    },
-    "translatedTitle": "한국기술교육대, UN 산하 ILO 국제훈련센터와 공동 석사과정 전격 개설"
+    }
   },
   "id_6rcnq7": {
     "id": "id_6rcnq7",
@@ -17596,8 +17839,7 @@
         "기후 변화가 기업의 새로운 비즈니스 모델 창출 기회로 이어지는 사례로, 동원산업의 내수 매출 다각화 및 마진율 상승 트리거로 작용할 수 있습니다.",
         "신선 식품 유통 확대로 콜드체인 물류 및 포장 기술 관련 밸류체인 기업들에게 긍정적인 파급 효과가 기대됩니다."
       ]
-    },
-    "translatedTitle": "기후변화가 바꾼 밥상... 동원산업, 온난화로 한반도에 잡힌 '국내산 참치' 유통 개시"
+    }
   },
   "id_fw3on7": {
     "id": "id_fw3on7",
@@ -17678,7 +17920,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "Exchange Rate Forecast: The Importance of Authorities' Unyielding Will",
+      "summary": [
+        "Financial authorities are demonstrating a strong commitment to stabilizing the exchange rate.",
+        "Market analysts believe government intervention and policy direction will be key drivers of currency movement.",
+        "Traders are advised to watch for signals from the central bank regarding further FX market interventions."
+      ],
+      "implications": [
+        "Speculative trading against the domestic currency may be curtailed by strong government stances.",
+        "Policy predictability provides some stabilization for foreign investors."
+      ]
+    }
   },
   "id_ogtzte": {
     "id": "id_ogtzte",
@@ -17701,8 +17954,7 @@
         "환율 상승과 지정학적 리스크 부각은 단기적으로 외국인 수급 이탈을 가속화하여 대형주 중심의 지수 하락을 초래할 수 있습니다.",
         "이러한 시기에는 방산, 정유 등 리스크 헤지(Hedge)가 가능한 섹터로 단기 피신하거나 현금 비중을 확대하는 전략이 바람직합니다."
       ]
-    },
-    "translatedTitle": "중동 불안(아파치헬기 격추)에 급등한 환율, 흔들린 반도체 투심"
+    }
   },
   "id_py8oft": {
     "id": "id_py8oft",
@@ -18267,8 +18519,7 @@
         "외식 물가 상승에도 불구하고 프리미엄 버거 수요는 견조하여, 관련 프랜차이즈 및 식자재 유통 기업의 실적 안정성이 돋보입니다.",
         "곡물 가격 안정화에 따른 수입육 원가 하락 시, 식자재 유통 B2B 기업들의 마진 스프레드가 확대될 수 있습니다."
       ]
-    },
-    "translatedTitle": "미국육류수출협회, '2026 아메리칸 버거위크'로 미국산 소고기 소비 촉진"
+    }
   },
   "id_bpbq5o": {
     "id": "id_bpbq5o",
@@ -18452,8 +18703,7 @@
         "기업 밸류업 프로그램의 성공적 안착 여부가 국내 증시뿐만 아니라 원·달러 환율의 안정화를 쥐고 있는 핵심 키로 부상했습니다.",
         "외국인 수급 유입 전까지는 환율 고점론을 속단하기 이르며, 수출 중심의 이익 성장주(조선, 자동차부품, K-뷰티)로의 포트폴리오 압축이 필요합니다."
       ]
-    },
-    "translatedTitle": "현대차증권 \"올해 원·달러 환율 급등세, 외국인 주식 매도 물량이 절반 이상 설명\""
+    }
   },
   "id_1bdu1b6": {
     "id": "id_1bdu1b6",
@@ -18476,8 +18726,7 @@
         "국내 반도체 인프라 지원 정책의 속도에 따라 소부장 밸류체인의 성장 궤도가 달라질 수 있습니다.",
         "해외 진출 시 글로벌 인프라 및 장비 네트워크를 갖춘 국내 핵심 협력사들의 수혜가 커질 전망입니다."
       ]
-    },
-    "translatedTitle": "최태원 \"차기 반도체 공장, 용인 다음은 종합적 검토 거쳐 결정\""
+    }
   },
   "id_1ts9d0b": {
     "id": "id_1ts9d0b",
@@ -18500,8 +18749,7 @@
         "채권 금리 상승은 주식 시장의 밸류에이션 부담을 가중시키며, 특히 배당주와 성장주에 하방 압력을 가할 수 있습니다.",
         "CPI 결과가 안정적으로 나올 경우 채권 금리는 다시 빠르게 하향 안정화될 것이므로, 핵심 이벤트 통과 후 채권 비중 확대 전략이 유효합니다."
       ]
-    },
-    "translatedTitle": "장기물 국고채 금리 상승... 미 CPI 발표 대기 속 불안한 채권시장"
+    }
   },
   "id_1s3c54e": {
     "id": "id_1s3c54e",
@@ -18779,6 +19027,341 @@
       "implications": [
         "Consumers will need to shift their Onnuri certificate spending from cosmetic clinics back to traditional retail and grocery.",
         "Traditional market vendors may see a slight increase in certificate usage as alternative spending avenues are restricted."
+      ]
+    }
+  },
+  "id_fp9uae": {
+    "id": "id_fp9uae",
+    "title": "작년 13조원 뿌렸는데…소비쿠폰 10만원당 신규 소비 2만원 늘었다 - 조선일보",
+    "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNdG8yTC1RM2VQYzBvRWxLekZnUWNHQklybUl4ZVBSMjc0WU1vMkUybkVfYkNyNWlYT1pha2hNTVVxZFBxUFQ1WnpNenlqZUVpNlJ5aFM5c2RhR3c3Y3ZwRnNDeFZSZnBvdHhWREw1alJ6cC1qVE4xME9hQlVIZWpLclNuODlhSDBvRjVHQmhR?oc=5",
+    "description": "작년 13조원 뿌렸는데…소비쿠폰 10만원당 신규 소비 2만원 늘었다  조선일보",
+    "date": "2026-06-10T03:07:03.000Z",
+    "sourceId": "chosun",
+    "sourceName": "조선일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "Low Efficiency of Consumption Coupons: Only 20% Net Increase in Spending",
+      "summary": [
+        "Despite the government spending 13 trillion won on consumption coupons last year, the economic multiplier was low.",
+        "Data shows that every 100,000 won in coupons generated only 20,000 won in new, additional spending.",
+        "The policy largely subsidized existing consumption rather than stimulating significant new demand."
+      ],
+      "implications": [
+        "Future fiscal stimulus packages may need structural redesigns to improve actual economic impact.",
+        "Direct consumer subsidies show diminishing returns in boosting overall macroeconomic consumption."
+      ]
+    }
+  },
+  "id_809g6h": {
+    "id": "id_809g6h",
+    "title": "해외 쇼핑몰 먹튀에 카드환불도 수개월…피해 막으려면 안심설정 필수 - 매일경제",
+    "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1sRUVwRWtUQ2h4dWhranF4bjhWcDg1Rm1FV3Bkc24wX01iMG01dGR6WkxhTlQxWGZZY1M5YTh0YUtJX2VzOWZNSTJtSThlN1Z6MDlxaA?oc=5",
+    "description": "해외 쇼핑몰 먹튀에 카드환불도 수개월…피해 막으려면 안심설정 필수  매일경제",
+    "date": "2026-06-09T05:14:41.000Z",
+    "sourceId": "maekyung",
+    "sourceName": "매일경제 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "Months of Delays for Card Refunds on Overseas Shopping Scams",
+      "summary": [
+        "Consumers are experiencing multi-month delays in receiving credit card refunds for overseas shopping mall scams.",
+        "The complex international chargeback process makes recovery difficult and time-consuming.",
+        "Authorities recommend utilizing card safety settings and virtual card numbers to prevent damage."
+      ],
+      "implications": [
+        "Card issuers may need to improve consumer protection mechanisms for cross-border transactions.",
+        "Consumers must exercise higher caution and utilize preventive security features for overseas purchases."
+      ]
+    }
+  },
+  "id_16sim61": {
+    "id": "id_16sim61",
+    "title": "미국 경제전문가 70% '연내 금리동결 전망' - 연합뉴스",
+    "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBUdVY2T3FJellDaGhISkdGZHJPeDd2R3lQbVBqZGtBQ0JxRnZBZ09MSF9GakZMYThTSExidTVoNXlkSGdkQVhyYzZQMkRJVFUxRDcwMU5qekNvQ0dRZU5nVdIBYEFVX3lxTFBUdVY2T3FJellDaGhISkdGZHJPeDd2R3lQbVBqZGtBQ0JxRnZBZ09MSF9GakZMYThTSExidTVoNXlkSGdkQVhyYzZQMkRJVFUxRDcwMU5qekNvQ0dRZU5nVQ?oc=5",
+    "description": "미국 경제전문가 70% '연내 금리동결 전망'  연합뉴스",
+    "date": "2026-06-10T02:14:41.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "70% of US Economic Experts Forecast Interest Rate Freeze This Year",
+      "summary": [
+        "A significant majority (70%) of US economic experts predict that interest rates will remain frozen for the rest of the year.",
+        "The consensus suggests that inflation is cooling sufficiently without requiring further rate hikes.",
+        "Experts believe the Federal Reserve will maintain the current rates to avoid triggering a recession."
+      ],
+      "implications": [
+        "A stable interest rate environment could provide relief to equity markets and corporate borrowing.",
+        "Emerging markets may experience less capital flight if US rates do not rise further."
+      ]
+    }
+  },
+  "id_1nqr972": {
+    "id": "id_1nqr972",
+    "title": "“돈 갚는 사람도, 받는 곳도 걱정”...금리 공포 커진 2금융권 - 에너지경제신문",
+    "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFAwYUNHbjE2bmFuVE45ejAyS1RLdkQ2cXhfU1hLYS1ZbV9VUEFId3FfalhHMHZvRzQ0YnRod2RVdUxLUVNrY2w5Wnc4MEx4MGtHOWVpWjBHZjBIVkxtSG1DSXdKMA?oc=5",
+    "description": "“돈 갚는 사람도, 받는 곳도 걱정”...금리 공포 커진 2금융권  에너지경제신문",
+    "date": "2026-06-10T07:07:44.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "Growing Interest Rate Fears in the Secondary Financial Sector",
+      "summary": [
+        "Both borrowers and lending institutions in the secondary financial sector are facing heightened anxiety over interest rates.",
+        "Rising borrowing costs are increasing the risk of loan defaults among vulnerable consumers.",
+        "Non-bank lenders are concerned about liquidity crunches and deteriorating asset quality."
+      ],
+      "implications": [
+        "Increased delinquency rates could lead to stricter lending standards, squeezing credit for low-income borrowers.",
+        "Regulatory bodies may need to intervene to prevent systemic risks in the non-banking sector."
+      ]
+    }
+  },
+  "id_g3pp54": {
+    "id": "id_g3pp54",
+    "title": "삼전·닉스 영향?… ‘반도체 계약학과’ 10명 중 8명 수시로 뽑는다 - 한국대학신문",
+    "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1zNkc2TVN2Y0xhZGxIbE40VGVkVWpjdkJLNHdaR3dNM1A0T3AwbFpCTEdDaGwzQUhucS16Q0JYeFBOakhtY01SUkhia1hrejRtbFdTSzJ2cXlaMEtYYTM3TWRFUk96QQ?oc=5",
+    "description": "삼전·닉스 영향?… ‘반도체 계약학과’ 10명 중 8명 수시로 뽑는다  한국대학신문",
+    "date": "2026-06-10T05:21:47.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "80% of Semiconductor Contract Department Students Recruited Early",
+      "summary": [
+        "Universities with semiconductor contract departments are recruiting 8 out of 10 students through early admissions.",
+        "The strong demand is largely driven by guaranteed employment at major firms like Samsung and SK Hynix.",
+        "This aggressive recruitment strategy highlights the intense competition for top engineering talent."
+      ],
+      "implications": [
+        "The tech industry's direct involvement in academia ensures a steady pipeline of specialized talent.",
+        "Other engineering disciplines may face a brain drain as students flock to semiconductor programs."
+      ]
+    }
+  },
+  "id_1fmsiea": {
+    "id": "id_1fmsiea",
+    "title": "TSMC \"인플레로 비용 상승…반도체 가격 인상 가능성 배제 안해\" - 연합뉴스",
+    "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9uS0tSSk5fc0EtVTBjcU9PMjRsUDVweDZwVmNGWUlkQmZoLWlKME42dHFQd1BweEtwZkVVZC15WGRQb2RMdjlsWUdWeFhRdWVsNVNfYlFCVmVRSXo3ZVAtR9IBYEFVX3lxTE9uS0tSSk5fc0EtVTBjcU9PMjRsUDVweDZwVmNGWUlkQmZoLWlKME42dHFQd1BweEtwZkVVZC15WGRQb2RMdjlsWUdWeFhRdWVsNVNfYlFCVmVRSXo3ZVAtRw?oc=5",
+    "description": "TSMC \"인플레로 비용 상승…반도체 가격 인상 가능성 배제 안해\"  연합뉴스",
+    "date": "2026-06-10T02:27:10.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "TSMC Does Not Rule Out Semiconductor Price Hikes Due to Inflation",
+      "summary": [
+        "TSMC has indicated that it is facing rising operational costs driven by global inflation.",
+        "The foundry giant stated it is not ruling out the possibility of increasing semiconductor prices to offset these costs.",
+        "Such a move would reflect the broader inflationary pressures impacting the global tech supply chain."
+      ],
+      "implications": [
+        "Higher chip prices will increase manufacturing costs for electronics, potentially passing the burden to end consumers.",
+        "Competitors may follow suit, leading to an industry-wide elevation in semiconductor pricing."
+      ]
+    }
+  },
+  "id_k5bjga": {
+    "id": "id_k5bjga",
+    "title": "\"美금리인하 테이블서 치워져…워시, 트럼프에 배드뉴스 전해야\" - 연합인포맥스",
+    "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1XdkJtOUk3b3FOa2JyWDBSZkllRlc2MW9XTkVPZ0VEMkpaa2NtajJjdGthUUFYSHhDdXZtOWJFX3Byak9uNFExdkJhNTlJXzJhWXlycXB0VUJMalVzRVJ6djdsUktkS0NBY2xJVUdyOVQ?oc=5",
+    "description": "\"美금리인하 테이블서 치워져…워시, 트럼프에 배드뉴스 전해야\"  연합인포맥스",
+    "date": "2026-06-10T07:04:14.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "US rate cut off the table... Warsh needs to deliver bad news to Trump",
+      "summary": [
+        "The expectation for a US interest rate cut has significantly diminished.",
+        "Kevin Warsh is reportedly in a position where he must deliver this unfavorable news to Donald Trump."
+      ],
+      "implications": [
+        "Higher for longer US interest rates could strengthen the dollar and pressure global equity markets.",
+        "Trump's economic policies might face headwinds if borrowing costs remain elevated."
+      ]
+    }
+  },
+  "id_1kdkbvk": {
+    "id": "id_1kdkbvk",
+    "title": "[무등의 아침] 정진욱 “호남에 반도체 기업 투자 확정적…통합특별시, 원스톱 지원 체계 갖춰야” - KBS 뉴스",
+    "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE43VkhzYk9CN1k5NEVwQjgyblYyM1ZUcDR5TFRwT3FYSFVnZUo4NWJsN0todFEwMFZlSVM5WWxXMFMtOF9DcHNDcGtlODZIa0JtSUE1dHpYTWFodzA?oc=5",
+    "description": "[무등의 아침] 정진욱 “호남에 반도체 기업 투자 확정적…통합특별시, 원스톱 지원 체계 갖춰야”  KBS 뉴스",
+    "date": "2026-06-10T01:56:00.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "Semiconductor company investment in Honam is certain... Integrated special city must have a one-stop support system",
+      "summary": [
+        "Investment from major semiconductor companies in the Honam region is considered highly likely.",
+        "Local officials emphasize the need for an integrated administrative system to provide seamless support for such investments."
+      ],
+      "implications": [
+        "The Honam region could see significant economic growth and job creation from the semiconductor industry.",
+        "Successful integration could serve as a model for regional development outside the capital area."
+      ]
+    }
+  },
+  "id_ensuyu": {
+    "id": "id_ensuyu",
+    "title": "‘최고 연 3.7%’ 은행 예금금리 뛰었다…5대 은행은 아직 ‘연 2%대’ - 에너지경제신문",
+    "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9ENWxoRjVBM1FNTUFtZE1SV1ZZU0hxNF93MUJCbVpZcGZ4UXQxTlZhSVR4cTg2U3JGMF94LUc0UFBpbkJabktKSGg5WlZGNHJXcmVkOFZYR1E2OHNWUl9NaC0waw?oc=5",
+    "description": "‘최고 연 3.7%’ 은행 예금금리 뛰었다…5대 은행은 아직 ‘연 2%대’  에너지경제신문",
+    "date": "2026-06-10T06:47:58.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "Bank deposit rates jump up to 'max 3.7% annually'... Top 5 banks still at '2% range'",
+      "summary": [
+        "Deposit interest rates at some banks have increased, reaching up to 3.7% annually.",
+        "However, the top five major commercial banks are still maintaining their deposit rates in the 2% range."
+      ],
+      "implications": [
+        "Consumers may shift funds to smaller or specialized banks offering higher deposit rates.",
+        "The disparity in rates reflects different liquidity needs and competitive strategies among financial institutions."
+      ]
+    }
+  },
+  "id_1h2rozt": {
+    "id": "id_1h2rozt",
+    "title": "원·달러 환율, 12.1원 오른 1524.2원 마감 - 조선비즈 - Chosunbiz",
+    "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPOThuWDd6RjI1UE1iMVR5VUMzOHRIUWJVV181RXBlUlZwWUQxcWx1RngzcWRXdnlZRWJNWXI3RDNtclRIc0xTc1JhM3FPSkZRUnBYZlJBejdoWXJOcVRZa2JMMm1nSWk3STFnOVRoMlJsaWxTMmZXQkNNSU1Hbl8yU01YUjI3d9IBmgFBVV95cUxPTUdzN041SlAzUmRpRXptUjhzaXBHTkdQcVlnSWNMVTZnc2tKSmxOSG16SmJyX0FWUU5vZEpMekM3V2o3M1Fnc1NScFpSRXBpdEFkNmVINUFsYWlhNFBSTzVWQXItQnFvWEstaVhIZnVYWTl6TS1zeFpDMlZLdGRkV2Exa0s2b21hWjhVRzltNUtkUzZVcXRpbk5n?oc=5",
+    "description": "원·달러 환율, 12.1원 오른 1524.2원 마감 - 조선비즈  Chosunbiz",
+    "date": "2026-06-10T06:33:00.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "KRW-USD exchange rate closes at 1524.2 won, up 12.1 won",
+      "summary": [
+        "The Korean won to US dollar exchange rate has surged significantly.",
+        "It closed at 1524.2 won, marking an increase of 12.1 won from the previous session."
+      ],
+      "implications": [
+        "A weaker won will increase the cost of imported goods, potentially exacerbating domestic inflation.",
+        "South Korean exporters might benefit from increased price competitiveness in global markets."
+      ]
+    }
+  },
+  "id_uewvbt": {
+    "id": "id_uewvbt",
+    "title": "이개호 \"삼성·SK 반도체 공장, 첨단3지구가 최적지\" - KBC광주방송",
+    "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBkZHFJMVFHNXNJeWdnU01RckdnRE9ZSDRTb1VNU2d6YTRZejQtbUlsYTdlUWE5U2hhZllFTHd6dWJMTGt4Mm8zQmI5TEliQ3Q3dG1sQmpfV3IwZ2dsMXE3aQ?oc=5",
+    "description": "이개호 \"삼성·SK 반도체 공장, 첨단3지구가 최적지\"  KBC광주방송",
+    "date": "2026-06-10T06:23:33.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "Lee Gae-ho: 'Cheomdan District 3 is the optimal location for Samsung and SK semiconductor plants'",
+      "summary": [
+        "Lawmaker Lee Gae-ho advocated for Cheomdan District 3 as the best site for future semiconductor factories of Samsung and SK."
+      ],
+      "implications": [
+        "Intensifying regional competition for semiconductor investments within South Korea.",
+        "Potential boost to local real estate and infrastructure development in the Cheomdan area."
+      ]
+    }
+  },
+  "id_bzwju7": {
+    "id": "id_bzwju7",
+    "title": "환율 쏠림 ‘주범’ NDF…전세계 거래 20%는 ‘원화’ [이슈&뷰] - v.daum.net",
+    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9CMU1vTF9aVGFyamhodWpBaDdORmt5THlPTXYtWms5Vmx0Y2pnaDJjYWp1eDZ6eWpudUZIS0s0cmZDaUhNTkZHbWp2U3QwQlE?oc=5",
+    "description": "환율 쏠림 ‘주범’ NDF…전세계 거래 20%는 ‘원화’ [이슈&뷰]  v.daum.net",
+    "date": "2026-06-10T02:42:50.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "NDF, the 'main culprit' behind exchange rate skew... 20% of global trading is in 'KRW'",
+      "summary": [
+        "Non-Deliverable Forwards (NDF) are identified as a major driver of the recent skew in the exchange rate.",
+        "Korean Won (KRW) accounts for a significant 20% of the total global NDF trading volume."
+      ],
+      "implications": [
+        "The Korean won is highly vulnerable to speculative trading in offshore markets.",
+        "Policymakers may need stronger measures to mitigate excessive volatility driven by external forces."
+      ]
+    }
+  },
+  "id_nmfomj": {
+    "id": "id_nmfomj",
+    "title": "TSMC \"인플레로 비용 상승 초래\"‥반도체 가격 인상 시사 - MBC 뉴스",
+    "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9heWRWcDJFbkpMUGUteWVpczFXZ3ExdXBPSWkxTnpBZUlFZ1RvV0Rwb253RkNjdEFoS01lTUVPbFJsWW5KekNQQWdMSGk0QnJPV2NVaHlhY0pjaWlwelR1UUxhX0MyUDJlTlV6M3pXUDJRZHJW0gF0QVVfeXFMUEFjWDgxbGg2R19iU0V4aWNpWUdKM0paZDI5NlpaZmZyckxabEpLejI0R0dCdU1LU2M1Q1BKS0lTSUpac1hBanBHbVJWMHdJYkdqYUlKT1d3VGM0ejN3UEM3TkQ5QVVFRS1Ebk5aa21RY3NSZkM?oc=5",
+    "description": "TSMC \"인플레로 비용 상승 초래\"‥반도체 가격 인상 시사  MBC 뉴스",
+    "date": "2026-06-10T05:34:13.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "TSMC hints at semiconductor price hikes... 'Inflation causes cost increases'",
+      "summary": [
+        "TSMC has indicated the possibility of raising semiconductor prices.",
+        "The company cited rising costs driven by global inflation as the primary reason for this potential move."
+      ],
+      "implications": [
+        "Higher chip prices will likely increase the manufacturing costs for a wide range of electronics.",
+        "This could further fuel global inflationary pressures across tech-dependent industries."
+      ]
+    }
+  },
+  "id_1xy5xj0": {
+    "id": "id_1xy5xj0",
+    "title": "가계·기업·은행 덮친 고환율 비용 … 물가·금리·건전성 흔들 - 뉴데일리",
+    "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1YZFJkbktHaFhZSkpWS1BVNkc2QjRBb2JZek84eGxacjVydl9UclBMeWVWYXZ0N1hvQVFxUVptOFdqSElEZXpvVlRfVi1Va2d4Q1lQTldqX0s2b3haVlFEZTJibnhtU1NZRzF6dkdkZjEzTkhscHNkX2RXb9IBgAFBVV95cUxPYV9xLTFuODBLbTg5em5kNDcwZ0hTdTljTGY3YXFYSjROTl9GWXYxMWp3Mm5NeGZpOFdqXy1CQXNDSXZyc0J2N3RCb2Exay1Eaml2aHBWU1FKcDZrYVVQRG13WXI2eDRXSUVYVEthTjZmZlh0WjhDTWljWUstMUl5dg?oc=5",
+    "description": "가계·기업·은행 덮친 고환율 비용 … 물가·금리·건전성 흔들  뉴데일리",
+    "date": "2026-06-10T05:31:40.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "High exchange rate costs hitting households, businesses, and banks... Shaking prices, interest rates, and soundness",
+      "summary": [
+        "The elevated exchange rate is imposing significant financial burdens across various sectors of the economy.",
+        "This situation is causing instability in consumer prices, interest rates, and the overall financial soundness of institutions."
+      ],
+      "implications": [
+        "Reduced consumer spending and corporate investment due to higher costs.",
+        "Increased risk of non-performing loans for banks as borrowers struggle with financial strain."
+      ]
+    }
+  },
+  "id_10fvcgb": {
+    "id": "id_10fvcgb",
+    "title": "고물가에 초저가 상품 매출 ↑… 롯데마트, 1000원 이하 PB 상품 늘린다 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBRbFJxOTEwaF9RZmdJcGgyVmRINVAyaW1JMk9iZlBzOHFsRzlWM0hkdlM3NWs2Y283dXVqRUtIeDhZbGFvWi1vaGxEYzVBZ0tUWjlnNGlQZ2FRQ2F0MTdsRVpmUDhsUXBqQ0dOUmQxOXpyNWoxb1HSAWZBVV95cUxQS3l3aWVENXNpWDhnejd4d2stVG1RSWEzVU8tX24xMGxXa2pRdXR6cXlJODRlX2dRaUNweVZ3UlFIMWRlZ2V2TjhFdkszM0ViTno2Z2xYSFdrZjk3SmZOTVVNR2QyWWc?oc=5",
+    "description": "고물가에 초저가 상품 매출 ↑… 롯데마트, 1000원 이하 PB 상품 늘린다  동아일보",
+    "date": "2026-06-10T01:10:38.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "Sales of ultra-low-priced goods soar due to high inflation... Lotte Mart expands PB products under 1,000 won",
+      "summary": [
+        "As high inflation persists, consumer demand for extremely cheap products has surged.",
+        "In response, Lotte Mart is increasing its range of private brand (PB) goods priced under 1,000 won."
+      ],
+      "implications": [
+        "A shift in consumer behavior towards extreme frugality and value-seeking.",
+        "Retailers will likely face tighter profit margins and must optimize supply chains for low-cost goods."
       ]
     }
   }
