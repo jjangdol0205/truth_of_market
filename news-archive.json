@@ -1236,7 +1236,18 @@
     "sourceName": "동아일보 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "‘5일 만에 완판’ 국민성장펀드, 3분기 6000억 규모 2차 출시",
+      "summary": [
+        "1차 출시 당시 5일 만에 완판되며 큰 인기를 끌었던 국민성장펀드가 3분기에 2차로 출시된다.",
+        "이번 2차 펀드는 6,000억 원 규모로 조성되어 투자자들의 자금을 유치할 계획이다.",
+        "국내 기업의 성장 동력 확보 및 개인 자산 증식을 위한 정부의 적극적인 지원 정책의 일환이다."
+      ],
+      "implications": [
+        "침체된 주식 시장 및 투자 시장에 새로운 활력을 불어넣고 긍정적인 투자 심리를 형성할 것으로 기대된다.",
+        "관련 펀드 판매를 담당하는 금융기관들의 수수료 수익 및 실적 개선에 기여할 것이다."
+      ]
+    }
   },
   "id_o7ae4h": {
     "id": "id_o7ae4h",
@@ -8273,10 +8284,10 @@
     "link": "https://www.nytimes.com/2026/06/11/insider/spacex-ipo-coverage-facts-price.html",
     "description": "Two Times tech reporters and their editor talk about assessing the sky-high valuation of the rocket and satellite maker, the potential economic impact of its public debut and the role of the world’s richest man in it all.",
     "date": "2026-06-12T17:12:53.000Z",
-    "sourceId": "nyt-tech",
-    "sourceName": "NYT 테크놀로지",
+    "sourceId": "nyt-biz",
+    "sourceName": "NYT 비즈니스",
     "lang": "en",
-    "category": "Tech",
+    "category": "Markets",
     "aiAnalysis": null
   },
   "id_s5cwms": {
@@ -9941,10 +9952,10 @@
     "link": "https://www.nytimes.com/2026/06/12/technology/spacex-ipo-elon-musk.html",
     "description": "The blockbuster stock market debut of Elon Musk’s rocket company paves the way for a wave of enormous offerings that are coming from OpenAI and Anthropic.",
     "date": "2026-06-12T20:52:00.000Z",
-    "sourceId": "nyt-tech",
-    "sourceName": "NYT 테크놀로지",
+    "sourceId": "nyt-biz",
+    "sourceName": "NYT 비즈니스",
     "lang": "en",
-    "category": "Tech",
+    "category": "Markets",
     "aiAnalysis": null
   },
   "id_1cu1bw0": {
@@ -9953,10 +9964,10 @@
     "link": "https://www.nytimes.com/2026/06/12/technology/spacex-ipo-journey.html",
     "description": "Elon Musk said he had initially given SpaceX less than a 10 percent chance of succeeding. His rocket company has come a long way.",
     "date": "2026-06-12T20:48:07.000Z",
-    "sourceId": "nyt-tech",
-    "sourceName": "NYT 테크놀로지",
+    "sourceId": "nyt-biz",
+    "sourceName": "NYT 비즈니스",
     "lang": "en",
-    "category": "Tech",
+    "category": "Markets",
     "aiAnalysis": null
   },
   "id_1o82fiy": {
@@ -9965,10 +9976,10 @@
     "link": "https://www.nytimes.com/2026/06/12/technology/elon-musk-trillionaire.html",
     "description": "With SpaceX shares soaring 20 percent on their first day of trading, the world’s richest person crossed another milestone — one with 13 digits.",
     "date": "2026-06-12T20:38:48.000Z",
-    "sourceId": "nyt-tech",
-    "sourceName": "NYT 테크놀로지",
+    "sourceId": "nyt-biz",
+    "sourceName": "NYT 비즈니스",
     "lang": "en",
-    "category": "Tech",
+    "category": "Markets",
     "aiAnalysis": null
   },
   "id_1fksciq": {
@@ -10013,10 +10024,10 @@
     "link": "https://www.nytimes.com/2026/06/12/upshot/spacex-stock-ipo.html",
     "description": "If you have index funds — such as in a 401(k) — they may soon include shares of the mega company. Here’s a rough calculation.",
     "date": "2026-06-12T20:18:27.000Z",
-    "sourceId": "nyt-tech",
-    "sourceName": "NYT 테크놀로지",
+    "sourceId": "nyt-biz",
+    "sourceName": "NYT 비즈니스",
     "lang": "en",
-    "category": "Tech",
+    "category": "Markets",
     "aiAnalysis": null
   },
   "id_3y7mw2": {
@@ -11288,7 +11299,18 @@
     "sourceName": "한국경제 증권",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "이진호 기자 - 한경매거진&북",
+      "summary": [
+        "한국경제매거진 소속 이진호 기자의 기사 목록 및 프로필 페이지로 추정됨.",
+        "기자의 전문 분야와 과거 취재 기사들을 확인할 수 있는 인물 정보 성격의 페이지임.",
+        "주요 경제, 산업 동향에 대한 심층적인 분석 기사나 인터뷰 내용을 주로 다루는 것으로 보임."
+      ],
+      "implications": [
+        "특정 매체 기자 개인의 인사이트와 취재 영역을 파악할 수 있는 레퍼런스로 활용 가능함.",
+        "유의미한 경제 뉴스나 산업 트렌드 파악을 위해 해당 기자의 후속 보도를 팔로우업할 필요가 있음."
+      ]
+    }
   },
   "id_7wv8fy": {
     "id": "id_7wv8fy",
@@ -11936,7 +11958,18 @@
     "sourceName": "한국경제 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "이진호 기자 - 한경매거진&북",
+      "summary": [
+        "한국경제매거진 소속 이진호 기자의 기사 목록 및 프로필 페이지로 추정됨.",
+        "기자의 전문 분야와 과거 취재 기사들을 확인할 수 있는 인물 정보 성격의 페이지임.",
+        "주요 경제, 산업 동향에 대한 심층적인 분석 기사나 인터뷰 내용을 주로 다루는 것으로 보임."
+      ],
+      "implications": [
+        "특정 매체 기자 개인의 인사이트와 취재 영역을 파악할 수 있는 레퍼런스로 활용 가능함.",
+        "유의미한 경제 뉴스나 산업 트렌드 파악을 위해 해당 기자의 후속 보도를 팔로우업할 필요가 있음."
+      ]
+    }
   },
   "id_1984jfz": {
     "id": "id_1984jfz",
@@ -12524,7 +12557,18 @@
     "sourceName": "한국경제 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "이진호 기자 - 한경매거진&북",
+      "summary": [
+        "한국경제매거진 소속 이진호 기자의 기사 목록 및 프로필 페이지로 추정됨.",
+        "기자의 전문 분야와 과거 취재 기사들을 확인할 수 있는 인물 정보 성격의 페이지임.",
+        "주요 경제, 산업 동향에 대한 심층적인 분석 기사나 인터뷰 내용을 주로 다루는 것으로 보임."
+      ],
+      "implications": [
+        "특정 매체 기자 개인의 인사이트와 취재 영역을 파악할 수 있는 레퍼런스로 활용 가능함.",
+        "유의미한 경제 뉴스나 산업 트렌드 파악을 위해 해당 기자의 후속 보도를 팔로우업할 필요가 있음."
+      ]
+    }
   },
   "id_gsf7wk": {
     "id": "id_gsf7wk",
@@ -12676,18 +12720,28 @@
     "link": "https://www.nytimes.com/2026/06/14/business/media/trump-ufc-david-ellison.html",
     "description": "A U.F.C. fight on President Trump’s birthday will now double as a capstone for Paramount’s successful effort to secure Justice Department approval for a mega media merger.",
     "date": "2026-06-14T16:13:43.000Z",
-    "sourceId": "nyt-tech",
-    "sourceName": "NYT 테크놀로지",
+    "sourceId": "nyt-biz",
+    "sourceName": "NYT 비즈니스",
     "lang": "en",
-    "category": "Tech",
-    "aiAnalysis": null
+    "category": "Markets",
+    "aiAnalysis": {
+      "translatedTitle": "합병 승인 완료, 데이비드 엘리슨 UFC 경기에서 트럼프와 동석 예정",
+      "summary": [
+        "파라마운트의 대규모 미디어 합병에 대한 법무부 승인이 성공적으로 마무리되었습니다.",
+        "이에 따라 데이비드 엘리슨은 트럼프 전 대통령의 생일에 열리는 UFC 경기에서 함께 모습을 드러낼 예정입니다."
+      ],
+      "implications": [
+        "파라마운트 합병을 통한 거대 미디어 기업 탄생 및 엔터테인먼트 산업 재편",
+        "정치 및 비즈니스 거물들 간의 미디어 및 스포츠 이벤트 관련 네트워킹 강화"
+      ]
+    }
   },
   "id_so2cmx": {
     "id": "id_so2cmx",
     "title": "Oil Prices Tumble After Trump Announces Deal With Iran",
     "link": "https://www.nytimes.com/2026/06/14/business/oil-stocks-gas-iran.html",
     "description": "Oil prices fell and stocks gained early Monday after Iran and the U.S. reached a deal that may allow more energy and other goods to flow through the Strait of Hormuz.",
-    "date": "2026-06-15T05:50:36.000Z",
+    "date": "2026-06-15T05:50:37.000Z",
     "sourceId": "nyt-biz",
     "sourceName": "NYT 비즈니스",
     "lang": "en",
@@ -12738,7 +12792,18 @@
     "sourceName": "NYT 비즈니스",
     "lang": "en",
     "category": "Markets",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "스티븐 스필버그의 신작 SF 영화 '디스클로저 데이', 여름 극장가 흥행 부활 이끌다",
+      "summary": [
+        "할리우드의 거장 스티븐 스필버그 감독이 연출한 새로운 오리지널 SF 영화 '디스클로저 데이'가 북미 박스오피스 정상에 올랐습니다.",
+        "해당 영화는 개봉 첫 주말 북미 극장가에서만 약 4,400만 달러(약 600억 원)의 막대한 수익을 창출할 것으로 추산됩니다.",
+        "이는 스필버그 감독 개인적으로도 무려 24년 만에 여름 성수기 극장가에서 기록한 새로운 대형 흥행 기록으로 평가받고 있습니다."
+      ],
+      "implications": [
+        "경쟁력 있는 메가 히트 콘텐츠의 등장이 글로벌 미디어 및 엔터테인먼트 산업 전반의 투자 심리 개선에 긍정적인 영향을 미칠 것입니다.",
+        "침체기를 겪던 극장 산업이 활력을 되찾는 강력한 신호탄이 되어, 주요 멀티플렉스 극장 체인 기업들의 실적 턴어라운드를 견인할 수 있습니다."
+      ]
+    }
   },
   "id_6jyhoi": {
     "id": "id_6jyhoi",
@@ -12750,7 +12815,18 @@
     "sourceName": "NYT 비즈니스",
     "lang": "en",
     "category": "Markets",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "트럼프에 의해 분열되고 혼란에 빠진 G7 정상회의",
+      "summary": [
+        "월요일에 시작되는 올해 G7 정상회의가 혼란과 분열 속에서 진행되고 있다.",
+        "과거 글로벌 외교 질서를 유지하기 위한 노력을 상징했던 이 회의는 현재 그 파편화를 보여주고 있다.",
+        "특히 트럼프 전 대통령과 관련된 문제들이 주요 분열의 원인으로 지목되고 있다."
+      ],
+      "implications": [
+        "글로벌 외교 및 경제 협력의 불확실성이 증가하며, 국제 사회의 정책 공조가 어려워질 수 있다.",
+        "세계 무역 질서 및 지정학적 리스크 변동에 대비한 각국의 대응책 마련이 필요하다."
+      ]
+    }
   },
   "id_ujep7o": {
     "id": "id_ujep7o",
@@ -12762,7 +12838,18 @@
     "sourceName": "NYT 비즈니스",
     "lang": "en",
     "category": "Markets",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "양극화와 인공지능(AI) 정보 홍수 시대에 뉴스 기업을 운영하는 방법",
+      "summary": [
+        "NBC유니버설 뉴스의 세자르 콘데는 편향된 정보와 AI 생성 콘텐츠가 넘쳐나는 환경에 대해 우려를 표했다.",
+        "그는 결국 대중이 신뢰할 수 있는 주류 미디어 브랜드로 다시 돌아오게 될 것이라고 전망했다.",
+        "혼란스러운 미디어 환경 속에서 뉴스 기업은 정확성과 신뢰도를 높이는 방향으로 나아가야 한다고 강조했다."
+      ],
+      "implications": [
+        "언론사들은 팩트체크 및 저널리즘의 질을 향상시켜 AI 생성 콘텐츠와의 차별성을 확보해야 한다.",
+        "신뢰도 높은 전통 미디어 브랜드들의 시장 지배력이 다시금 강화될 가능성이 있다."
+      ]
+    }
   },
   "id_1jci6yb": {
     "id": "id_1jci6yb",
@@ -12774,7 +12861,18 @@
     "sourceName": "NYT 비즈니스",
     "lang": "en",
     "category": "Markets",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "언론을 상대로 계속되는 캐시 파텔의 소송",
+      "summary": [
+        "캐시 파텔 FBI 국장은 트럼프 전 대통령의 전략을 모방하여 언론을 상대로 법적 대응을 이어가고 있다.",
+        "그는 지난 약 7년 동안 뉴스 미디어 기업과 평론가들을 상대로 총 6건의 명예훼손 소송을 제기했다.",
+        "이러한 행보는 언론의 비판적인 보도를 위축시키려는 시도라는 지적을 받고 있다."
+      ],
+      "implications": [
+        "언론사와 정부 고위직 간의 법적 갈등이 심화되면서 언론의 자유와 취재 활동에 부정적인 영향이 우려된다.",
+        "정치인과 공직자들의 명예훼손 소송 남발이 사회적 논란으로 이어질 수 있다."
+      ]
+    }
   },
   "id_f8cvn9": {
     "id": "id_f8cvn9",
@@ -12786,7 +12884,18 @@
     "sourceName": "NYT 비즈니스",
     "lang": "en",
     "category": "Markets",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "메디케어 가입의 기초: 필수 가이드",
+      "summary": [
+        "미국 연방 건강 보험 프로그램인 메디케어의 가입 과정은 다소 복잡할 수 있다.",
+        "새로운 가입자를 돕기 위해 메디케어 신청 방법, 초기 가입 기간, 그리고 필요한 정보를 제공하는 곳을 안내하고 있다.",
+        "제대로 가입하지 않을 경우 평생 벌금을 물거나 보장 공백이 발생할 수 있으므로 주의가 필요하다."
+      ],
+      "implications": [
+        "미국 내 노령층의 의료비 부담 완화를 위해 관련 건강 보험 시스템 및 절차에 대한 이해가 필수적이다.",
+        "헬스케어 자문 서비스 및 보험 대행업계의 수요가 지속적으로 발생할 것으로 예상된다."
+      ]
+    }
   },
   "id_fxfpim": {
     "id": "id_fxfpim",
@@ -12798,7 +12907,18 @@
     "sourceName": "한국경제 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "인크레더블 인도, 멋진 인도 여행의 세계",
+      "summary": [
+        "인도의 다양한 매력과 멋진 여행지들을 조명하는 기사가 보도되었다.",
+        "풍부한 문화와 역사, 아름다운 자연경관 등 인도 여행의 다채로운 측면을 소개한다.",
+        "코로나19 이후 회복세를 보이는 글로벌 여행 시장에서 인도의 잠재력이 주목받고 있다."
+      ],
+      "implications": [
+        "여행 및 항공 관련 산업의 활성화와 수요 증가가 예상된다.",
+        "인도와의 문화적, 경제적 교류가 확대될 수 있는 계기가 될 수 있다."
+      ]
+    }
   },
   "id_1lqn4sv": {
     "id": "id_1lqn4sv",
@@ -12822,7 +12942,18 @@
     "sourceName": "한국경제 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "이진호 기자 - 한경매거진&북",
+      "summary": [
+        "한국경제매거진 소속 이진호 기자의 기사 목록 및 프로필 페이지로 추정됨.",
+        "기자의 전문 분야와 과거 취재 기사들을 확인할 수 있는 인물 정보 성격의 페이지임.",
+        "주요 경제, 산업 동향에 대한 심층적인 분석 기사나 인터뷰 내용을 주로 다루는 것으로 보임."
+      ],
+      "implications": [
+        "특정 매체 기자 개인의 인사이트와 취재 영역을 파악할 수 있는 레퍼런스로 활용 가능함.",
+        "유의미한 경제 뉴스나 산업 트렌드 파악을 위해 해당 기자의 후속 보도를 팔로우업할 필요가 있음."
+      ]
+    }
   },
   "id_1ts4xer": {
     "id": "id_1ts4xer",
@@ -12906,7 +13037,18 @@
     "sourceName": "한국경제 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "이진호 기자 - 한경매거진&북",
+      "summary": [
+        "한국경제매거진 소속 이진호 기자의 기사 목록 및 프로필 페이지로 추정됨.",
+        "기자의 전문 분야와 과거 취재 기사들을 확인할 수 있는 인물 정보 성격의 페이지임.",
+        "주요 경제, 산업 동향에 대한 심층적인 분석 기사나 인터뷰 내용을 주로 다루는 것으로 보임."
+      ],
+      "implications": [
+        "특정 매체 기자 개인의 인사이트와 취재 영역을 파악할 수 있는 레퍼런스로 활용 가능함.",
+        "유의미한 경제 뉴스나 산업 트렌드 파악을 위해 해당 기자의 후속 보도를 팔로우업할 필요가 있음."
+      ]
+    }
   },
   "id_1jvfygn": {
     "id": "id_1jvfygn",
@@ -12918,7 +13060,18 @@
     "sourceName": "한국경제 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "이진호 기자 - 한경매거진&북",
+      "summary": [
+        "한국경제매거진 소속 이진호 기자의 기사 목록 및 프로필 페이지로 추정됨.",
+        "기자의 전문 분야와 과거 취재 기사들을 확인할 수 있는 인물 정보 성격의 페이지임.",
+        "주요 경제, 산업 동향에 대한 심층적인 분석 기사나 인터뷰 내용을 주로 다루는 것으로 보임."
+      ],
+      "implications": [
+        "특정 매체 기자 개인의 인사이트와 취재 영역을 파악할 수 있는 레퍼런스로 활용 가능함.",
+        "유의미한 경제 뉴스나 산업 트렌드 파악을 위해 해당 기자의 후속 보도를 팔로우업할 필요가 있음."
+      ]
+    }
   },
   "id_1nhvbde": {
     "id": "id_1nhvbde",
@@ -12977,7 +13130,18 @@
     "sourceName": "한국경제 증권",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "이진호 기자 - 한경매거진&북",
+      "summary": [
+        "한국경제매거진 소속 이진호 기자의 기사 목록 및 프로필 페이지로 추정됨.",
+        "기자의 전문 분야와 과거 취재 기사들을 확인할 수 있는 인물 정보 성격의 페이지임.",
+        "주요 경제, 산업 동향에 대한 심층적인 분석 기사나 인터뷰 내용을 주로 다루는 것으로 보임."
+      ],
+      "implications": [
+        "특정 매체 기자 개인의 인사이트와 취재 영역을 파악할 수 있는 레퍼런스로 활용 가능함.",
+        "유의미한 경제 뉴스나 산업 트렌드 파악을 위해 해당 기자의 후속 보도를 팔로우업할 필요가 있음."
+      ]
+    }
   },
   "id_cms7qr": {
     "id": "id_cms7qr",
@@ -13001,7 +13165,17 @@
     "sourceName": "글로벌 투자 뉴스 (Reuters/Bloomberg/CNBC)",
     "lang": "en",
     "category": "Markets",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "루이스 해밀턴, 41세에 페라리 소속으로 첫 우승 달성",
+      "summary": [
+        "루이스 해밀턴이 41세의 나이로 페라리 소속 첫 우승을 차지했습니다.",
+        "이번 우승은 그의 경력에 있어 또 다른 중요한 이정표가 될 전망입니다."
+      ],
+      "implications": [
+        "페라리 F1 팀의 경쟁력 상승 및 모터스포츠 시장의 관심 증대",
+        "노장 선수의 활약으로 인한 스포츠 마케팅 가치 상승"
+      ]
+    }
   },
   "id_1rpjbss": {
     "id": "id_1rpjbss",
@@ -13037,7 +13211,18 @@
     "sourceName": "글로벌 투자 뉴스 (Reuters/Bloomberg/CNBC)",
     "lang": "en",
     "category": "Markets",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "스페이스X IPO, '역사상 최대 규모 주식 공모' 전망... 일론 머스크 첫 '조만장자' 등극 예고",
+      "summary": [
+        "일론 머스크가 이끄는 우주 탐사 기업 스페이스X의 기업공개(IPO)가 역사상 최대 규모가 될 것으로 전망됨.",
+        "스페이스X의 상장이 성공적으로 이루어질 경우 일론 머스크는 세계 최초로 자산 1조 달러를 보유한 '조만장자'에 오를 가능성이 높음.",
+        "스타링크 위성 인터넷 사업의 성장과 재사용 로켓 기술의 독점적 지위가 기업 가치 상승을 견인하고 있음."
+      ],
+      "implications": [
+        "민간 우주 산업(뉴 스페이스)에 대한 글로벌 투자자들의 관심과 자금 유입이 폭발적으로 증가할 것으로 기대됨.",
+        "우주 인터넷, 달 탐사 등 우주 개발 경쟁이 가속화되며 관련 생태계 및 공급망 전반에 수혜가 예상됨."
+      ]
+    }
   },
   "id_nq29sj": {
     "id": "id_nq29sj",
@@ -13061,7 +13246,18 @@
     "sourceName": "조선일보 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "올해 주식·채권 판 돈 3조 7000억 원 주택 시장으로 유입돼... 65%가 서울",
+      "summary": [
+        "올해 투자자들이 주식과 채권을 매도하여 확보한 자금 중 약 3조 7000억 원이 부동산(주택) 시장으로 흘러 들어간 것으로 조사됨.",
+        "특히 유입된 자금의 65%가 서울 지역 주택 매수에 집중되어, 똘똘한 한 채 선호 현상 및 수도권 쏠림 현상이 뚜렷하게 나타남.",
+        "금융 시장의 변동성 확대에 불안감을 느낀 투자자들이 상대적으로 안전자산으로 인식되는 서울 핵심지 부동산으로 눈을 돌린 결과임."
+      ],
+      "implications": [
+        "주택 시장, 특히 서울 및 수도권의 집값 상승 압력으로 작용하여 부동산 양극화가 더욱 심화될 우려가 있음.",
+        "증시 등 자본 시장의 매력도 저하 시 자금 유출이 가속화될 수 있어 금융 당국의 시장 안정화 조치가 필요함."
+      ]
+    }
   },
   "id_w8s87b": {
     "id": "id_w8s87b",
@@ -13139,7 +13335,7 @@
     "title": "스페이스X만 있는 게 아니다, 한국 위성 제조 능력 세계 TOP3 - 조선일보",
     "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxONWE1MFNKT1haU2lRRXJBNjBnT2J3YjgxSU8zc3dpU2pSQzZaTjJuUXFGUW1sYTJCT2s4akpjMGxleDRBY0E4cnN2YUU4R01xbDc4SkVHTTRCeEc3bk9SaEJ1bWVSLWplMldtTUpTdDVWamx1UHMwbE9oM1NvZkNWcQ?oc=5",
     "description": "스페이스X만 있는 게 아니다, 한국 위성 제조 능력 세계 TOP3  조선일보",
-    "date": "2026-06-14T20:30:00.000Z",
+    "date": "2026-06-14T20:36:37.000Z",
     "sourceId": "chosun",
     "sourceName": "조선일보 경제",
     "lang": "ko",
@@ -13203,7 +13399,17 @@
     "sourceName": "조선일보 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "제네시스, 르망 데뷔전 완주했다…13위로 24시간 질주 마쳐",
+      "summary": [
+        "현대자동차의 프리미엄 브랜드 제네시스가 르망 24시간 내구레이스 데뷔전에서 완주에 성공했습니다.",
+        "총 24시간을 질주하며 13위로 경기를 마감하여 기술력을 입증했습니다."
+      ],
+      "implications": [
+        "제네시스 브랜드의 고성능 이미지 강화 및 글로벌 모터스포츠 입지 확대",
+        "향후 고성능 차량 판매 및 기술 개발에 긍정적 영향 예상"
+      ]
+    }
   },
   "id_172896m": {
     "id": "id_172896m",
@@ -13215,7 +13421,17 @@
     "sourceName": "조선일보 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "美, AI 쇄국정책… ‘미토스·페이블’ 외국인 사용 막았다",
+      "summary": [
+        "미국이 자국의 핵심 AI 기술인 '미토스'와 '페이블' 등에 대해 외국인의 사용을 차단하는 쇄국정책을 펼치고 있습니다.",
+        "이는 첨단 기술에 대한 기술 보호주의를 강화하는 조치로 해석됩니다."
+      ],
+      "implications": [
+        "글로벌 AI 기술 패권 경쟁 심화 및 블록화 현상 가속",
+        "국내 AI 독자 기술 개발 및 기술 자립의 필요성 증대"
+      ]
+    }
   },
   "id_1buahwe": {
     "id": "id_1buahwe",
@@ -13239,7 +13455,17 @@
     "sourceName": "조선일보 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "청년 희망 연봉은 3500만원… 대기업 초임보다 1500만원 낮아",
+      "summary": [
+        "최근 조사에 따르면 청년 구직자들의 희망 연봉은 평균 3500만 원 수준으로 나타났습니다.",
+        "이는 주요 대기업의 평균 초임보다 약 1500만 원이나 낮은 수치로, 일자리 눈높이와 현실 간의 차이를 보여줍니다."
+      ],
+      "implications": [
+        "중소기업 취업 기피 현상 완화 가능성 시사",
+        "청년층의 고용 불안과 현실적인 임금 기대감 반영"
+      ]
+    }
   },
   "id_1ivzsdm": {
     "id": "id_1ivzsdm",
@@ -13466,7 +13692,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "이번 주 미 연준 금리 결정, 월가는 성명서 내 세부 문구 변화에 촉각",
+      "summary": [
+        "이번 주 개최되는 미국 연방공개시장위원회(FOMC) 금리 결정 회의에 전 세계 금융시장의 이목이 쏠리고 있습니다.",
+        "월가 투자자들은 파월 의장의 기자회견 발언 뉘앙스와 정책 성명서에 포함된 '추가적인 정책 강화' 문구의 삭제 여부를 예의주시하고 있습니다.",
+        "시장은 연준의 향후 기준금리 인하 시점과 통화 정책의 방향성 전환(피벗) 시그널을 선제적으로 파악하기 위해 분주합니다."
+      ],
+      "implications": [
+        "연준의 성명서 결과에 따라 글로벌 채권 금리와 환율, 그리고 주식 시장의 단기적인 변동성이 극대화될 수 있습니다.",
+        "만약 연준이 시장의 기대보다 매파적인 입장을 고수할 경우, 국채 금리 상승과 함께 위험 자산 투자 심리가 급격히 냉각될 수 있습니다."
+      ]
+    }
   },
   "id_5nxjmt": {
     "id": "id_5nxjmt",
@@ -13570,7 +13807,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "[잇슈#태그] “SAMJEONNIX 뜻 알아요?”… NYT가 ‘K반도체’ 퀴즈 낸 이유는",
+      "summary": [
+        "뉴욕타임스(NYT)가 삼성전자와 SK하이닉스를 합친 조어인 '삼전닉스(SAMJEONNIX)'의 뜻을 묻는 퀴즈를 출제해 화제가 됨.",
+        "이는 글로벌 반도체 시장, 특히 메모리 및 AI 반도체 분야에서 한국 기업들이 차지하는 막강한 영향력과 위상을 반영한 것임.",
+        "해외 주요 언론들이 한국 반도체 산업의 동향에 주목하면서 'K-반도체'의 글로벌 인지도와 중요성이 재확인됨."
+      ],
+      "implications": [
+        "글로벌 IT 공급망에서 한국 반도체 기업들의 전략적 가치가 높아지며 국가 경제 안보 측면의 중요성이 부각됨.",
+        "초격차 기술 유지 및 글로벌 경쟁력 강화를 위한 지속적인 투자와 정부 차원의 정책적 지원이 요구됨."
+      ]
+    }
   },
   "id_1b3x2i8": {
     "id": "id_1b3x2i8",
@@ -13628,7 +13876,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "차기 연준 의장 후보 케빈 워시 발언에 주목... 코스피 및 환율 흔들 3대 변수",
+      "summary": [
+        "금융시장의 시선이 단순한 거시 지표를 넘어 연준의 유력한 차기 의장 후보로 꼽히는 케빈 워시의 발언에 집중되고 있습니다.",
+        "전문가들은 그의 통화 정책에 대한 견해(매파적 혹은 비둘기파적)가 향후 코스피 지수와 원/달러 환율의 단기 방향성을 좌우할 것으로 봅니다.",
+        "연준 주요 인사들의 통화 정책 스탠스, 미국 핵심 경제 지표의 결과, 그리고 중동 지정학적 불안이 현재 금융시장의 3대 핵심 뇌관입니다."
+      ],
+      "implications": [
+        "미국 연준 인사들의 발언 강도에 따라 국내 주식 시장에서 외국인 자금의 유출입 변동폭이 한층 커질 전망입니다.",
+        "글로벌 불확실성 확대로 인한 원/달러 환율의 급변동에 대비해 국내 수출입 기업들의 철저한 환위험 관리가 요구됩니다."
+      ]
+    }
   },
   "id_cthhgu": {
     "id": "id_cthhgu",
@@ -13662,7 +13921,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "일본은행 31년 만에 기준금리 1% 달성 전망, 이번 주 엔화 향방이 중요한 이유",
+      "summary": [
+        "일본은행(BOJ)이 31년 만에 기준금리를 1% 수준까지 끌어올리며 오랜 초완화적 통화 정책의 정상화를 본격화할 것이란 전망이 우세합니다.",
+        "수십 년간 지속된 마이너스 금리 및 제로 금리 시대가 저물면서, 억눌렸던 엔화 가치가 반등할 가능성에 글로벌 외환시장이 긴장하고 있습니다.",
+        "이번 주 발표될 일본의 핵심 물가 지표와 BOJ 정책 위원들의 통화 정책 관련 발언이 향후 엔화 추세를 가늠할 결정적 변수로 작용할 것입니다."
+      ],
+      "implications": [
+        "엔화 금리 상승 시 저금리의 엔화를 빌려 고수익 자산에 투자했던 '엔 캐리 트레이드' 자금이 청산되며 글로벌 금융시장에 변동성을 야기할 수 있습니다.",
+        "슈퍼 엔저 현상이 해소되고 엔화가 강세로 돌아설 경우, 글로벌 시장에서 일본과 경합하는 한국 자동차 및 철강 수출 기업들의 가격 경쟁력이 개선될 수 있습니다."
+      ]
+    }
   },
   "id_1dcce0r": {
     "id": "id_1dcce0r",
@@ -13732,7 +14002,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "'반도체 투톱' 주춤할 때 소부장 ETF 뛰었다…개미들은 '삼전닉스 레버리지' 베팅",
+      "summary": [
+        "삼성전자와 SK하이닉스 등 대형 반도체주가 주춤한 사이 반도체 소부장(소재·부품·장비) ETF의 수익률이 크게 올랐다.",
+        "개인 투자자들은 대형주의 반등을 기대하며 삼성전자와 SK하이닉스 레버리지 상품에 집중적으로 투자하고 있다.",
+        "반도체 시장 내에서도 세부 섹터별로 차별화된 수익률 흐름이 나타나고 있다."
+      ],
+      "implications": [
+        "반도체 업황의 전반적인 개선 기대감 속에서 투자 전략이 다양해지고 있다.",
+        "소부장 기업들의 실적 개선세가 뚜렷해지면서 관련 ETF의 변동성과 거래량이 증가할 것으로 보인다."
+      ]
+    }
   },
   "id_1u746xe": {
     "id": "id_1u746xe",
@@ -13836,7 +14117,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "빨라진 긴축 시계… ECB 이어 한국·일본도 금리 인상 예고",
+      "summary": [
+        "유럽중앙은행(ECB)의 기준금리 인상에 이어 한국과 일본 등 주요국들도 긴축 기조로 전환할 조짐을 보임.",
+        "글로벌 인플레이션 압력과 미국 연방준비제도(Fed)의 통화 정책 방향이 각국 중앙은행의 결정에 영향을 미치고 있음.",
+        "그동안 완화적 통화 정책을 고수해 온 일본마저 금리 인상 카드를 만지작거리면서 글로벌 유동성 축소가 우려됨."
+      ],
+      "implications": [
+        "전 세계적인 금리 인상 기조 동조화로 인해 글로벌 자산 시장의 변동성이 확대될 위험이 있음.",
+        "국내 대출 금리 상승으로 인한 가계 부채 부실 우려 및 기업의 자금 조달 비용 증가가 예상됨."
+      ]
+    }
   },
   "id_1sutcex": {
     "id": "id_1sutcex",
@@ -13917,7 +14209,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "“어딜 가도 비싸다”… 일본 빼고 다 오른 환율에 ‘희비’",
+      "summary": [
+        "원화 가치 하락으로 대부분의 국가에 대한 환율이 상승하면서 해외여행 경비 부담이 크게 증가함.",
+        "역대급 엔저 현상이 지속되는 일본만이 상대적으로 저렴한 여행지로 부각되며 관광객 쏠림 현상이 나타나고 있음.",
+        "여행 업계는 지역별 환율 변동에 따라 여행 수요가 극명하게 엇갈리는 상황에 맞춰 상품 전략을 수정하고 있음."
+      ],
+      "implications": [
+        "당분간 일본 등 환율 혜택을 볼 수 있는 특정 국가로의 단거리 여행 수요 집중이 심화될 전망임.",
+        "고환율 장기화 시 전체적인 해외여행 수요 위축 및 국내 여행으로의 수요 전환 가능성이 있음."
+      ]
+    }
   },
   "id_6knk7r": {
     "id": "id_6knk7r",
@@ -13998,7 +14301,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "월가의 금리 인하 신중론 확산, 삼성·SK 등 국내 AI 관련주 밸류에이션 부담 가중",
+      "summary": [
+        "미국 월스트리트 전문가들 사이에서 미국 경제의 견조한 성장세를 고려할 때 연준이 금리를 조기에 내릴 이유가 없다는 신중론이 확산하고 있습니다.",
+        "이러한 고금리 환경 장기화 우려는 기술주 전반의 투자 심리를 위축시키며, 삼성전자와 SK하이닉스 등 대표적인 AI 반도체 기업들의 밸류에이션에 부담을 주고 있습니다.",
+        "그동안 폭발적인 미래 성장성을 선반영하며 가파르게 상승했던 AI 관련주들이 단기적인 가격 조정 국면에 진입할 수 있다는 경고 신호가 켜졌습니다."
+      ],
+      "implications": [
+        "단기적으로 외국인 투자자들이 국내 대형 반도체주를 중심으로 차익 실현에 나서면서 코스피 지수에 하락 압력으로 작용할 가능성이 큽니다.",
+        "막연한 AI 기대감보다는 기업의 실질적인 펀더멘털과 실적 가시성이 뒷받침되는 종목 위주로 투자 자금이 차별화되는 장세가 펼쳐질 것입니다."
+      ]
+    }
   },
   "id_mnsj8h": {
     "id": "id_mnsj8h",
@@ -14010,7 +14324,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "환율 하루 10원 '오르락내리락'… 기업 달러예금 3년 5개월 만에 최대",
+      "summary": [
+        "원·달러 환율의 일중 변동성이 10원에 달하는 등 외환 시장의 불안정성이 심화되고 있음.",
+        "불확실성 확대에 대비하여 국내 기업들이 달러 확보에 나서면서 거주자 외화예금 중 기업 달러 예금이 3년 5개월 만에 최대치를 기록함.",
+        "수출입 기업들은 환리스크 관리를 위해 결제 대금을 환전하지 않고 예치하거나 선제적으로 달러를 매수하는 경향을 보임."
+      ],
+      "implications": [
+        "기업들의 환 변동성 위험 노출이 커지면서 환 헤지 등 적극적인 리스크 관리 전략이 요구됨.",
+        "달러 강세 기대감 및 안전 자산 선호 현상으로 인해 시중 자금이 달러 예금으로 쏠리는 현상이 지속될 수 있음."
+      ]
+    }
   },
   "id_6wk47s": {
     "id": "id_6wk47s",
@@ -14068,7 +14393,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "ASML 스핀오프 인비식스, 2,000만 유로 투자 유치… 소프트 X선 계측으로 차세대 반도체 검사 혁신 나선다",
+      "summary": [
+        "세계적인 반도체 장비 기업 ASML에서 분사한 '인비식스(Invisics)'가 2,000만 유로 규모의 신규 투자를 성공적으로 유치함.",
+        "인비식스는 소프트 X선 기술을 활용한 초정밀 계측 장비를 개발하여 차세대 미세 공정 반도체의 결함 검사 시장을 겨냥하고 있음.",
+        "기존 광학 검사 방식의 한계를 극복할 수 있는 혁신적인 기술력으로 첨단 반도체 수율 향상에 기여할 것으로 기대됨."
+      ],
+      "implications": [
+        "반도체 초미세화 경쟁이 심화됨에 따라 고도화된 계측 및 검사 장비 기술의 중요성이 더욱 커지고 있음.",
+        "차세대 검사 솔루션 시장을 선점하기 위한 장비 업계의 기술 개발 및 딥테크 스타트업에 대한 투자가 활발해질 전망임."
+      ]
+    }
   },
   "id_1ymkthl": {
     "id": "id_1ymkthl",
@@ -14115,7 +14451,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "[아침을 열며] 반도체 초호황, 거품 아닌 토대가 될 때",
+      "summary": [
+        "최근 AI 열풍 등으로 촉발된 반도체 산업의 초호황 사이클이 일시적인 거품으로 끝나지 않도록 경계해야 한다는 목소리가 나옴.",
+        "호황기에 벌어들인 이익을 미래 기술 연구 개발(R&D)과 인재 육성에 재투자하여 장기적인 경쟁력의 토대를 마련해야 함.",
+        "단순 제조 및 메모리 분야를 넘어 시스템 반도체, 팹리스 등 밸류체인 전반의 균형 있는 발전을 도모하는 질적 성장이 필요함."
+      ],
+      "implications": [
+        "단기 실적주의에서 벗어나 차세대 반도체 기술 패권 경쟁에 대비한 장기적이고 전략적인 마스터플랜 수립이 요구됨.",
+        "산학연 협력을 통한 혁신 생태계 조성과 정부의 지속적이고 선제적인 산업 육성 정책이 뒷받침되어야 함."
+      ]
+    }
   },
   "id_18sw3x3": {
     "id": "id_18sw3x3",
@@ -14173,7 +14520,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "앤스로픽, 천문학적 비용의 AI 반도체 직접 구매 대신 클라우드 대여 모델 선택",
+      "summary": [
+        "글로벌 생성형 AI 시장을 선도하는 유력 스타트업 앤스로픽이 모델 학습에 필요한 막대한 양의 첨단 AI 반도체를 직접 구매하지 않기로 방침을 정했습니다.",
+        "대신 막대한 초기 자본 지출(CAPEX)을 피하기 위해 대형 클라우드 사업자(CSP)로부터 반도체 컴퓨팅 자원을 빌려 쓰는 효율적인 임대 방식을 선택했습니다.",
+        "이는 주요 AI 기업들이 천문학적인 인프라 구축 비용을 최적화하고 자금 운용의 효율성을 극대화하려는 최신 산업 트렌드를 잘 보여줍니다."
+      ],
+      "implications": [
+        "아마존웹서비스(AWS), 마이크로소프트 애저(Azure) 등 대규모 AI 인프라 임대 역량을 갖춘 빅테크 클라우드 서비스 기업들의 구조적 성장이 더욱 가속화될 전망입니다.",
+        "엔비디아와 같은 반도체 제조사의 유통 구조가 개별 기업의 산발적 구매에서 소수의 거대 클라우드 사업자 중심의 대량 수주로 집중될 수 있습니다."
+      ]
+    }
   },
   "id_1lwd08n": {
     "id": "id_1lwd08n",
@@ -14209,7 +14567,18 @@
     "sourceName": "동아일보 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "[르망 24시] '혹독한 신고식' 제네시스, 17번 차량 리타이어… 19번 완주 향해 '고군분투'",
+      "summary": [
+        "현대자동차의 고급 브랜드 제네시스가 세계 최고 권위의 내구 레이스인 '르망 24시'에 처음 출전하여 혹독한 데뷔전을 치름.",
+        "출전 차량 중 17번 차량은 사고나 고장 등의 이유로 아쉽게 리타이어(경주 포기)를 선언함.",
+        "남은 19번 차량은 여러 악조건 속에서도 끝까지 경기를 포기하지 않고 완주를 목표로 주행을 이어가고 있음."
+      ],
+      "implications": [
+        "글로벌 모터스포츠 무대 진출을 통해 제네시스 브랜드의 고성능 기술력과 내구성을 입증하고 글로벌 인지도를 제고하려는 시도로 평가됨.",
+        "극한의 환경에서 얻은 주행 데이터를 양산차 기술 개발 및 성능 개선에 활용하여 상품성 경쟁력을 강화할 것으로 기대됨."
+      ]
+    }
   },
   "id_dsa4rs": {
     "id": "id_dsa4rs",
@@ -14256,7 +14625,18 @@
     "sourceName": "동아일보 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "채무불이행 JTBC, 신용등급 강등…중앙일보도 하향",
+      "summary": [
+        "JTBC가 채무불이행 상태에 빠지면서 신용평가사들이 신용등급을 하향 조정했다.",
+        "이에 따라 모회사격인 중앙일보의 신용등급도 동반 하향되었다.",
+        "미디어 시장의 경영 악화와 수익성 저하가 재무 구조에 심각한 타격을 준 것으로 분석된다."
+      ],
+      "implications": [
+        "미디어 업계 전반의 자금 조달 여건이 악화될 가능성이 높으며, 구조조정 압력이 커질 수 있다.",
+        "투자자들의 미디어 관련 기업에 대한 리스크 회피 심리가 강해질 것으로 예상된다."
+      ]
+    }
   },
   "id_1yi9afx": {
     "id": "id_1yi9afx",
@@ -14280,7 +14660,18 @@
     "sourceName": "동아일보 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "‘5일 만에 완판’ 국민성장펀드, 3분기 6000억 규모 2차 출시",
+      "summary": [
+        "1차 출시 당시 5일 만에 완판되며 큰 인기를 끌었던 국민성장펀드가 3분기에 2차로 출시된다.",
+        "이번 2차 펀드는 6,000억 원 규모로 조성되어 투자자들의 자금을 유치할 계획이다.",
+        "국내 기업의 성장 동력 확보 및 개인 자산 증식을 위한 정부의 적극적인 지원 정책의 일환이다."
+      ],
+      "implications": [
+        "침체된 주식 시장 및 투자 시장에 새로운 활력을 불어넣고 긍정적인 투자 심리를 형성할 것으로 기대된다.",
+        "관련 펀드 판매를 담당하는 금융기관들의 수수료 수익 및 실적 개선에 기여할 것이다."
+      ]
+    }
   },
   "id_10n51qj": {
     "id": "id_10n51qj",
@@ -14292,7 +14683,17 @@
     "sourceName": "동아일보 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "수출로 번 달러, 원화로 안 바꾸는 기업들… 달러예금 543억 달러… 3년 5개월새 최대",
+      "summary": [
+        "국내 기업들이 수출로 벌어들인 달러를 원화로 환전하지 않고 그대로 보유하는 현상이 늘고 있습니다.",
+        "이에 따라 기업의 달러 예금 잔액이 543억 달러를 기록하며 3년 5개월 만에 최대치에 달했습니다."
+      ],
+      "implications": [
+        "강달러 기조 지속에 대한 시장의 기대 반영",
+        "국내 외환시장에서 달러 공급 부족으로 인한 원/달러 환율 상승 압력 작용 가능성"
+      ]
+    }
   },
   "id_e2husj": {
     "id": "id_e2husj",
@@ -14304,7 +14705,17 @@
     "sourceName": "동아일보 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "종전 기대감에 국제유가 3개월새 최저… 환율 상승세도 꺾일듯",
+      "summary": [
+        "중동 등 지정학적 분쟁의 종전 기대감이 커지면서 국제유가가 최근 3개월 사이 최저 수준으로 하락했습니다.",
+        "국제유가 안정세에 힘입어 그동안 이어지던 환율의 상승세도 한풀 꺾일 것으로 전망됩니다."
+      ],
+      "implications": [
+        "수입 물가 안정에 따른 국내 인플레이션 압력 완화",
+        "항공, 해운 등 유가 민감 업종의 수익성 개선 기대"
+      ]
+    }
   },
   "id_11nx2oe": {
     "id": "id_11nx2oe",
@@ -14316,7 +14727,17 @@
     "sourceName": "동아일보 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "K뷰티 열풍 확산… 美 개점 첫날 오픈런-日선 편집숍 120개 입점",
+      "summary": [
+        "한국 화장품을 뜻하는 K뷰티의 글로벌 인기가 미국과 일본 시장을 중심으로 확산되고 있습니다.",
+        "미국 매장 개점 첫날에는 오픈런이 벌어지고, 일본에서는 120개의 편집숍에 대거 입점하는 등 괄목할 성과를 내고 있습니다."
+      ],
+      "implications": [
+        "K뷰티 관련 기업들의 해외 매출 증대 및 글로벌 브랜드 가치 상승",
+        "화장품 OEM/ODM 및 관련 수출 기업의 동반 성장 가능성"
+      ]
+    }
   },
   "id_1cxl2ll": {
     "id": "id_1cxl2ll",
@@ -14340,7 +14761,17 @@
     "sourceName": "동아일보 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "[DBR/알립니다]AI 대화형 비즈니스 논술대회서 ‘사고력’을 겨뤄보세요!",
+      "summary": [
+        "동아비즈니스리뷰(DBR)가 AI를 활용한 대화형 비즈니스 논술대회를 개최합니다.",
+        "이번 대회는 참가자들이 AI와 상호작용하며 비즈니스 문제 해결을 위한 비판적 사고력을 겨루는 장이 될 것입니다."
+      ],
+      "implications": [
+        "AI 시대에 요구되는 새로운 형태의 비즈니스 사고력 및 문제 해결 능력 강조",
+        "교육 및 인재 평가 방식에 AI 도입 확산 시사"
+      ]
+    }
   },
   "id_1geaba4": {
     "id": "id_1geaba4",
@@ -14352,7 +14783,18 @@
     "sourceName": "동아일보 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "인공지능, 응급환자 증상 분석해 심근경색 진단 및 최적 병원 추천",
+      "summary": [
+        "환자의 응급 증상을 인공지능(AI)에 음성으로 입력하자 신속하게 '심근경색 의심'이라는 1차 판단 결과를 도출했습니다.",
+        "AI는 환자의 중증도와 실시간 병상 상황을 종합적으로 분석하여 환자에게 가장 적합한 이송 병원까지 추천했습니다.",
+        "응급 의료 현장에 AI 기술이 도입되면서 환자의 생존 골든타임을 확보하는 데 큰 기여를 할 것으로 보입니다."
+      ],
+      "implications": [
+        "의료용 AI 및 디지털 헬스케어 관련 기업들의 기술 고도화와 시장 진입 속도가 한층 빨라질 전망입니다.",
+        "스마트 응급 의료 시스템 구축을 위한 국가 차원의 예산 지원과 민간 투자가 적극적으로 확대될 것입니다."
+      ]
+    }
   },
   "id_uqf240": {
     "id": "id_uqf240",
@@ -14364,7 +14806,18 @@
     "sourceName": "동아일보 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "정부, 반도체 호황에 따른 초과 세수 16조 원으로 '미래기금' 조성 검토",
+      "summary": [
+        "국내 반도체 산업의 가파른 실적 호조에 힘입어 올해 정부 세수가 기존 예상치보다 약 16조 원 더 걷힐 것으로 추산됩니다.",
+        "정부는 이 초과 세수를 국가 부채를 상환하는 대신, 미래 성장을 대비한 가칭 '미래기금'을 신설하는 데 사용하는 방안을 논의 중입니다.",
+        "이는 첨단 기술 초격차 확보와 미래 먹거리 산업 생태계 전반을 폭넓게 지원하기 위한 전략적 재원 마련 차원입니다."
+      ],
+      "implications": [
+        "정부의 대규모 재정 투입이 예상됨에 따라 반도체, AI 등 첨단 전략 산업 관련 기업들의 직접적인 수혜가 기대됩니다.",
+        "국가 재정 정책의 방향이 단순한 건전성 관리에서 적극적인 미래 산업 육성 투자로 전환되고 있음을 시사합니다."
+      ]
+    }
   },
   "id_1y2cjak": {
     "id": "id_1y2cjak",
@@ -14376,7 +14829,17 @@
     "sourceName": "동아일보 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "AI 사이클 탄 반도체부품-전력기기… 영업익 줄상향",
+      "summary": [
+        "글로벌 AI 투자 열풍에 힘입어 관련 반도체 부품과 전력 기기 기업들의 실적 전망이 연이어 상향 조정되고 있습니다.",
+        "데이터센터 증설 등으로 인한 핵심 인프라 수요 폭증이 주요 원인입니다."
+      ],
+      "implications": [
+        "반도체 장비, 부품 및 전력 인프라 관련주의 중장기적 주가 상승 모멘텀 확보",
+        "AI 산업 생태계 전반으로 수혜 확대"
+      ]
+    }
   },
   "id_wosj4h": {
     "id": "id_wosj4h",
@@ -14388,7 +14851,17 @@
     "sourceName": "동아일보 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "2차 국민성장펀드 3분기에 나온다… 6000억 규모",
+      "summary": [
+        "정부가 민간 자금 유입을 촉진하기 위해 6000억 원 규모의 2차 국민성장펀드를 오는 3분기에 조성할 계획입니다.",
+        "이를 통해 벤처 및 혁신 기업에 대한 투자를 활성화하고 경제 활력을 제고할 방침입니다."
+      ],
+      "implications": [
+        "벤처 캐피탈(VC) 및 스타트업 생태계의 자금 조달 숨통 트일 전망",
+        "신성장 동력 발굴을 위한 정책 펀드의 역할 강화"
+      ]
+    }
   },
   "id_19ipnb7": {
     "id": "id_19ipnb7",
@@ -14400,7 +14873,17 @@
     "sourceName": "동아일보 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "동원F&B, 1400억 투입 ‘단백질식품 생산기지’ 가동",
+      "summary": [
+        "동원F&B가 1400억 원을 투자하여 대규모 단백질 식품 전용 생산 기지를 본격적으로 가동하기 시작했습니다.",
+        "건강 관리에 대한 관심 증가로 급성장하는 단백질 식품 시장을 선점하기 위한 전략적 행보입니다."
+      ],
+      "implications": [
+        "국내 단백질 식품 시장의 규모 확대 및 점유율 경쟁 심화",
+        "식품 업계의 헬스케어 및 웰빙 트렌드 맞춤형 포트폴리오 다변화"
+      ]
+    }
   },
   "id_1wdwer": {
     "id": "id_1wdwer",
@@ -14412,7 +14895,17 @@
     "sourceName": "동아일보 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "[DBR]맘스터치 가치 키운 전략은",
+      "summary": [
+        "토종 버거 프랜차이즈 맘스터치가 가성비 전략과 가맹점 중심의 상생 경영을 통해 브랜드 가치를 크게 높였습니다.",
+        "이러한 전략은 치열한 패스트푸드 경쟁 속에서도 지속적인 성장을 이끄는 원동력이 되었습니다."
+      ],
+      "implications": [
+        "외식 업계에서 가성비와 품질을 동시에 만족시키는 차별화 전략의 중요성",
+        "프랜차이즈 본사와 가맹점 간의 상생 모델 성공 사례 제시"
+      ]
+    }
   },
   "id_131ntay": {
     "id": "id_131ntay",
@@ -14424,7 +14917,18 @@
     "sourceName": "동아일보 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "[DBR] AI 에이전트, 기존 디지털 중개자 지배력 위협할 것",
+      "summary": [
+        "AI 에이전트 기술의 발전이 플랫폼 등 기존 디지털 중개자의 시장 지배력을 약화시킬 가능성이 제기됨.",
+        "개인화된 AI 비서가 사용자와 서비스 제공자를 직접 연결하여 중개 플랫폼의 필요성을 줄일 수 있음.",
+        "기업들은 이러한 변화에 대응하여 자체 AI 에이전트 개발 및 서비스 고도화에 주력하고 있음."
+      ],
+      "implications": [
+        "플랫폼 기업들의 비즈니스 모델 혁신 및 AI 기술 투자 필요성이 증대됨.",
+        "AI 기반 개인화 서비스 경쟁이 가속화되며 소비자 후생이 증진될 수 있음."
+      ]
+    }
   },
   "id_r252cd": {
     "id": "id_r252cd",
@@ -14436,7 +14940,18 @@
     "sourceName": "동아일보 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "AI 사이클 올라탄 반도체부품-전력기기…2분기 실적 줄상향",
+      "summary": [
+        "AI 산업의 성장에 힘입어 반도체 부품 및 전력기기 업계의 2분기 실적 전망치가 상향 조정되고 있다.",
+        "AI 인프라 확충에 필수적인 핵심 부품 및 장비들의 수요가 급증하고 있다.",
+        "이러한 추세는 하반기에도 지속되어 관련 기업들의 실적 호조를 이끌 것으로 보인다."
+      ],
+      "implications": [
+        "반도체 부품 및 전력망 인프라 관련주에 대한 투자자들의 관심이 더욱 집중될 것이다.",
+        "AI 데이터센터 구축 확대에 따른 부수적인 산업들의 동반 성장이 기대된다."
+      ]
+    }
   },
   "id_5qheqc": {
     "id": "id_5qheqc",
@@ -14448,7 +14963,18 @@
     "sourceName": "동아일보 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "시중은행 예금 금리도 연 3%대 진입",
+      "summary": [
+        "주요 시중은행의 정기예금 금리가 연 3%대로 떨어지며 본격적인 금리 하락기에 접어듦.",
+        "한국은행의 기준금리 인하 기대감과 시장 금리 하락이 수신 금리에 선반영된 결과로 분석됨.",
+        "예금 금리 하락으로 인해 투자자들의 자금이 수익률이 높은 다른 투자처로 이동할 조짐이 보임."
+      ],
+      "implications": [
+        "예적금 등 안전자산에서 주식, 부동산 등 위험자산으로의 자금 이동(머니무브)이 가속화될 수 있음.",
+        "대출 금리 동반 하락으로 가계 및 기업의 이자 부담이 다소 완화될 것으로 기대됨."
+      ]
+    }
   },
   "id_1jeun05": {
     "id": "id_1jeun05",
@@ -14484,7 +15010,18 @@
     "sourceName": "동아일보 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "'삼전닉스 셔세권의 힘'… 동탄 아파트 경매도 불붙었다",
+      "summary": [
+        "삼성전자와 SK하이닉스 셔틀버스가 정차하는 '셔세권(셔틀버스+역세권)' 입지의 동탄 아파트 경매 시장이 과열 양상을 보임.",
+        "반도체 산업 호황과 대규모 고용 창출 기대감이 인근 부동산 수요를 견인하고 있는 것으로 풀이됨.",
+        "경매 낙찰가율이 급등하고 응찰자가 몰리는 등 실수요자와 투자자들의 관심이 집중되고 있음."
+      ],
+      "implications": [
+        "핵심 산업 단지 접근성이 부동산 가치를 결정하는 주요 요인으로 작용하고 있음을 보여줌.",
+        "반도체 클러스터 등 첨단 산업 단지 주변의 주택 시장 활황세가 지속될 가능성이 높음."
+      ]
+    }
   },
   "id_3o1pk1": {
     "id": "id_3o1pk1",
@@ -14508,7 +15045,18 @@
     "sourceName": "동아일보 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "[DBR] 수입품 공세와 지정학 위기 속 '마케팅'이 고객 이탈 막아",
+      "summary": [
+        "저가 수입품의 공세와 지정학적 불확실성이 커지는 상황에서 효과적인 마케팅이 기업의 생존을 결정짓는 핵심 요소로 부상함.",
+        "차별화된 브랜드 가치 전달과 고객 중심의 마케팅 전략이 가격 경쟁력을 넘어서는 브랜드 충성도를 창출할 수 있음.",
+        "위기 상황일수록 단기적인 비용 절감보다는 적극적인 마케팅 투자를 통해 시장 점유율을 방어해야 한다는 분석이 제기됨."
+      ],
+      "implications": [
+        "기업들은 가격 경쟁을 탈피하고 제품 및 서비스의 질적 가치를 높이는 브랜딩 전략을 강화해야 함.",
+        "급변하는 대외 환경에 유연하게 대응할 수 있는 데이터 기반의 정교한 마케팅 역량 확보가 필수적임."
+      ]
+    }
   },
   "id_mokcht": {
     "id": "id_mokcht",
@@ -14520,7 +15068,18 @@
     "sourceName": "동아일보 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "동원F&B, 1400억 투입한 단백질 생산기지 '프로틴 넥서스' 준공",
+      "summary": [
+        "동원F&B가 1400억 원을 투자하여 대규모 단백질 식품 생산 시설인 '프로틴 넥서스'를 성공적으로 준공함.",
+        "이 시설은 증가하는 건강 및 피트니스 관련 식품 수요에 대응하여 다양한 고품질 단백질 제품을 생산할 예정임.",
+        "동원F&B는 이번 투자를 통해 종합 식품 기업을 넘어 헬스케어 기반의 영양 솔루션 기업으로 사업 영역을 확장하려는 목표를 가짐."
+      ],
+      "implications": [
+        "건강을 중시하는 소비 트렌드 변화에 발맞춘 식품 업계의 사업 다각화 및 신성장 동력 발굴 노력을 보여줌.",
+        "고부가가치 단백질 식품 시장 선점을 위한 관련 업체들 간의 경쟁이 한층 치열해질 것으로 전망됨."
+      ]
+    }
   },
   "id_noucfg": {
     "id": "id_noucfg",
@@ -14660,7 +15219,17 @@
     "sourceName": "조선일보 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "남의 게임 레벨 올려주는 부업까지… 청년 절반 \"기회 되면 해외로\"",
+      "summary": [
+        "청년 취업난과 경제적 어려움으로 인해 타인의 게임 레벨을 올려주는 부업까지 등장하고 있습니다.",
+        "조사 대상 청년의 절반가량은 기회가 주어진다면 해외로 이주하거나 취업하고 싶다는 의사를 밝혔습니다."
+      ],
+      "implications": [
+        "국내 고용 시장의 열악한 현실 및 청년층의 경제적 이탈 심화 우려",
+        "청년층을 위한 양질의 일자리 창출 및 정주 여건 개선 시급"
+      ]
+    }
   },
   "id_9s90lg": {
     "id": "id_9s90lg",
@@ -14672,7 +15241,17 @@
     "sourceName": "조선일보 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "AI 톱10, 美·中이 5개씩 장악… 한국 3강 꼽히지만 성능 격차 커",
+      "summary": [
+        "전 세계 AI 기업 톱10 중 미국과 중국 기업이 각각 5개씩을 차지하며 시장을 장악하고 있습니다.",
+        "한국은 AI 3대 강국으로 꼽히지만 선두권 국가들과의 성능 격차는 여전히 큰 상황입니다."
+      ],
+      "implications": [
+        "미중 주도의 글로벌 AI 시장 고착화 우려",
+        "격차를 좁히기 위한 대규모 투자와 생태계 육성의 시급성"
+      ]
+    }
   },
   "id_7bmvw8": {
     "id": "id_7bmvw8",
@@ -14753,7 +15332,18 @@
     "sourceName": "매일경제 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "“아차한 사이 완판, 두번째엔 제발”…2차 국민성장펀드, 3분기 출시",
+      "summary": [
+        "정부가 주도하는 2차 국민성장펀드가 올해 3분기에 출시될 예정이다.",
+        "1차 펀드의 조기 완판에 이어 투자자들의 기대감이 높아지고 있다.",
+        "국민들의 자산 형성을 지원하고 기업 성장에 기여하는 것을 목표로 한다."
+      ],
+      "implications": [
+        "개인 투자자들에게 안정적이고 매력적인 투자처를 제공하여 시중 자금을 흡수할 것으로 예상된다.",
+        "관련된 금융 상품 및 펀드 시장의 활성화가 기대된다."
+      ]
+    }
   },
   "id_6frjxd": {
     "id": "id_6frjxd",
@@ -14887,7 +15477,7 @@
     "title": "[환율 전망] 아래로 크게 움직일 타이밍 - KB Think",
     "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE84OGV5TEN4c25wRjdJeS1mamZCY3RjWmF1dGFhMVBJZTliRnJmUHZkN2lFanVlY3lTZXEzVHFCVjN4bGljVWUxOVN3aGJiaUxvUC1pUnl0NGZZWHpUTktFSQ?oc=5",
     "description": "[환율 전망] 아래로 크게 움직일 타이밍  KB Think",
-    "date": "2026-06-15T01:35:38.000Z",
+    "date": "2026-06-14T23:00:50.000Z",
     "sourceId": "korean-markets-trend",
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
@@ -15766,7 +16356,18 @@
     "sourceName": "동아일보 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "민영주택 청약에 '신생아 특별공급' 신설... 혼인 기간 무관하게 지원 가능",
+      "summary": [
+        "정부가 심각한 저출산 위기 극복을 위해 기존 공공주택에 이어 민영주택 청약에도 '신생아 특별공급' 제도를 전격 도입했습니다.",
+        "이 제도는 혼인 기간이나 여부와 관계없이 입주자 모집 공고일 기준 2세 이하의 자녀(태아 포함)가 있는 가구면 지원할 수 있습니다.",
+        "출산 가구에 대한 실질적인 주거 혜택을 대폭 강화하여 출산율 반등을 이끌어내기 위한 정부의 강력한 의지가 반영되었습니다."
+      ],
+      "implications": [
+        "신축 아파트 청약 시장에서 영유아 자녀를 둔 3040 세대의 수요가 몰리며 청약 경쟁률 양극화가 발생할 수 있습니다.",
+        "건설사들은 보육 시설 특화, 층간 소음 저감 등 출산 가구의 니즈에 맞춘 특화 주거 상품 개발에 집중할 것으로 예상됩니다."
+      ]
+    }
   },
   "id_m48hle": {
     "id": "id_m48hle",
@@ -15905,7 +16506,18 @@
     "sourceName": "한국경제 증권",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "이진호 기자 - 한경매거진&북",
+      "summary": [
+        "한국경제매거진 소속 이진호 기자의 기사 목록 및 프로필 페이지로 추정됨.",
+        "기자의 전문 분야와 과거 취재 기사들을 확인할 수 있는 인물 정보 성격의 페이지임.",
+        "주요 경제, 산업 동향에 대한 심층적인 분석 기사나 인터뷰 내용을 주로 다루는 것으로 보임."
+      ],
+      "implications": [
+        "특정 매체 기자 개인의 인사이트와 취재 영역을 파악할 수 있는 레퍼런스로 활용 가능함.",
+        "유의미한 경제 뉴스나 산업 트렌드 파악을 위해 해당 기자의 후속 보도를 팔로우업할 필요가 있음."
+      ]
+    }
   },
   "id_176orae": {
     "id": "id_176orae",
@@ -16445,6 +17057,144 @@
       "implications": [
         "전동 킥보드, 전기 자전거 등 개인형 이동장치(PM) 이용자들의 대중교통 연계 이용에 불편 예상",
         "리튬배터리 화재 안전성에 대한 사회적 경각심 제고 및 관련 규제 강화 추세 반영"
+      ]
+    }
+  },
+  "id_1ys1ck6": {
+    "id": "id_1ys1ck6",
+    "title": "정조대왕, 즉위 직후 \"내 아버지는 사도세자\"… 정몽구 회장은? - 조선일보",
+    "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPdjlUU2FaMGVCNzZCOUFhN3FZY2g0cXlFUzY2bzhrTVFfeDVueEg3dFNkazhyME9fZGllOWdla0U0dVo2V3NZd012OGs3a2NvLVNoZEJEbjRaY2pvN1hFUV82Y3E3X25reVViWUxaalp6M2JxRDJNa1ZWcGlZSWlodlhveFhJVmVzZFNHTG5ZTQ?oc=5",
+    "description": "정조대왕, 즉위 직후 \"내 아버지는 사도세자\"… 정몽구 회장은?  조선일보",
+    "date": "2026-06-15T04:04:00.000Z",
+    "sourceId": "chosun",
+    "sourceName": "조선일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "정조대왕과 정몽구 회장 리더십의 시사점",
+      "summary": [
+        "정조대왕이 즉위 직후 '사도세자의 아들'임을 선언하며 정통성을 확립한 역사적 사례가 재조명되었습니다.",
+        "이와 맞물려 과거 현대차그룹 정몽구 명예회장의 기업 승계 과정과 강력한 리더십 발휘 사례가 언급되었습니다.",
+        "역사적 위기 돌파 방식이 현대 기업의 지배구조 확립 및 경영 리더십에 주는 시사점을 분석했습니다."
+      ],
+      "implications": [
+        "기업의 경영권 승계 및 위기 상황에서 강력한 명분과 정통성 확보가 조직 안정화의 필수 요소임을 시사합니다.",
+        "최고 경영자의 단호한 결단력과 강력한 리더십이 대내외적 불확실성을 극복하는 핵심 원동력으로 작용합니다."
+      ]
+    }
+  },
+  "id_ai46sr": {
+    "id": "id_ai46sr",
+    "title": "[외환] 원/달러 환율 8.7원 내린 1,511.1원(15:30 종가) - 매일경제 마켓",
+    "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5iWnpyQ2JmWXM5Yjh6cVFzc0M0MEU2TUtDOWpma0lTOEtkTDhYdm1uSkJWMnpFTjRNRlFwa3RNOWtVS2FDNHVsSUFuSmRadlFTWk5mNlV2QmZueHJ1aEhfWA?oc=5",
+    "description": "[외환] 원/달러 환율 8.7원 내린 1,511.1원(15:30 종가)  매일경제 마켓",
+    "date": "2026-06-15T06:30:33.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "[외환] 원/달러 환율 8.7원 하락한 1,511.1원으로 마감",
+      "summary": [
+        "원/달러 환율이 전일 대비 8.7원 내린 1,511.1원에 15시 30분 종가를 기록했습니다.",
+        "최근 이어지던 달러 강세 압력이 다소 완화된 영향으로 분석됩니다.",
+        "외환시장 내 변동성이 지속되는 가운데, 단기적인 숨고르기 장세가 나타났습니다."
+      ],
+      "implications": [
+        "수입 물가 부담 완화 및 국내 증시에 긍정적인 외국인 수급 여건이 조성될 수 있습니다.",
+        "다만, 환율의 절대적인 수준이 여전히 높기 때문에 환리스크 관리에 지속적인 주의가 필요합니다."
+      ]
+    }
+  },
+  "id_p9mcdb": {
+    "id": "id_p9mcdb",
+    "title": "미국채 금리 하락…금리 인상론 후퇴 - 연합뉴스TV",
+    "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1iOVI3N0NXWENSQ0pUUzJCeWdZR1hmN1lfaHdCanhUY1BEdHZyMTJVR3A0OEZ4N2JORHJhV2hiU2MtTERuLXlZdlRMaDlKNW82bWNGZ1E0WkVXa2xzdGgtZVlEX1psUDg?oc=5",
+    "description": "미국채 금리 하락…금리 인상론 후퇴  연합뉴스TV",
+    "date": "2026-06-15T04:35:52.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "미국 국채 금리 하락... 미 연준의 금리 인상론 후퇴 조짐",
+      "summary": [
+        "글로벌 금융시장의 벤치마크인 미국 국채 금리가 하락세를 보이며 채권 시장이 진정되었습니다.",
+        "최근 발표된 경제 지표들로 인해 미국 연방준비제도(Fed)의 추가적인 금리 인상 가능성이 크게 후퇴했습니다.",
+        "인플레이션 둔화 조짐과 경제 성장 속도 조절에 대한 시장의 기대감이 금리 하락을 이끌었습니다."
+      ],
+      "implications": [
+        "글로벌 금리 정점론에 힘이 실리며 주식 등 위험 자산에 대한 투자 매력도가 다시 높아질 수 있습니다.",
+        "한국은행 등 주요국 중앙은행들이 통화 정책을 긴축에서 완화로 전환할 수 있는 정책적 여력이 확대되었습니다."
+      ]
+    }
+  },
+  "id_bpbmos": {
+    "id": "id_bpbmos",
+    "title": "씨티 \"韓, 하반기 연속 인상·최대 4% 최종금리 가능성도\" - 연합인포맥스",
+    "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFB4Z2NodEJnWHd4aTlkUE9LRVVWblJWLWhrbTgtM2pXN3FWbjJWeHRURDRfSEJlcDd3RVNva1Z1S0N2TFRsUGYyUDJaeWxCZTNmYURiU1ZZaXk1dmM0czdyTmdERW9XdlV3N3VZZDZmWjE?oc=5",
+    "description": "씨티 \"韓, 하반기 연속 인상·최대 4% 최종금리 가능성도\"  연합인포맥스",
+    "date": "2026-06-15T06:22:52.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "씨티그룹, 한국 하반기 연속 금리인상 및 최고 4% 최종금리 가능성 제기",
+      "summary": [
+        "씨티그룹은 한국은행이 올해 하반기에 연속으로 기준금리를 인상할 가능성이 있다고 전망했습니다.",
+        "금리 인상 사이클의 최종금리가 최대 4% 수준에 도달할 수 있다는 분석도 제기되었습니다.",
+        "국내의 지속적인 물가 상승 압력과 미국 연준의 통화 정책 기조가 이러한 전망의 주요 배경입니다."
+      ],
+      "implications": [
+        "국내 대출 금리 상승으로 이어져 가계와 기업의 이자 상환 부담이 가중될 우려가 있습니다.",
+        "부동산 및 주식 시장 등 자산 시장 전반의 유동성이 축소될 가능성에 대비해야 합니다."
+      ]
+    }
+  },
+  "id_bg1ib2": {
+    "id": "id_bg1ib2",
+    "title": "\"조달금리 4% 넘었는데\"…카드론 금리는 역주행 - v.daum.net",
+    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1PQ2poUzhnRlBKNUdwLWVCbGMzaGtzYW5VWGdobTJRVEZocFdKX0VFUzVxb2NCMWhWWkJGRGxvWkhMMHJGQWZBRWg2QnBWMHc?oc=5",
+    "description": "\"조달금리 4% 넘었는데\"…카드론 금리는 역주행  v.daum.net",
+    "date": "2026-06-15T05:55:03.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "여전채 조달금리 4% 돌파에도 카드론 금리는 역주행 하락",
+      "summary": [
+        "카드사들의 주요 자금 조달원인 여전채 금리가 4%를 넘어서며 조달 비용이 상승했습니다.",
+        "그럼에도 불구하고 서민들의 급전 창구인 카드론(장기카드대출) 금리는 오히려 하락하는 현상이 나타나고 있습니다.",
+        "이는 금융당국의 상생금융 동참 압박과 카드사 간의 시장 점유율 확보 경쟁이 맞물린 결과로 풀이됩니다."
+      ],
+      "implications": [
+        "수익성 악화 우려 속에서 카드사들의 철저한 건전성 및 리스크 관리가 요구됩니다.",
+        "저신용자 대출 비중 증가 시 향후 가계 부채 부실 및 연체율 상승의 뇌관이 될 수 있습니다."
+      ]
+    }
+  },
+  "id_19oh0mi": {
+    "id": "id_19oh0mi",
+    "title": "美·이란 종전합의에 산업계 ‘안도’…주가↑·환율↓, 항공 웃고 조선·석화는 변수 - 재외동포신문",
+    "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE4xSzdxd0J4Tl9jWkFpNDFhYUx6ZnZySTBNeDNUT2FYb3YxbWVEZTgtbG1QYmRkWVlZMkx3ZkxCdU5mMW5GdEdCcWZ2aklGcUJWSjNkWHRmdXpvOVpCcWRPbW15V0hzUmQ4TU1vNw?oc=5",
+    "description": "美·이란 종전합의에 산업계 ‘안도’…주가↑·환율↓, 항공 웃고 조선·석화는 변수  재외동포신문",
+    "date": "2026-06-15T05:54:48.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "미국과 이란 종전 합의에 산업계 안도... 항공주 웃고 조선·석화는 변수",
+      "summary": [
+        "미국과 이란의 종전 합의 소식에 지정학적 리스크가 대폭 완화되며 산업계가 안도감을 표하고 있습니다.",
+        "금융시장은 안정을 되찾아 주가는 상승하고 환율은 하락하는 긍정적인 흐름을 보였습니다.",
+        "국제 유가 하락 기대로 항공업계는 큰 수혜가 예상되지만, 조선 및 석유화학 업종은 향후 시황 변동성에 대비해야 합니다."
+      ],
+      "implications": [
+        "국제 유가의 하향 안정화로 국내 산업계 전반의 원가 부담이 경감되어 실적 개선이 기대됩니다.",
+        "글로벌 불확실성 감소로 외국인 투자자들의 위험 자산 선호 심리가 회복되어 국내 증시 상승 동력으로 작용할 수 있습니다."
       ]
     }
   }
