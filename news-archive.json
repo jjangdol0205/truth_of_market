@@ -992,12 +992,23 @@
     "title": "한국경제 - 한국경제",
     "link": "https://news.google.com/rss/articles/CBMiPkFVX3lxTE9Rc2NTWXZpM21reEI4aUpXNUVqbWxkVVQ5OVFaOVVjWVR0RzR1ZlZ5ZXF5V2E4WHVlRHRwQ3JR?oc=5",
     "description": "한국경제  한국경제",
-    "date": "2026-06-12T23:00:53.000Z",
+    "date": "2026-06-15T04:54:24.000Z",
     "sourceId": "hankyung-fin",
     "sourceName": "한국경제 증권",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "한국경제 주요 경제 동향 종합",
+      "summary": [
+        "국내외 주요 경제 지표 및 금융 시장의 동향을 종합적으로 점검함",
+        "거시 경제 변수와 산업별 주요 이슈들이 시장에 미치는 영향을 심층적으로 분석함",
+        "투자자들의 합리적 의사결정을 돕기 위한 시장 전망 및 투자 전략을 제시함"
+      ],
+      "implications": [
+        "국내외 경제 환경 변화에 대한 지속적인 모니터링 및 선제적 리스크 관리 필요",
+        "다양한 매크로 변수들을 고려한 균형 잡힌 포트폴리오 구축 전략 요구"
+      ]
+    }
   },
   "id_1oo9z8p": {
     "id": "id_1oo9z8p",
@@ -8262,10 +8273,10 @@
     "link": "https://www.nytimes.com/2026/06/11/insider/spacex-ipo-coverage-facts-price.html",
     "description": "Two Times tech reporters and their editor talk about assessing the sky-high valuation of the rocket and satellite maker, the potential economic impact of its public debut and the role of the world’s richest man in it all.",
     "date": "2026-06-12T17:12:53.000Z",
-    "sourceId": "nyt-biz",
-    "sourceName": "NYT 비즈니스",
+    "sourceId": "nyt-tech",
+    "sourceName": "NYT 테크놀로지",
     "lang": "en",
-    "category": "Markets",
+    "category": "Tech",
     "aiAnalysis": null
   },
   "id_s5cwms": {
@@ -9930,10 +9941,10 @@
     "link": "https://www.nytimes.com/2026/06/12/technology/spacex-ipo-elon-musk.html",
     "description": "The blockbuster stock market debut of Elon Musk’s rocket company paves the way for a wave of enormous offerings that are coming from OpenAI and Anthropic.",
     "date": "2026-06-12T20:52:00.000Z",
-    "sourceId": "nyt-biz",
-    "sourceName": "NYT 비즈니스",
+    "sourceId": "nyt-tech",
+    "sourceName": "NYT 테크놀로지",
     "lang": "en",
-    "category": "Markets",
+    "category": "Tech",
     "aiAnalysis": null
   },
   "id_1cu1bw0": {
@@ -9942,10 +9953,10 @@
     "link": "https://www.nytimes.com/2026/06/12/technology/spacex-ipo-journey.html",
     "description": "Elon Musk said he had initially given SpaceX less than a 10 percent chance of succeeding. His rocket company has come a long way.",
     "date": "2026-06-12T20:48:07.000Z",
-    "sourceId": "nyt-biz",
-    "sourceName": "NYT 비즈니스",
+    "sourceId": "nyt-tech",
+    "sourceName": "NYT 테크놀로지",
     "lang": "en",
-    "category": "Markets",
+    "category": "Tech",
     "aiAnalysis": null
   },
   "id_1o82fiy": {
@@ -9954,10 +9965,10 @@
     "link": "https://www.nytimes.com/2026/06/12/technology/elon-musk-trillionaire.html",
     "description": "With SpaceX shares soaring 20 percent on their first day of trading, the world’s richest person crossed another milestone — one with 13 digits.",
     "date": "2026-06-12T20:38:48.000Z",
-    "sourceId": "nyt-biz",
-    "sourceName": "NYT 비즈니스",
+    "sourceId": "nyt-tech",
+    "sourceName": "NYT 테크놀로지",
     "lang": "en",
-    "category": "Markets",
+    "category": "Tech",
     "aiAnalysis": null
   },
   "id_1fksciq": {
@@ -10002,10 +10013,10 @@
     "link": "https://www.nytimes.com/2026/06/12/upshot/spacex-stock-ipo.html",
     "description": "If you have index funds — such as in a 401(k) — they may soon include shares of the mega company. Here’s a rough calculation.",
     "date": "2026-06-12T20:18:27.000Z",
-    "sourceId": "nyt-biz",
-    "sourceName": "NYT 비즈니스",
+    "sourceId": "nyt-tech",
+    "sourceName": "NYT 테크놀로지",
     "lang": "en",
-    "category": "Markets",
+    "category": "Tech",
     "aiAnalysis": null
   },
   "id_3y7mw2": {
@@ -10282,7 +10293,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "KODEX AI반도체핵심장비(471990)",
+      "summary": [
+        "AI 반도체 산업의 성장에 발맞춰 핵심 장비 기업들에 투자하는 KODEX AI반도체핵심장비 ETF의 동향을 다룹니다.",
+        "국내 AI 반도체 밸류체인 내 주요 장비 업체들의 시장 내 위치와 중장기 성장 전망을 조명합니다.",
+        "반도체 사이클 회복과 인공지능 설비투자 확대가 맞물리며 해당 테마에 대한 관심이 고조되고 있습니다."
+      ],
+      "implications": [
+        "AI 산업 팽창에 따른 반도체 장비 수요 증가가 예상되며, 관련 ETF 및 편입 종목의 수혜가 기대됩니다.",
+        "투자자들은 글로벌 반도체 사이클과 테크 기업들의 AI 캡엑스(CAPEX) 투자 추이를 주시하며 비중 확대를 고려할 수 있습니다."
+      ]
+    }
   },
   "id_1gu4k9z": {
     "id": "id_1gu4k9z",
@@ -12330,8 +12352,8 @@
     "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQNlA5enNBd1pha1lhSXlyWGd4NTMzVGw1bTQyLUJ0bEdCMjlpX3pRNC1SVlFnTU0yMk9ranVHbXJYU3ZEWjkzZE5PenpLWE9hZ1Btb2JKOXRmVmIyUklLQ21VU2Z1bDFVc2NaQ0lfYUtWV3FSNVJlQy1nMFoyQXctZE5WNnR5NVk?oc=5",
     "description": "재경부 \"토큰화 주식, 가상자산 아닌 증권\"  모바일한경",
     "date": "2026-06-12T09:19:36.000Z",
-    "sourceId": "hankyung-eco",
-    "sourceName": "한국경제 경제",
+    "sourceId": "hankyung-fin",
+    "sourceName": "한국경제 증권",
     "lang": "ko",
     "category": "Macro",
     "aiAnalysis": null
@@ -12654,23 +12676,34 @@
     "link": "https://www.nytimes.com/2026/06/14/business/media/trump-ufc-david-ellison.html",
     "description": "A U.F.C. fight on President Trump’s birthday will now double as a capstone for Paramount’s successful effort to secure Justice Department approval for a mega media merger.",
     "date": "2026-06-14T16:13:43.000Z",
-    "sourceId": "nyt-biz",
-    "sourceName": "NYT 비즈니스",
+    "sourceId": "nyt-tech",
+    "sourceName": "NYT 테크놀로지",
     "lang": "en",
-    "category": "Markets",
+    "category": "Tech",
     "aiAnalysis": null
   },
   "id_so2cmx": {
     "id": "id_so2cmx",
     "title": "Oil Prices Tumble After Trump Announces Deal With Iran",
     "link": "https://www.nytimes.com/2026/06/14/business/oil-stocks-gas-iran.html",
-    "description": "Oil prices fell and stocks gained on Sunday evening on the hope that a deal would allow more energy and other goods to flow through the Strait of Hormuz.",
-    "date": "2026-06-14T22:26:46.000Z",
+    "description": "Oil prices fell and stocks gained early Monday after Iran and the U.S. reached a deal that may allow more energy and other goods to flow through the Strait of Hormuz.",
+    "date": "2026-06-15T05:50:36.000Z",
     "sourceId": "nyt-biz",
     "sourceName": "NYT 비즈니스",
     "lang": "en",
     "category": "Markets",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "트럼프 대통령 이란과 합의 발표 후 유가 급락",
+      "summary": [
+        "미국과 이란이 호르무즈 해협을 통한 에너지 및 상품 이동을 허용하는 합의에 도달함",
+        "이에 따라 월요일 오전 국제 유가는 하락세를 보임",
+        "반면 주식 시장은 지정학적 긴장 완화로 인해 조기 상승세로 반응함"
+      ],
+      "implications": [
+        "글로벌 에너지 공급 안정화 및 물가 상승 압력 완화 기대",
+        "에너지 섹터 주가 하락 및 타 산업군의 전반적인 주식 시장 반등 가능성"
+      ]
+    }
   },
   "id_1fd7wt": {
     "id": "id_1fd7wt",
@@ -12682,7 +12715,18 @@
     "sourceName": "NYT 비즈니스",
     "lang": "en",
     "category": "Markets",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "스위스의 소금 같은 존재이자 자국민을 자극했던 장 지글러, 92세로 타계",
+      "summary": [
+        "스위스의 번영과 투명한 이미지 이면에 감춰진 부패와 불평등을 끊임없이 폭로했던 저명한 사회학자 장 지글러가 92세로 세상을 떠났습니다.",
+        "그는 평생토록 극심한 빈부 격차, 금융 자본주의의 탐욕, 글로벌 기아 문제를 비판하며 기득권층으로부터 거센 반발과 살해 위협을 받았습니다.",
+        "스위스 은행의 비밀주의와 부도덕한 자금 운용 행태를 강도 높게 고발하여 국제 사회의 금융 투명성 강화에 기여한 인물로 평가받습니다."
+      ],
+      "implications": [
+        "그의 타계는 글로벌 자본주의 시스템의 도덕적 해이와 부의 재분배 문제에 대한 국제적 담론을 다시금 점화시키는 계기가 될 수 있습니다.",
+        "금융 중심지 스위스와 글로벌 대형 은행들을 향한 자금 세탁 방지 및 ESG(환경·사회·지배구조) 규제 강화 압력은 지속적으로 커질 전망입니다."
+      ]
+    }
   },
   "id_15um542": {
     "id": "id_15um542",
@@ -12798,8 +12842,8 @@
     "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFAta0p0TnhyekJVVVQ0NzZoU3ZYZkVqZWlCd2pCLWdWNnUtd2l6MU4yMGV4dHFnVmZ4Yno1UWtEbUdkQUJoUEVGR1FRWWhiNEZDMnBOOFlOdV96Z9IBVEFVX3lxTE5rSnVnNnRtWjNURTlYUXhpSDI0Uk1YRXh5UTllSTh1VE0xaXhvR052QmxtckdDWVo1ZVMzUjNacXJNOXFnakxYNVFvcjBHLUlSZ0pvaw?oc=5",
     "description": "정부, 올 3분기 국민참여성장펀드 6000억 추가 출시  한국경제",
     "date": "2026-06-14T03:00:53.000Z",
-    "sourceId": "hankyung-eco",
-    "sourceName": "한국경제 경제",
+    "sourceId": "hankyung-fin",
+    "sourceName": "한국경제 증권",
     "lang": "ko",
     "category": "Macro",
     "aiAnalysis": null
@@ -12886,7 +12930,18 @@
     "sourceName": "한국경제 증권",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "가스公, 글로벌 에너지 위기 장기화 및 미수금 누적 등 이중고 속",
+      "summary": [
+        "한국가스공사가 글로벌 에너지 위기의 장기화로 인해 심각한 어려움에 직면해 있습니다.",
+        "특히 막대한 규모의 미수금이 누적되면서 재무 구조 악화에 대한 우려가 커지고 있습니다.",
+        "국제 천연가스 가격 변동성과 국내 요금 동결 정책이 맞물려 경영 부담이 가중되는 상황입니다."
+      ],
+      "implications": [
+        "공기업의 재무 건전성 악화로 인해 향후 가스 요금의 대폭 인상이 불가피할 수 있습니다.",
+        "에너지 관련 공기업들의 신용 등급 하락 및 조달 금리 상승 리스크가 존재합니다."
+      ]
+    }
   },
   "id_85ogs9": {
     "id": "id_85ogs9",
@@ -13066,7 +13121,18 @@
     "sourceName": "조선일보 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "\"600만원 받고 철거 안 해?\"… 집배원이 잡아낸다",
+      "summary": [
+        "정부나 지자체의 지원금을 수령하고도 의무 사항인 시설물 철거를 이행하지 않는 부정수급 사례가 적발되고 있습니다.",
+        "우체국 집배원 등 지역 밀착형 현장 인력과 협력하여 이러한 불법 행위를 실시간으로 감시하는 시스템이 도입되었습니다.",
+        "공공 예산 집행의 투명성을 제고하고 보조금 누수를 원천 차단하기 위한 정부의 강력한 조치입니다."
+      ],
+      "implications": [
+        "정부 지원금 및 보조금 사업에 참여하는 영세 기업 및 개인 사업자에 대한 사후 감사와 관리가 대폭 강화될 전망입니다.",
+        "재정 효율성 측면에서는 긍정적이나, 관련 규제 및 관리 감독 강화로 현장의 행정적 부담이 다소 증가할 수 있습니다."
+      ]
+    }
   },
   "id_1dmeua6": {
     "id": "id_1dmeua6",
@@ -13078,7 +13144,18 @@
     "sourceName": "조선일보 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "스페이스X만 있는 게 아니다, 한국 위성 제조 능력 세계 TOP3",
+      "summary": [
+        "글로벌 우주 산업 시장에서 미국의 스페이스X가 주도권을 쥐고 있지만, 한국의 위성 제조 및 설계 기술력도 세계 3위권 수준에 도달했다는 분석입니다.",
+        "정부의 꾸준한 우주 개발 R&D 투자와 한화, KAI 등 주요 민간 기업들의 인프라 확충이 시너지를 내며 압도적인 성과를 내고 있습니다.",
+        "고해상도 지구 관측 위성부터 통신용 소형 군집 위성까지 다양한 체계 라인업을 갖추며 글로벌 수주 경쟁력을 확보해가고 있습니다."
+      ],
+      "implications": [
+        "K-우주항공 테마가 방산에 이은 새로운 핵심 수출 주도 섹터로 부상하며 관련 상장 기업들의 장기적인 밸류에이션 리레이팅이 예상됩니다.",
+        "위성 본체 제조뿐만 아니라 탑재체, 지상국 수신, 위성 데이터 분석(AI) 서비스 등 파생되는 밸류체인 전반에 걸친 투자 기회가 확대될 것입니다."
+      ]
+    }
   },
   "id_1p0wuaw": {
     "id": "id_1p0wuaw",
@@ -13366,7 +13443,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "금리급등 속 자영업자 못 갚은 빚 올들어 8%↑…고령층 빨간불",
+      "summary": [
+        "장기화된 고금리와 금리 급등 여파로 올해 들어 자영업자의 연체 등 부실 채무 규모가 8% 이상 급증했습니다.",
+        "특히 경기 민감도가 높고 상환 능력이 상대적으로 취약한 60대 이상 고령층 자영업자들의 연체율이 치솟으며 경고등이 켜졌습니다.",
+        "내수 회복 지연과 이자 상환 부담 증가가 맞물리면서 자영업 부문의 뇌관이 한계 상황에 직면하고 있습니다."
+      ],
+      "implications": [
+        "자영업자 발 대규모 부실이 저축은행 등 제2금융권을 시작으로 금융권 전반의 시스템 리스크로 전이될 우려가 존재합니다.",
+        "금융사들의 대손비용 증가가 실적 하락으로 이어질 수 있으며, 정부의 소상공인 대상 대규모 부채 구조조정이나 금융 지원책이 논의될 수 있습니다."
+      ]
+    }
   },
   "id_qtdpop": {
     "id": "id_qtdpop",
@@ -13413,7 +13501,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "[주간경제일정] 美연준, 수요일 기준금리 결정 주목…금리 유지 전망",
+      "summary": [
+        "이번 주 수요일에 예정된 미국 연방준비제도(Fed)의 기준금리 결정에 전 세계 금융 시장의 이목이 집중되고 있습니다.",
+        "현재 시장의 컨센서스는 연준이 현재의 금리 수준을 동결할 것이라는 전망에 무게를 두고 있습니다.",
+        "투자자들은 파월 의장의 기자회견을 통해 향후 금리 경로에 대한 단서를 찾고자 할 것입니다."
+      ],
+      "implications": [
+        "금리 동결이 확정될 경우 증시에 안도 랠리가 펼쳐질 가능성이 있으나, 점도표 변화에 따른 변동성에도 대비해야 합니다.",
+        "연내 금리 인하 시점에 대한 힌트에 따라 시장의 방향성이 단기적으로 결정될 것입니다."
+      ]
+    }
   },
   "id_13htmv3": {
     "id": "id_13htmv3",
@@ -13425,7 +13524,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "금리 급등에 한숨 돌린 보험사…고금리 운용 전략 한계 '뚜렷'",
+      "summary": [
+        "최근 시장 금리의 급등으로 인해 보험사들의 투자 수익률이 개선되며 안도하는 분위기입니다.",
+        "하지만 고금리에 의존하는 자산 운용 전략은 장기적으로 뚜렷한 한계에 부딪힐 수밖에 없다는 지적이 나옵니다.",
+        "금리 변동성에 취약한 수익 구조를 탈피하기 위해 자산 포트폴리오의 다변화가 절실히 요구됩니다."
+      ],
+      "implications": [
+        "향후 금리 하락 전환 시 보험사들의 이차역마진 리스크가 다시 부각될 수 있습니다.",
+        "대체 투자 및 해외 자산 비중 확대를 통한 새로운 수익원 발굴이 보험업계의 주요 과제로 떠오를 것입니다."
+      ]
+    }
   },
   "id_p8c4ce": {
     "id": "id_p8c4ce",
@@ -13437,7 +13547,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "환율·채권, 중동戰 종전땐 원·달러 1500원 밑으로",
+      "summary": [
+        "중동 전쟁이 종식될 경우, 원·달러 환율이 1500원 선 아래로 안정될 것이라는 전망이 나왔습니다.",
+        "국제 유가 하락과 안전 자산 선호 심리 약화가 달러화 강세를 진정시킬 것으로 보입니다.",
+        "환율 안정은 국내 채권 시장에도 긍정적인 영향을 미쳐 금리 하락을 유도할 수 있습니다."
+      ],
+      "implications": [
+        "환율 안정으로 인해 수입 물가가 하락하며 국내 인플레이션 압력이 완화될 수 있습니다.",
+        "외국인 투자자들의 환차익 기대감으로 국내 증시 및 채권 시장으로의 자금 유입이 기대됩니다."
+      ]
+    }
   },
   "id_1akgf3": {
     "id": "id_1akgf3",
@@ -13484,7 +13605,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "주택담보대출 변동금리 비중 5년 만에 고정금리 '역전'…기업·가계 모두 '변동금리'",
+      "summary": [
+        "주택담보대출 신규 취급액 중 변동금리 비중이 5년 만에 고정금리를 다시 앞질렀습니다.",
+        "가계뿐만 아니라 기업 대출에서도 향후 금리 인하 기대감이 선반영되어 변동금리 선호 현상이 뚜렷해지고 있습니다.",
+        "시장 금리 고점 인식 확산으로 대출자들이 이자 부담을 줄이기 위해 변동금리를 전략적으로 선택한 결과입니다."
+      ],
+      "implications": [
+        "향후 기준금리 인하가 지연되거나 폭이 제한적일 경우, 변동금리 차주들의 이자 부담 리스크가 확대될 수 있습니다.",
+        "은행권의 이자 마진(NIM) 변동성이 커질 수 있으며, 금융 당국의 가계부채 모니터링 및 관리 정책에 변화가 있을 수 있습니다."
+      ]
+    }
   },
   "id_10cphq4": {
     "id": "id_10cphq4",
@@ -13508,7 +13640,17 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "[리포트]K-반도체 경쟁력, 토종기술로 지킨다",
+      "summary": [
+        "글로벌 반도체 기술 패권 경쟁이 격화되는 가운데, 국내 토종 기술 개발을 통한 'K-반도체'의 초격차 유지 노력이 집중 조명되었다.",
+        "산학연 협력을 통한 차세대 반도체 원천 기술 확보와 소부장(소재·부품·장비) 국산화 비율을 높이는 것이 핵심 과제로 제시된다.",
+        "국가 경제 안보와 직결된 반도체 자립도 향상은 장기적인 국가 경쟁력 수호를 위한 필수적인 기반 구축 작업이다."
+      ],
+      "implications": [
+        "반도체 핵심 장비 및 소재의 국산화에 성공하거나 정부 R&D 지원을 받는 기술 집약적 소부장 강소기업들의 성장 잠재력에 주목해야 생태계 밸류체인에 속한 기업들의 안정적인 매출 확보 기회를 제공할 것이다."
+      ]
+    }
   },
   "id_rtrlgf": {
     "id": "id_rtrlgf",
@@ -13567,7 +13709,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "[법조 인사이드] “이직했다가 범죄자 될라”… 로펌 찾는 반도체 엔지니어들",
+      "summary": [
+        "반도체 업계 내 기술 유출에 대한 제재와 경각심이 높아지면서, 이직을 준비하는 엔지니어들이 선제적으로 대형 로펌을 찾는 사례가 급증하고 있습니다.",
+        "경쟁사로의 이직 시 발생할 수 있는 영업비밀 침해 소송 위험을 최소화하고 법적 자문을 구하기 위한 목적입니다.",
+        "국내외 기업들이 핵심 기술과 인력 보호를 위해 퇴직 직원에 대한 모니터링 체계와 법적 대응을 전례 없이 강화하고 있기 때문입니다."
+      ],
+      "implications": [
+        "핵심 인재 확보를 위한 글로벌 반도체 기업 간의 패권 경쟁이 심화되는 가운데, 인력 이동의 법적 장벽과 리스크가 크게 높아지고 있습니다.",
+        "영업비밀 관련 소송 증가로 법무법인들의 수혜가 예상되며, 기업들은 핵심 인재 유출을 막기 위해 파격적인 보상 체계를 도입할 가능성이 큽니다."
+      ]
+    }
   },
   "id_8qrr9z": {
     "id": "id_8qrr9z",
@@ -13591,7 +13744,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "“일본, 내일 금리 올릴 듯”…2년 전 코스피는 8%대 폭락했다",
+      "summary": [
+        "일본은행의 내일 금리 인상 가능성이 높아지면서 아시아 금융 시장에 긴장감이 감돌고 있습니다.",
+        "과거 2년 전 일본의 금리 정책 변화 당시 코스피가 8%대 폭락했던 사례가 재조명되고 있습니다.",
+        "엔캐리 트레이드 청산 우려가 글로벌 자금의 이탈을 부추길 수 있다는 분석이 나옵니다."
+      ],
+      "implications": [
+        "외국인 자금 이탈 우려로 인해 단기적으로 코스피 시장의 변동성이 크게 확대될 수 있습니다.",
+        "엔화 대출 비율이 높은 기업들의 재무적 부담이 가중될 가능성을 예의주시해야 합니다."
+      ]
+    }
   },
   "id_wahnki": {
     "id": "id_wahnki",
@@ -13603,7 +13767,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "[애프터마켓 리뷰] 한미반도체, 500억 규모 스페이스X 주식 취득 결정",
+      "summary": [
+        "한미반도체가 스페이스X의 주식을 500억 원 규모로 취득하기로 결정했습니다.",
+        "이는 우주 항공 및 위성 통신 분야로의 사업 다각화 및 미래 성장 동력 확보를 위한 전략으로 풀이됩니다.",
+        "글로벌 빅테크와의 협력 강화를 통해 기업 가치가 한 단계 상승할 것으로 기대됩니다."
+      ],
+      "implications": [
+        "한미반도체의 사업 포트폴리오 확대로 중장기적인 투자 매력도가 높아질 것입니다.",
+        "국내 우주 항공 관련 기업들에 대한 시장의 관심도 동반 상승할 가능성이 있습니다."
+      ]
+    }
   },
   "id_121e5jp": {
     "id": "id_121e5jp",
@@ -13615,7 +13790,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "美 FOMC 기준금리 동결 유력…\"이익 성장·낙폭과대주 주목\"",
+      "summary": [
+        "미국 연방공개시장위원회(FOMC)에서 기준금리를 동결할 가능성이 매우 높은 것으로 관측됩니다.",
+        "전문가들은 금리 동결 시 이익 성장세가 뚜렷한 기업이나 그동안 낙폭이 컸던 주식에 주목할 것을 권고하고 있습니다.",
+        "시장의 불확실성이 줄어들면서 펀더멘털에 기반한 종목 장세가 펼쳐질 것으로 예상됩니다."
+      ],
+      "implications": [
+        "금리 인상 사이클의 종료 기대감으로 성장주 및 기술주에 대한 투자 매력도가 부각될 수 있습니다.",
+        "실적 장세로의 전환에 대비하여 기업들의 이익 전망치 변화에 민감하게 대응해야 합니다."
+      ]
+    }
   },
   "id_1jque32": {
     "id": "id_1jque32",
@@ -13627,7 +13813,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "[김대호 인물] 라가르드 ECB 금리인상 신호탄",
+      "summary": [
+        "크리스틴 라가르드 유럽중앙은행(ECB) 총재가 지속적인 물가 상승 압력에 대응하기 위해 금리 인상 가능성을 시사했습니다.",
+        "유로존의 인플레이션이 여전히 목표치를 상회하고 있어, 긴축적인 통화 정책의 필요성이 대두되고 있습니다.",
+        "이는 글로벌 금리 인하 기대감에 찬물을 끼얹으며 주요국 통화 정책의 디커플링을 심화시킬 수 있습니다."
+      ],
+      "implications": [
+        "유럽의 금리 인상 기조는 유로화 강세를 유발하고 달러화의 상대적 약세를 초래할 수 있습니다.",
+        "글로벌 유동성 위축 우려가 글로벌 증시의 상단을 제한하는 요인으로 작용할 가능성이 있습니다."
+      ]
+    }
   },
   "id_1jw70ld": {
     "id": "id_1jw70ld",
@@ -13674,7 +13871,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "\"반도체 10배 뛸 때 전혀 안 올랐다…지금 사두면 돈 되는 주식\"",
+      "summary": [
+        "최근 반도체 관련 주식들이 폭발적인 상승세를 보인 반면, 철저히 소외되어 온 저평가 우량주들에 대한 관심이 커지고 있습니다.",
+        "전문가들은 밸류에이션 매력이 높고 향후 실적 턴어라운드가 기대되는 종목들을 선별하여 투자할 것을 조언합니다.",
+        "시장의 순환매 장세에 대비하여 소외주 중에서도 강력한 성장 모멘텀을 보유한 기업에 주목해야 합니다."
+      ],
+      "implications": [
+        "가치주 및 배당주 등 전통적인 저평가 영역으로의 시장 수급 이동 가능성을 고려한 포트폴리오 재편이 필요합니다.",
+        "단기 급등한 섹터의 차익 실현 물량이 출회될 경우, 이러한 소외주들이 훌륭한 대안 투자처가 될 수 있습니다."
+      ]
+    }
   },
   "id_17sq43r": {
     "id": "id_17sq43r",
@@ -13686,7 +13894,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "멈춰 선 레미콘‥반도체 공장 현장마저 위기",
+      "summary": [
+        "레미콘 운송 차질 사태가 장기화되면서 건설 현장뿐만 아니라 핵심 국가 산업인 반도체 공장 건설 현장까지 위협받고 있습니다.",
+        "자재 수급의 불균형으로 인해 공정 지연이 발생하며 천문학적인 비용 손실 우려가 커지고 있습니다.",
+        "산업 생태계 전반에 걸친 공급망 마비 사태를 해결하기 위한 정부의 적극적인 개입이 촉구되고 있습니다."
+      ],
+      "implications": [
+        "반도체 인프라 구축 지연은 기업들의 적기 생산 능력을 훼손하여 글로벌 경쟁력 약화로 이어질 수 있습니다.",
+        "건설 및 관련 자재 업종의 단기적인 실적 악화 및 신용 리스크 확대 가능성이 있습니다."
+      ]
+    }
   },
   "id_1mp3why": {
     "id": "id_1mp3why",
@@ -13710,7 +13929,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "BOJ, 우에다 총재 부재 속 금리 인상 유력...31년 만의 최고 금리 눈앞",
+      "summary": [
+        "일본은행(BOJ)이 우에다 총재의 부재에도 불구하고 금리 인상을 단행할 것으로 유력하게 전망됩니다.",
+        "이번 인상이 실현될 경우, 일본은 31년 만에 최고 금리 수준을 기록하게 됩니다.",
+        "물가 상승 압력과 엔화 약세 방어를 위한 조치로 풀이됩니다."
+      ],
+      "implications": [
+        "엔화 강세로 인해 글로벌 금융 시장에서의 자금 이동이 활발해질 수 있습니다.",
+        "일본 증시의 변동성이 확대되고, 수출 기업들의 실적에 부정적인 영향을 미칠 가능성이 있습니다."
+      ]
+    }
   },
   "id_g9xffd": {
     "id": "id_g9xffd",
@@ -13722,7 +13952,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "종전해도 한은은 '금리인상' 직진…물가·빚투·부동산 '3중 압력' 지속",
+      "summary": [
+        "지정학적 리스크 완화 기대에도 불구하고 한국은행의 매파적(통화 긴축) 기조가 당분간 지속될 전망입니다.",
+        "핵심 물가의 고착화 우려, 주식 및 가상자산으로의 빚투 현상, 그리고 불안정한 부동산 시장 가격이 주요 원인으로 지목됩니다.",
+        "이러한 거시경제적 '3중 압력'이 한국은행의 섣부른 금리 인하를 제약하고 있습니다."
+      ],
+      "implications": [
+        "고금리 환경의 장기화로 인해 주식 및 부동산 등 국내 위험 자산 시장의 상단이 제한되고 변동성이 커질 가능성이 높습니다.",
+        "대출 금리 고공행진으로 한계 기업들의 자금 조달 환경이 더욱 악화될 수 있어 크레딧 시장에 대한 주의가 요구됩니다."
+      ]
+    }
   },
   "id_1lls7yv": {
     "id": "id_1lls7yv",
@@ -13734,7 +13975,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "'드디어 미·이란 종전'…채권시장 최악 지나가나",
+      "summary": [
+        "미국과 이란 간의 종전 합의 소식이 전해짐에 따라 채권시장의 불확실성이 해소될 것으로 전망됩니다.",
+        "지정학적 리스크 완화로 인해 국채 금리가 안정세를 보일 가능성이 큽니다.",
+        "안전 자산 선호 심리가 다소 완화되며 투자자들의 채권 시장으로의 회귀가 기대됩니다."
+      ],
+      "implications": [
+        "채권 금리 안정화로 인한 기업들의 자금 조달 여건이 개선될 것으로 보입니다.",
+        "국내외 채권형 펀드로의 자금 유입이 증가할 가능성이 있습니다."
+      ]
+    }
   },
   "id_x4r0ge": {
     "id": "id_x4r0ge",
@@ -13770,7 +14022,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "'영·일 안보·기술 밀착'… 한국 반도체·원전·방산 서유럽 수출구도 변수",
+      "summary": [
+        "영국과 일본이 안보 및 첨단 기술 분야에서 협력을 강화하며 긴밀하게 밀착하고 있습니다.",
+        "이러한 양국의 공조는 한국의 주력 수출 산업인 반도체, 원전, 방산의 서유럽 시장 진출에 새로운 변수로 떠올랐습니다.",
+        "경쟁 심화에 대비하여 한국 기업들의 기술 경쟁력 제고 및 다각적인 외교적 지원이 필요한 상황입니다."
+      ],
+      "implications": [
+        "서유럽 주요 국가들을 대상으로 한 수주 경쟁에서 일본 기업들과의 치열한 경합이 예상됩니다.",
+        "수출 대상국 다변화 및 독보적인 기술력 확보를 통한 차별화 전략 마련이 시급합니다."
+      ]
+    }
   },
   "id_1uorxkz": {
     "id": "id_1uorxkz",
@@ -13782,7 +14045,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "“종전 합의로 코스피 추가 상승할 것…반도체에 수급 집중”",
+      "summary": [
+        "중동의 종전 합의가 코스피 시장에 긍정적인 재료로 작용하여 추가 상승이 기대됩니다.",
+        "특히 외국인과 기관의 수급이 반도체 업종으로 집중될 것이라는 분석이 지배적입니다.",
+        "글로벌 지정학적 리스크 완화가 투자 심리를 대폭 개선시키고 있습니다."
+      ],
+      "implications": [
+        "국내 반도체 대형주 중심의 지수 상승 랠리가 이어질 가능성이 높습니다.",
+        "위험 자산 선호 현상 강화로 신흥국 증시 전반에 외국인 자금 유입이 예상됩니다."
+      ]
+    }
   },
   "id_t8a2lo": {
     "id": "id_t8a2lo",
@@ -13806,7 +14080,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "KODEX AI반도체핵심장비(471990)",
+      "summary": [
+        "AI 반도체 산업의 성장에 발맞춰 핵심 장비 기업들에 투자하는 KODEX AI반도체핵심장비 ETF의 동향을 다룹니다.",
+        "국내 AI 반도체 밸류체인 내 주요 장비 업체들의 시장 내 위치와 중장기 성장 전망을 조명합니다.",
+        "반도체 사이클 회복과 인공지능 설비투자 확대가 맞물리며 해당 테마에 대한 관심이 고조되고 있습니다."
+      ],
+      "implications": [
+        "AI 산업 팽창에 따른 반도체 장비 수요 증가가 예상되며, 관련 ETF 및 편입 종목의 수혜가 기대됩니다.",
+        "투자자들은 글로벌 반도체 사이클과 테크 기업들의 AI 캡엑스(CAPEX) 투자 추이를 주시하며 비중 확대를 고려할 수 있습니다."
+      ]
+    }
   },
   "id_m4gunt": {
     "id": "id_m4gunt",
@@ -13842,7 +14127,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "빠르게 심화되는 '반도체 편중'…잠재적 리스크 요인될까",
+      "summary": [
+        "한국 거시경제와 수출 지표에서 반도체 산업이 차지하는 비중이 갈수록 기형적으로 확대되며 '반도체 편중' 현상이 우려를 낳고 있습니다.",
+        "반도체 사이클의 호황기에는 전체 경제 성장의 강력한 엔진 역할을 하지만, 다운사이클 진입 시 경제 전반에 치명적인 타격을 줄 수 있습니다.",
+        "특정 단일 산업에 대한 국가 경제의 과도한 의존도가 펀더멘털의 구조적 리스크로 작용할 수 있다는 전문가들의 경고가 이어집니다."
+      ],
+      "implications": [
+        "글로벌 반도체 업황의 작은 변동에도 국내 증시 전체와 원/달러 환율이 크게 출렁이는 취약성이 부각될 수 있습니다.",
+        "정부 차원의 차세대 신성장 동력(바이오, 2차전지, 모빌리티 등) 육성 및 산업 포트폴리오 다변화를 위한 정책 지원이 시급히 요구됩니다."
+      ]
+    }
   },
   "id_1iitkfg": {
     "id": "id_1iitkfg",
@@ -13854,7 +14150,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "[환율] 원-달러 1,514.70원 … 0.28%↓",
+      "summary": [
+        "원·달러 환율이 전 거래일 대비 0.28% 소폭 하락하여 1,514.70원을 기록하며 마감했다.",
+        "최근의 지정학적 긴장 완화 및 글로벌 달러화 강세가 다소 진정된 것이 원화 가치의 제한적 반등(환율 하락)을 이끌었다.",
+        "그러나 미국의 통화정책 방향 등 대외 불확실성이 여전하여 당분간 환율은 1,500원대 중반에서 박스권 등락을 이어갈 전망이다."
+      ],
+      "implications": [
+        "1,500원대의 고환율 고착화는 수입 물가 상승 부담을 주지만, 수출 주도형 기업(자동차, 반도체 등)의 환차익을 통한 실적 방어에는 긍정적이다.",
+        "환율의 제한적인 하락세는 외국인 투자자들의 국내 증시 자금 이탈을 방어하는 단기적인 완충 역할을 할 수 있다."
+      ]
+    }
   },
   "id_13mdc4y": {
     "id": "id_13mdc4y",
@@ -13914,7 +14221,18 @@
     "sourceName": "동아일보 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "스페이스X 상장 잔치, 韓 ‘0주’… 공모 참여 미래에셋 1주도 못 받아",
+      "summary": [
+        "혁신 우주 기업 스페이스X의 펀딩(또는 특정 상장 이벤트) 과정에서 대규모 자금을 베팅한 한국 기관 투자자들이 물량을 전혀 배정받지 못했습니다.",
+        "선제적으로 글로벌 투자 기회를 모색하며 적극적으로 참여했던 미래에셋 등 국내 대표 금융사들도 단 1주의 지분도 확보하지 못하는 쓴맛을 봤습니다.",
+        "폐쇄적이고 그들만의 리그로 운영되는 글로벌 최고급 딥테크 딜(Deal) 시장에서 한국 자본의 낮은 위상과 네트워크의 한계가 명확히 드러났습니다."
+      ],
+      "implications": [
+        "실리콘밸리의 핵심 네트워크에서 소외되지 않기 위해 국내 금융사들의 글로벌 투자 전략의 전면적인 궤도 수정과 현지 파트너십 강화가 절실합니다.",
+        "글로벌 최고 유니콘에 대한 직접 투자가 무산됨에 따라, 넥스트 스페이스X를 노리는 국내외 대체 우주항공 스타트업 및 관련 테마 ETF로 자금이 우회 유입될 가능성이 있습니다."
+      ]
+    }
   },
   "id_1ubbask": {
     "id": "id_1ubbask",
@@ -14366,7 +14684,18 @@
     "sourceName": "조선일보 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "1년에 세 배 오른 코스피, 곱버스 ETF는 84원… 제도 공백에 방치된 초저가 ‘십원주’ ETF",
+      "summary": [
+        "코스피 지수가 1년 새 크게 상승하면서 시장 하락에 베팅하는 이른바 '곱버스(인버스 2X)' ETF의 가격이 100원 미만인 84원까지 추락했다.",
+        "이처럼 가격이 극단적으로 낮아진 초저가 '십원주' ETF들이 상장 폐지 요건 등의 제도적 공백 속에서 방치되고 있어 투자자 피해가 우려된다.",
+        "지나치게 싼 가격 탓에 호가 단위에 따른 변동성(괴리율)이 비정상적으로 증폭되어 투기적 매매를 부추길 수 있다는 지적이 나온다."
+      ],
+      "implications": [
+        "초저가 인버스 ETF에 대한 규제 당국의 상장 폐지 기준 강화 및 호가 단위 개편 등 적극적인 제도 정비가 뒤따를 것으로 예상된다.",
+        "투자자들은 극단적인 가격의 파생형 ETF 투자 시 높은 괴리율과 상장 폐지 리스크를 명확히 인지하고 주의해야 한다."
+      ]
+    }
   },
   "id_hmfnwf": {
     "id": "id_hmfnwf",
@@ -14673,7 +15002,7 @@
     "title": "[생생뉴스] 변동성 커진 주식·환율…지역 경제에 미치는 영향은? - v.daum.net",
     "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1BclBtM0IwcXBkN2pTejdMTmFnV2FEQkR6VzQxSEJhR19ydDRhZE1HOTloeDVmU3hwdTZLQVpUU05CQjJtTnN6WWFvMWpRWGc?oc=5",
     "description": "[생생뉴스] 변동성 커진 주식·환율…지역 경제에 미치는 영향은?  v.daum.net",
-    "date": "2026-06-15T02:18:00.000Z",
+    "date": "2026-06-15T02:18:48.000Z",
     "sourceId": "korean-markets-trend",
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
@@ -14701,7 +15030,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "한투증권 \"중동 리스크 완화로 펀더멘털 집중…반도체株 보유해야\"",
+      "summary": [
+        "한국투자증권은 중동 지정학적 리스크 완화로 인해 금융시장의 관심이 다시 기업들의 실적 등 펀더멘털로 이동할 것이라고 분석했다.",
+        "특히 실적 턴어라운드와 성장성이 돋보이는 반도체 업종을 시장 주도주로 지목하며, 주식 포트폴리오 내 비중 확대를 권고했다.",
+        "대외 불확실성이 걷히면서 실적 장세가 본격화될 경우, 반도체 섹터의 이익 상향 조정이 전체 증시 상승을 견인할 것으로 보았다."
+      ],
+      "implications": [
+        "시장 변동성 축소 국면에서는 기업의 기초 체력(펀더멘털)이 탄탄한 대형 IT 및 반도체주 중심의 투자 전략이 유효하다.",
+        "반도체 사이클 회복 시그널에 맞춰 메모리뿐만 아니라 비메모리, 장비 업체로의 온기 확산 가능성을 염두에 두어야 한다."
+      ]
+    }
   },
   "id_4ww8fc": {
     "id": "id_4ww8fc",
@@ -15058,7 +15398,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "“일본, 내일 금리 올릴 듯”…2년 전 코스피는 8%대 폭락했다",
+      "summary": [
+        "일본은행이 내일 기준금리를 인상할 것이라는 예측이 지배적이며, 시장의 우려가 커지고 있습니다.",
+        "2년 전 유사한 상황에서 코스피가 8% 이상 급락했던 충격이 투자자들의 불안 심리를 자극하고 있습니다.",
+        "글로벌 금융 시장에서 엔화 자금의 급격한 회수로 인한 연쇄적인 자산 가격 하락 리스크가 존재합니다."
+      ],
+      "implications": [
+        "아시아 신흥국 증시 전반에 걸쳐 유동성 축소로 인한 하방 압력이 거세질 수 있습니다.",
+        "포트폴리오 내 안전 자산 비중을 확대하고 보수적인 투자 접근이 필요한 시점입니다."
+      ]
+    }
   },
   "id_1tw52ya": {
     "id": "id_1tw52ya",
@@ -15518,6 +15869,582 @@
       "implications": [
         "기후 변화에 대응하는 안정적인 식량 자원 생산 및 공급망 구축",
         "해양 생태계 보존과 수산업 기술 혁신의 긍정적 시너지 효과 창출"
+      ]
+    }
+  },
+  "id_ljmnsa": {
+    "id": "id_ljmnsa",
+    "title": "한국투자금융그룹, '캐년 ABF 파트너스' 지분투자 - 한국경제",
+    "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE42bGJ3TlB3N0EwZGUxSFFrNElESF9ocXk1NU9kZUhDMHFRb19zNzVheTZBb2VtUmpUSFlTU0dfUnNVbFJ5RTY0UUdPVHI3YU1jSWxDNVY2UHdCUdIBVEFVX3lxTE9RNk03bWxsa2NYZWNzb2pWZl9qeUQ2NFlmSVRpX0w0N0dTSXRLQkliZ2lnRXdicmE3WnBXLVFQMVd1RzlpS3VTM1FjdGdpZVJ1UVpUYg?oc=5",
+    "description": "한국투자금융그룹, '캐년 ABF 파트너스' 지분투자  한국경제",
+    "date": "2026-06-15T01:48:03.000Z",
+    "sourceId": "hankyung-fin",
+    "sourceName": "한국경제 증권",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "한국투자금융그룹, '캐년 ABF 파트너스' 지분투자",
+      "summary": [
+        "한국투자금융그룹이 글로벌 대체투자 역량 강화를 위해 미국의 유력 대체투자 운용사인 '캐년 ABF 파트너스'에 지분 투자를 단행했다.",
+        "이번 투자를 통해 선진 금융시장의 대체투자 노하우를 확보하고 글로벌 네트워크를 한층 확장할 수 있게 되었다.",
+        "주식, 채권 등 전통 자산의 변동성이 커지는 환경에서 대체투자를 통한 수익원 다변화 전략의 일환으로 풀이된다."
+      ],
+      "implications": [
+        "국내 금융사들의 해외 우량 대체투자 자산 발굴 및 M&A가 가속화될 전망이며, 이는 수익성 개선으로 이어질 수 있다.",
+        "대체투자 상품의 다양화는 고액 자산가 및 기관 투자자들의 투자 포트폴리오를 다각화하는 데 기여할 것이다."
+      ]
+    }
+  },
+  "id_1jmv94p": {
+    "id": "id_1jmv94p",
+    "title": "강홍민 기자 - 한경매거진&북",
+    "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBiSl8xQmZ6RWloekl0Q2ZPWTVfMTQ2eDJPSUdubnpSSVFDeUNFZjBOcnZOa3o2d1VCU000dXAyU0R5UGFHS1UyZTROelljcldUa2RCXy1haDdEV1cyYjhoWlRjUnBxbDdvRjJWRg?oc=5",
+    "description": "강홍민 기자  한경매거진&북",
+    "date": "2026-06-14T08:45:16.000Z",
+    "sourceId": "hankyung-fin",
+    "sourceName": "한국경제 증권",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_176orae": {
+    "id": "id_176orae",
+    "title": "스타벅스, 22일 전국 매장 문 닫고 역사인식교육 받는다... 정용진 회장도 포함 - 조선일보",
+    "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxObS1HbEFVTHl6bEhmREUzLWk3MGIyTmE3S0tCVWR4bTlldzQyOUJiWXFxeVJ0dHJNRlo4LXZwV294a1Y5SGhFcHViSzZkVVNERWxDcGladmRuWDh4anB1QTk0Nnl2OTR0M0Z0Q1FJMm9mdHEtbFgxQktjWUNKMmpvVTU2SVpyUmRYdXc?oc=5",
+    "description": "스타벅스, 22일 전국 매장 문 닫고 역사인식교육 받는다... 정용진 회장도 포함  조선일보",
+    "date": "2026-06-15T01:48:00.000Z",
+    "sourceId": "chosun",
+    "sourceName": "조선일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "스타벅스, 22일 전국 매장 문 닫고 역사인식교육 받는다... 정용진 회장도 포함",
+      "summary": [
+        "스타벅스코리아가 정용진 신세계그룹 회장을 포함한 전 임직원을 대상으로 22일 전국 매장의 영업을 중단하고 대규모 역사인식교육을 실시한다.",
+        "이는 최근 불거진 논란에 대한 적극적인 대처이자, 기업의 사회적 책임(CSR)과 올바른 역사의식을 강조하기 위한 조치로 해석된다.",
+        "단기적인 매출 손실을 감수하더라도 브랜드 이미지 쇄신과 소비자 신뢰 회복을 최우선으로 삼겠다는 강력한 의지 표명이다."
+      ],
+      "implications": [
+        "ESG 경영 강화 및 기업 윤리에 대한 사회적 요구가 커지는 가운데, 기업들의 선제적인 리스크 관리 노력이 중요해지고 있다.",
+        "단기적인 실적 타격보다는 장기적인 브랜드 가치 및 소비자 충성도 제고 관점에서 긍정적인 평가를 받을 가능성이 있다."
+      ]
+    }
+  },
+  "id_5k2xm3": {
+    "id": "id_5k2xm3",
+    "title": "레미콘 노사 2차 합의안 마련... 노조 투표 통과시 레미콘 타설 재개 - 조선일보",
+    "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNRXNSOVNrNTZucm94bmpJNnVWeUhSTVBKVGczRURQWWw1RWhpZEJLd1pqcnpYM1JnNlN3ZzV4WWJWQWxHUjk3WVBOTFpnTFhYc2dKUUk0T21NNEgzSDctWmpGOU5MNlNmeng4RFhYV2tQSW9pQzFvSzlSNmNTTm9Tcm1XWXJFZzMt?oc=5",
+    "description": "레미콘 노사 2차 합의안 마련... 노조 투표 통과시 레미콘 타설 재개  조선일보",
+    "date": "2026-06-15T00:02:00.000Z",
+    "sourceId": "chosun",
+    "sourceName": "조선일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "레미콘 노사 2차 합의안 마련... 노조 투표 통과시 레미콘 타설 재개",
+      "summary": [
+        "장기화되던 레미콘 파업 사태가 노사 간의 2차 합의안 도출로 해결의 실마리를 찾았으며, 노조 투표를 앞두고 있다.",
+        "투표가 가결될 경우 멈춰 섰던 레미콘 타설 작업이 재개되어 전국 건설 현장의 공정 차질 우려가 크게 해소될 전망이다.",
+        "건설업계는 파업 장기화에 따른 비용 증가 및 공기 지연 리스크에서 벗어나 한숨 돌릴 수 있게 되었다."
+      ],
+      "implications": [
+        "레미콘 공급 정상화는 공정률 개선을 통해 주요 건설사들의 단기적인 실적 불확실성을 낮추는 긍정적 요인이다.",
+        "시멘트, 건자재 등 건설 후방 산업들의 수요 회복 기대감이 관련 주가에 선반영될 가능성이 높다."
+      ]
+    }
+  },
+  "id_1id7qnf": {
+    "id": "id_1id7qnf",
+    "title": "AI·반도체 등 첨단산업 협력 강화! - 카드/한컷 | 멀티미디어 - 대한민국 정책브리핑",
+    "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE55bUJvRFptNXZxcUpyMTYwV0w4dkFXazZ2MmZUS25WbmRac2FvTGVHODkybFZKY1FLUXJGaDNONjcyVjFkQU1CbmctLWtSYXFRM0l1MzJCU0JqWUU4LXZyV29rQjBwZVNLTnVyMEp3?oc=5",
+    "description": "AI·반도체 등 첨단산업 협력 강화! - 카드/한컷 | 멀티미디어  대한민국 정책브리핑",
+    "date": "2026-06-15T05:26:12.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "AI·반도체 등 첨단산업 협력 강화!",
+      "summary": [
+        "정부가 AI 및 반도체를 포함한 국가 첨단산업 분야에서의 전략적 협력을 대폭 강화함",
+        "글로벌 기술 패권 경쟁에 대응하고 미래 성장 동력을 확충하기 위한 행보임",
+        "관련 인프라 투자 확대 및 국내외 기업 간 기술 교류 활성화가 추진될 예정임"
+      ],
+      "implications": [
+        "첨단 기술 분야 내 밸류체인 강화 및 차세대 반도체 기술 주도권 확보 기대",
+        "AI 반도체 관련 팹리스 및 소부장 기업들에 대한 정책 수혜 및 투자 확대 전망"
+      ]
+    }
+  },
+  "id_1cvw30y": {
+    "id": "id_1cvw30y",
+    "title": "신현송이 쏘아올린 잠재성장률·중립금리…채권시장 영향은 | - 연합인포맥스",
+    "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9tM1pOLU1NWlVicHI0RjNaeEUtMHRrc01sd3pRalVlR3Y3ZktJdC13NTE5RDZFN24wN2JQS2FpaWZLb0R1eXYzRFdCSTUzTW1UMHhFMFlpSXUyVVpvY2VKTmVQYVNRaWdxaF9feHg4TjdXYnFp?oc=5",
+    "description": "신현송이 쏘아올린 잠재성장률·중립금리…채권시장 영향은 |  연합인포맥스",
+    "date": "2026-06-15T03:33:14.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "신현송이 쏘아올린 잠재성장률·중립금리…채권시장 영향은",
+      "summary": [
+        "신현송 BIS 조사국장이 제기한 한국의 잠재성장률 하락과 중립금리 상승 가능성이 채권시장의 화두로 떠오르고 있다.",
+        "중립금리가 높아졌다는 인식은 기준금리 인하 기대를 약화시켜 장기물 채권 금리의 하방 경직성을 높이는 요인으로 작용한다.",
+        "시장 참여자들은 향후 한국은행의 통화정책 경로와 채권 수익률 곡선(일드커브)의 변화를 주시하며 투자 전략을 재점검하고 있다."
+      ],
+      "implications": [
+        "채권 투자자들은 금리 인하 지연 가능성에 대비하여 듀레이션 축소 등 보수적인 포지션 관리가 필요하다.",
+        "한국 경제의 구조적 변화가 금융시장에 미치는 장기적인 파급 효과에 대한 심도 있는 분석이 요구된다."
+      ]
+    }
+  },
+  "id_1g9publ": {
+    "id": "id_1g9publ",
+    "title": "유가 폭락에 금리인상론 후퇴...미 국채금리 하락 - YTN",
+    "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE14c3kwSm1wSDR4N0plZ0c4dlFDWjB4eUdhQnFGRnFqdlJaQmk5YXgtbVJUNjJjQzViRlF5TGcxX05vRFE2UjBVVGRpVERfYUFkZTM0WmkxaEhRV0MtRmc?oc=5",
+    "description": "유가 폭락에 금리인상론 후퇴...미 국채금리 하락  YTN",
+    "date": "2026-06-15T05:13:00.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "유가 폭락에 금리인상론 후퇴...미 국채금리 하락",
+      "summary": [
+        "지정학적 긴장 완화로 유가가 급락하면서 글로벌 인플레이션 재점화 우려가 경감됨",
+        "물가 상승 압력이 줄어들자 중앙은행의 추가 금리 인상 가능성도 크게 후퇴함",
+        "이에 대한 반응으로 시장 금리의 지표가 되는 미국 국채 금리가 하락세를 기록함"
+      ],
+      "implications": [
+        "고금리 장기화에 대한 시장의 부담 완화 및 기업들의 조달 비용 감소 기대",
+        "안전 자산인 채권보다 주식 등 위험 자산으로의 자금 이동 및 투자 심리 개선 전망"
+      ]
+    }
+  },
+  "id_1rpeoxu": {
+    "id": "id_1rpeoxu",
+    "title": "산업부, 반도체 제조지원 TF 신설…'K-온디바이스' AI칩 개발 속도 - 전기신문",
+    "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBMVXBTMXhPQlBzZ2RBMUNEZktnSENXN3dmR0o5d1EwWEZXVlBXUW9ZMGMxMFU4NlRVVTNDMmlEZGRaRVdqVUJCcldmQXBUOTJwYVRnUE5NVzAwWW1QM0VVbFNsQ244YnZGOTl1QThMc3nSAXBBVV95cUxQTFVwUzF4T0JQc2dkQTFDRGZLZ0hDVzd3ZkdKOXdRMFhGV1ZQV1FvWTBjMTBVODZUVVUzQzJpRGRkWkVXalVCQnJXZkFwVDkycGFUZ1BOTVcwMFltUDNFVWxTbENuOGJ2Rjk5dUE4THN5?oc=5",
+    "description": "산업부, 반도체 제조지원 TF 신설…'K-온디바이스' AI칩 개발 속도  전기신문",
+    "date": "2026-06-15T02:29:34.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "산업부, 반도체 제조지원 TF 신설…'K-온디바이스' AI칩 개발 속도",
+      "summary": [
+        "산업통상자원부가 국내 AI 반도체 산업 육성을 위해 '반도체 제조지원 TF'를 신설하고 본격적인 지원에 나선다.",
+        "이번 TF는 특히 온디바이스 AI 기기에 탑재될 국산 AI 칩 개발과 제조 생태계 조성을 가속화하는 데 중점을 둔다.",
+        "정부의 적극적인 지원 정책에 힘입어 국내 팹리스 및 파운드리 기업들의 협력이 강화되고 글로벌 경쟁력이 제고될 것으로 기대된다."
+      ],
+      "implications": [
+        "온디바이스 AI 관련 반도체 소부장(소재·부품·장비) 및 팹리스 관련주에 대한 투자 매력도가 단기적으로 상승할 전망이다.",
+        "정부 주도의 AI 반도체 밸류체인 구축은 중장기적으로 한국 반도체 산업의 구조적 성장을 이끄는 핵심 동력이 될 것이다."
+      ]
+    }
+  },
+  "id_19qu6jk": {
+    "id": "id_19qu6jk",
+    "title": "KODEX AI반도체핵심장비(471990) - 매일경제 마켓",
+    "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPbHEwX1RNT2pTbW5SOU9hRjA5d1A1Z1VWWm01ZkRfUTBiTWFGS0dwSXhyOHlNMHpuMWFNT3pWMnRlMmdUb2xGR2ZRdnMwTFVINExKUWhvNlVlVnNjcktET0FOVkN5MG5IOWlrb3hXT3liOW5FUG8wa3dyVi13WDVNMFIzLVM2ZEpVbzZBekFaUWhRcm1hdUp5cUl3dw?oc=5",
+    "description": "KODEX AI반도체핵심장비(471990)  매일경제 마켓",
+    "date": "2026-06-15T05:20:04.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "KODEX AI반도체핵심장비(471990)",
+      "summary": [
+        "AI 반도체 산업 성장에 발맞춰 핵심 장비 기업들에 집중 투자하는 KODEX 상장지수펀드(ETF)가 주목받고 있음",
+        "HBM 등 차세대 메모리 수요 증가에 따라 관련 장비주들의 실적 개선이 기대됨",
+        "시장의 관심이 AI 소프트웨어에서 하드웨어 인프라 및 장비 분야로 확대되는 추세임"
+      ],
+      "implications": [
+        "반도체 장비 업종으로의 투자 자금 유입 가속화 및 주가 리레이팅 가능성",
+        "국내 AI 반도체 장비 밸류체인에 속한 기업들의 기업가치 동반 상승 기대"
+      ]
+    }
+  },
+  "id_c25pu1": {
+    "id": "id_c25pu1",
+    "title": "TSMC, 반도체 '패널 레벨 패키징(PLP)' 본격 양산 준비…삼성과 한판승부 - 전자신문",
+    "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1NYkVvcDJUclFLeUdBOFhSeXNWWFNJR0tsX19pd1JYSFVuR0VFcDhONUhPdXduSmRMeDNFeVM5NjMxQ0taYVhfb2NXLW9Sdw?oc=5",
+    "description": "TSMC, 반도체 '패널 레벨 패키징(PLP)' 본격 양산 준비…삼성과 한판승부  전자신문",
+    "date": "2026-06-15T04:29:04.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "TSMC, 반도체 '패널 레벨 패키징(PLP)' 본격 양산 준비…삼성과 한판승부",
+      "summary": [
+        "글로벌 파운드리 1위 기업인 TSMC가 차세대 패키징 기술인 '패널 레벨 패키징(PLP)'의 본격적인 양산 체제 구축에 돌입함",
+        "기존 웨이퍼 단위 공정 대비 생산 효율성과 원가 경쟁력을 크게 높일 수 있는 기술로 평가받고 있음",
+        "이 분야 선행 기술을 보유한 삼성전자와의 첨단 후공정 시장 주도권 경쟁이 본격화될 전망임"
+      ],
+      "implications": [
+        "반도체 미세공정의 한계를 극복하기 위한 후공정 패키징 기술력의 중요성 대두",
+        "PLP 관련 장비 및 소재 등 후공정 생태계 기업들의 수혜 및 밸류체인 재편 가능성"
+      ]
+    }
+  },
+  "id_eu02ic": {
+    "id": "id_eu02ic",
+    "title": "미·이란 종전합의에…환율 장중 1,504원까지 하락 - 연합뉴스",
+    "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE4wZGtwWUtXYjgtaFI1RnVpWThnSHVRaE9jcl9Ua0V0YTdJMEZ5NnJIRWJ4RGRFOTl1ME1tVURNbk1YOC1sLXlqU1g3YURhTU5WZjVpWGZLOUJ6RWfSAWBBVV95cUxQbnF3OFctVEpLOEtxYzRqeklMUWR2N01PeUozNnVWMHVHN2lUS0gtUXlyUEprTzdjaTJXeXU0ZUNoYXRWdThwS1Jtd0p2eWVGZm1rS0lHeGY5dW9nQUEyWVc?oc=5",
+    "description": "미·이란 종전합의에…환율 장중 1,504원까지 하락  연합뉴스",
+    "date": "2026-06-15T00:23:39.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "미·이란 종전합의에…환율 장중 1,504원까지 하락",
+      "summary": [
+        "미국과 이란 간의 지정학적 갈등이 종전 합의로 극적 타결됨에 따라 중동 지역의 리스크가 급격히 완화되었다.",
+        "이에 따른 안전자산 선호 심리 약화와 글로벌 위험 선호 분위기 확산으로 원·달러 환율이 장중 1,504원까지 큰 폭으로 하락(원화 강세)했다.",
+        "유가 안정과 맞물려 글로벌 공급망 우려가 해소되면서 국내 경제의 인플레이션 압력 완화에도 긍정적인 영향을 미칠 것으로 보인다."
+      ],
+      "implications": [
+        "환율 하락(원화 강세)은 국내 수입 물가 안정에 기여하여 내수 소비재 기업들의 수익성 개선으로 이어질 수 있다.",
+        "지정학적 리스크 완화에 따른 국제 유가 하락은 항공, 해운 등 에너지 비용 민감도가 높은 산업에 호재로 작용할 전망이다."
+      ]
+    }
+  },
+  "id_14xzv63": {
+    "id": "id_14xzv63",
+    "title": "\"환율 1,400원 후반대 3년 이상 지속되면 회복 비용 급증\" - KB Think",
+    "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE53bVlPQzZpTHRHQUVtZnNlal9HaTR4Q3pWQVpqR2gzSjdfVzIyazNzbHhtcWFCbS0wUjlyc3JublBjSTZTV0JQSDhYeDBHd0MxZk41RTZXWlZaeWlKVHdvY1hUdzFENkdHV0lRV0FoQVdHUQ?oc=5",
+    "description": "\"환율 1,400원 후반대 3년 이상 지속되면 회복 비용 급증\"  KB Think",
+    "date": "2026-06-15T04:52:13.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "\"환율 1,400원 후반대 3년 이상 지속되면 회복 비용 급증\"",
+      "summary": [
+        "원/달러 환율이 1,400원 후반대의 고공행진을 3년 이상 이어갈 경우 경제의 구조적 타격이 예상됨",
+        "이러한 고환율 상태가 고착화되면 이후 정상화 및 경제 회복에 막대한 비용이 소요될 것이라는 분석이 나옴",
+        "수입 물가 상승에 따른 인플레이션 장기화와 내수 기반 약화가 주된 원인으로 지목됨"
+      ],
+      "implications": [
+        "정부와 외환 당국의 적극적인 환율 방어 및 미세 조정(스무딩 오퍼레이션) 개입 필요성 증대",
+        "수입 의존도가 높은 기업들의 원가 부담 가중에 대비한 선제적인 환리스크 헷지 전략 요구"
+      ]
+    }
+  },
+  "id_1ezmxst": {
+    "id": "id_1ezmxst",
+    "title": "한미반도체, 스페이스X 주식 500억원어치 취득 완료…지분율 0.002% - 연합인포맥스",
+    "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5iU25rZHNva2tzN1lPRlRvTHQ0eTgySDVxZE02cDB1QzlNckJwb21OdjdoYno2RG04d3hHa1k5T2lmNmptdVZ1NlY4ZnBoaW13VWttMHhuaGFiS2psOFBwN2NIbWFCby1TRGthLWhLeWc?oc=5",
+    "description": "한미반도체, 스페이스X 주식 500억원어치 취득 완료…지분율 0.002%  연합인포맥스",
+    "date": "2026-06-15T05:16:38.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "한미반도체, 스페이스X 주식 500억원어치 취득 완료…지분율 0.002%",
+      "summary": [
+        "한미반도체가 일론 머스크의 우주 탐사 기업 스페이스X의 주식 500억 원어치를 취득함",
+        "이번 투자를 통해 확보한 스페이스X의 지분율은 약 0.002% 수준임",
+        "단순 투자를 넘어 향후 우주 항공 산업 및 위성 통신 분야의 반도체 수요를 겨냥한 포석으로 풀이됨"
+      ],
+      "implications": [
+        "한미반도체의 사업 영역 확장 및 저궤도 위성 통신망 관련 미래 신성장 동력 확보",
+        "국내 반도체 기업들의 글로벌 우주 항공 산업 진출 및 선제적 투자 사례로 작용"
+      ]
+    }
+  },
+  "id_1gh027t": {
+    "id": "id_1gh027t",
+    "title": "스페이스X 상장도, 전쟁도 끝나…투자자 관심은 금리 - 연합뉴스",
+    "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE90aXQ3Nk1SelpYcEdEOXhCbktZU2UzS01UbkcyVUxpdFZBeTZOSUJPTnBVOGxEYkQ0ZzNBbWZ0ODJNdnRIRXhFY2txUDlKaXc4NWU3SG9NRnJOeTRwSEdiLdIBYEFVX3lxTE90aXQ3Nk1SelpYcEdEOXhCbktZU2UzS01UbkcyVUxpdFZBeTZOSUJPTnBVOGxEYkQ0ZzNBbWZ0ODJNdnRIRXhFY2txUDlKaXc4NWU3SG9NRnJOeTRwSEdiLQ?oc=5",
+    "description": "스페이스X 상장도, 전쟁도 끝나…투자자 관심은 금리  연합뉴스",
+    "date": "2026-06-15T01:43:18.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "스페이스X 상장도, 전쟁도 끝나…투자자 관심은 금리",
+      "summary": [
+        "스페이스X의 상장 이슈와 지정학적 분쟁 등 굵직한 이벤트들이 소화되면서 글로벌 투자자들의 시선이 다시 거시경제의 핵심인 '금리'로 향하고 있다.",
+        "주요국 중앙은행들의 통화정책 방향, 특히 미국 연방준비제도(Fed)의 금리 인하 시점과 폭이 향후 증시 향방을 결정지을 핵심 변수이다.",
+        "시장 참여자들은 경제 지표 발표 결과에 민감하게 반응하며 금리 인하 기대감과 인플레이션 우려 사이에서 변동성 장세에 대비하고 있다."
+      ],
+      "implications": [
+        "매크로 지표 변화에 따른 금리 전망 수정이 주식 및 채권 시장의 높은 변동성을 야기할 수 있으므로 리스크 관리가 필수적이다.",
+        "성장주 등 금리 변화에 민감한 자산군의 비중 조절 및 가치주 방어 포트폴리오 구축 전략이 유효할 수 있다."
+      ]
+    }
+  },
+  "id_1erxz1f": {
+    "id": "id_1erxz1f",
+    "title": "반도체 제조지원 TF 발족⋯8000억 투입해 국산 AI칩 만든다 - 이투데이",
+    "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5ZSEhDQUpHRnNhcnNhb0lpY09uSDNScF85SG1MWU16OWlYcWNoLWx5eExsTFlLbVN5YTJXcThjbGFhaHVmbWsyeURqT1M0RDJTS25PQw?oc=5",
+    "description": "반도체 제조지원 TF 발족⋯8000억 투입해 국산 AI칩 만든다  이투데이",
+    "date": "2026-06-15T02:00:00.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "반도체 제조지원 TF 발족⋯8000억 투입해 국산 AI칩 만든다",
+      "summary": [
+        "정부가 8천억 원 규모의 대규모 예산을 투입하여 국산 AI 칩 개발을 주도할 '반도체 제조지원 TF'를 발족했다.",
+        "막대한 자금 지원을 통해 초기 투자 비용이 높은 AI 반도체 개발의 진입 장벽을 낮추고 혁신 기술 확보를 돕는다.",
+        "국가 차원의 전폭적인 예산 투입은 국내 반도체 산업의 질적 도약을 위한 강력한 촉매제가 될 것으로 전망된다."
+      ],
+      "implications": [
+        "대규모 정부 예산이 투입되는 R&D 프로젝트에 참여하는 반도체 소부장 및 팹리스 기업들의 중장기적 수혜가 예상된다.",
+        "정책 자금의 유입은 관련 섹터 내 벤처 캐피탈(VC) 투자 활성화와 활발한 M&A(인수합병)를 촉진할 가능성이 있다."
+      ]
+    }
+  },
+  "id_m1hde3": {
+    "id": "id_m1hde3",
+    "title": "국산 AI 반도체, 수요가 당기고 제조가 밀어준다 - 경향신문",
+    "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFA4dnVTRVBiblR6YUZiMW1wZDJ6eEtqZ1lTaVU5ektLYU1sZFoxOW5pendGUk95XzJrcFY0MnFnc19vUm9RS1o1dlUteXkzZW9ndkZpN2xsUkpCZ9IBX0FVX3lxTE9hN1JnV1Z1LVZUM3N2MkY5Rmp5T0k5WTRmQ0s4OTNNanJqd1R5R3RhQzJLQ0tLb3pnM0FhUGRzYmJ5VTdabnl0TEhoZ3VXQnRHbUNXbG5SWTdJU2RSUGtB?oc=5",
+    "description": "국산 AI 반도체, 수요가 당기고 제조가 밀어준다  경향신문",
+    "date": "2026-06-15T02:13:00.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "국산 AI 반도체, 수요가 당기고 제조가 밀어준다",
+      "summary": [
+        "전 세계적인 AI 열풍으로 국산 AI 반도체에 대한 수요가 급증하는 가운데, 제조 역량 강화가 이를 뒷받침하고 있다.",
+        "수요 기업과 제조 기업 간의 긴밀한 협력 생태계가 구축되면서 국산 AI 칩의 상용화 및 시장 진입 속도가 빨라지고 있다.",
+        "시장 수요와 제조 인프라의 선순환 구조가 정착되면서 한국 AI 반도체 산업의 글로벌 점유율 확대가 가시화되고 있다."
+      ],
+      "implications": [
+        "AI 서비스 고도화를 추진하는 빅테크 기업들과 국산 팹리스 기업 간의 파트너십 소식에 주목해야 한다.",
+        "AI 반도체 생태계의 선순환 구조는 관련 기업들의 실적 개선과 밸류에이션 리레이팅(재평가)을 이끌어낼 수 있다."
+      ]
+    }
+  },
+  "id_ezf2xk": {
+    "id": "id_ezf2xk",
+    "title": "씨티 \"韓, 하반기 연속 인상·최대 4% 최종금리 가능성도\" - KB Think",
+    "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5uQjZjRTREQTFPN19GMHRMUTZkQmxqYkRuTnZqbWlWQ1ZQR1R1UGZqY2EtckVkNFZlejhwU0RfcVF6VnFfeDRjb3lsYXJvRnA1WFNsdlR1MVFQc0UzU3BHV2ZMd3I5MzJ5TFlqelk2S1d2Zw?oc=5",
+    "description": "씨티 \"韓, 하반기 연속 인상·최대 4% 최종금리 가능성도\"  KB Think",
+    "date": "2026-06-15T04:22:40.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "씨티 \"韓, 하반기 연속 인상·최대 4% 최종금리 가능성도\"",
+      "summary": [
+        "씨티은행은 한국은행이 하반기 중 기준금리를 연속적으로 인상할 가능성이 있다고 전망함",
+        "물가 불안 및 환율 방어를 위해 최종 기준금리가 최대 4% 수준까지 도달할 수 있다는 매파적 분석을 제기함",
+        "이는 시장의 금리 인하 기대감과 상반되는 예측으로, 통화 정책 불확실성을 키우는 요인임"
+      ],
+      "implications": [
+        "국내 대출자들의 이자 상환 부담 가중 및 한계 기업들의 재무 건전성 악화 우려",
+        "추가적인 금리 인상 가능성으로 인한 채권 시장 변동성 확대 및 주식 시장 내 밸류에이션 부담 증가"
+      ]
+    }
+  },
+  "id_y91qle": {
+    "id": "id_y91qle",
+    "title": "미·이란 종전 합의에 금융시장 안도…환율 1400원대 복귀 기대감 - 오피니언뉴스",
+    "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBfZnJ2cXgwOGx3c01DYjBiNXRnV21FSHV5QkpvRG5TSHRZS0gzaDNoR24zaFR0YlV1NU1vZ3ZSb0p2UzhtaWg3NUdPN1ZlR2hlVWk4MWxkRHpLb3pKR3RpR2tXLTVjcU5oZjMxdU56WWM?oc=5",
+    "description": "미·이란 종전 합의에 금융시장 안도…환율 1400원대 복귀 기대감  오피니언뉴스",
+    "date": "2026-06-15T05:27:18.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "미·이란 종전 합의에 금융시장 안도…환율 1400원대 복귀 기대감",
+      "summary": [
+        "미국과 이란 간의 종전 합의 소식에 글로벌 금융 시장의 불안감이 크게 완화됨",
+        "지정학적 리스크 축소로 인해 위험자산 선호 심리가 점차 회복되고 있음",
+        "이에 따라 치솟았던 원/달러 환율이 1400원대 이하로 안정화될 것이라는 기대감이 형성됨"
+      ],
+      "implications": [
+        "환율 안정에 따른 수입 물가 하락 및 국내 기업들의 환차손 리스크 감소 전망",
+        "외국인 투자자들의 국내 증시 유입 가능성 증대로 인한 자본 시장 활력 기대"
+      ]
+    }
+  },
+  "id_r5pxm1": {
+    "id": "id_r5pxm1",
+    "title": "M.AX 제조지원 TF 출범…″AI반도체 제조 생태계 첨단화″ - 연합뉴스TV",
+    "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBmMlpVOG9jT0h2NGpDbFl2aTBwYl8zOHJ4c3I0aDFxcVB1cXVYWi01WUk2OEFHY01Ta3FTa1BLSmcyNTUtWXN4MnV1bkxUcnBXazFfei1DOUxVZDZ5VU9IVXh6am5iSTA?oc=5",
+    "description": "M.AX 제조지원 TF 출범…″AI반도체 제조 생태계 첨단화″  연합뉴스TV",
+    "date": "2026-06-15T02:15:07.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "M.AX 제조지원 TF 출범…″AI반도체 제조 생태계 첨단화″",
+      "summary": [
+        "AI 반도체 제조 생태계의 첨단화를 목표로 하는 'M.AX 제조지원 TF'가 공식 출범하여 본격적인 활동을 시작했다.",
+        "이 TF는 팹리스, 파운드리, 패키징 등 AI 반도체 생산 전반에 걸친 밸류체인을 강화하고 시너지 효과를 창출하는 데 주력한다.",
+        "첨단 패키징 기술 등 고부가가치 공정 역량 확보를 통해 글로벌 시장에서의 기술 격차를 좁히려는 의도이다."
+      ],
+      "implications": [
+        "후공정(OSAT) 및 첨단 패키징 관련 기술을 보유한 기업들의 성장 궤적이 두드러질 것으로 예상된다.",
+        "국내 AI 반도체 생태계의 고도화는 관련 장비 및 소재 수요의 폭발적인 증가를 수반할 가능성이 높다."
+      ]
+    }
+  },
+  "id_13znl0t": {
+    "id": "id_13znl0t",
+    "title": "[오늘 이 종목] 종전 합의 훈풍과 AI 반도체 고도화 수혜… 이정호 팀장의 '시선집중' 필승 전략 - 머니투데이 - 머니투데이",
+    "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE8tSko2TUJvUFEtRFFyQ3hFVnRXSDJHT21DaXRCVE52bzZHMmhfU1BvQnlhbjRTQ3dlbldReHpocnEwX3lSaGd6WnV5YmFpWndtMTh4RDNSbk01eGkzWEFnd1hQNUdVS0430gFuQVVfeXFMUDd6ZVZpRVBXU3BKeWRJYjZUOFVxNkVJTXZKQzRWdU9BQWM5TE1DOUt1NjZYOXVCWG9iRm1zUmdpbHgzelpvSnhuYm41Njc2V0M3cEpoQ0dXRUxaNHNEakZVTWRSNXhxNlhGRWt2OEE?oc=5",
+    "description": "[오늘 이 종목] 종전 합의 훈풍과 AI 반도체 고도화 수혜… 이정호 팀장의 '시선집중' 필승 전략 - 머니투데이  머니투데이",
+    "date": "2026-06-15T03:51:33.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "[오늘 이 종목] 종전 합의 훈풍과 AI 반도체 고도화 수혜… 이정호 팀장의 '시선집중' 필승 전략",
+      "summary": [
+        "중동발 지정학적 긴장이 종전 합의로 완화되면서 주식 시장 전반에 긍정적인 투자 심리가 형성됨",
+        "특히 AI 반도체 기술의 지속적인 고도화에 따라 관련 밸류체인 종목들이 강력한 수혜를 입을 것으로 분석됨",
+        "전문가는 매크로 호재와 산업 성장이 맞물리는 핵심 장비 및 부품주를 중심으로 한 선별적 투자 전략을 권고함"
+      ],
+      "implications": [
+        "지정학적 리스크 해소와 구조적 성장 스토리를 겸비한 AI 반도체 섹터로의 주도주 쏠림 현상 심화",
+        "단기 테마성 투자를 지양하고 실질적인 실적 성장이 뒷받침되는 기업 중심의 포트폴리오 압축 필요"
+      ]
+    }
+  },
+  "id_1mz2cch": {
+    "id": "id_1mz2cch",
+    "title": "강기정 광주시장 \"이제는 반도체\"…반도체 중심도시 부각 - v.daum.net",
+    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1nQ3dQTVoyckd5OENlakZpQ1B0c1NyeVUwMHE2ZzJGT3J0dGVsSllVUDUxemVNSm0tZzRyZmE3TWlwUmJPb2dFdld3aVFlQ2c?oc=5",
+    "description": "강기정 광주시장 \"이제는 반도체\"…반도체 중심도시 부각  v.daum.net",
+    "date": "2026-06-15T02:25:40.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "강기정 광주시장 \"이제는 반도체\"…반도체 중심도시 부각",
+      "summary": [
+        "강기정 광주시장이 광주를 AI와 결합한 첨단 반도체 중심도시로 도약시키겠다는 비전을 강력히 제시했다.",
+        "광주시는 인공지능(AI) 데이터센터 등 기존 인프라를 바탕으로 반도체 특화단지 조성 및 관련 기업 유치에 총력을 기울이고 있다.",
+        "지역 경제 활성화와 미래 먹거리 창출을 위한 지자체 차원의 반도체 산업 육성 의지가 돋보인다."
+      ],
+      "implications": [
+        "지역 균형 발전 측면에서 광주 지역 내 반도체 관련 인프라 및 부동산 개발 사업의 가치가 상승할 수 있다.",
+        "지자체의 적극적인 지원을 받는 지역 기반 IT 및 반도체 관련 중소기업들에 대한 관심이 필요하다."
+      ]
+    }
+  },
+  "id_75vwoz": {
+    "id": "id_75vwoz",
+    "title": "중동전쟁 이후…코스피는 '금리'와 '반도체 실적'에 달렸다 - 아시아경제",
+    "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9CbTlUMng0dm9paVdMRmNMREZJZlJ5UnhRMzBHSnBfbDgzMldhSEVXSHhKR3V6a01xZEhSTGZxTzhpWXNrTEt0dTNfZXhUc1dSTDRPck5NVjBVR2JEaHNtdw?oc=5",
+    "description": "중동전쟁 이후…코스피는 '금리'와 '반도체 실적'에 달렸다  아시아경제",
+    "date": "2026-06-15T05:11:48.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "중동전쟁 이후…코스피는 '금리'와 '반도체 실적'에 달렸다",
+      "summary": [
+        "중동의 지정학적 갈등이 소강상태에 접어들면서 코스피 향방은 매크로 변수와 실적 장세로 이동함",
+        "특히 글로벌 금리 인하 사이클 진입 시점과 폭이 향후 증시의 핵심 변수로 작용할 전망임",
+        "또한 국내 증시 비중이 큰 반도체 기업들의 실적 반등 여부가 지수 상승을 견인할 주요 모멘텀임"
+      ],
+      "implications": [
+        "금리 인하 가시화 및 반도체 업황 턴어라운드 확인 시 코스피의 강한 반등 장세 전개 가능성",
+        "투자자들은 거시 경제 지표 발표와 주요 반도체 기업의 실적 가이던스에 주목할 필요성 증대"
+      ]
+    }
+  },
+  "id_15z96gn": {
+    "id": "id_15z96gn",
+    "title": "\"기름값 리터당 2천원시대 왔다\" … 카드사들 주유·교통 혜택 연장 - 매일경제",
+    "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9WNTJXNV9kNmNZbnhOenZZclJyTHQ4RWlxRklCYTNmbE94aXJiNHBXV1lyQTRKMDBOOEpJZ0ROdndyb2RwaVZ5UnVYOFE0WUZFUVIycw?oc=5",
+    "description": "\"기름값 리터당 2천원시대 왔다\" … 카드사들 주유·교통 혜택 연장  매일경제",
+    "date": "2026-06-11T07:03:26.000Z",
+    "sourceId": "maekyung",
+    "sourceName": "매일경제 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_1nn5on3": {
+    "id": "id_1nn5on3",
+    "title": "상용근로자 수 26년만에 감소…20·30대서 19만명 줄었다 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFB5UmVSa0hFNFVzQzBCa0FBQjZ6Um1FTEs3eC16X0YtMER4b2sxelhQTEdDaXIwQkZVVWpZcVhnSGZybE8zeHNQU01FMnZ5RUtPcU9saUdjR18yNWdaTkxMQ19OWjFnczgybGc0aFpRUXN6cHo4LWfSAWZBVV95cUxNM2pZTkJaTGYyb1lZcUZORTl3UWk1WlV2YVNRS3pBdUdEWjFyYVVhV0N0YWdUdG9jTUxTU21zX0ZUcVVhNVdCLVZsVkIyd0ZQM1ZOc1ZzS1lrTFdaRjJzMUxXdWJpT1E?oc=5",
+    "description": "상용근로자 수 26년만에 감소…20·30대서 19만명 줄었다  동아일보",
+    "date": "2026-06-15T05:06:00.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "상용근로자 수 26년만에 감소…20·30대서 19만명 줄었다",
+      "summary": [
+        "안정적인 일자리로 분류되는 상용근로자 수가 26년 만에 처음으로 감소세를 기록함",
+        "특히 경제 활동의 주축인 20대와 30대 청년층에서만 상용근로자가 19만 명이나 급감함",
+        "경기 침체로 인한 기업들의 채용 축소와 인구 구조 변화가 복합적으로 작용한 결과로 분석됨"
+      ],
+      "implications": [
+        "청년층 양질의 일자리 감소로 인한 내수 침체 장기화 및 잠재 성장률 하락 우려",
+        "노동 시장 이중구조 심화 현상에 대응하기 위한 실효성 있는 청년 고용 대책 마련 시급"
+      ]
+    }
+  },
+  "id_11vb2mr": {
+    "id": "id_11vb2mr",
+    "title": "“휴전 합의에도 선주들은 안 움직였다”…호르무즈 앞 600척 ‘대기’ - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5pR3Q5djBSc0lwSjRTeWk5TzBUVzVod0dLbldGYWYxTjNfLVBXbW56U01WSE5tT0tPdEJ0eWJRbjNCMDJPNXRzY1ZQN0hCQWZJTTJHY0tFOXAyXzktTnIwd2Ntc0ZyTHJPWWZpU3Q2Q1JSVjNMSWfSAWZBVV95cUxPcUt1X3pRZy1uQVUzcVBidE4yb3h5ckN6RS1jN3IzUmZqdzh6WWVZVDh0enlYTHdMSTI3R19RM1hSSlVRUUYtdTVXaXhRUC1xMTZBQ2xiYV9VUWdkTEZvcUFLMjhkWWc?oc=5",
+    "description": "“휴전 합의에도 선주들은 안 움직였다”…호르무즈 앞 600척 ‘대기’  동아일보",
+    "date": "2026-06-15T05:50:17.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "“휴전 합의에도 선주들은 안 움직였다”…호르무즈 앞 600척 ‘대기’",
+      "summary": [
+        "미국과 이란의 휴전 합의에도 불구하고 호르무즈 해협 인근에서 선박들의 대기 상태가 지속됨",
+        "약 600척의 선박이 여전히 해협을 통과하지 않고 관망 중인 것으로 파악됨",
+        "선주들은 실질적인 안전 보장이 확인될 때까지 운항 재개를 주저하고 있음"
+      ],
+      "implications": [
+        "물류 적체 현상이 즉각적으로 해소되지 않아 단기적인 공급망 차질 지속 가능성",
+        "안전 확보 여부에 따라 해운 운임 및 국제 물류비의 변동성 확대 우려"
+      ]
+    }
+  },
+  "id_1rxycpc": {
+    "id": "id_1rxycpc",
+    "title": "7월부터 열차 내 대용량 리튬배터리 휴대 못한다 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBMTmd3SXczT2o4TEJxZ2llLXN5ek5qMWt3YjRmV2Y4MTNlbF9tTUNhbmY0RVRBTGFnTG41NFBaVXZyOUp3XzJ3Njg0bTJkLVBaZnFwdHZ3NDRnR2Q1Mm44cVpkYTNXdDBIQ3d2am0wNG1wSUlRbWfSAWZBVV95cUxQMW9PT2hJdk01dE5manp1WFpDeGc3LWhENjNFeDQ2Q0o0bWs1QTNzcVhMYndDR3VnemNqVjBvWHRUc2UwbnlZZlU0M1A4V2JHc0REMFNaa0g1d1VkZE1PczdtM0tpWUE?oc=5",
+    "description": "7월부터 열차 내 대용량 리튬배터리 휴대 못한다  동아일보",
+    "date": "2026-06-15T05:37:38.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "7월부터 열차 내 대용량 리튬배터리 휴대 못한다",
+      "summary": [
+        "안전사고 예방을 위해 7월부터 열차 내 대용량 리튬배터리 휴대가 전면 금지됨",
+        "화재 등 긴급 상황 발생 시 대형 참사로 이어질 위험을 사전에 차단하기 위한 조치임",
+        "승객들은 규격 이상의 배터리가 장착된 전자기기나 모빌리티 기기를 열차에 반입할 수 없음"
+      ],
+      "implications": [
+        "전동 킥보드, 전기 자전거 등 개인형 이동장치(PM) 이용자들의 대중교통 연계 이용에 불편 예상",
+        "리튬배터리 화재 안전성에 대한 사회적 경각심 제고 및 관련 규제 강화 추세 반영"
       ]
     }
   }
