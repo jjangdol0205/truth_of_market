@@ -632,7 +632,7 @@ function handleShareCurrentArticleToKakaotalk() {
   const article = state.currentSelectedArticle;
   if (!article) return;
 
-  const aiData = state.aiCache[article.id] || state.bookmarks.find(b => b.id === article.id);
+  const aiData = state.aiCache[article.id] || state.bookmarks.find(b => b.id === article.id) || (article.aiAnalysis ? article : null);
 
   if (!aiData || !aiData.aiAnalysis) {
     alert('⚠️ 먼저 AI 분석(요약/번역)이 로드된 후에 공유할 수 있습니다.');
@@ -724,7 +724,7 @@ function handleShareCurrentArticleToTelegram() {
   const article = state.currentSelectedArticle;
   if (!article) return;
   
-  const aiData = state.aiCache[article.id] || state.bookmarks.find(b => b.id === article.id);
+  const aiData = state.aiCache[article.id] || state.bookmarks.find(b => b.id === article.id) || (article.aiAnalysis ? article : null);
 
   if (!aiData || !aiData.aiAnalysis) {
     alert('⚠️ 먼저 AI 분석(요약/번역)이 로드된 후에 공유할 수 있습니다.');
