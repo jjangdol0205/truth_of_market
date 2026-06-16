@@ -1003,7 +1003,7 @@
     "title": "한국경제 - 한국경제",
     "link": "https://news.google.com/rss/articles/CBMiPkFVX3lxTE9Rc2NTWXZpM21reEI4aUpXNUVqbWxkVVQ5OVFaOVVjWVR0RzR1ZlZ5ZXF5V2E4WHVlRHRwQ3JR?oc=5",
     "description": "한국경제  한국경제",
-    "date": "2026-06-15T04:54:24.000Z",
+    "date": "2026-06-16T00:24:45.000Z",
     "sourceId": "hankyung-fin",
     "sourceName": "한국경제 증권",
     "lang": "ko",
@@ -2705,7 +2705,18 @@
     "sourceName": "한국경제 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "한국 코스피 주요 재무 지표 및 실적 전망치 분석",
+      "summary": [
+        "한국 코스피 시장의 전체 시가총액을 비롯하여 EPS, PSR, ROE 등 핵심 펀더멘털 지표 현황이 집계되어 발표되었습니다.",
+        "제시된 단기 및 장기 수익률 지표를 종합적으로 살펴보면 현재 국내 증시의 적정 가치와 향후 성장 잠재력을 가늠할 수 있습니다.",
+        "특히 2025년과 2026년의 예상 실적 전망치를 통해 코스피 시장의 중장기적인 투자 매력도와 방향성을 판단할 근거를 제공합니다."
+      ],
+      "implications": [
+        "투자자들은 거시적이고 전반적인 재무 지표를 활용하여 코스피 시장 전체의 밸류에이션을 냉정하게 평가하고 전략을 세워야 합니다.",
+        "시장의 전반적 흐름보다는 향후 실적 개선세가 뚜렷하게 예상되는 특정 업종과 개별 종목을 선별하는 가치 투자 접근이 유효합니다."
+      ]
+    }
   },
   "id_1st7kbr": {
     "id": "id_1st7kbr",
@@ -7740,7 +7751,18 @@
     "sourceName": "한국경제 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "한국 코스피 주요 재무 지표 및 실적 전망치 분석",
+      "summary": [
+        "한국 코스피 시장의 전체 시가총액을 비롯하여 EPS, PSR, ROE 등 핵심 펀더멘털 지표 현황이 집계되어 발표되었습니다.",
+        "제시된 단기 및 장기 수익률 지표를 종합적으로 살펴보면 현재 국내 증시의 적정 가치와 향후 성장 잠재력을 가늠할 수 있습니다.",
+        "특히 2025년과 2026년의 예상 실적 전망치를 통해 코스피 시장의 중장기적인 투자 매력도와 방향성을 판단할 근거를 제공합니다."
+      ],
+      "implications": [
+        "투자자들은 거시적이고 전반적인 재무 지표를 활용하여 코스피 시장 전체의 밸류에이션을 냉정하게 평가하고 전략을 세워야 합니다.",
+        "시장의 전반적 흐름보다는 향후 실적 개선세가 뚜렷하게 예상되는 특정 업종과 개별 종목을 선별하는 가치 투자 접근이 유효합니다."
+      ]
+    }
   },
   "id_aoee9": {
     "id": "id_aoee9",
@@ -8112,7 +8134,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "달러·원 환율, 2.5원 오른 1513.6원 개장",
+      "summary": [
+        "원/달러 환율이 전일 대비 2.5원 상승한 1513.6원에 거래를 시작했다.",
+        "글로벌 강달러 기조와 위험 회피 심리가 환율 상승을 부추기고 있다.",
+        "외환 당국의 미세 조정 경계감 속에서도 환율의 상방 압력이 지속되는 모습이다."
+      ],
+      "implications": [
+        "수출 기업들의 환율 효과에 따른 실적 개선 여부를 주시할 필요가 있다.",
+        "외국인 자본 유출 가능성과 수입 물가 상승에 대한 주의가 요구된다."
+      ]
+    }
   },
   "id_g3w8xn": {
     "id": "id_g3w8xn",
@@ -10040,10 +10073,10 @@
     "link": "https://www.nytimes.com/2026/06/12/technology/spacex-ipo-elon-musk.html",
     "description": "The blockbuster stock market debut of Elon Musk’s rocket company paves the way for a wave of enormous offerings that are coming from OpenAI and Anthropic.",
     "date": "2026-06-12T20:52:00.000Z",
-    "sourceId": "nyt-biz",
-    "sourceName": "NYT 비즈니스",
+    "sourceId": "nyt-tech",
+    "sourceName": "NYT 테크놀로지",
     "lang": "en",
-    "category": "Markets",
+    "category": "Tech",
     "aiAnalysis": null
   },
   "id_1cu1bw0": {
@@ -10052,10 +10085,10 @@
     "link": "https://www.nytimes.com/2026/06/12/technology/spacex-ipo-journey.html",
     "description": "Elon Musk said he had initially given SpaceX less than a 10 percent chance of succeeding. His rocket company has come a long way.",
     "date": "2026-06-12T20:48:07.000Z",
-    "sourceId": "nyt-biz",
-    "sourceName": "NYT 비즈니스",
+    "sourceId": "nyt-tech",
+    "sourceName": "NYT 테크놀로지",
     "lang": "en",
-    "category": "Markets",
+    "category": "Tech",
     "aiAnalysis": null
   },
   "id_1o82fiy": {
@@ -10064,10 +10097,10 @@
     "link": "https://www.nytimes.com/2026/06/12/technology/elon-musk-trillionaire.html",
     "description": "With SpaceX shares soaring 20 percent on their first day of trading, the world’s richest person crossed another milestone — one with 13 digits.",
     "date": "2026-06-12T20:38:48.000Z",
-    "sourceId": "nyt-biz",
-    "sourceName": "NYT 비즈니스",
+    "sourceId": "nyt-tech",
+    "sourceName": "NYT 테크놀로지",
     "lang": "en",
-    "category": "Markets",
+    "category": "Tech",
     "aiAnalysis": null
   },
   "id_1fksciq": {
@@ -10112,10 +10145,10 @@
     "link": "https://www.nytimes.com/2026/06/12/upshot/spacex-stock-ipo.html",
     "description": "If you have index funds — such as in a 401(k) — they may soon include shares of the mega company. Here’s a rough calculation.",
     "date": "2026-06-12T20:18:27.000Z",
-    "sourceId": "nyt-biz",
-    "sourceName": "NYT 비즈니스",
+    "sourceId": "nyt-tech",
+    "sourceName": "NYT 테크놀로지",
     "lang": "en",
-    "category": "Markets",
+    "category": "Tech",
     "aiAnalysis": null
   },
   "id_3y7mw2": {
@@ -12830,10 +12863,10 @@
     "link": "https://www.nytimes.com/2026/06/14/business/media/trump-ufc-david-ellison.html",
     "description": "A U.F.C. fight on President Trump’s birthday will now double as a capstone for Paramount’s successful effort to secure Justice Department approval for a mega media merger.",
     "date": "2026-06-14T16:13:43.000Z",
-    "sourceId": "nyt-biz",
-    "sourceName": "NYT 비즈니스",
+    "sourceId": "nyt-tech",
+    "sourceName": "NYT 테크놀로지",
     "lang": "en",
-    "category": "Markets",
+    "category": "Tech",
     "aiAnalysis": {
       "translatedTitle": "합병 승인 완료, 데이비드 엘리슨 UFC 경기에서 트럼프와 동석 예정",
       "summary": [
@@ -19140,7 +19173,7 @@
     "title": "코스피 종전 소식에 8,500선 회복…환율도 하락 - KBS 뉴스",
     "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBKUTZYNXhyZ25JbjF3bDNfdVhXeC1zY0thRDExbGhBR0NhcWlWaTJGWDNyOGpOSnp6ekFEZV9FWlI1Q1RDNU9yV2dmUUJjZnRYMzlqOHNhLXJOZnM?oc=5",
     "description": "코스피 종전 소식에 8,500선 회복…환율도 하락  KBS 뉴스",
-    "date": "2026-06-15T12:07:00.000Z",
+    "date": "2026-06-15T22:56:00.000Z",
     "sourceId": "korean-markets-trend",
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
@@ -20097,10 +20130,10 @@
     "link": "https://www.nytimes.com/2026/06/15/world/europe/uk-social-media-children.html",
     "description": "Prime Minister Keir Starmer said his government planned to bar children under 16 from social media, following similar efforts in Australia and elsewhere.",
     "date": "2026-06-15T22:53:50.000Z",
-    "sourceId": "nyt-biz",
-    "sourceName": "NYT 비즈니스",
+    "sourceId": "nyt-tech",
+    "sourceName": "NYT 테크놀로지",
     "lang": "en",
-    "category": "Markets",
+    "category": "Tech",
     "aiAnalysis": {
       "translatedTitle": "영국, 16세 미만 아동의 소셜미디어 사용 금지 발표",
       "summary": [
@@ -20119,11 +20152,11 @@
     "title": "SpaceX’s Stock Surges on First Full Day of Trading",
     "link": "https://www.nytimes.com/2026/06/15/business/spacex-stock.html",
     "description": "The company’s shares jumped on Monday, and executives announced that they had raised even more money in an already record-breaking initial offering.",
-    "date": "2026-06-15T20:24:46.000Z",
-    "sourceId": "nyt-biz",
-    "sourceName": "NYT 비즈니스",
+    "date": "2026-06-15T20:24:47.000Z",
+    "sourceId": "nyt-tech",
+    "sourceName": "NYT 테크놀로지",
     "lang": "en",
-    "category": "Markets",
+    "category": "Tech",
     "aiAnalysis": {
       "translatedTitle": "스페이스X 주가, 상장 첫날 급등",
       "summary": [
@@ -20155,10 +20188,10 @@
     "link": "https://www.nytimes.com/2026/06/15/world/europe/social-media-bans-worldwide.html",
     "description": "Britain said it would ban social media access for children under 16 starting in 2027, joining several other countries introducing similar measures.",
     "date": "2026-06-15T11:19:17.000Z",
-    "sourceId": "nyt-biz",
-    "sourceName": "NYT 비즈니스",
+    "sourceId": "nyt-tech",
+    "sourceName": "NYT 테크놀로지",
     "lang": "en",
-    "category": "Markets",
+    "category": "Tech",
     "aiAnalysis": null
   },
   "id_1vg3cez": {
@@ -20212,7 +20245,7 @@
     "title": "Deal to Reopen Hormuz Kicks Off Long Effort to Ease Energy Crisis",
     "link": "https://www.nytimes.com/2026/06/15/business/energy-environment/iran-deal-oil-natural-gas.html",
     "description": "The pace of the recovery will depend on how confident companies are that the deal between the United States and Iran will hold and be extended.",
-    "date": "2026-06-15T15:52:14.000Z",
+    "date": "2026-06-15T15:52:15.000Z",
     "sourceId": "nyt-biz",
     "sourceName": "NYT 비즈니스",
     "lang": "en",
@@ -20248,7 +20281,7 @@
     "title": "Cautious of U.S.-Iran Deal, Shipping Firms Await Strait to Reopen",
     "link": "https://www.nytimes.com/2026/06/15/business/us-iran-deal-shipping-companies-strait-of-hormuz.html",
     "description": "Shipowners welcomed the agreement to reopen the Strait of Hormuz, but said they would need more security guarantees before resuming transits.",
-    "date": "2026-06-15T18:25:22.000Z",
+    "date": "2026-06-15T18:25:23.000Z",
     "sourceId": "nyt-biz",
     "sourceName": "NYT 비즈니스",
     "lang": "en",
@@ -20290,5 +20323,1893 @@
     "lang": "en",
     "category": "Markets",
     "aiAnalysis": null
+  },
+  "id_6g0at1": {
+    "id": "id_6g0at1",
+    "title": "시가총액 △EPS PSR ROE (조원) -1D -1W -1M -1Y 2025 2026 (%) (배) (%) 한국 코스피 8,546 6,785 5.2 14.2 14.1 195.2 29 - 한국경제",
+    "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOYUR4WTVqajhzNzdRcU5GdFJ6aTBkWHFqa1Fyakl1T3ZsZGp0S2xsV1NPeVFLV2Y0NFVYdkNTQldsaC1QRVJPTTZ0cmFzbXRURkI2bVJTdUVPUDZPakxSRlRLWXVBcURNbEJKR2FRVDl0RXdlSDc0QndNVWJiUFMtSEtzSHdzSmVxT21rclQxMmZCUHFCSlE?oc=5",
+    "description": "시가총액 △EPS PSR ROE (조원) -1D -1W -1M -1Y 2025 2026 (%) (배) (%) 한국 코스피 8,546 6,785 5.2 14.2 14.1 195.2 29  한국경제",
+    "date": "2026-06-16T00:53:57.000Z",
+    "sourceId": "hankyung-eco",
+    "sourceName": "한국경제 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "한국 코스피 주요 재무 지표 및 실적 전망치 분석",
+      "summary": [
+        "한국 코스피 시장의 전체 시가총액을 비롯하여 EPS, PSR, ROE 등 핵심 펀더멘털 지표 현황이 집계되어 발표되었습니다.",
+        "제시된 단기 및 장기 수익률 지표를 종합적으로 살펴보면 현재 국내 증시의 적정 가치와 향후 성장 잠재력을 가늠할 수 있습니다.",
+        "특히 2025년과 2026년의 예상 실적 전망치를 통해 코스피 시장의 중장기적인 투자 매력도와 방향성을 판단할 근거를 제공합니다."
+      ],
+      "implications": [
+        "투자자들은 거시적이고 전반적인 재무 지표를 활용하여 코스피 시장 전체의 밸류에이션을 냉정하게 평가하고 전략을 세워야 합니다.",
+        "시장의 전반적 흐름보다는 향후 실적 개선세가 뚜렷하게 예상되는 특정 업종과 개별 종목을 선별하는 가치 투자 접근이 유효합니다."
+      ]
+    }
+  },
+  "id_1qd6ci3": {
+    "id": "id_1qd6ci3",
+    "title": "\"24시간 거래되는 ETF 나오나\"…미래에셋의 '토큰화 실험' - 한국경제",
+    "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBzUGJib3JLQ20zamNmUnZoOHhyWld1eWtOMDA3cXJuVzJXOTZObmF4VTJscEh0bm1QUEltbFNwY1JHRF94eko3M0JabDhKUDJpd2ZTZkdtM1RRQdIBVEFVX3lxTE1kYVJLcDZtaE92UzZENFdFQ0dyQzhSQWNrNnhSQ1R2bzBNYS0wcklFQXRSYTBOT1dvRzJWcHBDTTBXYnY2aW54YjdEVEpjdkFPaGZJRA?oc=5",
+    "description": "\"24시간 거래되는 ETF 나오나\"…미래에셋의 '토큰화 실험'  한국경제",
+    "date": "2026-06-16T01:04:22.000Z",
+    "sourceId": "hankyung-fin",
+    "sourceName": "한국경제 증권",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "\"24시간 거래되는 ETF 나오나\"…미래에셋의 '토큰화 실험'",
+      "summary": [
+        "미래에셋이 상장지수펀드(ETF)의 토큰화를 도입해 24시간 거래를 가능하게 하는 실험을 추진하고 있습니다.",
+        "블록체인 기술을 전통 금융 상품에 접목하여 투자자들의 시장 접근성과 편의성을 획기적으로 개선하려는 시도입니다.",
+        "성공적으로 안착할 경우, 전통 증권 시장과 가상자산 시장 간의 경계를 허무는 중요한 계기가 될 것입니다."
+      ],
+      "implications": [
+        "시간적 제약을 극복한 새로운 금융 투자의 길이 열리며 글로벌 시장 상황에 대한 즉각적인 대응이 가능해집니다.",
+        "금융투자 업계 전반에 걸쳐 블록체인 및 자산 토큰화 관련 기술 투자와 서비스 경쟁이 가속화될 것으로 예상됩니다."
+      ]
+    }
+  },
+  "id_1pobmsw": {
+    "id": "id_1pobmsw",
+    "title": "BOJ, 이달 금리 인상 전망…우치다 부총재 회견 주목 - 연합인포맥스",
+    "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5lRmhwNC1jNGxWTlpvSXdxcUlZeWNUeXVEZzNJSV9VOWNCZmMxbUxCVU1ETFZ0X0h3SUpfVEtHWGpEb3NvLTEtT0Fpb3d0WjN3M1lrM2ZzcUhydzdobzdUVGVzc09sOWJFVTBxaUhqMUw?oc=5",
+    "description": "BOJ, 이달 금리 인상 전망…우치다 부총재 회견 주목  연합인포맥스",
+    "date": "2026-06-16T00:30:02.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "BOJ, 이달 금리 인상 전망…우치다 부총재 회견 주목",
+      "summary": [
+        "일본은행(BOJ)이 이달 금융정책결정회의에서 기준금리를 인상할 것이라는 전망이 지배적입니다.",
+        "시장은 우치다 신이치 부총재의 기자회견에서 향후 금리 인상 경로에 대한 힌트를 얻고자 합니다.",
+        "엔화 약세 방어와 물가 안정이라는 두 가지 목표를 달성하기 위한 BOJ의 정책 변화가 예상됩니다."
+      ],
+      "implications": [
+        "BOJ의 금리 인상이 현실화될 경우, 엔화 강세 전환과 함께 글로벌 자금 흐름의 변동성이 커질 수 있습니다.",
+        "국내 증시에서는 일본과 수출 경합도가 높은 업종들의 상대적 수혜가 기대됩니다."
+      ]
+    }
+  },
+  "id_clehfo": {
+    "id": "id_clehfo",
+    "title": "일본은행 오늘 기준금리 1%로 인상 유력…31년만에 최고치 - 뉴스1",
+    "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9jNTZOYkFOaHB3ODlLaXg2eF9uQUUyQXU0SXoyN0Y5Nl9pVm8xUzltMnRscmRBVU5Ja3UwOFJVelppQUFrV2FLVHdROVF3Zll2dDBPUnhyUDBSQ0ZPU1FJYmdPemk5OEU?oc=5",
+    "description": "일본은행 오늘 기준금리 1%로 인상 유력…31년만에 최고치  뉴스1",
+    "date": "2026-06-16T00:45:49.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "일본은행 오늘 기준금리 1%로 인상 유력…31년만에 최고치",
+      "summary": [
+        "일본은행이 금일 금융정책결정회의를 개최하고 기준금리를 1% 수준으로 전격 인상할 것이 유력하게 전망되고 있습니다.",
+        "이는 무려 31년 만에 도달하는 최고 금리 수준으로, 일본이 오랜 기간 고수해 온 초완화적 통화정책의 정상화를 의미합니다.",
+        "이러한 금리 인상 조치는 지속적인 엔화 가치 하락을 방어하고 점증하는 국내 인플레이션 압력에 선제적으로 대응하기 위한 것입니다."
+      ],
+      "implications": [
+        "미일 금리차 축소로 엔화가 강세로 전환될 가능성이 높아지면서, 글로벌 외환 시장의 변동성과 수출입 기업들의 타격이 예상됩니다.",
+        "전 세계에 풀려 있던 엔캐리 트레이드 자금의 대규모 청산 우려가 불거지며 신흥국을 비롯한 글로벌 자본 시장의 유동성에 충격을 줄 수 있습니다."
+      ]
+    }
+  },
+  "id_1spoyfp": {
+    "id": "id_1spoyfp",
+    "title": "미·이란 종전 합의에 금리 전망 변화?…한은 7월 인상론 여전 - 스트레이트뉴스",
+    "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBCMWo2YXNZMEh0aUhtSDk2czAteEZBVVM4MFVGSmNlREM2bEdPX3NaNFMyMDhNWXp1bllqd1NEbkE5elZZYlhRRnRTNm1OdFFmVmlmQ2o2LTdLZXE3TUw5Mm5uU014MFN5ZFkxXzBPbWxCS3fSAXdBVV95cUxQR1pwdFp0SFJzTkVyR3RtbjVBVm03aGxUS2JURUN6eE1iVDlKazYwZmh5bUxRdU1hQXc3dUIxWXFYRG1XZlA1cHB1S3NVR0pYUExPbEtQMFBxeWp0NnFweW5hM0xOMUNmM2o1cENPdjFqb0Q4SWJkaw?oc=5",
+    "description": "미·이란 종전 합의에 금리 전망 변화?…한은 7월 인상론 여전  스트레이트뉴스",
+    "date": "2026-06-16T01:18:18.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "미국·이란 종전 합의에 금리 전망 변화 생기나?… 한은 7월 금리 인상론 여전",
+      "summary": [
+        "미·이란 종전 합의로 인해 그간 인플레이션을 자극했던 국제 유가가 하향 안정화되었으나, 한국은행의 7월 기준금리 인상 가능성은 여전히 높게 점쳐지고 있습니다.",
+        "기저에 깔린 끈적한 물가 상승 압력, 위험 수위를 넘나드는 가계부채의 가파른 증가세, 그리고 확대된 한미 금리 역전폭이 긴축 스탠스를 강제하고 있습니다.",
+        "금융통화위원회는 대외적인 지정학적 호재보다는 대내적인 거시경제의 불균형 해소를 위해 추가적인 유동성 흡수가 불가피하다고 판단하는 분위기입니다."
+      ],
+      "implications": [
+        "한국은행의 7월 기준금리 추가 인상이 현실화될 경우, 영끌족을 비롯한 가계 및 한계 기업의 막대한 이자 상환 부담이 폭증할 우려가 있습니다.",
+        "고금리 장기화 기조가 재차 확인됨에 따라 부동산 시장의 매수 심리가 차갑게 얼어붙고, 실물 내수 경기 침체가 가속화될 수 있어 선제적인 대비가 필요합니다."
+      ]
+    }
+  },
+  "id_1fndyyp": {
+    "id": "id_1fndyyp",
+    "title": "[경제]반도체 가격 상승에 수출물가 11개월 연속 상승 - YTN",
+    "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBuWExuNUNsM0o4UkhSZ3haTXJraFZFU3ZyelBvX0gyd0p3V2ZaQTg1OGdEcUxhQUozdmx6dlBRaXI4VVZJTUV0Nl9wb2Jkd2doSWFKRE1VWkF1bEdqZk8xSWZCamlDSk9fLVpmVHlsTQ?oc=5",
+    "description": "[경제]반도체 가격 상승에 수출물가 11개월 연속 상승  YTN",
+    "date": "2026-06-15T23:32:00.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "반도체 가격 상승에 수출물가 11개월 연속 상승",
+      "summary": [
+        "반도체 주력 품목의 글로벌 가격 상승세에 힘입어 수출물가지수가 11개월 연속 상승했다.",
+        "IT 수요 회복과 공급망 이슈가 맞물리며 수출 단가를 끌어올리고 있다.",
+        "수출 중심의 경제 구조를 가진 한국 증시의 기업 실적 호조가 기대되는 대목이다."
+      ],
+      "implications": [
+        "반도체 및 주요 수출 업종의 실적 상향 조정 모멘텀이 강화될 것이다.",
+        "다만 환율 변동성에 따른 실수익 규모 변화를 면밀히 점검해야 한다."
+      ]
+    }
+  },
+  "id_jtqx91": {
+    "id": "id_jtqx91",
+    "title": "신현송 한은 달라진다…금리 메시지 과감하게, 지급결제 힘 실어 - 연합뉴스",
+    "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFB1SVRBZFExZXZzYlZSWUxvRnZiM0d3QzRQQU02UDZMNXU1My1PR1RHenhWRjNhaUo2ZEswa3lVdmdmeEdEU1A5ZHZ5N05vZS1JaEpHRUJDTWR1bUHSAWBBVV95cUxPY3E3TnB0MlczVmFqRFlnQllDR0hfeHlXSEMxOG9yNkppRlY5SHcxYlBDNlFyQmhqOTk2bE55TnZ6OXNwendtRUVtcFE2ZmVER2M3WkpwbDNzRDZDN3luM20?oc=5",
+    "description": "신현송 한은 달라진다…금리 메시지 과감하게, 지급결제 힘 실어  연합뉴스",
+    "date": "2026-06-15T20:51:01.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "신현송 한은 달라진다…금리 메시지 과감하게, 지급결제 힘 실어",
+      "summary": [
+        "한국은행이 시장과의 소통 강화를 위해 통화정책과 금리 방향에 대한 메시지를 보다 과감하고 투명하게 전달할 예정입니다.",
+        "이와 더불어 디지털 전환 시대에 발맞춰 중앙은행의 본연의 기능인 지급결제 시스템 고도화에 역량을 집중하기로 했습니다.",
+        "이러한 변화는 통화정책의 실효성을 높이고 금융 시스템의 안정성을 굳건히 하려는 전략적 행보로 풀이됩니다."
+      ],
+      "implications": [
+        "중앙은행의 명확한 포워드 가이던스 제시는 채권 시장의 불확실성을 낮추고 금리 변동성을 제어하는 데 기여할 것입니다.",
+        "지급결제 부문 강화는 향후 CBDC(중앙은행 디지털화폐) 도입 등 미래 금융 인프라 혁신을 위한 기반 다지기로 해석되며 핀테크 산업에 영향을 줄 것입니다."
+      ]
+    }
+  },
+  "id_33iibj": {
+    "id": "id_33iibj",
+    "title": "[종전 합의] 종전에 위험자산 랠리…채권·환율은 '물가'가 변수 - KB Think",
+    "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5GdGtZaWtBYUZZS2dsWXRQOE5CTnlaZE55RUI0YW56TVplX09SeURjbi1fdkx1VERRLXhGUGU1Z1RCbFoyNXE5dm1GdzJRZE1tQ3JmMlVMZHpaY2tGbjB6cDl3WTA2MHUtdVNjVU1BSkFqQQ?oc=5",
+    "description": "[종전 합의] 종전에 위험자산 랠리…채권·환율은 '물가'가 변수  KB Think",
+    "date": "2026-06-16T01:10:02.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "[종전 합의] 종전에 위험자산 랠리…채권·환율은 '물가'가 변수",
+      "summary": [
+        "종전 합의 소식에 위험자산 시장이 뚜렷한 상승 랠리를 보이고 있습니다.",
+        "반면 채권 및 환율 시장의 향후 흐름은 물가 지표에 따라 방향성이 결정될 전망입니다.",
+        "인플레이션 안정 여부가 추가적인 금융 시장 변동성을 제어할 핵심 변수로 작용할 것입니다."
+      ],
+      "implications": [
+        "투자자들은 주식 등 위험자산의 비중을 확대할 단기적인 기회를 모색할 수 있습니다.",
+        "향후 발표될 주요 물가 지표가 채권 및 외환 시장의 흐름을 좌우할 것이므로 각별한 주의가 필요합니다."
+      ]
+    }
+  },
+  "id_jdi3fb": {
+    "id": "id_jdi3fb",
+    "title": "코스피 상승 출발해 8,700선 회복‥환율 1,513원 출발 - MBC 뉴스",
+    "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9CTGZvNXBSTVdfdVpzOWNEYXBtT29KdXowSEN2am9KQ2EwZUZPMlo3VC1FUS1KZkRGNm9Udy12bWMtSUx0MUJkZ1VhUHNGYWJnUUxDMUxoajIyQWgxNmZpYU1NdjNxdUNoZElWTDVFeEpvakVy0gF0QVVfeXFMTVVZcy0yVVlyaG9EbWZVSW9HYXBfX09CSVNjdFhTVTNZUEFaeUdVV3hsMDVJVkxtUmF0Wlg0cXRvTkp6T2Qzb3NHNmJESHVWSm8zVlFmNHRKNzFCa1V5QjAtMmtuc3cyZ1prOXBiM1E3MDJnbFg?oc=5",
+    "description": "코스피 상승 출발해 8,700선 회복‥환율 1,513원 출발  MBC 뉴스",
+    "date": "2026-06-16T00:14:47.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "코스피 8,500선 회복‥환율 1,510원대 개장",
+      "summary": [
+        "코스피 지수가 개장과 동시에 종전 합의 호재를 빠르게 반영하며 단숨에 8,500선을 탈환했습니다.",
+        "원·달러 환율 역시 전일 대비 하락 폭을 키우며 1,510원대에서 개장해 안정을 찾는 모습입니다.",
+        "국내 증시와 외환 시장 모두 지정학적 긴장 완화에 환호하고 있습니다."
+      ],
+      "implications": [
+        "국내 증시의 강력한 V자 반등 모멘텀 형성",
+        "시장 안도감에 따른 외국인 및 기관 투자자 자금의 유입 확대 기대"
+      ]
+    }
+  },
+  "id_1c9lmpk": {
+    "id": "id_1c9lmpk",
+    "title": "종전에도 1,500원 못 본 환율…\"분위기 반전까진 아니야\" - 연합인포맥스",
+    "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE8wNlBaOU42VHFhRVNkLXB6NGdWM0FkXzRXeDdVdzk4YlFJanNITXl4bVFNS1pmaDMtR0lhYWZGbFJta21zbUZDYnpibFkwUlNCdmtBN1hkWFNjV3FtTy02RHhvYVp2WXE2TktLYXI0QnM?oc=5",
+    "description": "종전에도 1,500원 못 본 환율…\"분위기 반전까진 아니야\"  연합인포맥스",
+    "date": "2026-06-16T00:30:10.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "종전에도 1,500원 못 본 환율…\"분위기 반전까진 아니야\"",
+      "summary": [
+        "지정학적 리스크 완화에도 불구하고 원·달러 환율이 여전히 1,500원대 근처에서 고공행진을 하고 있습니다.",
+        "시장 전문가들은 단순한 종전 소식만으로는 달러 강세 분위기를 완전히 반전시키기 어렵다고 분석합니다.",
+        "미국 연준의 금리 인하 지연 등 거시경제적 요인이 환율에 더 큰 영향을 미치고 있습니다."
+      ],
+      "implications": [
+        "단기적인 이벤트보다는 펀더멘털 지표 확인 전까지 환율의 높은 변동성이 유지될 전망입니다.",
+        "환율 하락을 기대한 공격적인 포지션 구축은 아직 시기상조일 수 있습니다."
+      ]
+    }
+  },
+  "id_17eurx9": {
+    "id": "id_17eurx9",
+    "title": "코스피 2% 상승 8,700선 복귀...환율 1,513원 출발 - YTN",
+    "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBMc19NV0Q5b1g4M0tjVWJWaDNPRm5zTWIyZkZNdGRkYkVpNHVKYlQzR01nX1NBVzNDOW5oZTBRb0JxVU9jZ09NQllMR2NMbHVqVGV0T1FxTTFnMU8wRlE?oc=5",
+    "description": "코스피 2% 상승 8,700선 복귀...환율 1,513원 출발  YTN",
+    "date": "2026-06-16T00:40:00.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "코스피 2% 상승 8,700선 복귀...환율 1,513원 출발",
+      "summary": [
+        "국내 코스피 지수가 투자 심리 회복에 힘입어 2%가 넘는 강력한 상승세를 보이며 단숨에 8,700선을 돌파해 복귀했습니다.",
+        "주식 시장의 폭발적인 호조세와는 대조적으로 원/달러 환율은 여전히 불안한 기조를 유지하며 1,513원이라는 높은 수준에서 거래를 시작했습니다.",
+        "시장 참여자들은 증시의 위험 자산 선호 심리와 고환율이라는 상반된 거시 경제 신호 속에서 향후 뚜렷한 방향성을 탐색하고 있습니다."
+      ],
+      "implications": [
+        "주식 시장의 화려한 단기 랠리에 무작정 편승하기보다는 고환율 환경이 개별 기업 실적에 미칠 악영향을 꼼꼼히 점검하는 신중한 잣대가 필요합니다.",
+        "환율 부담 속에서도 국내 증시를 견인하고 있는 외국인 투자자들의 수급 이탈 여부가 코스피의 추가 상승을 결정짓는 핵심 변수가 될 것입니다."
+      ]
+    }
+  },
+  "id_ruraq0": {
+    "id": "id_ruraq0",
+    "title": "\"워시 연준 의장, 금리보다 더 큰 시험대 올라\" - 연합인포맥스",
+    "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5uSGEySHRBNTItaUplbDlRbGRISC1TUzhSdUl2SlI2VHJfWE1RQ04ydkZkU3h1LUt6RmVqamNqaHNxZndsTlBoa3I2Y0Fpc2dqcTVMVW50UnNTTzlQbWhPTEJCZ3FXdy1Jb0ZqbTQ2c0s?oc=5",
+    "description": "\"워시 연준 의장, 금리보다 더 큰 시험대 올라\"  연합인포맥스",
+    "date": "2026-06-16T01:08:56.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "워시 연준 의장, 금리보다 더 큰 시험대 올라",
+      "summary": [
+        "워시 미국 연방준비제도 의장이 금리 결정이라는 기존의 역할을 넘어 더 큰 정책적 시험대에 직면했습니다.",
+        "통화 정책의 방향 설정뿐만 아니라 변화하는 거시 경제 구조에 대한 적절한 대응이 과제로 떠올랐습니다.",
+        "연준의 새로운 리더십과 정책 신뢰성이 글로벌 금융 시장 안정에 중대한 영향을 미칠 것입니다."
+      ],
+      "implications": [
+        "미국의 통화 정책 관련 불확실성이 지속될 수 있으므로 글로벌 시장의 변동성 확대에 대비해야 합니다.",
+        "단순한 금리 수준 외에 연준의 세부적인 정책 방향과 발언이 시장에 미치는 파급 효과가 더욱 커질 전망입니다."
+      ]
+    }
+  },
+  "id_rz9pvo": {
+    "id": "id_rz9pvo",
+    "title": "AI 열풍에 밀린 K바이오…코스닥 주도권도 바이오에서 반도체로 이동하나 - 조선일보",
+    "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOOVl3RVRqMXRYV2N1R2pzbFlCai1pcXVnTUlNUF9MQXN0c1AxbUZSdzNNbHhORlJYN0pBRGxQZFRBTHpCWC1DZlJnY1dTQ0hTSmJ4M1d6THdlZ1ZFQzJEcHpDM1NsbkNaYldTYXVKVDVLMThJMk0xbFMtVXM3S0hJVQ?oc=5",
+    "description": "AI 열풍에 밀린 K바이오…코스닥 주도권도 바이오에서 반도체로 이동하나  조선일보",
+    "date": "2026-06-16T00:04:00.000Z",
+    "sourceId": "chosun",
+    "sourceName": "조선일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_i5iefu": {
+    "id": "id_i5iefu",
+    "title": "BOJ 금리 인상에도 달러-원 1,500원 하회 어렵나…\"비둘기파 인상 변수\" - 연합인포맥스",
+    "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5WaFRDSnlyWTduRDU2VW03UTE0ZF9fc25FbkZDV0psSlBxYkhScVFTR3NpRDY5UHhfd0RqcmFfdzEyWU5RUWJwaG9nOFRLV2tzYng3UTFSZGs5UUFNbDRfWF85STBKSzNlRjJrcktTbU8?oc=5",
+    "description": "BOJ 금리 인상에도 달러-원 1,500원 하회 어렵나…\"비둘기파 인상 변수\"  연합인포맥스",
+    "date": "2026-06-16T01:43:06.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "BOJ 금리 인상에도 달러-원 환율 1,500원 하회 어렵나… \"비둘기파적 인상 변수\"",
+      "summary": [
+        "일본은행(BOJ)이 전격적으로 기준금리를 인상하는 긴축 결정을 내렸음에도, 달러-원 환율은 기대와 달리 1,500원 밑으로 떨어지지 않고 있습니다.",
+        "외환 시장 참여자들은 BOJ의 이번 결정이 공격적인 연속 금리 인상 사이클의 시작이라기보다는 '비둘기파적 인상'에 가깝다고 평가절하하고 있습니다.",
+        "여기에 미국의 금리 인하 시점 지연과 견고한 경제 상황이 글로벌 '강달러' 패권을 지속적으로 지지하며 원화 약세를 부추기고 있습니다."
+      ],
+      "implications": [
+        "달러-원 고환율 기조가 장기화될 경우 수입 원자재 가격 상승으로 이어져 국내 소비자 물가 인플레이션 압력을 가중시킬 우려가 큽니다.",
+        "환율 변동성 위험에 크게 노출된 중소 수입업체들의 채산성이 급격히 악화될 수 있으며, 외환 당국의 시장 개입 가능성도 커지고 있습니다."
+      ]
+    }
+  },
+  "id_1b9rbwy": {
+    "id": "id_1b9rbwy",
+    "title": "종전에도 1500원대 요지부동 환율…장 초반 1517원까지 올라 - v.daum.net",
+    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5YNGlfNFlGSzlHS2FCek4zVGRHTjFOUVNxcjlSSTdDSzJUR1lKVTZpYS1hU3NES1ltZEI0M2Q2SUxXMnd3WURLOGlpcklqdVk?oc=5",
+    "description": "종전에도 1500원대 요지부동 환율…장 초반 1517원까지 올라  v.daum.net",
+    "date": "2026-06-16T00:43:01.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "종전에도 1500원대 요지부동 환율…장 초반 1517원까지 올라",
+      "summary": [
+        "글로벌 지정학적 리스크를 완화할 수 있는 종전 합의 소식에도 불구하고 원/달러 환율이 1,500원대의 높은 수준을 고수하고 있습니다.",
+        "이날 서울 외환시장 개장 직후에는 환율이 장중 1,517원까지 급등하며 시장의 기대와 달리 원화 약세 흐름이 가파르게 전개되었습니다.",
+        "지정학적 호재보다는 미국의 고금리 장기화에 따른 강력한 글로벌 달러 강세 기조가 환율 시장을 더욱 강하게 압박하는 것으로 분석됩니다."
+      ],
+      "implications": [
+        "고환율에 따른 수입 물가 상승이 국내 소비자물가 상승으로 이어질 우려가 커지며, 한국은행의 기준금리 인하 결정이 더욱 지연될 수 있습니다.",
+        "수입 원자재 의존도가 높은 국내 기업들의 원가 부담이 심화될 것으로 예상되므로 보다 적극적이고 정교한 환리스크 방어 전략이 요구됩니다."
+      ]
+    }
+  },
+  "id_1j463wq": {
+    "id": "id_1j463wq",
+    "title": "반도체 수요 증가에 5월 수출물가지수 11개월째 상승 - 연합뉴스",
+    "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5WLWpSZHUxZm1TV0FUcG9GUm9qNXpjWTZ1V0ZCV2draWJja3FtZUtfVlJIMnZ4VkVDeGhBSW9uNW5sWkhsOUVYYjlvckM2aFp5YzBRalpMVENzNk3SAWBBVV95cUxOUTJCNm9OY2pIbmdMcy0xUXVIRVljYWFfUk9HQ2JNOEN6R3dTRFlST0tudzF1V2ZSLUx1MU1LQWE3UTJZbmVHSDdUQ3hiQlVteTNQNHpzdzBIazhKV19JbUY?oc=5",
+    "description": "반도체 수요 증가에 5월 수출물가지수 11개월째 상승  연합뉴스",
+    "date": "2026-06-15T21:00:00.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "“5월 수출물가지수 11개월째 상승…반도체 수요 급증”",
+      "summary": [
+        "5월 수출물가지수가 AI 중심의 반도체 수요 급증에 힘입어 11개월 연속 오름세를 기록했습니다.",
+        "반도체를 비롯한 컴퓨터, 전자 및 광학기기 부문의 물가 상승이 전체 지수를 견인했습니다.",
+        "달러 대비 원화 약세 환율 효과까지 더해지면서 체감 수출 단가 상승폭은 더욱 큰 상황입니다."
+      ],
+      "implications": [
+        "반도체 의존도가 높은 한국 수출 구조상 하반기 거시 경제 성장에 긍정적인 신호로 해석됩니다.",
+        "IT 수출 기업들의 잉여현금흐름(FCF) 확대에 따른 배당 증가 및 투자 확대가 기대됩니다."
+      ]
+    }
+  },
+  "id_gny7pu": {
+    "id": "id_gny7pu",
+    "title": "\"투자자들, 연준 금리 인하에만 집중은 패착\" - KB Think",
+    "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBHdFRLbDVwSnNPTi13TUxMcGN4SWUzWlNlQlR2Uk4yVktGNDE5Tzl4Q0VMb2xiZGpTSFZHOEJNNUpTcFhOMXZfdVRBQTdLZzFRMFo5Ml9mR1N0d19VY0RKRkVXMWVRbUZ6UllqTXJmd192Zw?oc=5",
+    "description": "\"투자자들, 연준 금리 인하에만 집중은 패착\"  KB Think",
+    "date": "2026-06-16T00:27:19.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "\"투자자들, 연준 금리 인하에만 집중하는 것은 패착\"",
+      "summary": [
+        "시장 전문가들은 다수의 투자자들이 미 연준의 단기적인 금리 인하 기대감에만 지나치게 매몰되어 투자를 결정하고 있다고 지적했습니다.",
+        "금리 방향성 외에도 실물 경제의 펀더멘털, 개별 기업의 실적, 그리고 잠재적인 지정학적 리스크 등을 종합적으로 고려해야 한다고 경고했습니다.",
+        "단순한 금리 인하 기대감만으로 위험 자산 비중을 무리하게 확대할 경우 예기치 못한 매크로 충격에 큰 손실을 입을 수 있습니다."
+      ],
+      "implications": [
+        "특정 매크로 이벤트에 의존하기보다는 다양한 시나리오에 대비한 균형 잡힌 자산 배분과 분산 투자 전략이 필수적입니다.",
+        "금리 인하의 수혜를 기대하기보다 안정적인 현금 흐름과 이익 체력을 갖춘 우량주 중심의 포트폴리오 구축이 요구됩니다."
+      ]
+    }
+  },
+  "id_1biitkr": {
+    "id": "id_1biitkr",
+    "title": "[ICYMI] 점도표 운명은…일부 전직들 \"워시, 이번에 금리 전망치 안낼것\" - KB Think",
+    "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1MbDY2UWNoM1hUT05KZGpIdHc4cm4yX0lzSURTM1NSdWFEdkdTWjZXSW5yVUNsc0JERE9hSDFNR3Y5c3RkZWdpajdkSHc5T3BPczAtd1lEWjhyS0k4ZjJEcDZ5bEJxeUNEYV9OQnJvWElRZw?oc=5",
+    "description": "[ICYMI] 점도표 운명은…일부 전직들 \"워시, 이번에 금리 전망치 안낼것\"  KB Think",
+    "date": "2026-06-16T00:33:54.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "[ICYMI] 점도표의 운명은… 전직 연준 인사들 \"워시, 이번엔 금리 전망치 내지 않을 것\"",
+      "summary": [
+        "향후 미국의 기준금리 경로를 보여주는 핵심 지표인 FOMC 점도표가 이번 회의에서는 발표되지 않을 수 있다는 주장이 제기되었습니다.",
+        "전직 연준 인사들은 경제의 불확실성이 너무 커 섣부른 장기 전망 제시가 오히려 시장에 큰 혼란을 야기할 수 있다고 분석했습니다.",
+        "이에 따라 케빈 워시 연준 의장은 구체적인 점도표 제시 대신 데이터에 기반한 유연한 통화 정책 대응을 강조할 것으로 보입니다."
+      ],
+      "implications": [
+        "연준의 금리 인하 시점과 폭에 대한 명확한 가이드라인 부재로 시장 참가자들의 불안감 및 정책 불확실성이 증폭될 수 있습니다.",
+        "앞으로 발표되는 고용 및 인플레이션 등 핵심 매크로 지표 결과 하나하나에 증시가 극도로 민감하게 반응할 것입니다."
+      ]
+    }
+  },
+  "id_1mhrfrg": {
+    "id": "id_1mhrfrg",
+    "title": "S&P500 선물, 종전 합의에도 소폭 하락…美 국채금리 혼조 - KB Think",
+    "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5ZZTdEc3BMcjZwVUxROUxlbzlhSFA5Y1lkUHVKWElCQi1hOXdYbWRzX1RzcVRsay04ZDhiZ0VybG5CNWxLRGU5NEVlVGxIelZtUDJpU1hZUTZIWFp3dFZLcDhCUE9RNnJUalNWSFc2NTdJdw?oc=5",
+    "description": "S&P500 선물, 종전 합의에도 소폭 하락…美 국채금리 혼조  KB Think",
+    "date": "2026-06-16T00:22:26.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "S&P500 선물, 미국-이란 종전 합의에도 소폭 하락… 美 국채금리는 혼조세",
+      "summary": [
+        "미국과 이란 간의 해묵은 지정학적 갈등이 종전 합의로 타결되었음에도, S&P500을 비롯한 주요 주가지수 선물은 소폭 하락세로 반응했습니다.",
+        "이는 호재가 이미 가격에 반영되었다는 '선반영' 인식과 함께, 단기 급등에 따른 차익 실현 물량이 쏟아졌기 때문으로 풀이됩니다.",
+        "위험 선호 심리 회복과 지정학적 불안 완화가 엇갈리며 미국 국채금리 또한 뚜렷한 방향성을 찾지 못하고 만기별로 혼조세를 나타냈습니다."
+      ],
+      "implications": [
+        "주식 시장에서 지정학적 호재의 영향력은 제한적이며, 향후 시장의 핵심 동력은 통화 정책과 물가 지표로 빠르게 이동할 전망입니다.",
+        "불확실성 속에서 금리 방향성에 민감한 기술주 및 장기 채권 시장을 중심으로 짙은 관망세와 변동성 장세가 이어질 수 있습니다."
+      ]
+    }
+  },
+  "id_16imt2x": {
+    "id": "id_16imt2x",
+    "title": "\"팹 증설 본격화\"…하반기 앞두고 들썩이는 반도체 소부장株 - 인베스트조선",
+    "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9ydWJBSG5ZQnFIekxCak1tRm1UUHBuaVplUDZVeFE5SFdyaElidDVzNWpqbGZpMjdib1dIeHdwelZQWXFPaDEwRnBxbjF5V192dW9lNUxyMTkxbzRsVXZpb1JuNjJfbWxsNEhfQ2E5RWZoUQ?oc=5",
+    "description": "\"팹 증설 본격화\"…하반기 앞두고 들썩이는 반도체 소부장株  인베스트조선",
+    "date": "2026-06-15T22:00:33.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "\"팹 증설 본격화\"…하반기 앞두고 들썩이는 반도체 소부장株",
+      "summary": [
+        "주요 반도체 제조사들의 팹(공장) 증설이 본격화되면서 반도체 소재·부품·장비(소부장) 관련 주식들이 강세를 보이고 있습니다.",
+        "하반기 대규모 시설 투자가 집행될 것이라는 기대감이 소부장 기업들의 실적 전망을 밝게 하고 있습니다.",
+        "차세대 반도체 공정에 필수적인 핵심 장비 및 소재를 공급하는 기업들에 대한 투자자들의 선호가 뚜렷합니다."
+      ],
+      "implications": [
+        "반도체 밸류체인 하단에 위치한 소부장 기업들의 본격적인 턴어라운드 및 주가 리레이팅이 기대됩니다.",
+        "고객사 다변화 및 독점적 기술력을 보유한 장비주의 차별적인 강세가 나타날 수 있습니다."
+      ]
+    }
+  },
+  "id_gse6zy": {
+    "id": "id_gse6zy",
+    "title": "[속보] 코스피, 장 초반 8700선 돌파…반도체·조선주 강세 - 스트레이트뉴스",
+    "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE14MXBvQ2lIc2lpZnhaZDdxMlNJb1dqdGxpbW9pTDBNZ0kzM3J6Z3E1SjNlVGRNV19TSWZQSHY3aDNnZ1ZWTjZBOVBWOTBiTmswcDJSd3dnZldPY2dwLTFSLUQ3RExoSnM0eVBmeko0YkJOQmPSAXdBVV95cUxQT24wVmhEa3BhMmllbzRKczdqSGVTR1dtVDFWSkZhRkFsVXZiM1JGV3htcWJEZ0MtcHdTSWZORlUyZG1pczF3Vk83WmJwUTk1UVJsUUV1VnBITjJEOXJuZGtvcE1ELTVXVXh3UHVkSDJOT2VvcFhLZw?oc=5",
+    "description": "[속보] 코스피, 장 초반 8700선 돌파…반도체·조선주 강세  스트레이트뉴스",
+    "date": "2026-06-16T00:32:43.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_krzd2e": {
+    "id": "id_krzd2e",
+    "title": "[속보] 원·달러 환율, 2.5원 오른 1513.6원 개장 - 조선비즈 - Chosunbiz",
+    "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOMF9nUjhJbFRGc3RZZUtHcC1QNktXS1YxZ3R1aGpEV1NmTDVkdGpnVEEtTkNsOGhGNTZxMHJoTl9GRDRaNVZkZUNhcnJQS2ZHNDR4WHpHVHMtSDB3ZXAwVXdHZWFrem81M2RUY290X2hWTXZuRUp0Um5rYzVyUXlTc0ItOGtNd9IBmgFBVV95cUxQT2lBMWRUYURjdmNMUDJSWFhzbW9wb1EtT2oxVEJ0dUUyWWFaQlhKelBQOEk1dG5PLVhxZmpZU0VfeEt5T2s2ZkZSVUVfMnNJS3BDbm9Od2c4OWRMQ0dWUW9QLS10LVFrcU40RWphclE4NVFiYnlpNDZjMmVRRWpPdzRJY0dQcWNlY2xNWXpETFc4OWlyN0tVVUtR?oc=5",
+    "description": "[속보] 원·달러 환율, 2.5원 오른 1513.6원 개장 - 조선비즈  Chosunbiz",
+    "date": "2026-06-16T00:03:00.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_93qhuu": {
+    "id": "id_93qhuu",
+    "title": "AI 데이터센터, 냉각 전력 90% 절감... 차세대 AI 반도체·데이터센터 발열 문제 해결 - 인공지능신문",
+    "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE80NE82dHUyRkx2ZVJLZlc4eXNZcWw4VlFCWktZZFJobzExUmhGNDJZbWRGcFZZVkY3R0NRVUl4RGZvTnp3R2tFZUstTkR5X0dPYjNJajlEU1o5cUlxa3VhbmdTZFBCX3c?oc=5",
+    "description": "AI 데이터센터, 냉각 전력 90% 절감... 차세대 AI 반도체·데이터센터 발열 문제 해결  인공지능신문",
+    "date": "2026-06-16T00:12:50.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_1kbgsmb": {
+    "id": "id_1kbgsmb",
+    "title": "[굿모닝 증시]유가하락·반도체 랠리…코스피, 상승 출발 전망 - v.daum.net",
+    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE12N3BSMVhDSC1uSzNSSmZoZUhOcGU3RmxiUGdXZk9nWDg4a1c4YW1fb1ZLVnNmVlFYTWZ5ZWJyZmU2ZlZ2dmVsYW1qRm9UWkU?oc=5",
+    "description": "[굿모닝 증시]유가하락·반도체 랠리…코스피, 상승 출발 전망  v.daum.net",
+    "date": "2026-06-15T23:13:23.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_bzdumb": {
+    "id": "id_bzdumb",
+    "title": "원-엔화 환율, 소폭 하락하면서 944원 중반대 유지…달러-엔화 환율은 미국-이란 종전 합의에 160엔 초반대로 하락 - 산업일보",
+    "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTE9ZckhCT0lrbmFZT1FtUDJXX1NjOFNlcHAtWEwyTE1qU0FJVkxBYm1ZNUtmQ1EzRzJZTlhVV2RpcjJwYkxo?oc=5",
+    "description": "원-엔화 환율, 소폭 하락하면서 944원 중반대 유지…달러-엔화 환율은 미국-이란 종전 합의에 160엔 초반대로 하락  산업일보",
+    "date": "2026-06-16T01:37:05.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "원-엔 환율, 944원 중반대 유지… 달러-엔 환율은 미·이란 종전 합의에 160엔 초반으로 하락",
+      "summary": [
+        "원-엔 환율은 뚜렷한 모멘텀 부재 속에 전 거래일 대비 소폭 하락하며 100엔당 944원 중반대의 제한적인 흐름을 유지하고 있습니다.",
+        "반면, 글로벌 지표인 달러-엔 환율은 미국과 이란의 전격적인 종전 합의 소식에 극단적인 안전자산 선호 심리가 다소 누그러지며 160엔 초반대로 밀렸습니다.",
+        "중동 지역의 지정학적 긴장 완화가 그동안의 강달러 쏠림 현상을 일부 되돌리며 엔화 환율의 단기적인 하방 압력으로 작용하고 있습니다."
+      ],
+      "implications": [
+        "원-엔 환율의 단기 변동성이 축소됨에 따라 대일 수출입 비중이 높은 국내 기업들의 환율 리스크 관리가 한결 수월해질 전망입니다.",
+        "글로벌 외환 시장의 포커스가 점차 지정학적 리스크에서 미·일 양국 중앙은행의 근본적인 금리 격차 해소 여부로 옮겨갈 것으로 보입니다."
+      ]
+    }
+  },
+  "id_otqajm": {
+    "id": "id_otqajm",
+    "title": "스마트폰이 전 세계 출산율 끌어내리고 있다 - 조선일보",
+    "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQYjhnVnZaTlYwRlRqLWlmUFpILU1zZHo1bjZGM0JseUhZZlRidTY2SV92ODhKR0NBQW15WFNyNDlmQm9EbGdweFdYRU03SXppMlhEektoX2xLWjVpT1pfLVhaM2szT3ZkRnVHOENRNDM0N0lQaFpTLU9tY0hpcEdvb3JUZ1U5QQ?oc=5",
+    "description": "스마트폰이 전 세계 출산율 끌어내리고 있다  조선일보",
+    "date": "2026-06-15T18:04:41.000Z",
+    "sourceId": "chosun",
+    "sourceName": "조선일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_1teosu2": {
+    "id": "id_1teosu2",
+    "title": "이준석 대표 \"美와 시차가 한국 AI 데이터센터 경쟁력\" - 조선일보",
+    "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPbWV3dDZnX0pxd20wNVRhZlFXVnhFYUtTbHhwUkx5dUtHRWRxaTM3MFZ5SWRLSlNUV2g4bjlOQ1l3ajg0bXctbkFrTEttUmdUU21Wc21nbUR1WnZ1Z2JxS0ZJUGxJRWZDamVjOFlfUlR2Wkt6STlpS3g0bm5nRGt3Nk1BNA?oc=5",
+    "description": "이준석 대표 \"美와 시차가 한국 AI 데이터센터 경쟁력\"  조선일보",
+    "date": "2026-06-16T00:06:00.000Z",
+    "sourceId": "chosun",
+    "sourceName": "조선일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_btwz80": {
+    "id": "id_btwz80",
+    "title": "\"다들 수억 벌었는데 나만 없네\" 10억 이상 자산가 1년새 2.5배 - 조선일보",
+    "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPZlhxNTFsSFktQzI1Z2lXWmdlZUNUYjlNLTRlQTBfVnJzVHRxLTlpUDhCNXpMZXNrTnFWcFd5dHRaNm5Rb0t4NmhqWENtYVB2QWxuOWRiWUxwSXR6SU5uQjZMVVdyWnNVc3FzV0pEeW1FeEMyV1RpdUNTUmprN1FoaTVZcTM2b3ZSQ0d3?oc=5",
+    "description": "\"다들 수억 벌었는데 나만 없네\" 10억 이상 자산가 1년새 2.5배  조선일보",
+    "date": "2026-06-16T00:01:00.000Z",
+    "sourceId": "chosun",
+    "sourceName": "조선일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_12l83t9": {
+    "id": "id_12l83t9",
+    "title": "신용대출 빗장에 ‘마통 오픈런’ 뛴다...인뱅 3사도 일제히 신규 대출 한도 제한 - 조선일보",
+    "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNay1EemRaeHAxeml0ak42QXNiSHNPX1ZmT0U5V01rZ1VlTmlRckw0ZHBpUEpOc2lZSUVDMGx5bFRIWlljdkdlVUhsTGVjTXg0WFBZWl9ESVUxNGlHVEthYUt6X01sRlp4SmJKMVRBMWtJMDU4NV8wSUNnQkgxLXQ0ZlJMcFNoWnJfaGpnVXlR?oc=5",
+    "description": "신용대출 빗장에 ‘마통 오픈런’ 뛴다...인뱅 3사도 일제히 신규 대출 한도 제한  조선일보",
+    "date": "2026-06-16T00:31:00.000Z",
+    "sourceId": "chosun",
+    "sourceName": "조선일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_1r5tapm": {
+    "id": "id_1r5tapm",
+    "title": "JTBC 등 중앙그룹 5개사 회생 신청 - 조선일보",
+    "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxONVpSWTQ5cEFFd0tKZGt0bFdsaFNrdXhZNFd6VEpZenYzenNfUHlocnlnY0JRSDZLMl8tN3F5VWY2NDlTZ0R4TVNZSXcwWVRKS19uYjVjd19qVC1WSUpEbTVDR3pvQ2FvcTRlMGNCMHo4X2VGX2gybXBYS1NwZV9XaVVzbm1FbXBkc2tZ?oc=5",
+    "description": "JTBC 등 중앙그룹 5개사 회생 신청  조선일보",
+    "date": "2026-06-15T15:48:00.000Z",
+    "sourceId": "chosun",
+    "sourceName": "조선일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_17vtlp5": {
+    "id": "id_17vtlp5",
+    "title": "[단독] 통상교섭본부장 내주 방중…K-콘텐츠·핵심광물 돌파구 찾는다 - 매일경제",
+    "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE51Mzd2TkY5ZUFJMzJlMHRHSmdsNXEtYlctNHZGQUFRMllzc044Tk5nNXBhNkRWSEZ1aDVYV29YaDhZZThPYnNWTUJMMEVOWHU2NE5haw?oc=5",
+    "description": "[단독] 통상교섭본부장 내주 방중…K-콘텐츠·핵심광물 돌파구 찾는다  매일경제",
+    "date": "2026-06-15T04:23:27.000Z",
+    "sourceId": "maekyung",
+    "sourceName": "매일경제 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_1csi49g": {
+    "id": "id_1csi49g",
+    "title": "“입안에서 사르르” K젤리 인기에 코스맥스 건기식 생산량 2배 확대 - 매일경제",
+    "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9uVEVGZGJGMGZPZzcwMTNoNnpGNXpSQlE4RG5nQnM1SFo3Z184Q1lCcnlTZ3BNUUw5ME5yd2tWSkNQVDZ1YXJ4di1nUGtoVS01WnlRUA?oc=5",
+    "description": "“입안에서 사르르” K젤리 인기에 코스맥스 건기식 생산량 2배 확대  매일경제",
+    "date": "2026-06-15T02:09:33.000Z",
+    "sourceId": "maekyung",
+    "sourceName": "매일경제 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_micwa5": {
+    "id": "id_micwa5",
+    "title": "담보 확실한 곳만…중기대출 늘렸다는 은행, 우량기업만 반겼다 - 매일경제",
+    "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBBNnF5QWRGaV91TzRnaHh3dG9aZTNUZkZoQUd0eGV4Znd3ODVNdmVYdGN5anJ2ZndVd0Z4UTVsTmgzaC1XSElpWjM0Z1FDdXhHX25keA?oc=5",
+    "description": "담보 확실한 곳만…중기대출 늘렸다는 은행, 우량기업만 반겼다  매일경제",
+    "date": "2026-06-15T23:02:31.000Z",
+    "sourceId": "maekyung",
+    "sourceName": "매일경제 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_1xn8iwq": {
+    "id": "id_1xn8iwq",
+    "title": "중앙홀딩스 빚이 자본의 45배, JTBC 신용등급 최하위 ‘D’로 하락 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE15LUh0TzhiM0h1bVFMZURxN1k2dVllQTkxcHhYLW9xOWRBeFhVMVduM2RBR3A5a25vMFlzbHpvZXFkS2ZMUFFob2g3RERoOTFtUkdMVHdQTktSeDZ3d2RMaldoVVBhSWJmd09KejZSZ0RYU0tXY2fSAWZBVV95cUxNZlNWNEo2U2hHZVcxVHNjTXBYTXRCODBPTExBUVFzQjZmU0lmb1NfVTdBUXFOeGlKT0ZzT0NIRG91Tlk2UVZ3NVhMQkZobV9oY2NWTy1tYmFPQkctdmJPanNSUFBuTFE?oc=5",
+    "description": "중앙홀딩스 빚이 자본의 45배, JTBC 신용등급 최하위 ‘D’로 하락  동아일보",
+    "date": "2026-06-15T19:30:00.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_1nl96pn": {
+    "id": "id_1nl96pn",
+    "title": "채무불이행 JTBC, 신용등급 강등…중앙일보도 하향 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBGYkFicVBoUnlnbFdtbHNfd3JDYThUOW5vRTFYT0YydUN1bTRYcUxMa0UzUnRwb2JmbE5XNU5maXVfa3FfYlFCeEl4UGVBWllhbHB2MXJmUmtzalJVVlNzbzU0MEpRZUhYSVI4aTBvRkhoZFYxOHfSAWZBVV95cUxNUWYxQlNZTHAyZkh2bFZLR1lFZnlGb1NWZnNsQ1BnamNhWXpMcWFwcGF4S0VzNEt0Y1RwdHpLR2VaYVpIWkdJUDhJajVzbFNBZ0Y1SXpoYzQ2eUk5alBXaHJ4VTVmMVE?oc=5",
+    "description": "채무불이행 JTBC, 신용등급 강등…중앙일보도 하향  동아일보",
+    "date": "2026-06-14T09:05:00.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "채무불이행 JTBC, 신용등급 강등…중앙일보도 하향",
+      "summary": [
+        "JTBC가 채무불이행 상태에 빠지면서 신용평가사들이 신용등급을 하향 조정했다.",
+        "이에 따라 모회사격인 중앙일보의 신용등급도 동반 하향되었다.",
+        "미디어 시장의 경영 악화와 수익성 저하가 재무 구조에 심각한 타격을 준 것으로 분석된다."
+      ],
+      "implications": [
+        "미디어 업계 전반의 자금 조달 여건이 악화될 가능성이 높으며, 구조조정 압력이 커질 수 있다.",
+        "투자자들의 미디어 관련 기업에 대한 리스크 회피 심리가 강해질 것으로 예상된다."
+      ]
+    }
+  },
+  "id_bh1qhm": {
+    "id": "id_bh1qhm",
+    "title": "주병기 공정위원장, 매일유업 평택공장 방문… 대리점 상생협력 격려 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9qNzhKdzlLZ1dpOThDS2hBMUJxeUhDbl8yNUNkdWhSNHJROEFrMGdsOXAwNHh2N05PT1VzTk5JbExaaUdmTEh4elluSXBzWG02LWJCTmxIdHJ4amNJYUIzLXRSSEg2N1BuUWcwMWdkVGswTzNYelHSAWZBVV95cUxNWEVTTmtNM1VMQ0dWVFdzX2xfMUdTY1pjUVFfWHRhNF85N3draFM5My1RSWd4czlEa19DbFZKcHE2c2pGR1JSMTd3ZnNhU25OZzBmYTBaZDVzUXRNcl9nOUQ1SXhPNWc?oc=5",
+    "description": "주병기 공정위원장, 매일유업 평택공장 방문… 대리점 상생협력 격려  동아일보",
+    "date": "2026-06-16T00:59:55.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "주병기 공정위원장, 매일유업 평택공장 방문… 대리점 상생협력 격려",
+      "summary": [
+        "주병기 공정거래위원장이 매일유업 평택공장 현장을 방문하여 기업과 대리점 간의 상생 상황을 점검했습니다.",
+        "공정위원장은 본사가 대리점과 협력하는 우수 사례를 높이 평가하며, 공정한 거래 질서의 확립을 재차 강조했습니다.",
+        "정부 차원에서 프랜차이즈 및 대리점 업계의 동반성장을 이끌어낼 수 있는 건강한 산업 생태계 조성을 지원하겠다는 의지입니다."
+      ],
+      "implications": [
+        "식품 및 유통 업계 전반에 걸쳐 대리점과의 공정 거래와 동반 성장을 위한 자발적 상생 프로그램 도입이 확산될 가능성이 높습니다.",
+        "기업들은 ESG 경영의 중요한 축으로서 협력사와의 우호적 관계를 다지고 불공정 거래 리스크를 선제적으로 제거해야 합니다."
+      ]
+    }
+  },
+  "id_ae03s8": {
+    "id": "id_ae03s8",
+    "title": "초고압 접속재로 전기차 인프라 잇는 강소기업 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9zZTYwZDlvbjdWb3l6RFVuMW0xYTcyYkRsNVNTZkxBWWlxcDczYzRGZzJFRTdDMjRxczdRbFgtbXBRRjRuSElaOXJXcUd1emtFb05uNGhBdGRBaEprV3lvY1lVeFZtLWtwRHI5bXNKSEpqX1lQSkHSAWZBVV95cUxPX3Nyenp4NlRNQ3lzRmVkV2lkNVY5bmhxR1RlQUt4QjI4dmxSZXRjWEVBYmNvWGd1cVVjTVBuSl9YNHRmYnNaSFFQY3BLVHNkekExUnFwaExfUFBJWl9QN1lXMkg3Qmc?oc=5",
+    "description": "초고압 접속재로 전기차 인프라 잇는 강소기업  동아일보",
+    "date": "2026-06-15T19:30:00.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_dgyb1p": {
+    "id": "id_dgyb1p",
+    "title": "환율 장중 1504원까지 하락… “당분간 1500원 안팎 오르내릴듯” - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBGeDBld01lRXV3UTJDbVE2NmRENHJRN0JudjhnLXZuYnJvUzlqOWF3M19iY21fLVVEcVBSTDdHOWFVZUVfYk4xLW5VMGlnc29aT2FOdlZLYkJ3Nnc5ZXNrcjFBdTdPV05yaXNIVFBWLThOY1ROeVHSAWZBVV95cUxQVVNLeWVRY3N4czA4emlMd3U0bU1yeGNJbklOUmxrZ1lxYndaYjNuMnBxUHlPVWIzd3YxOENKaC03ZXRWNWg1SS1NUWZBRTdkVTNjVkhFeHhRNW1Hb2JOcjJqYW5IRWc?oc=5",
+    "description": "환율 장중 1504원까지 하락… “당분간 1500원 안팎 오르내릴듯”  동아일보",
+    "date": "2026-06-15T19:30:00.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_zmjx3f": {
+    "id": "id_zmjx3f",
+    "title": "제네시스, 韓완성차 최초 ‘르망 24시’ 레이싱 완주 성공 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFA5dW0tNW9vOEhsVHlPUFM0Zl9udUxySmJhRFg4R1gxQUc1b1JPOTdjVkNqUDdnQ0x1ZVdsZTdlZ05rYVFsYTBiZ2hiUjh6azFwb1pmTnFSWVBYenhHRlNNdi1FNFFvbVU4QkxkOUdmZU9GYksxS0HSAWZBVV95cUxPTEZDTWo2emc3bTZSNm83eEtKcFdiazd2MVByVnUwTHozam9KYmx0dmdsQm10NFUzZ3lUOTB4ZnAwSzlUWE9VcUlrdXA5OGUtWXFrYXMxdlUxMGZtVG9ucWN2Z1J4aGc?oc=5",
+    "description": "제네시스, 韓완성차 최초 ‘르망 24시’ 레이싱 완주 성공  동아일보",
+    "date": "2026-06-15T15:30:00.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "제네시스, 한국 브랜드 최초로 '르망 24시' 레이싱 완주",
+      "summary": [
+        "현대자동차의 프리미엄 브랜드 제네시스가 세계 최고 권위의 내구 레이스 '르망 24시'에 참가했습니다.",
+        "치열하고 가혹한 환경 속에서 제네시스는 한국 브랜드 최초로 대회 완주에 성공하는 기록을 세웠습니다.",
+        "이를 통해 제네시스 차량의 압도적인 주행 성능과 뛰어난 내구성이 전 세계에 입증되었습니다."
+      ],
+      "implications": [
+        "모터스포츠 무대에서의 성과로 글로벌 시장에서 제네시스 브랜드의 고급화 전략이 힘을 받을 것입니다.",
+        "레이싱에서 확보한 고성능 내구성 기술이 향후 양산 차량에 접목되어 상품성을 끌어올릴 전망입니다."
+      ]
+    }
+  },
+  "id_wg2p0": {
+    "id": "id_wg2p0",
+    "title": "Japan Raises Rates to 31-Year High to Ward Off War Inflation",
+    "link": "https://www.nytimes.com/2026/06/16/business/japan-interest-rates-war.html",
+    "description": "Going against Prime Minister Takaichi’s wishes, Japan’s central bank acted amid U.S. pressure, a tanking currency and inflation from energy disruptions.",
+    "date": "2026-06-16T04:41:01.000Z",
+    "sourceId": "nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "aiAnalysis": {
+      "translatedTitle": "일본, 전쟁발 인플레이션 방어를 위해 31년 만에 최고치로 금리 인상",
+      "summary": [
+        "일본 중앙은행이 통화가치 하락과 에너지 공급 차질로 인한 물가 상승에 대응하여 금리를 인상했습니다.",
+        "이번 결정은 다카이치 총리의 의지에 반하는 것으로 알려졌습니다.",
+        "미국의 압박도 이번 31년 만의 최고치 금리 인상에 영향을 미쳤습니다."
+      ],
+      "implications": [
+        "일본 내각과 중앙은행 간의 정책적 이견이 표출될 가능성이 있습니다.",
+        "글로벌 에너지 위기에 따른 일본의 인플레이션 대응이 본격화될 것으로 예상됩니다."
+      ]
+    }
+  },
+  "id_10nwqgc": {
+    "id": "id_10nwqgc",
+    "title": "China’s Spending Slowdown Deepens as Households Tighten Their Belts",
+    "link": "https://www.nytimes.com/2026/06/16/business/china-retail-sales.html",
+    "description": "The unexpected decline in retail sales underscored China’s growing reliance on exports to sustain economic growth as domestic demand continues to falter.",
+    "date": "2026-06-16T05:54:07.000Z",
+    "sourceId": "nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "aiAnalysis": {
+      "translatedTitle": "중국의 소비 둔화 심화, 가계의 허리띠 졸라매기",
+      "summary": [
+        "중국의 소매 판매가 예상치 못하게 감소했습니다.",
+        "가계가 지출을 줄이면서 내수 침체가 지속되고 있습니다.",
+        "이에 따라 중국의 경제 성장을 유지하기 위한 수출 의존도가 더욱 높아지고 있습니다."
+      ],
+      "implications": [
+        "내수 부진으로 인한 글로벌 시장에서의 중국산 저가 공세가 강화될 수 있습니다.",
+        "중국 경제의 회복이 지연됨에 따라 글로벌 경제 전반에 부정적인 영향을 미칠 수 있습니다."
+      ]
+    }
+  },
+  "id_oeyls3": {
+    "id": "id_oeyls3",
+    "title": "\"24시간 거래되는 ETF 나오나\"…미래에셋의 '토큰화 실험' - 한국경제",
+    "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1kYVJLcDZtaE92UzZENFdFQ0dyQzhSQWNrNnhSQ1R2bzBNYS0wcklFQXRSYTBOT1dvRzJWcHBDTTBXYnY2aW54YjdEVEpjdkFPaGZJRNIBVEFVX3lxTE1kYVJLcDZtaE92UzZENFdFQ0dyQzhSQWNrNnhSQ1R2bzBNYS0wcklFQXRSYTBOT1dvRzJWcHBDTTBXYnY2aW54YjdEVEpjdkFPaGZJRA?oc=5",
+    "description": "\"24시간 거래되는 ETF 나오나\"…미래에셋의 '토큰화 실험'  한국경제",
+    "date": "2026-06-16T01:04:22.000Z",
+    "sourceId": "hankyung-fin",
+    "sourceName": "한국경제 증권",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "\"24시간 거래되는 ETF 나오나\"…미래에셋의 '토큰화 실험'",
+      "summary": [
+        "미래에셋증권이 ETF 자산을 토큰 형태로 변환해 시간 제약 없이 거래할 수 있도록 하는 혁신 실험에 나섰습니다.",
+        "이러한 움직임은 금융 시장에 최신 블록체인 기술을 도입하여 거래의 효율성을 극대화하려는 선도적 조치입니다.",
+        "향후 실험이 상용화 단계에 이르면 기존 자본 시장의 구조와 투자 생태계에 커다란 지각 변동을 일으킬 수 있습니다."
+      ],
+      "implications": [
+        "투자자들은 글로벌 이슈 발생 시 시간에 구애받지 않고 유연하고 신속하게 자산을 리밸런싱할 수 있는 환경을 맞이하게 됩니다.",
+        "금융당국 차원에서는 토큰화된 금융 상품에 대한 명확한 규제 가이드라인과 투자자 보호 장치 마련이 시급해질 것입니다."
+      ]
+    }
+  },
+  "id_d5m6b0": {
+    "id": "id_d5m6b0",
+    "title": "“휴가 비행기표 싸진다” 7월 유류할증료 20% 하락 - 한경매거진&북",
+    "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBralU0Z0tiLUp2ODlBZnpudV9kZGJ0ZkxUb3NXOXBoNlNNTE41cjFXcVVaNlJyci1xMnpOeU9GUHpRUVhPTHVwUU80Y01BQ2JMQzNNendHVEZBZGNFNFMtM1VsUjh2dHdHa3ZNUw?oc=5",
+    "description": "“휴가 비행기표 싸진다” 7월 유류할증료 20% 하락  한경매거진&북",
+    "date": "2026-06-16T02:49:00.000Z",
+    "sourceId": "hankyung-eco",
+    "sourceName": "한국경제 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "“휴가철 비행기표 싸진다”… 7월 항공 유류할증료 20% 하락",
+      "summary": [
+        "최근 국제 유가의 하락세가 반영되면서 7월에 발권하는 국제선 항공권의 유류할증료가 전월 대비 약 20% 크게 인하됩니다.",
+        "본격적인 여름 휴가철을 앞두고 해외 여행을 계획하는 소비자들의 항공권 구매 비용 부담이 실질적으로 줄어들 전망입니다.",
+        "항공사들은 유류비 절감으로 인한 영업이익 개선과 탑승객 수요 증가라는 긍정적인 효과를 동시에 누릴 것으로 보입니다."
+      ],
+      "implications": [
+        "비용 부담 완화로 인한 해외 여행 수요의 증가로 여행사, 항공사, 면세점 등 관련 업종의 3분기 실적 호조가 예상됩니다.",
+        "해외 여행객 급증에 따른 내수 소비 유출 및 서비스 수지 적자 폭 확대로 이어질 수 있어 예의주시가 필요합니다."
+      ]
+    }
+  },
+  "id_ul38vi": {
+    "id": "id_ul38vi",
+    "title": "Australia declares strong El Nino in tropical Pacific as risks to agriculture loom - Ada Derana",
+    "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9lc29JaHZleGtPa05TTTRuSld4OWh0eDBIWVc2UE5NYWo3UldqRy13X2pvUEtZZEVXYTFWd3hXa0NqNWlya3R1eVhaQVBvQU1PdVNGYURnNFprMldVbGJKMg?oc=5",
+    "description": "Australia declares strong El Nino in tropical Pacific as risks to agriculture loom  Ada Derana",
+    "date": "2026-06-16T05:50:48.000Z",
+    "sourceId": "global-invest",
+    "sourceName": "글로벌 투자 뉴스 (Reuters/Bloomberg/CNBC)",
+    "lang": "en",
+    "category": "Markets",
+    "aiAnalysis": {
+      "translatedTitle": "호주, 열대 태평양에 강력한 엘니뇨 선언... 농업 위험 고조",
+      "summary": [
+        "호주 기상청이 열대 태평양 지역에 강력한 엘니뇨 현상이 발생했다고 공식 선언했습니다.",
+        "이로 인해 기후 변동성이 커지며 가뭄 등 기상 이변의 가능성이 높아졌습니다.",
+        "엘니뇨로 인해 호주 및 주변 지역의 농업 부문에 심각한 피해가 우려됩니다."
+      ],
+      "implications": [
+        "기상 악화로 인한 농산물 수확량 감소는 글로벌 곡물 가격의 상승을 초래할 수 있습니다.",
+        "식량 공급망의 불안정성이 커짐에 따라 농산물 관련 인플레이션(애그플레이션) 압력이 가중될 수 있습니다."
+      ]
+    }
+  },
+  "id_7a7k6a": {
+    "id": "id_7a7k6a",
+    "title": "India blocks Telegram messaging app until June 22, government says - Ada Derana",
+    "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE8zS2pYQmdVaThVdGxqVjdGWG9nQTAyZG9ZcXE1MWVCeGk5RXcxMGdfZmUxOVhtSExIUWwzNkJTdmVQWk0zXzM3UFl3ZEtIMGlvVUhpT3hpUlB1WWFXUjNTNQ?oc=5",
+    "description": "India blocks Telegram messaging app until June 22, government says  Ada Derana",
+    "date": "2026-06-16T05:38:54.000Z",
+    "sourceId": "global-invest",
+    "sourceName": "글로벌 투자 뉴스 (Reuters/Bloomberg/CNBC)",
+    "lang": "en",
+    "category": "Markets",
+    "aiAnalysis": {
+      "translatedTitle": "인도 정부, 6월 22일까지 텔레그램 메신저 앱 차단",
+      "summary": [
+        "인도 정부가 텔레그램 메신저 앱의 사용을 6월 22일까지 일시적으로 차단한다고 발표했습니다.",
+        "이번 차단 조치는 특정 보안 우려 또는 정보 통제의 일환으로 시행된 것으로 보입니다.",
+        "사용자들은 당분간 해당 기간 동안 텔레그램을 통한 통신 서비스를 이용할 수 없습니다."
+      ],
+      "implications": [
+        "정부의 디지털 플랫폼 규제가 강화됨에 따라 IT 기업들의 인도 시장 진출 및 운영에 불확실성이 증가할 수 있습니다.",
+        "정보 접근성이 제한되면서 대체 메신저 플랫폼으로의 사용자 이동 및 경쟁이 심화될 수 있습니다."
+      ]
+    }
+  },
+  "id_jsp7cs": {
+    "id": "id_jsp7cs",
+    "title": "Global Market Headlines | Breaking Stock Market News - Reuters",
+    "link": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE5ZWXF2SEtaQVRwQ2xTbk1CYWlTbXRfQV93SXNlWVJYWkEyeTVVajM5bU00d0szRW5kdDdVa0ZDY3JJNkZRRmlR?oc=5",
+    "description": "Global Market Headlines | Breaking Stock Market News  Reuters",
+    "date": "2016-06-06T02:15:43.000Z",
+    "sourceId": "global-invest",
+    "sourceName": "글로벌 투자 뉴스 (Reuters/Bloomberg/CNBC)",
+    "lang": "en",
+    "category": "Markets",
+    "aiAnalysis": null
+  },
+  "id_vj08lu": {
+    "id": "id_vj08lu",
+    "title": "스페이스X 날아갔어도…미래에셋증권 주가 ‘버티기’? - 매일경제",
+    "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5PcFhFZmV2VElqT1h5ZVFPdnBtSUpjTGEycE9jLTF3OHBpVVRjMTA1bzYtNGgzLUtHbkx4ak1JSm5XdW51ZzBDbmMxWUdNQ3pMN2RadTFR?oc=5",
+    "description": "스페이스X 날아갔어도…미래에셋증권 주가 ‘버티기’?  매일경제",
+    "date": "2026-06-15T02:20:51.000Z",
+    "sourceId": "maekyung",
+    "sourceName": "매일경제 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_1blu0tx": {
+    "id": "id_1blu0tx",
+    "title": "니들이 군대 맛을 알아?…편의점, ‘취사병 전설이 되다’ 간편식 선봬 - 매일경제",
+    "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFA0WGRDeDhfTVJTLUtFS2d0TG9IM3N6dUVyVjBwN2FzWm9FZkFrM0dVXzZ0RVZXV1JPcnlHaXRiNWhCYXN4c2xnN0FVWl9qVDgwZ3ZXNw?oc=5",
+    "description": "니들이 군대 맛을 알아?…편의점, ‘취사병 전설이 되다’ 간편식 선봬  매일경제",
+    "date": "2026-06-15T23:48:03.000Z",
+    "sourceId": "maekyung",
+    "sourceName": "매일경제 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_1977hri": {
+    "id": "id_1977hri",
+    "title": "효성중공업, 변압기 이어 美서 초고압 차단기 생산 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFB2WGd3QXNWUnBTVllXc3hYWW9oOWcyTl93TlFlUFVOTW52dW5MRjFyTXoyRlVKYnV4aHo3aW5fTHBEYmdaNFI5c0lmNVVSYTd0ekxzaUdGRGNLeGhrU1ZUVV9fQTN3VXh4NjR3dDhSeGptWG5JWkHSAWZBVV95cUxQejc0NUxyV3lMNl9zWldqYVNXMlBISGdReXM4eE5Ma0xaQVZ3eTl5b3RROF9hRjAtaDR4eVB2SVV3Z3N4SkhUdFNzN1JZU0g1QVdZdWVDNkZfbHlPVkxCWDNtSFJjMnc?oc=5",
+    "description": "효성중공업, 변압기 이어 美서 초고압 차단기 생산  동아일보",
+    "date": "2026-06-14T15:30:00.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_nasvoy": {
+    "id": "id_nasvoy",
+    "title": "KAIST, ‘전력 먹는 하마’ AI데이터센터 냉각 전력 10분의 1로 줄인다 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5QdlFOTk1JWm9yemJ6Wl9yVmNRbXYwV2xyeHBMWGhaQ190dENiTGJsVTN1YUNIM0Rib0UwekM3VzRWUE9fZWY3ZXFCTGd3clVnZXF1clFOQ2JtTWExMGJ4dkVDTi1lOUNfZE05Nk5ZeHpweHN5SGfSAWZBVV95cUxONEVGWFlxUUlBUFlFcFRDQVRUWHZqYjIxYWgwRVZtQ2M3Y0R5aTR4eTdFUTFybjN4TUpZYXBhZU42aklPR2N2YVllLVpGS21SVndQdHZsZUlqcG9fTHpBdDdYQnZpN0E?oc=5",
+    "description": "KAIST, ‘전력 먹는 하마’ AI데이터센터 냉각 전력 10분의 1로 줄인다  동아일보",
+    "date": "2026-06-16T03:04:08.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "KAIST, '전력 먹는 하마' AI 데이터센터 냉각 전력 10분의 1로 줄이는 기술 개발",
+      "summary": [
+        "KAIST 연구진이 AI 데이터센터에서 발생하는 막대한 열을 식히는 데 필요한 냉각 전력을 기존의 10분의 1로 줄이는 신기술을 개발했습니다.",
+        "이 고효율 냉각 시스템은 AI 산업 팽창과 함께 급증하는 데이터센터의 에너지 소비 및 전력난 문제를 해결할 핵심 대안으로 주목받습니다.",
+        "획기적인 에너지 절감을 통해 탄소 배출을 줄이고 친환경 IT 인프라를 구축하는 데 기여할 전망입니다."
+      ],
+      "implications": [
+        "데이터센터를 운영하는 빅테크 기업들의 운영 비용 절감 및 장기적인 수익성 개선 효과가 기대됩니다.",
+        "액침 냉각 등 차세대 고효율 냉각 기술을 보유한 관련 소재·부품·장비 기업들의 새로운 성장이 예상됩니다."
+      ]
+    }
+  },
+  "id_1nksz0q": {
+    "id": "id_1nksz0q",
+    "title": "전기차가 전력망이 되다… 기아 V2G 기술력이 선도 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5oZU90WVVJc0tkS2g4YUVyRmd1OXZzanFqYnI1ZnNkTkNXYzZneGM5WURES1p6dXc1dzJsTGFhcVdfUmc2aFBHeEhpWUt0aW1qQWw0Skh2MUFOa0c5THZ0UUdpTC1lY2E2N3JvSGNWSklMamwtbkHSAWZBVV95cUxQVjZQOW5wME9MNmFKcXhCaFBLUkhwV0lTZ290dUlDQ2VqWEN3Z3RTVUJ4bWxOeGIzbEo3SXlMdnFsYnlvaDdlQTA0M0lrYjhvX0VZUExCbVhoUWVaUFMyS1Vmc1k3LXc?oc=5",
+    "description": "전기차가 전력망이 되다… 기아 V2G 기술력이 선도  동아일보",
+    "date": "2026-06-15T19:30:00.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_1b3y3mh": {
+    "id": "id_1b3y3mh",
+    "title": "‘9천피’까지 300포인트 남은 코스피…외국인 3거래일 연속 ‘사자’ - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE91cXdFUUstOGRSaDVPTTAtelBGTTVWZlYyd1k3Z1Z1bkhuSURCZlZVSEk3Qzkzd2R4eWszcU9hY0ZRR2ViMkpSN2FNTHF4emNDeGZ0T2ZQWnpXamU1c0hhajJGNmFtazZOSnBrc1NlcVM0c1ZGQlHSAWZBVV95cUxPUEM2akQ5aDR5bzBRMUpjU0RScS03VjJib0ViY1F6amV5RFFoUnJZSWlMN2FaRV9hWkJMa2RQdTA3SkNGbHE0TXhvMlZBRWl6eG9YeXE4UWtrTnYzdzF5UURPNXNzOEE?oc=5",
+    "description": "‘9천피’까지 300포인트 남은 코스피…외국인 3거래일 연속 ‘사자’  동아일보",
+    "date": "2026-06-16T02:32:00.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "'9천피'까지 300포인트 남은 코스피… 외국인 3거래일 연속 매수세",
+      "summary": [
+        "코스피 지수가 외국인 투자자들의 3거래일 연속 집중 매수세에 힘입어 가파른 상승 곡선을 그리며 8,700선을 강하게 돌파했습니다.",
+        "시장에서는 전인미답의 '9천피(코스피 9,000)' 시대 진입까지 불과 300포인트만을 남겨두고 기대감이 역대 최고조에 달하고 있습니다.",
+        "국내 반도체 및 자동차 기업들의 수출 호조와 정부 주도의 밸류업 프로그램에 따른 저평가 해소 기대가 외국인 자금을 강하게 유입시키고 있습니다."
+      ],
+      "implications": [
+        "코스피의 역사적 신고가 랠리가 이어짐에 따라 그간 관망하던 개인 투자자들의 대규모 대기 자금이 증시로 유입될 수 있습니다.",
+        "가파른 단기 급등에 대한 피로감으로 언제든 대규모 차익 실현 매물이 쏟아질 수 있어 철저한 리스크 관리가 병행되어야 합니다."
+      ]
+    }
+  },
+  "id_hay7nr": {
+    "id": "id_hay7nr",
+    "title": "불법하도급 신고포상금 상한 폐지…과징금의 최대 30% 받는다 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9kVEZvZE05Y1kwLXk4RmNIdW9wWFM0NGtScnJRNHZqUjN5dDFsMWZiWEkwN3Uxby1WR0czY3l2Y3d0aVlpa1Q0SERhN25vN3VqTXRiTmktTTMtVkdTc0dydWk3NjB6dFM2UG15TC10Qk54U2l4aVHSAWZBVV95cUxQWnkyR00wM3pMVlUxRzNRZ0VjWHlMVW04NVhHMzFtYTV1X1ZsM2k4bjB0TlNvejZIX0swZW1GNWJxemwtSWxVYW4xVEMtMzdza3k3cUZIR2xMSVlXR2ZqTWs5YldZcGc?oc=5",
+    "description": "불법하도급 신고포상금 상한 폐지…과징금의 최대 30% 받는다  동아일보",
+    "date": "2026-06-16T04:55:00.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "불법하도급 신고포상금 상한 폐지…과징금의 최대 30% 받는다",
+      "summary": [
+        "정부가 불법하도급 근절을 위해 관련 신고포상금 제도의 상한선을 전면 폐지했습니다.",
+        "이에 따라 신고자는 적발된 기업에 부과되는 과징금의 최대 30%를 포상금으로 지급받게 됩니다.",
+        "이러한 파격적인 조치는 건설 및 산업 현장에 만연한 불법적 관행을 뿌리 뽑기 위한 강한 의지를 보여줍니다."
+      ],
+      "implications": [
+        "신고의 경제적 유인이 크게 증가하여 내부 고발이 활성화되고 불법하도급 관행이 크게 위축될 것으로 예상됩니다.",
+        "관련 기업들은 컴플라이언스(준법 감시) 체계를 대폭 강화하고 리스크 관리에 더욱 주의를 기울여야 합니다."
+      ]
+    }
+  },
+  "id_4d2moy": {
+    "id": "id_4d2moy",
+    "title": "평택 고덕에 올해 9000가구 쏟아진다… 3단계 개발 본격화 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5SVjNPak9raDExN3RubTdXZnp3aElWU2E1eEJxNW82WnliZ3QyM0k5V2RBWFJVS0VwVTJXNGNCZE9ocEthb05vZnJ5MzlkQW9aLVRhSHZ5RXRTcWthX0UxWmc2M1lfQW1mRHFuaWZuUzloaE5kSGfSAWZBVV95cUxQNFRJbE1fbENfb2NnbXY5czRtZFFTUUdKYnozTEdVZU1KVldySTl4OXZMYjZ6QkZVREpINmZHYUpZYTNYSC1CaFlzX19iVThhSGo4aUVGOTN5alRuaGxsQnV2LXpQS1E?oc=5",
+    "description": "평택 고덕에 올해 9000가구 쏟아진다… 3단계 개발 본격화  동아일보",
+    "date": "2026-06-16T01:51:57.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "평택 고덕신도시에 올해 9,000가구 쏟아진다… 3단계 개발 본격화",
+      "summary": [
+        "삼성전자 평택캠퍼스를 품고 있는 초대형 반도체 배후 도시 '평택 고덕국제신도시'에 올해만 약 9,000가구의 신규 주택 물량이 대거 공급됩니다.",
+        "고덕신도시 3단계 개발 사업이 본궤도에 진입하면서 부족했던 주거 시설은 물론 상업, 행정, 문화 등 자족 인프라 확충에 가속도가 붙고 있습니다.",
+        "국가 첨단 반도체 산업의 지속적인 성장과 광역 교통망(GTX) 연장 등 대형 호재들이 맞물리며 해당 지역의 부동산 가치가 재조명받고 있습니다."
+      ],
+      "implications": [
+        "막대한 반도체 관련 종사자 및 배후 수요 유입으로 평택 지역 분양 시장의 활성화 및 구조적인 집값 상승 압력이 작용할 것입니다.",
+        "양질의 일자리와 우수한 주거 여건을 갖춘 핵심 자족 신도시로 성장하며 수도권 남부의 새로운 경제 중심지로 자리매김할 전망입니다."
+      ]
+    }
+  },
+  "id_1qr4bjw": {
+    "id": "id_1qr4bjw",
+    "title": "오리온그룹, 675억 원 규모 자사주 전량 소각… “주주환원 강화” - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9RZGoyNXA4MGVhQnRFSFV3TjhMVTM5RzNLd2Zsb3hxZVNTc3ZXbkRCVjloeEprQURSMGJuczFibEVTdjlQX2ZLUGZzd0QxeGZVOXJmai0zQXBJd3p6UzBEQWtiX2tvbkthZEQ3V1pXRHJQTldDSUHSAWZBVV95cUxOVzRzQmE1Y3J0OGVDMGZXQVVqZDc0QkdCNG1fWUMwQWVMUkFJaTdYUDdwX01QTW1tbkZGcHN5QXRhQ2FrbWkyRWdMbVM2WElCVGYwOUlfOFdYMkp1WkZsM3ZncjhXc2c?oc=5",
+    "description": "오리온그룹, 675억 원 규모 자사주 전량 소각… “주주환원 강화”  동아일보",
+    "date": "2026-06-16T05:52:39.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "오리온그룹, 675억 원 규모 자사주 전량 소각… “주주환원 강화”",
+      "summary": [
+        "오리온그룹이 675억 원 규모의 자사주를 전량 소각하기로 결정했습니다.",
+        "이는 주주환원 정책을 강화하기 위한 조치의 일환입니다.",
+        "이러한 결정은 주주가치를 제고하려는 기업의 의지를 반영합니다."
+      ],
+      "implications": [
+        "자사주 소각에 따라 유통 주식 수가 감소하여 주당 가치가 상승할 것으로 기대됩니다.",
+        "기업의 적극적인 주주친화 정책이 투자자들의 투자 심리에 긍정적인 영향을 미칠 것입니다."
+      ]
+    }
+  },
+  "id_16xau5g": {
+    "id": "id_16xau5g",
+    "title": "이기종 드론-로봇 하나로… 통합 관제의 새 지평 열다 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE94ejRHQVc0SFp0b1lscFJWajlxUVhtMVRINXFyQjJ2Z1BFR0RhS3QzRExpdUpDWmo1V1FvbGhZX2h5QmtwWDg2S3BTMVVIc3Fzb2FyaU5TT2tEbEMxV25ZQlBfNnhITE9PRUdZc3JSRXpWOF84Y1HSAWZBVV95cUxNQkxqMmRKVnZZUGRiU201d0g3TVc5Um5XUWp0dzNpamJueTlqSFhRci1qN1gyZlNURHAtTktpUFBHZlBDNE9pdkdtNjhxVDBjc0tLT1lmTTFMWUxHS00zZGxLUDI4S0E?oc=5",
+    "description": "이기종 드론-로봇 하나로… 통합 관제의 새 지평 열다  동아일보",
+    "date": "2026-06-15T19:30:00.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_1irt9on": {
+    "id": "id_1irt9on",
+    "title": "음성 제어-대화 지원 ‘에이닷 오토’… AI 융합된 글로벌 플래그십 거점 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1JS3RzYmpVS2JmeWNjQkJVc0I2dDc2U3hjM0JkbUE3RHZYVnFjblJlSm85bE9vMEM1em0xWU1lMUpxOXpzbGdtUU5Yd3lkQUFLRU9nTk9adDJlYW42clJIbkVlcjhHdjlfTF9LdUJBMzI3ZklXR3fSAWZBVV95cUxQbmFfYkRYbzFvc1c1WU04Zllra1RnT3p6eVJ4R3BnQXNKQlhhVFZtSW9ldWtpSkVsYUhMNG1BN0Q5OW04OEIyNmxFR0FmT3h0X1VOQi1LbHdfREU1cmZBZm5jR2xOWUE?oc=5",
+    "description": "음성 제어-대화 지원 ‘에이닷 오토’… AI 융합된 글로벌 플래그십 거점  동아일보",
+    "date": "2026-06-15T19:30:00.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_1ijwj7i": {
+    "id": "id_1ijwj7i",
+    "title": "[단독]조정식 국회의장, 대한상의 제주포럼 첫 참석…재계와 소통 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9ac0Q2R2l1eFRER19vOU9Ja2xaQmVTM2pPRXY1MmFuWURGVl9NdXdTZ2ctQnk2SUV5d3NoMXB5aHNYZ3otWGh2dEpoZDFfckVGQWFxU3lJcHdYU1RFZGg5dkVob2RqUWlpb19hUkN3Q3dELXhXSlHSAWZBVV95cUxNSmp2VHBRMEsyZWxudkx6Z2ppelBjS2xZQklFTlNUN2lwbGF0MExtS05YTE81a1pPODBaME55LTFMZHNDbm0ySjZvRVdNS0tjeHdfZnpvTDNPSC1JcUEzMDVwNEpsM0E?oc=5",
+    "description": "[단독]조정식 국회의장, 대한상의 제주포럼 첫 참석…재계와 소통  동아일보",
+    "date": "2026-06-16T05:17:00.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "[단독] 조정식 국회의장, 대한상의 제주포럼 첫 참석…재계와 소통",
+      "summary": [
+        "조정식 국회의장이 대한상공회의소가 주최하는 제주포럼에 처음으로 참석합니다.",
+        "국회 수장이 주요 경제 단체의 행사에 직접 참여하여 재계 리더들과 소통의 장을 마련하게 되었습니다.",
+        "이는 정치권과 경제계 간의 협력 및 입법 지원 논의가 활발해질 것임을 시사합니다."
+      ],
+      "implications": [
+        "기업 규제 완화 및 경제 활성화 법안 추진에 있어 긍정적인 정치적 공감대가 형성될 가능성이 있습니다.",
+        "정부와 재계 간의 소통 채널이 강화되어 정책의 예측 가능성과 경제계의 투자 심리가 개선될 수 있습니다."
+      ]
+    }
+  },
+  "id_nfzwzf": {
+    "id": "id_nfzwzf",
+    "title": "미국은 공급 늘리고 중국은 수요 줄이고…유가가 더 폭등 않는 이유 - 조선일보",
+    "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOS190MF9FZ0dCSHhveDlBQXEtOHJfMVZPMWFReTR1VVYtbG9GSEdZZkdZVmVjRm1xenlhb09Wa05faU1HOVpsaDVwdDcyWEt0YXo1a2JlZWRTLUpRUUstdVNaTjVfWmh3Z1JoVlhnZFRfTTdKNFJibWVscFdTTzcxX2xTTDlXSlAya28zUTVR?oc=5",
+    "description": "미국은 공급 늘리고 중국은 수요 줄이고…유가가 더 폭등 않는 이유  조선일보",
+    "date": "2026-06-12T04:07:42.000Z",
+    "sourceId": "chosun",
+    "sourceName": "조선일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_1n5m7wp": {
+    "id": "id_1n5m7wp",
+    "title": "일본은행, 기준금리 1.0%로 인상...각국 중앙은행 금리 인상 돌입하나 - 조선일보",
+    "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQQzYzRXZNekVpY2JPYURodWJBOS04c2xfVzBZZ3hQSHZYUkpSTUFINHN5UTFzOTRLdzRKTnFqalM0bXJ0X1lkcHlHdThmQ0FsaVpMeUxLZGdNSS16MkNQc1FPNl9WNUltb2dYaWdWWUlkdERXRWcwcGxXOFV4cmxxVDJ0amxtN2hpeU1R?oc=5",
+    "description": "일본은행, 기준금리 1.0%로 인상...각국 중앙은행 금리 인상 돌입하나  조선일보",
+    "date": "2026-06-16T03:32:00.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "일본은행, 기준금리 1.0%로 인상...각국 중앙은행 금리 인상 돌입하나",
+      "summary": [
+        "일본은행이 기준금리를 1.0%로 인상하는 결정을 내렸습니다.",
+        "일본의 이러한 행보가 다른 주요국 중앙은행들의 금리 정책에 미칠 영향이 주목됩니다.",
+        "글로벌 통화 정책의 새로운 긴축 사이클 진입 가능성을 제기하고 있습니다."
+      ],
+      "implications": [
+        "일본의 금리 인상이 글로벌 금리 연쇄 인상을 촉발할 트리거가 될 수 있습니다.",
+        "국가 간 금리 차 축소로 인한 글로벌 자금의 급격한 이동이 예상됩니다."
+      ]
+    }
+  },
+  "id_1e3b66h": {
+    "id": "id_1e3b66h",
+    "title": "7월 국제선 유류할증료 또 내린다... 뉴욕 왕복 21만5000원 저렴해져 - 조선일보",
+    "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOLWFqdUwzRzZ5U2VWSV8xX1pNWTZwSkh5bHhmNEp5RUhGeG5idW1aR3ZSbXNjc2dJdVNkWWxSdTQyQkRWd25MSkNTNDZKbWJTcmx0UE9OZU92NzNZdWVUMEFhOWo4emFlamlBNVliVHp6RTN4WHhiaVJVXzNqX1dmZ3hNN1p5N1JaOUppQlRZWQ?oc=5",
+    "description": "7월 국제선 유류할증료 또 내린다... 뉴욕 왕복 21만5000원 저렴해져  조선일보",
+    "date": "2026-06-16T01:01:00.000Z",
+    "sourceId": "chosun",
+    "sourceName": "조선일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "7월 국제선 유류할증료 또 내린다... 뉴욕 왕복 21만5000원 저렴해져",
+      "summary": [
+        "오는 7월부터 적용되는 국제선 항공권의 유류할증료가 지난달에 이어 추가로 인하될 예정입니다.",
+        "이로 인해 미주 노선인 뉴욕 왕복 항공권 구매 시 소비자는 최대 약 21만 5,000원의 비용을 절감할 수 있게 됩니다.",
+        "국제 유가 하락분이 항공 요금에 반영된 결과로, 여름 휴가철 해외 여행객들의 경제적 부담이 크게 완화될 전망입니다."
+      ],
+      "implications": [
+        "항공권 가격 인하 효과로 억눌렸던 해외 여행 수요가 자극을 받아 관광 및 항공 업계 전반의 매출 증대가 기대됩니다.",
+        "항공사들은 여객 수요 증가로 인한 탑승률 상승을 누릴 수 있으나, 향후 유가 변동성에 대비한 체계적인 비용 관리가 요구됩니다."
+      ]
+    }
+  },
+  "id_1psyvgx": {
+    "id": "id_1psyvgx",
+    "title": "자율비행 드론도 잡는다… 월성 원전에 첫 탐지 레이더 - 조선일보",
+    "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQeWtfSW1qVXdSb2w1VENoWVFEVGl1MXRlOHFvMC04MXlWVXM5ZngzR2h2UFQ1R2RXTlVFVktzT2UxZEdwSUd5U3NaaHk2VVRqNEIxdV9QVjhKLVVKOG9FTEVKM2V5NnNoRTFCQmsta0VRMWY2NkFRajI0R3N1OEZjeGdCdw?oc=5",
+    "description": "자율비행 드론도 잡는다… 월성 원전에 첫 탐지 레이더  조선일보",
+    "date": "2026-06-16T03:10:00.000Z",
+    "sourceId": "chosun",
+    "sourceName": "조선일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "자율비행 드론도 잡는다… 월성 원전에 첫 탐지 레이더 구축",
+      "summary": [
+        "한국수력원자력이 월성 원자력 본부에 국내 최초로 불법 드론을 정밀하게 탐지하는 레이더를 도입했습니다.",
+        "해당 시스템은 사전 입력된 경로를 따르는 자율비행 드론까지 잡아내어 국가 중요시설 보안을 크게 강화합니다.",
+        "성공적인 운영을 바탕으로 향후 다른 원전 및 국가 주요 보안 시설 전반으로 탐지 시스템 도입이 확대될 계획입니다."
+      ],
+      "implications": [
+        "국가 주요 인프라를 노린 신종 드론 테러 및 불법 보안 위협에 대한 선제적이고 강력한 대응력을 확보하게 됩니다.",
+        "안티 드론(Anti-Drone) 관련 기술 고도화 및 방위산업 분야의 새로운 시장 수요 증가가 기대됩니다."
+      ]
+    }
+  },
+  "id_1r4c8tj": {
+    "id": "id_1r4c8tj",
+    "title": "무비자에 물가도 저렴… ‘가성비 여행’ 중국 뜬다 - 조선일보",
+    "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPaHNtVUZGb2JDcDhLVkRRQ2g5eUdEdFY1bVhPRmR5YXZESE1DN0x0dF9DNE5WeVZFM21OTDlYSzQ3NXJZbGdZTVdRTDREbGVsT0d5QUh3V0U2TVZWNDNXdnRFY0lockVCc3FBYk9VOTVIX19HNm5zem5CcEQzMzZ2N2l3ZFVLeTBHOVRPbzhwZw?oc=5",
+    "description": "무비자에 물가도 저렴… ‘가성비 여행’ 중국 뜬다  조선일보",
+    "date": "2026-06-15T15:33:00.000Z",
+    "sourceId": "chosun",
+    "sourceName": "조선일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_hzhabm": {
+    "id": "id_hzhabm",
+    "title": "[WEEKLY BIZ LETTER] 일 얘기는 천천히… 5번 홀에서 15번 홀 사이에 꺼내라 - 조선일보",
+    "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNZUlSZTBweTNWSlpqdEYzNnZVUDZ5bVY5UW4xUGE5dmdNb0phdHdsNmVhcTRCQmNzc004Z25EYWJGRUZwalpTaUZYRUhNUnZQOFJ5QVItVWNJUWw1Nlo0VC0wRk8tNEtoZGJJSXhlTVYzNjBmRnhmREtmNFM1dXp4eHp2SWM1QQ?oc=5",
+    "description": "[WEEKLY BIZ LETTER] 일 얘기는 천천히… 5번 홀에서 15번 홀 사이에 꺼내라  조선일보",
+    "date": "2026-06-15T23:10:14.000Z",
+    "sourceId": "chosun",
+    "sourceName": "조선일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_183bezl": {
+    "id": "id_183bezl",
+    "title": "일본은행, 오늘 금리 1%로 인상 전망…31년 만의 최고치 예상 - 연합뉴스",
+    "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE0zWFBHWUhuUjA3U2lsSnZUc09zM04teXZOakIwWERaV1NBSW84ejhfMGVEZWdBdjB0WUZwbU1SdHJzVGFoYzljV0p5M0RmdWhadkJYcld1SkJrUW_SAWBBVV95cUxNZEZUOGZ4ZHJZY21zY0FrblBYWmpmTVVneTloV3g2eVI2UmJLTEs4YXcxU213clRUOTR5Z3c2X3c4dEloVmNxNUpGN3pZdXo0d2FtX3Rfa3FuODNmTGltdkU?oc=5",
+    "description": "일본은행, 오늘 금리 1%로 인상 전망…31년 만의 최고치 예상  연합뉴스",
+    "date": "2026-06-16T00:18:38.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_1ditss0": {
+    "id": "id_1ditss0",
+    "title": "[속보] 일본은행, 기준금리 0.75%→1% 인상…31년 만 최고 - 머니투데이 - 머니투데이",
+    "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE12cEZJbjJXUzdCMlEzQk1XTnBvenpSbllreHNQLUJUZzJCYW1SNlF6WS1WLXRVOVBpMHR4clR1VjJlZXQxWElyVnlUWlBYaXJYb0NLdHlhZFdJXy1jVGpDNGh1QmZKeXRE0gFuQVVfeXFMTUk4eHcwSTBBbDctOXRfMm5VWmhlR2NGZ1NuVFpsd0FLX0RiN3hicWVuSlpVa3RQbE8tVXFWMXBRUFAyUVhVdVZxV2FDaUZJYTk3UTdzcGtvWFZIeWo0NUNrc2hUZFhLWVB5VmQzeVE?oc=5",
+    "description": "[속보] 일본은행, 기준금리 0.75%→1% 인상…31년 만 최고 - 머니투데이  머니투데이",
+    "date": "2026-06-16T03:22:01.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "[속보] 일본은행, 기준금리 0.75%→1% 인상…31년 만 최고",
+      "summary": [
+        "일본은행이 기준금리를 0.75%에서 1%로 인상하는 결정을 단행했습니다.",
+        "이는 31년 만에 기록적인 높은 금리 수준입니다.",
+        "시장 참여자들에게 속보로 신속하게 전달되어 큰 주목을 받았습니다."
+      ],
+      "implications": [
+        "기관 투자자들의 일본 채권 시장 내 자산 배분 전략 수정이 불가피해 보입니다.",
+        "대출 이자 부담 증가로 은행권의 수익성 변화가 뒤따를 전망입니다."
+      ]
+    }
+  },
+  "id_bmqbnt": {
+    "id": "id_bmqbnt",
+    "title": "[김대호 진단] 일본은행 금리인상 \"앤케리 청산의 저주\" - 글로벌이코노믹",
+    "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNYnBEcTVncTdZeUxveDlXak11emdaUVpDSTJxcy1DSktDbG1EQVpIbmUzOEtXWHdZV2V3ZzIxYzJQTFd6M2lMN1ZLNGJzV2U2cEtLUG9NNjJoVDBLTW9XSTdUMHhyV2g2TXJLakNUN25kYTE3VkxPSUNsZERkbG4zTzFhSmU?oc=5",
+    "description": "[김대호 진단] 일본은행 금리인상 \"앤케리 청산의 저주\"  글로벌이코노믹",
+    "date": "2026-06-16T02:55:00.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "[김대호 진단] 일본은행 금리인상, '엔캐리 청산의 저주' 우려",
+      "summary": [
+        "일본은행의 금리 인상 단행으로 인해 저금리의 엔화를 빌려 투자했던 '엔캐리 트레이드' 자금의 대규모 청산 우려가 고조되고 있습니다.",
+        "글로벌 자산 시장에 유입됐던 막대한 엔캐리 자금이 일시에 회수될 경우 위험 자산의 연쇄적인 매도 쇼크가 발생할 수 있습니다.",
+        "이는 신흥국 증시를 포함한 글로벌 금융 시장의 유동성을 급격히 축소시키며 심각한 혼란을 초래할 가능성이 큽니다."
+      ],
+      "implications": [
+        "글로벌 금융 시장의 변동성이 극대화되며 주식보다 현금 등 안전자산을 선호하는 심리가 심화될 수 있습니다.",
+        "해외 자금 유출 위험이 높은 신흥국이나 외화 부채 비율이 높은 기업들의 재무 건전성 리스크가 부각될 것입니다."
+      ]
+    }
+  },
+  "id_5o8qea": {
+    "id": "id_5o8qea",
+    "title": "일본 중앙은행 기준금리 1%로 인상...'31년 만에 최고' - BBC",
+    "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBjUG40andJa1dWdl9tTWZTZm5aU3N2XzhjU1QyT1RSZnhQNW9jMjd1eU9VSjdaQzV6Q1hhTzZSRUdXbzh3S0hmYUdINHUwNjIyQ29neUF2R2VrY09P0gFiQVVfeXFMT0FKZ2E1TVRzVV9tWTNRZnlLcXI3anNVc0FmNFY0SmtjRFpyZnVvaU9NY1FzMndza09VYl9Xb2M1T2FWTHVYa3VDNFBNQmM2SUlPa29SNlVtVFdpMGF3SWtJYVE?oc=5",
+    "description": "일본 중앙은행 기준금리 1%로 인상...'31년 만에 최고'  BBC",
+    "date": "2026-06-16T04:18:43.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "일본 중앙은행 기준금리 1%로 인상...'31년 만에 최고'",
+      "summary": [
+        "일본 중앙은행(BOJ)이 기준금리를 1%로 상향 조정했습니다.",
+        "이번 인상으로 일본 금리는 31년 만에 가장 높은 수준을 기록하게 되었습니다.",
+        "BBC 등 외신들도 일본의 거시경제 정책 변화를 비중 있게 다루고 있습니다."
+      ],
+      "implications": [
+        "마이너스 금리 시대를 완전히 탈피하고 정상적인 금리 체계로 회귀하는 신호입니다.",
+        "글로벌 금융 시장에서 엔캐리 트레이드 청산 우려가 확대될 수 있습니다."
+      ]
+    }
+  },
+  "id_r9lo07": {
+    "id": "id_r9lo07",
+    "title": "[속보]일본은행 기준금리 0.25%p 인상해 1%로…31년 만에 최고 - 뉴스1",
+    "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5YSlpnUDBmU20wTDAzZHBIVmktemRuVXlUSkNMbm5rNkJYN0VELXBsQmZkOXF4ZUJWVi1WcERFanZKVUtFTFpVNXNrOFJJcjk5TlhTdUlnME5pdko2RHVOTzRGQk1RMms?oc=5",
+    "description": "[속보]일본은행 기준금리 0.25%p 인상해 1%로…31년 만에 최고  뉴스1",
+    "date": "2026-06-16T03:20:26.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "[속보] 일본은행 기준금리 0.25%p 인상해 1%로…31년 만에 최고",
+      "summary": [
+        "일본은행이 0.25%포인트의 기준금리 인상을 결정해 최종 1%에 도달했습니다.",
+        "이번 금리 결정은 31년 동안 유례가 없었던 최고치 갱신입니다.",
+        "시장에 미치는 파급력을 감안해 속보 형태로 긴급 보도되었습니다."
+      ],
+      "implications": [
+        "점진적이지만 확실한 금리 인상 경로를 통해 시장 불확실성을 해소하려는 의도입니다.",
+        "일본 정부의 부채 관리 및 재정 건전성 확보가 새로운 주요 과제로 부상할 것입니다."
+      ]
+    }
+  },
+  "id_mt3l2v": {
+    "id": "id_mt3l2v",
+    "title": "日 기준금리 1%로 인상…31년 만에 최고치 - 전자신문",
+    "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9tMy1zeUZ2Y1ktNXRVMk9rbzlwczZ6djlsWEN3N2hZcjZ2QzMxdGhIbmVSRHFJMGZWb2pNdlB5MGhzOVREbWpKTDBxSXdldw?oc=5",
+    "description": "日 기준금리 1%로 인상…31년 만에 최고치  전자신문",
+    "date": "2026-06-16T04:37:47.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "일 기준금리 1%로 인상…31년 만에 최고치",
+      "summary": [
+        "일본의 기준금리가 1%로 인상되었습니다.",
+        "이는 31년 만에 기록된 최고 수준의 금리입니다.",
+        "전자신문에서 보도한 국내외 금융 시장의 주요 동향입니다."
+      ],
+      "implications": [
+        "금리 인상으로 인해 엔화의 강세 전환이 예상됩니다.",
+        "일본 자본 시장 및 글로벌 자금 흐름에 큰 변화가 일어날 수 있습니다."
+      ]
+    }
+  },
+  "id_gs2gbd": {
+    "id": "id_gs2gbd",
+    "title": "[통화정책 따라잡기] 31년만에 최고 BOJ 금리 인상…배경은? - v.daum.net",
+    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9UX3RPWVU3QmE2RHhvVzZjRGxlcXpDZEVaTjNlQlhSbk16UF9ER0NFOEt3aHpVSDlCMVJYNkx3dVRPelh3bWhGNTh4U19QUlU?oc=5",
+    "description": "[통화정책 따라잡기] 31년만에 최고 BOJ 금리 인상…배경은?  v.daum.net",
+    "date": "2026-06-16T05:25:20.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "[통화정책 따라잡기] 31년만에 최고 BOJ 금리 인상…배경은?",
+      "summary": [
+        "일본은행(BOJ)이 31년 만에 기준금리를 최고 수준으로 인상하는 결정을 내렸습니다.",
+        "이번 조치는 지속적인 물가 상승 압력과 임금 인상 추세가 배경이 된 것으로 분석됩니다.",
+        "장기간 지속된 디플레이션 탈출에 대한 자신감이 통화정책의 변화를 이끌었습니다."
+      ],
+      "implications": [
+        "금리 인상으로 인해 일본 내 기업 및 가계의 차입 비용이 증가하여 소비와 투자에 단기적인 부담으로 작용할 수 있습니다.",
+        "일본 국채 금리의 상승을 유발하여 글로벌 채권 시장의 변동성을 키울 가능성이 있습니다."
+      ]
+    }
+  },
+  "id_dy7w8y": {
+    "id": "id_dy7w8y",
+    "title": "일본은행, 기준금리 0.75%→1%로 인상…31년 만에 최고 - JTBC",
+    "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5yWWxicGNFT3pLQURtYTRBQWRUVFJkOVdBVVh3YzgxWHVKbmF5TDNsczQxaVJRNzBPOGFaa0lOTVR6VzFJME8wbFZWNjk0SW1iX0RNZg?oc=5",
+    "description": "일본은행, 기준금리 0.75%→1%로 인상…31년 만에 최고  JTBC",
+    "date": "2026-06-16T03:32:00.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "일본은행, 기준금리 0.75%→1%로 인상…31년 만에 최고",
+      "summary": [
+        "일본은행은 현행 0.75%였던 기준금리를 1%로 0.25%포인트 상향 조정했습니다.",
+        "물가 오름세와 엔저 현상에 제동을 걸기 위한 조치로 해석됩니다.",
+        "일본 경제가 31년 만에 가장 높은 금리 환경에 직면했습니다."
+      ],
+      "implications": [
+        "엔화 약세 흐름이 진정되고 환율 안정화에 기여할 것으로 기대됩니다.",
+        "내수 기업들의 자금 조달 비용 증가로 기업 투자 심리가 위축될 수 있습니다."
+      ]
+    }
+  },
+  "id_1yd32gw": {
+    "id": "id_1yd32gw",
+    "title": "[속보]일본은행, 기준금리 1%로 인상…31년 만에 최고 수준 - 이데일리",
+    "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQTFE5MDM3Rk1pc0NaMUJiTkJvZTVmUXFlU1dDeUhmWU9aVC1mclNvajZLSWRTZmNVY3B1U3FYYU82ekMxcks0Y05YSV9EVm1KR1IxbjJiVFV2czV0SUxiRVFmZjdjZy0tc0NrYjdsQUNvLTQtLTJfNkJWR21RV0VFTw?oc=5",
+    "description": "[속보]일본은행, 기준금리 1%로 인상…31년 만에 최고 수준  이데일리",
+    "date": "2026-06-16T03:20:17.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "[속보] 일본은행, 기준금리 1%로 인상… 31년 만에 최고 수준",
+      "summary": [
+        "일본은행이 기준금리를 1%로 기습 인상하며 디플레이션 탈출과 긴축 기조 강화를 시사했습니다.",
+        "이는 31년 만에 도달한 최고 수준의 금리로, 글로벌 금융 시장에 큰 파급력을 미칠 것으로 예상됩니다.",
+        "기준금리 인상에 따라 글로벌 자본 흐름의 변화 및 엔화 강세 압력이 거세질 전망입니다."
+      ],
+      "implications": [
+        "막대한 규모의 엔캐리 트레이드 청산에 따른 글로벌 유동성 축소 및 위험 자산 변동성 확대 위험이 있습니다.",
+        "엔화 가치 상승으로 인해 일본 기업과 경합하는 국내 수출 기업들의 단기적인 가격 경쟁력 회복이 기대됩니다."
+      ]
+    }
+  },
+  "id_10a4huo": {
+    "id": "id_10a4huo",
+    "title": "[도쿄환시] BOJ 금리 인상 속 달러-엔 하락 후 되돌림 - KB Think",
+    "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5TZllENGh6eEdQNGdMV083eW4yVlB0dFBtTklmM3lDQ0FFUXMyTHEwanZ2UVZEcE9SS1RQT0RGTWpfX2swZjJ2MUlzdmJjM1JYaXhmVTZfYTZwcDMzb24zelpUSmRLOVQ0UkxxMmhYYXpjZw?oc=5",
+    "description": "[도쿄환시] BOJ 금리 인상 속 달러-엔 하락 후 되돌림  KB Think",
+    "date": "2026-06-16T05:21:51.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "[도쿄환시] BOJ 금리 인상 속 달러-엔 하락 후 되돌림",
+      "summary": [
+        "일본은행의 기준금리 인상 발표 직후 도쿄 외환시장에서 달러 대비 엔화 환율이 하락(엔화 강세)했습니다.",
+        "그러나 이후 차익실현 매물과 시장의 기대 선반영 영향으로 환율이 다시 하락폭을 되돌렸습니다.",
+        "시장은 향후 금리 인상 속도와 통화정책 방향성에 대한 추가적인 단서를 관망하는 모습을 보였습니다."
+      ],
+      "implications": [
+        "단기적으로 환율의 변동성이 확대되어 외환 거래 및 수출입 기업의 환리스크 관리가 중요해집니다.",
+        "BOJ의 추가 긴축 시그널 여부에 따라 향후 달러-엔 환율의 방향성이 결정될 것입니다."
+      ]
+    }
+  },
+  "id_10hpzt8": {
+    "id": "id_10hpzt8",
+    "title": "PGIM “연준, 올해 3회 금리 인상 예상” - KBS 뉴스",
+    "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5oaG9lUVZXNE1VV0tfekdHblR2V3hxWEdYNUZFMFRsaGhOMEhKbUZYd2R6eGRwSVh6Y1FtU29XeXBOeWlWa1o3RlNuZEZzZW9HQmotYzEzTkI3Y2s?oc=5",
+    "description": "PGIM “연준, 올해 3회 금리 인상 예상”  KBS 뉴스",
+    "date": "2026-06-16T04:58:00.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "PGIM “연준, 올해 3회 금리 인상 예상”",
+      "summary": [
+        "글로벌 자산운용사 PGIM은 미국 연방준비제도(연준)가 올해 총 3차례의 추가 금리 인상을 단행할 것으로 전망했습니다.",
+        "예상보다 견고한 미국의 경제 성장과 고착화되는 인플레이션을 주된 원인으로 지목했습니다.",
+        "시장의 금리 인하 기대와 달리, 긴축 기조가 상당 기간 이어질 가능성을 제기한 것입니다."
+      ],
+      "implications": [
+        "고금리 환경의 장기화로 인해 주식 및 채권 등 위험 자산의 가격 조정 압력이 높아질 수 있습니다.",
+        "강달러 기조가 유지되면서 신흥국 통화의 약세 및 자본 유출 위험이 커질 수 있습니다."
+      ]
+    }
+  },
+  "id_1nunxix": {
+    "id": "id_1nunxix",
+    "title": "[2보] 일본은행, 6개월만 기준금리 0.25%p 인상…31년만 최고 1% - 연합뉴스",
+    "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE44Y2t0QzJoQ3pMMWZ4amQzS20yTVhpVXBpck1hdy1WWHpod3MtNHI2ejdBNjFhTURjWmVCOTg1Y192YkQ2ejJZd3lZekFLRnAtWEdjbmNTcXE0VERHdDNacdIBYEFVX3lxTE44Y2t0QzJoQ3pMMWZ4amQzS20yTVhpVXBpck1hdy1WWHpod3MtNHI2ejdBNjFhTURjWmVCOTg1Y192YkQ2ejJZd3lZekFLRnAtWEdjbmNTcXE0VERHdDNacQ?oc=5",
+    "description": "[2보] 일본은행, 6개월만 기준금리 0.25%p 인상…31년만 최고 1%  연합뉴스",
+    "date": "2026-06-16T03:37:36.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "[2보] 일본은행, 6개월 만에 기준금리 0.25%p 인상…31년 만 최고 1%",
+      "summary": [
+        "일본은행이 불과 6개월 만에 다시 기준금리를 0.25%포인트 올렸습니다.",
+        "연이은 금리 인상으로 기준금리는 1% 고지에 올라섰습니다.",
+        "이는 과거 31년 동안 볼 수 없었던 높은 이자율입니다."
+      ],
+      "implications": [
+        "짧은 기간 내 추가 인상을 단행한 것은 인플레이션 압력이 예상보다 거세다는 방증입니다.",
+        "추가적인 통화 긴축 가능성에 대한 시장의 경계감이 커질 전망입니다."
+      ]
+    }
+  },
+  "id_8o4jhl": {
+    "id": "id_8o4jhl",
+    "title": "RBA, 기준금리 동결…\"필요시 추가 인상 고려\"(상보) - KB Think",
+    "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5NUEt0NlJoTjBFMGdGTi1Nb1ByRFhBMTRSbWpidi1TWU9FWHBEZmd3TXk2ZjdMX1BDdk5GMFp2WHdfOHhCdjlubkFFZlQyUS1RLVJoUG14anhsLXVfZWp4V2hrSnZ2THI5dldmb1lZenh0QQ?oc=5",
+    "description": "RBA, 기준금리 동결…\"필요시 추가 인상 고려\"(상보)  KB Think",
+    "date": "2026-06-16T04:55:44.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "호주중앙은행(RBA), 기준금리 동결…\"필요시 추가 인상 고려\"",
+      "summary": [
+        "호주중앙은행(RBA)이 이번 통화정책회의에서 기준금리를 현 수준으로 동결하기로 결정했습니다.",
+        "이전까지의 통화 긴축 효과를 점검하며 관망세를 유지하는 한편, 인플레이션 상승 위험을 경계했습니다.",
+        "RBA는 물가 안정을 위해 필요하다면 언제든지 추가적인 금리 인상을 고려할 것이라고 밝혔습니다."
+      ],
+      "implications": [
+        "RBA의 매파적 동결 결정으로 인해 호주 달러의 가치 지지 및 상승 압력이 작용할 수 있습니다.",
+        "지속적인 고금리 환경은 호주의 부동산 시장 위축과 소비 둔화로 이어질 위험성을 내포하고 있습니다."
+      ]
+    }
+  },
+  "id_1lvk8ll": {
+    "id": "id_1lvk8ll",
+    "title": "日, 31년 만에 기준금리 1%대 진입…물가 상승에 대응(종합) - v.daum.net",
+    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFA3OTN4b0Jkc211dXNqcmU2NU1MQk54VjBldDVWVHRQTk11VEtUN2cwSTA5YS1mVGxmekhjQVpNdDJLQ0FnUnpUYUpoc19US00?oc=5",
+    "description": "日, 31년 만에 기준금리 1%대 진입…물가 상승에 대응(종합)  v.daum.net",
+    "date": "2026-06-16T04:23:38.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "일본, 31년 만에 기준금리 1%대 진입…물가 상승에 대응",
+      "summary": [
+        "일본이 기준금리를 인상하여 1%대에 진입했습니다.",
+        "이는 31년 만에 처음 발생한 일로 시장의 큰 관심을 받고 있습니다.",
+        "지속되는 물가 상승 압력에 대응하기 위한 조치로 풀이됩니다."
+      ],
+      "implications": [
+        "물가 상승을 억제하기 위한 긴축 정책 기조가 당분간 유지될 수 있습니다.",
+        "가계 및 기업의 이자 부담이 증가하여 내수에 영향을 미칠 가능성이 있습니다."
+      ]
+    }
+  },
+  "id_10mmvxg": {
+    "id": "id_10mmvxg",
+    "title": "[종전 합의] 종전에 위험자산 랠리…채권·환율은 '물가'가 변수 | - 연합인포맥스",
+    "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9iSkZEY29CTHBCN25HbHRVVk9QTUdsQUVUWktuYUUwSkdoSTBSejFJNVdQLWF1cTE4MnFEUlZ1bVo4S2FpakRheUlmUGdjOUg1OXhfRVZLNjN0dmpwdG1JUjFjZFo4aDdpc2dTNEdneVdDUmZv?oc=5",
+    "description": "[종전 합의] 종전에 위험자산 랠리…채권·환율은 '물가'가 변수 |  연합인포맥스",
+    "date": "2026-06-16T03:14:29.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "[종전 합의] 종전에 위험자산 랠리… 채권·환율은 '물가'가 변수",
+      "summary": [
+        "미국과 이란 등 주요국의 지정학적 리스크 완화와 종전 합의 소식에 주식 등 위험자산이 단기 랠리를 보였습니다.",
+        "그러나 채권 및 환율 시장의 방향성은 지정학적 이슈보다는 인플레이션 지표에 더 크게 의존하는 모습입니다.",
+        "투자자들은 종전의 긍정적 파급 효과와 끈적한 물가 상승 우려 사이에서 신중한 관망세를 유지하고 있습니다."
+      ],
+      "implications": [
+        "글로벌 증시는 단기적인 안도 랠리 및 투자 심리 개선 효과를 누릴 수 있습니다.",
+        "향후 물가 지표 발표 결과에 따라 채권 금리와 환율의 급격한 변동성 확대 장세가 이어질 수 있습니다."
+      ]
+    }
+  },
+  "id_13p629n": {
+    "id": "id_13p629n",
+    "title": "일본은행, 기준금리 1%로 인상...31년 만에 최고치 - YTN",
+    "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5SU0t6ZG9oQ0VwWkZBdjJ1R0Q4ZXZZVlp3b3dCV2RmRzczdXR0N0FBMlkzRXp3WEhacjhNTHVETlNMU3F6ejBqN1YyQXkyYlR6SFhrRThqWlMwN0kxa0E?oc=5",
+    "description": "일본은행, 기준금리 1%로 인상...31년 만에 최고치  YTN",
+    "date": "2026-06-16T03:24:00.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "일본은행, 기준금리 1%로 인상...31년 만에 최고치",
+      "summary": [
+        "일본은행이 기준금리를 1%로 인상한다고 발표했습니다.",
+        "이번 발표로 일본의 기준금리는 지난 31년간 경험하지 못한 최고치에 올랐습니다.",
+        "장기 침체를 극복하고 물가를 잡기 위한 강력한 조치로 평가받습니다."
+      ],
+      "implications": [
+        "일본 경제가 디플레이션 구조에서 완전히 벗어나고 있다는 강력한 증거입니다.",
+        "소비자 물가 안정화 여부가 향후 통화 정책의 핵심 변수가 될 것입니다."
+      ]
+    }
+  },
+  "id_1lurbb5": {
+    "id": "id_1lurbb5",
+    "title": "[속보]일본은행, 기준금리 0.75%서 1%로···31년 만에 최고치 - 경향신문",
+    "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1wazVYR3NKUlpkdWUtbE1HaXNiT2hCRmEzbXZMRFdFcmZCMjJObjVpS1M4UHhTYm9MQkhJVWNMWHV5MHBjZGlBQWczUllOZm1CLWFWRmlvVFYtUdIBX0FVX3lxTE4waGhGbm1jMkNsOGY1MTUyQ2J6cXhEZVZsUDlhMk1RdWxPVUhRWElLNXAtR05zR040OE1HQ2hjUlFpYVBHZ1pNNG9qQVhYaDJOZHdFUUJmTm5GTzM1bF9N?oc=5",
+    "description": "[속보]일본은행, 기준금리 0.75%서 1%로···31년 만에 최고치  경향신문",
+    "date": "2026-06-16T03:45:00.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "[속보] 일본은행, 기준금리 0.75%에서 1%로···31년 만에 최고치",
+      "summary": [
+        "일본은행이 기준금리를 0.75%에서 1%로 전격 인상했습니다.",
+        "이번 인상은 속보로 타전될 만큼 금융 시장의 핵심 이슈입니다.",
+        "금리 수준이 31년 만에 전례 없는 최고치에 도달했습니다."
+      ],
+      "implications": [
+        "일본 내 자산 시장, 특히 부동산 및 주식 시장의 조정 가능성이 높아졌습니다.",
+        "수출 기업들의 채산성 악화 우려가 대두될 수 있습니다."
+      ]
+    }
+  },
+  "id_i5j54z": {
+    "id": "id_i5j54z",
+    "title": "8,700 오르내리는 코스피‥글로벌 '금리' 촉각 - MBC 뉴스",
+    "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5INzltY2ljemIzcEtTdEdGNjZWOGZQZ3J6eGY2cjhQazdTSkFqRmJyVnVHdHR2SzY4WDdfZWl1d0pDRWV6R1dsdktFb3I2bDdnWVAzZ29GMXlESGxTSmdDVXJvOEFyd1I2bXpIWnFyd0huaXhzV0hVdw?oc=5",
+    "description": "8,700 오르내리는 코스피‥글로벌 '금리' 촉각  MBC 뉴스",
+    "date": "2026-06-16T03:07:10.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "8,700선 오르내리는 코스피… 글로벌 '금리' 향방에 촉각",
+      "summary": [
+        "코스피 지수가 8,700선 부근에서 뚜렷한 방향성을 찾지 못한 채 등락을 거듭하며 박스권 장세를 이어가고 있습니다.",
+        "주요국 중앙은행의 기준금리 인하 지연 우려 등 글로벌 금리 불확실성이 국내 증시 전반에 무거운 부담으로 작용 중입니다.",
+        "투자자들은 주요 거시경제 지표 결과와 이에 따른 외국인 자금의 이탈 여부를 예의주시하고 있습니다."
+      ],
+      "implications": [
+        "글로벌 통화 정책의 불확실성 해소 전까지는 증시의 강한 추세적 상승 동력을 확보하기 어려울 수 있습니다.",
+        "금리 변동에 민감한 성장주보다는 실적 가시성이 뚜렷한 가치주 중심의 보수적인 접근이 요구됩니다."
+      ]
+    }
+  },
+  "id_pxgsjn": {
+    "id": "id_pxgsjn",
+    "title": "日 국채 금리, BOJ 금리 인상 발표 후 급등…10년물 6.93bp↑(상보) - KB Think",
+    "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE11bkRLeURMbTQ3ekpvcm94MXQ2YnF5RDU0b2x5Zm40RTlQcWJBMVlzQjl4T1QtMUNteWVRd19BdU9RV3g4NHA1VjJrS0F2Q0d2UUpycGRaS2hNMmZIMGtZaTd2cGU3TW5Oa0M4MnZ6d25HZw?oc=5",
+    "description": "日 국채 금리, BOJ 금리 인상 발표 후 급등…10년물 6.93bp↑(상보)  KB Think",
+    "date": "2026-06-16T04:51:27.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "일본 국채 금리, BOJ 금리 인상 발표 후 급등…10년물 6.93bp 상승",
+      "summary": [
+        "일본은행(BOJ)의 기준금리 인상 발표 직후 일본 국채 시장의 수익률이 큰 폭으로 치솟았습니다.",
+        "시장의 지표 역할을 하는 10년물 국채 금리가 전일 대비 6.93bp 급등하며 시장의 충격을 반영했습니다.",
+        "금리 인상에 대한 시장의 경계감이 반영되며 채권 매도세가 집중된 결과입니다."
+      ],
+      "implications": [
+        "국채 금리 상승은 일본 정부의 막대한 국가 부채에 대한 이자 상환 부담을 크게 가중시킬 수 있습니다.",
+        "안전 자산인 일본 국채의 매력도가 높아짐에 따라 주식 시장에서 자금이 이탈할 가능성이 있습니다."
+      ]
+    }
+  },
+  "id_mk0is1": {
+    "id": "id_mk0is1",
+    "title": "일본은행, 기준금리 1%로 0.25%p 인상…31년 만에 최고 - 조선비즈 - Chosunbiz",
+    "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPcHNNVDFxWkNRN0xGRmtaQWZLa0FLOUtldThMT1VZZUxVbG5uR2cyMVp0Z1J6czhPbTBfM3NHMDlYMnBtRHZiQkNoWk1iOWtkZ1UwRWJsa2dGWFJKQ2JfbV9waW5lNkdTdjFQNTNrdk9YZExXdkt1Z2V1QW1KdUp3dmE0ajhIV0lLRmk4eGdhS1F2Sno4czgwSzdId29wUdIBsgFBVV95cUxNTGV2Mk10OEMyYWstWFdfMUxNNmhjMVlRU2ctY0JIUlU0UElkbzBzXzUySzU0TEpON045V2tPNWpXb2RsUEc4dWF4MFdWWkd2ZjhoVVYtUTJnc18tR0V4SENXQXhmQ2UxdU9mU1VnVHA1dDNzT3VpcU50U3FUSHJVaXhadVhvZzgzWVBzMjVaT1QzLUpZSzdmYjdIdk45c085R0g3LUlmMDhfSjlXZERrNjlR?oc=5",
+    "description": "일본은행, 기준금리 1%로 0.25%p 인상…31년 만에 최고 - 조선비즈  Chosunbiz",
+    "date": "2026-06-16T03:56:00.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "일본은행, 기준금리 1%로 0.25%p 인상…31년 만에 최고",
+      "summary": [
+        "일본은행이 기준금리를 기존보다 0.25%포인트 인상했습니다.",
+        "이로써 일본의 최종 기준금리는 1%로 확정되었습니다.",
+        "이는 31년 만에 도달한 최고 수준의 금리 수치입니다."
+      ],
+      "implications": [
+        "0.25%p라는 점진적 인상 폭을 통해 시장 충격을 최소화하려는 노력이 엿보입니다.",
+        "물가 상승 및 환율 방어에 대한 일본은행의 적극적인 개입 의지가 확인되었습니다."
+      ]
+    }
+  },
+  "id_1lhoubm": {
+    "id": "id_1lhoubm",
+    "title": "\"투자자들, 연준 금리 인하에만 집중은 패착\" | - 연합인포맥스",
+    "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9ZTDZYM1FmSkp4LWhUMktydjJESXBPeVQya203Q1hHSlFjcTRMRlhSOXlJa29RQ0x3dUtJWjdpQnpFaHdDT01fMlhfYk4wR3ZkZ084bUc1N05saEdlOV80bjNKSmtlaUhRejZxQUpuQVlSaXpG?oc=5",
+    "description": "\"투자자들, 연준 금리 인하에만 집중은 패착\" |  연합인포맥스",
+    "date": "2026-06-16T02:32:24.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "\"투자자들, 연준 금리 인하에만 집중하는 것은 패착\"",
+      "summary": [
+        "시장 전문가들은 다수의 투자자들이 미 연준의 단기적인 금리 인하 기대감에만 지나치게 매몰되어 투자를 결정하고 있다고 지적했습니다.",
+        "금리 방향성 외에도 실물 경제의 펀더멘털, 개별 기업의 실적, 그리고 잠재적인 지정학적 리스크 등을 종합적으로 고려해야 한다고 경고했습니다.",
+        "단순한 금리 인하 기대감만으로 위험 자산 비중을 무리하게 확대할 경우 예기치 못한 매크로 충격에 큰 손실을 입을 수 있습니다."
+      ],
+      "implications": [
+        "특정 매크로 이벤트에 의존하기보다는 다양한 시나리오에 대비한 균형 잡힌 자산 배분과 분산 투자 전략이 필수적입니다.",
+        "금리 인하의 수혜를 기대하기보다 안정적인 현금 흐름과 이익 체력을 갖춘 우량주 중심의 포트폴리오 구축이 요구됩니다."
+      ]
+    }
+  },
+  "id_nnh2tc": {
+    "id": "id_nnh2tc",
+    "title": "일본, 기준금리 1%로 인상…31년 만에 최고 수준 - 조선일보",
+    "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1lVFNGd3Q2dktGWGFVbE1nd3EzbDM3d0hNR2N6Z0IxaWJIU2NqUFR2TGxYZjhXZmJsSEJ0d2ZnUnBQdmhUWmdSRk13VW1qb1JELXQtRXpMMWdfOHg2OS1TS3VveVM2RlBzSjBr0gFuQVVfeXFMTk0xVnlBa0xQREY4eWFES3ByWmxPZFpDMlhvNDB4MG5hbGZBNXMwN2liV1RacEpKajlXTFZFenlDaFFseGlIa1dacnJQblJVUXAtdVVXc08yTnBVOFVnVDRveW9SZ1NXSjBvblJvNmc?oc=5",
+    "description": "일본, 기준금리 1%로 인상…31년 만에 최고 수준  조선일보",
+    "date": "2026-06-16T04:45:00.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "일본, 기준금리 1%로 인상…31년 만에 최고 수준",
+      "summary": [
+        "일본이 정책 금리를 전격적으로 인상하여 1% 수준으로 끌어올렸습니다.",
+        "이번 결정으로 일본의 기준금리는 과거 31년 전 수준으로 되돌아가며 최고치를 기록했습니다.",
+        "잃어버린 30년이라 불리던 장기 침체와 디플레이션 기조에서 벗어났다는 상징적인 의미를 지닙니다."
+      ],
+      "implications": [
+        "일본 내 예적금 금리 상승을 유발하여 가계의 저축이 증가하고 소비 패턴에 변화가 일어날 수 있습니다.",
+        "장기적인 엔화 강세 추세가 형성되며, 이는 글로벌 수출 시장에서 한국 기업들에게 반사이익으로 작용할 가능성이 있습니다."
+      ]
+    }
+  },
+  "id_78cuaa": {
+    "id": "id_78cuaa",
+    "title": "[속보]일본은행, 기준금리 0.75%→1%로 인상…31년 만 최고 - 뉴시스",
+    "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBJcWJVYVdIYTdkSEltaTlyaXNCSmFCR1E3OEtFZm04bElJWEU2bkh1WTlhME4ybXlZY2xQcHYyVUlGblp5SUlXY3RmODJvbXVrYVdlUDZZQ2RPY2J0OTR1cNIBeEFVX3lxTE9MTC1fN0xnUmhDSS1GUFlrWl94LVEwdDlPdk9hS2lraHpNVW9leDNqVTVxaURnM0hkS2NkNWptVElEbjVFMS1FTVQ5Z0lMbXJVcWVYcE54VHEzTzRFalNZVGgzM1doQmI3WXBlQTJzZVk3UkJTb1EwNA?oc=5",
+    "description": "[속보]일본은행, 기준금리 0.75%→1%로 인상…31년 만 최고  뉴시스",
+    "date": "2026-06-16T03:21:45.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "[속보] 일본은행, 기준금리 0.75%→1%로 인상…31년 만 최고",
+      "summary": [
+        "일본은행이 기준금리를 기존 0.75%에서 1%로 상향 조정했습니다.",
+        "금융 당국의 이번 조치로 금리가 31년 만에 최고 수준으로 치솟았습니다.",
+        "인플레이션 방어 및 통화 방어를 위한 다목적 포석으로 풀이됩니다."
+      ],
+      "implications": [
+        "강력한 긴축 정책 시행으로 일본 경제 성장률의 단기적 둔화가 나타날 수 있습니다.",
+        "안전자산으로서의 엔화 수요가 다시 증가할 가능성이 있습니다."
+      ]
+    }
+  },
+  "id_11nioxg": {
+    "id": "id_11nioxg",
+    "title": "수출 물가 11개월째 상승…AI發 반도체·비철금속 수요 급증 - 전자신문",
+    "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFA2LVVQbWpUXzdXdlB5MlNVZFFhMnhjcFlsVUtST014bElaZURXTVZnUmw0QUZhY3JFenEzaTV6cVB6Q3Y3LXpjMU8zZi1sQQ?oc=5",
+    "description": "수출 물가 11개월째 상승…AI發 반도체·비철금속 수요 급증  전자신문",
+    "date": "2026-06-16T04:45:24.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "수출 물가 11개월째 상승…AI발 반도체·비철금속 수요 급증",
+      "summary": [
+        "한국의 수출 물가가 11개월 연속 상승세를 이어가며 오름세를 지속하고 있습니다.",
+        "인공지능(AI) 산업의 호황으로 고성능 반도체 및 관련 비철금속의 글로벌 수요가 폭발적으로 증가한 것이 주된 원인입니다.",
+        "주력 수출 품목의 가격 상승이 전체 수출 물가를 밀어올리는 견인차 역할을 하고 있습니다."
+      ],
+      "implications": [
+        "수출 단가 상승으로 인한 교역조건 개선이 수출 기업의 채산성과 이익률 증대로 직결될 수 있습니다.",
+        "반도체 등 특정 산업에 대한 국가 경제의 의존도가 더욱 심화되어 해당 산업 사이클에 따른 경제 변동성이 커질 수 있습니다."
+      ]
+    }
+  },
+  "id_1dcmaad": {
+    "id": "id_1dcmaad",
+    "title": "S&P500 선물, 종전 합의에도 소폭 하락…美 국채금리 혼조 - 연합인포맥스",
+    "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1jcWVzN0ZWcEZPTm5xVGpnblBfZ0tTeTgtUkQ0R0t5aXVVVUxLWFlzQnFlT3RqX09jM1FaX1llX3Z1Y05scXFGNHpVNjJ2ZEE2QW5ibi12b1czMC16OWhHWTdtZ0pYRWRRb2FBeDFUaWo?oc=5",
+    "description": "S&P500 선물, 종전 합의에도 소폭 하락…美 국채금리 혼조  연합인포맥스",
+    "date": "2026-06-16T02:22:41.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "S&P500 선물, 미국-이란 종전 합의에도 소폭 하락… 美 국채금리는 혼조세",
+      "summary": [
+        "미국과 이란 간의 해묵은 지정학적 갈등이 종전 합의로 타결되었음에도, S&P500을 비롯한 주요 주가지수 선물은 소폭 하락세로 반응했습니다.",
+        "이는 호재가 이미 가격에 반영되었다는 '선반영' 인식과 함께, 단기 급등에 따른 차익 실현 물량이 쏟아졌기 때문으로 풀이됩니다.",
+        "위험 선호 심리 회복과 지정학적 불안 완화가 엇갈리며 미국 국채금리 또한 뚜렷한 방향성을 찾지 못하고 만기별로 혼조세를 나타냈습니다."
+      ],
+      "implications": [
+        "주식 시장에서 지정학적 호재의 영향력은 제한적이며, 향후 시장의 핵심 동력은 통화 정책과 물가 지표로 빠르게 이동할 전망입니다.",
+        "불확실성 속에서 금리 방향성에 민감한 기술주 및 장기 채권 시장을 중심으로 짙은 관망세와 변동성 장세가 이어질 수 있습니다."
+      ]
+    }
+  },
+  "id_15mjzwa": {
+    "id": "id_15mjzwa",
+    "title": "BOJ, 기준금리 1%로 인상…내년 4월부터 국채매입 축소 중단(종합) - KB Think",
+    "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1zaERjUDB3NUFiVllqeW53V2Q2MDR0eTZSQmNWOHdkMW5MbENLbkE2NnUtMjZwX1Z4Y0VIQ19rUTE1R190T2ZQWkh1Y0hONnJiXzR1a005RGdjblVVY190SmVUamJXaW9TQ0k1eVgtbGRhZw?oc=5",
+    "description": "BOJ, 기준금리 1%로 인상…내년 4월부터 국채매입 축소 중단(종합)  KB Think",
+    "date": "2026-06-16T04:09:40.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "BOJ, 기준금리 1%로 인상…내년 4월부터 국채매입 축소 중단",
+      "summary": [
+        "일본은행(BOJ)이 기준금리를 1%로 상향 결정했습니다.",
+        "이와 함께 내년 4월부터는 국채매입 축소 조치를 중단하기로 했습니다.",
+        "금리 인상과 양적 완화 조절을 병행하는 복합적인 정책을 내놓았습니다."
+      ],
+      "implications": [
+        "국채매입 축소 중단을 통해 금리 급등으로 인한 국채 시장의 충격을 완화하려는 의도로 분석됩니다.",
+        "시장의 유동성 상황에 따라 유연한 통화 정책을 구사할 것으로 보입니다."
+      ]
+    }
+  },
+  "id_1fa32qd": {
+    "id": "id_1fa32qd",
+    "title": "종전에도 1,500원 못 본 환율…\"분위기 반전까진 아니야\" | - 연합인포맥스",
+    "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE04SDNfS1o2NXVkZVJGQm9zY1JUV0hzZTRLRU9ncVFBS29lNk03cGhmcDN2X01fUFRBcUhtbVkza0xKSDRzbE50MkE3VDZBUEYtcmxOWG10dGJacWVkOFdmYTA5RXQ1ZGQwMi12V3hRZWNQOHhi?oc=5",
+    "description": "종전에도 1,500원 못 본 환율…\"분위기 반전까진 아니야\" |  연합인포맥스",
+    "date": "2026-06-16T00:35:31.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "종전에도 1,500원 못 본 환율…\"분위기 반전까진 아니야\"",
+      "summary": [
+        "지정학적 리스크 완화에도 불구하고 원·달러 환율이 여전히 1,500원대 근처에서 고공행진을 하고 있습니다.",
+        "시장 전문가들은 단순한 종전 소식만으로는 달러 강세 분위기를 완전히 반전시키기 어렵다고 분석합니다.",
+        "미국 연준의 금리 인하 지연 등 거시경제적 요인이 환율에 더 큰 영향을 미치고 있습니다."
+      ],
+      "implications": [
+        "단기적인 이벤트보다는 펀더멘털 지표 확인 전까지 환율의 높은 변동성이 유지될 전망입니다.",
+        "환율 하락을 기대한 공격적인 포지션 구축은 아직 시기상조일 수 있습니다."
+      ]
+    }
+  },
+  "id_dgl9rs": {
+    "id": "id_dgl9rs",
+    "title": "[ICYMI] 점도표 운명은…일부 전직들 \"워시, 이번에 금리 전망치 안낼것\" | - 연합인포맥스",
+    "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1jM3dQQmtrODF3NDh4b0FmaG1EaFFIUGlDcEVNRGpwZUh2bE1ydk9QVlVHNEs0cGhKSGI2ODBWZUpLbEZ3ZGl5NHNkZEJsTGVkTDhVMjV3NjJlTW55c3g0MXlLZ3NBRS1rTTYtNzFDUHhoZ09h?oc=5",
+    "description": "[ICYMI] 점도표 운명은…일부 전직들 \"워시, 이번에 금리 전망치 안낼것\" |  연합인포맥스",
+    "date": "2026-06-16T02:38:17.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "[ICYMI] 점도표의 운명은… 전직 연준 인사들 \"워시, 이번엔 금리 전망치 내지 않을 것\"",
+      "summary": [
+        "향후 미국의 기준금리 경로를 보여주는 핵심 지표인 FOMC 점도표가 이번 회의에서는 발표되지 않을 수 있다는 주장이 제기되었습니다.",
+        "전직 연준 인사들은 경제의 불확실성이 너무 커 섣부른 장기 전망 제시가 오히려 시장에 큰 혼란을 야기할 수 있다고 분석했습니다.",
+        "이에 따라 케빈 워시 연준 의장은 구체적인 점도표 제시 대신 데이터에 기반한 유연한 통화 정책 대응을 강조할 것으로 보입니다."
+      ],
+      "implications": [
+        "연준의 금리 인하 시점과 폭에 대한 명확한 가이드라인 부재로 시장 참가자들의 불안감 및 정책 불확실성이 증폭될 수 있습니다.",
+        "앞으로 발표되는 고용 및 인플레이션 등 핵심 매크로 지표 결과 하나하나에 증시가 극도로 민감하게 반응할 것입니다."
+      ]
+    }
+  },
+  "id_1guvdbi": {
+    "id": "id_1guvdbi",
+    "title": "일본은행, 기준금리 1%로 인상…31년 만에 최고금리 - v.daum.net",
+    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE0wWkhFTmZ1VlctT05Cb1ZDSGNwMW5VakdFUVlUTFlJMGJxWEFMUW1PQlNqcmVWdDRqMFk1ZFZmY1BTY2NPbmQwTGozVEh5czQ?oc=5",
+    "description": "일본은행, 기준금리 1%로 인상…31년 만에 최고금리  v.daum.net",
+    "date": "2026-06-16T05:18:55.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "일본은행, 기준금리 1%로 인상…31년 만에 최고금리",
+      "summary": [
+        "일본은행이 금융정책결정회의를 통해 기준금리를 1%로 인상했습니다.",
+        "이로써 일본은 31년 만에 가장 높은 수준의 기준금리 시대를 맞이하게 되었습니다.",
+        "마이너스 금리 정책 종료 이후 지속적으로 통화정책 정상화를 추진하는 행보입니다."
+      ],
+      "implications": [
+        "일본 상업은행들의 예대마진 개선으로 금융주 등 관련 주식의 강세가 예상됩니다.",
+        "엔화 강세가 이어질 경우 일본 수출 기업들의 가격 경쟁력과 수익성 악화가 우려됩니다."
+      ]
+    }
+  },
+  "id_r02jda": {
+    "id": "id_r02jda",
+    "title": "[속보]BOJ, 6개월만 기준금리 1%로 인상 - 아시아경제",
+    "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5NRE5sSVQzVUJLZWtxN3ZacFQtRkh1NmhDWHVPUWFIME5tSEd5RGRVRVRNM0R3dzIyeDJvNFJJVHVRMDBwTFczSUo1eW84WDkzT0xlQ2drc3gzUXFCcVNXMQ?oc=5",
+    "description": "[속보]BOJ, 6개월만 기준금리 1%로 인상  아시아경제",
+    "date": "2026-06-16T03:31:40.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "[속보] BOJ, 6개월 만에 기준금리 1%로 인상",
+      "summary": [
+        "일본은행(BOJ)이 6개월이라는 짧은 기간 만에 기준금리를 1%로 인상했습니다.",
+        "신속한 속보를 통해 시장에 긴급하게 금리 인상 소식이 전해졌습니다.",
+        "연속적인 통화 긴축 정책이 현실화되고 있음을 보여줍니다."
+      ],
+      "implications": [
+        "BOJ의 매파적 통화 정책 기조가 한동안 뚜렷하게 지속될 것임을 시사합니다.",
+        "단기 금융 시장의 변동성이 일시적으로 확대될 수 있습니다."
+      ]
+    }
+  },
+  "id_u453so": {
+    "id": "id_u453so",
+    "title": "BOJ, 기준금리 1%로 25bp 인상…31년 만에 최고(상보) - 연합인포맥스",
+    "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBwRXFPM1ZCaTlkRmxDX0I1WHVTRXZJRjlMZ1dQakJNZE1LTDR5QkhVcDdCemtjXzJlc2Q3YUJSMTVLLXhqX0szUE1talFWRW1mX2ljLUc2RTZJaEVCTmJiOWpSWDdtblJYd1Jlbk9sQmM?oc=5",
+    "description": "BOJ, 기준금리 1%로 25bp 인상…31년 만에 최고(상보)  연합인포맥스",
+    "date": "2026-06-16T05:35:14.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "일본은행(BOJ), 기준금리 1%로 25bp 인상…31년 만에 최고",
+      "summary": [
+        "일본은행(BOJ)이 기준금리를 기존 0.75%에서 1%로 25bp 인상했습니다.",
+        "이번 금리 인상으로 일본의 기준금리는 31년 만에 최고 수준을 기록하게 되었습니다.",
+        "이는 일본의 초완화적 통화정책이 정상화 기조로 완전히 전환되고 있음을 시사합니다."
+      ],
+      "implications": [
+        "미국과 일본의 금리 격차 축소로 인해 엔화 가치의 상승(엔고) 현상이 나타날 수 있습니다.",
+        "글로벌 유동성의 축소와 함께 해외 자산에 투자된 일본 자본(엔 캐리 트레이드)의 본국 회귀 가능성이 커질 수 있습니다."
+      ]
+    }
   }
 }
