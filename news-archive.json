@@ -439,7 +439,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "달러·원 환율, 2.5원 오른 1513.6원 개장",
+      "summary": [
+        "원/달러 환율이 전일 대비 2.5원 상승한 1513.6원에 거래를 시작했다.",
+        "글로벌 강달러 기조와 위험 회피 심리가 환율 상승을 부추기고 있다.",
+        "외환 당국의 미세 조정 경계감 속에서도 환율의 상방 압력이 지속되는 모습이다."
+      ],
+      "implications": [
+        "수출 기업들의 환율 효과에 따른 실적 개선 여부를 주시할 필요가 있다.",
+        "외국인 자본 유출 가능성과 수입 물가 상승에 대한 주의가 요구된다."
+      ]
+    }
   },
   "id_10cr7os": {
     "id": "id_10cr7os",
@@ -4137,7 +4148,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "달러·원 환율, 2.5원 오른 1513.6원 개장",
+      "summary": [
+        "원/달러 환율이 전일 대비 2.5원 상승한 1513.6원에 거래를 시작했다.",
+        "글로벌 강달러 기조와 위험 회피 심리가 환율 상승을 부추기고 있다.",
+        "외환 당국의 미세 조정 경계감 속에서도 환율의 상방 압력이 지속되는 모습이다."
+      ],
+      "implications": [
+        "수출 기업들의 환율 효과에 따른 실적 개선 여부를 주시할 필요가 있다.",
+        "외국인 자본 유출 가능성과 수입 물가 상승에 대한 주의가 요구된다."
+      ]
+    }
   },
   "id_ri665x": {
     "id": "id_ri665x",
@@ -5512,12 +5534,23 @@
     "title": "English News - The Chosun Daily - 조선일보",
     "link": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxPbW11Q2k2NHBzVzVmdnlJUDVZMXU2UnUzRjB3SmtxeF9Bd3FWY2RZX3NTWTNTM2RxWDl5LUdSVTR5Q25PSVNPRkh3RUduUU5oOWcxUXdRdXNDZnVwNUdWVFRna3M1b3FrRGtNUmRwTEdva1BOUVRSX2pEaDJ2MnpRZWpKVXVvVWxrWll3SXBLUEZxV0RjbFZFb0lVby1XVHpwM3pVU2tVM3F5ZWdjRDVoQnZrbm5mUHduV08zV0x5MmtuX01tUFI2dXdVbko3dkVacmJRUDlBdjQ3QTZHZENsbDhkN1d5eDl0T3EyTC1SNmZqaVlLMmpqa0J2VQ?oc=5",
     "description": "English News - The Chosun Daily  조선일보",
-    "date": "2026-06-09T00:57:56.000Z",
+    "date": "2026-06-15T21:52:24.000Z",
     "sourceId": "chosun",
     "sourceName": "조선일보 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "The Chosun Daily 영문 뉴스",
+      "summary": [
+        "조선일보의 영문판인 The Chosun Daily가 국내외 주요 경제 및 정치 소식을 외국인 투자자와 독자들에게 전달하고 있습니다.",
+        "한국 시장의 동향과 정부 정책 변화 등을 영문으로 신속하게 제공하여 정보의 접근성을 높였습니다.",
+        "글로벌 독자층을 겨냥한 한국 경제 및 기업 관련 심층 분석 기사들이 포함되어 있습니다."
+      ],
+      "implications": [
+        "외국인 투자자들의 한국 시장에 대한 정보 비대칭이 해소되며 자본 유입에 긍정적인 영향을 미칠 수 있습니다.",
+        "국내 주요 이슈에 대한 글로벌 여론 형성에 기여할 것으로 전망됩니다."
+      ]
+    }
   },
   "id_1xwdajh": {
     "id": "id_1xwdajh",
@@ -6485,7 +6518,18 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "[외환] 원/달러 환율 2.5원 오른 1,513.6원(개장)",
+      "summary": [
+        "원/달러 환율이 소폭 상승하며 1,513.6원으로 장을 출발했다.",
+        "미국 연준의 정책 방향과 글로벌 거시 지표가 환율 변동성을 키우고 있다.",
+        "시장 참가자들은 환율의 추가 상승 여력과 당국의 개입 시점을 예의주시하고 있다."
+      ],
+      "implications": [
+        "고환율 환경 고착화 시 내수 소비 침체 및 인플레이션 압력이 심화될 수 있다.",
+        "외화 부채가 많은 기업의 재무 건전성 리스크 관리가 필요하다."
+      ]
+    }
   },
   "id_veylqh": {
     "id": "id_veylqh",
@@ -7349,7 +7393,18 @@
     "sourceName": "NYT 비즈니스",
     "lang": "en",
     "category": "Markets",
-    "aiAnalysis": null
+    "aiAnalysis": {
+      "translatedTitle": "메디케어 가입의 기초: 필수 가이드",
+      "summary": [
+        "미국 연방 건강 보험 프로그램인 메디케어의 가입 과정은 다소 복잡할 수 있다.",
+        "새로운 가입자를 돕기 위해 메디케어 신청 방법, 초기 가입 기간, 그리고 필요한 정보를 제공하는 곳을 안내하고 있다.",
+        "제대로 가입하지 않을 경우 평생 벌금을 물거나 보장 공백이 발생할 수 있으므로 주의가 필요하다."
+      ],
+      "implications": [
+        "미국 내 노령층의 의료비 부담 완화를 위해 관련 건강 보험 시스템 및 절차에 대한 이해가 필수적이다.",
+        "헬스케어 자문 서비스 및 보험 대행업계의 수요가 지속적으로 발생할 것으로 예상된다."
+      ]
+    }
   },
   "id_94ipft": {
     "id": "id_94ipft",
@@ -8317,10 +8372,10 @@
     "link": "https://www.nytimes.com/2026/06/11/insider/spacex-ipo-coverage-facts-price.html",
     "description": "Two Times tech reporters and their editor talk about assessing the sky-high valuation of the rocket and satellite maker, the potential economic impact of its public debut and the role of the world’s richest man in it all.",
     "date": "2026-06-12T17:12:53.000Z",
-    "sourceId": "nyt-biz",
-    "sourceName": "NYT 비즈니스",
+    "sourceId": "nyt-tech",
+    "sourceName": "NYT 테크놀로지",
     "lang": "en",
-    "category": "Markets",
+    "category": "Tech",
     "aiAnalysis": null
   },
   "id_s5cwms": {
@@ -11062,7 +11117,7 @@
     "title": "태양광 공격적 확대 정책에도 업계 반응 싸늘한 까닭은 - 조선일보",
     "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQM2FDdW5xdmZIS0xpaFdzVFhiVDE4QjdTX1dMalFGZWR4eUp5XzlvalVqS2x4bVVfMTZUTHFHUF9FeTFvSnZNNng5UlRhUU0xU0w3NHZJZ1hTRXA3LUNRd3EtcjJyZGQ2eDdGdTQ2WVFaV2JfcXpsZ21fQnVRc1pKaTduM1Q5SzgxMEIxLWtn?oc=5",
     "description": "태양광 공격적 확대 정책에도 업계 반응 싸늘한 까닭은  조선일보",
-    "date": "2026-06-11T15:33:00.000Z",
+    "date": "2026-06-11T15:40:37.000Z",
     "sourceId": "chosun",
     "sourceName": "조선일보 경제",
     "lang": "ko",
@@ -11074,7 +11129,7 @@
     "title": "‘흑백요리사’ 출신이 만든 장어 덮밥… 항공사 무기 된 기내식 - 조선일보",
     "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOVjlkZE8zb0FxODdaRzJkcEwyZjR5eWR2S3lOQ25TYjlObDcyVmJRd181SGs2WllYWnBEUWdkeWlNOFU1MnZkZjl4ODRxc0x2QjZiT3ZDa084SnZGZXYwY3Y4ZF9BcjJ6SGFJampkZjZVc19pYndSajNzQUMzdF9TMUljRUh1eEdJVmxMRjNYRQ?oc=5",
     "description": "‘흑백요리사’ 출신이 만든 장어 덮밥… 항공사 무기 된 기내식  조선일보",
-    "date": "2026-06-11T15:41:39.000Z",
+    "date": "2026-06-11T15:32:00.000Z",
     "sourceId": "chosun",
     "sourceName": "조선일보 경제",
     "lang": "ko",
@@ -12793,10 +12848,10 @@
   },
   "id_so2cmx": {
     "id": "id_so2cmx",
-    "title": "Oil Prices Tumble After Trump Announces Deal With Iran",
+    "title": "Stocks Surge as U.S. and Iran Reach Preliminary Deal to Reopen Strait of Hormuz",
     "link": "https://www.nytimes.com/2026/06/14/business/oil-stocks-gas-iran.html",
     "description": "Oil prices fell and stocks gained early Monday after Iran and the U.S. reached a deal that may allow more energy and other goods to flow through the Strait of Hormuz.",
-    "date": "2026-06-15T05:50:37.000Z",
+    "date": "2026-06-15T20:08:03.000Z",
     "sourceId": "nyt-biz",
     "sourceName": "NYT 비즈니스",
     "lang": "en",
@@ -12819,7 +12874,7 @@
     "title": "Jean Ziegler, Swiss Gadfly Who Provoked His Countrymen, Dies at 92",
     "link": "https://www.nytimes.com/2026/06/14/obituaries/jean-ziegler-dead.html",
     "description": "In a nation that sees itself as a tranquil oasis of prosperity and business virtue, he drew death threats for pointing out a dark underside.",
-    "date": "2026-06-14T20:31:18.000Z",
+    "date": "2026-06-15T20:33:54.000Z",
     "sourceId": "nyt-biz",
     "sourceName": "NYT 비즈니스",
     "lang": "en",
@@ -12931,10 +12986,10 @@
   },
   "id_f8cvn9": {
     "id": "id_f8cvn9",
-    "title": "Medicare Enrollment 101: What You Need to Know",
+    "title": "Medicare 101: What You Need to Know",
     "link": "https://www.nytimes.com/2026/06/14/business/medicare-enrollment.html",
     "description": "The federal health insurance program can be complicated. Here’s how to start, and where to find help.",
-    "date": "2026-06-14T09:00:17.000Z",
+    "date": "2026-06-14T09:00:18.000Z",
     "sourceId": "nyt-biz",
     "sourceName": "NYT 비즈니스",
     "lang": "en",
@@ -13307,7 +13362,7 @@
     "title": "올해 주식·채권 판 돈 3조7000억원 주택 시장으로 유입돼...65%가 서울 - 조선일보",
     "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNaEZHRXhJM2tndnhzcjE0RTRRUU9ELXVuNEhaYUxHNkNsWXJhVTFrMDd0WktxZ19DcE1fNGE0Vm1lUXJVVk1jQ2M3M2luMllseUN0M1RndWk2aTZtdTIzV0N4LUJZUTFkNnRYeHhMYjVzOVlvdVgyYUV6UU40ZHQzLTBLa1lSUnBK?oc=5",
     "description": "올해 주식·채권 판 돈 3조7000억원 주택 시장으로 유입돼...65%가 서울  조선일보",
-    "date": "2026-06-14T12:55:00.000Z",
+    "date": "2026-06-14T01:56:00.000Z",
     "sourceId": "chosun",
     "sourceName": "조선일보 경제",
     "lang": "ko",
@@ -13342,7 +13397,7 @@
     "title": "‘천재 PD’ 사퇴가 남긴 K-문샷의 난제 - 조선일보",
     "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNTHd0RTlXdWVMWmxmX2VjX05YbkdiUklJMVNqNEs1VnZvTDcteGFJU0NheVVTOTEzZE0yLVo4TzZ6VXdUdklCRzFIVS1ZYzdCQ3N0SDdEZ25XdVJUY1hlRmVfMkNySG9zN2lUcHlUanRyXzBObE0tT1FBWFVQOHphTVBMbw?oc=5",
     "description": "‘천재 PD’ 사퇴가 남긴 K-문샷의 난제  조선일보",
-    "date": "2026-06-14T06:28:58.000Z",
+    "date": "2026-06-14T06:24:00.000Z",
     "sourceId": "chosun",
     "sourceName": "조선일보 경제",
     "lang": "ko",
@@ -13493,7 +13548,7 @@
     "title": "제네시스, 르망 데뷔전 완주했다…13위로 24시간 질주 마쳐 - 조선일보",
     "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1ubDREQ1B1RWh0VXVTQmtQdzBjT2UxWEtIcWxDTV9sc29Pbkg5b3BIbUpjOXVFMmJNeHgwOU9xV3lyckUwNjE1T3o5RTlpVXRKT2gzOEt0dGVkSjVkejZsb0IzS3hCS0RNdGx3MDdCMmhzMHdBY3U5aDVoN3hLWVU?oc=5",
     "description": "제네시스, 르망 데뷔전 완주했다…13위로 24시간 질주 마쳐  조선일보",
-    "date": "2026-06-14T16:19:00.000Z",
+    "date": "2026-06-14T16:20:56.000Z",
     "sourceId": "chosun",
     "sourceName": "조선일보 경제",
     "lang": "ko",
@@ -15339,7 +15394,7 @@
     "title": "Hormuz Reopening Would Offer Relief for Asia, but Economic Scars Will Remain",
     "link": "https://www.nytimes.com/2026/06/14/business/hormuz-reopen-iran.html",
     "description": "For months, Asia has suffered a physical supply crunch that will likely drag on its economies long after the crucial waterway reopens.",
-    "date": "2026-06-15T03:44:11.000Z",
+    "date": "2026-06-15T03:44:12.000Z",
     "sourceId": "nyt-biz",
     "sourceName": "NYT 비즈니스",
     "lang": "en",
@@ -15478,7 +15533,7 @@
     "title": "남의 게임 레벨 올려주는 부업까지… 청년 절반 \"기회 되면 해외로\" - 조선일보",
     "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPMUx0Z2hHbFFlWnNnYVlBV0NmX2RUTEMwUGRLSVp3OHdKQUNEZm1OV0tYc1ZEY0RwZ0pjRXAtMzVDWE0zUWZ6bzRoZ2g2WU8ycVhtcWgzNDJhOGcydXFsTHN5WTV6enVTcnVvSUFxVkg1U0l1ODlBTk1ZLTM4SVpGQ3BFSlZwaTFIUU1NSTlB?oc=5",
     "description": "남의 게임 레벨 올려주는 부업까지… 청년 절반 \"기회 되면 해외로\"  조선일보",
-    "date": "2026-06-14T15:50:00.000Z",
+    "date": "2026-06-14T15:55:55.000Z",
     "sourceId": "chosun",
     "sourceName": "조선일보 경제",
     "lang": "ko",
@@ -15500,7 +15555,7 @@
     "title": "AI 톱10, 美·中이 5개씩 장악… 한국 3강 꼽히지만 성능 격차 커 - 조선일보",
     "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPLXpvT2dxbFF1Qy1uakZ0TjNNUUJjeVgtV0gtbzRHZ1hQNDFLbElmN3ZBZENwV1FsWjFPTVNybk9xenFkV0lFNGFlTUk0T1ZmWDllXzNneXpERHZkZllZSXZuODdzdTljU0tsMGZvOGdtM3VVOHJvVHcxUmkxZ2VKTzlXUQ?oc=5",
     "description": "AI 톱10, 美·中이 5개씩 장악… 한국 3강 꼽히지만 성능 격차 커  조선일보",
-    "date": "2026-06-14T15:52:00.000Z",
+    "date": "2026-06-14T15:55:55.000Z",
     "sourceId": "chosun",
     "sourceName": "조선일보 경제",
     "lang": "ko",
@@ -15522,7 +15577,7 @@
     "title": "1년에 세 배 오른 코스피, 곱버스 ETF는 84원… 제도 공백에 방치된 초저가 ‘십원주’ ETF - 조선일보",
     "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQenZsVkpUY2hFRHNyWVFyclRWOGJmTzQzemMwWGJlOXlwbnhOaV84cVRsWDZpZ2tXdlo3Ml80by1ONzN4RXRaYjRpTWphX3l0dFA0MV8tVU1iZmlNdURkN1BmbWxWaF9jZmQtNjU2ZVRwLVJEbmNzanl6UWx0cVZXTw?oc=5",
     "description": "1년에 세 배 오른 코스피, 곱버스 ETF는 84원… 제도 공백에 방치된 초저가 ‘십원주’ ETF  조선일보",
-    "date": "2026-06-14T23:38:00.000Z",
+    "date": "2026-06-14T23:47:04.000Z",
     "sourceId": "chosun",
     "sourceName": "조선일보 경제",
     "lang": "ko",
@@ -15545,7 +15600,7 @@
     "title": "축제 분위기 스페이스X... ‘머스크 성공’ 바라보는 테슬라의 심경은? - 조선일보",
     "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNYlNhelZsSW9kdkxWeVREcGNUb2dqX3lDZVJjNEVpQTRMLUJVRHJMR3BidERvSDdVdVFJd1lJY19FOXl0Mm8ydk1NcWRUSGhJZktocnc4Snhxa2M3VnQyV19fdi15VkMyN1JHMXlpaFNaQnNwWV9aQTg2N1drOEhvMTNfdw?oc=5",
     "description": "축제 분위기 스페이스X... ‘머스크 성공’ 바라보는 테슬라의 심경은?  조선일보",
-    "date": "2026-06-14T23:52:00.000Z",
+    "date": "2026-06-14T23:57:05.000Z",
     "sourceId": "chosun",
     "sourceName": "조선일보 경제",
     "lang": "ko",
@@ -16485,9 +16540,9 @@
   },
   "id_124zbhi": {
     "id": "id_124zbhi",
-    "title": "중앙그룹 지주사·콘텐트리중앙 등 기업 회생 신청 - 동아일보",
+    "title": "JTBC-중앙그룹 지주사, 기업회생 신청 - 동아일보",
     "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9DZ0ItVkZ5M3hKUVdaWFRGZkx5NFpRVmtvWTc4SU5BRm9SUF92aDNEbXlDclBMUnBJNy1oTmlGNUdFNk4zTmRZZF9iR2lwNS15SFg5WC05VVRpN29IdWJCQlY5em5YcmZxREtYdF9fUzZGREEyWXfSAWZBVV95cUxNWmFEMVV1U21DWXRINE52WnZ0YkluZlVjSmVoU0Zrc2dFZF9NNjFTYWhjSzVLUjRfb2t1ZE5ZdGNfLVVOQVg2WEdxYmprYTVaU1JLaUxYdUZVYTdMYWNlNU1jaGVLWnc?oc=5",
-    "description": "중앙그룹 지주사·콘텐트리중앙 등 기업 회생 신청  동아일보",
+    "description": "JTBC-중앙그룹 지주사, 기업회생 신청  동아일보",
     "date": "2026-06-15T02:36:00.000Z",
     "sourceId": "donga",
     "sourceName": "동아일보 경제",
@@ -16787,7 +16842,7 @@
     "title": "강홍민 기자 - 한경매거진&북",
     "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBiSl8xQmZ6RWloekl0Q2ZPWTVfMTQ2eDJPSUdubnpSSVFDeUNFZjBOcnZOa3o2d1VCU000dXAyU0R5UGFHS1UyZTROelljcldUa2RCXy1haDdEV1cyYjhoWlRjUnBxbDdvRjJWRg?oc=5",
     "description": "강홍민 기자  한경매거진&북",
-    "date": "2026-06-14T08:45:16.000Z",
+    "date": "2026-06-14T07:00:00.000Z",
     "sourceId": "hankyung-fin",
     "sourceName": "한국경제 증권",
     "lang": "ko",
@@ -16833,7 +16888,7 @@
     "title": "레미콘 노사 2차 합의안 마련... 노조 투표 통과시 레미콘 타설 재개 - 조선일보",
     "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNRXNSOVNrNTZucm94bmpJNnVWeUhSTVBKVGczRURQWWw1RWhpZEJLd1pqcnpYM1JnNlN3ZzV4WWJWQWxHUjk3WVBOTFpnTFhYc2dKUUk0T21NNEgzSDctWmpGOU5MNlNmeng4RFhYV2tQSW9pQzFvSzlSNmNTTm9Tcm1XWXJFZzMt?oc=5",
     "description": "레미콘 노사 2차 합의안 마련... 노조 투표 통과시 레미콘 타설 재개  조선일보",
-    "date": "2026-06-15T00:02:00.000Z",
+    "date": "2026-06-15T00:07:06.000Z",
     "sourceId": "chosun",
     "sourceName": "조선일보 경제",
     "lang": "ko",
@@ -17351,7 +17406,7 @@
     "title": "정조대왕, 즉위 직후 \"내 아버지는 사도세자\"… 정몽구 회장은? - 조선일보",
     "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPdjlUU2FaMGVCNzZCOUFhN3FZY2g0cXlFUzY2bzhrTVFfeDVueEg3dFNkazhyME9fZGllOWdla0U0dVo2V3NZd012OGs3a2NvLVNoZEJEbjRaY2pvN1hFUV82Y3E3X25reVViWUxaalp6M2JxRDJNa1ZWcGlZSWlodlhveFhJVmVzZFNHTG5ZTQ?oc=5",
     "description": "정조대왕, 즉위 직후 \"내 아버지는 사도세자\"… 정몽구 회장은?  조선일보",
-    "date": "2026-06-15T04:04:00.000Z",
+    "date": "2026-06-15T04:18:14.000Z",
     "sourceId": "chosun",
     "sourceName": "조선일보 경제",
     "lang": "ko",
@@ -17647,10 +17702,10 @@
   },
   "id_huc9jw": {
     "id": "id_huc9jw",
-    "title": "올해 서울 집값 상승률, 벌써 작년의 2.5배... 서울 이어 경기도 ‘트리플 강세’ - 조선일보",
+    "title": "서울 평균 집값 10억 넘었다... 경기도 매매·전세·월세 ‘트리플 강세’ - 조선일보",
     "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOcXh4NHhtSS1hSERZVk42eXJyZGNSSXN4Znd6c0dLaG5LelpfbXBveHRJaGx2eGhYRzg2dHhGdFBiaFR6QUhpV040X0Q2czFSdnRnd2J5ZnRWRkpad0FvNnhtSk1JdVdUZHRlRTlsaWZRQVVuVzlfN1hRMXFUSDlTQUF0RlNkZGtk?oc=5",
-    "description": "올해 서울 집값 상승률, 벌써 작년의 2.5배... 서울 이어 경기도 ‘트리플 강세’  조선일보",
-    "date": "2026-06-15T05:33:00.000Z",
+    "description": "서울 평균 집값 10억 넘었다... 경기도 매매·전세·월세 ‘트리플 강세’  조선일보",
+    "date": "2026-06-15T07:18:00.000Z",
     "sourceId": "chosun",
     "sourceName": "조선일보 경제",
     "lang": "ko",
@@ -17742,7 +17797,7 @@
     "title": "Iran was never the main target - Fat Tail Daily",
     "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9TZHF4NENjSG9xNnhuVzJ2dWxmbGd1SEUweUhTZjdOWTFOdUd5czdEQUpCTFNEVEQ5U1B3eU80N1Frekg3RE9hTmFlOXFvSU5NcjdzVHVBc2h3ZlVaVFVQV3VXUWhhN3dGenE4UUFOYW5iamdCRWpVcw?oc=5",
     "description": "Iran was never the main target  Fat Tail Daily",
-    "date": "2026-06-15T06:38:04.000Z",
+    "date": "2026-06-15T15:13:29.000Z",
     "sourceId": "global-invest",
     "sourceName": "글로벌 투자 뉴스 (Reuters/Bloomberg/CNBC)",
     "lang": "en",
@@ -18265,5 +18320,1975 @@
         "기업들의 자금 조달 환경이 악화될 수 있어 현금 흐름이 우수한 기업과 그렇지 않은 기업 간의 실적 양극화가 심화될 전망입니다."
       ]
     }
+  },
+  "id_7og5yc": {
+    "id": "id_7og5yc",
+    "title": "농업부터 첨단산업까지... NH농협금융, 전환금융 파일럿(Pilot) 첫 성과 창출 - 한국경제",
+    "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1Hcm45SGFSaXNxbDhabkQteGNnQ0J5ZkZBRk4yajdWcFlfenhMa3NoVnA2UEdILWtqSUhjcENOeGVnQXR2emx3bnhBT1QzS1doT193T21falRLd9IBVEFVX3lxTFBQU3NCNFpmZXBGcE9VaDFyRkNVeG13MU0tN0Z4cXdvYlBrLTFodGxPM3lJVXFSWU1oem8zUnowdThNOXA5bDRGQ3JKSnZTNTFEeFE5Qg?oc=5",
+    "description": "농업부터 첨단산업까지... NH농협금융, 전환금융 파일럿(Pilot) 첫 성과 창출  한국경제",
+    "date": "2026-06-15T23:11:20.000Z",
+    "sourceId": "hankyung-fin",
+    "sourceName": "한국경제 증권",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "농업부터 첨단산업까지... NH농협금융, 전환금융 파일럿(Pilot) 첫 성과 창출",
+      "summary": [
+        "NH농협금융이 지속가능한 경제로의 이행을 돕는 전환금융 파일럿 프로그램을 통해 첫 구체적인 성과를 내었다.",
+        "단순 녹색산업뿐만 아니라 전통적인 농업 및 첨단산업의 탄소 저감 노력까지 폭넓게 금융 지원을 하고 있다.",
+        "ESG 경영의 실질적인 내재화 및 친환경 금융 시장 선점을 위한 전략적 행보로 풀이된다."
+      ],
+      "implications": [
+        "금융권의 ESG 관련 여신 및 투자 규모가 구조적으로 확대될 것임을 의미한다.",
+        "저탄소 전환에 적극적인 기업일수록 향후 자금 조달 비용 측면에서 경쟁력을 확보할 수 있다."
+      ]
+    }
+  },
+  "id_16i8e9m": {
+    "id": "id_16i8e9m",
+    "title": "AI가 작곡하고 인간이 연주한다… 국립국악관현악단 신작 '공존' - 한국경제",
+    "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9NNXdIZVVjQkVqQ3hTdGpwODFnVkFkSW5VQ2pGWm05S1QwQ05VNlYtQUVxSXh4YnFkdXgtNEVBR2JfLVRENVZmNk8zOFE4RUhfS2JQY0dBOEc1QdIBVEFVX3lxTE1FM2ZlUTZhZ3Zfb3ZyVGthdFBZSm9wc0l2a0xlWlJDMFo2eHdLN3JFQml4ZmxydllrQzNDbVdmUVUxRDRTdDlTeTR6Q0VsYk5POHBFMg?oc=5",
+    "description": "AI가 작곡하고 인간이 연주한다… 국립국악관현악단 신작 '공존'  한국경제",
+    "date": "2026-06-15T08:01:23.000Z",
+    "sourceId": "hankyung-fin",
+    "sourceName": "한국경제 증권",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_1es1f24": {
+    "id": "id_1es1f24",
+    "title": "김동현 \"치매 본질적 치료 가능 진단 시장 선점할 것\" - 한국경제",
+    "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE03bGN4SVRzTkl0bHVKWnhEbjNIZll1c3hjQ3BwczZxUmdyakNRXzloM09vRGxQTTRRYk50N0tDUW05VktNWUVibFJTbl82TXVmVXVsZkVnV2xsZ9IBVEFVX3lxTE9rYlJzYzh4YWI0V1NiOGVLOUlPQUpERGN2THJKNWVUOWV4SURLRG92UHZ3TTUwWVBkYi1BQUExWGlsR3dFai1TY3oxWHZrOVQwNmowVg?oc=5",
+    "description": "김동현 \"치매 본질적 치료 가능 진단 시장 선점할 것\"  한국경제",
+    "date": "2026-06-14T08:02:01.000Z",
+    "sourceId": "hankyung-eco",
+    "sourceName": "한국경제 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_13l3dr0": {
+    "id": "id_13l3dr0",
+    "title": "계명대, 고졸 청년 '조기 취업지원 체계' 구축 - 한국경제",
+    "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9FMDFHNWVhTHhEU20xUG11bFcydmFRSUZrSDA2LXd0eE1LRXNpSWFrTWh1NFB0bVdxLW82WWplLU5rZXZpbGNGdTM0UjhXVHVkRVk1eE1iVTZBQdIBVEFVX3lxTFBlbzliVWVGUmphWnVUY0cxSnVIYnBSOUdrNVZ3YmNtSGp5MEJIczBkSFJoaVBpRzVMSGViR3JnYk9PSVdKV3l6NEM0ZmdrMHFraFhvVQ?oc=5",
+    "description": "계명대, 고졸 청년 '조기 취업지원 체계' 구축  한국경제",
+    "date": "2026-06-15T23:18:07.000Z",
+    "sourceId": "hankyung-eco",
+    "sourceName": "한국경제 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "계명대, 고졸 청년 '조기 취업지원 체계' 구축",
+      "summary": [
+        "계명대학교가 고졸 청년들의 조기 취업을 지원하기 위한 체계적인 산학협력 프로그램을 구축했다.",
+        "실무 중심의 교육과 기업 맞춤형 인재 육성을 통해 청년 실업 문제 해결에 기여할 전망이다.",
+        "지역 산업과의 연계를 강화하여 지역 경제 활성화의 마중물 역할을 할 것으로 기대된다."
+      ],
+      "implications": [
+        "산학협력 강화를 통한 기업들의 우수 인재 확보 용이성이 증대될 것이다.",
+        "인구 구조 변화 속에서 기업들의 고용 트렌드가 다양화될 수 있음을 시사한다."
+      ]
+    }
+  },
+  "id_c8i96": {
+    "id": "id_c8i96",
+    "title": "안용호 \"프로티움, 누적수주 500억…2028년 IPO 추진\" - 한국경제",
+    "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1kNFRkVzg5U01HdWExMl95bXZiemFRaWZ6a0Q5Tmp6QjYxQjk5VEJaVUw3VlNSQXN4VjcyT24wU0dBLU1KQ0RZQVU5VjAxblhuUkNGVVg5LThFd9IBVEFVX3lxTE91WmxrY1BjUVdaSmc5T2RVRTRJalp6WnZBYmpCXzVoM0V4YzZYLVA0SFR1SHNNRlVheEtlNzB2QjFLaVk4a25UNzN1VldIdmV2RVctWA?oc=5",
+    "description": "안용호 \"프로티움, 누적수주 500억…2028년 IPO 추진\"  한국경제",
+    "date": "2026-06-14T08:01:29.000Z",
+    "sourceId": "hankyung-eco",
+    "sourceName": "한국경제 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_11iopkd": {
+    "id": "id_11iopkd",
+    "title": "'대한항공' 52주 신고가 경신, 전일 외국인 대량 순매수 - 한국경제",
+    "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFA3b09UTm43aE90dFpiZmIxcVRXX25iZWQxRVlNcXVHTzRnbFFmOTZha0h1RkRiVUVGVml1My1TTzEwX01SbWdJT0lIYVRYZzhvRmY1d2FZUEJEZ9IBVEFVX3lxTE9BQ3p1VnlZWmtQZm15Y1BUcmxrY1hpZDd3b2hPRTV0MTdIT1hFNXVnU1FDa1Z2MUJ1Z05QWGx6NFRHcTNldlFZU1FVaFpNNXFZT0hKUg?oc=5",
+    "description": "'대한항공' 52주 신고가 경신, 전일 외국인 대량 순매수  한국경제",
+    "date": "2026-06-15T00:31:10.000Z",
+    "sourceId": "hankyung-eco",
+    "sourceName": "한국경제 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_i1qd13": {
+    "id": "id_i1qd13",
+    "title": "영국, 16세 미만 SNS 금지 오늘 발표... 호주보다 강하다 - 조선일보",
+    "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQMVpYcjFXcW00SVNPNWtuMWpGQ1N3S0FzVE5IMmJKTmVoc2gzVlB0REFzaUtEcFVfVVlDOU9mMWFPYmtqakV5dXdBU3F1OUpCdFB4WTMwODRNWGxCajRXaGVaQlZaVGlnZDVSRjJVLWFpakdkcjZ3amV2OF83SEx2cjEwTQ?oc=5",
+    "description": "영국, 16세 미만 SNS 금지 오늘 발표... 호주보다 강하다  조선일보",
+    "date": "2026-06-15T02:11:12.000Z",
+    "sourceId": "chosun",
+    "sourceName": "조선일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_gaenbh": {
+    "id": "id_gaenbh",
+    "title": "강북 노원·동대문구도 국민평형 분양권 18억 - 조선일보",
+    "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNSUR5NldSSEQyT3RUc25nRTRvMU53WmtlclNkSkxnVjgyak1VUnU2dHVUbDdCUUxRZTZLYUVxY2o4RllqbU5kdExDYlhQTUk1d1A1QzJfck5NdWdTdlR6YU1fQ0hYUG5MZGNYUV9NQ1d3bnhkUTJqYnNXeDVySmp3cVg2QzhOb211?oc=5",
+    "description": "강북 노원·동대문구도 국민평형 분양권 18억  조선일보",
+    "date": "2026-06-15T13:39:24.000Z",
+    "sourceId": "chosun",
+    "sourceName": "조선일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_xvjnq1": {
+    "id": "id_xvjnq1",
+    "title": "실리콘밸리 큰손 a16z 한국 진출... \"첫 아시아 사무소\" - 조선일보",
+    "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOWmlBNkVBSFdJSVF2ci1tbkhoS1QyZ0RqaHlGTXJaYXlXTWxqVVh5QlZlcjFJc0pXYW85UDBEWndvaEMtQjBWZHBvOGhDdXlFdXFYbHVFejdSSG56S1hqZTljSmhDVTk5NkRCNVZ5amo1RUJwWkUzTnoyU1N1TFp0Nm1kOA?oc=5",
+    "description": "실리콘밸리 큰손 a16z 한국 진출... \"첫 아시아 사무소\"  조선일보",
+    "date": "2026-06-15T03:57:44.000Z",
+    "sourceId": "chosun",
+    "sourceName": "조선일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_tuuz27": {
+    "id": "id_tuuz27",
+    "title": "정부 부동산 정책 ‘루마니아의 실패’ 따라 가나 [손진석의 머니워치] - 조선일보",
+    "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNc0NiRGd6Ym9iYktYaTJ2NkdqNF9tOG5GN2VOX0xKeFlqejBqQTJQamNEVGg4ejRRbWhwXzRpUEsxcVBtcnVmNFVvU2Myb25Jal9uNGoxNTRnOXJmNnYybXhTaEVfQ2lqSVM1bjJuLUljUTBDdEo4cTh6S1R5ZzNOdGs2UUNQa1EzRnFwbjRn?oc=5",
+    "description": "정부 부동산 정책 ‘루마니아의 실패’ 따라 가나 [손진석의 머니워치]  조선일보",
+    "date": "2026-06-15T08:07:21.000Z",
+    "sourceId": "chosun",
+    "sourceName": "조선일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_1ctpsbc": {
+    "id": "id_1ctpsbc",
+    "title": "오전 10시 시작하는 월드컵 예선… 4대그룹 ‘근무 중 시청’ 대처법은 - 조선일보",
+    "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQdEVzeTVIdUs4Q0tHUmpoMW9NdnJOalFtNG9pMzB3OVIxUzNTa1VNallKMlZJbHNHWTdhaC1XQ3NpZ09xRDZyZ0Z5cjM5MU5GcUV3d1pXZndzckJTSjlUWU5tRTUza2Rpdnd0LVJWRThCQXd3eXhVS1d2dXVqMUk3YWxoUnRvUnhqQnBFeVpEZw?oc=5",
+    "description": "오전 10시 시작하는 월드컵 예선… 4대그룹 ‘근무 중 시청’ 대처법은  조선일보",
+    "date": "2026-06-15T15:33:00.000Z",
+    "sourceId": "chosun",
+    "sourceName": "조선일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_zengt1": {
+    "id": "id_zengt1",
+    "title": "전쟁 끝나고 미국 금리 내리면 또 불장? 오건영 \"안 믿는다\" - 조선일보",
+    "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOOVFVOUhMRVhMN2sxbVVELWVaT0FZUGFvbl93MXBSUld3UzY1MXYxUEFNb0dLRm15OHFPY0ZVdXdoOU5fZ01uN2ZmOXNJRzFtaFlCV0hZNm9PR0x3TjJVQTNEUlNsTEpNS2JIYmFfQW40VTNUeU5MOWd1bTRqWjA2TQ?oc=5",
+    "description": "전쟁 끝나고 미국 금리 내리면 또 불장? 오건영 \"안 믿는다\"  조선일보",
+    "date": "2026-06-15T20:34:51.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "전쟁 끝나고 미국 금리 내리면 또 불장? 오건영 \"안 믿는다\"",
+      "summary": [
+        "시장 일각에서는 지정학적 리스크 해소와 미 연준의 금리 인하가 맞물리면 또다시 대규모 강세장(불장)이 올 것으로 기대하지만, 오건영 전문가는 이에 회의적인 시각을 내비쳤습니다.",
+        "그는 누적된 글로벌 부채, 끈적한 인플레이션 등 구조적인 거시 경제 문제들이 증시의 폭발적인 상승을 억제할 것이라고 지적했습니다.",
+        "단순한 유동성 장세를 기대하기보다는 실물 경제의 펀더멘털 회복 여부를 면밀히 따져봐야 한다는 주장입니다."
+      ],
+      "implications": [
+        "투자자들은 과거 제로금리 시대의 과도한 낙관론에서 벗어나 철저한 실적 검증과 리스크 관리에 기반한 보수적인 투자 전략을 구사해야 합니다.",
+        "금리 인하가 단행되더라도 시장은 이를 호재보다는 경기 침체의 신호로 해석할 가능성이 있어 높은 변동성에 대비해야 합니다."
+      ]
+    }
+  },
+  "id_11rd29c": {
+    "id": "id_11rd29c",
+    "title": "지난달 韓 채권 8.5조 사들인 외국인… 주식 자금은 역대 최대 순유출 - 조선일보",
+    "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOQmFrQTVRWGtzVlZYdm41R1pIWm5YLXc0Z3gyOWNjZzk2NEIzMGJvN2NlSFUyLVFnSExmN0c1N1hINGE4b1o0VXc5RS1iVExDZGMtYjkxRnV2Ym56S19IaVA5NXNMQkNNSmpSMWJXbUFUTnNIa1h3ck9SazVIWWFQQjlScUhkc0xLLWoxV3FB?oc=5",
+    "description": "지난달 韓 채권 8.5조 사들인 외국인… 주식 자금은 역대 최대 순유출  조선일보",
+    "date": "2026-06-15T03:07:35.000Z",
+    "sourceId": "chosun",
+    "sourceName": "조선일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_x7t2ao": {
+    "id": "id_x7t2ao",
+    "title": "이재용 삼성전자 회장, 바티칸 방문해 유흥식 추기경 만나 - 조선일보",
+    "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQZW96WGo0MW43VTRfdVBBX2JnSnpNMVZxQkEwTVRiZ0hxRzBfNXhib2VCamVEU3RWTEtJWlBVQ1BMZ3I2b2ZPclZ1V0I4d3pUaEtsN3E1dmZEM0t1N1N3YXc5NERTa0dCaThQUV9ieUEtOVFLb1pSUnBvQ0ZVUGpidFFvNkZCVHpmenFFRmdOSQ?oc=5",
+    "description": "이재용 삼성전자 회장, 바티칸 방문해 유흥식 추기경 만나  조선일보",
+    "date": "2026-06-15T09:52:00.000Z",
+    "sourceId": "chosun",
+    "sourceName": "조선일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_1pxsnyw": {
+    "id": "id_1pxsnyw",
+    "title": "미래에셋증권, 스페이스X 한 주도 못 받은 까닭은? - 조선일보",
+    "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNc1hEdXU1dTFldEQzX3NCMmQ0T2wwLVluelBpVU13LVh4VVpGaUV1LVpfVVYyRGNLTmJVajlIM08teFZhOUd3UkFYTGNIOEY5ME84dXJDcnl5THM5d201a0NWTVVJZ0d6MFZmWW9wQVVsSEdsMzVnLU1ja0tHbUNqeQ?oc=5",
+    "description": "미래에셋증권, 스페이스X 한 주도 못 받은 까닭은?  조선일보",
+    "date": "2026-06-14T15:35:52.000Z",
+    "sourceId": "chosun",
+    "sourceName": "조선일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_c7ocuj": {
+    "id": "id_c7ocuj",
+    "title": "‘AI 과학자’ 난제 풀 총괄 책임자 사의… K-문샷, 검증 논란에 출발부터 삐걱 - 조선일보",
+    "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQZ0pnQUx3UlJWTG9OdXBsdXlDMDRfaVhQSVR5Z18wM1lUMEY0YkpyWGhha211S3NqMVVXR3ktbTc5RmxHVEQ4TGlYQkVoVWREM0VzTmJvTHVXaHgzMzR6YTRZbDYtMEluS3lMS19OMTloUVVDTDJsdWtBcnVXOG9reVZ4OA?oc=5",
+    "description": "‘AI 과학자’ 난제 풀 총괄 책임자 사의… K-문샷, 검증 논란에 출발부터 삐걱  조선일보",
+    "date": "2026-06-14T15:39:38.000Z",
+    "sourceId": "chosun",
+    "sourceName": "조선일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_aqgt7v": {
+    "id": "id_aqgt7v",
+    "title": "부쩍 허해졌다면, 홍삼까지 넣은 흑염소 30포 1만6000원 초특가 - 조선일보",
+    "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQN19YaDhQR2pKSmJ2dFZHT29sR0JBdzBpTG1qTUhoVHBLeFpKRVYxYlJ1Z09mX1NVRDRlcllXd2huN29ra2JXS0xMUVQ2S1paNkZfVmhVT0k5ZEtOSEhvZDZJc05HNExIb3FXTmxELUFSR3Z3S3EtU09TUmk2V0EwejVhTzdWZzF2eWpZ?oc=5",
+    "description": "부쩍 허해졌다면, 홍삼까지 넣은 흑염소 30포 1만6000원 초특가  조선일보",
+    "date": "2026-06-15T20:30:00.000Z",
+    "sourceId": "chosun",
+    "sourceName": "조선일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "부쩍 허해졌다면, 홍삼까지 넣은 흑염소 30포 1만6000원 초특가",
+      "summary": [
+        "기력 회복에 좋은 것으로 알려진 흑염소 진액에 홍삼까지 더한 건강기능식품 30포가 1만 6000원이라는 파격적인 가격에 판매 중입니다.",
+        "고물가 장기화로 인해 소비자들의 지갑이 얇아진 가운데, 가격 경쟁력을 극대화한 가성비 건강식품이 큰 인기를 끌고 있습니다.",
+        "유통 채널들은 마진을 줄이더라도 박리다매 전략을 통해 소비자 유인과 매출 규모 확대를 꾀하고 있습니다."
+      ],
+      "implications": [
+        "가치 소비와 짠테크 트렌드가 건강 관리 부문에도 확산되면서, 중저가 PB 상품이나 기획 특가 상품의 시장 점유율이 지속적으로 확대될 것입니다.",
+        "소비자들의 가격 민감도가 극도로 높아진 상태이므로 프리 창 브랜드를 고집하던 기업들도 가격 다변화 전략을 고민해야 할 시점입니다."
+      ]
+    }
+  },
+  "id_1ifs8c2": {
+    "id": "id_1ifs8c2",
+    "title": "이렇게 쫄깃하다니, 포항 반건조 가자미 한 마리 최저 3000원 초특가 - 조선일보",
+    "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPWGxZbF85ZVNubHZRU0wxSlV2UVVMS0M1OGtNc0xLSmlJTi1FeTd3dTVWV1huOEpfR05pdXh5STYzV2liX1o2S3ZPeWM0eEhROXVlQWRSd3ZfZEhuNmVJOUxQUF9nS2MzZEhtbEQ3N2F2R2hWWG8yaFVaakxnaHp6NUZ2M212VUxDX1VJ?oc=5",
+    "description": "이렇게 쫄깃하다니, 포항 반건조 가자미 한 마리 최저 3000원 초특가  조선일보",
+    "date": "2026-06-15T20:10:00.000Z",
+    "sourceId": "chosun",
+    "sourceName": "조선일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "이렇게 쫄깃하다니, 포항 반건조 가자미 한 마리 최저 3000원 초특가",
+      "summary": [
+        "특유의 쫄깃한 식감으로 유명한 포항 구룡포 반건조 가자미가 온오프라인 행사를 통해 마리당 최저 3,000원에 저렴하게 공급되고 있습니다.",
+        "생산자와 소비자 간의 직거래 유통망을 활용하여 유통 마진을 최소화한 것이 파격적인 가격 책정의 비결입니다.",
+        "지역 특산물의 우수성을 알리고 어민들의 소득을 증진시키는 동시에 밥상 물가 안정에도 기여하는 일석삼조의 효과를 내고 있습니다."
+      ],
+      "implications": [
+        "지자체 및 커머스 플랫폼이 연계한 산지 직송 기획전이 식품 인플레이션을 방어하는 효과적인 소비자 대안으로 자리 잡고 있습니다.",
+        "가격 대비 만족도(가심비)를 충족시키는 신선식품 D2C(Direct to Consumer) 시장의 성장이 더욱 가속화될 것입니다."
+      ]
+    }
+  },
+  "id_zk78x3": {
+    "id": "id_zk78x3",
+    "title": "수입물가 상승률 코로나 이후 최고…‘반도체 효과’ 수출물가는 47%↑ - 조선일보",
+    "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQYV9NY0Y5MXhzTFA4Q215alRhTWd0c3RkODlOektKQ3hNXzgzQU1oTGpYamJnZUNkajdxVFVRbHJ6MTBJQzZkWHJxTUgtcUF1bldrM1EwM2hOMmhsM04wYmwyVWpBMHVCdHRVWURXRlpCb1lHZ0s4S0QwQlpFNzd6dnZ2Nl84WV80MWJDd3ln?oc=5",
+    "description": "수입물가 상승률 코로나 이후 최고…‘반도체 효과’ 수출물가는 47%↑  조선일보",
+    "date": "2026-06-15T23:36:00.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "수입물가 상승률 코로나 이후 최고…‘반도체 효과’ 수출물가는 47%↑",
+      "summary": [
+        "수입물가 상승률이 코로나19 사태 이후 최고치를 기록하며 인플레이션 우려를 키우고 있다.",
+        "반면 반도체 가격 상승과 환율 효과로 수출물가 역시 47% 급등하며 긍정적인 측면도 나타났다.",
+        "교역조건의 변화가 향후 무역수지와 거시 경제에 미칠 영향이 복합적이다."
+      ],
+      "implications": [
+        "수입물가 급등으로 인한 생산자물가 및 소비자물가의 동반 상승 가능성이 높다.",
+        "반도체 비중이 높은 한국 수출 경제 특성상 수출 기업의 마진율은 일부 방어될 수 있다."
+      ]
+    }
+  },
+  "id_1v29a42": {
+    "id": "id_1v29a42",
+    "title": "\"길게는 2030년까지 주택 공급 부족… 무주택자라면 지금이라도 빨리 사야\" - 조선일보",
+    "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPMENEc2syVEhfNEZaMktCNFpYbWMzVjlYbHBLTjRXcUllRWJHMzhEbm8zclBaUFpyR0wxeHFFTUIxdkdfaFB2TGliRVhvV2wtUVY3dmViUXZVSU9JMldOWnJJalB4RWdyOTR6UWppVzVGUW9qMG9zNllVZlVPZjg2eWxCOE9YYVVK?oc=5",
+    "description": "\"길게는 2030년까지 주택 공급 부족… 무주택자라면 지금이라도 빨리 사야\"  조선일보",
+    "date": "2026-06-15T15:37:00.000Z",
+    "sourceId": "chosun",
+    "sourceName": "조선일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_1i7f626": {
+    "id": "id_1i7f626",
+    "title": "SpaceX Stocks Still Volatile, Says JPMorgan Strategist - Bloomberg.com",
+    "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQN0l6M2l2Q0Jra0xiUWdzakdoQ0NydnZ2azFxbmFxYnktOWhTTTdtZzVmWEZ3NS1YNVZOYzFBMU1WdThnZERCdEVHTTVPQUQwenNtb2pFQlNMenFBdU54TUVQMEt0SzlrNUItUG15b3pKNHRzMXlyMHVsakRjNGZUOXBCQThIcWRoNEExWDE5dGdiYXl3ZzAxY1lubGl1Uk5vZkRLUy1CeHFJV0JQMTFn?oc=5",
+    "description": "SpaceX Stocks Still Volatile, Says JPMorgan Strategist  Bloomberg.com",
+    "date": "2026-06-15T19:16:10.000Z",
+    "sourceId": "global-invest",
+    "sourceName": "글로벌 투자 뉴스 (Reuters/Bloomberg/CNBC)",
+    "lang": "en",
+    "category": "Markets",
+    "aiAnalysis": {
+      "translatedTitle": "JP모건 전략가, \"스페이스X 주식은 여전히 변동성이 크다\" - 블룸버그",
+      "summary": [
+        "JP모건의 전략가는 스페이스X의 주식이 장기적인 성장성에도 불구하고 여전히 변동성이 큰 상태라고 분석했습니다.",
+        "우주 산업 특성상 대규모 자본 지출과 규제 불확실성이 주가 변동성을 높이는 요인으로 지적되었습니다.",
+        "투자자들은 단기적인 성과보다는 장기적인 우주 기술 개발 및 상용화 가능성에 주목해야 한다고 조언했습니다."
+      ],
+      "implications": [
+        "민간 우주 기업에 대한 투자는 높은 수익률만큼이나 큰 리스크를 수반하므로 신중한 접근이 필요합니다.",
+        "상업용 우주 비행 및 위성 인터넷 사업의 성공 여부가 관련 기업 가치 평가의 핵심이 될 것입니다."
+      ]
+    }
+  },
+  "id_3r14cx": {
+    "id": "id_3r14cx",
+    "title": "⚪Silver Gains 4.5% on Cheaper Oil - XTB.com",
+    "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQeFN4dXU2djd4Z0FwSWJrajZQbGtsRHpWd1JGUTBSNkcxY0N3ZTQxTXpFbzkyekg2VUdGdlQweXc0VE9qZExtNEZsbTRTZXJwZ1FmeTF2MDlxNVItMDBETldDNTNTNER4M0c5NUd1azZ6VWtlTFcxWmlSWnFnZXUzQjg5QlpjenFwZ21UN2E4QnlCdkE?oc=5",
+    "description": "⚪Silver Gains 4.5% on Cheaper Oil  XTB.com",
+    "date": "2026-06-15T13:39:03.000Z",
+    "sourceId": "global-invest",
+    "sourceName": "글로벌 투자 뉴스 (Reuters/Bloomberg/CNBC)",
+    "lang": "en",
+    "category": "Markets",
+    "aiAnalysis": null
+  },
+  "id_1xbwuf": {
+    "id": "id_1xbwuf",
+    "title": "India sets $800 per ton minimum export price on onions till end-December - Ada Derana",
+    "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBxSi1UMWs3cm9XV1lNUmxzRGI0Q0UyU2tnRUI2TWwwcjRaNU9DbE5hZGdiQWlZM1d3UzRpMUpEME5TSEVzYmc?oc=5",
+    "description": "India sets $800 per ton minimum export price on onions till end-December  Ada Derana",
+    "date": "2026-06-15T20:36:24.000Z",
+    "sourceId": "global-invest",
+    "sourceName": "글로벌 투자 뉴스 (Reuters/Bloomberg/CNBC)",
+    "lang": "en",
+    "category": "Markets",
+    "aiAnalysis": {
+      "translatedTitle": "인도, 12월 말까지 양파에 톤당 800달러 최소 수출 가격 설정",
+      "summary": [
+        "인도 정부는 자국 내 양파 가격 안정을 도모하기 위해 12월 말까지 톤당 800달러의 최소 수출 가격을 도입했습니다.",
+        "이는 무분별한 수출을 억제하여 국내 공급 물량을 확보하고 식료품 인플레이션을 통제하려는 강력한 조치입니다.",
+        "인도는 글로벌 주요 양파 수출국이기에 이번 조치는 주변국의 농산물 수급에 직접적인 파급력을 가집니다."
+      ],
+      "implications": [
+        "인도산 양파 의존도가 높은 스리랑카, 방글라데시 등 인접국 및 중동 지역에서 심각한 애그플레이션(농산물 가격 급등)이 발생할 위험이 높습니다.",
+        "기후 변화와 자국 우선주의가 결합된 식량 보호무역주의가 확산되면서 글로벌 농산물 공급망의 변동성이 상시화될 우려가 있습니다."
+      ]
+    }
+  },
+  "id_33sfsn": {
+    "id": "id_33sfsn",
+    "title": "SpaceX Stock Surges as Musk Becomes First Trillionaire - MEXC",
+    "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE8zdzBwRjR5cENzQUFRWUNwVHVRVXNtdEVxazE3TEM2Umt2NWhJT0doMldBdk90VEV5Yk8xZEdBZ1BIVUJPaXhLVw?oc=5",
+    "description": "SpaceX Stock Surges as Musk Becomes First Trillionaire  MEXC",
+    "date": "2026-06-13T19:41:07.000Z",
+    "sourceId": "global-invest",
+    "sourceName": "글로벌 투자 뉴스 (Reuters/Bloomberg/CNBC)",
+    "lang": "en",
+    "category": "Markets",
+    "aiAnalysis": null
+  },
+  "id_v6wif3": {
+    "id": "id_v6wif3",
+    "title": "일본 오늘 금리 인상 여부 결정‥우리나라는? - MBC 뉴스",
+    "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9BdkxMV0RUd1FfOFJRUDBuVGRnSGdxSG9ldjJQYTRHM0l4U0JTR05aVm1rVTFLa1VVeFF3amlCRklDNHBEZUdDb2JPbUttMUFJQVZKcEoyZlZ3N2xzOGNreGc2SnU4VndsZS1kZ1dMMHRKMkoxSTN2QXhR?oc=5",
+    "description": "일본 오늘 금리 인상 여부 결정‥우리나라는?  MBC 뉴스",
+    "date": "2026-06-15T21:11:13.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "일본 오늘 금리 인상 여부 결정‥우리나라는?",
+      "summary": [
+        "일본은행이 오늘 금융정책결정회의를 열고 기준금리 인상 여부를 최종 결정할 예정입니다.",
+        "일본의 금리 인상이 현실화될 경우, 엔캐리 트레이드 청산 우려 등 글로벌 금융 시장에 미칠 파급 효과가 주목됩니다.",
+        "이에 따라 한국은행의 향후 통화 정책 방향과 국내 기준금리 인하 시점에 대한 시장의 관심도 함께 높아지고 있습니다."
+      ],
+      "implications": [
+        "일본의 금리 인상 시 원화 대비 엔화 강세로 국내 수출 기업들의 상대적 가격 경쟁력 상승이 기대됩니다.",
+        "한국은행은 한미 금리차와 일본의 통화 정책 정상화를 동시에 고려하여 금리 동결 기조를 유지할 가능성이 높습니다."
+      ]
+    }
+  },
+  "id_b29xix": {
+    "id": "id_b29xix",
+    "title": "신현송 한은 달라진다…금리 메시지 과감하게, 지급결제 힘 실어 - 연합뉴스",
+    "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9jcTdOcHQyVzNWYWpEWWdCWUNHSF94eVdIQzE4b3I2SmlGVjlIdzFiUEM2UXJCaGo5OTZsTnlOdno5c3B6d21FRW1wUTZmZURHYzdaSnBsM3NENkM3eW4zbdIBYEFVX3lxTE9jcTdOcHQyVzNWYWpEWWdCWUNHSF94eVdIQzE4b3I2SmlGVjlIdzFiUEM2UXJCaGo5OTZsTnlOdno5c3B6d21FRW1wUTZmZURHYzdaSnBsM3NENkM3eW4zbQ?oc=5",
+    "description": "신현송 한은 달라진다…금리 메시지 과감하게, 지급결제 힘 실어  연합뉴스",
+    "date": "2026-06-15T20:51:01.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "신현송 한은 달라진다…금리 메시지 과감하게, 지급결제 힘 실어",
+      "summary": [
+        "한국은행이 시장과의 소통 강화를 위해 통화정책과 금리 방향에 대한 메시지를 보다 과감하고 투명하게 전달할 예정입니다.",
+        "이와 더불어 디지털 전환 시대에 발맞춰 중앙은행의 본연의 기능인 지급결제 시스템 고도화에 역량을 집중하기로 했습니다.",
+        "이러한 변화는 통화정책의 실효성을 높이고 금융 시스템의 안정성을 굳건히 하려는 전략적 행보로 풀이됩니다."
+      ],
+      "implications": [
+        "중앙은행의 명확한 포워드 가이던스 제시는 채권 시장의 불확실성을 낮추고 금리 변동성을 제어하는 데 기여할 것입니다.",
+        "지급결제 부문 강화는 향후 CBDC(중앙은행 디지털화폐) 도입 등 미래 금융 인프라 혁신을 위한 기반 다지기로 해석되며 핀테크 산업에 영향을 줄 것입니다."
+      ]
+    }
+  },
+  "id_1duzgi3": {
+    "id": "id_1duzgi3",
+    "title": "일본, 31년 만에 기준금리 1%로 인상…한국은? [도쿄나우] - 한국경제",
+    "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5jMlRQLTh6VjhVd1BJRTAzcE9IZVViTjl4T0ZyQ0d3dzJJRjdPY1VQaWdVb1JtbDhpX3JEanNqdjY5aW52MFotRWRnLTc2VF85c2YwdDNTWk41Z9IBVEFVX3lxTE9TaHAxaXpGVkxnOF8yVmVkQzBEZGVmTlFGWTB2RmlTMWZXY0FMTVNEbFRMdjljNENkVzZUSXdLSFVaRzhFV2t4Z1ZVSWNQMmxFSk5Ibw?oc=5",
+    "description": "일본, 31년 만에 기준금리 1%로 인상…한국은? [도쿄나우]  한국경제",
+    "date": "2026-06-15T23:14:22.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "일본, 31년 만에 기준금리 1%로 인상…한국은? [도쿄나우]",
+      "summary": [
+        "일본은행이 31년 만에 기준금리를 1%로 파격 인상하며 초완화적 통화정책의 완전한 종료를 알렸다.",
+        "엔화 강세 압력과 더불어 글로벌 자금 흐름의 대규모 지각 변동이 예상된다.",
+        "이에 따라 한국은행의 통화정책 방향성 및 금리 결정 셈법도 한층 복잡해질 전망이다."
+      ],
+      "implications": [
+        "엔캐리 트레이드 청산 가능성에 따른 글로벌 금융 시장의 단기적인 변동성 확대에 유의해야 한다.",
+        "한일 금리차 축소로 인한 외국인 자본 유출입 추이를 면밀히 모니터링할 필요가 있다."
+      ]
+    }
+  },
+  "id_1cfqxvw": {
+    "id": "id_1cfqxvw",
+    "title": "일본 금리, 31년 만에 1% 되나… 엔화 방향에 달린 내 계좌 - 글로벌이코노믹",
+    "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQVDAxNS0wdnBzM2wzc21ZNkVZY2liZVB0UkU3aFh5YTdQSU5ZQUxmS2N6clllTDVHMm1lZDZjTlhJZk5nSVNQQWtwajJOSlBsUW02Z2tDNHBmSW9mQlI4cjRWZ2Nzazh6ZjFaODBQcnNhb0lEYmt1NTdFVWxyZHR0MGpRWDZBbGc?oc=5",
+    "description": "일본 금리, 31년 만에 1% 되나… 엔화 방향에 달린 내 계좌  글로벌이코노믹",
+    "date": "2026-06-15T18:05:00.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_1ap8hc4": {
+    "id": "id_1ap8hc4",
+    "title": "“원·달러 환율 1515.20원 마감” - 경향신문",
+    "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5XNGlhbjNQVnZJbmpWcVZTN05NVzNhVzMtOHV5d1h4SXE5X2E1aHltNzBjalZIV2lJaDYtWE9Ec3h3Uk90QzN2YjZvR1ZGNENYbjRVZm1talBHd9IBX0FVX3lxTE9SVG9zSUotZnROZmJpelBlUG41aDE2UGRqZm5rQUowUGZoZGhVaFQzc0ZjNUZaVEZXckdRNzB6Ym5iUlo1STdSeF9HampqcDlNUnlHQUZZclVDdUNJN21F?oc=5",
+    "description": "“원·달러 환율 1515.20원 마감”  경향신문",
+    "date": "2026-06-15T22:38:00.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "“원·달러 환율 1515.20원 마감”",
+      "summary": [
+        "원·달러 환율이 1515.20원으로 거래를 마감하며 여전히 높은 수준을 유지하고 있습니다.",
+        "글로벌 경제 불확실성과 달러화 강세 기조가 환율 상승을 견인한 주요 요인으로 분석됩니다.",
+        "외환 당국의 미세 조정 가능성과 향후 환율 방향성에 시장의 이목이 집중되고 있습니다."
+      ],
+      "implications": [
+        "수입 물가 상승으로 인한 국내 인플레이션 압력이 당분간 지속될 수 있습니다.",
+        "수출 기업들의 가격 경쟁력은 유지되겠으나 원자재 수입 비용 부담이 가중될 것입니다."
+      ]
+    }
+  },
+  "id_s3v9jf": {
+    "id": "id_s3v9jf",
+    "title": "BOJ 금리 인상에도 달러-원 1,500원 하회 어렵나…\"비둘기파 인상 변수\" - KB Think",
+    "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9PNDBkNkxHSENwMFRCWEUxR2NBbmZxNXBPanVuN3RfMGRDNkVnVlYzSEFDdFRuQmRFaF9CaDFtM2dLOTVaMTJDUmV5YktCS2dUNENKeXpScllfZVNIaThMbFRFY2RkMlpGb3NqVlFJVVVadw?oc=5",
+    "description": "BOJ 금리 인상에도 달러-원 1,500원 하회 어렵나…\"비둘기파 인상 변수\"  KB Think",
+    "date": "2026-06-15T23:42:49.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "BOJ 금리 인상에도 달러-원 1,500원 하회 어렵나…\"비둘기파 인상 변수\"",
+      "summary": [
+        "일본은행(BOJ)의 금리 인상에도 불구하고 원/달러 환율이 1,500원 아래로 떨어지기 어려울 수 있다는 분석이 제기되었다.",
+        "BOJ의 금리 인상이 예상보다 비둘기파적으로 해석되며 엔화 강세가 제한되고 있다.",
+        "미중 갈등 및 글로벌 펀더멘털의 차이가 원화의 구조적 약세를 유발하고 있다."
+      ],
+      "implications": [
+        "엔화 및 아시아 통화 동반 약세 흐름 속에서 원/달러 환율의 고공 행진이 당분간 지속될 수 있다.",
+        "수출입 기업들의 적극적인 환헤지 전략이 요구된다."
+      ]
+    }
+  },
+  "id_8r95ib": {
+    "id": "id_8r95ib",
+    "title": "지난달 수출물가 0.3%↑…반도체 공급 부족에 상승세 지속 - KBS 뉴스",
+    "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1XTFVDRWhTRHdpTlVSRU9JWjBJMG1NS2FIMDhBSEhDdHFjR3kweEJQZk5fVE9rcWVyQ0dJX0ZZcE8xdm01emJMaXJTeTZzMmhzWmg4WlBwWUwxR00?oc=5",
+    "description": "지난달 수출물가 0.3%↑…반도체 공급 부족에 상승세 지속  KBS 뉴스",
+    "date": "2026-06-15T22:06:00.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "지난달 수출물가 0.3%↑…반도체 공급 부족에 상승세 지속",
+      "summary": [
+        "지난달 수출물가지수가 전월 대비 0.3% 오르며 상승 기조를 이어갔습니다.",
+        "특히 AI 및 첨단 산업 발달에 따른 반도체 공급 부족 심화가 물가 상승의 핵심 동력으로 작용했습니다.",
+        "주력 수출 품목의 단가 상승은 한국 경제의 무역수지 개선에 긍정적인 영향을 미칠 것으로 보입니다."
+      ],
+      "implications": [
+        "국내 반도체 제조사들의 협상력 강화로 향후 분기 실적의 서프라이즈 가능성이 높아졌습니다.",
+        "공급망 병목 현상 장기화 여부에 따라 부품 단가 상승 추세가 한동안 유지될 수 있습니다."
+      ]
+    }
+  },
+  "id_1nb9rd9": {
+    "id": "id_1nb9rd9",
+    "title": "반도체 가격 상승에 수출물가 11개월 연속 상승 - YTN",
+    "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE8tNUY2NUk4Z3R1Y25Ud2l0S042OTV0R1BGNklyUzVleEVCVWFpOEpyLS1yWGVhUkdST3FXY19kOGRUeWZFUnJxNnE5YVBxUGI1Q2g2RUVESkZSUkk0bkE?oc=5",
+    "description": "반도체 가격 상승에 수출물가 11개월 연속 상승  YTN",
+    "date": "2026-06-15T23:32:00.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "반도체 가격 상승에 수출물가 11개월 연속 상승",
+      "summary": [
+        "반도체 주력 품목의 글로벌 가격 상승세에 힘입어 수출물가지수가 11개월 연속 상승했다.",
+        "IT 수요 회복과 공급망 이슈가 맞물리며 수출 단가를 끌어올리고 있다.",
+        "수출 중심의 경제 구조를 가진 한국 증시의 기업 실적 호조가 기대되는 대목이다."
+      ],
+      "implications": [
+        "반도체 및 주요 수출 업종의 실적 상향 조정 모멘텀이 강화될 것이다.",
+        "다만 환율 변동성에 따른 실수익 규모 변화를 면밀히 점검해야 한다."
+      ]
+    }
+  },
+  "id_1bqhum0": {
+    "id": "id_1bqhum0",
+    "title": "[종전 합의] 연준, 올해 금리 인상 가능성도 50% 밑으로 뚝 - 연합인포맥스",
+    "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9DNkFlZUIwQ3c1aURzMkRxeW51V0lwazJiVVFBemFsWXlPMWVEWjVFYWgxbURYUHN3czU1Qk5iRWpsVmhUeU1lUTFianVkdjZSeTdCM2hvQzdVaHE5MGE1WGNqV3Vkb2M3MkZRaWQ1RDg?oc=5",
+    "description": "[종전 합의] 연준, 올해 금리 인상 가능성도 50% 밑으로 뚝  연합인포맥스",
+    "date": "2026-06-15T03:26:00.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "[종전 합의] 연준의 올해 금리 인상 가능성 50% 밑으로 급락",
+      "summary": [
+        "종전 합의가 도출되면서 미국 연방준비제도(Fed)의 추가 금리 인상 명분이 크게 약화되었습니다.",
+        "이에 따라 시장에서 예상하는 연내 금리 인상 확률이 50% 아래로 크게 떨어졌습니다.",
+        "글로벌 인플레이션 우려가 줄어들며 통화 정책 완화에 대한 기대감이 확산하고 있습니다."
+      ],
+      "implications": [
+        "긴축 사이클 종료 기대감에 따라 글로벌 증시로 자금이 쏠리며 상승장이 펼쳐질 수 있습니다.",
+        "금리에 민감한 성장주 및 기술주들의 밸류에이션 재평가가 이루어질 전망입니다."
+      ]
+    }
+  },
+  "id_2p4zhm": {
+    "id": "id_2p4zhm",
+    "title": "\"팹 증설 본격화\"…하반기 앞두고 들썩이는 반도체 소부장株 - 인베스트조선",
+    "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNYlhSQk13VHFaMVVOS2pqYVQ0SGgwVm4zeE5uZXNZSXNjN1F1RTJYaURVZEhNNzJ3U3ZxSnNybjFUa2hBSTRvS25BRmVPRUIxRHNsa1VuMFlaY3VuMk84c1BGM3d1clMxSENTWm9VdllkVWFCcU5heFVhMVAta1RTbFY2bw?oc=5",
+    "description": "\"팹 증설 본격화\"…하반기 앞두고 들썩이는 반도체 소부장株  인베스트조선",
+    "date": "2026-06-15T22:00:33.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "\"팹 증설 본격화\"…하반기 앞두고 들썩이는 반도체 소부장株",
+      "summary": [
+        "주요 반도체 제조사들의 팹(공장) 증설이 본격화되면서 반도체 소재·부품·장비(소부장) 관련 주식들이 강세를 보이고 있습니다.",
+        "하반기 대규모 시설 투자가 집행될 것이라는 기대감이 소부장 기업들의 실적 전망을 밝게 하고 있습니다.",
+        "차세대 반도체 공정에 필수적인 핵심 장비 및 소재를 공급하는 기업들에 대한 투자자들의 선호가 뚜렷합니다."
+      ],
+      "implications": [
+        "반도체 밸류체인 하단에 위치한 소부장 기업들의 본격적인 턴어라운드 및 주가 리레이팅이 기대됩니다.",
+        "고객사 다변화 및 독점적 기술력을 보유한 장비주의 차별적인 강세가 나타날 수 있습니다."
+      ]
+    }
+  },
+  "id_1cseqvo": {
+    "id": "id_1cseqvo",
+    "title": "[핀셋+] [디아이] 반도체 초호황, 역대급 실적 청신호 - 딜사이트",
+    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFAtOFFHN0RBdHd1LUFXUTNERHhCTVJiQUFlOVdIRjdzY0J5NE5hRlV2Q3ZkV3BubFR6QXdzWTZWTm1OMXk3RHk3bVpBT0o4dlU?oc=5",
+    "description": "[핀셋+] [디아이] 반도체 초호황, 역대급 실적 청신호  딜사이트",
+    "date": "2026-06-15T22:00:00.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "[디아이] 반도체 초호황, 역대급 실적 청신호",
+      "summary": [
+        "반도체 검사 장비 전문업체 디아이가 글로벌 반도체 초호황에 힘입어 역대급 실적 달성이 기대되고 있습니다.",
+        "HBM(고대역폭메모리) 등 차세대 반도체 수요 증가가 디아이의 검사 장비 수주 확대로 직결되고 있습니다.",
+        "안정적인 고객사 확보와 기술 경쟁력을 바탕으로 중장기적인 성장 모멘텀을 구축한 것으로 평가받습니다."
+      ],
+      "implications": [
+        "후공정 및 테스트 장비 시장의 파이가 커지면서 디아이의 외형 성장과 수익성 개선이 동시에 이루어질 전망입니다.",
+        "동종 업계 내 중소형 장비사들에 대한 투자 심리도 덩달아 개선될 가능성이 있습니다."
+      ]
+    }
+  },
+  "id_v0f3h0": {
+    "id": "id_v0f3h0",
+    "title": "[외환] 원/달러 환율 2.5원 오른 1,513.6원(개장) - 연합뉴스",
+    "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9ONjFEbTRpcDhBdFpVcmo4aUhvck1Db1djYVpLZWRCYmM4eUludHBYYmNuRWtJNGRfMUFPWkRjV3VqWHNya1dPLUNUN09POEdNSThuSjlYQWJOeE3SAWBBVV95cUxNYTY4S1FzUV8wa3B1RTdnclV6N0ZmeHRDQmcyLWM0cDg0bHFRd0FfT3doWHFPZVZKLWhUb1hsa1B4cWRkdVpyMHo3S3JQa0FjbEhrejMzdkFmNG52Vm1wVnY?oc=5",
+    "description": "[외환] 원/달러 환율 2.5원 오른 1,513.6원(개장)  연합뉴스",
+    "date": "2026-06-16T00:01:27.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "[외환] 원/달러 환율 2.5원 오른 1,513.6원(개장)",
+      "summary": [
+        "원/달러 환율이 소폭 상승하며 1,513.6원으로 장을 출발했다.",
+        "미국 연준의 정책 방향과 글로벌 거시 지표가 환율 변동성을 키우고 있다.",
+        "시장 참가자들은 환율의 추가 상승 여력과 당국의 개입 시점을 예의주시하고 있다."
+      ],
+      "implications": [
+        "고환율 환경 고착화 시 내수 소비 침체 및 인플레이션 압력이 심화될 수 있다.",
+        "외화 부채가 많은 기업의 재무 건전성 리스크 관리가 필요하다."
+      ]
+    }
+  },
+  "id_1eizopz": {
+    "id": "id_1eizopz",
+    "title": "환율·반도체 가격 오르며 5월 수출물가 0.3% 상승 - MBC 뉴스",
+    "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBhY0ZIWDJoLWFEWXlhNXZmdEpkdGItdUg3aFhJdlY2TWlUX2lzZkhKTzJSc2FUQnFHSm9xSExkWG5nZl9mUTlzak4zNU1OZmFXYWpZWnp3d1BWWi0tWnlNcjk1UUY2QU9LcjQwM0w3YTQ1Zkx60gF0QVVfeXFMUGFjRkhYMmgtYURZeWE1dmZ0SmR0Yi11SDdoWEl2VjZNaVRfaXNmSEpPMlJzYVRCcUdKb3FITGRYbmdmX2ZROXNqTjM1TU5mYVdhallaend3UFZaLS1aeU1yOTVRRjZBT0tyNDAzTDdhNDVmTHo?oc=5",
+    "description": "환율·반도체 가격 오르며 5월 수출물가 0.3% 상승  MBC 뉴스",
+    "date": "2026-06-15T21:00:20.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "환율·반도체 가격 오르며 5월 수출물가 0.3% 상승",
+      "summary": [
+        "원/달러 환율의 상승 효과와 주력 수출품인 반도체의 가격 반등이 겹치면서 5월 수출물가가 0.3% 상승했습니다.",
+        "환율 상승은 원화 환산 수출액을 늘리고, 반도체 단가 상승은 실질적인 수익 구조를 개선하는 양동 작용을 했습니다.",
+        "이는 대외 불확실성 속에서도 한국 경제의 수출 버팀목이 견고하게 유지되고 있음을 시사합니다."
+      ],
+      "implications": [
+        "수출 주도형 기업들에게 우호적인 영업 환경이 조성되어 단기적인 현금 흐름 및 이익 지표가 개선될 것입니다.",
+        "지속적인 고환율은 수입 물가를 자극하여 내수 침체와 인플레이션 부담을 가중시킬 수 있는 양날의 검으로 작용합니다."
+      ]
+    }
+  },
+  "id_1qox7ea": {
+    "id": "id_1qox7ea",
+    "title": "BOJ, 이달 금리 인상 전망…우치다 부총재 회견 주목 - KB Think",
+    "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9qb2ptTWJsN1E2SVB4a3V3WlVnZnZ2dzc1QVJ3bmdMeTZzMl9NQUpBSFVadUVWcXFtMTNqN2tGQVp2QXpLWkdhZUd1ZTdXZ1N3QkFBeVVSU0l1VkcwRHhYeGVoMmw1dzBWUXVrNmdmOF9LUQ?oc=5",
+    "description": "BOJ, 이달 금리 인상 전망…우치다 부총재 회견 주목  KB Think",
+    "date": "2026-06-15T22:30:01.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "BOJ, 이달 금리 인상 전망…우치다 부총재 회견 주목",
+      "summary": [
+        "일본은행(BOJ)이 이달 금융정책결정회의에서 기준금리를 인상할 것이라는 전망이 지배적입니다.",
+        "시장은 우치다 신이치 부총재의 기자회견에서 향후 금리 인상 경로에 대한 힌트를 얻고자 합니다.",
+        "엔화 약세 방어와 물가 안정이라는 두 가지 목표를 달성하기 위한 BOJ의 정책 변화가 예상됩니다."
+      ],
+      "implications": [
+        "BOJ의 금리 인상이 현실화될 경우, 엔화 강세 전환과 함께 글로벌 자금 흐름의 변동성이 커질 수 있습니다.",
+        "국내 증시에서는 일본과 수출 경합도가 높은 업종들의 상대적 수혜가 기대됩니다."
+      ]
+    }
+  },
+  "id_1fqz30q": {
+    "id": "id_1fqz30q",
+    "title": "“5월 수출물가지수 11개월째 상승…반도체 수요 급증” - 경향신문",
+    "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9LOGJUTG9aeGU2ZXpoMll0SzM0d1BITE5GMUZnRjVKQndUQ3BRdG1QWFdDWGZPTzlZMjFLN08xTWlVVlR1d3RWVnFfcnc4SlgxQ1hwYXh0OVpoQdIBX0FVX3lxTE9vWHhMZkZsQzBRdjQwMVpmTjN1dFBuSl81ZVhqXzd6NDJEUktXNk45R1IxYXBTbHFZS1U5QjNvMi1oUkZBbGZ5QXF2MXJaRFE2TUp4bDRCZG4zZlBrQnZN?oc=5",
+    "description": "“5월 수출물가지수 11개월째 상승…반도체 수요 급증”  경향신문",
+    "date": "2026-06-15T22:00:00.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "“5월 수출물가지수 11개월째 상승…반도체 수요 급증”",
+      "summary": [
+        "5월 수출물가지수가 AI 중심의 반도체 수요 급증에 힘입어 11개월 연속 오름세를 기록했습니다.",
+        "반도체를 비롯한 컴퓨터, 전자 및 광학기기 부문의 물가 상승이 전체 지수를 견인했습니다.",
+        "달러 대비 원화 약세 환율 효과까지 더해지면서 체감 수출 단가 상승폭은 더욱 큰 상황입니다."
+      ],
+      "implications": [
+        "반도체 의존도가 높은 한국 수출 구조상 하반기 거시 경제 성장에 긍정적인 신호로 해석됩니다.",
+        "IT 수출 기업들의 잉여현금흐름(FCF) 확대에 따른 배당 증가 및 투자 확대가 기대됩니다."
+      ]
+    }
+  },
+  "id_1qrz2e7": {
+    "id": "id_1qrz2e7",
+    "title": "‘고점 쳤다’는 원·달러 환율…원화 강세 때 수혜주 따져보니 - 한국경제",
+    "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5HYzlRTE54MjFOdE5vWEtBMm5DbU9qNVJySExHdHRKZEVVVjZuRzAwNnJDRWM2Z2cyamFOYVh6LWhTM24zbXc3TVlpS2pCemNOcnAtaTVVXzZ5UdIBVEFVX3lxTE5lb3Z5Z2VyYlo1amlPOHpaMWdYWWczWlQ1UGxfVC0yWWNaSW5kQklrU0VIekw4V3JjbWhtYS1tdDd0X1VxVVQ3bng0OThkLV9xMy1YcQ?oc=5",
+    "description": "‘고점 쳤다’는 원·달러 환율…원화 강세 때 수혜주 따져보니  한국경제",
+    "date": "2026-06-15T23:00:15.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "‘고점 쳤다’는 원·달러 환율…원화 강세 때 수혜주 따져보니",
+      "summary": [
+        "원·달러 환율이 고점을 기록한 이후 하락세로 전환될 가능성이 제기되고 있습니다.",
+        "환율 하락에 따른 원화 강세 국면에서 혜택을 볼 수 있는 수혜주에 대한 관심이 높아지고 있습니다.",
+        "투자자들은 환율 변동에 민감한 업종을 중심으로 투자 포트폴리오를 재편할 필요가 있습니다."
+      ],
+      "implications": [
+        "원화 강세 수혜주(예: 항공, 해운, 수입 비중이 높은 기업)의 단기적인 주가 상승이 예상됩니다.",
+        "수출 중심 기업의 수익성 악화 가능성에 대비한 리스크 관리가 필요합니다."
+      ]
+    }
+  },
+  "id_12vcjhb": {
+    "id": "id_12vcjhb",
+    "title": "달러-원, 이란 종전 합의에도 해소되지 않는 경계심…1,515.20원 마감 - 연합뉴스",
+    "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9Xa0xJQ2VsN0xrb1JlbmZDMTA3MjRhWVVPUDdtOEpVcUNZWENSdTdiZTNyTE5ZXzdQS3dnVHFpaUJkSGU3ZEFPeGVKWmpXMkdkdnZ0MFB5MFY0M3dNSUlpZtIBYEFVX3lxTE9Xa0xJQ2VsN0xrb1JlbmZDMTA3MjRhWVVPUDdtOEpVcUNZWENSdTdiZTNyTE5ZXzdQS3dnVHFpaUJkSGU3ZEFPeGVKWmpXMkdkdnZ0MFB5MFY0M3dNSUlpZg?oc=5",
+    "description": "달러-원, 이란 종전 합의에도 해소되지 않는 경계심…1,515.20원 마감  연합뉴스",
+    "date": "2026-06-15T18:50:44.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_1pue6f": {
+    "id": "id_1pue6f",
+    "title": "종전에도 1,500원 못 본 환율…\"분위기 반전까진 아니야\" - KB Think",
+    "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5LTjU5Qllway1DVDhtaEg5bUFDXy1BVkpqNm9WV19SbW1aeE4zYWpZWlczQklGc2RELTZvWlRXa3RTZWUybEFhTlJnTy1fZi1LYWtaUEFQSlQ1YjFCSGJ3MVNucWxnVTl5MUllV2RXTEh1Zw?oc=5",
+    "description": "종전에도 1,500원 못 본 환율…\"분위기 반전까진 아니야\"  KB Think",
+    "date": "2026-06-15T22:29:57.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "종전에도 1,500원 못 본 환율…\"분위기 반전까진 아니야\"",
+      "summary": [
+        "지정학적 리스크 완화에도 불구하고 원·달러 환율이 여전히 1,500원대 근처에서 고공행진을 하고 있습니다.",
+        "시장 전문가들은 단순한 종전 소식만으로는 달러 강세 분위기를 완전히 반전시키기 어렵다고 분석합니다.",
+        "미국 연준의 금리 인하 지연 등 거시경제적 요인이 환율에 더 큰 영향을 미치고 있습니다."
+      ],
+      "implications": [
+        "단기적인 이벤트보다는 펀더멘털 지표 확인 전까지 환율의 높은 변동성이 유지될 전망입니다.",
+        "환율 하락을 기대한 공격적인 포지션 구축은 아직 시기상조일 수 있습니다."
+      ]
+    }
+  },
+  "id_rmw74w": {
+    "id": "id_rmw74w",
+    "title": "‘내 종목만 안 오르더니’… 독주하던 반도체 이어 조선·금융도 ‘기지개’ - v.daum.net",
+    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFB1S21xSmQ0Y1owX0Y1SzhMZU9Tb3FqWUxGR0E2WTRRUndyTVpoeTJiRjRWaWlkdEVSZGV2aDNkcUdyY2FOaGJUMHNQLUFoNTQ?oc=5",
+    "description": "‘내 종목만 안 오르더니’… 독주하던 반도체 이어 조선·금융도 ‘기지개’  v.daum.net",
+    "date": "2026-06-15T23:30:38.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "‘내 종목만 안 오르더니’… 독주하던 반도체 이어 조선·금융도 ‘기지개’",
+      "summary": [
+        "그동안 증시를 주도하던 반도체 업종에 이어 조선 및 금융 업종으로 순환매 장세가 펼쳐지고 있다.",
+        "조선업의 수주 호조와 금융업의 주주환원 정책이 투자 매력도를 높이고 있다.",
+        "시장 주도주가 확산되며 코스피 전반의 기초체력이 튼튼해지는 긍정적인 신호로 해석된다."
+      ],
+      "implications": [
+        "업종별 순환매에 대비한 포트폴리오 다변화 전략이 유효한 시점이다.",
+        "실적 턴어라운드가 기대되는 소외 업종에 대한 선제적인 관심이 필요하다."
+      ]
+    }
+  },
+  "id_vlrvzz": {
+    "id": "id_vlrvzz",
+    "title": "종전랠리, 다시 반도체 불장…삼전ㆍSK하닉 새 기록 쓰나 - v.daum.net",
+    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1RNlFCVVdLc1l4ZVYycXU2UTJYTHZhWVo5OHNGdFlSNGIxUDlpbUFObjdtdjJHTm5BOS1GWjctVWZ0aWdoaWs5djkwRVl3QW8?oc=5",
+    "description": "종전랠리, 다시 반도체 불장…삼전ㆍSK하닉 새 기록 쓰나  v.daum.net",
+    "date": "2026-06-15T21:03:22.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "종전랠리, 다시 반도체 불장…삼전ㆍSK하닉 새 기록 쓰나",
+      "summary": [
+        "지정학적 리스크 완화에 따른 이른바 '종전 랠리'의 기대감으로 반도체 시장이 다시 강력한 상승장을 맞이하고 있습니다.",
+        "삼성전자와 SK하이닉스 등 국내 대표 반도체 기업들이 새로운 실적 및 주가 기록을 세울 지 시장의 이목이 집중됩니다.",
+        "AI 반도체 수요 폭발과 거시 경제적 안도감이 결합되어 주가 상승에 시너지를 내고 있습니다."
+      ],
+      "implications": [
+        "국내 증시의 주도주인 반도체 섹터의 강세는 코스피 지수의 전반적인 레벨업을 이끄는 강력한 동력이 될 것입니다.",
+        "외국인 자금의 한국 시장 유입을 촉진하며, 반도체 밸류체인 전반에 걸친 온기가 확산될 전망입니다."
+      ]
+    }
+  },
+  "id_136xlv5": {
+    "id": "id_136xlv5",
+    "title": "코스피 종전 소식에 8,500선 회복…환율도 하락 - KBS 뉴스",
+    "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBKUTZYNXhyZ25JbjF3bDNfdVhXeC1zY0thRDExbGhBR0NhcWlWaTJGWDNyOGpOSnp6ekFEZV9FWlI1Q1RDNU9yV2dmUUJjZnRYMzlqOHNhLXJOZnM?oc=5",
+    "description": "코스피 종전 소식에 8,500선 회복…환율도 하락  KBS 뉴스",
+    "date": "2026-06-15T12:07:00.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "코스피 8,500선 회복… 원·달러 환율은 하락",
+      "summary": [
+        "국내 주식 시장의 투자 심리가 회복되며 코스피 지수가 8,500선을 돌파하는 강세를 보였습니다.",
+        "증시 상승과 함께 원·달러 환율은 하락세를 띠며 외환 시장도 안정을 되찾고 있습니다.",
+        "전반적인 거시 경제 지표들이 긍정적인 방향으로 턴어라운드하고 있습니다."
+      ],
+      "implications": [
+        "위험 자산 선호 현상이 뚜렷해지면서 외국인 및 기관의 대규모 순매수가 기대됩니다.",
+        "환율 하락으로 수입 물가 부담이 완화되어 내수 진작에 도움이 될 수 있습니다."
+      ]
+    }
+  },
+  "id_10jher6": {
+    "id": "id_10jher6",
+    "title": "AI·반도체·방산, 뭐가 뜨든 ‘대박’…전략광물 꽉 잡은 고려아연 - v.daum.net",
+    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFAzbnk2VGhJS0liRGhIRE1KNHdXeUlKNTJRRkxxSVNWR3JQTDBGT3J5ZWd0WmRIcndpNWp1bjFvR09KVC1tRVY5U2dWclU1aWs?oc=5",
+    "description": "AI·반도체·방산, 뭐가 뜨든 ‘대박’…전략광물 꽉 잡은 고려아연  v.daum.net",
+    "date": "2026-06-15T20:01:50.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "AI·반도체·방산, 뭐가 뜨든 ‘대박’…전략광물 꽉 잡은 고려아연",
+      "summary": [
+        "고려아연이 AI, 반도체, 방위산업 등 미래 메가 트렌드 산업에 필수적인 핵심 전략광물 제련 및 공급 능력을 인정받으며 시장의 높은 평가를 받고 있습니다.",
+        "어느 첨단 산업이 부상하든 소재의 근간이 되는 비철금속 및 희소금속의 수요는 필연적으로 증가할 수밖에 없는 구조적 이점을 지니고 있습니다.",
+        "최근 지정학적 갈등으로 인한 자원 무기화 흐름 속에서 동사의 안정적인 공급망 관리 역량은 대체 불가능한 경쟁력으로 부각됩니다."
+      ],
+      "implications": [
+        "전통적인 제련업체로 인식되던 기업 가치가 첨단 산업의 핵심 소재 밸류체인 기업으로 재평가(Re-rating)받으며 장기적인 주가 우상향 모멘텀을 확보하게 됩니다.",
+        "글로벌 공급망 재편 및 핵심 광물 확보 경쟁 속에서 고려아연과 같은 안정적인 소재 원천 공급 기업의 전략적 중요성과 협상력이 극대화될 것입니다."
+      ]
+    }
+  },
+  "id_klcezo": {
+    "id": "id_klcezo",
+    "title": "\"워시 연준 의장, 금리보다 더 큰 시험대 올라\" - KB Think",
+    "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9MaXpWczBDa1A1NEdCLWFORi12STd6ZnRheEk4d01sMHpYSDdNU18tQTVhSW5ELTZEc2F4THRNOWRfSkpudTdmVTM0UmdLbW5lLXdzdmhTZnRJaTNPdEN0R21nWThETGN6dUd1eElRb1pzdw?oc=5",
+    "description": "\"워시 연준 의장, 금리보다 더 큰 시험대 올라\"  KB Think",
+    "date": "2026-06-15T23:08:49.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "\"워시 연준 의장, 금리보다 더 큰 시험대 올라\"",
+      "summary": [
+        "새롭게 취임한 케빈 워시 미 연준 의장이 단순한 금리 결정을 넘어 복합적인 경제 위기 상황이라는 큰 시험대에 직면했다.",
+        "인플레이션 통제와 경기 연착륙이라는 두 마리 토끼를 잡아야 하는 어려운 과제를 안고 있다.",
+        "시장과의 소통 능력과 향후 제시할 통화정책의 새로운 프레임워크에 전 세계의 이목이 쏠리고 있다."
+      ],
+      "implications": [
+        "파월 전 의장 대비 달라진 연준의 통화정책 스탠스와 커뮤니케이션 방식에 시장이 적응하는 기간이 필요하다.",
+        "정책 불확실성에 따른 채권 및 외환 시장의 단기적인 널뛰기 장세가 연출될 수 있다."
+      ]
+    }
+  },
+  "id_1xanmfl": {
+    "id": "id_1xanmfl",
+    "title": "강기정 시장 “글로벌 기업 추가 투자 확정···AI·반도체 품은 광주로” - v.daum.net",
+    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9LcjdaZURoVnpjakVjMXdLanBneXgtY2pMUzlPOWZQTU1TMGpaUjRfei1tRHZ0cE9Jb0wwTjNtRUFxeVpNWW1uVm1LYWd0bDQ?oc=5",
+    "description": "강기정 시장 “글로벌 기업 추가 투자 확정···AI·반도체 품은 광주로”  v.daum.net",
+    "date": "2026-06-16T00:00:00.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "강기정 시장 “글로벌 기업 추가 투자 확정···AI·반도체 품은 광주로”",
+      "summary": [
+        "광주광역시가 글로벌 기업의 추가 투자를 유치하며 AI 및 반도체 산업 거점으로 도약하고 있다.",
+        "지역 경제 활성화와 양질의 일자리 창출에 대한 기대감이 고조되고 있다.",
+        "지방 자치단체의 적극적인 첨단 산업 육성 정책이 성과를 내고 있는 상황이다."
+      ],
+      "implications": [
+        "지역 균형 발전과 첨단 산업 클러스터 조성이 가속화될 전망이다.",
+        "해당 지역에 기반을 둔 기업이나 관련 인프라 투자 기업의 수혜가 예상된다."
+      ]
+    }
+  },
+  "id_hiyv5g": {
+    "id": "id_hiyv5g",
+    "title": "일진파워, AI 데이터 확산 및 반도체 설비 투자의 구조적 수혜 기대 - 머니투데이 - 머니투데이",
+    "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE8wTlcyZzAxeGtaR1FscjdQakExUHkyWU1fMlpWbFhMNW1lMGdmbWNiQ19HS2hrT19MWkJMcTFhdVFLX21hcUhFSml0VzdrdWdVLTVjeUVEdU15SU00WktZb1pMaTdRaVYy0gFuQVVfeXFMTUFQTXdMVkROYmxnaUpiTXhUT2RmTkRndUpPU3ZGb1hvWndSQkktQ2lodFcybHRwUnZTR1N1R0h6Q0xoa3oxczFwMmcyRkdWSjRjUThJQ1pSMkZlSlN1Z1piVjhURjRTX2RLWWpVbHc?oc=5",
+    "description": "일진파워, AI 데이터 확산 및 반도체 설비 투자의 구조적 수혜 기대 - 머니투데이  머니투데이",
+    "date": "2026-06-16T00:07:22.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "일진파워, AI 데이터 확산 및 반도체 설비 투자의 구조적 수혜 기대",
+      "summary": [
+        "AI 데이터 센터 확산과 반도체 설비 투자 증가로 일진파워의 장기적인 수혜가 예상된다.",
+        "전력 인프라 수요 증가에 따라 관련 기자재 및 설비 업체의 실적 성장이 기대된다.",
+        "구조적인 산업 변화가 일진파워의 새로운 성장 동력으로 작용할 전망이다."
+      ],
+      "implications": [
+        "전력 설비 및 인프라 관련주에 대한 투자자들의 지속적인 관심이 필요하다.",
+        "AI 산업 발전에 따른 전력 수요 증가가 유틸리티 및 전력 기자재 업종의 재평가를 이끌 수 있다."
+      ]
+    }
+  },
+  "id_1mmbrri": {
+    "id": "id_1mmbrri",
+    "title": "AI 반도체 수요에 수출물가 11개월째 상승 - 스트레이트뉴스",
+    "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBTTWlTcERfQ1lLMFlrZzFqN2R2VGxXU3dYVko1Qklncmx0NnRpemVmUjFLSk1kNUNMZDU5OUhGekF4cWREQ3NKOTN0MTFqa1BuN1hDLWNVX25YaUUyZHVxbjVITWdSVDdOengyYTI0Q0RMak3SAXdBVV95cUxQSzY4Z2pvZFhoMkFRV0lhUHo3QWppalhDeDdtTnBaWkZqNlN4cVY1cHFmczl6M2l1TGx1eTZRMVNCR1VfekpjMG82Z0xwT2NYdlktNUVQenNBSUhSclBVVWZ0RzllUWU0a3RacFVCUjVMZ3VvUjkzVQ?oc=5",
+    "description": "AI 반도체 수요에 수출물가 11개월째 상승  스트레이트뉴스",
+    "date": "2026-06-15T22:23:28.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "AI 반도체 수요에 수출물가 11개월째 상승",
+      "summary": [
+        "AI 반도체를 중심으로 한 글로벌 수요 급증에 힘입어 한국의 수출물가지수가 11개월 연속 상승세를 기록했습니다.",
+        "반도체 수출 호조가 전체 수출물가를 견인하며 국내 수출 기업들의 수익성 개선이 이루어지고 있습니다.",
+        "원화 약세 현상과 결합되어 원화 환산 수출물가의 오름폭은 더욱 가파른 상황입니다."
+      ],
+      "implications": [
+        "반도체 업종의 실적 개선이 가시화되면서 관련 기업들의 주가 밸류에이션 재평가가 기대됩니다.",
+        "수출 중심의 경제 성장이 탄력을 받을 수 있으나, 수입물가 동반 상승에 따른 내수 부담은 과제입니다."
+      ]
+    }
+  },
+  "id_1p49qvi": {
+    "id": "id_1p49qvi",
+    "title": "미·이란 종전에 숨통 트인 반도체…배터리는 ‘시험대’ - IT조선",
+    "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE03WWNZNFdUZEJYTF9vQ0d1WHhhSUI2cGdGSDhHdjRQZUtSWjQtQ3BhS0Z4OG5aVFA2ZU9mNE51LUdpejlJbTNQQmlUN2syejNkSjlGVlNreW1JLTVTMjZUbGltZFdzREVIQ3pnd3RFVmZnQzEy0gF0QVVfeXFMTTdZY1k0V1RkQlhMX29DR3VYeGFJQjZwZ0ZIOEd2NFBlS1JaNC1DcGFLRng4blpUUDZlT2Y0TnUtR2l6OUltM1BCaVQ3azJ6M2RKOUZWU2t5bUktNVMyNlRsaW1kV3NERUhDemd3dEVWZmdDMTI?oc=5",
+    "description": "미·이란 종전에 숨통 트인 반도체…배터리는 ‘시험대’  IT조선",
+    "date": "2026-06-15T21:10:35.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "미·이란 종전에 숨통 트인 반도체…배터리는 ‘시험대’",
+      "summary": [
+        "미국과 이란 간의 분쟁 종식 합의로 인해 유가가 안정되면서 글로벌 반도체 공급망의 숨통이 트였습니다.",
+        "지정학적 리스크 완화는 운송비 안정과 IT 기기 수요 회복으로 이어져 반도체 업계에 호재로 작용하고 있습니다.",
+        "반면, 전기차 캐즘(일시적 수요 정체)과 친환경 정책 변동성에 직면한 배터리 업계는 실적 방어라는 시험대에 올랐습니다."
+      ],
+      "implications": [
+        "반도체 섹터는 비용 절감 및 수요 증가라는 이중 수혜를 입으며 상승 모멘텀을 강화할 전망입니다.",
+        "2차전지 섹터는 정책 불확실성 해소 및 전기차 수요 회복 전까지 주가 변동성이 지속될 수 있습니다."
+      ]
+    }
+  },
+  "id_1r0zqyp": {
+    "id": "id_1r0zqyp",
+    "title": "반도체로 떠받쳤던 성장률 '청신호'… 올해 2% 후반대 찍나 - 머니투데이 - 머니투데이",
+    "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFB3MEVwdll2QVdyeTFjaFZXX3RxZ2hQMEJjcDNxY1pCYUFlTkh1SVRhVTlpUTNNa2xxLURSSzJNNHdwM1ludk94OFd2eXpHV1QyTGhPdTlBb012Z3FUSm1LWFUwaFNQZkpXUzd30gFwQVVfeXFMTjJFTnRKejFndUktaXQxVlAtSWhVVTNpTmMzWVhqSUFhODlEbDhXbW5YVEJsVjZMakYwRkVPSmhvWkl2ZFdUT3BlbEVpa2VsRkNVclF6QlVjVldkamlOVUE1TWg0ZWNXOGZYal85czhIcQ?oc=5",
+    "description": "반도체로 떠받쳤던 성장률 '청신호'… 올해 2% 후반대 찍나 - 머니투데이  머니투데이",
+    "date": "2026-06-15T19:05:00.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_1jjtz3l": {
+    "id": "id_1jjtz3l",
+    "title": "삼성전자·SK하이닉스 오늘도 달린다…종전 합의·美 반도체 훈풍 - 머니투데이 - 머니투데이",
+    "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFA5cXoyY0xveldnVm9pX2E1RkFmMnh6Y2ZDSnhYbFh1UFpNbE9mVjdkLUsxc3ZRMG0wMzhpai03Z0dUMGViQ21ra29HVlJ6WTZtMVpGUWplbFJxV2xqbmZ6bEJlSTNwMFNS0gFuQVVfeXFMTS1iUTFCRTBzdXhFWUI5aWRZeFRvWXV2Ykdma0lDOTcycWZzSURRdzhxTmJ6R2gxR3YwWDMtZlF0YXV6bkpCSVExcWVaa3c1dWYxSnV2b0VQTThMYXh3dmtreUZQMmdUUG5xUmN4Unc?oc=5",
+    "description": "삼성전자·SK하이닉스 오늘도 달린다…종전 합의·美 반도체 훈풍 - 머니투데이  머니투데이",
+    "date": "2026-06-16T00:10:59.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "삼성전자·SK하이닉스 오늘도 달린다…종전 합의·美 반도체 훈풍",
+      "summary": [
+        "종전 합의 기대감과 미국 반도체 시장의 긍정적인 흐름으로 삼성전자와 SK하이닉스 주가가 강세를 보이고 있다.",
+        "글로벌 반도체 수요 회복과 함께 지정학적 리스크 완화가 투자 심리를 개선하고 있다.",
+        "외국인 투자자들의 매수세가 유입되며 반도체 대장주의 주가 상승을 견인 중이다."
+      ],
+      "implications": [
+        "반도체 업종 전반에 걸친 밸류에이션 리레이팅이 기대된다.",
+        "지정학적 리스크 완화로 인한 국내 증시 전반의 상승 동력이 확보되었다."
+      ]
+    }
+  },
+  "id_15ay89f": {
+    "id": "id_15ay89f",
+    "title": "\"여전히 좋다\"…증권가, 반도체 전망 '맑음' - v.daum.net",
+    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5nWHlRRWkzWFVLakJiLXpKZUVnY0kzSXVFWHAxQ3NHdFRNczJza2VZSGxnRHBvX05BX0hfMElNWDRUUFROazUwUkZCUFJnd0k?oc=5",
+    "description": "\"여전히 좋다\"…증권가, 반도체 전망 '맑음'  v.daum.net",
+    "date": "2026-06-15T21:04:08.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "\"여전히 좋다\"…증권가, 반도체 전망 '맑음'",
+      "summary": [
+        "국내 증권가에서는 최근 시장 변동성에도 불구하고 반도체 업종에 대해 여전히 긍정적인 전망을 내놓고 있습니다.",
+        "글로벌 AI 수요의 지속적인 증가와 주요 기업들의 실적 호조가 투자 심리를 굳건하게 지지하는 주된 요인입니다.",
+        "전문가들은 반도체 업황의 장기적인 상승 사이클이 꺾이지 않았다고 분석하고 있습니다."
+      ],
+      "implications": [
+        "단기적인 주가 조정이 있더라도 반도체 대형주 중심의 매수세가 유입되며 증시 하방을 방어할 가능성이 큽니다.",
+        "AI 트렌드와 직결된 HBM 등 고부가가치 반도체 분야에 대한 집중 투자가 시장 수익률을 상회하는 핵심 전략이 될 것입니다."
+      ]
+    }
+  },
+  "id_10coe6u": {
+    "id": "id_10coe6u",
+    "title": "[경제톡톡] 8% 향하는 주담대 금리…가계 대출 절벽 속 생존 전략은? - KBS 뉴스",
+    "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE43Y1JWZFdzNkFkOWMydjcteE9tNXZtV2hsOVlnUmVQWG9sLTJwWUUwd1F0NlpfZlJtWjZOSno5Wko4Q3JRZ2ZwVEI2Z0twUTVfVjBKVHJGaDJ4cjYtU2ktc2c2QUJuQQ?oc=5",
+    "description": "[경제톡톡] 8% 향하는 주담대 금리…가계 대출 절벽 속 생존 전략은?  KBS 뉴스",
+    "date": "2026-06-15T11:07:00.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_2xs2gt": {
+    "id": "id_2xs2gt",
+    "title": "[속보]“전쟁 끝”다우지수 사상최고…반도체 급등 - 문화일보",
+    "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9FZ2VwejRqM3lLcEZyQWZQTlA1eDA0UHNYSUpqM1ZLN29wNlBCLUdPaTV2eXl1b083b3ItN2ZIajlHUlBKN3ctcThINWNXRGpY?oc=5",
+    "description": "[속보]“전쟁 끝”다우지수 사상최고…반도체 급등  문화일보",
+    "date": "2026-06-15T21:31:22.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "[속보]“전쟁 끝”다우지수 사상최고…반도체 급등",
+      "summary": [
+        "중동 등 지정학적 분쟁이 종식될 것이라는 기대감에 미국 다우지수가 사상 최고치를 경신했습니다.",
+        "리스크 온(위험자산 선호) 심리가 확산되면서 특히 AI 및 반도체 관련 기술주들이 급등세를 보였습니다.",
+        "글로벌 증시는 불확실성 해소와 함께 기업 실적 성장에 주목하며 랠리를 이어가는 모습입니다."
+      ],
+      "implications": [
+        "글로벌 증시의 훈풍이 국내 증시로 전이되어 코스피 반등 및 외국인 자금 유입이 가속화될 전망입니다.",
+        "특히 글로벌 IT 수요 회복 기대감으로 국내 반도체 대장주들의 단기적인 주가 급등이 예상됩니다."
+      ]
+    }
+  },
+  "id_1j42gf6": {
+    "id": "id_1j42gf6",
+    "title": "종전 훈풍에 서머랠리 기대…\"반도체 실적·코스닥 정책 모멘텀 기대\" - 마켓인",
+    "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5mMW5raThBR3U4aG9qN1JvRzlWSGFsc1hMbHFKOWs1MEIweC1UYnRGMHo4aFk0M1FMSnFoaTJHeE51c1F2bHdZa0FXVThDY1BiQkZKWVI0REtDUUJxLUJaZVJRN2dzSWk3M1RBbkR4WEY4dXM?oc=5",
+    "description": "종전 훈풍에 서머랠리 기대…\"반도체 실적·코스닥 정책 모멘텀 기대\"  마켓인",
+    "date": "2026-06-15T23:07:05.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "종전 훈풍에 서머랠리 기대…\"반도체 실적·코스닥 정책 모멘텀 기대\"",
+      "summary": [
+        "지정학적 리스크 완화에 따른 종전 기대감이 증시에 긍정적으로 작용하며 여름철 강세장인 '서머랠리' 기대가 커지고 있다.",
+        "주도주인 반도체 업종의 견조한 실적 발표와 함께 코스닥 시장 부양 정책이 추가적인 상승 동력이 될 전망이다.",
+        "투자 심리 회복을 바탕으로 개인 투자자들의 자금 유입이 확대되며 거래대금 증가세가 나타나고 있다."
+      ],
+      "implications": [
+        "대형 우량주와 성장주가 혼합된 바벨 전략이 여름 장세에서 유효할 것으로 보인다.",
+        "정부의 자본시장 밸류업 정책 구체화 시 중소형주로의 강한 수급 쏠림이 나타날 수 있다."
+      ]
+    }
+  },
+  "id_1dhumpm": {
+    "id": "id_1dhumpm",
+    "title": "달러·원 환율, 2.5원 오른 1513.6원 개장 - 오피니언뉴스",
+    "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBka1dtakk4U18yQ0pkeVY0X3hjdHBJSkJ0ZEhtOV9SWWVuUlBLYll4ZzRNMDg1ZzFKZlVuMEhkMThsLWVfMmtwZEFVYkF1bkJ3Yy0yd2xKYTFpSmRlb3k5bkoxT3h1TlVKNWhDUmJfanF1dw?oc=5",
+    "description": "달러·원 환율, 2.5원 오른 1513.6원 개장  오피니언뉴스",
+    "date": "2026-06-16T00:06:34.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "달러·원 환율, 2.5원 오른 1513.6원 개장",
+      "summary": [
+        "원/달러 환율이 전일 대비 2.5원 상승한 1513.6원에 거래를 시작했다.",
+        "글로벌 강달러 기조와 위험 회피 심리가 환율 상승을 부추기고 있다.",
+        "외환 당국의 미세 조정 경계감 속에서도 환율의 상방 압력이 지속되는 모습이다."
+      ],
+      "implications": [
+        "수출 기업들의 환율 효과에 따른 실적 개선 여부를 주시할 필요가 있다.",
+        "외국인 자본 유출 가능성과 수입 물가 상승에 대한 주의가 요구된다."
+      ]
+    }
+  },
+  "id_12smj9l": {
+    "id": "id_12smj9l",
+    "title": "물가안정에 무게추…한은 “늦지 않게 금리 인상” - 농민신문",
+    "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBzbzY0VUMyY2RCMWNrMWZ2TFJXWDVqUDlhZ1R0T1pqUmxZaUR6QTRWQnVGVFdNOTZXd0dSWTRQdlBMNVBVNjRIbERibnNzeWk3ZTh3QkVwTnpZdw?oc=5",
+    "description": "물가안정에 무게추…한은 “늦지 않게 금리 인상”  농민신문",
+    "date": "2026-06-15T09:34:00.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_smlu31": {
+    "id": "id_smlu31",
+    "title": "‘AI·DC 넘어 우주로’⋯ 위성통신, 新고부가 반도체 ‘블랙홀’ 되나 - 브릿지경제",
+    "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE4xNW9YQTlITEpUSGJnQkFDa0FVcUFxeGtfYXI4QkpPUVF5THNNRG5mTmxoUi0wYkh1ZjlvUm1OckpETVhxcGdPYmstSmhLZndDamlnSzVNd1VsQQ?oc=5",
+    "description": "‘AI·DC 넘어 우주로’⋯ 위성통신, 新고부가 반도체 ‘블랙홀’ 되나  브릿지경제",
+    "date": "2026-06-15T21:01:00.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "‘AI·DC 넘어 우주로’⋯ 위성통신, 新고부가 반도체 ‘블랙홀’ 되나",
+      "summary": [
+        "위성통신 산업이 인공지능(AI)과 데이터센터(DC)를 잇는 고부가가치 반도체의 새로운 대규모 수요처로 떠오르고 있습니다.",
+        "글로벌 우주 산업의 확장과 저궤도 위성 네트워크망 구축 경쟁이 반도체 수요를 폭발적으로 견인할 전망입니다.",
+        "국내외 반도체 기업들은 위성통신용 특화 칩셋 개발을 통해 새로운 성장 동력 확보에 나서고 있습니다."
+      ],
+      "implications": [
+        "우주 및 항공 통신용 반도체라는 새로운 니치 마켓의 선점 여부가 향후 반도체 기업들의 밸류에이션 프리미엄을 결정할 수 있습니다.",
+        "기존 IT 및 자동차 산업에 집중되었던 반도체 수요가 우주 산업으로 다변화됨으로써 반도체 슈퍼 사이클의 기간이 연장될 가능성이 있습니다."
+      ]
+    }
+  },
+  "id_8f8ipd": {
+    "id": "id_8f8ipd",
+    "title": "인플레 걱정? 더 큰 게 있다…Fed가 정말 금리 '인하할' 이유 [김현석의 퀵브리프] - 한국경제",
+    "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBJNnBjQUZ4T0xmWlpjNW42bHRIRUlTb1lJQ3d3UlpqRm9LNDlTWGpMVjllYTFPUTdjNHNwN3hCcXZiSHBaQ09zbUxOUzZnRF9tZG5iaER5bE80Z9IBVEFVX3lxTFBRTFRpMzVLc2FXaXFReXNtWlZ2NGpuSHdDZDc4SXlpSlhNOGVYaUg4SENDX09BdjNHTkQ4NDVzTEtKZEJYbjFxUGNCWk5YT25GWE43Vw?oc=5",
+    "description": "인플레 걱정? 더 큰 게 있다…Fed가 정말 금리 '인하할' 이유 [김현석의 퀵브리프]  한국경제",
+    "date": "2026-06-15T23:27:11.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "인플레 걱정? 더 큰 게 있다…Fed가 정말 금리 '인하할' 이유 [김현석의 퀵브리프]",
+      "summary": [
+        "인플레이션 우려에도 불구하고 미 연준(Fed)이 금리를 인하해야만 하는 근본적인 이유들이 제기되고 있다.",
+        "고금리 장기화로 인한 상업용 부동산 위기와 중소은행의 리스크 누적이 주요 원인으로 꼽힌다.",
+        "경기 침체 방어를 위한 선제적인 금리 인하 필요성이 시장의 기대를 높이고 있다."
+      ],
+      "implications": [
+        "연준의 통화정책 전환(피봇) 가시화 시 성장주 중심의 랠리가 재개될 수 있다.",
+        "매크로 리스크 완화에 따른 글로벌 유동성 확대 국면에 대비해야 한다."
+      ]
+    }
+  },
+  "id_1vyal53": {
+    "id": "id_1vyal53",
+    "title": "'반도체 영향' 5월 수출물가 0.3%↑…'컴퓨터' 15년 만에 최고치 - v.daum.net",
+    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9OeF9QSHlnQ0ttaFdWSWVtWk0td0luWnJMSFNWcFlibF9kY3Y2RXhuYnF0dDBCTlVocGluS2V0TnljV282Y01tUXc5MzhfR2M?oc=5",
+    "description": "'반도체 영향' 5월 수출물가 0.3%↑…'컴퓨터' 15년 만에 최고치  v.daum.net",
+    "date": "2026-06-15T21:03:08.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "'반도체 영향' 5월 수출물가 0.3%↑…'컴퓨터' 15년 만에 최고치",
+      "summary": [
+        "반도체 가격 상승의 여파로 5월 수출물가가 전월 대비 0.3% 오르며 상승 전환했습니다.",
+        "특히 컴퓨터 및 관련 기기의 수출물가는 글로벌 IT 수요 회복에 힘입어 15년 만에 최고치를 기록했습니다.",
+        "수출 주력 품목의 단가 상승은 전반적인 수출 지표 개선으로 이어지고 있습니다."
+      ],
+      "implications": [
+        "수출 물가와 단가의 상승은 국내 수출 기업들의 수익성 개선을 의미하며, 하반기 긍정적인 실적 발표를 예고합니다.",
+        "다만, 원자재 및 부품 등 수입물가 동향과 연계하여 국내 생산자물가 및 소비자물가에 미칠 상승 압력을 예의주시해야 합니다."
+      ]
+    }
+  },
+  "id_3vnc1e": {
+    "id": "id_3vnc1e",
+    "title": "정비사업 탄력…4년간 31만가구 착공 - 매일경제",
+    "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBxem5RMWlvamZxTjAxam5nOV9fVk1XNzdaRi04eHBycWRPQVRBVlh6bGptOXhvdGpJdnJvMmd4amFka1VHUFcwQWdYREpsWm5vNWNtbw?oc=5",
+    "description": "정비사업 탄력…4년간 31만가구 착공  매일경제",
+    "date": "2026-06-12T02:11:10.000Z",
+    "sourceId": "maekyung",
+    "sourceName": "매일경제 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_ogbt2s": {
+    "id": "id_ogbt2s",
+    "title": "“강남 집 전세 놓고 전세대출 받은 집주인들”…다음 규제 대상 1순위? - 매일경제",
+    "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBwV09zVFR3bVkyUWZHMVBQZHJwMzMxSVF4TEphb1hzeHRoV0hvUXdkZmlpUW9VVTl6OU45Vk55TThCR0JaTlQ3eERuQk1sM3dZN0RrZA?oc=5",
+    "description": "“강남 집 전세 놓고 전세대출 받은 집주인들”…다음 규제 대상 1순위?  매일경제",
+    "date": "2026-06-14T07:55:11.000Z",
+    "sourceId": "maekyung",
+    "sourceName": "매일경제 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_y4745t": {
+    "id": "id_y4745t",
+    "title": "라이나생명, 뇌질환 진단부터 요양까지 보장 - 매일경제",
+    "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxON01MMnBDOXhpRFJFV0trX3I0LXFraVU0cHdaMEVfRzNyeUw2bzNidkN6bW51aUZkbUdXSUUta1REYlFtNU56cFhpUVg4NkZhM1RENWs1WDNPTHlwRkQzTTRGZm5oS2JKdVo4VHdJTDItVUs1QUFRTUhKYzRYMVNVU2VMeERSRGVlWE1r?oc=5",
+    "description": "라이나생명, 뇌질환 진단부터 요양까지 보장  매일경제",
+    "date": "2026-06-15T04:58:43.000Z",
+    "sourceId": "maekyung",
+    "sourceName": "매일경제 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_1tzis09": {
+    "id": "id_1tzis09",
+    "title": "“완판돼 아쉬웠는데”…국민성장펀드, 3분기 중 재출시 - 매일경제",
+    "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5ZNl82R2JoNVE2b2IzUjZwSmw4bTdyM0o1MTYxYjN3Mi02ZjRndjVzS1NNZDU4YzZOM1V0d0QwdDdBN1RGbVB5TVlKLW40RGtLV0FxVA?oc=5",
+    "description": "“완판돼 아쉬웠는데”…국민성장펀드, 3분기 중 재출시  매일경제",
+    "date": "2026-06-15T01:29:31.000Z",
+    "sourceId": "maekyung",
+    "sourceName": "매일경제 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_k1dpkm": {
+    "id": "id_k1dpkm",
+    "title": "40년 저금리 시대는 끝났다 [신간] - 매일경제",
+    "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1xME5CUldvYlJjWW9NOHA4T050N1VqUWRreGxUSUljTE91c2pjSnpHZlhIY25RTU4wNzlRZXRMY1NWTEpXcDNBUF9HR0FRUlQyYjhQWXRB?oc=5",
+    "description": "40년 저금리 시대는 끝났다 [신간]  매일경제",
+    "date": "2026-06-12T07:08:08.000Z",
+    "sourceId": "maekyung",
+    "sourceName": "매일경제 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_10znrp8": {
+    "id": "id_10znrp8",
+    "title": "조마조마한 빅테크 ‘레드퀸’ 레이스 - 매일경제",
+    "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5xTXVqcGpSUHk4V2RYQ0RMakV6WE1KempLTzhYakxNY2Y0VXdkUlA3bTdwYWh5c2diY29VUnZkdkFJUVJEdVNVcmVoZWRFcmdfb21LcE1n?oc=5",
+    "description": "조마조마한 빅테크 ‘레드퀸’ 레이스  매일경제",
+    "date": "2026-06-12T06:25:36.000Z",
+    "sourceId": "maekyung",
+    "sourceName": "매일경제 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_u6yjwe": {
+    "id": "id_u6yjwe",
+    "title": "“서울에서 120만명 사라진다”…청년은 반토막, 노인만 덩그러니 - 매일경제",
+    "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5xWTdWWHRKczRaZTI3aUxDbzZXS2FYdkU4VXlJalRNaXlQYlZ4cmF4SDNuVjM0QTROQ0hEZ3dsS1ptSHozeEM0RDhqNlNBb2F3VlR2dA?oc=5",
+    "description": "“서울에서 120만명 사라진다”…청년은 반토막, 노인만 덩그러니  매일경제",
+    "date": "2026-06-14T02:38:06.000Z",
+    "sourceId": "maekyung",
+    "sourceName": "매일경제 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_cfot8n": {
+    "id": "id_cfot8n",
+    "title": "韓 태양광 발전원가, 국제 평균의 2배 - 매일경제",
+    "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1nSmZQcFpmSkFfclA3U0RSYk9TS1JZc2FjY1JybzdrNkpTdDNzTjUwRlFBMlZFVGlDVUxFcHp6RlBGZmNBejR3Uzl1ZTNNNEI3X2pSQg?oc=5",
+    "description": "韓 태양광 발전원가, 국제 평균의 2배  매일경제",
+    "date": "2026-06-15T08:43:20.000Z",
+    "sourceId": "maekyung",
+    "sourceName": "매일경제 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_1szi511": {
+    "id": "id_1szi511",
+    "title": "“한집 건너 편의점, 포화 아닌가요?”…신선 특화 매장으로 돌파구 찾는다 - 매일경제",
+    "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1WcHpDSkpFUTZieDBCQXlpSDYxRGhzYjFaOHhRYmNiVnlGX3ZEZHlEOEdVN3VqSV9BYkc0eDVSVUllQlhVRE5UYnBteDd4aVRoREdkSg?oc=5",
+    "description": "“한집 건너 편의점, 포화 아닌가요?”…신선 특화 매장으로 돌파구 찾는다  매일경제",
+    "date": "2026-06-15T07:50:57.000Z",
+    "sourceId": "maekyung",
+    "sourceName": "매일경제 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_1xph5c0": {
+    "id": "id_1xph5c0",
+    "title": "주담대 변동금리 또 오른다…두 달째 상승세 - 매일경제",
+    "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE50aVVqXzM1M0JVUG9pMkRuZU1ERDlCZ2tvWnpuTTA5MFQ0c0FqNG1rd1pqZzBoa1NfbmlrdUFINnhOUmYtcVNMWDd1bHZaUnliQTItTQ?oc=5",
+    "description": "주담대 변동금리 또 오른다…두 달째 상승세  매일경제",
+    "date": "2026-06-15T06:29:03.000Z",
+    "sourceId": "maekyung",
+    "sourceName": "매일경제 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_17k1lty": {
+    "id": "id_17k1lty",
+    "title": "원화 반등에도 여전히 1500원대 … 이번주 연준 FOMC가 또 고비 - 매일경제",
+    "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFB0T0tSc2NhRU9US2NXaFNqTVNxeVVCUmJNY2FEb0J6bnNtZUVOdW1URXdBQ3BYdWFxT0xGNkFDcnVRSWhrZFVTY2hWdUNmM09mOHV4dQ?oc=5",
+    "description": "원화 반등에도 여전히 1500원대 … 이번주 연준 FOMC가 또 고비  매일경제",
+    "date": "2026-06-15T08:49:59.000Z",
+    "sourceId": "maekyung",
+    "sourceName": "매일경제 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_1gj18yb": {
+    "id": "id_1gj18yb",
+    "title": "‘0’ 하나 잘못 붙여…18억 아파트 172억에 낙찰 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1PWVM4SzFnUUt0M2Qwd2dxZ2lNZ1lGY2pRaVlRS0Y0YU10Z1hadllJeE9zUWhnZlRZMzJwWlNaSmNheW5FUm4zRU80SENkaU1PVVhzWEp6aTVxQU1QUFJ3dFl3ZkE4YWRYX25INDdsXzFzWDRJUnfSAWZBVV95cUxPTzZmRFdaWXgtQUNGM0ttaFplUkozZTVxeGE1Q1Jib05qRFVQSGo0b09rMzZXbS1jaGx4RFZKRTNzeEFxQ2hpcG1HVWE4a1JrbDlNLVBNZkpzT0dUQ1phWEJkS1UzV0E?oc=5",
+    "description": "‘0’ 하나 잘못 붙여…18억 아파트 172억에 낙찰  동아일보",
+    "date": "2026-06-15T09:00:00.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_xix4p4": {
+    "id": "id_xix4p4",
+    "title": "증시불장에 ‘빚투’ 폭주… 신용대출-마통 다 죈다 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE83VjlqZjRxR0tEUHlaM0RQamo3Q2NNc1RvNkNJSm9ObFlqODB5MGZMY0c0QnRfWHJmRTJNYzhhWFZKSlFCalNqRVRLY2RsQXJTR0p1aEdzdDVjWWpPUjlibmp2UmdBTmJ6QzY4S3hXdG5TT29iZEHSAWZBVV95cUxQQjJ6WUpsUTc3cHlhMDFhSmdJZXRCc2pVY0hlWVVleHpMR3FHVFR2cm83VVlHdFAzNXVxMmJlVGtjVGV4NlZFZ19kMlVab0tfd3lmLWZORDlZUWNJV2paWXFVZ0NScHc?oc=5",
+    "description": "증시불장에 ‘빚투’ 폭주… 신용대출-마통 다 죈다  동아일보",
+    "date": "2026-06-12T16:40:00.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_1tzq3xa": {
+    "id": "id_1tzq3xa",
+    "title": "해킹당해 80% 폭락하자 돌연 프로필 사진 ‘곽튜브’로 바꾼 CEO - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1CXzJtaTZfQUpEWXhlTlZwMEJlTXpXeUJ0aXRhM2V0NEVjUGFvTmJxeHlxb1JweUFfenBhMkpCU2JSaXp5WjJ4N2dMZlYtcE5VSkJHVkphNnlQekluWklIQV80dGV0dmtEaUE0d1dJekV5aEtPMlHSAWZBVV95cUxQd0dKWFo2aEdxd0h4d0VXZ25WTEl1TDhEVkk1RmRHMHBEdHM2T3VRYlRaZndwLTBGWmRObHlYWlUxeE9uLTZMMVlKTkhCY3E4YmJiY1NjYkdSbEkwcFNkVUpMNnVtN3c?oc=5",
+    "description": "해킹당해 80% 폭락하자 돌연 프로필 사진 ‘곽튜브’로 바꾼 CEO  동아일보",
+    "date": "2026-06-15T07:17:20.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_141r9r6": {
+    "id": "id_141r9r6",
+    "title": "406마력으로 주행 안정성↑… 온-오프로드 어드벤처 SUV - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE96XzViNkgxNndFM0NlZXhJQVdjdUVVUVg4ZFpNUEI0cHZRVVhqYWptUkg1bjRYU3daYS1ELVlEQkFnTWJPdFFjSnQ4aG5nSi1xeklWVWFWLU9laWEydnd4UXMyU21VVTMwU2c3enRBbFlhV0hiNFHSAWZBVV95cUxPSmpSWVJjLW9IVmhBeklXOXlxZVlFWFdHV2EtZ3hFVW1VNlBsT0pGeHl3dTRZUXRWVnJNNzAwMXdOY2dzVlAyLWhNQWtwaW0xN2lKZk5uUWhSQjlvX243S2ZKVWhJZnc?oc=5",
+    "description": "406마력으로 주행 안정성↑… 온-오프로드 어드벤처 SUV  동아일보",
+    "date": "2026-06-15T19:30:00.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "406마력으로 주행 안정성↑… 온-오프로드 어드벤처 SUV",
+      "summary": [
+        "최고출력 406마력의 폭발적인 동력 성능을 갖춘 최신형 어드벤처 SUV가 탁월한 차체 제어 기술과 함께 새롭게 출시되었습니다.",
+        "도심의 일상적인 포장도로 주행은 물론, 거친 험로의 오프로드 환경에서도 흔들림 없는 승차감과 뛰어난 주행 안정성을 제공합니다.",
+        "강력한 퍼포먼스와 실용성을 동시에 추구하는 레저 마니아 및 프리미엄 SUV 수요층을 적극 공략하고 있습니다."
+      ],
+      "implications": [
+        "단순한 이동 수단을 넘어 라이프스타일을 대변하는 고성능, 다목적 차량에 대한 소비자들의 지불 의향이 지속적으로 높아지고 있음을 시사합니다.",
+        "향후 완성차 업계는 고출력 내연기관의 감성을 유지하면서도 전동화(하이브리드 등)를 결합하여 엄격해지는 환경 규제를 돌파하는 기술적 과제를 해결해야 할 것입니다."
+      ]
+    }
+  },
+  "id_179gc1y": {
+    "id": "id_179gc1y",
+    "title": "머스크가 띄운 ‘우주 데이터센터’… K배터리-태양광 ‘빅뱅’ 온다 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5PNE9jckNnalE4d0xHZWtHbWU2TjBmcnBwMFFRM3V0ZnQyYzliTlRhQXVRd3dmemFRUnNPQnNYck1ZMzZDZGFnd0FyV1JkV0x1OGQ4MWlPQ2MzN3FuQzVEbDNNS2pPbUI4WG4ycEpsTlB2MGthdHfSAWZBVV95cUxQeUxoTW9nN1JnNV94YU5ZMzVtTUhFV3FZS01JODlqeW1wczJsTnhxakJJZkt4Q2pCYXF4U2RETEpaMkRMeTVZb0kxRTVhNk1DcC1NdXdBVXZpZ09BLU5SanhZSWxQRWc?oc=5",
+    "description": "머스크가 띄운 ‘우주 데이터센터’… K배터리-태양광 ‘빅뱅’ 온다  동아일보",
+    "date": "2026-06-14T15:30:00.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "머스크가 띄운 ‘우주 데이터센터’… K배터리-태양광에도 기회",
+      "summary": [
+        "일론 머스크가 제안한 우주 데이터센터 구상이 현실화될 경우, 국내 배터리 및 태양광 업계에 새로운 기회가 될 전망입니다.",
+        "우주 공간에서 안정적인 전력 공급을 위해 고효율 태양광 패널과 에너지 저장 장치(ESS)의 수요가 급증할 수 있습니다.",
+        "국내 기업들은 우주 환경에 적합한 차세대 에너지 기술 개발에 박차를 가하고 있습니다."
+      ],
+      "implications": [
+        "우주 산업과 에너지 기술의 결합으로 관련 부품 및 소재 기업들의 새로운 시장 창출이 기대됩니다.",
+        "글로벌 우주 인프라 구축 경쟁에서 한국 기업들의 기술 경쟁력 입증이 중요한 과제가 될 것입니다."
+      ]
+    }
+  },
+  "id_1bpr9dp": {
+    "id": "id_1bpr9dp",
+    "title": "“공모주 실패했지만 대안 있다”…스페이스X 청약 놓친 개미들, ETF 관심 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5pbVZQZHczaDZGN1ZwZVQ4NzZBSlM4aGhFNHpKX0lNOURDSWsyem1OY1l0cmpJMG9MY2NianBwbDBuUGQwSVBPS3JUVERtZ0VjMGoyVjFON1VvNFVVWWpXWnJWZ3FVd25Mb0VtN0p3eXA0WF80b3fSAWZBVV95cUxOTWpSRHlwd1I1andtQURxODR1YWw2NnEzNGp1TUhzQmR5NnpMWUttOVZranlQdVdoWXN6ZTN4VlpHcXRfLWlkMlpnczh1S1hLTmVDUnJmbHpQbUVZR2xkWjE2eWVNQkE?oc=5",
+    "description": "“공모주 실패했지만 대안 있다”…스페이스X 청약 놓친 개미들, ETF 관심  동아일보",
+    "date": "2026-06-15T22:21:27.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "“공모주 실패했지만 대안 있다”…스페이스X 청약 놓친 개미들, ETF 관심",
+      "summary": [
+        "스페이스X 등 인기 해외 공모주 청약에 실패한 개인 투자자들이 우주항공 관련 ETF로 눈길을 돌리고 있습니다.",
+        "개별 기업 직접 투자의 어려움을 극복하기 위해 관련 테마 전체에 분산 투자하는 전략이 주목받고 있습니다.",
+        "우주항공 및 위성 산업의 성장성에 대한 기대감이 ETF 자금 유입을 촉진하고 있습니다."
+      ],
+      "implications": [
+        "우주항공, 방산 테마 ETF의 거래 대금 증가 및 관련 편입 종목들의 수급 개선이 예상됩니다.",
+        "개인 투자자들의 해외 테마형 ETF 투자 수요가 지속적으로 확대될 전망입니다."
+      ]
+    }
+  },
+  "id_1tfv8o5": {
+    "id": "id_1tfv8o5",
+    "title": "전극 공정 장비 리더 씨아이에스, SFA넥셀로 새 도약 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBTcUtmckhBM3M1RDYtcGhMTTN3UkstdzlCSkItSzMxS0pyWUEwYjVuZVBtTWZ1eDhEMmQ1Y1pOZVZpaDhxUHdNTG4zbDN3Q2pRYzZwcWNSQ3QyRHZYM2VSbGMzTXNaVHRNV1ZFQklnVkpsRlp1WWfSAWZBVV95cUxPbERjbHJjd3drNUxJSG8ycEZxX0hsczNLR04tdXgzUm9HYng4RURHeHZrclNGRzFZMHNoUFBxeWZjN2p5OGMxbHRUQjJGdEJQUXJpcmIwQjlkdFRydmc4RzdYYkN0RGc?oc=5",
+    "description": "전극 공정 장비 리더 씨아이에스, SFA넥셀로 새 도약  동아일보",
+    "date": "2026-06-15T19:30:00.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "전극 공정 장비 리더 씨아이에스, SFA넥셀로 새 도약",
+      "summary": [
+        "국내 이차전지 전극 공정 장비 분야의 선도 기업인 씨아이에스가 'SFA넥셀'로 사명을 전격 변경하고 제2의 도약을 선언했습니다.",
+        "이번 사명 변경은 스마트팩토리 전문 기업 SFA 그룹 편입 이후 정체성을 확립하고 양사 간의 시너지를 극대화하기 위한 전략적 조치입니다.",
+        "새로운 간판을 단 SFA넥셀은 기술력 고도화를 통해 글로벌 배터리 제조 장비 시장에서의 지배력을 한층 넓혀갈 계획입니다."
+      ],
+      "implications": [
+        "모기업 SFA의 물류 자동화 솔루션과 전극 공정 장비 기술이 융합됨으로써 글로벌 고객사들에게 더욱 경쟁력 있는 턴키(Turn-key) 솔루션 제공이 가능해집니다.",
+        "브랜드 통합과 사업 효율성 제고를 통해 대규모 배터리 설비 투자(CAPEX) 사이클에서 수주 점유율을 유의미하게 끌어올릴 수 있는 계기가 마련되었습니다."
+      ]
+    }
+  },
+  "id_1d3l9f5": {
+    "id": "id_1d3l9f5",
+    "title": "“AI 자율제조 솔루션으로 글로벌 시장 선도할 것” - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBnaHRZZFZXUTJBV2VJbjBxUFdUT2l1OTBLTVdRUkg1UTVLQlJWY2Q0WC1wT2FtRE5fdmFYMmZvLVM0ZXZ0Y3EyNUx3b1RfejRDaG5KdC1MdkRiaktjYTF1WEdUVkdJNm5kdnVVOGJhVDBpVmpoTGfSAWZBVV95cUxNQlNPYU4tVnNERi1SNmlyM2JhcmMzeFQ0cGRXRms0WlFmQlRid052TXYyQjY0elBheWJnMGRZX3pFUnVwQ2hvbmdZSHJWY1dkcGo5Y2FrX2NRZ3F6XzRmaG1xcG1DVWc?oc=5",
+    "description": "“AI 자율제조 솔루션으로 글로벌 시장 선도할 것”  동아일보",
+    "date": "2026-06-15T19:30:00.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "“AI 자율제조 솔루션으로 글로벌 시장 선도할 것” - 동아일보",
+      "summary": [
+        "국내 기업이 AI 기반 자율제조 솔루션을 바탕으로 글로벌 시장 진출을 본격화하고 있습니다.",
+        "스마트 팩토리를 넘어선 자율제조 기술은 생산성과 효율성을 극대화할 것으로 기대됩니다.",
+        "정부와 산업계의 협력이 AI 제조 생태계 구축의 핵심 경쟁력으로 작용할 전망입니다."
+      ],
+      "implications": [
+        "제조업의 패러다임이 AI 자율제조로 전환되며 관련 기술 수요가 급증할 것입니다.",
+        "글로벌 시장에서의 경쟁 우위를 위해 R&D 투자 및 인재 확보가 중요해집니다."
+      ]
+    }
+  },
+  "id_krmca7": {
+    "id": "id_krmca7",
+    "title": "“베트남 대신 중국”…고환율에 가성비 여행지로 떴다 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFB1aTlLQkNZMVhSWFdnQ19DTDJJbEswd2pMeXM1U0NPYVZOazhGZGNLTlFsTHQ2NVRmc1hSRlZtMWFJZXJTRDh6YmhvN25zS0RYcmJfbFR5YlNLRUZOWjdCWVRwNE5lQWlIelRJdllpX2JXSnhTQUHSAWZBVV95cUxNZmF5ZkFuTlI0YjJnOVhET3UtM2lqTGlsOEFqMmswVVphdnJOd0dwT1lRTHVRbkVmQlVPRmxzZzdFLWNYY3N2RzdqRG56RGFWYThHeDZFSUM4VlJEUzF6aGMtc1pCanc?oc=5",
+    "description": "“베트남 대신 중국”…고환율에 가성비 여행지로 떴다  동아일보",
+    "date": "2026-06-15T08:09:00.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_gpx7b5": {
+    "id": "id_gpx7b5",
+    "title": "상용 근로자 26년 만에 감소… 20, 30대 19만여명 줄어 ‘직격탄’ - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9WUnZUWVd4eFVxNGxRQ01fYnlIQ1dNdVRfODJpWkZTalFzSTZKdFRiSnd1clNPUnBPYjhqd3Y2b1pvOGQ2RkhNbkVEZlFQQ1pZRjJJTFZpbnRvYzNqLUVzZmdndEtEVnhGWWhyRDJrYW1RRkJCc0HSAWZBVV95cUxOZ3c4cjY0alIxUjBrQm5lWUVHbGFUNE9ZUnNraTJIRzQ0U0x5NVFndm1jSE4yTDJhQThDOUs0MGFBQ0lYYy1GUlBMbXA2SDRyZmJNbDMyWTRnVVFfVHV0MUd5X2tuRXc?oc=5",
+    "description": "상용 근로자 26년 만에 감소… 20, 30대 19만여명 줄어 ‘직격탄’  동아일보",
+    "date": "2026-06-15T15:30:00.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "상용근로자 수 26년만에 감소…20·30대서 19만명 줄었다",
+      "summary": [
+        "안정적인 일자리로 분류되는 상용근로자 수가 26년 만에 처음으로 감소세를 기록함",
+        "특히 경제 활동의 주축인 20대와 30대 청년층에서만 상용근로자가 19만 명이나 급감함",
+        "경기 침체로 인한 기업들의 채용 축소와 인구 구조 변화가 복합적으로 작용한 결과로 분석됨"
+      ],
+      "implications": [
+        "청년층 양질의 일자리 감소로 인한 내수 침체 장기화 및 잠재 성장률 하락 우려",
+        "노동 시장 이중구조 심화 현상에 대응하기 위한 실효성 있는 청년 고용 대책 마련 시급"
+      ]
+    }
+  },
+  "id_eqeeke": {
+    "id": "id_eqeeke",
+    "title": "[머니 컨설팅]‘롤러코스피’ 장세, 극단적 투자 피해야 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1YOHl2QXNHVU5TTnkwZlhQS0J2OHJRcEhRNDA2c1M0dlJXRHVaRFRoUnNDVHFZQ3VYV0I3Q1RsZEh5R2t6SmMtQkxfeGRhbVJOWDVHZzdBcmRkVWd5ajllaGZSdU9KUjNla0lGRnE4NHlLSmJLU2fSAWZBVV95cUxQWUlFZHpaMzNFdjJYX090QVM0X2Jtem1aLV9pNVVFdHBrdjNzMjRSSENEdHBlaVlDMGZmbUZjTEFaeEM2WVVfUTBScHNYeGxhNGo2bm10SXRuUXpPRFpoU3pZYzVpTEE?oc=5",
+    "description": "[머니 컨설팅]‘롤러코스피’ 장세, 극단적 투자 피해야  동아일보",
+    "date": "2026-06-15T15:30:00.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_1hedlky": {
+    "id": "id_1hedlky",
+    "title": "삼성전자, ‘디지털 트윈’ 본격 가동… 검증 기간 15일→2일로 단축 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9xTWJhSk5zTElrSldqSVpSQUZaclJMTlFQZ1YyTG5EMThpMmRYYm9xLTlYeWJuTm5vMC1YZmdBZkV6MFNtaU82Z0RsYWN2ZFhxZDkya1BNRVRVdlB4UXhSVDlXSXdBd1RuYUZmWHBPUkZIaTV4T1HSAWZBVV95cUxNa1N6MHZZejRMWlN1OGhKSkc3S2xIcE9fcVNrcnJWdWstN29rVmVtTDVRaFJQSUZ6dENaTWVXZHl1T0VfZ0Rfam9oc2lHdWt2ZjJwdnAtd0RJYjZfWXJmQkU4S3hhd3c?oc=5",
+    "description": "삼성전자, ‘디지털 트윈’ 본격 가동… 검증 기간 15일→2일로 단축  동아일보",
+    "date": "2026-06-15T08:08:00.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_1g3hpv9": {
+    "id": "id_1g3hpv9",
+    "title": "공유 모빌리티 새 패러다임… 23만 회원이 증명 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE01VkljSmh6MklJS2VNLUpEY0s2YzNWVmZiZC02YmQxekU4Ujl1X0wtaUtoSGl1Sk8ySW4xT3p6dDl5QXFObDg3SnNyUlNnX29GVkdUM2J0MTJwdi1SSWh1NHhvNFRtc0FkUjdfampQaU5EeXJINnfSAWZBVV95cUxQQ1BlZVlEeUVKWTRmbnB5c3N3RmNWMk82OFdZQWc0c24wRHJZUVhxTlBWREFTMmZWaF9qQnNfQ1RwQXFmckl3c1dfcS1kUmw0R1BoVWhYV0tzWjNuREpSSEdRVVlQTVE?oc=5",
+    "description": "공유 모빌리티 새 패러다임… 23만 회원이 증명  동아일보",
+    "date": "2026-06-15T19:30:00.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "공유 모빌리티 새 패러다임… 23만 회원이 증명 - 동아일보",
+      "summary": [
+        "공유 모빌리티 서비스가 혁신적인 비즈니스 모델로 23만 명의 회원을 확보하며 새로운 패러다임을 제시했습니다.",
+        "사용자 편의성을 극대화한 플랫폼과 친환경 이동 수단의 결합이 성공 요인으로 꼽힙니다.",
+        "데이터 기반의 맞춤형 서비스 제공이 고객 만족도와 재이용률을 크게 높였습니다."
+      ],
+      "implications": [
+        "공유 모빌리티 시장의 성장이 지속되며 관련 인프라 투자가 확대될 것입니다.",
+        "이동 수단의 소유에서 공유로의 인식 전환이 가속화될 전망입니다."
+      ]
+    }
+  },
+  "id_1w4tznk": {
+    "id": "id_1w4tznk",
+    "title": "“장사 안되는데 대출금리 올라” 자영업자 연체급증 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5zS09nYWxuNkVwUUlROEJjbWc2NjFQMnZnZEp6aU9oZ2ZMX01neTZCSDVHZ3p5RTNXcTV6cjBHaWx3S1VWUnZLNkc5VlJXcmh2MTBRZ3puSjVIMEZ2QWxjZW1SSVI0UVVxYjBIY0VzNVpLa3h5SEHSAWZBVV95cUxOc0NQRXpxb2tMZkhrQ2tFN2tYYm8wU2tpUWFkMnU0NEFpX21tdHAzaHg4SnJNVzMyLVAzZVQ2WlZFb0QzeHdmbWExMnFXU0oyaTFuRnVCYzQ4ODFBOTQtOGNranVnS3c?oc=5",
+    "description": "“장사 안되는데 대출금리 올라” 자영업자 연체급증  동아일보",
+    "date": "2026-06-15T15:30:00.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_1jw24a0": {
+    "id": "id_1jw24a0",
+    "title": "“맛에 영양까지 듬뿍” 영올드 사로잡은 건강식 ‘똑똑한 변신’ - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBhTzRDTlgtaFV1RE5OVlByamluaGduSTF0TXVXQlFJbkhDMWJuNDFhY0hnODNkcm42SjNMT05tSHVhUTZ3WWZkSEFKMkZ0MDMwSlVVYklRaEVTZXc1d1VWemFhMXRqdy0yTnFIM1hLZ29samdkd0HSAWZBVV95cUxNLWVwTER0UVR5YTFQcWR0N1dxZ2NYQWxGRjMza3dxbWQydFM4VUI2ZmptRE9vemoyMGZ2YzdEdlljWG80MWprWkNScTZTX0didGh3MTJEaWxZdVhfZEtCZ2RFYWRucVE?oc=5",
+    "description": "“맛에 영양까지 듬뿍” 영올드 사로잡은 건강식 ‘똑똑한 변신’  동아일보",
+    "date": "2026-06-15T15:30:00.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_1kyozg1": {
+    "id": "id_1kyozg1",
+    "title": "[애널리스트의 마켓뷰]자동차 산업, ‘볼륨의 시대’가 저물고 있다 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE12bVlwb3dpWFBMdlZWdzZCZlYtdlRqeGJDSU1QTHN4LWh3b2phMGE4LWtGX2YtbHFVeXZBamluVTQzSS1YOGJoX0ttT1Q5eDFPXzNpSGRRSmNwMVNGdlNtLU9SdkFmRHBpdm42XzZBamoyZkU1UVHSAWZBVV95cUxPVnJOb2VVLVNsY1RNNEZ2Wm9ueGQ3SHp4dXNINUZ1S21lVTRUamUybkRsVGJVUGJZZFVGNFd3cmhMZUtUbDZCeDVuSU9pQW5BNl9EemNrSUp4QWwyN19HOGtJcnBhZ1E?oc=5",
+    "description": "[애널리스트의 마켓뷰]자동차 산업, ‘볼륨의 시대’가 저물고 있다  동아일보",
+    "date": "2026-06-15T15:30:00.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_i35w63": {
+    "id": "id_i35w63",
+    "title": "JTBC, 법원에 ‘기업 회생’ 신청… 중앙일보는 “워크아웃 추진” - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBFVEZ6dWZnWm5rYldTLXpzRlF2UTM4dTJ6QW9YaDlMUEpYVzljZkhKbGw4b1p1TnFnRXRIN3IzSFdqTTlWQkhZUUJETjRuUVNEaWJhT3hNTVdVeGdONUgyMDFMZDBWei12aVZfSUhqTUIxb3lhYnfSAWZBVV95cUxQVl9PWjhheUZXSkpOWVpnVFUxZHhnd0lUSDVlNGtQdXRzVFUyMk1CYlh0U1ZlN0FkckpCTnJnQ0JiWTk1Y01NcGs3OFRlTTRrcDIzcGU5aWpkLUJvMjBtNTgxN0VBd1E?oc=5",
+    "description": "JTBC, 법원에 ‘기업 회생’ 신청… 중앙일보는 “워크아웃 추진”  동아일보",
+    "date": "2026-06-15T19:30:00.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "JTBC, 법원에 ‘기업 회생’ 신청… 중앙일보는 “워크아웃 추진” - 동아일보",
+      "summary": [
+        "미디어 그룹 JTBC가 경영 악화로 인해 법원에 기업 회생 절차를 신청했습니다.",
+        "반면 계열사인 중앙일보는 재무 구조 개선을 위해 워크아웃을 추진 중인 것으로 알려졌습니다.",
+        "미디어 산업 전반의 수익성 약화와 구조적 변화가 경영 위기의 주요 원인으로 분석됩니다."
+      ],
+      "implications": [
+        "국내 미디어 업계의 대대적인 구조조정과 인수합병(M&A) 가능성이 대두되고 있습니다.",
+        "디지털 전환 및 새로운 수익 모델 발굴이 생존을 위한 필수 과제로 부상했습니다."
+      ]
+    }
+  },
+  "id_anixup": {
+    "id": "id_anixup",
+    "title": "美, AI도 수출통제… 앤스로픽 최신 모델에 한국 등 외국인 접근 차단 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBQMGJ2ZEJlZ0pVeUVCVGNjWWZEdDJWWWQ5MkNaQTFiLV9xeE1wSEtPNVlwQVFQaXlyZ3ZtUGlJNGxKSl9OOHZCVC1PZVc1Y2ZJeEx4akFYTzkzVXRoejRZbDVNdGVLeDkxNHhwVFZ2X3JoUmF1cHfSAWZBVV95cUxPbHNYcWttenlKT0tHb1MzSEktLW0tNmxfTzZOZ2ZKazBwTUlTWWRHZ2c4RWpNRlhibGVqeDJaUE85MTV2djhyam5BVG1LRHRkZ3BXdkxRTFhyQ3Yta3k2T2dkdmtrMUE?oc=5",
+    "description": "美, AI도 수출통제… 앤스로픽 최신 모델에 한국 등 외국인 접근 차단  동아일보",
+    "date": "2026-06-14T19:30:00.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_12b6kva": {
+    "id": "id_12b6kva",
+    "title": "전 세계 ECU 100억 개의 선택… K-SDV 생태계를 연결하다 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1sODF5UHdQTVBxYkhnQlhHRnFsdndJTHJUaUlBOE1GWFBlOUdBMWxCRFVuM1EzaHR0VGQ3OEpVVk9qVEVpeVJFUzVTUV9HZVIwS1NqUFgxeDBHVHZORDdyZURiaEl0WG5XZ0pMWHNwSFJVejlCTGfSAWZBVV95cUxNVDFfSGxiY0poRG5jc2dNT0tHdlREdlQ1dzZ5UTJlTzZQS3hFRDlwTzhQYm1fOG1Ea19LWHFXaURBakdoaEg5TUQzalNvOU55MGFYYS1wTkhFNDJjdmhtLWQtZ2pYaEE?oc=5",
+    "description": "전 세계 ECU 100억 개의 선택… K-SDV 생태계를 연결하다  동아일보",
+    "date": "2026-06-15T19:30:00.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "전 세계 ECU 100억 개의 선택… K-SDV 생태계를 연결하다 - 동아일보",
+      "summary": [
+        "한국의 소프트웨어 정의 차량(SDV) 기술이 전 세계 100억 개의 전자제어장치(ECU)와 연결되며 주목받고 있습니다.",
+        "K-SDV 생태계는 차량의 성능 향상과 새로운 모빌리티 경험을 제공하는 핵심 인프라로 자리 잡았습니다.",
+        "소프트웨어 중심의 자동차 산업 개편 속에서 국내 기업들의 글로벌 입지가 강화되고 있습니다."
+      ],
+      "implications": [
+        "차량용 소프트웨어 플랫폼 표준화를 둘러싼 글로벌 경쟁이 심화될 것입니다.",
+        "소프트웨어 개발 역량이 자동차 제조사의 핵심 경쟁력으로 작용하게 됩니다."
+      ]
+    }
+  },
+  "id_1irgyum": {
+    "id": "id_1irgyum",
+    "title": "무료로 받은 메타몽이 620만 원…‘종이 카드’에 빠진 어른들[요즘소비] - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1YWVgtTFNhbm9tWVAtUEZvY1EzMFNYaXcyN2ZlZk03cVlBRGZERTRRRE92QW5Ydmh3d1BiLWh6TnZ5TDJma1dZazA1azFzWnBXR1dWbmk0MlMwU2pvN2NwOFNjM3Bfd25YZVJsZTcxUE1HTGJWc2fSAWZBVV95cUxORTh5Q3VLaDJ4c3QwTnRSRWRfYTk0S0RhRl9zUnRQNGFidDVCMmV0c01XSVhCRWcxSUhjZjVCUTdtZUJQWHdELWZhMndjeTgySDlhdzZJNmp4eWZ6YlRndTJKSEQ0aXc?oc=5",
+    "description": "무료로 받은 메타몽이 620만 원…‘종이 카드’에 빠진 어른들[요즘소비]  동아일보",
+    "date": "2026-06-15T07:49:00.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_mx74wu": {
+    "id": "id_mx74wu",
+    "title": "30년 교통행정 전문성, 미래 모빌리티의 길을 열다 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5kNEo1RXl2ZXVPRTJBbWtKTEpsaGFvZXY3bjB1ZWdGRldHUHNUNERYUmlRbmxRMTloSGZVOElZaEVOU0ZXVzVBSWxfR3NEZlA0eEtfYTd2QWN3aDUyMlByWlhWellOaUJRY3ZhWHlnR1p1RnE3N0HSAWZBVV95cUxQdTlOa0JRV1JEb05VeWdScVdzSXoxNjlCRHFjVG5fUmxSc0psTl9rQnY1RkQ3MWpzWnd3dXFEVl9ZUjBveWdwcVFES0I4V1dnMUd4NTJxSHRkZmtxR2lkLUpRamREOUE?oc=5",
+    "description": "30년 교통행정 전문성, 미래 모빌리티의 길을 열다  동아일보",
+    "date": "2026-06-15T19:30:00.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "30년 교통행정 전문성, 미래 모빌리티의 길을 열다 - 동아일보",
+      "summary": [
+        "30년의 교통행정 노하우가 미래 모빌리티 산업 발전의 중요한 밑거름이 되고 있습니다.",
+        "전문가들은 법과 제도의 선제적 정비가 혁신적인 모빌리티 서비스 도입의 필수 조건이라고 강조합니다.",
+        "민관 협력을 통한 규제 혁신이 자율주행 및 도심항공교통(UAM) 상용화를 앞당길 것입니다."
+      ],
+      "implications": [
+        "미래 모빌리티 산업 육성을 위한 정부의 정책적 지원과 제도 개선이 가속화될 것입니다.",
+        "교통 시스템 전반의 디지털 전환이 도심 교통 문제 해결에 기여할 것으로 기대됩니다."
+      ]
+    }
+  },
+  "id_15xgrdh": {
+    "id": "id_15xgrdh",
+    "title": "주류 검역 1위… 스마트 물류센터로 혁신 선도 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1uanozdHBWLUpxS01tSXpVaEVrOWVRVEFxNTdtOHZhbDZRcm9sQ1lJT29BeE5RbnNVbGlJd1ctN3M3azNFSllUTkVrS2xVZDJsOThzWVlSOFFvVlNuaV91a1JCc2J1YzBTYXNXd1lkdDBIV18wVkHSAWZBVV95cUxOT2kwYVMzVmhINE5hbmRFQ0hSbEZrX1Q0TlU3Q2tCaDEwX2s2WVF5QlpwVmNWWGt6RnVxQnEyVzVGWG5KallIM2tBRjc4M3I2NTZvLXRkWEk3WThBRDZJQnFtRk5NM3c?oc=5",
+    "description": "주류 검역 1위… 스마트 물류센터로 혁신 선도  동아일보",
+    "date": "2026-06-15T19:30:00.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "주류 검역 1위… 스마트 물류센터로 혁신 선도 - 동아일보",
+      "summary": [
+        "주류 검역 분야 1위 기업이 첨단 스마트 물류센터를 구축하며 업계 혁신을 주도하고 있습니다.",
+        "자동화 설비와 AI 데이터 분석을 통해 물류 처리 속도와 정확성을 획기적으로 향상시켰습니다.",
+        "콜드체인 시스템 강화를 통해 제품의 신선도 유지와 품질 관리에 만전을 기하고 있습니다."
+      ],
+      "implications": [
+        "물류 산업 전반에 걸쳐 스마트 물류 시스템 도입이 경쟁력 확보의 필수 요소가 될 것입니다.",
+        "데이터 기반의 효율적인 재고 관리와 배송 최적화가 기업 수익성에 크게 기여할 전망입니다."
+      ]
+    }
+  },
+  "id_1udm2ou": {
+    "id": "id_1udm2ou",
+    "title": "접히는 자전거에 ‘충돌 방지 기술’까지 탑재 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5lRjRoaGpoSEpxZXZ0SExhYVdrOFo4NU5pdzlCV3JkM09uWEZUMVQ1SldaU0lTN1Robmdlckl6S0g5T240UHFka29pbWRRa0RnbWFwVUdSb3NCdFZHTVFmbHpRN3U5dWNZZ3BPbGd5dHREa3R1MlHSAWZBVV95cUxNNHhSWWs4d2FmTkNHY25ZMHN2eHFPckFlM3pFaWlBYUFabnBuRlJraGhQcUFZeVpncTY0bTdKeDZrYWdvS2ZUWlVGVmYtU0hfLW9YT0owbGRqcUhadlVUQ3NuT01IeXc?oc=5",
+    "description": "접히는 자전거에 ‘충돌 방지 기술’까지 탑재  동아일보",
+    "date": "2026-06-15T19:30:00.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "접히는 자전거에 ‘충돌 방지 기술’까지 탑재 - 동아일보",
+      "summary": [
+        "휴대성이 뛰어난 접이식 자전거에 첨단 충돌 방지 기술이 적용되어 안전성이 크게 강화되었습니다.",
+        "센서와 알고리즘을 활용해 장애물을 감지하고 라이더에게 경고를 보내는 시스템이 특징입니다.",
+        "퍼스널 모빌리티 시장에서 안전 기술의 중요성이 커지며 혁신 제품의 출시가 이어지고 있습니다."
+      ],
+      "implications": [
+        "자전거 등 마이크로 모빌리티에 첨단 안전 기술 적용이 새로운 트렌드로 자리 잡을 것입니다.",
+        "안전성이 확보된 이동 수단에 대한 소비자의 수요가 프리미엄 시장 성장을 이끌 것으로 보입니다."
+      ]
+    }
+  },
+  "id_ji5a0a": {
+    "id": "id_ji5a0a",
+    "title": "‘중동 훈풍’ 코스피, 보름만에 8500선 회복… 외국인 이틀 연속 순매수 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9YSEJ2bVdFeXR5VmV2VGJOLWY2VmprNHo4NjVRTUhxZ0xoaXhEYTIxQzZJelRLSkY5YXJFTnl0YVhZZGw4bG5yQXJfVURfTk91Q0NSM2o1NlhKdkJabTBKUHUxd2JTWWVGSnI0TndzbzM5cDk4TkHSAWZBVV95cUxPdDFPWEtGZTNxZ0JZalNxMFEzLUxXcFdkemtDS3F6dk85ZFA4OFdzTUEtNUhaUXczZTJsMWo4ajBtSDBOQkVOWElsZ3NGV0FIYmdsT2NiX05jY2Y5cHpFSVFQYVJYOGc?oc=5",
+    "description": "‘중동 훈풍’ 코스피, 보름만에 8500선 회복… 외국인 이틀 연속 순매수  동아일보",
+    "date": "2026-06-15T19:30:00.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "‘중동 훈풍’ 코스피, 보름만에 8500선 회복… 외국인 이틀 연속 순매수 - 동아일보",
+      "summary": [
+        "중동 지역의 긍정적인 경제 소식에 힘입어 코스피가 보름 만에 8500선을 돌파했습니다.",
+        "외국인 투자자들이 이틀 연속 강한 순매수세를 보이며 국내 증시 상승을 견인했습니다.",
+        "에너지 및 건설 등 중동 관련 수주 기대감이 높은 업종을 중심으로 주가가 큰 폭으로 올랐습니다."
+      ],
+      "implications": [
+        "중동 시장의 인프라 투자 확대가 국내 기업들의 실적 개선에 긍정적인 영향을 미칠 것입니다.",
+        "외국인 자금 유입 지속 여부가 향후 코스피의 추가 상승을 결정짓는 주요 변수가 될 전망입니다."
+      ]
+    }
+  },
+  "id_60wk6x": {
+    "id": "id_60wk6x",
+    "title": "서울 집값 처음 10억 넘어… 아파트 전세, 1.15% 껑충 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE10a1lVM3ZLcEg0TDlHUjQ5anJodnZHN3dqZFdpeWZaeWNjLWlfZzE1SFREV0VMeDNIN1Vvc2txcDY3SVFSOWhjb0F1d3A5QzNPSDJoUzN0aHI1OFZ2M0UxOXBlZjRlbjRLZF9ROFdnNDVOdHlsSnfSAWZBVV95cUxNTDNYOTFqbExMOUp1SGdOQTFRVktIU2Z4YzZIWFNJdUJnRGV4VXRRNllLNnhwdmFNbnpWdzFQMHR2WUNDWXZzRzJNemhOUE5YLXdHc0VCS29NUW42dHRpZlZMenI3WFE?oc=5",
+    "description": "서울 집값 처음 10억 넘어… 아파트 전세, 1.15% 껑충  동아일보",
+    "date": "2026-06-15T15:30:00.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": null
+  },
+  "id_mwdi3l": {
+    "id": "id_mwdi3l",
+    "title": "UK Announces Social Media Ban for Children Under 16",
+    "link": "https://www.nytimes.com/2026/06/15/world/europe/uk-social-media-children.html",
+    "description": "Prime Minister Keir Starmer said his government planned to bar children under 16 from social media, following similar efforts in Australia and elsewhere.",
+    "date": "2026-06-15T22:53:50.000Z",
+    "sourceId": "nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "aiAnalysis": {
+      "translatedTitle": "영국, 16세 미만 아동의 소셜미디어 사용 금지 발표",
+      "summary": [
+        "키어 스타머 영국 총리는 16세 미만 아동의 소셜미디어 사용을 금지하는 법안을 추진하겠다고 발표했습니다.",
+        "이는 호주 등 다른 국가에서 시행 중인 유사한 아동 보호 조치의 일환으로 진행됩니다.",
+        "소셜미디어가 아동의 정신 건강에 미치는 부정적인 영향을 최소화하는 것이 주된 목적입니다."
+      ],
+      "implications": [
+        "글로벌 소셜미디어 기업들의 사용자 기반 축소 및 규제 대응 비용 증가가 예상됩니다.",
+        "에듀테크 및 아동용 안전 콘텐츠 플랫폼 시장이 반사이익을 얻을 가능성이 있습니다."
+      ]
+    }
+  },
+  "id_1l8kn7g": {
+    "id": "id_1l8kn7g",
+    "title": "SpaceX’s Stock Surges on First Full Day of Trading",
+    "link": "https://www.nytimes.com/2026/06/15/business/spacex-stock.html",
+    "description": "The company’s shares jumped on Monday, and executives announced that they had raised even more money in an already record-breaking initial offering.",
+    "date": "2026-06-15T20:24:46.000Z",
+    "sourceId": "nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "aiAnalysis": {
+      "translatedTitle": "스페이스X 주가, 상장 첫날 급등",
+      "summary": [
+        "일론 머스크가 이끄는 스페이스X의 주식이 주식 시장에 데뷔한 첫날, 투자자들의 막대한 매수세가 몰리며 급등 마감했습니다.",
+        "회사는 이번 기업공개(IPO)를 통해 기록적인 자금을 조달하는 데 성공했으며, 당초 예상치를 훌쩍 뛰어넘는 성과를 거두었습니다.",
+        "확보된 대규모 자본은 스타십 우주선 개발 및 스타링크 위성 인터넷망 확충에 전폭적으로 투자될 예정입니다."
+      ],
+      "implications": [
+        "스페이스X의 성공적인 상장은 민간 우주 경제(New Space) 시대의 본격적인 개막을 알리는 상징적인 사건으로, 관련 우주항공 및 위성 통신 섹터의 투자 붐을 촉발할 것입니다.",
+        "압도적인 자금 조달 능력을 바탕으로 스페이스X가 글로벌 우주 산업의 독점적 지위를 굳힐 가능성이 높아 경쟁사들의 견제와 우주 개발 경쟁이 심화될 전망입니다."
+      ]
+    }
+  },
+  "id_qvw6fk": {
+    "id": "id_qvw6fk",
+    "title": "Trump Administration Reignites Its Feud With Anthropic Over Latest A.I. Models",
+    "link": "https://www.nytimes.com/2026/06/13/us/politics/trump-anthropic-ai-models.html",
+    "description": "The administration’s surprise restrictions Friday cut off foreign access to Anthropic’s latest models and sparked another round of finger pointing.",
+    "date": "2026-06-14T00:41:06.000Z",
+    "sourceId": "nyt-tech",
+    "sourceName": "NYT 테크놀로지",
+    "lang": "en",
+    "category": "Tech",
+    "aiAnalysis": null
+  },
+  "id_22qy7j": {
+    "id": "id_22qy7j",
+    "title": "What to Know About Planned Social Media Bans in Australia, the U.K. and Beyond",
+    "link": "https://www.nytimes.com/2026/06/15/world/europe/social-media-bans-worldwide.html",
+    "description": "Britain said it would ban social media access for children under 16 starting in 2027, joining several other countries introducing similar measures.",
+    "date": "2026-06-15T11:19:17.000Z",
+    "sourceId": "nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "aiAnalysis": null
+  },
+  "id_1vg3cez": {
+    "id": "id_1vg3cez",
+    "title": "How Kratom, an Addictive Gas Station Drug, Found Allies in Trump’s Cabinet",
+    "link": "https://www.nytimes.com/2026/06/15/us/politics/kratom-trump-administration.html",
+    "description": "With support from Markwayne Mullin and Robert F. Kennedy Jr., the kratom industry is pursuing a potentially lucrative policy. Mr. Mullin owns equity in a company that could benefit.",
+    "date": "2026-06-15T21:09:17.000Z",
+    "sourceId": "nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "aiAnalysis": {
+      "translatedTitle": "트럼프 내각에서 동맹을 찾은 중독성 마약 '크라톰'",
+      "summary": [
+        "크라톰 산업이 마크웨인 멀린과 로버트 F. 케네디 주니어의 지원을 받아 수익성 있는 정책 추진을 모색하고 있습니다.",
+        "멀린은 크라톰 관련 정책 수혜를 입을 수 있는 회사의 지분을 소유하고 있어 이해상충 우려가 제기됩니다.",
+        "트럼프 행정부 내의 우호적 인맥을 통해 크라톰 업계는 시장 확대와 규제 완화를 기대하고 있습니다."
+      ],
+      "implications": [
+        "정치적 지원을 등에 업고 관련 업계의 로비가 강화될 경우, 건강 위험성에도 불구하고 크라톰 시장이 크게 성장할 수 있습니다.",
+        "중독성 물질에 대한 규제 완화 논란은 향후 미국 내 공중 보건 정책에 중대한 윤리적, 법적 파장을 일으킬 가능성이 있습니다."
+      ]
+    }
+  },
+  "id_8uk702": {
+    "id": "id_8uk702",
+    "title": "Will SpaceX Fortunes Trickle Down to This Texas Town?",
+    "link": "https://www.nytimes.com/2026/06/15/business/spacex-ipo-trickle-down-bastrop.html",
+    "description": "Elon Musk built a huge complex outside the city of Bastrop, population 14,000. Its residents now wonder what the historic SpaceX initial public offering might mean for them.",
+    "date": "2026-06-15T19:11:43.000Z",
+    "sourceId": "nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "aiAnalysis": {
+      "translatedTitle": "스페이스X의 부가 텍사스의 이 마을에 흘러들어올까?",
+      "summary": [
+        "일론 머스크가 인구 1만 4천 명의 텍사스 배스트롭(Bastrop) 외곽에 대규모 스페이스X 시설을 건설했습니다.",
+        "지역 주민들은 역사적인 스페이스X의 기업공개(IPO)가 지역 경제와 자신들에게 어떤 영향을 미칠지 기대와 우려를 동시에 보이고 있습니다.",
+        "인구 유입과 부동산 가치 상승 등 지역 발전의 기회가 있는 반면, 급격한 변화에 따른 인프라 부족 문제도 우려되고 있습니다."
+      ],
+      "implications": [
+        "대형 테크 기업의 입주가 소규모 지역 경제에 미치는 파급 효과와 그에 따른 사회적 변화를 시사합니다.",
+        "기업의 성장이 지역 사회의 동반 성장으로 이어지기 위한 지자체의 인프라 확충 및 상생 노력이 중요해집니다."
+      ]
+    }
+  },
+  "id_aqqfn2": {
+    "id": "id_aqqfn2",
+    "title": "Deal to Reopen Hormuz Kicks Off Long Effort to Ease Energy Crisis",
+    "link": "https://www.nytimes.com/2026/06/15/business/energy-environment/iran-deal-oil-natural-gas.html",
+    "description": "The pace of the recovery will depend on how confident companies are that the deal between the United States and Iran will hold and be extended.",
+    "date": "2026-06-15T15:52:14.000Z",
+    "sourceId": "nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "aiAnalysis": null
+  },
+  "id_1xb5zi": {
+    "id": "id_1xb5zi",
+    "title": "Fox to Acquire Roku, Joining the Battle for the Living Room",
+    "link": "https://www.nytimes.com/2026/06/15/business/fox-roku-acquisition-streaming-media.html",
+    "description": "The $22 billion deal is one of the biggest moves yet by Lachlan Murdoch, who took over for his father as chairman of Fox in 2023.",
+    "date": "2026-06-15T16:41:20.000Z",
+    "sourceId": "nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "aiAnalysis": null
+  },
+  "id_12mx5u0": {
+    "id": "id_12mx5u0",
+    "title": "Global Markets Rally on Iran Peace Hopes",
+    "link": "https://www.nytimes.com/2026/06/15/business/dealbook/trump-iran-peace-rally.html",
+    "description": "A framework agreement could be signed later this week, but details are scarce. Still, investors are cheering the potential breakthrough.",
+    "date": "2026-06-15T12:14:24.000Z",
+    "sourceId": "nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "aiAnalysis": null
+  },
+  "id_1ulag6y": {
+    "id": "id_1ulag6y",
+    "title": "Cautious of U.S.-Iran Deal, Shipping Firms Await Strait to Reopen",
+    "link": "https://www.nytimes.com/2026/06/15/business/us-iran-deal-shipping-companies-strait-of-hormuz.html",
+    "description": "Shipowners welcomed the agreement to reopen the Strait of Hormuz, but said they would need more security guarantees before resuming transits.",
+    "date": "2026-06-15T18:25:22.000Z",
+    "sourceId": "nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "aiAnalysis": null
+  },
+  "id_1asdnmm": {
+    "id": "id_1asdnmm",
+    "title": "China Moves the Price of Oil, Even When It Buys Less",
+    "link": "https://www.nytimes.com/2026/06/15/business/china-oil-iran.html",
+    "description": "China is the world’s largest purchaser of oil. But three months after the war with Iran began, it cut its imports, cushioning the global market.",
+    "date": "2026-06-15T12:28:23.000Z",
+    "sourceId": "nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "aiAnalysis": null
+  },
+  "id_7i55ly": {
+    "id": "id_7i55ly",
+    "title": "To Toast America’s Birthday, They Blended Bourbon From Every State",
+    "link": "https://www.nytimes.com/2026/06/15/dining/drinks/united-states-of-bourbon-blend-lost-lantern.html",
+    "description": "United States of Bourbon, the result of a Vermont couple’s many road trips, is just one of several special whiskeys marking the 250th.",
+    "date": "2026-06-15T09:00:51.000Z",
+    "sourceId": "nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "aiAnalysis": null
+  },
+  "id_lif9oz": {
+    "id": "id_lif9oz",
+    "title": "Taking on Neo-Nazis, One Trademark at a Time",
+    "link": "https://www.nytimes.com/2026/06/15/world/europe/neo-nazi-trademark-germany.html",
+    "description": "In Germany, a campaign called Rights Against the Right is securing trademarks for right-wing symbols and phrases, aiming to cut into a revenue stream that sustains hate groups.",
+    "date": "2026-06-15T15:08:29.000Z",
+    "sourceId": "nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "aiAnalysis": null
   }
 }
