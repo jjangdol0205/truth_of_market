@@ -1,12 +1,11 @@
 const fs = require('fs');
 const path = require('path');
 
-const archivePath = path.join(__dirname, '..', 'news-archive.json');
+const archivePath = path.join(__dirname, '..', 'pending-summaries.json');
 const tasksDir = path.join(__dirname, '..', 'agent-tasks');
-const chunkSize = 15; // Reduce to 15 to make it easier for agents
+const chunkSize = 15;
 
-const archive = JSON.parse(fs.readFileSync(archivePath, 'utf8'));
-const unanalyzed = Object.values(archive).filter(item => item.aiAnalysis === null);
+const unanalyzed = JSON.parse(fs.readFileSync(archivePath, 'utf8'));
 
 console.log(`총 미요약 기사: ${unanalyzed.length}건`);
 

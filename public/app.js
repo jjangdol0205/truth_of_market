@@ -632,14 +632,14 @@ function handleShareCurrentArticleToKakaotalk() {
   const article = state.currentSelectedArticle;
   if (!article) return;
 
-  const aiData = state.aiCache[article.id] || state.bookmarks.find(b => b.id === article.id) || (article.aiAnalysis ? article : null);
+  const savedStudy = state.bookmarks.find(b => b.id === article.id && b.aiAnalysis) || state.aiCache[article.id] || (article.aiAnalysis ? article : null);
 
-  if (!aiData || !aiData.aiAnalysis) {
+  if (!savedStudy || !savedStudy.aiAnalysis) {
     alert('⚠️ 먼저 AI 분석(요약/번역)이 로드된 후에 공유할 수 있습니다.');
     return;
   }
 
-  const analysis = aiData.aiAnalysis;
+  const analysis = savedStudy.aiAnalysis;
   let shareText = `📌 [투자 스터디 노트 공유] 📌\n`;
   shareText += `📰 *${analysis.translatedTitle}* (${article.sourceName})\n\n`;
   
@@ -724,14 +724,14 @@ function handleShareCurrentArticleToTelegram() {
   const article = state.currentSelectedArticle;
   if (!article) return;
   
-  const aiData = state.aiCache[article.id] || state.bookmarks.find(b => b.id === article.id) || (article.aiAnalysis ? article : null);
+  const savedStudy = state.bookmarks.find(b => b.id === article.id && b.aiAnalysis) || state.aiCache[article.id] || (article.aiAnalysis ? article : null);
 
-  if (!aiData || !aiData.aiAnalysis) {
+  if (!savedStudy || !savedStudy.aiAnalysis) {
     alert('⚠️ 먼저 AI 분석(요약/번역)이 로드된 후에 공유할 수 있습니다.');
     return;
   }
 
-  const analysis = aiData.aiAnalysis;
+  const analysis = savedStudy.aiAnalysis;
   let shareText = `📌 [투자 스터디 노트 공유] 📌\n`;
   shareText += `📰 *${analysis.translatedTitle}* (${article.sourceName})\n\n`;
   
@@ -769,7 +769,7 @@ function toggleBookmark(articleId) {
     const cachedAi = state.aiCache[articleId];
     state.bookmarks.push({
       ...article,
-      aiAnalysis: cachedAi ? cachedAi.aiAnalysis : null
+      aiAnalysis: article.aiAnalysis || (cachedAi ? cachedAi.aiAnalysis : null)
     });
   }
 
