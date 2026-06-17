@@ -28,7 +28,10 @@ app.get('/', (req, res) => {
   let articlesList = Object.values(newsArchive).sort((a, b) => new Date(b.date) - new Date(a.date));
   // 애드센스 대응 완벽주의: 요약 완료된 프리미엄 기사만 사전 렌더링
   const premiumArticles = articlesList.filter(art => art.aiAnalysis != null);
-  res.render('index', { articles: premiumArticles });
+  res.render('index', { 
+    articles: premiumArticles,
+    adsenseClientId: process.env.ADSENSE_CLIENT_ID || null
+  });
 });
 
 // --- [API 최소화 및 캐싱 고도화] ---

@@ -8,6 +8,11 @@
   <meta name="description" content="국내외 주요 언론사 실시간 경제 뉴스를 수집하고 Google Gemini AI를 활용하여 번역, 요약 및 투자 시사점을 제공하는 나만의 투자 연구소.">
   <meta name="google-site-verification" content="KjkX-zWjuxmckvBpxZXF-DSQyDpIWvZPNuV7YrNBxjk" />
   
+  <% if (typeof adsenseClientId !== 'undefined' && adsenseClientId) { %>
+  <!-- Google AdSense 심사용 자동 광고 스크립트 -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=<%= adsenseClientId %>" crossorigin="anonymous"></script>
+  <% } %>
+  
   <!-- 구글 폰트 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
