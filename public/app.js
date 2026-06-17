@@ -8,7 +8,7 @@ const state = {
   articles: [],        // 수집된 국내외 뉴스 기사
   customFeeds: [],     // 사용자가 추가한 커스텀 RSS 피드 리스트
   bookmarks: [],       // 스터디 보관함에 저장된 AI 분석 노트 목록
-  currentFilter: 'all',// 현재 선택된 카테고리 필터 (all, Markets, Macro, Tech, custom, bookmarks)
+  currentFilter: 'curated',// 현재 선택된 카테고리 필터 (curated, all, Markets, Macro, Tech, custom, bookmarks)
   searchQuery: '',     // 검색 필터 텍스트
   currentSelectedArticle: null, // 현재 AI 모달에 활성화된 기사
   aiCache: {},         // 이번 세션에 로드된 기사의 AI 분석 결과 캐시 (동일 기사 중복 호출 방지)
@@ -91,11 +91,11 @@ function setupEventListeners() {
   // 테마 전환 버튼
   document.getElementById('themeToggle').addEventListener('click', toggleTheme);
 
-  // 로고 클릭 시 홈(전체 뉴스 피드 및 검색 초기화)으로 이동
+  // 로고 클릭 시 홈(오늘의 핵심 30선)으로 이동
   const logoBtn = document.getElementById('logoContainer');
   if (logoBtn) {
     logoBtn.addEventListener('click', () => {
-      state.currentFilter = 'all';
+      state.currentFilter = 'curated';
       state.searchQuery = '';
       
       const searchInput = document.getElementById('searchInput');
@@ -103,7 +103,7 @@ function setupEventListeners() {
       
       const navItems = document.querySelectorAll('.nav-item');
       navItems.forEach(nav => {
-        if (nav.getAttribute('data-filter') === 'all') {
+        if (nav.getAttribute('data-filter') === 'curated') {
           nav.classList.add('active');
         } else {
           nav.classList.remove('active');
@@ -111,7 +111,7 @@ function setupEventListeners() {
       });
       
       const titleEl = document.getElementById('currentCategoryTitle');
-      if (titleEl) titleEl.innerText = '전체 실시간 투자 뉴스';
+      if (titleEl) titleEl.innerText = '오늘의 핵심 30선';
       
       renderArticles();
       showToast('🏠 홈 화면으로 이동했습니다.');
@@ -147,6 +147,7 @@ function setupEventListeners() {
       
       // 필터 클릭 시 제목 변경
       const titles = {
+        curated: '오늘의 핵심 30선',
         all: '전체 실시간 투자 뉴스',
         Markets: '글로벌 경제 & 투자 뉴스 (US)',
         Macro: '국내 거시경제 및 금융 뉴스 (KR)',
@@ -301,7 +302,10 @@ function renderArticles() {
     filtered = [...state.bookmarks];
   } else {
     // 카테고리별 필터링
-    if (state.currentFilter === 'all') {
+    if (state.currentFilter === 'curated') {
+      // 에이전트 팀이 큐레이션한 핵심 30선 기사 필터링
+      filtered = state.articles.filter(art => art.isCurated || (art.aiAnalysis && art.aiAnalysis.isPremiumCuration));
+    } else if (state.currentFilter === 'all') {
       filtered = [...state.articles];
     } else if (state.currentFilter === 'custom') {
       // 나만의 커스텀 등록 피드 뉴스만 필터링

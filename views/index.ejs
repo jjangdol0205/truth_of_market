@@ -79,7 +79,10 @@
         <nav class="sidebar-nav">
           <h3 class="nav-title"><i class="fa-solid fa-layer-group"></i> 카테고리 필터</h3>
           <ul class="nav-list">
-            <li class="nav-item active" data-filter="all">
+            <li class="nav-item active" data-filter="curated">
+              <i class="fa-solid fa-crown" style="color: hsl(var(--accent-gold));"></i> <span>오늘의 핵심 30선</span>
+            </li>
+            <li class="nav-item" data-filter="all">
               <i class="fa-solid fa-newspaper"></i> <span>전체 뉴스 피드</span>
             </li>
             <li class="nav-item" data-filter="Markets">
@@ -160,7 +163,7 @@
       <!-- 2.2 메인 뉴스 그리드 리스트 -->
       <section class="main-news-section">
         <div class="section-header">
-          <h2 id="currentCategoryTitle">전체 실시간 투자 뉴스</h2>
+          <h2 id="currentCategoryTitle">오늘의 핵심 30선</h2>
           <div class="news-meta-controls">
             <span class="article-count" id="articleCount">로딩 중...</span>
             <button id="refreshNewsBtn" class="refresh-btn"><i class="fa-solid fa-arrows-rotate"></i> 새로고침</button>

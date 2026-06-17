@@ -988,46 +988,26 @@ app.get('/article/:id', (req, res) => {
 async function archiveDailyNews() {
   console.log('🔄 [아카이브] 백그라운드 실시간 RSS 수집 및 아카이빙 작업 구동 중...');
   diagnosticLog.lastRun = new Date().toISOString();
-  try {
-    const freshNews = await fetchAllNews();
-    let newCount = 0;
-
-    freshNews.forEach(article => {
-      // 신규 기사인 경우 아카이브 등록
-      if (!newsArchive[article.id]) {
-        newsArchive[article.id] = {
-          ...article,
-          aiAnalysis: null // 초기 상태는 AI 분석 미실행
-        };
-        newCount++;
-      } else {
-        // 이미 저장된 기사는 기존의 소중한 aiAnalysis 결과를 온전히 유지
-        newsArchive[article.id] = {
-          ...article,
-          aiAnalysis: newsArchive[article.id].aiAnalysis || null
-        };
-      }
-    });
-
-    // 로컬 보존 파일 용량 최소화를 위해 보존 기사는 최근 1000개 기사로 제한
-    const sortedKeys = Object.keys(newsArchive).sort((a, b) => {
-      return new Date(newsArchive[b].date) - new Date(newsArchive[a].date);
-    });
-
-    if (sortedKeys.length > 1000) {
-      const keysToDelete = sortedKeys.slice(1000);
-      keysToDelete.forEach(k => delete newsArchive[k]);
+  
+  // Run asynchronously to prevent blocking server boot
+  const { exec } = require('child_process');
+  console.log('🤖 [Agent Team] 백그라운드 멀티 에이전트 팀 스크립트 비동기 구동...');
+  
+  exec('node scripts/run-agent-team.js', (error, stdout, stderr) => {
+    if (error) {
+      console.error('❌ [아카이브] 멀티 에이전트 팀 구동 오류:', error.message);
+      diagnosticLog.success = false;
+      diagnosticLog.errors.push({ source: 'multi_agent_team', error: error.message });
+      return;
     }
-
-    saveNewsArchive();
+    
+    // Reload local variables in server.js after script completes
+    loadNewsArchive();
+    loadAiCache();
+    
     diagnosticLog.success = true;
-    diagnosticLog.freshNewsCount = freshNews.length;
-    console.log(`✅ [아카이브] 수집 완료. 신규 유입: ${newCount}건, 로컬 총 영구 보존 뉴스: ${Object.keys(newsArchive).length}건`);
-  } catch (error) {
-    console.error('❌ [아카이브] 일일 RSS 수집 오류:', error.message);
-    diagnosticLog.success = false;
-    diagnosticLog.errors.push({ source: 'global_archive', error: error.message });
-  }
+    console.log(`✅ [아카이브] 멀티 에이전트 팀 Curation 완료.`);
+  });
 }
 
 // 서버 실행 및 백그라운드 예약 작업 활성화
