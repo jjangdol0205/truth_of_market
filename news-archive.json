@@ -5955,7 +5955,11 @@
     "category": "Markets",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "US"
+    "region": "US",
+    "specialistScore": 5,
+    "specialistAnalysis": [
+      "오프라인 분석 대기"
+    ]
   },
   "id_1fd7wt": {
     "id": "id_1fd7wt",
@@ -5969,7 +5973,11 @@
     "category": "Markets",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "US"
+    "region": "US",
+    "specialistScore": 5,
+    "specialistAnalysis": [
+      "오프라인 분석 대기"
+    ]
   },
   "id_15um542": {
     "id": "id_15um542",
@@ -9569,7 +9577,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 5,
+    "specialistAnalysis": [
+      "오프라인 분석 대기"
+    ]
   },
   "id_11rd29c": {
     "id": "id_11rd29c",
@@ -9639,7 +9651,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 5,
+    "specialistAnalysis": [
+      "오프라인 분석 대기"
+    ]
   },
   "id_1ifs8c2": {
     "id": "id_1ifs8c2",
@@ -9653,7 +9669,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 5,
+    "specialistAnalysis": [
+      "오프라인 분석 대기"
+    ]
   },
   "id_zk78x3": {
     "id": "id_zk78x3",
@@ -9745,7 +9765,11 @@
     "category": "Markets",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "US"
+    "region": "US",
+    "specialistScore": 5,
+    "specialistAnalysis": [
+      "오프라인 분석 대기"
+    ]
   },
   "id_33sfsn": {
     "id": "id_33sfsn",
@@ -10161,7 +10185,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 5,
+    "specialistAnalysis": [
+      "오프라인 분석 대기"
+    ]
   },
   "id_klcezo": {
     "id": "id_klcezo",
@@ -10651,7 +10679,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 5,
+    "specialistAnalysis": [
+      "오프라인 분석 대기"
+    ]
   },
   "id_179gc1y": {
     "id": "id_179gc1y",
@@ -10697,7 +10729,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 5,
+    "specialistAnalysis": [
+      "오프라인 분석 대기"
+    ]
   },
   "id_1d3l9f5": {
     "id": "id_1d3l9f5",
@@ -10711,7 +10747,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 5,
+    "specialistAnalysis": [
+      "오프라인 분석 대기"
+    ]
   },
   "id_krmca7": {
     "id": "id_krmca7",
@@ -11059,7 +11099,11 @@
     "category": "Markets",
     "aiAnalysis": null,
     "region": "US",
-    "isCurated": false
+    "isCurated": false,
+    "specialistScore": 5,
+    "specialistAnalysis": [
+      "오프라인 분석 대기"
+    ]
   },
   "id_qvw6fk": {
     "id": "id_qvw6fk",
@@ -11351,7 +11395,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 5,
+    "specialistAnalysis": [
+      "오프라인 분석 대기"
+    ]
   },
   "id_33iibj": {
     "id": "id_33iibj",
@@ -18004,6 +18052,60 @@
     "specialistScore": 4,
     "specialistAnalysis": [
       "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ],
+    "isCurated": false
+  },
+  "id_10x5qz3": {
+    "id": "id_10x5qz3",
+    "title": "신규 대형 원전은 경북 영덕... 첫 SMR은 부산 기장에 짓는다 - 조선일보",
+    "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPaXFGV1BuaGdXWjlSWlVBclMwc1FCR25CR0pHQWtLanVJbGF6SDNxMjV3VjQwYk4ydVJQSldHZ0lZWmdhNGh1TnRETVdPUjVRaXpnVVlLREVudkJ2dGticHRlWDFMdXYtWkZrM0xnb1pzUWE1TWRZMFRheWJIQzc5N2Y4WVEyS3o0MWFVN3JR?oc=5",
+    "description": "신규 대형 원전은 경북 영덕... 첫 SMR은 부산 기장에 짓는다  조선일보",
+    "date": "2026-06-17T12:05:00.000Z",
+    "sourceId": "kr-chosun",
+    "sourceName": "조선일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": null,
+    "specialistScore": 5,
+    "specialistAnalysis": [
+      "오프라인 분석 대기"
+    ],
+    "isCurated": false
+  },
+  "id_1umf7a5": {
+    "id": "id_1umf7a5",
+    "title": "[단독]美, 비전투함 해외건조 빗장 풀었다… ‘마스가’ 힘 받을 듯 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9QVWVDT19ITDBUc2NlRHd4MUt0enM4NjV2SVM2R2ZaN2Z5RFZGWkxQOHJlVjBvSmxBTkduUUFYTkt3dVEtcGczTk9lZEJzNXpzT2NWcm1zVXpQT0dFMTNkYTZZYVc3eFlseUc0Qy1MeUNyOWgwLWfSAWZBVV95cUxNRnpsa1d1ZWR4WndKMEpSY3QtV3ZMNDczbmNRV1o2TVNBa3F2WjNLNjZnOUlQMUlLUFhEVHdQbFVVdlRpamJ5SkZPUkJCMzVKOEgyX3MtQ29FN1NuaGJiOGF3Z3dHTkE?oc=5",
+    "description": "[단독]美, 비전투함 해외건조 빗장 풀었다… ‘마스가’ 힘 받을 듯  동아일보",
+    "date": "2026-06-17T09:05:00.000Z",
+    "sourceId": "kr-donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": null,
+    "specialistScore": 5,
+    "specialistAnalysis": [
+      "오프라인 분석 대기"
+    ],
+    "isCurated": false
+  },
+  "id_ogpqbs": {
+    "id": "id_ogpqbs",
+    "title": "\"VR 고글 쓴 채 커피 한 모금\"... 몰입감 안 깨지는 가상 세계 열렸다 - 조선일보",
+    "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOUTRKZ3g5WF9TU3FxN19ZdU1GZjRKNGczbGFNaG10S21xeG81OHZHZVVUUlgyd2YzeFV4REw1X2VvUm43N2NkbzFDVF9rV2pnTEhDaFlzRExpVFZaLWlDUW9LQlZ5dHYtNDJERlc5eV9BYzFtVU5IYzZyRHdHUmNHRVEwNA?oc=5",
+    "description": "\"VR 고글 쓴 채 커피 한 모금\"... 몰입감 안 깨지는 가상 세계 열렸다  조선일보",
+    "date": "2026-06-16T06:48:22.000Z",
+    "sourceId": "kr-chosun",
+    "sourceName": "조선일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": null,
+    "specialistScore": 5,
+    "specialistAnalysis": [
+      "오프라인 분석 대기"
     ],
     "isCurated": false
   }
