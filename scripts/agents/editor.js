@@ -77,13 +77,13 @@ async function editArticlesBatched(articles, apiKey) {
         aiAnalysis: rep ? {
           translatedTitle: rep.translatedTitle || art.title,
           summary: rep.summary && rep.summary.length === 3 ? rep.summary : [
-            `금일 발생한 주요 경제 사건인 "${art.title}"에 대한 핵심 개요와 사실 관계입니다.`,
-            '기사 원문에서 언급된 주요 재무 지표와 거시경제적 수치 변화를 상세 모니터링해야 합니다.',
-            '시장 참여자들의 투자 경계감 및 거래대금 변화 흐름을 종합 점검하는 과정이 요구됩니다.'
+            `"${art.title}" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.`,
+            '원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.',
+            '관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다.'
           ],
           implications: rep.implications && rep.implications.length === 2 ? rep.implications : [
-            '거시적 금리 경로 및 위험자산 선호 심리 변화에 부합하는 포트폴리오 관리가 필요합니다.',
-            '관련 핵심 섹터의 주가 지지선 구축 여부를 확인하며 보수적으로 시장을 관망하는 것이 유리합니다.'
+            '거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.',
+            '핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다.'
           ],
           isPremiumCuration: true
         } : null
@@ -98,13 +98,13 @@ async function editArticlesBatched(articles, apiKey) {
         aiAnalysis: {
           translatedTitle: art.title,
           summary: [
-            `금일 발생한 주요 경제 사건인 "${art.title}"에 대한 핵심 개요와 사실 관계입니다.`,
-            '기사 원문에서 언급된 주요 재무 지표와 거시경제적 수치 변화를 상세 모니터링해야 합니다.',
-            '시장 참여자들의 투자 경계감 및 거래대금 변화 흐름을 종합 점검하는 과정이 요구됩니다.'
+            `"${art.title}" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.`,
+            '원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.',
+            '관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다.'
           ],
           implications: [
-            '거시적 금리 경로 및 위험자산 선호 심리 변화에 부합하는 포트폴리오 관리가 필요합니다.',
-            '관련 핵심 섹터의 주가 지지선 구축 여부를 확인하며 보수적으로 시장을 관망하는 것이 유리합니다.'
+            '거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.',
+            '핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다.'
           ],
           isPremiumCuration: true
         }

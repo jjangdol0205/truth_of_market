@@ -935,7 +935,7 @@ app.get('/article/:id', (req, res) => {
 
       <!-- 핵심 3줄 요약 -->
       <div class="analysis-section">
-        <h4><i class="fa-solid fa-list-check"></i> AI 투자 핵심 요약 (3줄)</h4>
+        <h4><i class="fa-solid fa-list-check"></i> 기사 핵심 요약 (3줄)</h4>
         <ul>
           ${summaryHtml}
         </ul>

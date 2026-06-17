@@ -8,6 +8,8 @@ const CACHE_FILE = path.join(ROOT_DIR, 'ai-cache.json');
 const SCRATCH_DIR = 'C:/Users/infomax/.gemini/antigravity/brain/06d48279-93b2-48fd-821b-9ec8c56f0712/scratch';
 const REAL_SUMMARIES_1 = path.join(SCRATCH_DIR, 'real_summaries.json');
 const REAL_SUMMARIES_8 = path.join(SCRATCH_DIR, 'real_summaries_8.json');
+const REAL_SUMMARIES_10 = path.join(SCRATCH_DIR, 'real_summaries_10.json');
+const REAL_SUMMARIES_11 = path.join(SCRATCH_DIR, 'real_summaries_11.json');
 
 function main() {
   console.log('🤖 Starting premium summaries injection...');
@@ -24,6 +26,18 @@ function main() {
     const data8 = JSON.parse(fs.readFileSync(REAL_SUMMARIES_8, 'utf8'));
     Object.assign(mergedSummaries, data8);
     console.log(`Merged ${Object.keys(data8).length} summaries from real_summaries_8.json`);
+  }
+
+  if (fs.existsSync(REAL_SUMMARIES_10)) {
+    const data10 = JSON.parse(fs.readFileSync(REAL_SUMMARIES_10, 'utf8'));
+    Object.assign(mergedSummaries, data10);
+    console.log(`Merged ${Object.keys(data10).length} summaries from real_summaries_10.json`);
+  }
+
+  if (fs.existsSync(REAL_SUMMARIES_11)) {
+    const data11 = JSON.parse(fs.readFileSync(REAL_SUMMARIES_11, 'utf8'));
+    Object.assign(mergedSummaries, data11);
+    console.log(`Merged ${Object.keys(data11).length} summaries from real_summaries_11.json`);
   }
 
   console.log(`Total unique summaries to inject: ${Object.keys(mergedSummaries).length}`);

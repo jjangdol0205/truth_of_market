@@ -252,7 +252,7 @@ async function run() {
     mdContent += `- **출처:** ${art.sourceName} | **분류:** ${art.category}\n`;
     mdContent += `- **원문 기사명:** *${art.title}*\n\n`;
     
-    mdContent += `#### 📋 AI 투자 핵심 요약 (3줄)\n`;
+    mdContent += `#### 📋 기사 핵심 요약 (3줄)\n`;
     analysis.summary.forEach(sum => {
       mdContent += `- ${sum}\n`;
     });

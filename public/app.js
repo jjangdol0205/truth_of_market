@@ -647,7 +647,7 @@ function handleShareCurrentArticleToKakaotalk() {
   let shareText = `📌 [투자 스터디 노트 공유] 📌\n`;
   shareText += `📰 *${analysis.translatedTitle}* (${article.sourceName})\n\n`;
   
-  shareText += `📝 *핵심 요약 (3줄):*\n`;
+  shareText += `📝 *기사 핵심 요약 (3줄):*\n`;
   analysis.summary.forEach(sum => {
     shareText += `• ${sum}\n`;
   });
@@ -739,7 +739,7 @@ function handleShareCurrentArticleToTelegram() {
   let shareText = `📌 [투자 스터디 노트 공유] 📌\n`;
   shareText += `📰 *${analysis.translatedTitle}* (${article.sourceName})\n\n`;
   
-  shareText += `📝 *핵심 요약 (3줄):*\n`;
+  shareText += `📝 *기사 핵심 요약 (3줄):*\n`;
   analysis.summary.forEach(sum => {
     shareText += `• ${sum}\n`;
   });
