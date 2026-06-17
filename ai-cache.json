@@ -3913,5 +3913,389 @@
       "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
     ],
     "isCurated": true
+  },
+  "id_1lux4xl": {
+    "id": "id_1lux4xl",
+    "title": "Fed Meeting Live Updates: Kevin Warsh to Address U.S. Economy as Fed Holds Interest Rates Steady",
+    "link": "https://www.nytimes.com/2026/06/17/business/federal-reserve-meeting-warsh.html",
+    "description": "Officials at the Federal Reserve were split between no cuts this year and one or more rate increases as they braced for higher inflation, according to a new set of projections.",
+    "date": "2026-06-17T22:01:15.000Z",
+    "sourceId": "us-nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "region": "US",
+    "aiAnalysis": {
+      "translatedTitle": "Fed Meeting Live Updates: Kevin Warsh to Address U.S. Economy as Fed Holds Interest Rates Steady",
+      "summary": [
+        "\"Fed Meeting Live Updates: Kevin Warsh to Address U.S. Economy as Fed Holds Interest Rates Steady\" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.",
+        "원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.",
+        "관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다."
+      ],
+      "implications": [
+        "거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.",
+        "핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 9,
+    "specialistAnalysis": [
+      "연방준비제도(Fed)가 금리를 동결했으나, 위원들 사이에 올해 금리 인하 없음과 금리 인상 가능성으로 의견이 분분합니다.",
+      "핵심 데이터는 연준 위원들의 새로운 경제 전망으로, 높은 인플레이션에 대비하는 기조가 드러났습니다.",
+      "이러한 혼재된 신호는 국채 수익률 변동성과 S&P 500 및 나스닥 시장의 불확실성을 높일 수 있습니다."
+    ],
+    "isCurated": true
+  },
+  "id_yvtcqn": {
+    "id": "id_yvtcqn",
+    "title": "Fed holds rates steady at Warsh’s first meeting.",
+    "link": "https://www.nytimes.com/live/2026/06/17/business/fed-meeting-warsh-interest-rates/fed-holds-rates-steady-at-warshs-first-meeting",
+    "description": "Officials at the Federal Reserve were split between no cuts this year and one or more rate increases as they braced for higher inflation, according to a new set of projections.",
+    "date": "2026-06-17T20:33:57.000Z",
+    "sourceId": "us-nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "region": "US",
+    "aiAnalysis": {
+      "translatedTitle": "Fed holds rates steady at Warsh’s first meeting.",
+      "summary": [
+        "\"Fed holds rates steady at Warsh’s first meeting.\" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.",
+        "원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.",
+        "관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다."
+      ],
+      "implications": [
+        "거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.",
+        "핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 9,
+    "specialistAnalysis": [
+      "연방준비제도(Fed)가 케빈 워시(Warsh) 체제 첫 회의에서 금리를 동결했으나, 인플레이션 우려로 향후 금리 인상 가능성이 제기되었습니다.",
+      "연준 위원들 사이에서 올해 금리 인하 없음과 한 번 이상의 금리 인상 전망이 나뉘는 것이 핵심 데이터입니다.",
+      "이러한 의견 분열은 미국 국채 수익률의 방향성을 불확실하게 만들고 S&P 500 및 나스닥 시장에 변동성을 초래할 수 있습니다."
+    ],
+    "isCurated": true
+  },
+  "id_z9mwif": {
+    "id": "id_z9mwif",
+    "title": "Stocks Drop on Fed Decision, and Oil Is Muted Amid Peace Deal Talks",
+    "link": "https://www.nytimes.com/2026/06/17/business/iran-war-hormuz-oil-gas.html",
+    "description": "Traders are waiting for U.S. and Iranian officials to meet in Switzerland on Friday, when they are expected to sign an initial agreement and begin a 60-day cease-fire.",
+    "date": "2026-06-17T20:13:21.000Z",
+    "sourceId": "us-nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "region": "US",
+    "aiAnalysis": {
+      "translatedTitle": "Stocks Drop on Fed Decision, and Oil Is Muted Amid Peace Deal Talks",
+      "summary": [
+        "\"Stocks Drop on Fed Decision, and Oil Is Muted Amid Peace Deal Talks\" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.",
+        "원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.",
+        "관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다."
+      ],
+      "implications": [
+        "거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.",
+        "핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 9,
+    "specialistAnalysis": [
+      "미국 연방준비제도(Fed)의 결정으로 주식 시장이 하락했으며, 이는 투자 심리에 직접적인 영향을 미쳤습니다.",
+      "Fed 결정의 구체적인 내용(금리 동결/인상, 향후 전망 등)이 주가 하락의 핵심 원인이며, 유가는 미-이란 평화 협상으로 인해 큰 변동이 없었습니다.",
+      "Fed의 결정은 S&P 500과 나스닥 지수의 하방 압력으로 작용하며, 국채 수익률에도 영향을 미칠 수 있습니다."
+    ],
+    "isCurated": true
+  },
+  "id_1jguv3u": {
+    "id": "id_1jguv3u",
+    "title": "Takeaways from Kevin Warsh’s first meeting as Fed chairman.",
+    "link": "https://www.nytimes.com/live/2026/06/17/business/fed-meeting-warsh-interest-rates/takeaways-from-kevin-warshs-first-meeting-as-fed-chairman",
+    "description": "",
+    "date": "2026-06-17T20:10:54.000Z",
+    "sourceId": "us-nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "region": "US",
+    "aiAnalysis": {
+      "translatedTitle": "Takeaways from Kevin Warsh’s first meeting as Fed chairman.",
+      "summary": [
+        "\"Takeaways from Kevin Warsh’s first meeting as Fed chairman.\" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.",
+        "원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.",
+        "관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다."
+      ],
+      "implications": [
+        "거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.",
+        "핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 9,
+    "specialistAnalysis": [
+      "케빈 워시(Warsh) 연준 의장의 첫 회의 결과는 향후 통화 정책 방향과 시장 전망에 중요한 이정표가 됩니다.",
+      "금리 결정, 경제 전망 업데이트, 그리고 정책 성명서의 미묘한 변화가 핵심 데이터로 다뤄질 것입니다.",
+      "이 회의 결과는 미국 국채 수익률, S&P 500, 나스닥 등 주요 시장 지표에 직접적인 영향을 미칠 것입니다."
+    ],
+    "isCurated": true
+  },
+  "id_16v3xpo": {
+    "id": "id_16v3xpo",
+    "title": "Asian Stocks, Bonds to Fall on Hawkish Fed Signals: Markets Wrap - Bloomberg.com",
+    "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPbGtQMnI4cF9yUGY4aE1KN211cU5pYXBJRGZpeS1SMFlOVW10NFZla29FYzl5aWN3anhOMEtfVUxpZkdubGluQ1A2NGFNRlpCQUhfbkpRRTJOaXdsbDhnOXpVSjFiRmFBVWNjLUlqWE5pR2dJQWVwQ1pTRnhDcmlwQjNRbXBCSzRRdmk3eEZQa2JhR25xSmZzU3E4NVRBaXExaUtWVjU0bjhPRU9tbU5ETW5nMA?oc=5",
+    "description": "Asian Stocks, Bonds to Fall on Hawkish Fed Signals: Markets Wrap  Bloomberg.com",
+    "date": "2026-06-17T22:11:45.000Z",
+    "sourceId": "us-global",
+    "sourceName": "US 글로벌 투자 뉴스 (Reuters/Bloomberg/CNBC)",
+    "lang": "en",
+    "category": "Markets",
+    "region": "US",
+    "aiAnalysis": {
+      "translatedTitle": "Asian Stocks, Bonds to Fall on Hawkish Fed Signals: Markets Wrap - Bloomberg.com",
+      "summary": [
+        "\"Asian Stocks, Bonds to Fall on Hawkish Fed Signals: Markets Wrap - Bloomberg.com\" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.",
+        "원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.",
+        "관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다."
+      ],
+      "implications": [
+        "거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.",
+        "핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 8,
+    "specialistAnalysis": [
+      "미국 연방준비제도(Fed)의 매파적(hawkish) 신호가 아시아 증시 및 채권 시장 하락의 주요 원인입니다.",
+      "구체적인 Fed 신호 내용(금리 인상/동결 전망, 인플레이션 우려 등)이 시장 반응의 핵심 데이터입니다.",
+      "매파적 Fed 기조는 미국 국채 수익률 상승 압력으로 작용하며, S&P 500 및 나스닥에도 하방 압력을 가할 수 있습니다."
+    ],
+    "isCurated": true
+  },
+  "id_1d32mtv": {
+    "id": "id_1d32mtv",
+    "title": "See How the First Fed Statement Under Warsh Evolved",
+    "link": "https://www.nytimes.com/2026/06/17/business/economy/kevin-warsh-fed-statement.html",
+    "description": "Interest rates didn’t change, but the language in Fed’s policy statement, which it released alongside its rate decision today, certainly did.",
+    "date": "2026-06-17T20:48:24.000Z",
+    "sourceId": "us-nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "region": "US",
+    "aiAnalysis": {
+      "translatedTitle": "See How the First Fed Statement Under Warsh Evolved",
+      "summary": [
+        "\"See How the First Fed Statement Under Warsh Evolved\" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.",
+        "원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.",
+        "관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다."
+      ],
+      "implications": [
+        "거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.",
+        "핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 8,
+    "specialistAnalysis": [
+      "금리 동결에도 불구하고 연방준비제도(Fed)의 정책 성명서 문구 변화는 향후 통화 정책 방향을 예측하는 중요한 단서입니다.",
+      "케빈 워시(Warsh) 체제 첫 Fed 성명서의 구체적인 문구 변화 내용이 시장 해석의 핵심 데이터입니다.",
+      "Fed 성명서의 미묘한 언어 변화는 국채 수익률과 주식 시장(S&P 500, 나스닥)의 투자 심리에 상당한 영향을 미칠 수 있습니다."
+    ],
+    "isCurated": true
+  },
+  "id_10dfk6f": {
+    "id": "id_10dfk6f",
+    "title": "연준 확 바꾸는 워시...포워드가이던스 폐지·점도표 거부 - 매일경제",
+    "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNZEk2ZkZicGhmQ3BrakFtRVhBMjRBUkVVbWlZdG96LThtUExlVk96MDZLREw1emZfWk04RFF5aXNDMUFHaWkzaVgtTjBxRk5FMlk2b2llcm5ZUFlNNnREdEJiM0pRSmRqWlJNTVlUN0d0Tm9UMXNJSk5jN2NFYTFDaW5NUVpWQk5NcC1N?oc=5",
+    "description": "연준 확 바꾸는 워시...포워드가이던스 폐지·점도표 거부  매일경제",
+    "date": "2026-06-17T19:40:23.000Z",
+    "sourceId": "kr-maekyung",
+    "sourceName": "매일경제 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": {
+      "translatedTitle": "연준 확 바꾸는 워시...포워드가이던스 폐지·점도표 거부 - 매일경제",
+      "summary": [
+        "\"연준 확 바꾸는 워시...포워드가이던스 폐지·점도표 거부 - 매일경제\" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.",
+        "원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.",
+        "관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다."
+      ],
+      "implications": [
+        "거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.",
+        "핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 9,
+    "specialistAnalysis": [
+      "미국 연준의 통화정책 커뮤니케이션 방식 변화(포워드 가이던스 폐지, 점도표 거부)는 글로벌 금융시장의 불확실성을 크게 높일 수 있습니다.",
+      "\"워시\"라는 인물의 연준 정책 변경 가능성 언급, 핵심 내용으로 \"포워드 가이던스 폐지\" 및 \"점도표 거부\"가 명시됩니다.",
+      "연준의 불확실한 정책 기조는 외국인 투자자금 유출입에 영향을 미쳐 코스피/코스닥 변동성 확대 및 국내 기준금리 결정에도 간접적인 부담으로 작용할 수 있습니다."
+    ],
+    "isCurated": true
+  },
+  "id_y1m1bx": {
+    "id": "id_y1m1bx",
+    "title": "[단독]美상원 군사위, 비전투함 해외 건조 길 열어… ‘마스가’ 탄력 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5LVUlnTUVlWlZCLUpfVVNhTWZlRTdmOWd6eDVVUGN1QUF0ckx1NU52QmJ3U015ZE9HWDRTSmFnendMZEZJc0FQaGxsdlI2MmZ1R3VWSkgxLXVzR1ppTmJBLXh6NHB0cXVwUG5SZFVzNXA5ZkpkYlHSAWZBVV95cUxPV1FkMzE3dEIwenJ1QTdlMVRzN1BxMF9SX09ZWHNmUjhhaHk0RnZUR2ZTbVNBXzc2clRXcU83S182eWJvM0FSRi1ZUXpIMklncTZ5dTlWbllpYTVLLWgxZF91dkpRTlE?oc=5",
+    "description": "[단독]美상원 군사위, 비전투함 해외 건조 길 열어… ‘마스가’ 탄력  동아일보",
+    "date": "2026-06-17T19:30:00.000Z",
+    "sourceId": "kr-donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": {
+      "translatedTitle": "[단독]美상원 군사위, 비전투함 해외 건조 길 열어… ‘마스가’ 탄력 - 동아일보",
+      "summary": [
+        "\"[단독]美상원 군사위, 비전투함 해외 건조 길 열어… ‘마스가’ 탄력 - 동아일보\" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.",
+        "원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.",
+        "관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다."
+      ],
+      "implications": [
+        "거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.",
+        "핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 8,
+    "specialistAnalysis": [
+      "미국 비전투함의 해외 건조 허용은 한국 조선업계에 대규모 수주 기회를 제공할 수 있어, 국내 수출 및 경제 성장에 긍정적입니다.",
+      "\"美상원 군사위, 비전투함 해외 건조 길 열어\"라는 내용과 함께 \"마스가 탄력\"이라는 표현으로 정책 변화의 시사점을 제시합니다.",
+      "HD현대중공업, 삼성중공업, 한화오션 등 국내 주요 조선사들의 수주 실적 개선 기대감을 높여 관련 주가에 긍정적인 영향을 미칠 수 있습니다."
+    ],
+    "isCurated": true
+  },
+  "id_tibz2w": {
+    "id": "id_tibz2w",
+    "title": "AI 전력수요 맞추려면, 송전망 확충 속도 지금보다 6배 빨라야 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9rZ21iUWduTkVBQkpuV1Rub0ktY0dRWVR3eElvMU9NYlJlMWlRcDNNbVJCNFB5M00wbDhGQ2wzTzhyVDRkU1Z4LUJVR3NFU3pZQnhhb3JMWVQybVlYUHJrZzZBRWdmMllaR2dibVdxVTVBd2xmQlHSAWZBVV95cUxPZjRDYlNaQ290NFVYVUhSdU55QmJxeEY5NUc0VEw1djJKa3RQRDRrN1ZFSnB2ak9kWDlSWVZlSHNHdHNQa19vVUw2cFhTVHc2eDVzYURkWWRuR1k3cTFRUlo3VnlvUGc?oc=5",
+    "description": "AI 전력수요 맞추려면, 송전망 확충 속도 지금보다 6배 빨라야  동아일보",
+    "date": "2026-06-17T19:30:00.000Z",
+    "sourceId": "kr-donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": {
+      "translatedTitle": "AI 전력수요 맞추려면, 송전망 확충 속도 지금보다 6배 빨라야 - 동아일보",
+      "summary": [
+        "\"AI 전력수요 맞추려면, 송전망 확충 속도 지금보다 6배 빨라야 - 동아일보\" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.",
+        "원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.",
+        "관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다."
+      ],
+      "implications": [
+        "거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.",
+        "핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 8,
+    "specialistAnalysis": [
+      "AI 시대의 급증하는 전력 수요를 충족시키기 위한 송전망 확충은 한국의 반도체 및 데이터센터 산업의 경쟁력 유지에 필수적입니다.",
+      "AI 전력수요에 맞춰 송전망 확충 속도가 \"지금보다 6배 빨라야\" 한다는 구체적인 수치로 문제의 심각성을 강조합니다.",
+      "한전(KEPCO)을 비롯한 전력 인프라 관련 기업들의 투자 확대 및 수혜가 예상되며, 장기적으로는 첨단 산업의 국내 투자 유치 및 수출 잠재력에 영향을 미칩니다."
+    ],
+    "isCurated": true
+  },
+  "id_wb5edf": {
+    "id": "id_wb5edf",
+    "title": "새 대형원전 영덕-첫 SMR 기장에 짓는다 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1FZEFmdU1oSmdrNklPWFhxNHlfNEFtUU9Wa2FWNWtZRjVaZTFpemJudkNIdVNmLU9fQmJyOXJxNEVBT1p5SGpSOFBuWVRxZjZpcHRDa2hsd2JneEpPcXhYMUtqZm1qQlU3Y3JxOGRyaElFbjJyZGfSAWZBVV95cUxORkN2amxiMTZ6aHd3cEVLTFdhUGhHSWR3MktRbTF3eE1XSjlVMnRkV1Y3RjhLX0FLRm5NYzdnTjF0SFp4ck40N2VrRGNCZ3VyRmVNeGNRUGFtaWloWTNFaWdjX19TTXc?oc=5",
+    "description": "새 대형원전 영덕-첫 SMR 기장에 짓는다  동아일보",
+    "date": "2026-06-17T19:30:00.000Z",
+    "sourceId": "kr-donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": {
+      "translatedTitle": "새 대형원전 영덕-첫 SMR 기장에 짓는다 - 동아일보",
+      "summary": [
+        "\"새 대형원전 영덕-첫 SMR 기장에 짓는다 - 동아일보\" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.",
+        "원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.",
+        "관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다."
+      ],
+      "implications": [
+        "거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.",
+        "핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 8,
+    "specialistAnalysis": [
+      "대형원전 및 소형모듈원자로(SMR) 건설 계획은 국내 안정적인 전력 공급 확보와 탄소 중립 목표 달성에 중요한 역할을 합니다.",
+      "\"새 대형원전 영덕-첫 SMR 기장에 짓는다\"는 구체적인 건설 위치와 원전 종류를 명시하여 사업의 실행 계획을 보여줍니다.",
+      "한국전력, 한전기술, 두산에너빌리티 등 국내 원전 관련 기업들의 수주 및 성장 기대감을 높이며, 장기적으로 국내 전력 수급 안정화에 기여하여 산업 전반에 긍정적 영향을 미칠 것입니다."
+    ],
+    "isCurated": true
+  },
+  "id_1phgzjc": {
+    "id": "id_1phgzjc",
+    "title": "“숙박·음식업은 더 낮게”…최저임금 ‘차등 적용’ 오늘 노사 담판 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE93N0JXT09DWmVybmw1dVowSWp3clVLNjBIRE0tLWxZQU9DMGc5LWdkTklFN2dkUFl1djBRRExNcS1rSW9WRVpJLWFHbWZwaTdSU1pVTExXTXhhUXZVUmFKRmpuRWxXTFhVWnI4QmVfa3JSdTRxckHSAWZBVV95cUxOdlE2RDlVa0pFYUdKcEVaLWxsZHc5S0VweGE2bkZBc1VadEtCSzNGMk5xR3VVXzd4VGd1dEtxOFljalFXdjhaSnhCLXF4c2E2YlV4NjJQanZXNjF4T0xibWppeWQ0dEE?oc=5",
+    "description": "“숙박·음식업은 더 낮게”…최저임금 ‘차등 적용’ 오늘 노사 담판  동아일보",
+    "date": "2026-06-17T22:36:25.000Z",
+    "sourceId": "kr-donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": {
+      "translatedTitle": "“숙박·음식업은 더 낮게”…최저임금 ‘차등 적용’ 오늘 노사 담판 - 동아일보",
+      "summary": [
+        "\"“숙박·음식업은 더 낮게”…최저임금 ‘차등 적용’ 오늘 노사 담판 - 동아일보\" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.",
+        "원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.",
+        "관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다."
+      ],
+      "implications": [
+        "거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.",
+        "핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 7,
+    "specialistAnalysis": [
+      "숙박·음식업 등 특정 업종에 최저임금 차등 적용 여부 논의는 해당 산업의 비용 구조와 수익성에 직접적인 영향을 미칩니다.",
+      "기사 제목에서 \"숙박·음식업은 더 낮게\"라는 내용으로 차등 적용의 방향성을 제시하며, 오늘 노사 담판이 진행될 예정임을 알립니다.",
+      "국내 서비스업, 특히 소상공인 중심의 숙박·음식업 기업들의 고용 및 투자 심리에 영향을 주며, 관련 상장사들의 주가에도 간접적인 영향을 미칠 수 있습니다."
+    ],
+    "isCurated": true
+  },
+  "id_1h09t32": {
+    "id": "id_1h09t32",
+    "title": "Elon Musk’s Next Move May Be a Mega-Merger of SpaceX and Tesla",
+    "link": "https://www.nytimes.com/2026/06/17/business/spacex-tesla-merger-elon-musk.html",
+    "description": "Some shareholders might object, but there is little they could do, legal experts say.",
+    "date": "2026-06-17T21:34:24.000Z",
+    "sourceId": "us-nyt-tech",
+    "sourceName": "NYT 테크놀로지",
+    "lang": "en",
+    "category": "Tech",
+    "region": "US",
+    "aiAnalysis": {
+      "translatedTitle": "Elon Musk’s Next Move May Be a Mega-Merger of SpaceX and Tesla",
+      "summary": [
+        "\"Elon Musk’s Next Move May Be a Mega-Merger of SpaceX and Tesla\" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.",
+        "원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.",
+        "관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다."
+      ],
+      "implications": [
+        "거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.",
+        "핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 7,
+    "specialistAnalysis": [
+      "엘론 머스크의 스페이스X와 테슬라 합병 가능성은 테슬라 주주들에게 큰 영향을 미칠 수 있는 중요한 빅테크 뉴스입니다.",
+      "합병 시나리오에 대한 법률 전문가 의견과 주주 반대 가능성이 주요 내용이며, 잠재적 시가총액 변화가 핵심 데이터입니다.",
+      "테슬라 주가에 직접적인 영향을 미치며, 나스닥 내 다른 빅테크 기업들의 투자 심리에도 간접적인 영향을 줄 수 있습니다."
+    ],
+    "isCurated": true
   }
 }

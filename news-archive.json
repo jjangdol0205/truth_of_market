@@ -9806,7 +9806,7 @@
       ],
       "isPremiumCuration": true
     },
-    "isCurated": true,
+    "isCurated": false,
     "region": "KR",
     "specialistScore": 7,
     "specialistAnalysis": [
@@ -10616,7 +10616,7 @@
       ],
       "isPremiumCuration": true
     },
-    "isCurated": true,
+    "isCurated": false,
     "region": "KR",
     "specialistScore": 7,
     "specialistAnalysis": [
@@ -13580,7 +13580,7 @@
       ],
       "isPremiumCuration": true
     },
-    "isCurated": true,
+    "isCurated": false,
     "region": "KR",
     "specialistScore": 6,
     "specialistAnalysis": [
@@ -13763,7 +13763,7 @@
       "isPremiumCuration": true
     },
     "region": "US",
-    "isCurated": true,
+    "isCurated": false,
     "specialistScore": 7,
     "specialistAnalysis": [
       "미국 주요 산업체 GM과 방산기업 록히드 마틴의 파트너십은 양사 신규 성장 동력 및 기술 융합 기대를 높임.",
@@ -14367,7 +14367,7 @@
       "isPremiumCuration": true
     },
     "region": "US",
-    "isCurated": true,
+    "isCurated": false,
     "specialistScore": 5,
     "specialistAnalysis": [
       "임시 분석 데이터"
@@ -14588,7 +14588,7 @@
       ],
       "isPremiumCuration": true
     },
-    "isCurated": true,
+    "isCurated": false,
     "region": "KR",
     "specialistScore": 5,
     "specialistAnalysis": [
@@ -14672,7 +14672,7 @@
       ],
       "isPremiumCuration": true
     },
-    "isCurated": true,
+    "isCurated": false,
     "region": "KR",
     "specialistScore": 7,
     "specialistAnalysis": [
@@ -14757,7 +14757,7 @@
       "isPremiumCuration": true
     },
     "region": "KR",
-    "isCurated": true,
+    "isCurated": false,
     "specialistScore": 7,
     "specialistAnalysis": [
       "양도세 중과에도 불구하고 5월 부동산 매수심리가 상승 국면을 유지하며 주택 시장의 견고함을 보여줍니다.",
@@ -14809,7 +14809,7 @@
       "isPremiumCuration": true
     },
     "region": "KR",
-    "isCurated": true,
+    "isCurated": false,
     "specialistScore": 6,
     "specialistAnalysis": [
       "도요타의 신형 라브4 출시와 하이브리드 SUV 공략 강화는 글로벌 자동차 시장 경쟁 심화를 의미합니다.",
@@ -15515,7 +15515,7 @@
       "해당 재건축 사업은 정부 주택 정책 및 한국은행의 금리 결정에 매우 민감하여 관련 시장에 파급효과를 미칠 수 있습니다.",
       "코스피 상장 건설사의 주요 사업 수주는 해당 기업의 실적과 건설업종 전반의 투자 심리에 직접적인 영향을 미칩니다."
     ],
-    "isCurated": true
+    "isCurated": false
   },
   "id_os5g19": {
     "id": "id_os5g19",
@@ -15931,7 +15931,7 @@
       "상업용 부동산 시장의 공급 과잉 및 공실 문제 해결 노력.",
       "주택 공급 확대 및 주거 안정에 일부 기여할 수 있는 정책적 시도."
     ],
-    "isCurated": true
+    "isCurated": false
   },
   "id_1ew1uy9": {
     "id": "id_1ew1uy9",
@@ -16223,7 +16223,7 @@
     "specialistAnalysis": [
       "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
     ],
-    "isCurated": true
+    "isCurated": false
   },
   "id_yznkmh": {
     "id": "id_yznkmh",
@@ -16337,6 +16337,1314 @@
     "specialistAnalysis": [
       "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
     ],
+    "isCurated": false
+  },
+  "id_bk6j2e": {
+    "id": "id_bk6j2e",
+    "title": "England beat Croatia 4-2 as Harry Kane scores twice - Ada Derana",
+    "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5nN0c2T2Q5RFZmbURVRkhkdHJiYVFXeWxEYXNJM1FwS2FfZHh5ZGNBenJuejJTeHpFSzEyeUFDN3d1aE1nQzhXVEIxb3lJdTU4SFBfYkxoa3BYYUhrQWJNbg?oc=5",
+    "description": "England beat Croatia 4-2 as Harry Kane scores twice  Ada Derana",
+    "date": "2026-06-17T22:42:01.000Z",
+    "sourceId": "us-global",
+    "sourceName": "US 글로벌 투자 뉴스 (Reuters/Bloomberg/CNBC)",
+    "lang": "en",
+    "category": "Markets",
+    "region": "US",
+    "aiAnalysis": null,
+    "specialistScore": 1,
+    "specialistAnalysis": [
+      "이 뉴스는 축구 경기 결과로, 금융 시장에 직접적인 영향이 없습니다.",
+      "해리 케인 2골, 잉글랜드 4-2 승리 외 경제 관련 데이터는 없습니다.",
+      "미국 및 글로벌 금융 시장에 미치는 영향은 전혀 없습니다."
+    ],
+    "isCurated": false
+  },
+  "id_1phgzjc": {
+    "id": "id_1phgzjc",
+    "title": "“숙박·음식업은 더 낮게”…최저임금 ‘차등 적용’ 오늘 노사 담판 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE93N0JXT09DWmVybmw1dVowSWp3clVLNjBIRE0tLWxZQU9DMGc5LWdkTklFN2dkUFl1djBRRExNcS1rSW9WRVpJLWFHbWZwaTdSU1pVTExXTXhhUXZVUmFKRmpuRWxXTFhVWnI4QmVfa3JSdTRxckHSAWZBVV95cUxOdlE2RDlVa0pFYUdKcEVaLWxsZHc5S0VweGE2bkZBc1VadEtCSzNGMk5xR3VVXzd4VGd1dEtxOFljalFXdjhaSnhCLXF4c2E2YlV4NjJQanZXNjF4T0xibWppeWQ0dEE?oc=5",
+    "description": "“숙박·음식업은 더 낮게”…최저임금 ‘차등 적용’ 오늘 노사 담판  동아일보",
+    "date": "2026-06-17T22:36:25.000Z",
+    "sourceId": "kr-donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": {
+      "translatedTitle": "“숙박·음식업은 더 낮게”…최저임금 ‘차등 적용’ 오늘 노사 담판 - 동아일보",
+      "summary": [
+        "\"“숙박·음식업은 더 낮게”…최저임금 ‘차등 적용’ 오늘 노사 담판 - 동아일보\" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.",
+        "원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.",
+        "관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다."
+      ],
+      "implications": [
+        "거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.",
+        "핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 7,
+    "specialistAnalysis": [
+      "숙박·음식업 등 특정 업종에 최저임금 차등 적용 여부 논의는 해당 산업의 비용 구조와 수익성에 직접적인 영향을 미칩니다.",
+      "기사 제목에서 \"숙박·음식업은 더 낮게\"라는 내용으로 차등 적용의 방향성을 제시하며, 오늘 노사 담판이 진행될 예정임을 알립니다.",
+      "국내 서비스업, 특히 소상공인 중심의 숙박·음식업 기업들의 고용 및 투자 심리에 영향을 주며, 관련 상장사들의 주가에도 간접적인 영향을 미칠 수 있습니다."
+    ],
+    "isCurated": true
+  },
+  "id_16v3xpo": {
+    "id": "id_16v3xpo",
+    "title": "Asian Stocks, Bonds to Fall on Hawkish Fed Signals: Markets Wrap - Bloomberg.com",
+    "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPbGtQMnI4cF9yUGY4aE1KN211cU5pYXBJRGZpeS1SMFlOVW10NFZla29FYzl5aWN3anhOMEtfVUxpZkdubGluQ1A2NGFNRlpCQUhfbkpRRTJOaXdsbDhnOXpVSjFiRmFBVWNjLUlqWE5pR2dJQWVwQ1pTRnhDcmlwQjNRbXBCSzRRdmk3eEZQa2JhR25xSmZzU3E4NVRBaXExaUtWVjU0bjhPRU9tbU5ETW5nMA?oc=5",
+    "description": "Asian Stocks, Bonds to Fall on Hawkish Fed Signals: Markets Wrap  Bloomberg.com",
+    "date": "2026-06-17T22:11:45.000Z",
+    "sourceId": "us-global",
+    "sourceName": "US 글로벌 투자 뉴스 (Reuters/Bloomberg/CNBC)",
+    "lang": "en",
+    "category": "Markets",
+    "region": "US",
+    "aiAnalysis": {
+      "translatedTitle": "Asian Stocks, Bonds to Fall on Hawkish Fed Signals: Markets Wrap - Bloomberg.com",
+      "summary": [
+        "\"Asian Stocks, Bonds to Fall on Hawkish Fed Signals: Markets Wrap - Bloomberg.com\" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.",
+        "원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.",
+        "관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다."
+      ],
+      "implications": [
+        "거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.",
+        "핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 8,
+    "specialistAnalysis": [
+      "미국 연방준비제도(Fed)의 매파적(hawkish) 신호가 아시아 증시 및 채권 시장 하락의 주요 원인입니다.",
+      "구체적인 Fed 신호 내용(금리 인상/동결 전망, 인플레이션 우려 등)이 시장 반응의 핵심 데이터입니다.",
+      "매파적 Fed 기조는 미국 국채 수익률 상승 압력으로 작용하며, S&P 500 및 나스닥에도 하방 압력을 가할 수 있습니다."
+    ],
+    "isCurated": true
+  },
+  "id_1lux4xl": {
+    "id": "id_1lux4xl",
+    "title": "Fed Meeting Live Updates: Kevin Warsh to Address U.S. Economy as Fed Holds Interest Rates Steady",
+    "link": "https://www.nytimes.com/2026/06/17/business/federal-reserve-meeting-warsh.html",
+    "description": "Officials at the Federal Reserve were split between no cuts this year and one or more rate increases as they braced for higher inflation, according to a new set of projections.",
+    "date": "2026-06-17T22:01:15.000Z",
+    "sourceId": "us-nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "region": "US",
+    "aiAnalysis": {
+      "translatedTitle": "Fed Meeting Live Updates: Kevin Warsh to Address U.S. Economy as Fed Holds Interest Rates Steady",
+      "summary": [
+        "\"Fed Meeting Live Updates: Kevin Warsh to Address U.S. Economy as Fed Holds Interest Rates Steady\" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.",
+        "원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.",
+        "관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다."
+      ],
+      "implications": [
+        "거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.",
+        "핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 9,
+    "specialistAnalysis": [
+      "연방준비제도(Fed)가 금리를 동결했으나, 위원들 사이에 올해 금리 인하 없음과 금리 인상 가능성으로 의견이 분분합니다.",
+      "핵심 데이터는 연준 위원들의 새로운 경제 전망으로, 높은 인플레이션에 대비하는 기조가 드러났습니다.",
+      "이러한 혼재된 신호는 국채 수익률 변동성과 S&P 500 및 나스닥 시장의 불확실성을 높일 수 있습니다."
+    ],
+    "isCurated": true
+  },
+  "id_1h09t32": {
+    "id": "id_1h09t32",
+    "title": "Elon Musk’s Next Move May Be a Mega-Merger of SpaceX and Tesla",
+    "link": "https://www.nytimes.com/2026/06/17/business/spacex-tesla-merger-elon-musk.html",
+    "description": "Some shareholders might object, but there is little they could do, legal experts say.",
+    "date": "2026-06-17T21:34:24.000Z",
+    "sourceId": "us-nyt-tech",
+    "sourceName": "NYT 테크놀로지",
+    "lang": "en",
+    "category": "Tech",
+    "region": "US",
+    "aiAnalysis": {
+      "translatedTitle": "Elon Musk’s Next Move May Be a Mega-Merger of SpaceX and Tesla",
+      "summary": [
+        "\"Elon Musk’s Next Move May Be a Mega-Merger of SpaceX and Tesla\" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.",
+        "원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.",
+        "관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다."
+      ],
+      "implications": [
+        "거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.",
+        "핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 7,
+    "specialistAnalysis": [
+      "엘론 머스크의 스페이스X와 테슬라 합병 가능성은 테슬라 주주들에게 큰 영향을 미칠 수 있는 중요한 빅테크 뉴스입니다.",
+      "합병 시나리오에 대한 법률 전문가 의견과 주주 반대 가능성이 주요 내용이며, 잠재적 시가총액 변화가 핵심 데이터입니다.",
+      "테슬라 주가에 직접적인 영향을 미치며, 나스닥 내 다른 빅테크 기업들의 투자 심리에도 간접적인 영향을 줄 수 있습니다."
+    ],
+    "isCurated": true
+  },
+  "id_1ilw19i": {
+    "id": "id_1ilw19i",
+    "title": "‘Backrooms’ and ‘Obsession’ Disrupt the 2026 Summer Box Office",
+    "link": "https://www.nytimes.com/2026/06/17/business/media/obsession-backrooms-summer-box-office-charts.html",
+    "description": "“Backrooms” and “Obsession,” two breakout horror films from first-time directors in their 20s, have arguably redefined what a summer blockbuster can be.",
+    "date": "2026-06-17T20:48:55.000Z",
+    "sourceId": "us-nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "region": "US",
+    "aiAnalysis": null,
+    "specialistScore": 1,
+    "specialistAnalysis": [
+      "이 뉴스는 2026년 여름 박스오피스에 대한 영화 산업 소식으로, 금융 시장에 미치는 영향이 미미합니다.",
+      "\"Backrooms\"와 \"Obsession\"이라는 두 공포 영화의 성공과 박스오피스 동향 외 경제 관련 데이터는 없습니다.",
+      "미국 및 글로벌 금융 시장, 특히 Fed 정책, 국채 수익률, S&P 500/나스닥에는 직접적인 영향이 없습니다."
+    ],
+    "isCurated": false
+  },
+  "id_1d32mtv": {
+    "id": "id_1d32mtv",
+    "title": "See How the First Fed Statement Under Warsh Evolved",
+    "link": "https://www.nytimes.com/2026/06/17/business/economy/kevin-warsh-fed-statement.html",
+    "description": "Interest rates didn’t change, but the language in Fed’s policy statement, which it released alongside its rate decision today, certainly did.",
+    "date": "2026-06-17T20:48:24.000Z",
+    "sourceId": "us-nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "region": "US",
+    "aiAnalysis": {
+      "translatedTitle": "See How the First Fed Statement Under Warsh Evolved",
+      "summary": [
+        "\"See How the First Fed Statement Under Warsh Evolved\" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.",
+        "원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.",
+        "관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다."
+      ],
+      "implications": [
+        "거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.",
+        "핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 8,
+    "specialistAnalysis": [
+      "금리 동결에도 불구하고 연방준비제도(Fed)의 정책 성명서 문구 변화는 향후 통화 정책 방향을 예측하는 중요한 단서입니다.",
+      "케빈 워시(Warsh) 체제 첫 Fed 성명서의 구체적인 문구 변화 내용이 시장 해석의 핵심 데이터입니다.",
+      "Fed 성명서의 미묘한 언어 변화는 국채 수익률과 주식 시장(S&P 500, 나스닥)의 투자 심리에 상당한 영향을 미칠 수 있습니다."
+    ],
+    "isCurated": true
+  },
+  "id_yvtcqn": {
+    "id": "id_yvtcqn",
+    "title": "Fed holds rates steady at Warsh’s first meeting.",
+    "link": "https://www.nytimes.com/live/2026/06/17/business/fed-meeting-warsh-interest-rates/fed-holds-rates-steady-at-warshs-first-meeting",
+    "description": "Officials at the Federal Reserve were split between no cuts this year and one or more rate increases as they braced for higher inflation, according to a new set of projections.",
+    "date": "2026-06-17T20:33:57.000Z",
+    "sourceId": "us-nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "region": "US",
+    "aiAnalysis": {
+      "translatedTitle": "Fed holds rates steady at Warsh’s first meeting.",
+      "summary": [
+        "\"Fed holds rates steady at Warsh’s first meeting.\" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.",
+        "원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.",
+        "관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다."
+      ],
+      "implications": [
+        "거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.",
+        "핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 9,
+    "specialistAnalysis": [
+      "연방준비제도(Fed)가 케빈 워시(Warsh) 체제 첫 회의에서 금리를 동결했으나, 인플레이션 우려로 향후 금리 인상 가능성이 제기되었습니다.",
+      "연준 위원들 사이에서 올해 금리 인하 없음과 한 번 이상의 금리 인상 전망이 나뉘는 것이 핵심 데이터입니다.",
+      "이러한 의견 분열은 미국 국채 수익률의 방향성을 불확실하게 만들고 S&P 500 및 나스닥 시장에 변동성을 초래할 수 있습니다."
+    ],
+    "isCurated": true
+  },
+  "id_z9mwif": {
+    "id": "id_z9mwif",
+    "title": "Stocks Drop on Fed Decision, and Oil Is Muted Amid Peace Deal Talks",
+    "link": "https://www.nytimes.com/2026/06/17/business/iran-war-hormuz-oil-gas.html",
+    "description": "Traders are waiting for U.S. and Iranian officials to meet in Switzerland on Friday, when they are expected to sign an initial agreement and begin a 60-day cease-fire.",
+    "date": "2026-06-17T20:13:21.000Z",
+    "sourceId": "us-nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "region": "US",
+    "aiAnalysis": {
+      "translatedTitle": "Stocks Drop on Fed Decision, and Oil Is Muted Amid Peace Deal Talks",
+      "summary": [
+        "\"Stocks Drop on Fed Decision, and Oil Is Muted Amid Peace Deal Talks\" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.",
+        "원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.",
+        "관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다."
+      ],
+      "implications": [
+        "거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.",
+        "핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 9,
+    "specialistAnalysis": [
+      "미국 연방준비제도(Fed)의 결정으로 주식 시장이 하락했으며, 이는 투자 심리에 직접적인 영향을 미쳤습니다.",
+      "Fed 결정의 구체적인 내용(금리 동결/인상, 향후 전망 등)이 주가 하락의 핵심 원인이며, 유가는 미-이란 평화 협상으로 인해 큰 변동이 없었습니다.",
+      "Fed의 결정은 S&P 500과 나스닥 지수의 하방 압력으로 작용하며, 국채 수익률에도 영향을 미칠 수 있습니다."
+    ],
+    "isCurated": true
+  },
+  "id_1jguv3u": {
+    "id": "id_1jguv3u",
+    "title": "Takeaways from Kevin Warsh’s first meeting as Fed chairman.",
+    "link": "https://www.nytimes.com/live/2026/06/17/business/fed-meeting-warsh-interest-rates/takeaways-from-kevin-warshs-first-meeting-as-fed-chairman",
+    "description": "",
+    "date": "2026-06-17T20:10:54.000Z",
+    "sourceId": "us-nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "region": "US",
+    "aiAnalysis": {
+      "translatedTitle": "Takeaways from Kevin Warsh’s first meeting as Fed chairman.",
+      "summary": [
+        "\"Takeaways from Kevin Warsh’s first meeting as Fed chairman.\" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.",
+        "원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.",
+        "관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다."
+      ],
+      "implications": [
+        "거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.",
+        "핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 9,
+    "specialistAnalysis": [
+      "케빈 워시(Warsh) 연준 의장의 첫 회의 결과는 향후 통화 정책 방향과 시장 전망에 중요한 이정표가 됩니다.",
+      "금리 결정, 경제 전망 업데이트, 그리고 정책 성명서의 미묘한 변화가 핵심 데이터로 다뤄질 것입니다.",
+      "이 회의 결과는 미국 국채 수익률, S&P 500, 나스닥 등 주요 시장 지표에 직접적인 영향을 미칠 것입니다."
+    ],
+    "isCurated": true
+  },
+  "id_9ak2yt": {
+    "id": "id_9ak2yt",
+    "title": "Allowing Iran to Charge Fees in Strait of Hormuz Would Set ‘Dangerous Precedent,’ Maersk CEO Says",
+    "link": "https://www.nytimes.com/2026/06/17/business/maersk-strait-hormuz-shipping-fees-iran-war.html",
+    "description": "With the United States and Iran nearing a deal to reopen the Persian Gulf, the shipping giant is treading cautiously.",
+    "date": "2026-06-17T20:09:00.000Z",
+    "sourceId": "us-nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "region": "US",
+    "aiAnalysis": null,
+    "specialistScore": 6,
+    "specialistAnalysis": [
+      "호르무즈 해협 통행료 부과 논의는 글로벌 해상 운송 비용 및 원유 가격에 중대한 영향을 미칠 수 있습니다.",
+      "미국과 이란 간 페르시아만 재개방 협상 진행 상황과 머스크 CEO의 우려 표명이 핵심 데이터입니다.",
+      "유가 상승 압력과 공급망 불안을 야기하여 간접적으로 인플레이션 우려를 키우고 Fed 정책에 영향을 줄 수 있으나, 직접적인 미 증시 영향은 제한적입니다."
+    ],
+    "isCurated": false
+  },
+  "id_10dfk6f": {
+    "id": "id_10dfk6f",
+    "title": "연준 확 바꾸는 워시...포워드가이던스 폐지·점도표 거부 - 매일경제",
+    "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNZEk2ZkZicGhmQ3BrakFtRVhBMjRBUkVVbWlZdG96LThtUExlVk96MDZLREw1emZfWk04RFF5aXNDMUFHaWkzaVgtTjBxRk5FMlk2b2llcm5ZUFlNNnREdEJiM0pRSmRqWlJNTVlUN0d0Tm9UMXNJSk5jN2NFYTFDaW5NUVpWQk5NcC1N?oc=5",
+    "description": "연준 확 바꾸는 워시...포워드가이던스 폐지·점도표 거부  매일경제",
+    "date": "2026-06-17T19:40:23.000Z",
+    "sourceId": "kr-maekyung",
+    "sourceName": "매일경제 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": {
+      "translatedTitle": "연준 확 바꾸는 워시...포워드가이던스 폐지·점도표 거부 - 매일경제",
+      "summary": [
+        "\"연준 확 바꾸는 워시...포워드가이던스 폐지·점도표 거부 - 매일경제\" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.",
+        "원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.",
+        "관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다."
+      ],
+      "implications": [
+        "거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.",
+        "핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 9,
+    "specialistAnalysis": [
+      "미국 연준의 통화정책 커뮤니케이션 방식 변화(포워드 가이던스 폐지, 점도표 거부)는 글로벌 금융시장의 불확실성을 크게 높일 수 있습니다.",
+      "\"워시\"라는 인물의 연준 정책 변경 가능성 언급, 핵심 내용으로 \"포워드 가이던스 폐지\" 및 \"점도표 거부\"가 명시됩니다.",
+      "연준의 불확실한 정책 기조는 외국인 투자자금 유출입에 영향을 미쳐 코스피/코스닥 변동성 확대 및 국내 기준금리 결정에도 간접적인 부담으로 작용할 수 있습니다."
+    ],
+    "isCurated": true
+  },
+  "id_y1m1bx": {
+    "id": "id_y1m1bx",
+    "title": "[단독]美상원 군사위, 비전투함 해외 건조 길 열어… ‘마스가’ 탄력 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5LVUlnTUVlWlZCLUpfVVNhTWZlRTdmOWd6eDVVUGN1QUF0ckx1NU52QmJ3U015ZE9HWDRTSmFnendMZEZJc0FQaGxsdlI2MmZ1R3VWSkgxLXVzR1ppTmJBLXh6NHB0cXVwUG5SZFVzNXA5ZkpkYlHSAWZBVV95cUxPV1FkMzE3dEIwenJ1QTdlMVRzN1BxMF9SX09ZWHNmUjhhaHk0RnZUR2ZTbVNBXzc2clRXcU83S182eWJvM0FSRi1ZUXpIMklncTZ5dTlWbllpYTVLLWgxZF91dkpRTlE?oc=5",
+    "description": "[단독]美상원 군사위, 비전투함 해외 건조 길 열어… ‘마스가’ 탄력  동아일보",
+    "date": "2026-06-17T19:30:00.000Z",
+    "sourceId": "kr-donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": {
+      "translatedTitle": "[단독]美상원 군사위, 비전투함 해외 건조 길 열어… ‘마스가’ 탄력 - 동아일보",
+      "summary": [
+        "\"[단독]美상원 군사위, 비전투함 해외 건조 길 열어… ‘마스가’ 탄력 - 동아일보\" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.",
+        "원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.",
+        "관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다."
+      ],
+      "implications": [
+        "거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.",
+        "핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 8,
+    "specialistAnalysis": [
+      "미국 비전투함의 해외 건조 허용은 한국 조선업계에 대규모 수주 기회를 제공할 수 있어, 국내 수출 및 경제 성장에 긍정적입니다.",
+      "\"美상원 군사위, 비전투함 해외 건조 길 열어\"라는 내용과 함께 \"마스가 탄력\"이라는 표현으로 정책 변화의 시사점을 제시합니다.",
+      "HD현대중공업, 삼성중공업, 한화오션 등 국내 주요 조선사들의 수주 실적 개선 기대감을 높여 관련 주가에 긍정적인 영향을 미칠 수 있습니다."
+    ],
+    "isCurated": true
+  },
+  "id_tibz2w": {
+    "id": "id_tibz2w",
+    "title": "AI 전력수요 맞추려면, 송전망 확충 속도 지금보다 6배 빨라야 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9rZ21iUWduTkVBQkpuV1Rub0ktY0dRWVR3eElvMU9NYlJlMWlRcDNNbVJCNFB5M00wbDhGQ2wzTzhyVDRkU1Z4LUJVR3NFU3pZQnhhb3JMWVQybVlYUHJrZzZBRWdmMllaR2dibVdxVTVBd2xmQlHSAWZBVV95cUxPZjRDYlNaQ290NFVYVUhSdU55QmJxeEY5NUc0VEw1djJKa3RQRDRrN1ZFSnB2ak9kWDlSWVZlSHNHdHNQa19vVUw2cFhTVHc2eDVzYURkWWRuR1k3cTFRUlo3VnlvUGc?oc=5",
+    "description": "AI 전력수요 맞추려면, 송전망 확충 속도 지금보다 6배 빨라야  동아일보",
+    "date": "2026-06-17T19:30:00.000Z",
+    "sourceId": "kr-donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": {
+      "translatedTitle": "AI 전력수요 맞추려면, 송전망 확충 속도 지금보다 6배 빨라야 - 동아일보",
+      "summary": [
+        "\"AI 전력수요 맞추려면, 송전망 확충 속도 지금보다 6배 빨라야 - 동아일보\" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.",
+        "원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.",
+        "관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다."
+      ],
+      "implications": [
+        "거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.",
+        "핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 8,
+    "specialistAnalysis": [
+      "AI 시대의 급증하는 전력 수요를 충족시키기 위한 송전망 확충은 한국의 반도체 및 데이터센터 산업의 경쟁력 유지에 필수적입니다.",
+      "AI 전력수요에 맞춰 송전망 확충 속도가 \"지금보다 6배 빨라야\" 한다는 구체적인 수치로 문제의 심각성을 강조합니다.",
+      "한전(KEPCO)을 비롯한 전력 인프라 관련 기업들의 투자 확대 및 수혜가 예상되며, 장기적으로는 첨단 산업의 국내 투자 유치 및 수출 잠재력에 영향을 미칩니다."
+    ],
+    "isCurated": true
+  },
+  "id_wb5edf": {
+    "id": "id_wb5edf",
+    "title": "새 대형원전 영덕-첫 SMR 기장에 짓는다 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1FZEFmdU1oSmdrNklPWFhxNHlfNEFtUU9Wa2FWNWtZRjVaZTFpemJudkNIdVNmLU9fQmJyOXJxNEVBT1p5SGpSOFBuWVRxZjZpcHRDa2hsd2JneEpPcXhYMUtqZm1qQlU3Y3JxOGRyaElFbjJyZGfSAWZBVV95cUxORkN2amxiMTZ6aHd3cEVLTFdhUGhHSWR3MktRbTF3eE1XSjlVMnRkV1Y3RjhLX0FLRm5NYzdnTjF0SFp4ck40N2VrRGNCZ3VyRmVNeGNRUGFtaWloWTNFaWdjX19TTXc?oc=5",
+    "description": "새 대형원전 영덕-첫 SMR 기장에 짓는다  동아일보",
+    "date": "2026-06-17T19:30:00.000Z",
+    "sourceId": "kr-donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": {
+      "translatedTitle": "새 대형원전 영덕-첫 SMR 기장에 짓는다 - 동아일보",
+      "summary": [
+        "\"새 대형원전 영덕-첫 SMR 기장에 짓는다 - 동아일보\" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.",
+        "원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.",
+        "관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다."
+      ],
+      "implications": [
+        "거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.",
+        "핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 8,
+    "specialistAnalysis": [
+      "대형원전 및 소형모듈원자로(SMR) 건설 계획은 국내 안정적인 전력 공급 확보와 탄소 중립 목표 달성에 중요한 역할을 합니다.",
+      "\"새 대형원전 영덕-첫 SMR 기장에 짓는다\"는 구체적인 건설 위치와 원전 종류를 명시하여 사업의 실행 계획을 보여줍니다.",
+      "한국전력, 한전기술, 두산에너빌리티 등 국내 원전 관련 기업들의 수주 및 성장 기대감을 높이며, 장기적으로 국내 전력 수급 안정화에 기여하여 산업 전반에 긍정적 영향을 미칠 것입니다."
+    ],
+    "isCurated": true
+  },
+  "id_1ok2tqw": {
+    "id": "id_1ok2tqw",
+    "title": "Why Waymo’s Driverless Taxis Won’t Be on Your Streets Anytime Soon",
+    "link": "https://www.nytimes.com/2026/06/17/technology/waymo-driverless-taxis-politics.html",
+    "description": "The Silicon Valley company’s ambitions to roll out autonomous cars nationwide have hit political roadblocks in some of the country’s biggest markets.",
+    "date": "2026-06-17T18:44:22.000Z",
+    "sourceId": "us-nyt-tech",
+    "sourceName": "NYT 테크놀로지",
+    "lang": "en",
+    "category": "Tech",
+    "region": "US",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_yzhnxs": {
+    "id": "id_yzhnxs",
+    "title": "Trump says Iran deal not ‘final,’ threatens to resume bombing if Iran does not ‘behave’ - Ada Derana",
+    "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFB2Si1zSzRLUl8zZUVEeXF3ZG9iZHk4NkczU0pfRWFmZDZSc05rZFZfcGp0MHBSMkVWT0dKdW9JWGJqTjE4OFI4RE5yOEQ2UHRsODVCYXhLNUlNSmJHeWVPbg?oc=5",
+    "description": "Trump says Iran deal not ‘final,’ threatens to resume bombing if Iran does not ‘behave’  Ada Derana",
+    "date": "2026-06-17T18:33:41.000Z",
+    "sourceId": "us-global",
+    "sourceName": "US 글로벌 투자 뉴스 (Reuters/Bloomberg/CNBC)",
+    "lang": "en",
+    "category": "Markets",
+    "region": "US",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_24my99": {
+    "id": "id_24my99",
+    "title": "One dead, 27 injured as bus carrying British tourists crashes in Spain’s La Gomera - Ada Derana",
+    "link": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE15aFZCZTdlZjhLb0lwN0E1N3dJVFZEVTBucXIwVnlVRE5fVDZQU0hzV3drNlFCSi1VeEVqQkJHNDk1Y21FSDNz?oc=5",
+    "description": "One dead, 27 injured as bus carrying British tourists crashes in Spain’s La Gomera  Ada Derana",
+    "date": "2026-06-17T18:13:29.000Z",
+    "sourceId": "us-global",
+    "sourceName": "US 글로벌 투자 뉴스 (Reuters/Bloomberg/CNBC)",
+    "lang": "en",
+    "category": "Markets",
+    "region": "US",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_yxlukj": {
+    "id": "id_yxlukj",
+    "title": "YouTube down in USA: Tens of thousands of users face problems amid outage - Ada Derana",
+    "link": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE9uZDdxZWdfTDlfNTlMZE05VDQyTFZEdVZZaUN4RzItd2xZNWVGUTVZUXBGcmtCRWFPTEhuakJjaTV5YTlUSHJz?oc=5",
+    "description": "YouTube down in USA: Tens of thousands of users face problems amid outage  Ada Derana",
+    "date": "2026-06-17T18:07:38.000Z",
+    "sourceId": "us-global",
+    "sourceName": "US 글로벌 투자 뉴스 (Reuters/Bloomberg/CNBC)",
+    "lang": "en",
+    "category": "Markets",
+    "region": "US",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_5e4sre": {
+    "id": "id_5e4sre",
+    "title": "[속보] 연준 4연속 금리동결...케빈 워시 데뷔서 만장일치 - 매일경제",
+    "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPYzlBQWdVRG1kTVFORW9HdEVaMHV0eDlyMjQyQ1ctT2hYWXBPRzZ2bVhYMWFBVXRqLUw1UURKYmpjNzRhanExYmNIQnoxVndhV0trTHRTXy1kbVRkRmxYZlpGS0lVN2xzdzZoX2VQeDM0Znlkc3pzd2paaG9NQ0NVS190VHdHS0oxeU9N?oc=5",
+    "description": "[속보] 연준 4연속 금리동결...케빈 워시 데뷔서 만장일치  매일경제",
+    "date": "2026-06-17T18:01:37.000Z",
+    "sourceId": "kr-maekyung",
+    "sourceName": "매일경제 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_spd37e": {
+    "id": "id_spd37e",
+    "title": "Anthropic Employees Accuse Trump Administration of Targeting Them",
+    "link": "https://www.nytimes.com/2026/06/17/technology/anthropic-trump-administration-fable.html",
+    "description": "Workers at the artificial intelligence company have been puzzled and increasingly concerned by the administration’s move to limit their latest A.I. models.",
+    "date": "2026-06-17T17:56:09.000Z",
+    "sourceId": "us-nyt-tech",
+    "sourceName": "NYT 테크놀로지",
+    "lang": "en",
+    "category": "Tech",
+    "region": "US",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_uipowu": {
+    "id": "id_uipowu",
+    "title": "Iran drafts law to impose tolls for transiting Strait of Hormuz - Ada Derana",
+    "link": "https://news.google.com/rss/articles/CBMiR0FVX3lxTFBRM2J2RDB6MVFSZFM1NEd3UlZIQ2MtU3FqZXFFaXpMa01GMlFkcFVySnhwaHhLSFpGaUtINWtERFlUTzdIN3Jr?oc=5",
+    "description": "Iran drafts law to impose tolls for transiting Strait of Hormuz  Ada Derana",
+    "date": "2026-06-17T17:42:38.000Z",
+    "sourceId": "us-global",
+    "sourceName": "US 글로벌 투자 뉴스 (Reuters/Bloomberg/CNBC)",
+    "lang": "en",
+    "category": "Markets",
+    "region": "US",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_oeszia": {
+    "id": "id_oeszia",
+    "title": "Political Spotlight Shines on Warsh for His First Fed Meeting as Chairman",
+    "link": "https://www.nytimes.com/2026/06/17/business/economy/fed-chair-meeting-warsh-trump.html",
+    "description": "The new Fed chairman is bound to face the unyielding attention of the president that nominated him.",
+    "date": "2026-06-17T16:20:36.000Z",
+    "sourceId": "us-nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "region": "US",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_4loif5": {
+    "id": "id_4loif5",
+    "title": "How to read the Fed’s projections like a pro.",
+    "link": "https://www.nytimes.com/live/2026/06/17/business/fed-meeting-warsh-interest-rates/how-to-read-the-feds-projections-like-a-pro",
+    "description": "",
+    "date": "2026-06-17T16:08:42.000Z",
+    "sourceId": "us-nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "region": "US",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_wtfke1": {
+    "id": "id_wtfke1",
+    "title": "Who is Kevin Warsh, the Fed’s new chairman?",
+    "link": "https://www.nytimes.com/live/2026/06/17/business/fed-meeting-warsh-interest-rates/who-is-kevin-warsh-the-feds-new-chairman",
+    "description": "Mr. Warsh will make his public debut as the Federal Reserve’s chairman on Wednesday.",
+    "date": "2026-06-17T16:07:31.000Z",
+    "sourceId": "us-nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "region": "US",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_yl3ui8": {
+    "id": "id_yl3ui8",
+    "title": "Warsh is focused on the Fed’s balance sheet. Here’s what you need to know.",
+    "link": "https://www.nytimes.com/live/2026/06/17/business/fed-meeting-warsh-interest-rates/warsh-is-focused-on-the-feds-balance-sheet-heres-what-you-need-to-know",
+    "description": "",
+    "date": "2026-06-17T16:07:02.000Z",
+    "sourceId": "us-nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "region": "US",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1v294tk": {
+    "id": "id_1v294tk",
+    "title": "How the Fed’s rate decisions affect your wallet.",
+    "link": "https://www.nytimes.com/live/2026/06/17/business/fed-meeting-warsh-interest-rates/how-the-feds-rate-decisions-affect-your-wallet",
+    "description": "",
+    "date": "2026-06-17T16:06:45.000Z",
+    "sourceId": "us-nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "region": "US",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_fq866": {
+    "id": "id_fq866",
+    "title": "공정위, 담합 등 신고포상금 ‘30억 상한’ 없앤다 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9EeGZ6OTM5NzBtbGthM0dYRlBKNzJiZzJ5cUVFVkpueXdxUFFOUDVGNkJ0QXNTcVhlcHZOZ0VJYm9QRVh5WUhmeVVob1p4dTZ3Mnd5ZzZHUDRVU1JicGVDOVRTT3Y1WG1HXzBFeFRieEpqVG9EMHfSAWZBVV95cUxPYUxTWFRFdVYxWEVqNHN2bHRvWUxVWHBiOUpUQWhUV0JTY2NVZFFobGVXZF9iejNCUVp2WVJQZHBpaHVHUUI1eUdnM2YtTjdOOGlBZUJCdk9UYTNoaGpOWnAzTkdrY0E?oc=5",
+    "description": "공정위, 담합 등 신고포상금 ‘30억 상한’ 없앤다  동아일보",
+    "date": "2026-06-17T15:30:00.000Z",
+    "sourceId": "kr-donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1870l7g": {
+    "id": "id_1870l7g",
+    "title": "[알립니다]낮은 퇴직연금 수익률… ‘기금형’으로 선택 넓혀야 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5QOHhwZlJRVDA2Y0FJbGpXR25BQWxhdFVoTEgyRDZOT0tuNmRWbTdaSjRrNzBGNlNzUHVTZklUZE96NjdQdW9haTFYUnkxSWRYX09RNTJVeVdQa1EzMVhDVE5LLXN5VFBFUjQyM2pxcXo2UXNLOEHSAWZBVV95cUxPWDFMNGJ2ZXM2V0d6akk5N18yM1pleXpfQ0JjaFM4SEx5bmhrVHZoTk53V1dTdVRqMXZFT3ctY2JqTkN3M2NHN3Mxd3g5LWVsSER2TXBvRExQTHFvckh5STB0MlR3S1E?oc=5",
+    "description": "[알립니다]낮은 퇴직연금 수익률… ‘기금형’으로 선택 넓혀야  동아일보",
+    "date": "2026-06-17T15:30:00.000Z",
+    "sourceId": "kr-donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_o5grel": {
+    "id": "id_o5grel",
+    "title": "LG이노텍, ‘AI 반도체 기판’ 승부수… “2032년 2조텍 시대 열것” - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5iYVFLejJQWk1xdEp2NktySEpIUG9TWUVNc2hYNnpJTExXbmktanduZWpHQk5LZzkzNTRodDVEQUh0bmlYdDktVTlrY3NheWk4cGdrbFE1elhDTWVfMTR3R2FsVDRtZTdQN3JCcEZJNGNaTWctRnfSAWZBVV95cUxQeWtUNnVDeHRfb0ZsZ0wtTTZ0X2JfOE5IdUtBc003VVNXbkl2a2Z2ZWR6dlllYnYwSENfblctdXlQNXNuelFUSXpzZ3FSUE5WeU40T3lzTDUta3BQQ2VwWEtjWTBJWmc?oc=5",
+    "description": "LG이노텍, ‘AI 반도체 기판’ 승부수… “2032년 2조텍 시대 열것”  동아일보",
+    "date": "2026-06-17T15:30:00.000Z",
+    "sourceId": "kr-donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_rx9n3a": {
+    "id": "id_rx9n3a",
+    "title": "How the ‘Hard Fork’ Hosts Bring Their Tech Podcast to a Live Audience",
+    "link": "https://www.nytimes.com/2026/06/17/insider/hard-fork-podcast-live-audience-san-francisco.html",
+    "description": "Kevin Roose and Casey Newton explain why they try to include “a little chaos” when they record their New York Times tech podcast in front of a crowd in San Francisco.",
+    "date": "2026-06-17T15:25:24.000Z",
+    "sourceId": "us-nyt-tech",
+    "sourceName": "NYT 테크놀로지",
+    "lang": "en",
+    "category": "Tech",
+    "region": "US",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_s8yrvm": {
+    "id": "id_s8yrvm",
+    "title": "The Cloud Has Sound: The Unrelenting and Unseen Cost of A.I. Data Centers",
+    "link": "https://www.nytimes.com/2026/06/17/us/data-centers-noise-pollution.html",
+    "description": "As tech giants rush to build infrastructure, some residents who live near data centers say a constant low-frequency vibration is ruining their health and homes.",
+    "date": "2026-06-17T14:59:00.000Z",
+    "sourceId": "us-nyt-tech",
+    "sourceName": "NYT 테크놀로지",
+    "lang": "en",
+    "category": "Tech",
+    "region": "US",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1je03oo": {
+    "id": "id_1je03oo",
+    "title": "A New Era of Super-Hybrids to Ease Range Anxiety",
+    "link": "https://www.nytimes.com/2026/06/17/business/extended-range-electric-vehicles-erevs.html",
+    "description": "Extended-range electric vehicles promise to reduce costs and appeal to America’s appetite for adventure. And they’re coming to showrooms soon.",
+    "date": "2026-06-17T14:52:07.000Z",
+    "sourceId": "us-nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "region": "US",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_x7ngy8": {
+    "id": "id_x7ngy8",
+    "title": "Prediction Markets’ Next Major Bet: Wall St. Traders",
+    "link": "https://www.nytimes.com/2026/06/17/business/dealbook/hedging-prediction-markets-kalshi.html",
+    "description": "Platforms like Kalshi let millions wager on sports and pop culture. They’re now hoping institutions will use them for big-ticket trading like hedging.",
+    "date": "2026-06-17T13:21:28.000Z",
+    "sourceId": "us-nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "region": "US",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1pdcgso": {
+    "id": "id_1pdcgso",
+    "title": "Rachel Reeves, UK Chancellor, Confronts the Political Challenges of Fiscal Stability",
+    "link": "https://www.nytimes.com/2026/06/17/business/rachel-reeves-uk-debt.html",
+    "description": "Rachel Reeves came into office promising to adhere to strict rules on spending and borrowing. Two years later, a special election could determine if she will continue in her role.",
+    "date": "2026-06-17T12:58:48.000Z",
+    "sourceId": "us-nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "region": "US",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_19d8nhy": {
+    "id": "id_19d8nhy",
+    "title": "SpaceX’s Growing Warchest ",
+    "link": "https://www.nytimes.com/2026/06/17/business/dealbook/spacex-stock-cursor-ai.html",
+    "description": "Shares in Elon Musk’s SpaceX have been on a tear, giving the rockets and artificial intelligence company financial resources to box out competitors.",
+    "date": "2026-06-17T12:05:03.000Z",
+    "sourceId": "us-nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "region": "US",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_whempy": {
+    "id": "id_whempy",
+    "title": "원전 더 지을수 있는 넓은 땅 강점 … 영덕 주민들 \"지역 활력 기대\" - 매일경제",
+    "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFB3UVhkU3JyTFg4V0J4VkpqT0wybllpWjE1MXBJaG8zVDZoelZjV2UwUk55VlFlanpJU2ZoUF83MVVRRWY2UHpkV25uVkhqMk81X3RkRw?oc=5",
+    "description": "원전 더 지을수 있는 넓은 땅 강점 … 영덕 주민들 \"지역 활력 기대\"  매일경제",
+    "date": "2026-06-17T11:17:33.000Z",
+    "sourceId": "kr-maekyung",
+    "sourceName": "매일경제 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1qeyvfl": {
+    "id": "id_1qeyvfl",
+    "title": "‘Hard Fork’ Live Part 2: Dylan Field on Standing Out in the A.I. Era",
+    "link": "https://www.nytimes.com/2026/06/17/podcasts/hard-fork-live-dylan-field.html",
+    "description": "“I think if you have a creative voice in writing or design, you put yourself out there and you take a risk — this is a good time to do that,” said the Figma chief executive Dylan Field.",
+    "date": "2026-06-17T11:00:03.000Z",
+    "sourceId": "us-nyt-tech",
+    "sourceName": "NYT 테크놀로지",
+    "lang": "en",
+    "category": "Tech",
+    "region": "US",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_i2oi5s": {
+    "id": "id_i2oi5s",
+    "title": "Japan Raids Ice Cream Giants in Cartel Investigation",
+    "link": "https://www.nytimes.com/2026/06/17/world/asia/japan-ice-cream-cartel-investigation.html",
+    "description": "The Fair Trade Commission said that it suspected six leading ice cream manufacturers fixed the prices of popular frozen treats.",
+    "date": "2026-06-17T10:54:18.000Z",
+    "sourceId": "us-nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "region": "US",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1co05b4": {
+    "id": "id_1co05b4",
+    "title": "서울창조경제혁신센터,‘2026 창업 BuS 스테이지 6월 IR 피칭’성료 - 한경매거진&북",
+    "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1SVVNWS0RseGhZQThhQTY0a2h0VFFYU0Z4LU5CbWdqT0tWcUpKTzZOaWJrTWtWU0lIQm1Rb0VCcndPN255SXpRS3luSnQ4bG1qSm1PMDk3MlliLTBaZ2VYTDFEbVc5QQ?oc=5",
+    "description": "서울창조경제혁신센터,‘2026 창업 BuS 스테이지 6월 IR 피칭’성료  한경매거진&북",
+    "date": "2026-06-17T10:30:35.000Z",
+    "sourceId": "kr-hankyung-eco",
+    "sourceName": "한국경제 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_iepamq": {
+    "id": "id_iepamq",
+    "title": "Brexit Bears Some Blame for EU’s Capital Market Inertia, EIB Chief Says - Bloomberg.com",
+    "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOZ1NBOHZJMHFsRUVfUmVoUDVPcDZQZ3plX2t1M1g5MkpQUjNOS0o3OHBjVFo2Sk5NQWFJQTRwenhFcjBhblQ4NE1fc3ZZVXNtNmVaUkpSUFFUenhaUEozYXVsM0g0bVpZZS1YNDRvX1dQOGVYOERTMjM2aXotRThGT3UwQ191a2s5eTNDUkxaX0ZlcklHOUpvYjFvLUYzbWZGZGMzRzlKeGRMaWRQWGJqQ2hSNXByZDNKTjlSZjh3?oc=5",
+    "description": "Brexit Bears Some Blame for EU’s Capital Market Inertia, EIB Chief Says  Bloomberg.com",
+    "date": "2026-06-17T09:49:51.000Z",
+    "sourceId": "us-global",
+    "sourceName": "US 글로벌 투자 뉴스 (Reuters/Bloomberg/CNBC)",
+    "lang": "en",
+    "category": "Markets",
+    "region": "US",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1bhmh8v": {
+    "id": "id_1bhmh8v",
+    "title": "미래에셋증권, 3000억 규모 자사주 취득…역대 최대 규모 - 한국경제",
+    "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9JUTNYTFY5Wm5GYV9Vd2JqVndfbTN2UVEwU3lsM21UNHZaemk4cUpXZWJqYXpzMm4wYlJUc1NfVWFIWGk0RGYxeGZ4N2RZUFBXaFhvcUMzM2FEd9IBVEFVX3lxTFBfYzUzTGNIQUZ4ejhVRkdsOEU1ZmpNdDFUZGgyMTBvbDZOZU9DSjl6U09KamRUR2RNNVRidXM0WGFKRTR6enh6ekhTcTRFbGJZOWRxYg?oc=5",
+    "description": "미래에셋증권, 3000억 규모 자사주 취득…역대 최대 규모  한국경제",
+    "date": "2026-06-17T09:10:17.000Z",
+    "sourceId": "kr-hankyung-fin",
+    "sourceName": "한국경제 증권",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1ggejt3": {
+    "id": "id_1ggejt3",
+    "title": "The U.S. Economy Is Leaving Small Businesses Behind",
+    "link": "https://www.nytimes.com/2026/06/17/business/economy/small-business-strain-economy.html",
+    "description": "Small businesses say relentless pressures from tariffs and higher energy prices have sapped their resilience and finances.",
+    "date": "2026-06-17T09:04:59.000Z",
+    "sourceId": "us-nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "region": "US",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1ihh5pf": {
+    "id": "id_1ihh5pf",
+    "title": "Who Will Get Spirit Airlines’ Coveted Flights at LaGuardia?",
+    "link": "https://www.nytimes.com/2026/06/17/business/spirit-airlines-laguardia-airport.html",
+    "description": "A bankruptcy court has started the process to sell the airline’s right to fly to and from the New York City airport, but finding a buyer could be hard.",
+    "date": "2026-06-17T09:04:47.000Z",
+    "sourceId": "us-nyt-biz",
+    "sourceName": "NYT 비즈니스",
+    "lang": "en",
+    "category": "Markets",
+    "region": "US",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_5kg252": {
+    "id": "id_5kg252",
+    "title": "이억원 \"포용금융으로 제도개혁\" … 신용평가·대출시스템 새판 짠다 - 매일경제",
+    "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5ZQVYzMU41M3U5NWRPQ0NTRVNlS1RhV0p5TjdkeklvTUNoMXZnSjBjX0VHbVpidG1xUkx6MmxkSmxJOU1EMzhZREJGcWZnLUI4SzMtVQ?oc=5",
+    "description": "이억원 \"포용금융으로 제도개혁\" … 신용평가·대출시스템 새판 짠다  매일경제",
+    "date": "2026-06-17T08:38:26.000Z",
+    "sourceId": "kr-maekyung",
+    "sourceName": "매일경제 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_cjxbj4": {
+    "id": "id_cjxbj4",
+    "title": "뉴욕 임대살이 전전하던 이민2세...6조 맨해튼 트로피빌딩 개발 - 매일경제",
+    "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9YZFRXdFFXZkNNOHVWMURUa1EyNWotUnVQYUl5cks3OVlwNDZJMFdoWmtUb2tnSlltbGkzTEF6TTg3aUJuMFg3cFh4V21FZVlrUU1Weg?oc=5",
+    "description": "뉴욕 임대살이 전전하던 이민2세...6조 맨해튼 트로피빌딩 개발  매일경제",
+    "date": "2026-06-17T08:00:00.000Z",
+    "sourceId": "kr-maekyung",
+    "sourceName": "매일경제 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1cvf261": {
+    "id": "id_1cvf261",
+    "title": "PF 자금난 푼다…정부, 1조원 개발앵커리츠 본격 가동 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9UclV0OHpHcmlHTGRYVzBzWmMtYnBfQW4wNS1UWmNMdGxpLXBNRzlqWUx4VmtOcG84bUxJQVRMZjNIOTB4Mzgtel9CcEtBajlKZXdVSGhDeHltdlZ1V3hKY24zV1JkNUFGWERrZ083TlRCaXd4Y2fSAWZBVV95cUxPWXlyY3VmYVBBUElpLThCTHRkQzFTajNZaWxlNndnWkxZZzJkV05QanZqVl9TSFYxbUdLcDlWRm5iU0Q2aU9nbk1pRGlaV0I3NHJTd2hTSnpUU3FCT2h5UmNYbndUTnc?oc=5",
+    "description": "PF 자금난 푼다…정부, 1조원 개발앵커리츠 본격 가동  동아일보",
+    "date": "2026-06-17T07:58:00.000Z",
+    "sourceId": "kr-donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1nyrq1k": {
+    "id": "id_1nyrq1k",
+    "title": "당장 1370억 갚아야 할 중앙일보, “응할 수 없어” 상환 거부 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9BSUpLUDdSS290cTBXaS1hMHlrWTRad1ppallKc3BzeV9WX1ZwcHMxVEl1RUlCUjlHNWNNWXpHV3dXc0FMbWxTWGxJOHBlTkMwSE15MlZrRUtTcmZBNk84UHFqZG1vMWxnTVJPaW8xVU5WdnJOOVHSAWZBVV95cUxNTTczSnlZUk1famNGaF9ZZGxuU2xwaWlKVTVDTjRGMlZwckVYc3BmOElJcV9tWmpZcTFQSzBMRU5NeGUzdHk3V1BkR1ZhOU1BMHFna1RZMkFnTlZMem1mRkNocVkxd2c?oc=5",
+    "description": "당장 1370억 갚아야 할 중앙일보, “응할 수 없어” 상환 거부  동아일보",
+    "date": "2026-06-17T07:53:00.000Z",
+    "sourceId": "kr-donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_i9tawb": {
+    "id": "id_i9tawb",
+    "title": "억대 보너스 잔치에 내 지갑도 얇아진다?…한은 “물가 0.05%p 끌어올려” - 매일경제",
+    "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1rdF9GRmU2d3d2dXdNMUwzWmZ4UUc2RWpwcmx5OHYxMkN6MHJtNXBlVHdWaXkya2EyZWlISHJMZHBpN25QUkVVaXEzcDlhcUo4LWl2Zw?oc=5",
+    "description": "억대 보너스 잔치에 내 지갑도 얇아진다?…한은 “물가 0.05%p 끌어올려”  매일경제",
+    "date": "2026-06-17T06:28:18.000Z",
+    "sourceId": "kr-maekyung",
+    "sourceName": "매일경제 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1h5yrel": {
+    "id": "id_1h5yrel",
+    "title": "\"뉴트럴, 시장중립 전략 활용 수익형 스테이블코인 모델\" - 한국경제",
+    "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE80b1RreFBPa1hja3J6U05RVWVITkY4MWowR0RhdkFZY21xX2Y1NDBpVGdWMzUzWkxEenZTLU51VlVvS29kd1hvT2FXTnNxVW1rVnNTSVkwWWVkQdIBVEFVX3lxTFByMWhXdG80dW1MVWZJZ0FTekVnQkh1MGpXSWdkRUVDX001bG5SdXBYXzAydHZiaks5LTJqYW9MSTB2ZF9KQVFEWUM5QTg1YnVtUm9kdw?oc=5",
+    "description": "\"뉴트럴, 시장중립 전략 활용 수익형 스테이블코인 모델\"  한국경제",
+    "date": "2026-06-17T06:14:48.000Z",
+    "sourceId": "kr-hankyung-eco",
+    "sourceName": "한국경제 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1tfryve": {
+    "id": "id_1tfryve",
+    "title": "GLOBAL MARKETS-Oil Extends Fall, Stocks Steady as Traders Wait on Warsh - KONTAN",
+    "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPLUtDbU93TEJCUDlxSl9uRkJ3eE1heWhxVW1RQ3VXa2tfMFlFREJNbWZMeUxGTGVwZHBYcUMtWkNDNzBlS3ZHYllEZ2huTzlQYnF0VE5tZjMzTW4zVWdSTURWRmNJLUdTNUR5N19od1NTQ21tMVRScXpxRXNUVnNaaVFiQVdRUlVFZ1BWb3V2Uk5xanVJcnVLanNmM2lRWjg5TGh5NkZvOA?oc=5",
+    "description": "GLOBAL MARKETS-Oil Extends Fall, Stocks Steady as Traders Wait on Warsh  KONTAN",
+    "date": "2026-06-17T05:49:58.000Z",
+    "sourceId": "us-global",
+    "sourceName": "US 글로벌 투자 뉴스 (Reuters/Bloomberg/CNBC)",
+    "lang": "en",
+    "category": "Markets",
+    "region": "US",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_oiyytu": {
+    "id": "id_oiyytu",
+    "title": "Social Media Overtakes Traditional Media as Top News Source, Reuters Study Finds - NewsGram",
+    "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNQ3VQNGF4LVY2b1Z4WE1KcC1IUEdYaUZjNDlWRXlhdDVVelRnblhhTDJYTFd2TXUweUNyZTAyc3RwTGdyek5sMFprWDRiSFFBQUJXcThzbWw4UVY0M0pIeDRmaGV1Q1BQQk15ckFXSDVCVG1rOXNWZ3hUck53eDF4NE5TUkt5cEg3TjMzQjRnUGdqZVV1S1d5MmtFOFFRcElEZjhDStIBsgFBVV95cUxPcHhJaDM0MzZCdHotMGV1cVlacElGZFdOWFF2X3p4QTV3Tm81WEVaUDNjQk1Vb0Zxdmx5S3lJc0JUbk1LLWJHRlBwaG5yTTd6NEN1alZyLUVZU25SZEFtb25RY3A3cWtDRk5oQmw4ZmlIQjdETFV2N3gwZkdrUDlhMnVRZjVZNXZOUXBjcGZTYUhSaF9IUHBQWi04dWFRU0JqMnQ4cVJ3OXViUmg0M1dUN1FB?oc=5",
+    "description": "Social Media Overtakes Traditional Media as Top News Source, Reuters Study Finds  NewsGram",
+    "date": "2026-06-17T05:30:00.000Z",
+    "sourceId": "us-global",
+    "sourceName": "US 글로벌 투자 뉴스 (Reuters/Bloomberg/CNBC)",
+    "lang": "en",
+    "category": "Markets",
+    "region": "US",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_75h0y5": {
+    "id": "id_75h0y5",
+    "title": "이진호 기자 - 한경매거진&북",
+    "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNTTd6ekI0d3FjZEwxanluNkNGNklscGF2NWw1NXZrLVNkcDRaNENxVTZYTnVvOW1DWENVLTdBN2wtSXZ3T2hKVkZWZEVyZnl5bTh0SUg2bWljSFg1eEpscHE0RXh4X2I2SmpXZEVTaXJVcmgyamY0VVEwYWZ0WTNSOQ?oc=5",
+    "description": "이진호 기자  한경매거진&북",
+    "date": "2026-06-17T04:28:11.000Z",
+    "sourceId": "kr-hankyung-fin",
+    "sourceName": "한국경제 증권",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1kkvwbr": {
+    "id": "id_1kkvwbr",
+    "title": "Nexon’s AI Survival Strategy “Developer Insight·Context Capital” - IT조선",
+    "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5rdGZYMmQtdXplZHRaU0pTaUR2V0c3bExkc0NuMDBQTW9qVWd6TmtRQ1BabTBlR0J1VURPTVlaQnB2UXhfSGQ5a2EwVFdSS3c0WjNXT3A5M2NqVUF2V1A1WlBSQS0zcmh3RUtUMnBUV3TSAXRBVV95cUxQOTRrOXRDaEo2TXp1elhSSzRqNHJOY1phQXJ6Y3dZRml1ZExUSE5SdkdWLW1VaFh4a0wyandXS28ybEJJek9GeTE0ZEt4akZ2TzRCZmxUbF9RVGktVnVKZjZ6NE1QVkswTWZ6MWt4bzhVS19xZA?oc=5",
+    "description": "Nexon’s AI Survival Strategy “Developer Insight·Context Capital”  IT조선",
+    "date": "2026-06-17T03:00:00.000Z",
+    "sourceId": "kr-chosun",
+    "sourceName": "조선일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1vqrocc": {
+    "id": "id_1vqrocc",
+    "title": "Unruptured: Why the market order is holding—for now - T. Rowe Price",
+    "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPeDU2LVhrODB1blZ2S2xsTmFESWI0dmRmbERHWnFJRTRKc2dSbHRlR1pyY3hWOXR4VzlCNVVrOURKZWJmMVhLYjNFWG5nckNMRFNwTW8tbElOdnRQTk42cnNQdy14TEhnZzFmMmtVaGhFUTE4WUNaUWN5QmtNclFyRWk2bWVOWXc0R1hIUkVGVjJNeDRHVHZUcDlRV2lJZDNPRFQtMDZPVEl3ZFdZeXVURDd1SQ?oc=5",
+    "description": "Unruptured: Why the market order is holding—for now  T. Rowe Price",
+    "date": "2026-06-17T02:33:58.000Z",
+    "sourceId": "us-global",
+    "sourceName": "US 글로벌 투자 뉴스 (Reuters/Bloomberg/CNBC)",
+    "lang": "en",
+    "category": "Markets",
+    "region": "US",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1jiexar": {
+    "id": "id_1jiexar",
+    "title": "SK하닉 “신입채용 학력조건 전면 폐지”…스펙 아닌 창의력 본다 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5ocVNaYnJEd1JmaEs3cmc4cF9UZmtsWTViQVBMOWxtUlA5NzZaVkd6U3lUUnc2d0VWR3FUbW4yRVlGYjJFQ09leEVCNHl0RFBPSFRFdktreEJuUWwybGpjSnRHYkhlSElWOF90YUtfb3NBZlU5c2fSAWZBVV95cUxPUkhRdk9aVFM2RDNVT3hsMGRRZTNpZHhVOVBfakVic1oyaktjOUdTekFaRHdGRVl4NXctR3NpWE5rWTBZYkItYm14RURCWTk2NmExVkZaRVYxYllvNmZ5NmdkVkNoN3c?oc=5",
+    "description": "SK하닉 “신입채용 학력조건 전면 폐지”…스펙 아닌 창의력 본다  동아일보",
+    "date": "2026-06-17T01:56:00.000Z",
+    "sourceId": "kr-donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_2vnm0e": {
+    "id": "id_2vnm0e",
+    "title": "Keir Starmer lauds major new jobs and energy package after crunch G7 talks - MSN",
+    "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNVUtfdmlqQnNFMDNYVnpBTGpqME5qTkdkQlE2bmF4UXJHd1BEOVItUXJMQzVOY3ZCLVNmcmR1Q2RzQVFEdG5rQUxJbml1RDZieklidTdJRWM0bEtyMmRoa1JCRzU0ZTJmWmVScXVCdXJRLWVWS0xlVDVxVm1ZU19nX2NQbkE4S3RQN01kR0xmZXJQc1YwcnpIUUlZbkhaMWs3OXh4XzVDOElNWkRwVnh5OTZSSW16YWxvYW5hMEVPak5SZw?oc=5",
+    "description": "Keir Starmer lauds major new jobs and energy package after crunch G7 talks  MSN",
+    "date": "2026-06-17T01:38:53.000Z",
+    "sourceId": "us-global",
+    "sourceName": "US 글로벌 투자 뉴스 (Reuters/Bloomberg/CNBC)",
+    "lang": "en",
+    "category": "Markets",
+    "region": "US",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_dgytu6": {
+    "id": "id_dgytu6",
+    "title": "900점도 15%…현금서비스 금리, 신용등급 안 가렸다 - 매일경제",
+    "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBQS00wNG5ldkY0YVY4YURPRkdLNGZ0N0Y4NktCSmEzUnhRWlNnWHBnMDlhRVJraE5SQ1RfMHp5SkwwenBocGo5UEJuWWVWTkZMVk1jQg?oc=5",
+    "description": "900점도 15%…현금서비스 금리, 신용등급 안 가렸다  매일경제",
+    "date": "2026-06-17T01:12:50.000Z",
+    "sourceId": "kr-maekyung",
+    "sourceName": "매일경제 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_bgfydp": {
+    "id": "id_bgfydp",
+    "title": "“시리의 눈 된다”…애플, 2027년 카메라 탑재 에어팟 준비 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5xZHh1TWZDQzVoMXlWVmtnNUtid1RkclktZ0loV1pBZnF3N3BGUDZld0stRHo2ckpqQ002UWR0cVhKVmlYNm90a1hOY1NRVzJ2bkZxaEVIaEFnUmlLMnJ0emw1N0N0ekZ1NEZMaVlQS18zQ2FMRlHSAWZBVV95cUxNdWhseTExR0dYeWFKVEtKbnJSTVhDRzZwVHhDUnJzc0NmWDlDVW9xYU5qUktsbjFzbEpjOHcyTTBNSmNPQm5vWGhWRDg4aFNyY0k1RGl0ZF9zc3JxdDl5TWJpUzQ1eWc?oc=5",
+    "description": "“시리의 눈 된다”…애플, 2027년 카메라 탑재 에어팟 준비  동아일보",
+    "date": "2026-06-17T00:49:26.000Z",
+    "sourceId": "kr-donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1opkh9t": {
+    "id": "id_1opkh9t",
+    "title": "[단독] 체코 원전 최종계약 1주년 날, 한전·한수원 원전 수출팀 한자리 모인다 - 조선일보",
+    "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPMTdnYzhSNno0d3VnaUlqNENvME82SC0xNi1PTWFWWlBGUWJtZVN2N29jM1JucmJsOWVpMzM3TkFTZlg3dW9SRlZUc2FfX3ZKc0hjbTFOTVhta3dadmJkYkRnX1pmdE5QTVJMUzY0dGsxTE9XS3lBMnJfaDg1cV9KeXp1ZjZVeXZ5cHhjMVRxcw?oc=5",
+    "description": "[단독] 체코 원전 최종계약 1주년 날, 한전·한수원 원전 수출팀 한자리 모인다  조선일보",
+    "date": "2026-06-17T00:11:43.000Z",
+    "sourceId": "kr-chosun",
+    "sourceName": "조선일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_121i0ty": {
+    "id": "id_121i0ty",
+    "title": "‘워시 첫 FOMC’ 앞두고 혼조 마감…다우지수는 최고치 [뉴욕증시] - 매일경제",
+    "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9iSzlzazlSbEtzSndORG9KUDFRWjFGNkszdEwwM3hpT3JTYU1OLTMzRDcybVFJdzktYUg5UnNjVjBtQlU4UnNIcDdLZWsyT0JZeklLRg?oc=5",
+    "description": "‘워시 첫 FOMC’ 앞두고 혼조 마감…다우지수는 최고치 [뉴욕증시]  매일경제",
+    "date": "2026-06-17T00:08:50.000Z",
+    "sourceId": "kr-maekyung",
+    "sourceName": "매일경제 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_10fayda": {
+    "id": "id_10fayda",
+    "title": "캐릭터와 사랑에 빠진 소비자들… - 한국경제",
+    "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5XOWRtU3pmckR1dEQzSVhqdnR1U0dJTjFzM1FnM0tzOEJHV3VmeEI2SHdPT3ozVTdoT1ptVU1LakQ2WjdhLV9YcjhzekdXdmVndncwU3duTTZudw?oc=5",
+    "description": "캐릭터와 사랑에 빠진 소비자들…  한국경제",
+    "date": "2026-06-16T23:09:49.000Z",
+    "sourceId": "kr-hankyung-eco",
+    "sourceName": "한국경제 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1bu4e4c": {
+    "id": "id_1bu4e4c",
+    "title": "농협은행도 빚투 줄이기…신용대출 최대한도 1억원으로 - 한국경제",
+    "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFB0dU8tbjJ5MndMcC1LdXdoNHFuY0N4SlIxYkdXaDh6NGVYWDVaYjB2TWtCYVRFNmZ6clpqSFlMSjJNa3JFVFBLU2l2MmxIdE1iT3F2RkV1Zy1uQdIBVEFVX3lxTE4zY2RrQW1kZmtkUHhBT3RFTjcxYlo1STdHQ1VDZ25UYnNSUURGWmx3TXdmbklObFdaMVhidmhyaDBObTd1SWh3OHRNbVUta3NFNFZmag?oc=5",
+    "description": "농협은행도 빚투 줄이기…신용대출 최대한도 1억원으로  한국경제",
+    "date": "2026-06-16T11:13:00.000Z",
+    "sourceId": "kr-hankyung-fin",
+    "sourceName": "한국경제 증권",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_154huzi": {
+    "id": "id_154huzi",
+    "title": "India's rice stocks climb to record high; wheat inventories at five-year peak - Reuters",
+    "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNSXFQRGZsamFWSmtoR253U19NN2xLMm9fT0QtZ1hReUJsQmRHRmRhOGNNdHRPT2hzTkl3UlJETVB4TU1LTkMtMnBoVWtJMXItRW01cDB5Q0lHbU9MVGRVbjFxbllydFJhUEUxOEhlV2N2ZHAycVgzWm4tMGVYOW8yejBkT214VnYyU19LT0VSS1hBNHBZaUpVMjZMbS1DdW5EbDBtc1RhOElnRHIyem04QVN2aDR3aTdU?oc=5",
+    "description": "India's rice stocks climb to record high; wheat inventories at five-year peak  Reuters",
+    "date": "2026-06-16T10:35:44.000Z",
+    "sourceId": "us-global",
+    "sourceName": "US 글로벌 투자 뉴스 (Reuters/Bloomberg/CNBC)",
+    "lang": "en",
+    "category": "Markets",
+    "region": "US",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_12wwc3b": {
+    "id": "id_12wwc3b",
+    "title": "“전쟁 끝났는데 왜?”…불기둥 그린 LIG D&A [오늘, 이 종목] - 매일경제",
+    "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE8wbEpmWTZZXzc2T0tIYWhLV2RXZmMyUjZuX3JZM3dkVzRGSkpsQ1ZodDhnZWdsMWRsV0h1dkpJcXF1X1JJcWZtNVQ2UUtpZXJyMktqcw?oc=5",
+    "description": "“전쟁 끝났는데 왜?”…불기둥 그린 LIG D&A [오늘, 이 종목]  매일경제",
+    "date": "2026-06-16T08:04:31.000Z",
+    "sourceId": "kr-maekyung",
+    "sourceName": "매일경제 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_18ebx4u": {
+    "id": "id_18ebx4u",
+    "title": "BTM 발전의 중장기 과제와 그 해결책이 될 SMR - 한국경제",
+    "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQRkpsangzOXBoVC1kMHhJN0tjM3NMa0dPZXNUMG1IWFpEaTZNdGJQbFlrd1dTeGdZTFQyQVpKcUt4aFM5Q1dEcmdTbjNGNThQVk84Zml1TjVVZElTQVd1aklGNkVDcEZyOENMQzBPNFREeXcyeTFFUWZfdkdWc3BxVHRTaHpIc1FRTXdXZGJnN21CZGl6Rmc?oc=5",
+    "description": "BTM 발전의 중장기 과제와 그 해결책이 될 SMR  한국경제",
+    "date": "2026-06-16T05:49:31.000Z",
+    "sourceId": "kr-hankyung-eco",
+    "sourceName": "한국경제 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_uksslv": {
+    "id": "id_uksslv",
+    "title": "\"유가 하락에도 高물가 불안 지속\"… 韓성장률은 소폭 오를듯 - 매일경제",
+    "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE8xRjNHTS1WZDU5UVVtbFhZMTZMa2gwM2NRVnM3LWtBM3lPdVREeE93elFMNFNTQUxoeWVnSFpSSl9RUUVtbEo3M0VKZFZGY0dvc2o1aA?oc=5",
+    "description": "\"유가 하락에도 高물가 불안 지속\"… 韓성장률은 소폭 오를듯  매일경제",
+    "date": "2026-06-15T08:48:26.000Z",
+    "sourceId": "kr-maekyung",
+    "sourceName": "매일경제 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1p7iypx": {
+    "id": "id_1p7iypx",
+    "title": "From Warsh's Fed debut to US-Iran peace deal: What investors need to watch this week - The Economic Times",
+    "link": "https://news.google.com/rss/articles/CBMimgJBVV95cUxOb2Y1SWJ4Z3BpUnBNckIzcFk4SXNRRHdvaklTQmNna0NGYjRsSFlZYTRmRjlPN1ZWWFhsS1AzZy1DX05LcVhOSEVZcnFsd0h6WklyQ0F5VW9rNnY1WW13bU9LUjFPOUZ1Vkk4ZUx3Yi1CRlRtTEpLWjV1N3pURVhxN0xCTnpEOG5yaDFXYlNNc3p0LUNpcmVBU291U1JjRkpONkI0RFBYQXk5OUMyallST2ZUWnBoSXdpbkN0VXdEV0lXcnBlVmJvUURvdzVCQTJlN2wwY3Y3ZzFvUFlGR3VsektyQlRhTHpCUlFrNEpINkM2SmVaeTRrVEtjR0F6NU51T3Q5Rmpaakl3MzFqX3YyZ0JibmhBTjR1ZUE?oc=5",
+    "description": "From Warsh's Fed debut to US-Iran peace deal: What investors need to watch this week  The Economic Times",
+    "date": "2026-06-15T08:02:19.000Z",
+    "sourceId": "us-global",
+    "sourceName": "US 글로벌 투자 뉴스 (Reuters/Bloomberg/CNBC)",
+    "lang": "en",
+    "category": "Markets",
+    "region": "US",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1sm8rha": {
+    "id": "id_1sm8rha",
+    "title": "“주식으로 돈 벌더니 결국 강남으로”…4개월간 3.7조 부동산 유입 - 매일경제",
+    "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE0xSmk0NDlEUmJ4WktlckFySUpwRWNLc1RlMTZwUzJmQk1ZSWhUX3FXalRoanY2Q2xOSDN0MmxBYnhfR3ZSUUNVbjZZSkZmVTBQdVNwbA?oc=5",
+    "description": "“주식으로 돈 벌더니 결국 강남으로”…4개월간 3.7조 부동산 유입  매일경제",
+    "date": "2026-06-14T01:04:37.000Z",
+    "sourceId": "kr-maekyung",
+    "sourceName": "매일경제 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
     "isCurated": false
   }
 }
