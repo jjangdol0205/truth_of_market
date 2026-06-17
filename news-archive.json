@@ -9399,7 +9399,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "region": "KR",
-    "isCurated": false
+    "isCurated": false,
+    "specialistScore": 5,
+    "specialistAnalysis": [
+      "오프라인 분석 대기"
+    ]
   },
   "id_16i8e9m": {
     "id": "id_16i8e9m",
@@ -9441,7 +9445,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "region": "KR",
-    "isCurated": false
+    "isCurated": false,
+    "specialistScore": 5,
+    "specialistAnalysis": [
+      "오프라인 분석 대기"
+    ]
   },
   "id_c8i96": {
     "id": "id_c8i96",
@@ -9789,7 +9797,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 5,
+    "specialistAnalysis": [
+      "오프라인 분석 대기"
+    ]
   },
   "id_1cfqxvw": {
     "id": "id_1cfqxvw",
@@ -9835,7 +9847,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 5,
+    "specialistAnalysis": [
+      "오프라인 분석 대기"
+    ]
   },
   "id_s3v9jf": {
     "id": "id_s3v9jf",
@@ -9867,7 +9883,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 5,
+    "specialistAnalysis": [
+      "오프라인 분석 대기"
+    ]
   },
   "id_1nb9rd9": {
     "id": "id_1nb9rd9",
@@ -9913,7 +9933,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 5,
+    "specialistAnalysis": [
+      "오프라인 분석 대기"
+    ]
   },
   "id_1cseqvo": {
     "id": "id_1cseqvo",
@@ -9973,7 +9997,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 5,
+    "specialistAnalysis": [
+      "오프라인 분석 대기"
+    ]
   },
   "id_1fqz30q": {
     "id": "id_1fqz30q",
@@ -10001,7 +10029,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 5,
+    "specialistAnalysis": [
+      "오프라인 분석 대기"
+    ]
   },
   "id_12vcjhb": {
     "id": "id_12vcjhb",
@@ -10033,7 +10065,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 5,
+    "specialistAnalysis": [
+      "오프라인 분석 대기"
+    ]
   },
   "id_rmw74w": {
     "id": "id_rmw74w",
@@ -10079,7 +10115,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 5,
+    "specialistAnalysis": [
+      "오프라인 분석 대기"
+    ]
   },
   "id_10jher6": {
     "id": "id_10jher6",
@@ -10107,7 +10147,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 5,
+    "specialistAnalysis": [
+      "오프라인 분석 대기"
+    ]
   },
   "id_1xanmfl": {
     "id": "id_1xanmfl",
@@ -10157,7 +10201,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 5,
+    "specialistAnalysis": [
+      "오프라인 분석 대기"
+    ]
   },
   "id_1p49qvi": {
     "id": "id_1p49qvi",
@@ -10263,7 +10311,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 5,
+    "specialistAnalysis": [
+      "오프라인 분석 대기"
+    ]
   },
   "id_1dhumpm": {
     "id": "id_1dhumpm",
@@ -10579,7 +10631,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 5,
+    "specialistAnalysis": [
+      "오프라인 분석 대기"
+    ]
   },
   "id_1tfv8o5": {
     "id": "id_1tfv8o5",
@@ -10937,7 +10993,11 @@
     "category": "Tech",
     "aiAnalysis": null,
     "region": "US",
-    "isCurated": false
+    "isCurated": false,
+    "specialistScore": 5,
+    "specialistAnalysis": [
+      "오프라인 분석 대기"
+    ]
   },
   "id_1l8kn7g": {
     "id": "id_1l8kn7g",
