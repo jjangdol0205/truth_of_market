@@ -17541,7 +17541,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ]
   },
   "id_oschwl": {
     "id": "id_oschwl",
@@ -17555,7 +17559,11 @@
     "category": "Markets",
     "aiAnalysis": null,
     "region": "US",
-    "isCurated": false
+    "isCurated": false,
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ]
   },
   "id_16exzu1": {
     "id": "id_16exzu1",
@@ -17569,7 +17577,11 @@
     "category": "Markets",
     "aiAnalysis": null,
     "region": "US",
-    "isCurated": false
+    "isCurated": false,
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ]
   },
   "id_l2n282": {
     "id": "id_l2n282",
@@ -17583,7 +17595,11 @@
     "category": "Markets",
     "aiAnalysis": null,
     "region": "US",
-    "isCurated": false
+    "isCurated": false,
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ]
   },
   "id_90qhbf": {
     "id": "id_90qhbf",
@@ -17597,7 +17613,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ]
   },
   "id_1hsjk59": {
     "id": "id_1hsjk59",
@@ -17611,7 +17631,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ]
   },
   "id_bfrd1v": {
     "id": "id_bfrd1v",
@@ -17625,7 +17649,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ]
   },
   "id_da7es6": {
     "id": "id_da7es6",
@@ -17639,7 +17667,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ]
   },
   "id_13b2owx": {
     "id": "id_13b2owx",
@@ -17653,7 +17685,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "region": "KR",
-    "isCurated": false
+    "isCurated": false,
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ]
   },
   "id_qhfmrd": {
     "id": "id_qhfmrd",
@@ -17667,7 +17703,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ]
   },
   "id_5i6qb4": {
     "id": "id_5i6qb4",
@@ -17681,7 +17721,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "region": "KR",
-    "isCurated": false
+    "isCurated": false,
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ]
   },
   "id_swgc0c": {
     "id": "id_swgc0c",
@@ -17695,7 +17739,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ]
   },
   "id_3us2tr": {
     "id": "id_3us2tr",
@@ -17709,7 +17757,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ]
   },
   "id_cdyzng": {
     "id": "id_cdyzng",
@@ -17723,7 +17775,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ]
   },
   "id_ucu0bd": {
     "id": "id_ucu0bd",
@@ -17737,7 +17793,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "region": "KR",
-    "isCurated": false
+    "isCurated": false,
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ]
   },
   "id_1y3jqw7": {
     "id": "id_1y3jqw7",
