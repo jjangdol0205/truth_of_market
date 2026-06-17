@@ -14397,7 +14397,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ]
   },
   "id_i5iefu": {
     "id": "id_i5iefu",
@@ -14586,7 +14590,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ]
   },
   "id_krzd2e": {
     "id": "id_krzd2e",
@@ -14600,7 +14608,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ]
   },
   "id_93qhuu": {
     "id": "id_93qhuu",
@@ -14614,7 +14626,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ]
   },
   "id_1kbgsmb": {
     "id": "id_1kbgsmb",
@@ -14681,7 +14697,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "region": "KR",
-    "isCurated": false
+    "isCurated": false,
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ]
   },
   "id_btwz80": {
     "id": "id_btwz80",
@@ -15068,7 +15088,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "region": "KR",
-    "isCurated": false
+    "isCurated": false,
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ]
   },
   "id_1977hri": {
     "id": "id_1977hri",
@@ -15405,7 +15429,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ]
   },
   "id_1ditss0": {
     "id": "id_1ditss0",
@@ -16184,7 +16212,7 @@
     "specialistAnalysis": [
       "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
     ],
-    "isCurated": true,
+    "isCurated": false,
     "region": "KR"
   },
   "id_3xzzky": {
@@ -18008,15 +18036,15 @@
     "lang": "ko",
     "category": "Macro",
     "aiAnalysis": {
-      "translatedTitle": "국가핵심기술, 해외 자회사로 수출 쉬워진다 - 매일경제",
+      "translatedTitle": "국가핵심기술, 해외 자회사로 수출 규제 완화된다",
       "summary": [
-        "금일 발생한 주요 경제 사건인 \"국가핵심기술, 해외 자회사로 수출 쉬워진다 - 매일경제\"에 대한 핵심 개요와 사실 관계입니다.",
-        "기사 원문에서 언급된 주요 재무 지표와 거시경제적 수치 변화를 상세 모니터링해야 합니다.",
-        "시장 참여자들의 투자 경계감 및 거래대금 변화 흐름을 종합 점검하는 과정이 요구됩니다."
+        "정부가 국가핵심기술을 보유한 국내 첨단 기업이 100% 지분을 소유한 해외 자회사로 기술을 이전하거나 수출할 때 규제를 완화하는 방안을 추진합니다.",
+        "기존의 복잡한 승인 절차를 대폭 간소화하거나 사후 신고로 대체하여, 글로벌 공급망 재편에 대응하고 국내 기업의 해외 생산 기지 조율 속도를 높일 방침입니다.",
+        "다만 핵심 기술 유출 리스크를 원천 차단하기 위해 해외 자회사에 대한 보안 실사 및 모니터링 관리 체계는 철저한 기준을 유지합니다."
       ],
       "implications": [
-        "거시적 금리 경로 및 위험자산 선호 심리 변화에 부합하는 포트폴리오 관리가 필요합니다.",
-        "관련 핵심 섹터의 주가 지지선 구축 여부를 확인하며 보수적으로 시장을 관망하는 것이 유리합니다."
+        "핵심 첨단 기술(반도체, 배터리, 디스플레이 등)을 보유한 국내 대기업들의 글로벌 현지 생산 속도 제고 및 경영 효율화에 보탬이 됩니다.",
+        "기술 수출 규제 장벽 완화에 따라 수혜를 입는 핵심 기술 보유 수출 대기업들의 중장기적인 투자 매력도가 부각될 수 있습니다."
       ],
       "isPremiumCuration": true
     },
@@ -18040,15 +18068,15 @@
     "lang": "ko",
     "category": "Macro",
     "aiAnalysis": {
-      "translatedTitle": "농협상호금융, 온투사 6곳과 협약… 저신용자 대출 공급 확대 - 동아일보",
+      "translatedTitle": "농협상호금융, 온투사 6곳과 협약...중·저신용자 대출 공급 확대",
       "summary": [
-        "금일 발생한 주요 경제 사건인 \"농협상호금융, 온투사 6곳과 협약… 저신용자 대출 공급 확대 - 동아일보\"에 대한 핵심 개요와 사실 관계입니다.",
-        "기사 원문에서 언급된 주요 재무 지표와 거시경제적 수치 변화를 상세 모니터링해야 합니다.",
-        "시장 참여자들의 투자 경계감 및 거래대금 변화 흐름을 종합 점검하는 과정이 요구됩니다."
+        "농협상호금융이 온라인투자연계금융업자(온투사) 6개사와 업무 협약을 맺고 중·저신용자를 대상으로 하는 상생 금융 대출 공급을 본격 확대합니다.",
+        "온투사의 빅데이터 기반 대안신용평가 모델을 농협의 대외 네트워킹과 결합해 기존 금융권에서 소외되었던 차주들에게 안정적인 대출 기회를 제공할 예정입니다.",
+        "이번 협력은 2금융권의 건전성 관리 압박 속에서 서민 대출 절벽을 완화하고 지역 서민 금융기관으로서의 사회적 책임을 강화하려는 포석입니다."
       ],
       "implications": [
-        "거시적 금리 경로 및 위험자산 선호 심리 변화에 부합하는 포트폴리오 관리가 필요합니다.",
-        "관련 핵심 섹터의 주가 지지선 구축 여부를 확인하며 보수적으로 시장을 관망하는 것이 유리합니다."
+        "핀테크 플랫폼과의 기술 융합을 통한 농협의 서민금융 시장 점유율 방어 및 잠재적 우량 차주 유치 기회로 연동됩니다.",
+        "저신용자 대출 비중 증가에 따른 연체율 추이를 밀착 모니터링하며 대손충당금 적립 부담 가능성에 유의할 필요가 있습니다."
       ],
       "isPremiumCuration": true
     },
@@ -18072,15 +18100,15 @@
     "lang": "ko",
     "category": "Macro",
     "aiAnalysis": {
-      "translatedTitle": "PGIM \"연준, 올해 기준금리 3회 인상 후 내년 3회 인하\" - 연합인포맥스",
+      "translatedTitle": "PGIM \"미 연준, 올해 기준금리 3회 인상 후 내년에 3회 인하할 것\"",
       "summary": [
-        "금일 발생한 주요 경제 사건인 \"PGIM \"연준, 올해 기준금리 3회 인상 후 내년 3회 인하\" - 연합인포맥스\"에 대한 핵심 개요와 사실 관계입니다.",
-        "기사 원문에서 언급된 주요 재무 지표와 거시경제적 수치 변화를 상세 모니터링해야 합니다.",
-        "시장 참여자들의 투자 경계감 및 거래대금 변화 흐름을 종합 점검하는 과정이 요구됩니다."
+        "글로벌 자산운용사 PGIM은 미국 연방준비제도(Fed)가 인플레이션 고착화와 견조한 고용 지표를 반영해 올해 기준금리를 3회 인상하고 내년에 3회 인하할 것이라 전망했습니다.",
+        "당초 기대되었던 조기 금리 인하 경로가 완전히 후퇴하고, 물가 통제를 위해 연준이 긴축의 고삐를 다시 당길 가능성이 높다는 분석입니다.",
+        "PGIM은 고금리 기조가 한층 더 장기화됨에 따라 고위험 부채 비율이 높은 한계 기업들의 신용 디폴트 리스크가 고조될 수 있음을 경고했습니다."
       ],
       "implications": [
-        "거시적 금리 경로 및 위험자산 선호 심리 변화에 부합하는 포트폴리오 관리가 필요합니다.",
-        "관련 핵심 섹터의 주가 지지선 구축 여부를 확인하며 보수적으로 시장을 관망하는 것이 유리합니다."
+        "미국의 금리 인상 전망 재부각은 글로벌 달러 강세를 부추겨 신흥국 증시의 수급 이탈 및 단기 주가 조정 요인으로 작용합니다.",
+        "포트폴리오의 방어력을 높이기 위해 단기 금리 상승 수혜 금융주 및 이자 비용 부담이 적은 우량 무차입 테크 기업들 위주로 압축 대응이 필요합니다."
       ],
       "isPremiumCuration": true
     },
@@ -18124,15 +18152,15 @@
     "lang": "ko",
     "category": "Macro",
     "aiAnalysis": {
-      "translatedTitle": "제주반도체 \"LPDDR5도 SK하이닉스 공장서 만든다\" - 디일렉",
+      "translatedTitle": "제주반도체 \"차세대 LPDDR5 메모리도 SK하이닉스 공장서 위탁 생산\"",
       "summary": [
-        "금일 발생한 주요 경제 사건인 \"제주반도체 \"LPDDR5도 SK하이닉스 공장서 만든다\" - 디일렉\"에 대한 핵심 개요와 사실 관계입니다.",
-        "기사 원문에서 언급된 주요 재무 지표와 거시경제적 수치 변화를 상세 모니터링해야 합니다.",
-        "시장 참여자들의 투자 경계감 및 거래대금 변화 흐름을 종합 점검하는 과정이 요구됩니다."
+        "팹리스 메모리 설계 전문기업 제주반도체가 차세대 모바일 저전력 메모리인 LPDDR5 제품군을 SK하이닉스의 위탁 생산 라인을 통해 양산하기로 합의했습니다.",
+        "제주반도체의 설계 기술과 SK하이닉스의 검증된 생산 라인을 결합하여 급성장하는 온디바이스 AI 기기 시장의 메모리 수요를 적극 공략할 방침입니다.",
+        "이번 양사 간 제휴를 통해 안정적인 반도체 웨이퍼 공급망을 확보하고 차세대 고부가 시장에서의 글로벌 수주 경쟁력을 한 단계 격상시켰다는 평가입니다."
       ],
       "implications": [
-        "거시적 금리 경로 및 위험자산 선호 심리 변화에 부합하는 포트폴리오 관리가 필요합니다.",
-        "관련 핵심 섹터의 주가 지지선 구축 여부를 확인하며 보수적으로 시장을 관망하는 것이 유리합니다."
+        "고부가 가치 LPDDR5 칩의 본격 양산화 성공은 저마진 레거시 메모리 위주 매출 구조에서 탈피하여 영업이익률 개선을 견인할 주요 호재입니다.",
+        "대형 반도체 제조사의 생산 인프라 연동 수혜를 입는 국내 강소 팹리스 기업들의 밸류에이션 리레이팅 발판이 마련되었습니다."
       ],
       "isPremiumCuration": true
     },
@@ -18156,15 +18184,15 @@
     "lang": "ko",
     "category": "Macro",
     "aiAnalysis": {
-      "translatedTitle": "“반도체 기업 돈 넘치고 개미들 실탄 쌓아놓고”…통화량 한달새 25조 증가 - 매일경제",
+      "translatedTitle": "시중 통화량 한 달 새 25조 폭증...반도체 호황 대금 유입 및 투자 대기 실탄 누적",
       "summary": [
-        "금일 발생한 주요 경제 사건인 \"“반도체 기업 돈 넘치고 개미들 실탄 쌓아놓고”…통화량 한달새 25조 증가 - 매일경제\"에 대한 핵심 개요와 사실 관계입니다.",
-        "기사 원문에서 언급된 주요 재무 지표와 거시경제적 수치 변화를 상세 모니터링해야 합니다.",
-        "시장 참여자들의 투자 경계감 및 거래대금 변화 흐름을 종합 점검하는 과정이 요구됩니다."
+        "반도체 호황에 따른 대기업들의 수출 대금 예치와 개인 투자자들의 대기성 투자 자금 확보 영향으로 시중 통화량이 한 달 만에 25조 원 증가했습니다.",
+        "한은 발표에 따르면 대기업 정기예적금 잔액 및 종합자산관리계좌(CMA) 대기 자금이 가파르게 늘어나며 광의통화(M2) 평잔이 우상향을 지속했습니다.",
+        "다만 풍부한 유동성이 경기 둔화 우려로 인해 실물 투자로 순환하지 못하고 단기 금융 상품에 묶여 있는 유동성 함정 리스크도 공존하고 있습니다."
       ],
       "implications": [
-        "거시적 금리 경로 및 위험자산 선호 심리 변화에 부합하는 포트폴리오 관리가 필요합니다.",
-        "관련 핵심 섹터의 주가 지지선 구축 여부를 확인하며 보수적으로 시장을 관망하는 것이 유리합니다."
+        "시중에 풍부하게 누적된 대기성 자금은 향후 매크로 불확실성 완화 국면에서 주식 시장으로의 빠른 유입을 기대할 수 있는 잠재적 실탄입니다.",
+        "외환 및 증시 거래 대기성 자금의 유지로 증권사 브로커리지 부문 및 자산관리(WM) 수수료 수익의 견조한 흐름이 기대됩니다."
       ],
       "isPremiumCuration": true
     },
@@ -18208,15 +18236,15 @@
     "lang": "ko",
     "category": "Macro",
     "aiAnalysis": {
-      "translatedTitle": "양도세 중과 시행에도…5월 부동산 매수심리 ‘상승 국면’ - 동아일보",
+      "translatedTitle": "양도세 중과 조치에도 5월 부동산 매수 심리 '상승 국면' 안착",
       "summary": [
-        "금일 발생한 주요 경제 사건인 \"양도세 중과 시행에도…5월 부동산 매수심리 ‘상승 국면’ - 동아일보\"에 대한 핵심 개요와 사실 관계입니다.",
-        "기사 원문에서 언급된 주요 재무 지표와 거시경제적 수치 변화를 상세 모니터링해야 합니다.",
-        "시장 참여자들의 투자 경계감 및 거래대금 변화 흐름을 종합 점검하는 과정이 요구됩니다."
+        "다주택자 양도소득세 중과 조치가 시행 중임에도 불구하고, 서울 및 수도권 선호 지역을 중심으로 5월 부동산 매수 심리가 회복 흐름을 보이고 있습니다.",
+        "국토연구원 조사 결과 주택매매시장 소비심리지수가 상승세를 그리며 주택 가격 바닥론 확산과 수도권 입지 중심의 똘똘한 한 채 매수 쏠림이 뚜렷해졌습니다.",
+        "공급 부족에 대한 우려 및 신규 분양가 지속 상승이 무주택 실수요자들의 추격 매수 동참을 자극하며 매수 우위 분위기를 뒷받침하는 중입니다."
       ],
       "implications": [
-        "거시적 금리 경로 및 위험자산 선호 심리 변화에 부합하는 포트폴리오 관리가 필요합니다.",
-        "관련 핵심 섹터의 주가 지지선 구축 여부를 확인하며 보수적으로 시장을 관망하는 것이 유리합니다."
+        "부동산 소비 심리 반등은 수도권 정비사업 사업성 개선으로 이어져 대형 건설사들의 주택 도급 사업장 미분양 우려를 완화하는 호재 요인입니다.",
+        "다만 고금리 부담 장기화로 수도권과 지방 간 양극화가 이어져 비수도권 건설 현장 리스크 관리는 지속 점검해야 합니다."
       ],
       "isPremiumCuration": true
     },
@@ -18260,15 +18288,15 @@
     "lang": "ko",
     "category": "Macro",
     "aiAnalysis": {
-      "translatedTitle": "도요타, 7년 만의 신형 라브4 출시…하이브리드 SUV 공략 강화 - 조선일보",
+      "translatedTitle": "도요타, 7년 만의 신형 라브4 풀체인지 출시...하이브리드 SUV 공세 강화",
       "summary": [
-        "금일 발생한 주요 경제 사건인 \"도요타, 7년 만의 신형 라브4 출시…하이브리드 SUV 공략 강화 - 조선일보\"에 대한 핵심 개요와 사실 관계입니다.",
-        "기사 원문에서 언급된 주요 재무 지표와 거시경제적 수치 변화를 상세 모니터링해야 합니다.",
-        "시장 참여자들의 투자 경계감 및 거래대금 변화 흐름을 종합 점검하는 과정이 요구됩니다."
+        "글로벌 완성차 강자인 도요타가 7년 만에 베스트셀링 SUV인 신형 '라브4(RAV4)' 풀체인지 모델을 내놓고 하이브리드 시장 지배력 강화에 나섭니다.",
+        "글로벌 전기차 수요 둔화(캐즘) 틈새를 노려 하이브리드 자동차의 우수한 연비와 가격 합리성을 내세워 시장 리더십을 확고히 다지겠다는 구상입니다.",
+        "최신 세대 하이브리드 인포테인먼트 및 안전 편의 패키지를 대폭 추가하여 글로벌 경쟁사들과의 친환경 SUV 주도권 경쟁 격차를 벌릴 방침입니다."
       ],
       "implications": [
-        "거시적 금리 경로 및 위험자산 선호 심리 변화에 부합하는 포트폴리오 관리가 필요합니다.",
-        "관련 핵심 섹터의 주가 지지선 구축 여부를 확인하며 보수적으로 시장을 관망하는 것이 유리합니다."
+        "도요타의 하이브리드 공세는 미국 등 글로벌 무대에서 동급 경쟁 하이브리드 모델을 가진 현대차·기아의 단기 판매 성장 속도를 둔화시킬 위협 요인입니다.",
+        "완성차 업체 간 친환경 차량 제조 다각화 가열로 하이브리드 모터 및 핵심 배터리 제어 모듈 제조를 전담하는 공급 파트너사의 물량 증가가 기대됩니다."
       ],
       "isPremiumCuration": true
     },
@@ -18292,15 +18320,15 @@
     "lang": "ko",
     "category": "Macro",
     "aiAnalysis": {
-      "translatedTitle": "정부, 핵심 녹색산업 육성 위해 10년간 재정 투자 확대·세제 혜택 - 동아일보",
+      "translatedTitle": "정부, 10년간 핵심 녹색산업에 대대적 재정 투자 및 세제 혜택 공식화",
       "summary": [
-        "금일 발생한 주요 경제 사건인 \"정부, 핵심 녹색산업 육성 위해 10년간 재정 투자 확대·세제 혜택 - 동아일보\"에 대한 핵심 개요와 사실 관계입니다.",
-        "기사 원문에서 언급된 주요 재무 지표와 거시경제적 수치 변화를 상세 모니터링해야 합니다.",
-        "시장 참여자들의 투자 경계감 및 거래대금 변화 흐름을 종합 점검하는 과정이 요구됩니다."
+        "정부가 저탄소 녹색 성장을 가속화하기 위해 향후 10년간 녹색 기술 육성 및 친환경 핵심 산업군에 대규모 예산 투입과 세금 감면을 추진하기로 했습니다.",
+        "탄소 배출 감축에 기여도가 높은 배터리 리사이클링, 수소 연료 전지 인프라, 이산화탄소 포집·저장(CCUS) 기술 분야가 집중 수혜 대상에 지정되었습니다.",
+        "민간 기업의 녹색 자금 투자를 원활히 이끌어내기 위해 녹색 채권 조달 지원 제도를 확대하고 보증 금융 혜택도 대폭 상향합니다."
       ],
       "implications": [
-        "거시적 금리 경로 및 위험자산 선호 심리 변화에 부합하는 포트폴리오 관리가 필요합니다.",
-        "관련 핵심 섹터의 주가 지지선 구축 여부를 확인하며 보수적으로 시장을 관망하는 것이 유리합니다."
+        "정부 정책 지원 혜택이 집중되는 친환경 에너지 및 신재생 기술 기업(태양광, 수소 밸류체인)의 중장기 성장을 가속화할 모멘텀입니다.",
+        "세제 감면 및 보증 금융 우대 혜택 확대로 녹색 설비 투자 비중이 큰 제조 강소기업들의 재무적 이자 부담이 다소 완화될 것입니다."
       ],
       "isPremiumCuration": true
     },
@@ -18344,15 +18372,15 @@
     "lang": "ko",
     "category": "Macro",
     "aiAnalysis": {
-      "translatedTitle": "총저축률·투자율 역대급 괴리… 반도체 호황에도 ‘돈 가뭄’ - 매일경제",
+      "translatedTitle": "저축률·투자율 격차 역대 최대...반도체 독식 호황 속 서민·중소기업 '돈 가뭄'",
       "summary": [
-        "금일 발생한 주요 경제 사건인 \"총저축률·투자율 역대급 괴리… 반도체 호황에도 ‘돈 가뭄’ - 매일경제\"에 대한 핵심 개요와 사실 관계입니다.",
-        "기사 원문에서 언급된 주요 재무 지표와 거시경제적 수치 변화를 상세 모니터링해야 합니다.",
-        "시장 참여자들의 투자 경계감 및 거래대금 변화 흐름을 종합 점검하는 과정이 요구됩니다."
+        "국내 총저축률은 역대 최고치를 갱신하고 있으나 기업들의 국내 설비 투자율은 미온적인 수준에 머물러 두 수치 간 괴리 폭이 사상 최대로 벌어졌습니다.",
+        "반도체 호황에 따른 대형 테크 기업들의 유보 현금은 대거 쌓이고 있지만, 불확실한 거시경제 지표로 국내 추가 공장 설비 착공은 지연되는 국면입니다.",
+        "결과적으로 대기업 흑자 자본이 국내 공급망으로 고루 흐르지 못하고 해외 자산으로 유출되면서 중소 내수 업계는 자금 부족 피로감이 가중되고 있습니다."
       ],
       "implications": [
-        "거시적 금리 경로 및 위험자산 선호 심리 변화에 부합하는 포트폴리오 관리가 필요합니다.",
-        "관련 핵심 섹터의 주가 지지선 구축 여부를 확인하며 보수적으로 시장을 관망하는 것이 유리합니다."
+        "기업의 국내 투자 설비 저조는 장기 잠재 성장 동력 약화 요인이며, 기계 및 공장 자동화 부품주들의 국내 매출 성장을 제약하는 우려입니다.",
+        "투자 둔화를 막기 위해 정부가 대기업 투자 세액 공제 범위를 전향적으로 추가 확대하는 개편안 발표 여부를 점검해야 합니다."
       ],
       "isPremiumCuration": true
     },
@@ -18376,15 +18404,15 @@
     "lang": "ko",
     "category": "Macro",
     "aiAnalysis": {
-      "translatedTitle": "“나랏빚 이자만 연 41조 전망”…부채 증가 속도, 수입보다 2배 빨라 - 매일경제",
+      "translatedTitle": "연 이자 비용만 41조 전망...나랏빚 증가율이 국가 수입보다 2배 빨라 국가 재정 비상",
       "summary": [
-        "금일 발생한 주요 경제 사건인 \"“나랏빚 이자만 연 41조 전망”…부채 증가 속도, 수입보다 2배 빨라 - 매일경제\"에 대한 핵심 개요와 사실 관계입니다.",
-        "기사 원문에서 언급된 주요 재무 지표와 거시경제적 수치 변화를 상세 모니터링해야 합니다.",
-        "시장 참여자들의 투자 경계감 및 거래대금 변화 흐름을 종합 점검하는 과정이 요구됩니다."
+        "국가 부채의 급속한 누적 여파로 인해 연간 정부가 지불해야 하는 순 국채 이자 비용 전망치가 연 41조 원에 이를 것이라는 적신호가 켜졌습니다.",
+        "세수 성장에 기반한 정부 수입 증가 속도보다 채무 발행 증가율이 2배 이상 앞서 나가면서 국가 재정 수지의 안정성 악화가 가시화되는 실정입니다.",
+        "고령화에 따른 의무 지출 확대와 국채 발행 스프레드 금리 고공행진이 겹치면서 중장기적인 국가 부채 상환 재정 여력 건전성이 취약해지는 구조입니다."
       ],
       "implications": [
-        "거시적 금리 경로 및 위험자산 선호 심리 변화에 부합하는 포트폴리오 관리가 필요합니다.",
-        "관련 핵심 섹터의 주가 지지선 구축 여부를 확인하며 보수적으로 시장을 관망하는 것이 유리합니다."
+        "정부의 대규모 국채 발행 유지는 채권 시장 유동성 공급 교란 및 장기 국채 금리의 추가 하방 경직성(금리 상승 압박)으로 연동됩니다.",
+        "국가 신용 리스크 방어 부담은 원화 가치 절하 및 외인 투자 심리 위축을 불러 코스피 종합 밸류에이션 할인 요인으로 작용합니다."
       ],
       "isPremiumCuration": true
     },
@@ -18872,7 +18900,7 @@
     "specialistAnalysis": [
       "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
     ],
-    "isCurated": true,
+    "isCurated": false,
     "region": "KR"
   },
   "id_4bl3io": {
@@ -18902,7 +18930,7 @@
     "specialistAnalysis": [
       "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
     ],
-    "isCurated": true,
+    "isCurated": false,
     "region": "KR"
   },
   "id_c5ugnr": {
@@ -19139,7 +19167,7 @@
     "specialistAnalysis": [
       "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
     ],
-    "isCurated": true
+    "isCurated": false
   },
   "id_1thhbib": {
     "id": "id_1thhbib",
@@ -19169,7 +19197,7 @@
     "specialistAnalysis": [
       "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
     ],
-    "isCurated": true
+    "isCurated": false
   },
   "id_jsp7cs": {
     "id": "id_jsp7cs",
@@ -19181,7 +19209,7 @@
     "sourceName": "유럽 거시경제 뉴스",
     "lang": "en",
     "category": "Markets",
-    "region": "EU",
+    "region": "US",
     "aiAnalysis": null,
     "specialistScore": 0,
     "specialistAnalysis": null,
@@ -19387,6 +19415,228 @@
       "5천만원 규모의 후원금 전달 외에 시장에 직접적인 영향은 미미합니다.",
       "특정 기업의 개별 활동으로, 한국 시장 전반에 미치는 영향은 거의 없습니다."
     ],
+    "isCurated": false
+  },
+  "id_jfbbuk": {
+    "id": "id_jfbbuk",
+    "title": "Australia lowers Middle East travel warnings after US-Iran agreement - Ada Derana",
+    "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE11bHVLckxNdXgyVno0bWxCcXZLcC1pVVNFRzk0U29xM1NjdHpZZkhyMkstVnJIZTUzbkpwZ2N0TlpMeTh2ZDlvVjBzMk91Uy00aVB6WkNtNTY4bjNhc3Nhaw?oc=5",
+    "description": "Australia lowers Middle East travel warnings after US-Iran agreement  Ada Derana",
+    "date": "2026-06-17T03:38:26.000Z",
+    "sourceId": "us-global",
+    "sourceName": "US 글로벌 투자 뉴스 (Reuters/Bloomberg/CNBC)",
+    "lang": "en",
+    "category": "Markets",
+    "region": "US",
+    "aiAnalysis": null,
+    "specialistScore": 3,
+    "specialistAnalysis": [
+      "중동 지역의 지정학적 긴장 완화는 국제 유가 안정에 기여하고 글로벌 리스크 심리를 개선할 수 있어, 간접적으로 인플레이션 기대와 연준 통화 정책에 영향을 미칠 수 있습니다.",
+      "호주가 미국-이란 합의 이후 중동 지역에 대한 여행 경보를 낮췄다는 사실은 해당 지역의 안정화 신호로 해석되며, 합의의 구체적인 내용은 언급되지 않았습니다.",
+      "미국 증시(S&P 500, 나스닥) 및 국채 수익률에 대한 직접적인 영향은 미미하지만, 글로벌 안정성 증가는 장기적으로 긍정적인 투자 환경 조성에 기여할 수 있습니다."
+    ],
+    "isCurated": false
+  },
+  "id_jh6qpp": {
+    "id": "id_jh6qpp",
+    "title": "작년 기관전용 사모펀드 약정액 167조 '역대 최대'…투자도 12% 증가 - 한국경제",
+    "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9VZEpKcmlNRW05Ul9ZVmNlMFRpMzJicWxsM19tdHByTlI0UEpjQ2RsbWZRMjA5THlVYnEwNnJ1a0J2YUJJVzV1NzZNdzBORTQ1b3JlVksybHZxQdIBVEFVX3lxTE1xdEg2bXZERVdXSzN2dG9ZN1VIUGdQTkZjQ3dqQmNBaUp4YW5BaUZaVnJYSzJuclFGU3V5YURJeEZGcWFZdm5kYVJNUnJUUlNzamNoeQ?oc=5",
+    "description": "작년 기관전용 사모펀드 약정액 167조 '역대 최대'…투자도 12% 증가  한국경제",
+    "date": "2026-06-17T03:00:01.000Z",
+    "sourceId": "kr-hankyung-fin",
+    "sourceName": "한국경제 증권",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": {
+      "translatedTitle": "작년 기관전용 사모펀드 약정액 167조 '역대 최대'…투자도 12% 증가 - 한국경제",
+      "summary": [
+        "\"작년 기관전용 사모펀드 약정액 167조 '역대 최대'…투자도 12% 증가 - 한국경제\" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.",
+        "원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.",
+        "관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다."
+      ],
+      "implications": [
+        "거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.",
+        "핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ],
+    "isCurated": true
+  },
+  "id_ceaiip": {
+    "id": "id_ceaiip",
+    "title": "일본은 지금 ‘챠메’ 열풍…‘코리안 멜론’ 역수출 대박 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFA4UEpxbndQSmtydXNuWHJ2THIwTlhuS3JGT2s3dUFsb2dvdEdFUHNhSTIxRDFXYVUzQzAwVmt2Wks0MW9VNFctU0hwN0xHQkFwa25uQTdOaC1xNVZ0Vmh0b0NVSTh3d1ZxbGdiODliNmdKaHBLb1HSAWZBVV95cUxOeW4tTHg5bzZnX3Q5bmt0WFZZbmV0MVcweWdFVDVSYWhWalZ3RVpaZlFRamZtWUt0aDFLVTNXem8yU1VkQkF6NGYzZTczdUl2OFlvN3dsS3dyOU4xZXBzWEdURldaWFE?oc=5",
+    "description": "일본은 지금 ‘챠메’ 열풍…‘코리안 멜론’ 역수출 대박  동아일보",
+    "date": "2026-06-17T02:33:11.000Z",
+    "sourceId": "kr-donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": {
+      "translatedTitle": "일본은 지금 ‘챠메’ 열풍…‘코리안 멜론’ 역수출 대박 - 동아일보",
+      "summary": [
+        "\"일본은 지금 ‘챠메’ 열풍…‘코리안 멜론’ 역수출 대박 - 동아일보\" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.",
+        "원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.",
+        "관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다."
+      ],
+      "implications": [
+        "거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.",
+        "핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ],
+    "isCurated": true
+  },
+  "id_1gfe64d": {
+    "id": "id_1gfe64d",
+    "title": "FOMC 앞두고 관망세…코스피, 개인 매수세에 8700선 회복 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFA3UG44SzNac1piNTVaTHAzaHFfRjdmOUg3N01SWVp0RnJSMUJzOTdsekFuYTRTMlRpNHBoUzZ6ODlWMFZZSnFEbmxTUFlGQ2kwYnRkbTdqYUZJLWhzd1RJdlhWUTk4V0c1eXRDWnR2M0NYV0lNc2fSAWZBVV95cUxNbUQwMHNRZUZkNUpOVVVIUG1aUGN4RjMyRXlsQlV4aEpZZ3NXaE1XVmVjY3l4eXZtbnNzU2tTcXlfdXVwWVJ5SVR5RUVoZ1VZMGRra2pvZ3duNVpLakIzYkM0MFhVVUE?oc=5",
+    "description": "FOMC 앞두고 관망세…코스피, 개인 매수세에 8700선 회복  동아일보",
+    "date": "2026-06-17T02:23:00.000Z",
+    "sourceId": "kr-donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": {
+      "translatedTitle": "FOMC 앞두고 관망세…코스피, 개인 매수세에 8700선 회복 - 동아일보",
+      "summary": [
+        "\"FOMC 앞두고 관망세…코스피, 개인 매수세에 8700선 회복 - 동아일보\" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.",
+        "원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.",
+        "관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다."
+      ],
+      "implications": [
+        "거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.",
+        "핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ],
+    "isCurated": true
+  },
+  "id_5rvzuh": {
+    "id": "id_5rvzuh",
+    "title": "SK하이닉스, 채용서 학력 제한 철폐...고졸도 연구직, 대졸도 생산직 가능 - 조선일보",
+    "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQYjJMUmRyMmVrMm9nenlueXJiZ0RUOEpsWmNKLTlUSFVNLXZnSHhLM19BNWtOUUJqTEFzbGdIOGU4VFAtVFRFVy16WjV3NUFtMGxnenBFM2xEbHQwRHpXZDlCeGxtZTF3QVlDZ2FJRldRSkFUUkxoZTNMTW85UUNxLXdkVQ?oc=5",
+    "description": "SK하이닉스, 채용서 학력 제한 철폐...고졸도 연구직, 대졸도 생산직 가능  조선일보",
+    "date": "2026-06-17T01:38:00.000Z",
+    "sourceId": "kr-chosun",
+    "sourceName": "조선일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": {
+      "translatedTitle": "SK하이닉스, 채용서 학력 제한 철폐...고졸도 연구직, 대졸도 생산직 가능 - 조선일보",
+      "summary": [
+        "\"SK하이닉스, 채용서 학력 제한 철폐...고졸도 연구직, 대졸도 생산직 가능 - 조선일보\" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.",
+        "원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.",
+        "관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다."
+      ],
+      "implications": [
+        "거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.",
+        "핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ],
+    "isCurated": true
+  },
+  "id_ahuuxp": {
+    "id": "id_ahuuxp",
+    "title": "‘저거 진짜 되는거야?’ 의심 뜷고 10만대 판매 돌파, 감전식 모기 퇴치기 특가 공구 - 조선일보",
+    "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQUmRKYjRyeDgtcWxmeXVLc05hWFI1Qm5xWG1sNXNVQ1NJQjVyNml0ZVN5Q2x5TW1nMXlFUWR5cGNsQkg1QVV1T3pUZE5aeHdkS2xuMVZWcGdSX1lhenNSWG1vTjZlQ0M1X3ZfZFF3N2IzTDFIenViZm1OYy1PUnJLM2hpZU11Qk9KMTRN?oc=5",
+    "description": "‘저거 진짜 되는거야?’ 의심 뜷고 10만대 판매 돌파, 감전식 모기 퇴치기 특가 공구  조선일보",
+    "date": "2026-06-17T01:03:00.000Z",
+    "sourceId": "kr-chosun",
+    "sourceName": "조선일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": {
+      "translatedTitle": "‘저거 진짜 되는거야?’ 의심 뜷고 10만대 판매 돌파, 감전식 모기 퇴치기 특가 공구 - 조선일보",
+      "summary": [
+        "\"‘저거 진짜 되는거야?’ 의심 뜷고 10만대 판매 돌파, 감전식 모기 퇴치기 특가 공구 - 조선일보\" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.",
+        "원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.",
+        "관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다."
+      ],
+      "implications": [
+        "거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.",
+        "핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ],
+    "isCurated": true
+  },
+  "id_iw2h8t": {
+    "id": "id_iw2h8t",
+    "title": "“빚투 개미, 도대체 얼마나 많길래”…돈 빌려, 대출해주는 증권사들 - 매일경제",
+    "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9ZNlVfbHdyY09OaWtKLXMzMGpCNGJ5SWVNVnRoVEl4d3FXeUNjX3E2V0I0b3Nsc1pkMUVQZV9qVXd2NzBBTHBUcjlXTjVYXzJvNERWSA?oc=5",
+    "description": "“빚투 개미, 도대체 얼마나 많길래”…돈 빌려, 대출해주는 증권사들  매일경제",
+    "date": "2026-06-17T00:04:12.000Z",
+    "sourceId": "kr-maekyung",
+    "sourceName": "매일경제 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": null,
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ],
+    "isCurated": false
+  },
+  "id_em3bow": {
+    "id": "id_em3bow",
+    "title": "“개인정보이용 동의 수십번씩 누르다 지쳐”…30년 낡은 법 고친다 - 매일경제",
+    "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9CQ3ZEclQ0Z3ZTVnYxeGJoSWJyWmJRNksyendpckF2Q2R6LWlrUkFfdEpZX3p4WDJqMW5RZVZoRGR2TmVIdmUzWVotSDYyODRGMlhMRw?oc=5",
+    "description": "“개인정보이용 동의 수십번씩 누르다 지쳐”…30년 낡은 법 고친다  매일경제",
+    "date": "2026-06-16T23:03:45.000Z",
+    "sourceId": "kr-maekyung",
+    "sourceName": "매일경제 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": null,
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ],
+    "isCurated": false
+  },
+  "id_4ukyhd": {
+    "id": "id_4ukyhd",
+    "title": "당뇨 환자 채혈 고통 줄이면서 간편하게 혈당 측정 - 조선일보",
+    "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1mLXBDMzB6ZEN1RFJmV0IzUURpMmI0eHRPMlZkRWpvaFNHbW9rQnBQMzZEZU9vRHl1WEU0ZnhaVmktbHBZU2o4Q3BTdlhQWE9EbkxoeWR1RUVPZjBTaGRTLTdMZnFWeWJ6YkZKZFJxeW90ZHJsUGJSVA?oc=5",
+    "description": "당뇨 환자 채혈 고통 줄이면서 간편하게 혈당 측정  조선일보",
+    "date": "2026-06-14T15:40:53.000Z",
+    "sourceId": "kr-chosun",
+    "sourceName": "조선일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
     "isCurated": false
   }
 }
