@@ -12239,9 +12239,27 @@
     "sourceName": "조선일보 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR"
+    "aiAnalysis": {
+      "translatedTitle": "\"길게는 2030년까지 주택 공급 부족… 무주택자라면 지금이라도 빨리 사야\" - 조선일보",
+      "summary": [
+        "\"\"길게는 2030년까지 주택 공급 부족… 무주택자라면 지금이라도 빨리 사야\" - 조선일보\" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.",
+        "원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.",
+        "관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다."
+      ],
+      "implications": [
+        "거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.",
+        "핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "isCurated": true,
+    "region": "KR",
+    "specialistScore": 8,
+    "specialistAnalysis": [
+      "2030년까지 주택 공급 부족 지속 및 무주택자 조기 구매 권유 전문가 의견 제시.",
+      "한국 주택 시장의 장기적인 공급 부족 전망과 가격 상승 압력 시사.",
+      "무주택자의 주택 구매 심리를 자극하고 부동산 시장에 영향을 미칠 수 있음."
+    ]
   },
   "id_1i7f626": {
     "id": "id_1i7f626",
@@ -12406,9 +12424,27 @@
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR"
+    "aiAnalysis": {
+      "translatedTitle": "일본 금리, 31년 만에 1% 되나… 엔화 방향에 달린 내 계좌 - 글로벌이코노믹",
+      "summary": [
+        "\"일본 금리, 31년 만에 1% 되나… 엔화 방향에 달린 내 계좌 - 글로벌이코노믹\" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.",
+        "원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.",
+        "관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다."
+      ],
+      "implications": [
+        "거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.",
+        "핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "isCurated": true,
+    "region": "KR",
+    "specialistScore": 7,
+    "specialistAnalysis": [
+      "일본 금리가 31년 만에 1% 도달 가능성이 제기됨.",
+      "엔화 강세 압력 증대 및 원/엔 환율 변동성 확대 예상.",
+      "한국 수출 기업의 가격 경쟁력에 간접적인 영향 미칠 수 있음."
+    ]
   },
   "id_1ap8hc4": {
     "id": "id_1ap8hc4",
@@ -13594,9 +13630,27 @@
     "sourceName": "동아일보 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR"
+    "aiAnalysis": {
+      "translatedTitle": "[머니 컨설팅]‘롤러코스피’ 장세, 극단적 투자 피해야 - 동아일보",
+      "summary": [
+        "\"[머니 컨설팅]‘롤러코스피’ 장세, 극단적 투자 피해야 - 동아일보\" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.",
+        "원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.",
+        "관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다."
+      ],
+      "implications": [
+        "거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.",
+        "핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "isCurated": true,
+    "region": "KR",
+    "specialistScore": 7,
+    "specialistAnalysis": [
+      "변동성이 큰 '롤러코스피' 장세를 경고하며 극단적 투자 자제 권고.",
+      "현재 코스피 시장의 불확실성과 투자 위험 증가를 시사.",
+      "투자 심리에 영향을 미쳐 신중한 접근을 유도하며 시장 활성화에 제약."
+    ]
   },
   "id_1hedlky": {
     "id": "id_1hedlky",
@@ -13647,9 +13701,27 @@
     "sourceName": "동아일보 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR"
+    "aiAnalysis": {
+      "translatedTitle": "“장사 안되는데 대출금리 올라” 자영업자 연체급증 - 동아일보",
+      "summary": [
+        "\"“장사 안되는데 대출금리 올라” 자영업자 연체급증 - 동아일보\" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.",
+        "원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.",
+        "관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다."
+      ],
+      "implications": [
+        "거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.",
+        "핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "isCurated": true,
+    "region": "KR",
+    "specialistScore": 9,
+    "specialistAnalysis": [
+      "경기 침체와 대출 금리 인상으로 자영업자 연체율 급증 현상 발생.",
+      "고금리 기조가 취약 차주 및 내수 경제에 미치는 부정적 영향 심화.",
+      "금융 시스템 안정성 우려와 함께 BOK의 통화 정책 부담 가중."
+    ]
   },
   "id_1jw24a0": {
     "id": "id_1jw24a0",
@@ -13663,7 +13735,13 @@
     "category": "Macro",
     "aiAnalysis": null,
     "region": "KR",
-    "isCurated": false
+    "isCurated": false,
+    "specialistScore": 1,
+    "specialistAnalysis": [
+      "건강과 맛을 동시에 추구하는 '영올드' 세대 겨냥 건강식 시장 성장.",
+      "고령화 사회 진입에 따른 소비 트렌드 변화와 새로운 시장 기회 창출.",
+      "식품 산업 내 특정 분야의 성장을 나타내며 전반적인 시장 영향은 미미."
+    ]
   },
   "id_1kyozg1": {
     "id": "id_1kyozg1",
@@ -13675,9 +13753,27 @@
     "sourceName": "동아일보 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR"
+    "aiAnalysis": {
+      "translatedTitle": "[애널리스트의 마켓뷰]자동차 산업, ‘볼륨의 시대’가 저물고 있다 - 동아일보",
+      "summary": [
+        "\"[애널리스트의 마켓뷰]자동차 산업, ‘볼륨의 시대’가 저물고 있다 - 동아일보\" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.",
+        "원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.",
+        "관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다."
+      ],
+      "implications": [
+        "거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.",
+        "핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "isCurated": true,
+    "region": "KR",
+    "specialistScore": 8,
+    "specialistAnalysis": [
+      "자동차 산업이 '볼륨의 시대'를 넘어 질적 성장 시대로 전환 중이라는 분석.",
+      "글로벌 자동차 시장의 변화와 한국 자동차 산업의 장기 전략 방향에 대한 통찰.",
+      "수출 주력 산업 중 하나인 자동차 부문의 미래 성장 동력 및 투자 전략 재평가 필요성."
+    ]
   },
   "id_i35w63": {
     "id": "id_i35w63",
@@ -13867,9 +13963,27 @@
     "sourceName": "동아일보 경제",
     "lang": "ko",
     "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR"
+    "aiAnalysis": {
+      "translatedTitle": "서울 집값 처음 10억 넘어… 아파트 전세, 1.15% 껑충 - 동아일보",
+      "summary": [
+        "\"서울 집값 처음 10억 넘어… 아파트 전세, 1.15% 껑충 - 동아일보\" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.",
+        "원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.",
+        "관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다."
+      ],
+      "implications": [
+        "거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.",
+        "핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "isCurated": true,
+    "region": "KR",
+    "specialistScore": 10,
+    "specialistAnalysis": [
+      "서울 아파트 평균 매매가격 10억 원 돌파, 전세가 1.15% 급등 기록.",
+      "주택 시장의 과열 양상과 서민 주거 부담 가중을 나타내는 주요 지표.",
+      "BOK의 통화 정책, 가계 부채 및 금융 안정성 관리에 대한 압박 심화."
+    ]
   },
   "id_mwdi3l": {
     "id": "id_mwdi3l",
@@ -14011,7 +14125,11 @@
     "category": "Markets",
     "aiAnalysis": null,
     "region": "US",
-    "isCurated": false
+    "isCurated": false,
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ]
   },
   "id_1xb5zi": {
     "id": "id_1xb5zi",
@@ -14025,7 +14143,11 @@
     "category": "Markets",
     "aiAnalysis": null,
     "region": "US",
-    "isCurated": false
+    "isCurated": false,
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ]
   },
   "id_12mx5u0": {
     "id": "id_12mx5u0",
@@ -14053,7 +14175,11 @@
     "category": "Markets",
     "aiAnalysis": null,
     "region": "US",
-    "isCurated": false
+    "isCurated": false,
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ]
   },
   "id_1asdnmm": {
     "id": "id_1asdnmm",
@@ -14699,7 +14825,13 @@
     "category": "Macro",
     "aiAnalysis": null,
     "region": "KR",
-    "isCurated": false
+    "isCurated": false,
+    "specialistScore": 3,
+    "specialistAnalysis": [
+      "스마트폰이 전 세계 출산율 하락의 원인 중 하나로 지목됨.",
+      "한국의 심각한 저출산 문제에 대한 장기적 사회경제적 우려 반영.",
+      "국내 노동력 감소 및 내수 시장 위축 등 장기 성장 동력에 부정적 영향."
+    ]
   },
   "id_1teosu2": {
     "id": "id_1teosu2",
@@ -14767,7 +14899,13 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "JTBC 등 중앙그룹 5개사가 회생 신청을 함.",
+      "개별 기업의 재무 건전성 악화 및 경영 위기 상황 부각.",
+      "미디어 업계 및 관련 채권 시장에 제한적인 불안감 조성 가능성."
+    ]
   },
   "id_17vtlp5": {
     "id": "id_17vtlp5",
@@ -15445,7 +15583,13 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 2,
+    "specialistAnalysis": [
+      "무비자와 저렴한 물가로 '가성비 여행' 목적지로 중국이 부상함.",
+      "한국인 해외여행 패턴 변화 및 중국 관광 시장 성장세 반영.",
+      "국내 관광 산업 및 항공·면세 등 관련 기업 실적에 간접적 영향 가능."
+    ]
   },
   "id_hzhabm": {
     "id": "id_hzhabm",
@@ -19303,7 +19447,7 @@
     "specialistAnalysis": [
       "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
     ],
-    "isCurated": true
+    "isCurated": false
   },
   "id_ycv6fj": {
     "id": "id_ycv6fj",
@@ -19333,7 +19477,7 @@
     "specialistAnalysis": [
       "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
     ],
-    "isCurated": true
+    "isCurated": false
   },
   "id_b8e468": {
     "id": "id_b8e468",
@@ -19363,7 +19507,7 @@
     "specialistAnalysis": [
       "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
     ],
-    "isCurated": true
+    "isCurated": false
   },
   "id_127h7lp": {
     "id": "id_127h7lp",
@@ -19393,7 +19537,7 @@
     "specialistAnalysis": [
       "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
     ],
-    "isCurated": true
+    "isCurated": false
   },
   "id_wsw9i3": {
     "id": "id_wsw9i3",
@@ -19452,10 +19596,26 @@
     "lang": "ko",
     "category": "Macro",
     "region": "KR",
-    "aiAnalysis": null,
-    "specialistScore": 0,
-    "specialistAnalysis": null,
-    "isCurated": false
+    "aiAnalysis": {
+      "translatedTitle": "애물단지 된 지식산업센터, 리모델링해 임대주택으로 쓴다 - 조선일보",
+      "summary": [
+        "\"애물단지 된 지식산업센터, 리모델링해 임대주택으로 쓴다 - 조선일보\" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.",
+        "원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.",
+        "관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다."
+      ],
+      "implications": [
+        "거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.",
+        "핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 5,
+    "specialistAnalysis": [
+      "미분양 지식산업센터를 리모델링하여 임대주택으로 활용하는 방안 논의.",
+      "상업용 부동산 시장의 공급 과잉 및 공실 문제 해결 노력.",
+      "주택 공급 확대 및 주거 안정에 일부 기여할 수 있는 정책적 시도."
+    ],
+    "isCurated": true
   },
   "id_1ew1uy9": {
     "id": "id_1ew1uy9",
@@ -19585,7 +19745,7 @@
     "specialistAnalysis": [
       "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
     ],
-    "isCurated": true
+    "isCurated": false
   },
   "id_5rvzuh": {
     "id": "id_5rvzuh",
@@ -19615,7 +19775,7 @@
     "specialistAnalysis": [
       "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
     ],
-    "isCurated": true
+    "isCurated": false
   },
   "id_ahuuxp": {
     "id": "id_ahuuxp",
@@ -19645,7 +19805,7 @@
     "specialistAnalysis": [
       "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
     ],
-    "isCurated": true
+    "isCurated": false
   },
   "id_iw2h8t": {
     "id": "id_iw2h8t",
@@ -19697,6 +19857,26 @@
     "aiAnalysis": null,
     "specialistScore": 0,
     "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_zrwzop": {
+    "id": "id_zrwzop",
+    "title": "한국저작권위원회, ‘네이버 메이트’ IT·테크 분야 선정 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5JREtpWDhpY2tVN0J5R2JBRUFRZHJOUThIZjJtckNHT3BkelMwMWZRckdsWURrZkl2Y0ZPMDFxcGxBQWNGUWsxYUNFTVpEVlNKMkExUmFvQWJvLVg5OUhwajVibWkyZURlY1ZJREJCUGY1UHZlMnfSAWZBVV95cUxPRVlzWmhObmRybXU1Z1ZINVhqLW5HYTZXSVl5aHptRF9BVmRnMUFtRklsdnZRc1FXLUxyWWlMa0Z5cnJ5ODZsNkRrUWtjRjQtUGtlbjZBTXZwMWp4SDJhVTcxYXJDbVE?oc=5",
+    "description": "한국저작권위원회, ‘네이버 메이트’ IT·테크 분야 선정  동아일보",
+    "date": "2026-06-17T00:39:00.000Z",
+    "sourceId": "kr-donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": null,
+    "specialistScore": 1,
+    "specialistAnalysis": [
+      "네이버 메이트의 IT·테크 분야 선정 소식.",
+      "기업의 특정 프로그램 활동에 대한 기관의 인정 내용.",
+      "개별 기업 이미지 제고에는 기여하나, 광범위한 시장 영향은 미미."
+    ],
     "isCurated": false
   }
 }

@@ -5909,5 +5909,229 @@
       "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
     ],
     "isCurated": true
+  },
+  "id_60wk6x": {
+    "id": "id_60wk6x",
+    "title": "서울 집값 처음 10억 넘어… 아파트 전세, 1.15% 껑충 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE10a1lVM3ZLcEg0TDlHUjQ5anJodnZHN3dqZFdpeWZaeWNjLWlfZzE1SFREV0VMeDNIN1Vvc2txcDY3SVFSOWhjb0F1d3A5QzNPSDJoUzN0aHI1OFZ2M0UxOXBlZjRlbjRLZF9ROFdnNDVOdHlsSnfSAWZBVV95cUxNTDNYOTFqbExMOUp1SGdOQTFRVktIU2Z4YzZIWFNJdUJnRGV4VXRRNllLNnhwdmFNbnpWdzFQMHR2WUNDWXZzRzJNemhOUE5YLXdHc0VCS29NUW42dHRpZlZMenI3WFE?oc=5",
+    "description": "서울 집값 처음 10억 넘어… 아파트 전세, 1.15% 껑충  동아일보",
+    "date": "2026-06-15T15:30:00.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "서울 집값 처음 10억 넘어… 아파트 전세, 1.15% 껑충 - 동아일보",
+      "summary": [
+        "\"서울 집값 처음 10억 넘어… 아파트 전세, 1.15% 껑충 - 동아일보\" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.",
+        "원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.",
+        "관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다."
+      ],
+      "implications": [
+        "거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.",
+        "핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "isCurated": true,
+    "region": "KR",
+    "specialistScore": 10,
+    "specialistAnalysis": [
+      "서울 아파트 평균 매매가격 10억 원 돌파, 전세가 1.15% 급등 기록.",
+      "주택 시장의 과열 양상과 서민 주거 부담 가중을 나타내는 주요 지표.",
+      "BOK의 통화 정책, 가계 부채 및 금융 안정성 관리에 대한 압박 심화."
+    ]
+  },
+  "id_1w4tznk": {
+    "id": "id_1w4tznk",
+    "title": "“장사 안되는데 대출금리 올라” 자영업자 연체급증 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5zS09nYWxuNkVwUUlROEJjbWc2NjFQMnZnZEp6aU9oZ2ZMX01neTZCSDVHZ3p5RTNXcTV6cjBHaWx3S1VWUnZLNkc5VlJXcmh2MTBRZ3puSjVIMEZ2QWxjZW1SSVI0UVVxYjBIY0VzNVpLa3h5SEHSAWZBVV95cUxOc0NQRXpxb2tMZkhrQ2tFN2tYYm8wU2tpUWFkMnU0NEFpX21tdHAzaHg4SnJNVzMyLVAzZVQ2WlZFb0QzeHdmbWExMnFXU0oyaTFuRnVCYzQ4ODFBOTQtOGNranVnS3c?oc=5",
+    "description": "“장사 안되는데 대출금리 올라” 자영업자 연체급증  동아일보",
+    "date": "2026-06-15T15:30:00.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "“장사 안되는데 대출금리 올라” 자영업자 연체급증 - 동아일보",
+      "summary": [
+        "\"“장사 안되는데 대출금리 올라” 자영업자 연체급증 - 동아일보\" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.",
+        "원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.",
+        "관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다."
+      ],
+      "implications": [
+        "거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.",
+        "핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "isCurated": true,
+    "region": "KR",
+    "specialistScore": 9,
+    "specialistAnalysis": [
+      "경기 침체와 대출 금리 인상으로 자영업자 연체율 급증 현상 발생.",
+      "고금리 기조가 취약 차주 및 내수 경제에 미치는 부정적 영향 심화.",
+      "금융 시스템 안정성 우려와 함께 BOK의 통화 정책 부담 가중."
+    ]
+  },
+  "id_1v29a42": {
+    "id": "id_1v29a42",
+    "title": "\"길게는 2030년까지 주택 공급 부족… 무주택자라면 지금이라도 빨리 사야\" - 조선일보",
+    "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPMENEc2syVEhfNEZaMktCNFpYbWMzVjlYbHBLTjRXcUllRWJHMzhEbm8zclBaUFpyR0wxeHFFTUIxdkdfaFB2TGliRVhvV2wtUVY3dmViUXZVSU9JMldOWnJJalB4RWdyOTR6UWppVzVGUW9qMG9zNllVZlVPZjg2eWxCOE9YYVVK?oc=5",
+    "description": "\"길게는 2030년까지 주택 공급 부족… 무주택자라면 지금이라도 빨리 사야\"  조선일보",
+    "date": "2026-06-15T15:37:00.000Z",
+    "sourceId": "chosun",
+    "sourceName": "조선일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "\"길게는 2030년까지 주택 공급 부족… 무주택자라면 지금이라도 빨리 사야\" - 조선일보",
+      "summary": [
+        "\"\"길게는 2030년까지 주택 공급 부족… 무주택자라면 지금이라도 빨리 사야\" - 조선일보\" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.",
+        "원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.",
+        "관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다."
+      ],
+      "implications": [
+        "거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.",
+        "핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "isCurated": true,
+    "region": "KR",
+    "specialistScore": 8,
+    "specialistAnalysis": [
+      "2030년까지 주택 공급 부족 지속 및 무주택자 조기 구매 권유 전문가 의견 제시.",
+      "한국 주택 시장의 장기적인 공급 부족 전망과 가격 상승 압력 시사.",
+      "무주택자의 주택 구매 심리를 자극하고 부동산 시장에 영향을 미칠 수 있음."
+    ]
+  },
+  "id_1kyozg1": {
+    "id": "id_1kyozg1",
+    "title": "[애널리스트의 마켓뷰]자동차 산업, ‘볼륨의 시대’가 저물고 있다 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE12bVlwb3dpWFBMdlZWdzZCZlYtdlRqeGJDSU1QTHN4LWh3b2phMGE4LWtGX2YtbHFVeXZBamluVTQzSS1YOGJoX0ttT1Q5eDFPXzNpSGRRSmNwMVNGdlNtLU9SdkFmRHBpdm42XzZBamoyZkU1UVHSAWZBVV95cUxPVnJOb2VVLVNsY1RNNEZ2Wm9ueGQ3SHp4dXNINUZ1S21lVTRUamUybkRsVGJVUGJZZFVGNFd3cmhMZUtUbDZCeDVuSU9pQW5BNl9EemNrSUp4QWwyN19HOGtJcnBhZ1E?oc=5",
+    "description": "[애널리스트의 마켓뷰]자동차 산업, ‘볼륨의 시대’가 저물고 있다  동아일보",
+    "date": "2026-06-15T15:30:00.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "[애널리스트의 마켓뷰]자동차 산업, ‘볼륨의 시대’가 저물고 있다 - 동아일보",
+      "summary": [
+        "\"[애널리스트의 마켓뷰]자동차 산업, ‘볼륨의 시대’가 저물고 있다 - 동아일보\" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.",
+        "원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.",
+        "관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다."
+      ],
+      "implications": [
+        "거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.",
+        "핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "isCurated": true,
+    "region": "KR",
+    "specialistScore": 8,
+    "specialistAnalysis": [
+      "자동차 산업이 '볼륨의 시대'를 넘어 질적 성장 시대로 전환 중이라는 분석.",
+      "글로벌 자동차 시장의 변화와 한국 자동차 산업의 장기 전략 방향에 대한 통찰.",
+      "수출 주력 산업 중 하나인 자동차 부문의 미래 성장 동력 및 투자 전략 재평가 필요성."
+    ]
+  },
+  "id_1cfqxvw": {
+    "id": "id_1cfqxvw",
+    "title": "일본 금리, 31년 만에 1% 되나… 엔화 방향에 달린 내 계좌 - 글로벌이코노믹",
+    "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQVDAxNS0wdnBzM2wzc21ZNkVZY2liZVB0UkU3aFh5YTdQSU5ZQUxmS2N6clllTDVHMm1lZDZjTlhJZk5nSVNQQWtwajJOSlBsUW02Z2tDNHBmSW9mQlI4cjRWZ2Nzazh6ZjFaODBQcnNhb0lEYmt1NTdFVWxyZHR0MGpRWDZBbGc?oc=5",
+    "description": "일본 금리, 31년 만에 1% 되나… 엔화 방향에 달린 내 계좌  글로벌이코노믹",
+    "date": "2026-06-15T18:05:00.000Z",
+    "sourceId": "korean-markets-trend",
+    "sourceName": "국내 금융/투자 종합 트렌드",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "일본 금리, 31년 만에 1% 되나… 엔화 방향에 달린 내 계좌 - 글로벌이코노믹",
+      "summary": [
+        "\"일본 금리, 31년 만에 1% 되나… 엔화 방향에 달린 내 계좌 - 글로벌이코노믹\" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.",
+        "원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.",
+        "관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다."
+      ],
+      "implications": [
+        "거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.",
+        "핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "isCurated": true,
+    "region": "KR",
+    "specialistScore": 7,
+    "specialistAnalysis": [
+      "일본 금리가 31년 만에 1% 도달 가능성이 제기됨.",
+      "엔화 강세 압력 증대 및 원/엔 환율 변동성 확대 예상.",
+      "한국 수출 기업의 가격 경쟁력에 간접적인 영향 미칠 수 있음."
+    ]
+  },
+  "id_eqeeke": {
+    "id": "id_eqeeke",
+    "title": "[머니 컨설팅]‘롤러코스피’ 장세, 극단적 투자 피해야 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1YOHl2QXNHVU5TTnkwZlhQS0J2OHJRcEhRNDA2c1M0dlJXRHVaRFRoUnNDVHFZQ3VYV0I3Q1RsZEh5R2t6SmMtQkxfeGRhbVJOWDVHZzdBcmRkVWd5ajllaGZSdU9KUjNla0lGRnE4NHlLSmJLU2fSAWZBVV95cUxQWUlFZHpaMzNFdjJYX090QVM0X2Jtem1aLV9pNVVFdHBrdjNzMjRSSENEdHBlaVlDMGZmbUZjTEFaeEM2WVVfUTBScHNYeGxhNGo2bm10SXRuUXpPRFpoU3pZYzVpTEE?oc=5",
+    "description": "[머니 컨설팅]‘롤러코스피’ 장세, 극단적 투자 피해야  동아일보",
+    "date": "2026-06-15T15:30:00.000Z",
+    "sourceId": "donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "aiAnalysis": {
+      "translatedTitle": "[머니 컨설팅]‘롤러코스피’ 장세, 극단적 투자 피해야 - 동아일보",
+      "summary": [
+        "\"[머니 컨설팅]‘롤러코스피’ 장세, 극단적 투자 피해야 - 동아일보\" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.",
+        "원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.",
+        "관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다."
+      ],
+      "implications": [
+        "거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.",
+        "핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "isCurated": true,
+    "region": "KR",
+    "specialistScore": 7,
+    "specialistAnalysis": [
+      "변동성이 큰 '롤러코스피' 장세를 경고하며 극단적 투자 자제 권고.",
+      "현재 코스피 시장의 불확실성과 투자 위험 증가를 시사.",
+      "투자 심리에 영향을 미쳐 신중한 접근을 유도하며 시장 활성화에 제약."
+    ]
+  },
+  "id_fmjpdc": {
+    "id": "id_fmjpdc",
+    "title": "애물단지 된 지식산업센터, 리모델링해 임대주택으로 쓴다 - 조선일보",
+    "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQb0UyNWZGc0R1eWt3OEtrX0hUVHEtSzlIa2plcWhjNk5MT0RLc1RnS0VlcVViTWRjaTB3MVQ0ZnBXZ0VsMVZiRXdjNVpoX3hWMEc3ME1qaUxOWTRSbGVsMFpYazRuYWh1MVlVUHYtX2xWQ2IzeGs3bkV4YTM0TWdGOV9FZVFMcEox?oc=5",
+    "description": "애물단지 된 지식산업센터, 리모델링해 임대주택으로 쓴다  조선일보",
+    "date": "2026-06-15T15:39:12.000Z",
+    "sourceId": "kr-chosun",
+    "sourceName": "조선일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": {
+      "translatedTitle": "애물단지 된 지식산업센터, 리모델링해 임대주택으로 쓴다 - 조선일보",
+      "summary": [
+        "\"애물단지 된 지식산업센터, 리모델링해 임대주택으로 쓴다 - 조선일보\" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.",
+        "원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.",
+        "관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다."
+      ],
+      "implications": [
+        "거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.",
+        "핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 5,
+    "specialistAnalysis": [
+      "미분양 지식산업센터를 리모델링하여 임대주택으로 활용하는 방안 논의.",
+      "상업용 부동산 시장의 공급 과잉 및 공실 문제 해결 노력.",
+      "주택 공급 확대 및 주거 안정에 일부 기여할 수 있는 정책적 시도."
+    ],
+    "isCurated": true
   }
 }
