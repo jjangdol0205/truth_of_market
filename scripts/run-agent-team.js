@@ -252,15 +252,15 @@ async function run() {
     mdContent += `- **출처:** ${art.sourceName} | **분류:** ${art.category}\n`;
     mdContent += `- **원문 기사명:** *${art.title}*\n\n`;
     
-    mdContent += `#### 📋 천재 편집자 상세 분석 리포트\n`;
+    mdContent += `#### 📋 AI 투자 핵심 요약 (3줄)\n`;
     analysis.summary.forEach(sum => {
       mdContent += `- ${sum}\n`;
     });
     mdContent += `\n`;
 
-    mdContent += `#### 💡 심층 투자 시사점\n`;
+    mdContent += `#### 💡 투자자 관점 시사점\n`;
     analysis.implications.forEach(imp => {
-      mdContent += `* ${imp}\n`;
+      mdContent += `* **시사점:** ${imp}\n`;
     });
     mdContent += `\n`;
     mdContent += `- 🔗 [기사 원문 정독하러 가기](${art.link})\n\n`;
