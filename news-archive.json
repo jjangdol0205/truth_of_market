@@ -11087,7 +11087,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "region": "KR",
-    "isCurated": false
+    "isCurated": false,
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ]
   },
   "id_1qd6ci3": {
     "id": "id_1qd6ci3",
@@ -11101,7 +11105,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ]
   },
   "id_1pobmsw": {
     "id": "id_1pobmsw",
@@ -11129,7 +11137,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ]
   },
   "id_1spoyfp": {
     "id": "id_1spoyfp",
@@ -11143,7 +11155,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ]
   },
   "id_1fndyyp": {
     "id": "id_1fndyyp",
@@ -11185,7 +11201,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ]
   },
   "id_jdi3fb": {
     "id": "id_jdi3fb",
@@ -11241,7 +11261,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ]
   },
   "id_rz9pvo": {
     "id": "id_rz9pvo",
@@ -11273,7 +11297,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ]
   },
   "id_1b9rbwy": {
     "id": "id_1b9rbwy",
@@ -11443,7 +11471,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ]
   },
   "id_otqajm": {
     "id": "id_otqajm",
@@ -11629,7 +11661,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ]
   },
   "id_ae03s8": {
     "id": "id_ae03s8",
@@ -11729,7 +11765,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "region": "KR",
-    "isCurated": false
+    "isCurated": false,
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ]
   },
   "id_d5m6b0": {
     "id": "id_d5m6b0",
@@ -11879,7 +11919,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ]
   },
   "id_hay7nr": {
     "id": "id_hay7nr",
@@ -11911,7 +11955,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ]
   },
   "id_1qr4bjw": {
     "id": "id_1qr4bjw",
@@ -12029,7 +12077,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ]
   },
   "id_1psyvgx": {
     "id": "id_1psyvgx",
@@ -12531,7 +12583,11 @@
     "category": "Macro",
     "aiAnalysis": null,
     "isCurated": false,
-    "region": "KR"
+    "region": "KR",
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ]
   },
   "id_15mjzwa": {
     "id": "id_15mjzwa",
@@ -16247,15 +16303,15 @@
     "category": "Markets",
     "region": "JP",
     "aiAnalysis": {
-      "translatedTitle": "Japan posts first trade deficit in four months - Latest news from Azerbaijan",
+      "translatedTitle": "일본, 4개월 만에 첫 무역 적자 기록...글로벌 통상 둔화 경고음",
       "summary": [
-        "\"Japan posts first trade deficit in four months - Latest news from Azerbaijan\" 보도의 사실 관계를 기반으로 핵심 사건 내용을 요약하고 있습니다.",
-        "원문 기사에서 언급된 구체적인 지표 변화 및 업계 동향을 상세히 모니터링합니다.",
-        "관련 시장 참가자들의 반응과 파급 효과를 종합적으로 진단 중입니다."
+        "일본 재무성이 발표한 무역 통계에 따르면, 자동차 수출 둔화와 에너지 수입 가격 고공행진 여파로 인해 일본이 4개월 만에 첫 무역 수지 적자를 기록했습니다.",
+        "글로벌 경기 침체 기조 속에 미국의 통상 제재 경계감 및 중국으로의 반도체·전자 부품 수출 부진이 주요 수출 타격 요인으로 분석됩니다.",
+        "내수 경기 안정을 위한 BOJ의 추가 금리 인상 압박 요인과 맞물리며, 무역 적자 지속 시 엔화 가치의 단기 변동성 확대가 유발될 우려가 있습니다."
       ],
       "implications": [
-        "거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.",
-        "핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다."
+        "일본의 무역 적자 전환은 글로벌 실물 교역량 둔화 신호이므로 코스피 등 수출 가중치가 높은 신흥국 제조 기업들의 동반 부진 경고로 해독됩니다.",
+        "자동차 등 주요 일본 수출 경쟁 업종을 보유한 국내 기업들의 단기적인 상대적 가격 메리트 확대 여부를 면밀히 포착해야 합니다."
       ],
       "isPremiumCuration": true
     },
@@ -16264,5 +16320,23 @@
       "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
     ],
     "isCurated": true
+  },
+  "id_1o152lt": {
+    "id": "id_1o152lt",
+    "title": "애플 부사장 “좌절스러워”...‘1억명 아이폰’ 유럽에 ‘시리 AI’ 출시 안하는 이유 - 조선일보",
+    "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOWXRqY3JqdDVrdHRoNExvRVVDLWhBenZodFd0Z0JHVVlWQngtdEcxNHhYeXpjN3E2LWliQjZjQ1BLM1dvdHBtTVctWXJkUHRNWGJSS0NBbmJ1bmlrSGZxREYyRW1CNnI2UXl0OGs1UTlKTUtFTDVnalhrQlhFaEtteGJIYw?oc=5",
+    "description": "애플 부사장 “좌절스러워”...‘1억명 아이폰’ 유럽에 ‘시리 AI’ 출시 안하는 이유  조선일보",
+    "date": "2026-06-17T04:34:00.000Z",
+    "sourceId": "kr-chosun",
+    "sourceName": "조선일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": null,
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
+    ],
+    "isCurated": false
   }
 }
