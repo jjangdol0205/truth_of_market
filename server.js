@@ -659,7 +659,7 @@ app.get('/contact', (req, res) => {
 app.get('/sitemap.xml', (req, res) => {
   const protocol = req.headers['x-forwarded-proto'] || req.protocol;
   const baseUrl = `${protocol}://${req.headers.host}`;
-  const currentDate = new Date().toISOString().split('T')[0];
+  const currentDate = new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Seoul' });
 
   let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
   xml += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;

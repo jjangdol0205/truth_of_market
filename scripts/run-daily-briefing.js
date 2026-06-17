@@ -348,7 +348,7 @@ async function run() {
   saveDataFiles();
 
   // 7. briefings/ 폴더에 마크다운 리포트 작성
-  const todayStr = new Date().toISOString().split('T')[0];
+  const todayStr = new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Seoul' });
   
   if (!fs.existsSync(BRIEFINGS_DIR)) {
     fs.mkdirSync(BRIEFINGS_DIR, { recursive: true });

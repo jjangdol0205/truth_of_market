@@ -233,7 +233,7 @@ async function run() {
   saveFiles();
 
   // 8. Generate Daily Briefing Markdown
-  const todayStr = new Date().toISOString().split('T')[0];
+  const todayStr = new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Seoul' });
   if (!fs.existsSync(BRIEFINGS_DIR)) {
     fs.mkdirSync(BRIEFINGS_DIR, { recursive: true });
   }
