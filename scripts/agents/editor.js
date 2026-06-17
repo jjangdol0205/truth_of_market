@@ -72,6 +72,7 @@ async function editArticlesBatched(articles, apiKey) {
 
     return articles.map(art => {
       const rep = reportsMap[art.id];
+      const hasValidRep = rep && rep.summary && rep.summary.length === 3 && rep.implications && rep.implications.length === 2;
       return {
         id: art.id,
         aiAnalysis: rep ? {
@@ -85,7 +86,7 @@ async function editArticlesBatched(articles, apiKey) {
             '거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.',
             '핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다.'
           ],
-          isPremiumCuration: true
+          isPremiumCuration: hasValidRep
         } : null
       };
     });
@@ -106,7 +107,7 @@ async function editArticlesBatched(articles, apiKey) {
             '거시적 정책 경로 및 위험 선호 심리 변화에 기반한 대응이 요구됩니다.',
             '핵심 유관 섹터의 변동성과 단기 지지선 구축 여부를 추가 확인이 필요합니다.'
           ],
-          isPremiumCuration: true
+          isPremiumCuration: false
         }
       };
     });

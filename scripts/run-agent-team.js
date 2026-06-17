@@ -139,11 +139,9 @@ async function run() {
       await sleep(13000);
     }
 
-    const specResults = await analyzeArticlesBatched(list, region, apiKey);
+    // [오프라인 모드 전환] 실시간 API 호출을 차단하고 빈 결과를 리턴합니다.
+    const specResults = list.map(art => ({ id: art.id, score: 5, analysis: ['오프라인 분석 대기'] }));
     regionCallCount++;
-
-    apiBudget.totalApiCalls += 1;
-    apiBudget.monthlyAccumulatedCost += 0.0001; // Estimate cost
 
     specResults.forEach(res => {
       if (newsArchive[res.id]) {
@@ -198,10 +196,8 @@ async function run() {
       await sleep(13000);
     }
 
-    const editorResults = await editArticlesBatched(batch, apiKey);
-    
-    apiBudget.totalApiCalls += 1;
-    apiBudget.monthlyAccumulatedCost += 0.0003; // Estimate cost
+    // [오프라인 모드 전환] 실시간 에디터 API 호출을 차단하고 빈 결과를 할당하여 Antigravity 오프라인 분석 주입 상태로 둡니다.
+    const editorResults = batch.map(art => ({ id: art.id, aiAnalysis: null }));
 
     editorResults.forEach(res => {
       const archiveItem = newsArchive[res.id];

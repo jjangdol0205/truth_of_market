@@ -12,6 +12,7 @@ const REAL_SUMMARIES_10 = path.join(SCRATCH_DIR, 'real_summaries_10.json');
 const REAL_SUMMARIES_11 = path.join(SCRATCH_DIR, 'real_summaries_11.json');
 const REAL_SUMMARIES_12 = path.join(SCRATCH_DIR, 'real_summaries_12.json');
 const REAL_SUMMARIES_13 = path.join(SCRATCH_DIR, 'real_summaries_13.json');
+const REAL_SUMMARIES_14 = path.join(SCRATCH_DIR, 'real_summaries_14.json');
 
 function main() {
   console.log('🤖 Starting premium summaries injection...');
@@ -52,6 +53,12 @@ function main() {
     const data13 = JSON.parse(fs.readFileSync(REAL_SUMMARIES_13, 'utf8'));
     Object.assign(mergedSummaries, data13);
     console.log(`Merged ${Object.keys(data13).length} summaries from real_summaries_13.json`);
+  }
+
+  if (fs.existsSync(REAL_SUMMARIES_14)) {
+    const data14 = JSON.parse(fs.readFileSync(REAL_SUMMARIES_14, 'utf8'));
+    Object.assign(mergedSummaries, data14);
+    console.log(`Merged ${Object.keys(data14).length} summaries from real_summaries_14.json`);
   }
 
   console.log(`Total unique summaries to inject: ${Object.keys(mergedSummaries).length}`);

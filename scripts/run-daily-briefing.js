@@ -158,10 +158,8 @@ async function fetchNews() {
 
 // Gemini API 호출 및 기사 분석
 async function analyzeArticle(article) {
-  const title = article.title;
-  const description = article.description;
-  const lang = article.lang;
-  const cacheKey = article.id;
+  // [오프라인 모드 전환] 실시간 API 호출을 전면 차단합니다.
+  return null;
 
   // 1. 이미 캐시에 분석된 내용이 있다면 캐시 반환 (비용 $0)
   if (aiCache[cacheKey] && aiCache[cacheKey].aiAnalysis) {
