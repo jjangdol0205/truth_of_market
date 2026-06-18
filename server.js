@@ -23,6 +23,12 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// GSC 메타태그용 글로벌 변수 주입 미들웨어
+app.use((req, res, next) => {
+  res.locals.gscId = process.env.GOOGLE_SEARCH_CONSOLE_ID;
+  next();
+});
+
 // 인사이트 칼럼 데이터 로딩
 const INSIGHTS_FILE = path.join(__dirname, 'insights.json');
 function loadInsights() {

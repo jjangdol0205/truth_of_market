@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <% if (typeof gscId !== 'undefined' && gscId) { %>
+  <meta name="google-site-verification" content="<%= gscId %>" />
+  <% } %>
   <title><%= article.aiAnalysis ? article.aiAnalysis.translatedTitle : article.title %> - Truth of Market</title>
   <meta name="description" content="<%= article.aiAnalysis && article.aiAnalysis.summary ? article.aiAnalysis.summary[0] : article.description || article.title %>">
   <link rel="canonical" href="https://truthofmarket.com/article/<%= article.id %>">

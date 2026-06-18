@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <% if (typeof gscId !== 'undefined' && gscId) { %>
+  <meta name="google-site-verification" content="<%= gscId %>" />
+  <% } %>
   <title><%= insight.title %> - Truth of Market 시장 인사이트</title>
   <meta name="description" content="<%= insight.summary %>">
   <meta name="keywords" content="<%= (insight.tags || []).join(', ') %>, 투자, 시장분석, 경제">

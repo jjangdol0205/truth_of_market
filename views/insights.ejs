@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <% if (typeof gscId !== 'undefined' && gscId) { %>
+  <meta name="google-site-verification" content="<%= gscId %>" />
+  <% } %>
   <title>시장 인사이트 칼럼 - Truth of Market</title>
   <meta name="description" content="Truth of Market 수석 애널리스트가 매일 주요 경제 뉴스를 엮어 작성하는 오리지널 시장 분석 칼럼 아카이브입니다. 거시경제, 금리, 반도체, 부동산 등 핵심 투자 테마를 심층 분석합니다.">
   <link rel="canonical" href="https://truthofmarket.com/insights">
