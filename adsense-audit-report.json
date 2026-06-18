@@ -1,0 +1,139 @@
+{
+  "auditDate": "2026-06-18T01:11:09.419Z",
+  "score": 100,
+  "passCount": 16,
+  "failCriticalCount": 0,
+  "failNonCriticalCount": 0,
+  "total": 16,
+  "verdict": "승인 가능성 높음",
+  "results": [
+    {
+      "id": "adsense_script",
+      "name": "AdSense 스크립트 삽입",
+      "category": "기술 설정",
+      "critical": true,
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "search_console",
+      "name": "Google Search Console 인증 메타태그",
+      "category": "기술 설정",
+      "critical": true,
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "sitemap",
+      "name": "sitemap.xml 라우트",
+      "category": "기술 설정",
+      "critical": false,
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "robots_txt",
+      "name": "robots.txt 파일",
+      "category": "기술 설정",
+      "critical": false,
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "privacy_policy",
+      "name": "개인정보처리방침 페이지 존재",
+      "category": "법적 정책",
+      "critical": true,
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "privacy_adsense_mention",
+      "name": "개인정보처리방침 내 AdSense/쿠키 고지",
+      "category": "법적 정책",
+      "critical": true,
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "terms",
+      "name": "서비스 이용약관 페이지 존재",
+      "category": "법적 정책",
+      "critical": false,
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "disclaimer",
+      "name": "투자 면책 고지문 (Footer)",
+      "category": "법적 정책",
+      "critical": true,
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "about",
+      "name": "About/소개 페이지 존재",
+      "category": "신뢰 센터",
+      "critical": true,
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "contact",
+      "name": "Contact/문의 페이지 & 이메일 명시",
+      "category": "신뢰 센터",
+      "critical": true,
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "original_content_insights",
+      "name": "오리지널 인사이트 칼럼 페이지 (/insights)",
+      "category": "콘텐츠 품질 (최중요)",
+      "critical": true,
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "insight_articles_count",
+      "name": "인사이트 칼럼 15편 이상 보유",
+      "category": "콘텐츠 품질 (최중요)",
+      "critical": true,
+      "passed": true,
+      "detail": "현재 15편 보유 (목표: 15편 이상)"
+    },
+    {
+      "id": "article_detail_pages",
+      "name": "개별 기사 상세 URL (/article/:id)",
+      "category": "콘텐츠 품질 (최중요)",
+      "critical": true,
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "premium_articles_count",
+      "name": "AI 분석 완료 기사 30건 이상",
+      "category": "콘텐츠 품질 (최중요)",
+      "critical": true,
+      "passed": true,
+      "detail": "현재 80건 보유"
+    },
+    {
+      "id": "thin_content_check",
+      "name": "Fallback 오염 기사 없음 (빈 요약 없음)",
+      "category": "콘텐츠 품질 (최중요)",
+      "critical": true,
+      "passed": true,
+      "detail": null
+    },
+    {
+      "id": "nav_links",
+      "name": "주요 법적 페이지 Footer/Nav 링크",
+      "category": "사이트 구조",
+      "critical": false,
+      "passed": true,
+      "detail": null
+    }
+  ]
+}
