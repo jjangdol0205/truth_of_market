@@ -1,5 +1,5 @@
 {
-  "auditDate": "2026-06-18T01:40:13.128Z",
+  "auditDate": "2026-06-18T01:40:24.460Z",
   "score": 100,
   "passCount": 16,
   "failCriticalCount": 0,
@@ -101,7 +101,7 @@
       "category": "콘텐츠 품질 (최중요)",
       "critical": true,
       "passed": true,
-      "detail": "현재 25편 보유 (목표: 15편 이상)"
+      "detail": "현재 15편 보유 (목표: 15편 이상)"
     },
     {
       "id": "article_detail_pages",
