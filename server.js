@@ -1115,10 +1115,10 @@ app.listen(PORT, async () => {
   console.log('🏁 [시스템 부팅] 로컬 아카이브 초기화 및 데이터 최신 갱신 중...');
   await archiveDailyNews();
 
-  // 24시간에 한 번씩 주기적으로 자동 백그라운드 RSS 파싱 및 수집을 수행하는 타이머 동작 (사용자 접속 시 불필요 오버헤드 0%)
-  const TWENTY_FOUR_HOURS = 24 * 60 * 60 * 1000;
+  // 10분 간격으로 주기적으로 자동 백그라운드 RSS 파싱 및 수집을 수행 (실시간 수집 모드)
+  const REALTIME_INTERVAL = 10 * 60 * 1000;
   setInterval(async () => {
     await archiveDailyNews();
-  }, TWENTY_FOUR_HOURS);
-  console.log(`⏰ [스케줄링 완료] 24시간 백그라운드 자동 수집 사이클 타이머가 실행되었습니다.`);
+  }, REALTIME_INTERVAL);
+  console.log(`⏰ [스케줄링 완료] 10분 백그라운드 실시간 수집 사이클 타이머가 실행되었습니다.`);
 });
