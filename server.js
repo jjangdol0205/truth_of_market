@@ -6,7 +6,7 @@ const fs = require('fs');
 const Parser = require('rss-parser');
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 const https = require('https');
-
+const cron = require('node-cron');
 // .env 파일 로드
 dotenv.config();
 
@@ -1115,10 +1115,9 @@ app.listen(PORT, async () => {
   console.log('🏁 [시스템 부팅] 로컬 아카이브 초기화 및 데이터 최신 갱신 중...');
   await archiveDailyNews();
 
-  // 10분 간격으로 주기적으로 자동 백그라운드 RSS 파싱 및 수집을 수행 (실시간 수집 모드)
-  const REALTIME_INTERVAL = 10 * 60 * 1000;
-  setInterval(async () => {
+  // 매일 오전 6시, 오후 6시에 주기적으로 백그라운드 RSS 파싱 및 수집을 수행
+  cron.schedule('0 6,18 * * *', async () => {
     await archiveDailyNews();
-  }, REALTIME_INTERVAL);
-  console.log(`⏰ [스케줄링 완료] 10분 백그라운드 실시간 수집 사이클 타이머가 실행되었습니다.`);
+  });
+  console.log(`⏰ [스케줄링 완료] 매일 오전 6시, 오후 6시 뉴스 수집 스케줄러가 등록되었습니다.`);
 });
