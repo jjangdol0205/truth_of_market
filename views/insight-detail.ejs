@@ -12,11 +12,47 @@
   <link rel="canonical" href="https://truthofmarket.com/insights/<%= insight.slug %>">
 
   <!-- Open Graph -->
+  <meta property="og:locale" content="ko_KR" />
   <meta property="og:title" content="<%= insight.title %> - Truth of Market">
   <meta property="og:description" content="<%= insight.summary %>">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://truthofmarket.com/insights/<%= insight.slug %>">
+  <meta property="og:site_name" content="Truth of Market" />
   <meta property="article:published_time" content="<%= insight.date %>">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="<%= insight.title %> - Truth of Market" />
+  <meta name="twitter:description" content="<%= insight.summary %>" />
+  <!-- Schema.org JSON-LD Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "<%= insight.title %>",
+    "description": "<%= insight.summary %>",
+    "datePublished": "<%= insight.date %>",
+    "dateModified": "<%= insight.date %>",
+    "author": {
+      "@type": "Organization",
+      "name": "Truth of Market",
+      "url": "https://truthofmarket.com"
+    },
+    "publisher": {
+      "@type": "NewsMediaOrganization",
+      "@id": "https://truthofmarket.com/#organization",
+      "name": "Truth of Market",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://truthofmarket.com/icon-192.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://truthofmarket.com/insights/<%= insight.slug %>"
+    },
+    "keywords": "<%= (insight.tags || []).join(', ') %>"
+  }
+  </script>
 
   <% if (typeof adsenseClientId !== 'undefined' && adsenseClientId) { %>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=<%= adsenseClientId %>" crossorigin="anonymous"></script>

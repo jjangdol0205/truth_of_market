@@ -802,6 +802,44 @@ app.get('/sitemap.xml', (req, res) => {
   res.send(xml);
 });
 
+// --- RSS 2.0 피드 (feed.xml) ---
+app.get('/feed.xml', (req, res) => {
+  const protocol = req.headers['x-forwarded-proto'] || req.protocol;
+  const baseUrl = `${protocol}://${req.headers.host}`;
+  const insights = loadInsights();
+
+  let rss = `<?xml version="1.0" encoding="UTF-8"?>\n`;
+  rss += `<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n`;
+  rss += `<channel>\n`;
+  rss += `  <title>Truth of Market 시장 인사이트</title>\n`;
+  rss += `  <link>${baseUrl}</link>\n`;
+  rss += `  <description>국내외 주요 경제 뉴스를 기반으로 AI가 작성한 시장 인사이트 칼럼 피드입니다.</description>\n`;
+  rss += `  <language>ko-KR</language>\n`;
+  rss += `  <atom:link href="${baseUrl}/feed.xml" rel="self" type="application/rss+xml"/>\n`;
+
+  insights.slice(0, 20).forEach(insight => {
+    const pubDate = insight.date ? new Date(insight.date).toUTCString() : new Date().toUTCString();
+    const link = `${baseUrl}/insights/${insight.slug}`;
+    const desc = (insight.summary || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    const title = (insight.title || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    rss += `  <item>\n`;
+    rss += `    <title>${title}</title>\n`;
+    rss += `    <link>${link}</link>\n`;
+    rss += `    <description>${desc}</description>\n`;
+    rss += `    <pubDate>${pubDate}</pubDate>\n`;
+    rss += `    <guid isPermaLink="true">${link}</guid>\n`;
+    if (insight.tags && insight.tags.length) {
+      insight.tags.forEach(tag => { rss += `    <category>${tag}</category>\n`; });
+    }
+    rss += `  </item>\n`;
+  });
+
+  rss += `</channel>\n</rss>`;
+  res.header('Content-Type', 'application/rss+xml; charset=utf-8');
+  res.send(rss);
+});
+
+
 // --- [SEO 극대화] 구글 봇 크롤링 대응용 프리미엄 서버 렌더링(SSR) 기사 상세 페이지 ---
 app.get('/article/:id', (req, res) => {
   const articleId = req.params.id;

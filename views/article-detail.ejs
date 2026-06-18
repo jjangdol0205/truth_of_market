@@ -11,10 +11,45 @@
   <link rel="canonical" href="https://truthofmarket.com/article/<%= article.id %>">
 
   <!-- Open Graph -->
+  <meta property="og:locale" content="ko_KR" />
   <meta property="og:title" content="<%= article.aiAnalysis ? article.aiAnalysis.translatedTitle : article.title %> - Truth of Market">
   <meta property="og:description" content="<%= article.aiAnalysis && article.aiAnalysis.summary ? article.aiAnalysis.summary[0] : (article.description || '') %>">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://truthofmarket.com/article/<%= article.id %>">
+  <meta property="og:site_name" content="Truth of Market" />
+  <meta property="article:published_time" content="<%= article.date %>" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="<%= article.aiAnalysis ? article.aiAnalysis.translatedTitle : article.title %> - Truth of Market" />
+  <meta name="twitter:description" content="<%= article.aiAnalysis && article.aiAnalysis.summary ? article.aiAnalysis.summary[0] : (article.description || '') %>" />
+  <!-- Schema.org JSON-LD NewsArticle -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "<%= article.aiAnalysis ? article.aiAnalysis.translatedTitle : article.title %>",
+    "description": "<%= article.aiAnalysis && article.aiAnalysis.summary ? article.aiAnalysis.summary[0] : (article.description || '') %>",
+    "datePublished": "<%= article.date %>",
+    "dateModified": "<%= article.date %>",
+    "author": {
+      "@type": "Organization",
+      "name": "<%= article.sourceName || 'Truth of Market' %>"
+    },
+    "publisher": {
+      "@type": "NewsMediaOrganization",
+      "@id": "https://truthofmarket.com/#organization",
+      "name": "Truth of Market",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://truthofmarket.com/icon-192.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://truthofmarket.com/article/<%= article.id %>"
+    }
+  }
+  </script>
 
   <% if (typeof adsenseClientId !== 'undefined' && adsenseClientId) { %>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=<%= adsenseClientId %>" crossorigin="anonymous"></script>

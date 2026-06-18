@@ -5,7 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Truth of Market - AI 투자 스터디 뉴스 아카이브</title>
   <!-- SEO 메타 태그 -->
-  <meta name="description" content="국내외 주요 언론사 실시간 경제 뉴스를 수집하고 Google Gemini AI를 활용하여 번역, 요약 및 투자 시사점을 제공하는 나만의 투자 연구소.">
+  <meta name="description" content="국내외 주요 언론사 실시간 경제 뉴스를 수집하고 AI를 활용하여 번역, 요약 및 투자 시사점을 제공하는 나만의 투자 연구소.">
+  <link rel="canonical" href="https://truthofmarket.com/" />
+  <!-- RSS 피드 -->
+  <link rel="alternate" type="application/rss+xml" title="Truth of Market 인사이트 피드" href="https://truthofmarket.com/feed.xml" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:title" content="Truth of Market - AI 투자 스터디 뉴스 아카이브" />
+  <meta property="og:description" content="국내외 주요 언론사 실시간 경제 뉴스를 수집하고 AI를 활용하여 번역, 요약 및 투자 시사점을 제공하는 나만의 투자 연구소." />
+  <meta property="og:url" content="https://truthofmarket.com/" />
+  <meta property="og:site_name" content="Truth of Market" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Truth of Market - AI 투자 스터디 뉴스 아카이브" />
+  <meta name="twitter:description" content="국내외 주요 언론사 실시간 경제 뉴스를 수집하고 AI를 활용하여 번역, 요약 및 투자 시사점을 제공하는 나만의 투자 연구소." />
+  <!-- Schema.org JSON-LD 구조화 데이터 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "NewsMediaOrganization",
+        "@id": "https://truthofmarket.com/#organization",
+        "name": "Truth of Market",
+        "url": "https://truthofmarket.com",
+        "email": "contact@truthofmarket.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://truthofmarket.com/icon-192.png",
+          "width": 192,
+          "height": 192
+        },
+        "description": "국내외 주요 언론사 실시간 경제 뉴스를 수집하고 AI 분석을 활용하여 투자 시사점을 제공하는 투자 연구 플랫폼입니다."
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://truthofmarket.com/#website",
+        "url": "https://truthofmarket.com",
+        "name": "Truth of Market",
+        "publisher": { "@id": "https://truthofmarket.com/#organization" },
+        "inLanguage": "ko-KR",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://truthofmarket.com/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    ]
+  }
+  </script>
   <% if (typeof gscId !== 'undefined' && gscId) { %>
   <meta name="google-site-verification" content="<%= gscId %>" />
   <% } %>
