@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= insight.title %> - Truth of Market 시장 인사이트</title>
+  <meta name="description" content="<%= insight.summary %>">
+  <meta name="keywords" content="<%= (insight.tags || []).join(', ') %>, 투자, 시장분석, 경제">
+  <link rel="canonical" href="https://truthofmarket.com/insights/<%= insight.slug %>">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="<%= insight.title %> - Truth of Market">
+  <meta property="og:description" content="<%= insight.summary %>">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://truthofmarket.com/insights/<%= insight.slug %>">
+  <meta property="article:published_time" content="<%= insight.date %>">
+
+  <% if (typeof adsenseClientId !== 'undefined' && adsenseClientId) { %>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=<%= adsenseClientId %>" crossorigin="anonymous"></script>
+  <% } %>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="manifest" href="/manifest.json">
+
+  <style>
+    .article-container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 30px 24px 80px;
+    }
+    .back-nav {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: hsl(var(--accent-cyan));
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 30px;
+      transition: transform 0.2s ease;
+    }
+    .back-nav:hover { transform: translateX(-4px); }
+
+    /* 기사 헤더 */
+    .article-header {
+      border-bottom: 1px solid hsla(var(--glass-border), 0.4);
+      padding-bottom: 30px;
+      margin-bottom: 36px;
+    }
+    .article-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+    .article-category-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: linear-gradient(135deg, hsla(var(--accent-gold), 0.15), hsla(var(--accent-cyan), 0.1));
+      border: 1px solid hsla(var(--accent-gold), 0.3);
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: hsl(var(--accent-gold));
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .article-date-info {
+      font-size: 0.83rem;
+      color: hsl(var(--text-muted));
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .article-header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.35;
+      color: hsl(var(--text-main));
+      margin-bottom: 18px;
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+    .article-summary-box {
+      background: linear-gradient(135deg, hsla(var(--accent-cyan), 0.05), hsla(var(--accent-gold), 0.03));
+      border: 1px solid hsla(var(--accent-cyan), 0.2);
+      border-left: 4px solid hsl(var(--accent-cyan));
+      border-radius: 0 12px 12px 0;
+      padding: 18px 22px;
+      font-size: 0.97rem;
+      color: hsl(var(--text-main));
+      line-height: 1.7;
+      font-style: italic;
+    }
+
+    /* 본문 */
+    .article-body {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 1.02rem;
+      line-height: 1.9;
+      color: hsl(var(--text-main));
+    }
+    .article-body h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: hsl(var(--text-main));
+      margin: 2.2em 0 0.8em;
+      padding-bottom: 10px;
+      border-bottom: 1px solid hsla(var(--glass-border), 0.3);
+    }
+    .article-body h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: hsl(var(--accent-cyan));
+      margin: 1.8em 0 0.6em;
+    }
+    .article-body p {
+      margin-bottom: 1.4em;
+    }
+    .article-body strong {
+      color: hsl(var(--text-main));
+      font-weight: 700;
+    }
+
+    /* 애드센스 미드 배너 자리 */
+    .adsense-mid {
+      margin: 36px 0;
+      padding: 16px;
+      border-radius: 10px;
+      background: hsla(var(--bg-secondary), 0.3);
+      border: 1px dashed hsla(var(--glass-border), 0.4);
+      text-align: center;
+      font-size: 0.72rem;
+      color: hsl(var(--text-muted));
+      letter-spacing: 1px;
+    }
+
+    /* 태그 및 출처 */
+    .article-footer-info {
+      margin-top: 48px;
+      padding-top: 28px;
+      border-top: 1px solid hsla(var(--glass-border), 0.3);
+    }
+    .article-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 28px;
+    }
+    .article-tag {
+      font-size: 0.8rem;
+      padding: 4px 14px;
+      border-radius: 20px;
+      background: hsla(var(--bg-secondary), 0.5);
+      border: 1px solid hsla(var(--glass-border), 0.4);
+      color: hsl(var(--text-muted));
+      text-decoration: none;
+      transition: border-color 0.2s;
+    }
+    .article-tag:hover {
+      border-color: hsla(var(--accent-cyan), 0.4);
+      color: hsl(var(--accent-cyan));
+    }
+    .sources-section h4 {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: hsl(var(--text-muted));
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+    }
+    .source-list {
+      list-style: none;
+      padding: 0;
+    }
+    .source-list li {
+      font-size: 0.83rem;
+      color: hsl(var(--text-muted));
+      padding: 6px 0;
+      border-bottom: 1px solid hsla(var(--glass-border), 0.15);
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .source-list li i { margin-top: 2px; flex-shrink: 0; }
+    .source-list a {
+      color: hsl(var(--accent-cyan));
+      text-decoration: none;
+    }
+    .source-list a:hover { text-decoration: underline; }
+
+    /* 면책 고지 */
+    .disclaimer-box {
+      margin-top: 36px;
+      padding: 16px 20px;
+      border-radius: 10px;
+      background: hsla(var(--bg-primary), 0.4);
+      border: 1px solid hsla(var(--glass-border), 0.3);
+      font-size: 0.78rem;
+      line-height: 1.6;
+      color: hsl(var(--text-muted));
+    }
+
+    /* 네비게이션 (이전/다음) */
+    .article-nav {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 40px;
+    }
+    .article-nav a {
+      display: block;
+      padding: 18px 22px;
+      border-radius: 14px;
+      background: hsla(var(--bg-secondary), 0.4);
+      border: 1px solid hsla(var(--glass-border), 0.3);
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .article-nav a:hover {
+      border-color: hsla(var(--accent-cyan), 0.3);
+      transform: translateY(-2px);
+    }
+    .article-nav .nav-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: hsl(var(--text-muted));
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .article-nav .nav-title {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: hsl(var(--text-main));
+      line-height: 1.4;
+    }
+    .article-nav .next-item { text-align: right; }
+  </style>
+</head>
+<body class="dark-theme">
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+
+  <div class="article-container">
+    <a href="/insights" class="back-nav"><i class="fa-solid fa-arrow-left"></i> 인사이트 목록으로</a>
+
+    <!-- 기사 헤더 -->
+    <article itemscope itemtype="https://schema.org/Article">
+      <header class="article-header">
+        <div class="article-meta">
+          <span class="article-category-badge">
+            <i class="fa-solid fa-pen-nib"></i> Market Insight
+          </span>
+          <span class="article-date-info">
+            <i class="fa-regular fa-calendar-days"></i>
+            <time itemprop="datePublished" datetime="<%= insight.date %>">
+              <%= new Date(insight.date).toLocaleDateString('ko-KR', { year: 'numeric', month: 'long', day: 'numeric' }) %>
+            </time>
+          </span>
+          <% if (insight.keyTheme) { %>
+          <span style="font-size:0.8rem; color: hsl(var(--accent-cyan)); font-weight:600;">
+            <i class="fa-solid fa-chart-line"></i> <%= insight.keyTheme %>
+          </span>
+          <% } %>
+        </div>
+
+        <h1 itemprop="headline"><%= insight.title %></h1>
+
+        <div class="article-summary-box" itemprop="description">
+          <%= insight.summary %>
+        </div>
+      </header>
+
+      <!-- 애드센스 상단 -->
+      <% if (typeof adsenseClientId !== 'undefined' && adsenseClientId) { %>
+      <div class="adsense-mid">ADVERTISEMENT</div>
+      <% } %>
+
+      <!-- 본문 -->
+      <div class="article-body" itemprop="articleBody">
+        <%- insight.bodyHtml %>
+      </div>
+
+      <!-- 본문 중간 애드센스 -->
+      <% if (typeof adsenseClientId !== 'undefined' && adsenseClientId) { %>
+      <div class="adsense-mid">ADVERTISEMENT</div>
+      <% } %>
+
+      <!-- 기사 하단 정보 -->
+      <div class="article-footer-info">
+        <!-- 태그 -->
+        <div class="article-tags">
+          <% (insight.tags || []).forEach(function(tag) { %>
+            <span class="article-tag">#<%= tag %></span>
+          <% }); %>
+        </div>
+
+        <!-- 참고 기사 출처 -->
+        <% if (insight.sources && insight.sources.length > 0) { %>
+        <div class="sources-section">
+          <h4><i class="fa-solid fa-newspaper"></i> 본 칼럼 참고 기사 출처</h4>
+          <ul class="source-list">
+            <% insight.sources.forEach(function(src) { %>
+            <li>
+              <i class="fa-regular fa-file-lines" style="color: hsl(var(--text-muted));"></i>
+              <span><%= src.sourceName %> — <%= src.title %></span>
+            </li>
+            <% }); %>
+          </ul>
+        </div>
+        <% } %>
+
+        <!-- 면책 고지 -->
+        <div class="disclaimer-box">
+          <strong><i class="fa-solid fa-triangle-exclamation"></i> 투자 면책 고지:</strong>
+          본 칼럼은 투자자의 연구 및 학습 목적으로 제공되는 순수 참고용 정보입니다. 특정 종목이나 자산에 대한 매수·매도를 권유하지 않으며, 본 내용을 기반으로 한 투자 결정의 손익에 대한 책임은 투자자 본인에게 있습니다.
+        </div>
+      </div>
+
+      <!-- 이전/다음 칼럼 네비게이션 -->
+      <nav class="article-nav" aria-label="칼럼 네비게이션">
+        <% if (typeof prevInsight !== 'undefined' && prevInsight) { %>
+        <a href="/insights/<%= prevInsight.slug %>">
+          <div class="nav-label"><i class="fa-solid fa-arrow-left"></i> 이전 칼럼</div>
+          <div class="nav-title"><%= prevInsight.title %></div>
+        </a>
+        <% } else { %>
+        <a href="/insights">
+          <div class="nav-label"><i class="fa-solid fa-list"></i> 목록</div>
+          <div class="nav-title">인사이트 전체 목록 보기</div>
+        </a>
+        <% } %>
+
+        <% if (typeof nextInsight !== 'undefined' && nextInsight) { %>
+        <a href="/insights/<%= nextInsight.slug %>" class="next-item">
+          <div class="nav-label">다음 칼럼 <i class="fa-solid fa-arrow-right"></i></div>
+          <div class="nav-title"><%= nextInsight.title %></div>
+        </a>
+        <% } else { %>
+        <a href="/" class="next-item">
+          <div class="nav-label">홈으로 <i class="fa-solid fa-house"></i></div>
+          <div class="nav-title">오늘의 핵심 뉴스 30선 보기</div>
+        </a>
+        <% } %>
+      </nav>
+    </article>
+
+    <!-- 사이트 푸터 -->
+    <footer style="margin-top: 60px; padding-top: 24px; border-top: 1px solid hsla(var(--glass-border), 0.25); text-align: center; font-size: 0.78rem; color: hsl(var(--text-muted));">
+      <p>
+        <a href="/" style="color:hsl(var(--accent-cyan));text-decoration:none;">홈</a> |
+        <a href="/insights" style="color:hsl(var(--text-muted));text-decoration:none;">인사이트</a> |
+        <a href="/about" style="color:hsl(var(--text-muted));text-decoration:none;">소개</a> |
+        <a href="/privacy-policy" style="color:hsl(var(--text-muted));text-decoration:none;">개인정보처리방침</a> |
+        <a href="/terms" style="color:hsl(var(--text-muted));text-decoration:none;">이용약관</a>
+      </p>
+      <p style="margin-top:8px;">© 2026 Truth of Market. All Rights Reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.body.classList.toggle('light-theme', savedTheme === 'light');
+    document.body.classList.toggle('dark-theme', savedTheme !== 'light');
+  </script>
+</body>
+</html>

@@ -104,6 +104,15 @@
             </li>
           </ul>
 
+          <h3 class="nav-title"><i class="fa-solid fa-pen-nib"></i> 오리지널 칼럼</h3>
+          <ul class="nav-list">
+            <li class="nav-item" style="padding: 0;">
+              <a href="/insights" style="color: inherit; text-decoration: none; display: flex; align-items: center; width: 100%; padding: 10px 12px; gap: 12px;">
+                <i class="fa-solid fa-newspaper" style="color: hsl(var(--accent-gold));"></i> <span>시장 인사이트 칼럼</span>
+              </a>
+            </li>
+          </ul>
+
           <h3 class="nav-title"><i class="fa-solid fa-bookmark"></i> 스터디 아카이브</h3>
           <ul class="nav-list">
             <li class="nav-item" data-filter="bookmarks">
@@ -232,7 +241,7 @@
                   <span class="source-badge"><%= art.sourceName %></span>
                   <span class="lang-flag"><%= flag %></span>
                 </div>
-                <h3><%= art.translatedTitle || art.title %></h3>
+                <h3><a href="/article/<%= art.id %>" onclick="event.stopPropagation();" style="color:inherit;text-decoration:none;" title="기사 상세 분석 페이지"><%= art.aiAnalysis && art.aiAnalysis.translatedTitle ? art.aiAnalysis.translatedTitle : art.title %></a></h3>
                 <p class="news-card-desc"><%= art.description || '본문 요약이 없는 기사입니다. AI 스터디 기능을 활용하여 상세 정보를 번역하고 파악해보세요.' %></p>
                 <div class="news-card-footer">
                   <span class="news-time"><i class="fa-regular fa-calendar-days"></i> <%= timeString %></span>

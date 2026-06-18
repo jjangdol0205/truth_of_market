@@ -23,6 +23,42 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// 인사이트 칼럼 데이터 로딩
+const INSIGHTS_FILE = path.join(__dirname, 'insights.json');
+function loadInsights() {
+  try {
+    if (fs.existsSync(INSIGHTS_FILE)) {
+      return JSON.parse(fs.readFileSync(INSIGHTS_FILE, 'utf8'));
+    }
+  } catch (e) { console.error('⚠️ insights.json 로드 실패:', e.message); }
+  return [];
+}
+
+// 마크다운 → HTML 변환 (간단 구현, marked 없이)
+function simpleMarkdownToHtml(md) {
+  if (!md) return '';
+  return md
+    .replace(/^## (.+)$/gm, '<h2>$1</h2>')
+    .replace(/^### (.+)$/gm, '<h3>$1</h3>')
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.+?)\*/g, '<em>$1</em>')
+    .replace(/\n\n/g, '</p><p>')
+    .replace(/^(?!<h[23]>)(.+)$/gm, (line) => {
+      if (line.startsWith('<h') || line === '</p><p>' || line === '') return line;
+      return line;
+    })
+    .split('\n')
+    .filter(l => l.trim())
+    .map(l => {
+      if (l.startsWith('<h2>') || l.startsWith('<h3>') || l.startsWith('<p>') || l.startsWith('</p>')) return l;
+      return `<p>${l}</p>`;
+    })
+    .join('\n')
+    .replace(/<p><\/p>/g, '')
+    .replace(/<p>(<h[23]>)/g, '$1')
+    .replace(/(<\/h[23]>)<\/p>/g, '$1');
+}
+
 // SSR 메인 페이지 라우트
 app.get('/', (req, res) => {
   let articlesList = Object.values(newsArchive).sort((a, b) => new Date(b.date) - new Date(a.date));
@@ -32,6 +68,55 @@ app.get('/', (req, res) => {
     articles: premiumArticles,
     adsenseClientId: process.env.ADSENSE_CLIENT_ID || null
   });
+});
+
+// ─── 인사이트 칼럼 목록 라우트 ───────────────────────────────────
+app.get('/insights', (req, res) => {
+  try {
+    const insights = loadInsights().sort((a, b) => new Date(b.date) - new Date(a.date));
+    res.render('insights', {
+      insights,
+      adsenseClientId: process.env.ADSENSE_CLIENT_ID || null
+    });
+  } catch (e) {
+    console.error('❌ /insights 렌더링 오류:', e.message);
+    res.status(500).send('서버 오류가 발생했습니다.');
+  }
+});
+
+// ─── 인사이트 칼럼 상세 라우트 ────────────────────────────────────
+app.get('/insights/:slug', (req, res) => {
+  try {
+    const insights = loadInsights().sort((a, b) => new Date(b.date) - new Date(a.date));
+    const idx = insights.findIndex(i => i.slug === req.params.slug);
+    if (idx === -1) return res.status(404).send('칼럼을 찾을 수 없습니다.');
+    const insight = insights[idx];
+    insight.bodyHtml = simpleMarkdownToHtml(insight.body || '');
+    res.render('insight-detail', {
+      insight,
+      prevInsight: insights[idx + 1] || null,
+      nextInsight: insights[idx - 1] || null,
+      adsenseClientId: process.env.ADSENSE_CLIENT_ID || null
+    });
+  } catch (e) {
+    console.error('❌ /insights/:slug 렌더링 오류:', e.message);
+    res.status(500).send('서버 오류가 발생했습니다.');
+  }
+});
+
+// ─── 개별 기사 상세 URL 라우트 (/article/:id) ─────────────────────
+app.get('/article/:id', (req, res) => {
+  try {
+    const article = newsArchive[req.params.id];
+    if (!article) return res.status(404).send('기사를 찾을 수 없습니다.');
+    res.render('article-detail', {
+      article,
+      adsenseClientId: process.env.ADSENSE_CLIENT_ID || null
+    });
+  } catch (e) {
+    console.error('❌ /article/:id 렌더링 오류:', e.message);
+    res.status(500).send('서버 오류가 발생했습니다.');
+  }
 });
 
 // --- [API 최소화 및 캐싱 고도화] ---

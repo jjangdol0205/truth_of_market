@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>시장 인사이트 칼럼 - Truth of Market</title>
+  <meta name="description" content="Truth of Market 수석 애널리스트가 매일 주요 경제 뉴스를 엮어 작성하는 오리지널 시장 분석 칼럼 아카이브입니다. 거시경제, 금리, 반도체, 부동산 등 핵심 투자 테마를 심층 분석합니다.">
+  <link rel="canonical" href="https://truthofmarket.com/insights">
+
+  <% if (typeof adsenseClientId !== 'undefined' && adsenseClientId) { %>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=<%= adsenseClientId %>" crossorigin="anonymous"></script>
+  <% } %>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#090d16">
+
+  <style>
+    .insights-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 30px 20px 60px;
+    }
+    .insights-hero {
+      text-align: center;
+      padding: 50px 20px 40px;
+      border-bottom: 1px solid hsla(var(--glass-border), 0.4);
+      margin-bottom: 40px;
+    }
+    .insights-hero .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, hsla(var(--accent-gold), 0.15), hsla(var(--accent-cyan), 0.1));
+      border: 1px solid hsla(var(--accent-gold), 0.3);
+      border-radius: 50px;
+      padding: 6px 18px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: hsl(var(--accent-gold));
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .insights-hero h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      font-family: var(--font-display);
+      background: linear-gradient(135deg, hsl(var(--text-main)), hsl(var(--accent-cyan)));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+    .insights-hero p {
+      font-size: 1rem;
+      color: hsl(var(--text-muted));
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+    .insights-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+    .insight-card {
+      background: hsla(var(--bg-secondary), 0.5);
+      border: 1px solid hsla(var(--glass-border), 0.4);
+      border-radius: 20px;
+      padding: 36px 40px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+      display: block;
+      position: relative;
+      overflow: hidden;
+    }
+    .insight-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 4px; height: 100%;
+      background: linear-gradient(to bottom, hsl(var(--accent-gold)), hsl(var(--accent-cyan)));
+      border-radius: 4px 0 0 4px;
+    }
+    .insight-card:hover {
+      transform: translateY(-4px);
+      border-color: hsla(var(--accent-cyan), 0.3);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+    }
+    .insight-card-meta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+    .insight-date {
+      font-size: 0.82rem;
+      color: hsl(var(--text-muted));
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .insight-theme-badge {
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 3px 12px;
+      border-radius: 20px;
+      background: hsla(var(--accent-cyan), 0.1);
+      border: 1px solid hsla(var(--accent-cyan), 0.2);
+      color: hsl(var(--accent-cyan));
+    }
+    .insight-card h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: hsl(var(--text-main));
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+    .insight-card:hover h2 {
+      color: hsl(var(--accent-cyan));
+    }
+    .insight-card p {
+      font-size: 0.95rem;
+      color: hsl(var(--text-muted));
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    .insight-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .insight-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .insight-tag {
+      font-size: 0.72rem;
+      padding: 3px 10px;
+      border-radius: 12px;
+      background: hsla(var(--bg-primary), 0.6);
+      border: 1px solid hsla(var(--glass-border), 0.3);
+      color: hsl(var(--text-muted));
+    }
+    .insight-read-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: hsl(var(--accent-gold));
+      transition: gap 0.2s ease;
+    }
+    .insight-card:hover .insight-read-btn {
+      gap: 12px;
+    }
+    .back-nav {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: hsl(var(--accent-cyan));
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 10px;
+      transition: transform 0.2s ease;
+    }
+    .back-nav:hover { transform: translateX(-4px); }
+
+    .adsense-banner {
+      margin: 40px 0;
+      padding: 20px;
+      border-radius: 12px;
+      background: hsla(var(--bg-secondary), 0.3);
+      border: 1px dashed hsla(var(--glass-border), 0.4);
+      text-align: center;
+      font-size: 0.75rem;
+      color: hsl(var(--text-muted));
+      letter-spacing: 1px;
+    }
+    .empty-state {
+      text-align: center;
+      padding: 80px 20px;
+      color: hsl(var(--text-muted));
+    }
+    .empty-state i { font-size: 3rem; margin-bottom: 20px; opacity: 0.4; }
+  </style>
+</head>
+<body class="dark-theme">
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+
+  <div class="insights-container">
+    <a href="/" class="back-nav"><i class="fa-solid fa-arrow-left"></i> 메인 대시보드로</a>
+
+    <div class="insights-hero">
+      <div class="hero-badge"><i class="fa-solid fa-pen-nib"></i> Original Column</div>
+      <h1>오늘의 시장 인사이트</h1>
+      <p>매일 수집된 국내외 핵심 경제 뉴스를 엮어 작성한 오리지널 투자 분석 칼럼입니다.<br>단순 번역·요약을 넘어 거시적 흐름과 투자 판단의 근거를 제시합니다.</p>
+    </div>
+
+    <!-- 애드센스 상단 배너 -->
+    <% if (typeof adsenseClientId !== 'undefined' && adsenseClientId) { %>
+    <div class="adsense-banner">ADVERTISEMENT</div>
+    <% } %>
+
+    <main class="insights-grid" id="insightsGrid">
+      <% if (typeof insights !== 'undefined' && insights && insights.length > 0) { %>
+        <% insights.forEach(function(col) { %>
+          <a href="/insights/<%= col.slug %>" class="insight-card glass-panel">
+            <div class="insight-card-meta">
+              <span class="insight-date">
+                <i class="fa-regular fa-calendar-days"></i>
+                <%= new Date(col.date).toLocaleDateString('ko-KR', { year: 'numeric', month: 'long', day: 'numeric' }) %>
+              </span>
+              <% if (col.keyTheme) { %>
+              <span class="insight-theme-badge"><%= col.keyTheme %></span>
+              <% } %>
+            </div>
+            <h2><%= col.title %></h2>
+            <p><%= col.summary %></p>
+            <div class="insight-card-footer">
+              <div class="insight-tags">
+                <% (col.tags || []).slice(0, 4).forEach(function(tag) { %>
+                  <span class="insight-tag">#<%= tag %></span>
+                <% }); %>
+              </div>
+              <span class="insight-read-btn">
+                칼럼 전문 읽기 <i class="fa-solid fa-arrow-right"></i>
+              </span>
+            </div>
+          </a>
+        <% }); %>
+      <% } else { %>
+        <div class="empty-state">
+          <i class="fa-solid fa-pen-nib"></i>
+          <p>아직 작성된 칼럼이 없습니다. 곧 첫 번째 인사이트 칼럼이 게재됩니다.</p>
+        </div>
+      <% } %>
+    </main>
+
+    <!-- 푸터 -->
+    <footer style="margin-top: 60px; padding-top: 30px; border-top: 1px solid hsla(var(--glass-border), 0.3); text-align: center; font-size: 0.8rem; color: hsl(var(--text-muted));">
+      <p>본 칼럼의 모든 내용은 투자 참고용이며, 특정 종목의 매수·매도를 권유하지 않습니다.</p>
+      <p style="margin-top: 8px;">
+        <a href="/privacy-policy" style="color: hsl(var(--accent-cyan)); text-decoration: none; margin: 0 8px;">개인정보처리방침</a> |
+        <a href="/terms" style="color: hsl(var(--text-muted)); text-decoration: none; margin: 0 8px;">이용약관</a> |
+        <a href="/about" style="color: hsl(var(--text-muted)); text-decoration: none; margin: 0 8px;">소개</a>
+      </p>
+      <p style="margin-top: 8px;">© 2026 Truth of Market. All Rights Reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.body.classList.toggle('light-theme', savedTheme === 'light');
+    document.body.classList.toggle('dark-theme', savedTheme !== 'light');
+  </script>
+</body>
+</html>

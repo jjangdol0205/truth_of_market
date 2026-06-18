@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= article.aiAnalysis ? article.aiAnalysis.translatedTitle : article.title %> - Truth of Market</title>
+  <meta name="description" content="<%= article.aiAnalysis && article.aiAnalysis.summary ? article.aiAnalysis.summary[0] : article.description || article.title %>">
+  <link rel="canonical" href="https://truthofmarket.com/article/<%= article.id %>">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="<%= article.aiAnalysis ? article.aiAnalysis.translatedTitle : article.title %> - Truth of Market">
+  <meta property="og:description" content="<%= article.aiAnalysis && article.aiAnalysis.summary ? article.aiAnalysis.summary[0] : (article.description || '') %>">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://truthofmarket.com/article/<%= article.id %>">
+
+  <% if (typeof adsenseClientId !== 'undefined' && adsenseClientId) { %>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=<%= adsenseClientId %>" crossorigin="anonymous"></script>
+  <% } %>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/styles.css">
+
+  <style>
+    .article-page-wrap {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 30px 24px 80px;
+    }
+    .back-nav {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: hsl(var(--accent-cyan));
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 30px;
+      transition: transform 0.2s ease;
+    }
+    .back-nav:hover { transform: translateX(-4px); }
+
+    /* 기사 헤더 */
+    .art-header {
+      border-bottom: 1px solid hsla(var(--glass-border), 0.4);
+      padding-bottom: 28px;
+      margin-bottom: 32px;
+    }
+    .art-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    .source-badge-lg {
+      background: hsla(var(--accent-cyan), 0.1);
+      border: 1px solid hsla(var(--accent-cyan), 0.2);
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: hsl(var(--accent-cyan));
+    }
+    .category-badge-lg {
+      background: hsla(var(--accent-gold), 0.1);
+      border: 1px solid hsla(var(--accent-gold), 0.2);
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: hsl(var(--accent-gold));
+    }
+    .art-date {
+      font-size: 0.82rem;
+      color: hsl(var(--text-muted));
+    }
+    .art-header h1 {
+      font-size: 1.9rem;
+      font-weight: 700;
+      line-height: 1.35;
+      color: hsl(var(--text-main));
+      margin-bottom: 14px;
+    }
+    .art-header .original-title {
+      font-size: 0.88rem;
+      color: hsl(var(--text-muted));
+      font-style: italic;
+    }
+
+    /* AI 분석 섹션 */
+    .ai-analysis-section {
+      background: hsla(var(--bg-secondary), 0.4);
+      border: 1px solid hsla(var(--glass-border), 0.4);
+      border-radius: 16px;
+      padding: 30px 32px;
+      margin-bottom: 30px;
+    }
+    .analysis-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1rem;
+      font-weight: 700;
+      color: hsl(var(--accent-cyan));
+      margin-bottom: 22px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid hsla(var(--glass-border), 0.3);
+    }
+    .summary-section h3, .implications-section h3 {
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: hsl(var(--text-muted));
+      margin-bottom: 14px;
+    }
+    .summary-list, .implications-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px;
+    }
+    .summary-list li {
+      display: flex;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid hsla(var(--glass-border), 0.2);
+      font-size: 0.97rem;
+      line-height: 1.7;
+      color: hsl(var(--text-main));
+    }
+    .summary-list li:last-child { border-bottom: none; }
+    .summary-num {
+      font-weight: 700;
+      color: hsl(var(--accent-cyan));
+      font-size: 0.85rem;
+      min-width: 22px;
+      margin-top: 2px;
+    }
+    .implications-list li {
+      display: flex;
+      gap: 12px;
+      padding: 12px 16px;
+      border-radius: 10px;
+      background: hsla(var(--accent-gold), 0.04);
+      border: 1px solid hsla(var(--accent-gold), 0.1);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: hsl(var(--text-main));
+      margin-bottom: 10px;
+    }
+    .implications-list li i {
+      color: hsl(var(--accent-gold));
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+
+    /* 원문 링크 */
+    .original-link-section {
+      text-align: center;
+      padding: 24px;
+      border-radius: 14px;
+      background: hsla(var(--bg-secondary), 0.3);
+      border: 1px solid hsla(var(--glass-border), 0.3);
+      margin-bottom: 30px;
+    }
+    .original-link-section p {
+      font-size: 0.88rem;
+      color: hsl(var(--text-muted));
+      margin-bottom: 14px;
+    }
+    .original-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, hsla(var(--accent-cyan), 0.15), hsla(var(--accent-gold), 0.1));
+      border: 1px solid hsla(var(--accent-cyan), 0.3);
+      border-radius: 10px;
+      color: hsl(var(--accent-cyan));
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+    .original-link-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px hsla(var(--accent-cyan), 0.15);
+    }
+
+    .adsense-mid {
+      margin: 28px 0;
+      padding: 16px;
+      border-radius: 10px;
+      background: hsla(var(--bg-secondary), 0.3);
+      border: 1px dashed hsla(var(--glass-border), 0.4);
+      text-align: center;
+      font-size: 0.72rem;
+      color: hsl(var(--text-muted));
+      letter-spacing: 1px;
+    }
+
+    .disclaimer-box {
+      padding: 16px 20px;
+      border-radius: 10px;
+      background: hsla(var(--bg-primary), 0.4);
+      border: 1px solid hsla(var(--glass-border), 0.3);
+      font-size: 0.78rem;
+      line-height: 1.6;
+      color: hsl(var(--text-muted));
+    }
+  </style>
+</head>
+<body class="dark-theme">
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+
+  <div class="article-page-wrap">
+    <a href="/" class="back-nav"><i class="fa-solid fa-arrow-left"></i> 메인으로 돌아가기</a>
+
+    <article itemscope itemtype="https://schema.org/NewsArticle">
+
+      <!-- 기사 헤더 -->
+      <header class="art-header">
+        <div class="art-meta">
+          <span class="source-badge-lg"><%= article.sourceName %></span>
+          <span class="category-badge-lg"><%= article.category %></span>
+          <% if (article.region) { %>
+          <span style="font-size:0.8rem; color: hsl(var(--text-muted));">
+            <%= article.region === 'KR' ? '🇰🇷 한국' : article.region === 'US' ? '🇺🇸 미국' : article.region === 'JP' ? '🇯🇵 일본' : article.region === 'EU' ? '🇪🇺 유럽' : article.region === 'CN' ? '🇨🇳 중국' : '🌐 글로벌' %>
+          </span>
+          <% } %>
+          <span class="art-date">
+            <i class="fa-regular fa-calendar-days"></i>
+            <time itemprop="datePublished" datetime="<%= article.date %>">
+              <%= new Date(article.date).toLocaleDateString('ko-KR', { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' }) %>
+            </time>
+          </span>
+        </div>
+
+        <h1 itemprop="headline">
+          <%= article.aiAnalysis && article.aiAnalysis.translatedTitle ? article.aiAnalysis.translatedTitle : article.title %>
+        </h1>
+
+        <% if (article.aiAnalysis && article.aiAnalysis.translatedTitle && article.title !== article.aiAnalysis.translatedTitle) { %>
+        <p class="original-title">
+          <i class="fa-solid fa-language"></i> 원문: <%= article.title %>
+        </p>
+        <% } %>
+      </header>
+
+      <!-- 애드센스 상단 -->
+      <% if (typeof adsenseClientId !== 'undefined' && adsenseClientId) { %>
+      <div class="adsense-mid">ADVERTISEMENT</div>
+      <% } %>
+
+      <!-- AI 분석 섹션 -->
+      <% if (article.aiAnalysis) { %>
+      <section class="ai-analysis-section">
+        <div class="analysis-title">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          AI 심층 분석 리포트 — Truth of Market
+        </div>
+
+        <!-- 기사 핵심 요약 -->
+        <% if (article.aiAnalysis.summary && article.aiAnalysis.summary.length > 0) { %>
+        <div class="summary-section">
+          <h3><i class="fa-solid fa-list-check"></i> 기사 핵심 요약</h3>
+          <ul class="summary-list" itemprop="articleBody">
+            <% article.aiAnalysis.summary.forEach(function(point, idx) { %>
+            <li>
+              <span class="summary-num"><%= idx + 1 %>.</span>
+              <span><%= point %></span>
+            </li>
+            <% }); %>
+          </ul>
+        </div>
+        <% } %>
+
+        <!-- 투자자 관점 시사점 -->
+        <% if (article.aiAnalysis.implications && article.aiAnalysis.implications.length > 0) { %>
+        <div class="implications-section">
+          <h3><i class="fa-solid fa-lightbulb"></i> 투자자 관점 시사점</h3>
+          <ul class="implications-list">
+            <% article.aiAnalysis.implications.forEach(function(imp) { %>
+            <li>
+              <i class="fa-solid fa-circle-dot"></i>
+              <span><%= imp %></span>
+            </li>
+            <% }); %>
+          </ul>
+        </div>
+        <% } %>
+      </section>
+      <% } %>
+
+      <!-- 원문 링크 -->
+      <div class="original-link-section">
+        <p>본 AI 분석은 아래 원문 기사를 기반으로 작성되었습니다.</p>
+        <a href="<%= article.link %>" target="_blank" rel="noopener noreferrer" class="original-link-btn">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          <%= article.sourceName %> 원문 기사 읽기
+        </a>
+      </div>
+
+      <!-- 애드센스 하단 -->
+      <% if (typeof adsenseClientId !== 'undefined' && adsenseClientId) { %>
+      <div class="adsense-mid">ADVERTISEMENT</div>
+      <% } %>
+
+      <!-- 면책 고지 -->
+      <div class="disclaimer-box">
+        <strong><i class="fa-solid fa-triangle-exclamation"></i> 투자 면책 고지:</strong>
+        본 페이지에 제공된 모든 AI 분석 내용은 투자자의 연구 및 학습 목적으로 제공되는 순수 참고용 정보입니다. 특정 종목이나 자산에 대한 매수·매도를 권유하지 않으며, 본 내용을 기반으로 한 투자 결정의 손익에 대한 책임은 투자자 본인에게 있습니다.
+      </div>
+
+    </article>
+
+    <!-- 사이트 푸터 -->
+    <footer style="margin-top:50px; padding-top:24px; border-top:1px solid hsla(var(--glass-border),0.25); text-align:center; font-size:0.78rem; color:hsl(var(--text-muted));">
+      <p>
+        <a href="/" style="color:hsl(var(--accent-cyan));text-decoration:none;">홈</a> |
+        <a href="/insights" style="color:hsl(var(--text-muted));text-decoration:none;">시장 인사이트</a> |
+        <a href="/about" style="color:hsl(var(--text-muted));text-decoration:none;">소개</a> |
+        <a href="/privacy-policy" style="color:hsl(var(--text-muted));text-decoration:none;">개인정보처리방침</a> |
+        <a href="/terms" style="color:hsl(var(--text-muted));text-decoration:none;">이용약관</a>
+      </p>
+      <p style="margin-top:8px;">© 2026 Truth of Market. Powered by Google Gemini AI.</p>
+    </footer>
+  </div>
+
+  <script>
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.body.classList.toggle('light-theme', savedTheme === 'light');
+    document.body.classList.toggle('dark-theme', savedTheme !== 'light');
+  </script>
+</body>
+</html>
