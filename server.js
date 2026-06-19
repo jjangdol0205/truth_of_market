@@ -495,6 +495,9 @@ app.get('/api/news', async (req, res) => {
       await archiveDailyNews();
     }
 
+    // 매 API 요청마다 파일에서 최신 데이터를 새로 로드하여 메모리에 반영
+    loadNewsArchive();
+
     // 로컬 아카이브에서 수집된 모든 기사 데이터를 최신 날짜 순으로 정렬하여 반환
     let articlesList = Object.values(newsArchive).sort((a, b) => new Date(b.date) - new Date(a.date));
     
