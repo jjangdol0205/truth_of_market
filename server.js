@@ -67,6 +67,8 @@ function simpleMarkdownToHtml(md) {
 
 // SSR 메인 페이지 라우트
 app.get('/', (req, res) => {
+  // 매 요청마다 파일을 다시 읽어 항상 최신 상태 반영
+  loadNewsArchive();
   let articlesList = Object.values(newsArchive).sort((a, b) => new Date(b.date) - new Date(a.date));
   // 애드센스 대응 완벽주의: 요약 완료된 프리미엄 기사만 사전 렌더링
   const premiumArticles = articlesList.filter(art => art.aiAnalysis != null);
