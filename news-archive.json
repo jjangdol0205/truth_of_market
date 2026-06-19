@@ -18120,7 +18120,21 @@
     "lang": "en",
     "category": "Markets",
     "region": "US",
-    "aiAnalysis": null,
+    "aiAnalysis": {
+      "translatedTitle": "머스크 논란에도 테슬라, 유럽 판매 반등세 이어가",
+      "summary": [
+        "일론 머스크 CEO에 대한 유럽 소비자들의 부정적 인식에도 불구하고, 테슬라의 유럽 내 자동차 판매가 최근 반등 흐름을 이어가고 있습니다.",
+        "가격 인하 정책과 Model 3·Y 리프레시 모델에 대한 호응으로 구매 수요가 CEO 개인 이슈를 넘어서고 있다는 분석이 나옵니다.",
+        "브랜드 이미지와 실제 구매 결정이 분리되는 현상이 확인되며, 테슬라의 제품 경쟁력 자체는 여전히 유효한 것으로 판단됩니다."
+      ],
+      "implications": [
+        "유럽 판매 반등은 테슬라의 2분기 글로벌 인도 실적에 긍정적 변수로 작용하며, 실적 시즌을 앞두고 주가 모멘텀을 지지할 수 있습니다.",
+        "브랜드 리스크가 실제 매출로 이어지지 않는다는 확인은 테슬라 약세론자들의 핵심 논거를 약화시키는 데이터 포인트입니다."
+      ],
+      "category": "Tech",
+      "region": "US",
+      "investmentScore": 7
+    },
     "specialistScore": 0,
     "specialistAnalysis": null,
     "isCurated": false
@@ -18168,7 +18182,21 @@
     "lang": "en",
     "category": "Markets",
     "region": "US",
-    "aiAnalysis": null,
+    "aiAnalysis": {
+      "translatedTitle": "흔들리지 않는 시장 질서: 지금 버티는 이유 (T. Rowe Price 분석)",
+      "summary": [
+        "T. Rowe Price는 최근 글로벌 관세 분쟁, 지정학적 리스크에도 불구하고 세계 자본 시장의 기본 질서가 예상보다 견고하게 유지되고 있다고 분석했습니다.",
+        "무역 질서 재편 우려에도 미국 소비 지표와 고용 시장이 꺾이지 않고 있어 경기침체 전환보다는 연착륙 시나리오에 무게가 쏠리고 있습니다.",
+        "다만 현재 안정세는 취약한 균형 위에 놓여 있으며, 연준의 금리 정책 경로와 무역 협상 결과에 따라 언제든 변동성이 확대될 수 있다는 경고도 포함됩니다."
+      ],
+      "implications": [
+        "연착륙 기대가 지속되는 동안은 주식 비중을 급격히 줄이기보다 방어적 고배당주와 성장주를 균형 있게 편입하는 바벨 전략이 유효합니다.",
+        "취약한 균형이라는 경고는 포트폴리오 내 달러 자산과 금 등 안전자산 비중을 일정 수준 유지하는 헤지 전략의 필요성을 시사합니다."
+      ],
+      "category": "Markets",
+      "region": "US",
+      "investmentScore": 7
+    },
     "specialistScore": 0,
     "specialistAnalysis": null,
     "isCurated": false
@@ -18216,7 +18244,21 @@
     "lang": "ko",
     "category": "Macro",
     "region": "KR",
-    "aiAnalysis": null,
+    "aiAnalysis": {
+      "translatedTitle": "씨피시스템, 인텔 장비 밸류체인 진입 소식에 상한가",
+      "summary": [
+        "반도체 장비 기업 씨피시스템이 인텔의 차세대 공정용 핵심 장비 밸류체인에 신규 진입한다는 소식이 전해지며 주가가 상한가를 기록했습니다.",
+        "인텔의 파운드리 사업 재건 전략과 맞물려 국내 장비·부품 협력사에 대한 수주 기회가 확대되고 있는 상황입니다.",
+        "이번 공급망 진입은 단발성 수주가 아닌 장기 공급 계약으로 이어질 가능성이 높아 실적 가시성 측면에서 긍정적 평가를 받고 있습니다."
+      ],
+      "implications": [
+        "씨피시스템 외에도 인텔 공급망에 연결된 국내 반도체 장비·소재 협력사 전반에 대한 재평가 흐름이 나타날 수 있습니다.",
+        "인텔의 파운드리 재건 수혜는 TSMC·삼성전자 의존도를 분산하려는 미국 정부 정책과 결합되어 중장기 구조적 성장 테마로 자리잡을 수 있습니다."
+      ],
+      "category": "Tech",
+      "region": "KR",
+      "investmentScore": 8
+    },
     "specialistScore": 0,
     "specialistAnalysis": null,
     "isCurated": false
@@ -18232,7 +18274,21 @@
     "lang": "ko",
     "category": "Macro",
     "region": "KR",
-    "aiAnalysis": null,
+    "aiAnalysis": {
+      "translatedTitle": "美 반도체 훈풍에 코스피 장중 사상 첫 9300선 돌파",
+      "summary": [
+        "미국 반도체 섹터의 강세 흐름이 국내 증시에 직접 전파되며 코스피 지수가 장중 사상 처음으로 9,300선을 돌파하는 역사적 이정표를 세웠습니다.",
+        "엔비디아·TSMC 등 글로벌 반도체 대표주의 실적 호조와 AI 수요 급증 기대감이 국내 반도체·장비·소재 밸류체인 전체를 끌어올렸습니다.",
+        "코스피의 사상 첫 9,300 돌파는 단순한 심리적 저항선 돌파를 넘어 외국인 자금의 구조적 재유입 신호로 해석됩니다."
+      ],
+      "implications": [
+        "삼성전자·SK하이닉스 등 반도체 대형주 외에도 후공정 패키징, 웨이퍼 소재, 반도체 장비 중소형주까지 밸류체인 전반의 동반 상승 모멘텀이 강화됩니다.",
+        "지수 사상 최고치 경신은 외국인 자금의 추가 유입과 국내 펀드 자금 리밸런싱을 자극하여 단기 오버슈팅 후 조정 가능성도 함께 염두에 두어야 합니다."
+      ],
+      "category": "Markets",
+      "region": "KR",
+      "investmentScore": 9
+    },
     "specialistScore": 0,
     "specialistAnalysis": null,
     "isCurated": false
@@ -19512,6 +19568,100 @@
     "lang": "ko",
     "category": "Macro",
     "region": "KR",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_p2pgfh": {
+    "id": "id_p2pgfh",
+    "title": "Switzerland says US-Iran talks planned for Friday are off - 747 Live",
+    "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9JV1pRVkUwQnM2SlREbUR1U25uNGFsdVBwRDRTOVl4NGlMVmptRWc2bEgteHBlUml4NFdzM0Roejh1UjJwbGJfZUV5cy1kQndHRU9MeE5Pd283SWpPZVN2NA?oc=5",
+    "description": "Switzerland says US-Iran talks planned for Friday are off  747 Live",
+    "date": "2026-06-19T04:52:51.000Z",
+    "sourceId": "us-global",
+    "sourceName": "US 글로벌 투자 뉴스 (Reuters/Bloomberg/CNBC)",
+    "lang": "en",
+    "category": "Markets",
+    "region": "US",
+    "aiAnalysis": {
+      "translatedTitle": "스위스, 이번 주 금요일 예정 美-이란 핵 협상 무산 발표",
+      "summary": [
+        "스위스가 중재 역할을 맡았던 미국-이란 핵 협상이 예정된 금요일 회담이 취소됐다고 공식 확인했습니다.",
+        "이란과 미국 간의 핵 합의 협상 결렬 우려가 커지며 중동 지정학적 리스크가 다시 수면 위로 부상하고 있습니다.",
+        "협상 무산으로 이란산 원유 제재 완화 기대가 꺾이면서 국제 유가에 단기 상방 압력으로 작용할 가능성이 있습니다."
+      ],
+      "implications": [
+        "지정학적 불확실성 확대는 국제 유가 상승 요인으로, 정유·에너지 섹터에는 단기 수혜 재료가 될 수 있습니다.",
+        "협상 결렬 장기화 시 중동발 공급 차질 우려가 커져 항공·해운·운송 비용 상승으로 이어지는 인플레이션 경로를 주시해야 합니다."
+      ],
+      "category": "Markets",
+      "region": "US",
+      "investmentScore": 7
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_16ck6zs": {
+    "id": "id_16ck6zs",
+    "title": "Market Today: Fed Policy Shifts, SpaceX Dips, Intel-Apple Deal, Mortgage Rates Fall - GuruFocus",
+    "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNMnNXVlRTcU5KdFZRLVlWVlZOOUtfQmRwc0ktd010aEhhbzZUWXdKLTVHLVJaVWNoOGN6SGJhMThqNzlBa2xMclkyNXNNOTVZSGRTamVFOHVoc2NaQkJHUlVpTXE1WmNWUDBxRmtlT1JVMk1TNGtoSGpKay05bmtfYWJYXzFseGlCYTk3VUJ5R0RYUmNpalFjX2ZpMlZob1hzNWdvZ3FsOVBac0FnTm9BalJEc0FGNjZJ?oc=5",
+    "description": "Market Today: Fed Policy Shifts, SpaceX Dips, Intel-Apple Deal, Mortgage Rates Fall  GuruFocus",
+    "date": "2026-06-18T21:54:46.000Z",
+    "sourceId": "us-global",
+    "sourceName": "US 글로벌 투자 뉴스 (Reuters/Bloomberg/CNBC)",
+    "lang": "en",
+    "category": "Markets",
+    "region": "US",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_qfahez": {
+    "id": "id_qfahez",
+    "title": "알고리즘랩스, 누적 투자금 200억 달성 및 상장 준비 본격화 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1Ldng2cGgtVzNfdG1KazRXeGp3dUVMXzcxSTZZaTJsY0twZzltQTR1R01Uel9YR05TYWxRb3JyTTRNOXJQWEItaUFUMGtsLXc3Qk9WQWFRUm1BVzQ5MjF6NnNoNWJQY1BjX190MC13MmVqX2c3aWfSAWZBVV95cUxPaFZYazhSRlpIUHdtSUNFcXNVU2JVeVU1SjRiSTdfQ3prdXV3NTh2YnJTYmhiYXdhemEwTURPNVV0N0RScVBiSTg3MjRzZzdUcm1TOE5BS0Vqd1d2WFoyd0xUTEVGdnc?oc=5",
+    "description": "알고리즘랩스, 누적 투자금 200억 달성 및 상장 준비 본격화  동아일보",
+    "date": "2026-06-18T06:42:00.000Z",
+    "sourceId": "kr-donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_hf6q4y": {
+    "id": "id_hf6q4y",
+    "title": "현대로템, 7482억 규모 모로코 전동차 유지보수 사업 수주 - 동아일보",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1ISHpOd2Q1SDZDNUhpZVpNajFFcC1rbmRFVGdZU1ZEcXdLZ2didDdFNnlYTS1Na0RqYzA1OXdoVHNjU0hrSUxIeVBwLWpPVVR2X1BRRzY5Z0dOdXRhdEZyTTRjNm9yR0FwX3BQSE9qOExrb2lvMXfSAWZBVV95cUxOUmMxV3lRaGdlQS1MLUlVQzdPY0V6X0Y5bDdiZ3dLU3FnSEtIaW5OcEUzb0Zzbk5mMEVHS05aZERaSmRPd2dKeVZwdk9JV19TazI2VDdpWHlTMGRNYkptQlVGWFNWSnc?oc=5",
+    "description": "현대로템, 7482억 규모 모로코 전동차 유지보수 사업 수주  동아일보",
+    "date": "2026-06-19T04:41:00.000Z",
+    "sourceId": "kr-donga",
+    "sourceName": "동아일보 경제",
+    "lang": "ko",
+    "category": "Macro",
+    "region": "KR",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1i714iq": {
+    "id": "id_1i714iq",
+    "title": "Three vessels hit by gunfire in Strait of Hormuz, crews safe - 747 Live",
+    "link": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE0zSU12RVUwVjFuTmxsNnRxWGtSUS1Eemg3bzJvb2tQaC14UF91SThZOWlYdHltTTBJQ2g2UUFoUUZGcFVoQ2pz?oc=5",
+    "description": "Three vessels hit by gunfire in Strait of Hormuz, crews safe  747 Live",
+    "date": "2026-06-17T18:28:18.000Z",
+    "sourceId": "us-global",
+    "sourceName": "US 글로벌 투자 뉴스 (Reuters/Bloomberg/CNBC)",
+    "lang": "en",
+    "category": "Markets",
+    "region": "US",
     "aiAnalysis": null,
     "specialistScore": 0,
     "specialistAnalysis": null,
