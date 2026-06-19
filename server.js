@@ -722,11 +722,25 @@ app.get('/api/status', (req, res) => {
 
 // 5.1 원격 백엔드 진단용 API
 app.get('/api/diagnostic', (req, res) => {
+  // 매 요청마다 최신 파일 읽기
+  loadNewsArchive();
+  const allArticles = Object.values(newsArchive);
+  const withAI = allArticles.filter(a => a.aiAnalysis);
+  const latest5 = withAI
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
+    .slice(0, 5)
+    .map(a => ({
+      date: a.date,
+      title: (a.aiAnalysis && a.aiAnalysis.translatedTitle) || a.title,
+      hasAI: true
+    }));
   res.json({
     success: true,
     diagnostic: {
       ...diagnosticLog,
-      archiveCount: Object.keys(newsArchive).length
+      archiveTotal: allArticles.length,
+      archiveWithAI: withAI.length,
+      latest5
     }
   });
 });
