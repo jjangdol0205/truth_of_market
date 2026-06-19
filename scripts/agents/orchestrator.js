@@ -1,5 +1,5 @@
-function curateTop30(articles) {
-  console.log(`🎯 [Orchestrator Agent] Curation algorithm starting on ${articles.length} articles...`);
+function curateTopN(articles, targetLimit = 30) {
+  console.log(`🎯 [Orchestrator Agent] Curation algorithm starting on ${articles.length} articles for top ${targetLimit}...`);
 
   // 1. Group articles by region
   const regions = { US: [], EU: [], CN: [], JP: [], KR: [] };
@@ -22,11 +22,11 @@ function curateTop30(articles) {
   }
 
   const selected = [];
-  const targetPerRegion = 6;
+  const targetPerRegion = Math.floor(targetLimit / 5) || 1;
   const pool = { ...regions };
-  let remainingSlots = 30;
+  let remainingSlots = targetLimit;
 
-  // 1차 패스: 각 지역별로 최대 6개씩 선별
+  // 1차 패스: 각 지역별로 균등 배분
   for (const r in pool) {
     const takeCount = Math.min(pool[r].length, targetPerRegion);
     for (let i = 0; i < takeCount; i++) {
@@ -54,8 +54,9 @@ function curateTop30(articles) {
     }
   }
 
-  console.log(`🎯 [Orchestrator Agent] Curated ${selected.length} top articles for today.`);
+  console.log(`🎯 [Orchestrator Agent] Curated ${selected.length} top articles.`);
   return selected;
 }
 
-module.exports = { curateTop30 };
+module.exports = { curateTopN };
+

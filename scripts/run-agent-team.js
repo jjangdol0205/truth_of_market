@@ -5,7 +5,7 @@ const { execSync } = require('child_process');
 
 const { scrape } = require('./agents/scraper');
 const { analyzeArticlesBatched } = require('./agents/specialists');
-const { curateTop30 } = require('./agents/orchestrator');
+const { curateTopN } = require('./agents/orchestrator');
 const { editArticlesBatched } = require('./agents/editor');
 
 const ROOT_DIR = path.join(__dirname, '..');
@@ -163,21 +163,39 @@ async function run() {
     return new Date(art.date) >= threeDaysAgo;
   });
 
-  // 5. Run Orchestrator to select top 30
-  const curated30 = curateTop30(curationCandidates);
-
-  // Mark curation flag on archive
-  for (const id in newsArchive) {
-    newsArchive[id].isCurated = false;
+  // 5. Run Orchestrator to select Top N based on time of day
+  // 아침(오전 6시)에는 20개, 저녁(오후 6시)에는 10개를 큐레이션하여 일일 총 30개 유지
+  const kstHour = parseInt(new Intl.DateTimeFormat('ko-KR', { hour: 'numeric', hour12: false, timeZone: 'Asia/Seoul' }).format(new Date()));
+  
+  let targetLimit = 30; // default
+  let isMorningRun = true;
+  
+  if (kstHour >= 4 && kstHour < 12) {
+    targetLimit = 20; // 아침
+    isMorningRun = true;
+  } else if (kstHour >= 12 && kstHour < 22) {
+    targetLimit = 10; // 저녁
+    isMorningRun = false;
   }
 
-  // 6. Run Genius Editor on Curated Top 30
+  // 아침 런일 때만 기존 큐레이션 플래그 초기화 (저녁에는 오전 기사 유지)
+  if (isMorningRun) {
+    for (const id in newsArchive) {
+      newsArchive[id].isCurated = false;
+    }
+  }
+
+  // 저녁 런일 때는 이미 큐레이션된(오전) 기사를 풀에서 제외하여 새로운 기사만 10개 뽑도록 함
+  const pool = isMorningRun ? curationCandidates : curationCandidates.filter(art => !art.isCurated);
+  const curatedN = curateTopN(pool, targetLimit);
+
+  // 6. Run Genius Editor on Curated Top N
   // Identify which ones need premium summary (no premium analysis yet)
   const needsEditor = [];
   const finalCuratedList = [];
 
-  for (let i = 0; i < curated30.length; i++) {
-    const candidate = curated30[i];
+  for (let i = 0; i < curatedN.length; i++) {
+    const candidate = curatedN[i];
     const archiveItem = newsArchive[candidate.id];
     archiveItem.isCurated = true;
 
