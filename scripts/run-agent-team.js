@@ -78,13 +78,12 @@ async function run() {
   console.log('🤖 =================================================');
 
   if (!apiKey) {
-    console.error('❌ [Agent Team] GEMINI_API_KEY가 존재하지 않습니다. 종료합니다.');
-    return;
+    console.log('ℹ️ [Agent Team] GEMINI_API_KEY 없음 - RSS 수집만 진행합니다 (AI 분석 건너뜀).');
   }
 
   loadFiles();
 
-  // 1. Scrape articles
+  // 1. Scrape articles (API 키 불필요 - 항상 실행)
   const scraped = await scrape();
   if (scraped.length === 0) {
     console.log('⚠️ [Agent Team] 수집된 뉴스가 없습니다. 종료합니다.');
@@ -102,10 +101,16 @@ async function run() {
         isCurated: false
       };
     } else {
-      // Keep existing analysis if present
-      newsArchive[art.id].region = art.region; // Ensure region is updated/correct
+      newsArchive[art.id].region = art.region;
     }
   });
+
+  // API 키 없으면 수집된 기사 저장만 하고 종료
+  if (!apiKey) {
+    saveFiles();
+    console.log(`✅ [Agent Team] RSS 수집 완료. 신규 기사 ${scraped.length}건 저장. (AI 분석 건너뜀)`);
+    return;
+  }
 
   // 3. Select candidates to analyze (we only run specialists on new/unanalyzed articles to save API cost)
   // Limit to the top 15 newest unanalyzed ones to respect Free Tier API quotas
