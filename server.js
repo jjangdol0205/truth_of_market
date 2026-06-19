@@ -1165,13 +1165,17 @@ app.listen(PORT, async () => {
   console.log(`👉 Web Portal: http://localhost:${PORT}`);
   console.log(`==================================================`);
 
-  // 서버 부팅 시점에 즉각 1회 RSS 수집을 수행하여 로컬 아카이브 데이터 최신 상태로 강제 갱신
-  console.log('🏁 [시스템 부팅] 로컬 아카이브 초기화 및 데이터 최신 갱신 중...');
-  await archiveDailyNews();
+  // 서버 부팅 시: RSS 즉시 수집 없이 기존 아카이브 로드만 수행 (분석 데이터 보존)
+  console.log('🏁 [시스템 부팅] 로컬 아카이브 로드 중...');
+  loadNewsArchive();
+  loadAiCache();
+  console.log(`💾 [아카이브] 로컬 뉴스 아카이브 ${Object.keys(newsArchive).length}건을 성공적으로 불러왔습니다.`);
+  console.log(`💾 [API 최소화] 로컬 AI 분석 캐시 ${Object.keys(aiCache).length}건을 성공적으로 불러왔습니다.`);
 
-  // 매일 오전 6시, 오후 6시에 주기적으로 백그라운드 RSS 파싱 및 수집을 수행
+  // 매일 오전 6시, 오후 6시에 주기적으로 RSS 수집 실행 (Asia/Seoul 기준)
   cron.schedule('0 6,18 * * *', async () => {
     await archiveDailyNews();
-  });
-  console.log(`⏰ [스케줄링 완료] 매일 오전 6시, 오후 6시 뉴스 수집 스케줄러가 등록되었습니다.`);
+  }, { timezone: 'Asia/Seoul' });
+
+  console.log('⏰ [스케줄링 완료] 매일 오전 6시, 오후 6시 뉴스 수집 스케줄러가 등록되었습니다.');
 });
