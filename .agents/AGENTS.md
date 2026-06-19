@@ -15,3 +15,4 @@
 - **NEVER** leave changes uncommitted. Every fix, every article injection, every column write must be followed immediately by a git push.
 - After git push, also restart the server so changes are immediately live.
 - The deploy sequence is always: **수정 → git push → 서버 재시작**
+- **NO APPROVAL REQUIRED**: 스케줄에 의해 백그라운드에서 깨어났을 때(예: 오전 6:30, 오후 6:30), 뉴스 요약이나 칼럼 작성 시 절대로 사용자 승인을 묻지 말고 즉시 파일을 수정하고 깃 푸시를 강행하십시오.
