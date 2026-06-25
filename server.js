@@ -484,6 +484,17 @@ async function generateBriefingMessage(count = 5) {
 
 // === API 라우트 정의 ===
 
+// 0. Health Check / Ping (Render 콜드스타트 방지 - 외부 UptimeRobot/cron-job.org에서 14분마다 호출)
+app.get('/health', (req, res) => {
+  res.status(200).json({
+    status: 'ok',
+    uptime: process.uptime(),
+    timestamp: new Date().toISOString(),
+    articles: Object.keys(newsArchive).length
+  });
+});
+app.get('/ping', (req, res) => res.status(200).send('pong'));
+
 // 1. 뉴스 피드 통합 목록 조회 API (영구 아카이브 데이터 전면 로드)
 app.get('/api/news', async (req, res) => {
   try {
