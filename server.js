@@ -1147,6 +1147,32 @@ app.get('/article/:id', (req, res) => {
 });
 
 // --- [영구 아카이브] 일일 백그라운드 RSS 뉴스 정밀 수집기 ---
+// 더미 기사 및 투자 무관 기사 필터링 (애드센스 정책 준수)
+const ARTICLE_BLACKLIST = [
+  '함박스테이크', '한돈', '한우', '육즙', 'k뷰티', 'k-뷰티',
+  '맛집', '레시피', '요리법', '특가', '단독 특가', '쿠폰',
+  '연예', '드라마', '영화', '아이돌', '가요차트',
+  '축구', '야구', '배구', '농구', '골프', '올림픽',
+  '결혼', '이혼', '열애설', '임신', '출산', '부고',
+  'without proper license', 'pilot accused'
+];
+
+function isJunkArticle(art) {
+  const title = (art.title || '').trim();
+  const desc  = (art.description || '').trim();
+
+  // 1. 너무 짧은 제목 (4단어 미만)
+  const words = title.replace(/[-–—|·]/g, ' ').split(/\s+/).filter(w => w.length > 1);
+  if (words.length < 4) return true;
+
+  // 2. 제목과 설명이 동일 (더미)
+  if (title && desc && title.replace(/\s/g,'') === desc.replace(/\s/g,'')) return true;
+
+  // 3. 블랙리스트 키워드
+  const text = (title + ' ' + desc).toLowerCase();
+  return ARTICLE_BLACKLIST.some(kw => text.includes(kw.toLowerCase()));
+}
+
 async function archiveDailyNews() {
   console.log('🔄 [아카이브] 백그라운드 실시간 RSS 수집 및 아카이빙 작업 구동 중...');
   diagnosticLog.lastRun = new Date().toISOString();
@@ -1166,11 +1192,25 @@ async function archiveDailyNews() {
     // Reload local variables in server.js after script completes
     loadNewsArchive();
     loadAiCache();
+
+    // 더미·투자무관 기사 실시간 정화
+    let cleaned = 0;
+    for (const id in newsArchive) {
+      if (isJunkArticle(newsArchive[id])) {
+        delete newsArchive[id];
+        cleaned++;
+      }
+    }
+    if (cleaned > 0) {
+      console.log(`🧹 [정화] 쓰레기 기사 ${cleaned}건 제거 완료`);
+      fs.writeFileSync(ARCHIVE_FILE, JSON.stringify(newsArchive, null, 2));
+    }
     
     diagnosticLog.success = true;
     console.log(`✅ [아카이브] 멀티 에이전트 팀 Curation 완료.`);
   });
 }
+
 
 // 서버 실행 및 백그라운드 예약 작업 활성화
 app.listen(PORT, async () => {

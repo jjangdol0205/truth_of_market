@@ -1,22 +1,4 @@
 {
-  "id_ad9vre": {
-    "id": "id_ad9vre",
-    "title": "한국경제 - 한국경제",
-    "link": "https://news.google.com/rss/articles/CBMiPkFVX3lxTE9Rc2NTWXZpM21reEI4aUpXNUVqbWxkVVQ5OVFaOVVjWVR0RzR1ZlZ5ZXF5V2E4WHVlRHRwQ3JR?oc=5",
-    "description": "한국경제  한국경제",
-    "date": "2026-06-16T00:24:45.000Z",
-    "sourceId": "hankyung-fin",
-    "sourceName": "한국경제 증권",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR",
-    "specialistScore": 4,
-    "specialistAnalysis": [
-      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
-    ]
-  },
   "id_1dstqde": {
     "id": "id_1dstqde",
     "title": "People Love to Hate This Fake Private Equity Guy",
@@ -41,20 +23,6 @@
     "sourceName": "NYT 테크놀로지",
     "lang": "en",
     "category": "Tech",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "US"
-  },
-  "id_jmjsza": {
-    "id": "id_jmjsza",
-    "title": "Air Canada Pilot Accused of Flying for 17 Years Without Proper License",
-    "link": "https://www.nytimes.com/2026/06/09/world/canada/air-canada-pilot-fraud.html",
-    "description": "The pilot, who retired last year before the investigation, held some valid flight credentials, officials said, but not the one required to be a captain.",
-    "date": "2026-06-10T18:01:20.000Z",
-    "sourceId": "nyt-biz",
-    "sourceName": "NYT 비즈니스",
-    "lang": "en",
-    "category": "Markets",
     "aiAnalysis": null,
     "isCurated": false,
     "region": "US"
@@ -903,20 +871,6 @@
     "isCurated": false,
     "region": "KR"
   },
-  "id_pgj2i6": {
-    "id": "id_pgj2i6",
-    "title": "한은 “민생회복 소비쿠폰으로 2.8조 매출증대” - 동아일보",
-    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE4yY3FoV2xZbUV5cVExcV90aXF0UWdSMlAxbXY1c19RdGRNajdDNEtfZW5hMmNqSGx1Y3pZNW1TN05pRUZLejN1bjZGcUNKMUtzT2dhV0RGbllPWXZiWHlxcTEwOFhFeEtqN1dCVHpTdkJrMEhOMVHSAWZBVV95cUxPcjBhVzllcjlhb0xLM0pJWVc4RlhpMk90ME5DQlJ4RGpNbFpicGZtdU5hcERuZFg5NjUxanNKNmpzZDJqQUVSZkx2dW8zM1I1aks2UzhIdTA3cUUwUUFWYVNadVpuZXc?oc=5",
-    "description": "한은 “민생회복 소비쿠폰으로 2.8조 매출증대”  동아일보",
-    "date": "2026-06-10T15:30:00.000Z",
-    "sourceId": "donga",
-    "sourceName": "동아일보 경제",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR"
-  },
   "id_183nu8s": {
     "id": "id_183nu8s",
     "title": "“환투기세력 외환시장 교란” 한은-금감원, 13년만에 공동조사 - 동아일보",
@@ -1161,20 +1115,6 @@
     "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNczdiOFBBMHJmWDBDRnJaaXBUMWxXWEU0aHYyaE5STlgzeUlWNndKUGZFdndLTGNYZWREUS01Y1hWeEtrOHhvejFuYTFvSVo2RzdIN01vbnpEa3Vyd0lpRnFmSXlRdjlSNmZsSi1KSmFDLXEwbkM5dTEwcXFiT0VPci15SQ?oc=5",
     "description": "환율 1500원대 뉴노멀…외국계PE 투자 셈법도 복잡해졌다  인베스트조선",
     "date": "2026-06-11T22:01:45.000Z",
-    "sourceId": "korean-markets-trend",
-    "sourceName": "국내 금융/투자 종합 트렌드",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR"
-  },
-  "id_1gpe0gc": {
-    "id": "id_1gpe0gc",
-    "title": "사이언스타임즈/사용자메뉴/과학기술/기초·응용과학 - 사이언스타임즈",
-    "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOV3EwZHdQbEJZZFhlTERWOWhYXzhwc2JQcGUwcjhTQTR5Q1NSbzhQa21GQTN2RWNoSE1wNGlZaGthNjBqSG5xX1J4UjExQ0xjaEVBRERVVU5wNEprU1ZiZFl1MXQ3QktZTTNKVklCdXg5emM1bU5PVnZSLXJBLUQzaTE5TWpVel9Wcl9oSGJrYw?oc=5",
-    "description": "사이언스타임즈/사용자메뉴/과학기술/기초·응용과학  사이언스타임즈",
-    "date": "2026-06-11T22:00:46.000Z",
     "sourceId": "korean-markets-trend",
     "sourceName": "국내 금융/투자 종합 트렌드",
     "lang": "ko",
@@ -2485,20 +2425,6 @@
     "isCurated": false,
     "region": "US"
   },
-  "id_l5k6vn": {
-    "id": "id_l5k6vn",
-    "title": "기내식 장어덮밥의 필수요건은? 흑백요리사도 부른 기내식 품평회 가보니 - 조선일보",
-    "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNcDA0TktMcXdDMmxmVDFvREdwYnBBOERNUzhlSnFraTNhdTBWWWdDYUtuZWV2V1dWMlpmSzRYNEcwT21JMmVxSm1FdTdaODE2enlNNVU1YkVfdjNQc2M2ajdaaXlfNjNRN1EybkxHZG81cXlmY3VOZlNqdGNKZWZLdGY5d2tuYmVfUkVYdDRmSQ?oc=5",
-    "description": "기내식 장어덮밥의 필수요건은? 흑백요리사도 부른 기내식 품평회 가보니  조선일보",
-    "date": "2026-06-11T03:09:18.000Z",
-    "sourceId": "chosun",
-    "sourceName": "조선일보 경제",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR"
-  },
   "id_1tfsh6m": {
     "id": "id_1tfsh6m",
     "title": "국민 67% “대형마트 폐점은 지역생활 인프라 축소” - 동아일보",
@@ -3044,20 +2970,6 @@
     "aiAnalysis": null,
     "isCurated": false,
     "region": "KR"
-  },
-  "id_64k0ej": {
-    "id": "id_64k0ej",
-    "title": "Here’s the latest.",
-    "link": "https://www.nytimes.com/live/2026/06/12/business/spacex-ipo-elon-musk/heres-the-latest",
-    "description": "",
-    "date": "2026-06-12T20:28:52.000Z",
-    "sourceId": "nyt-biz",
-    "sourceName": "NYT 비즈니스",
-    "lang": "en",
-    "category": "Markets",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "US"
   },
   "id_1b4rl21": {
     "id": "id_1b4rl21",
@@ -3717,20 +3629,6 @@
     "region": "US",
     "isCurated": false
   },
-  "id_kk6ty5": {
-    "id": "id_kk6ty5",
-    "title": "2026 농식품 창업콘테스트, 521개 팀 지원하며 창업 열기 이어가 - 동아일보",
-    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1JWmFmMlZiYnBuS0VINkJvYzhIdnl4VUZscEhoc085NE55UW90QzVEak9XUWRtVGZJY0w1R01fMDV2d1loR2VocnVSUHY3TERYWUpyYkNsREpfWnhWOFplUTcyUjEyUXpHcXQyTk13ZllFWkY1bXfSAWZBVV95cUxQWWRYQW9EUFZTaG83TGFGZkl1dHVDU1NicFRNUzBBMXB0UnJyZFVESEsxdVdjeHV3ZzBMTVVaeVg4X2NhZUwxWURudWlCVFJhQkhrNnJtRGg3UTZ1V3NpaG9udG9aalE?oc=5",
-    "description": "2026 농식품 창업콘테스트, 521개 팀 지원하며 창업 열기 이어가  동아일보",
-    "date": "2026-06-12T09:08:00.000Z",
-    "sourceId": "donga",
-    "sourceName": "동아일보 경제",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR"
-  },
   "id_1wzqm2g": {
     "id": "id_1wzqm2g",
     "title": "철도 협력사 동반성장펀드 … 현대로템, 두배 늘려 1500억 - 매일경제",
@@ -4011,20 +3909,6 @@
     "isCurated": false,
     "region": "KR"
   },
-  "id_10tivne": {
-    "id": "id_10tivne",
-    "title": "한경비즈니스 - 한경매거진&북",
-    "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1hN182bUNmckozRjB2aUQ3TW9Oei1TQlo3YUx4UThhMk5OeUFGTVBzSHdFbmhjMkhLYjBDNVBNLVRJN2RFeldjZzNGMlJqN1Bib3BQZ0JFQ180TGNKOERBLUpSWXk2N1Ax?oc=5",
-    "description": "한경비즈니스  한경매거진&북",
-    "date": "2026-06-12T05:13:44.000Z",
-    "sourceId": "hankyung-fin",
-    "sourceName": "한국경제 증권",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR"
-  },
   "id_bq4e4z": {
     "id": "id_bq4e4z",
     "title": "HD현대重, KDDX 당락 가른 ‘보안감점’ 가처분 기각에 항고 - 조선일보",
@@ -4227,20 +4111,6 @@
     "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQM2FDdW5xdmZIS0xpaFdzVFhiVDE4QjdTX1dMalFGZWR4eUp5XzlvalVqS2x4bVVfMTZUTHFHUF9FeTFvSnZNNng5UlRhUU0xU0w3NHZJZ1hTRXA3LUNRd3EtcjJyZGQ2eDdGdTQ2WVFaV2JfcXpsZ21fQnVRc1pKaTduM1Q5SzgxMEIxLWtn?oc=5",
     "description": "태양광 공격적 확대 정책에도 업계 반응 싸늘한 까닭은  조선일보",
     "date": "2026-06-11T15:40:37.000Z",
-    "sourceId": "chosun",
-    "sourceName": "조선일보 경제",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR"
-  },
-  "id_165i0x0": {
-    "id": "id_165i0x0",
-    "title": "‘흑백요리사’ 출신이 만든 장어 덮밥… 항공사 무기 된 기내식 - 조선일보",
-    "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOVjlkZE8zb0FxODdaRzJkcEwyZjR5eWR2S3lOQ25TYjlObDcyVmJRd181SGs2WllYWnBEUWdkeWlNOFU1MnZkZjl4ODRxc0x2QjZiT3ZDa084SnZGZXYwY3Y4ZF9BcjJ6SGFJampkZjZVc19pYndSajNzQUMzdF9TMUljRUh1eEdJVmxMRjNYRQ?oc=5",
-    "description": "‘흑백요리사’ 출신이 만든 장어 덮밥… 항공사 무기 된 기내식  조선일보",
-    "date": "2026-06-11T15:32:00.000Z",
     "sourceId": "chosun",
     "sourceName": "조선일보 경제",
     "lang": "ko",
@@ -4795,20 +4665,6 @@
     "isCurated": false,
     "region": "KR"
   },
-  "id_5asqf": {
-    "id": "id_5asqf",
-    "title": "'검은 반도체' 김…왜 서양은 이 맛을 몰랐을까 [맛있는 이야기] - v.daum.net",
-    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5WZC0zdVM4VHp5Z0l2Y3NtbE5mVXJVZTBTNmp0YnBFWmFhNHZGR1ZOamRrTUdMMDgyMFNZQXRWRW8zMWdndzJQaWhFZ2U4TWs?oc=5",
-    "description": "'검은 반도체' 김…왜 서양은 이 맛을 몰랐을까 [맛있는 이야기]  v.daum.net",
-    "date": "2026-06-13T22:10:48.000Z",
-    "sourceId": "korean-markets-trend",
-    "sourceName": "국내 금융/투자 종합 트렌드",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR"
-  },
   "id_7kjysw": {
     "id": "id_7kjysw",
     "title": "중동 훈풍·당국 총력전에 환율 멈칫…\"종전 서명 해야 1500원 깨진다\" - 뉴스1",
@@ -4929,20 +4785,6 @@
     "date": "2026-06-13T20:47:00.000Z",
     "sourceId": "korean-markets-trend",
     "sourceName": "국내 금융/투자 종합 트렌드",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR"
-  },
-  "id_1exivys": {
-    "id": "id_1exivys",
-    "title": "손으로 일일이 살 발라내, 이혜정 뼈없는 순살 감자탕 한 냄비 7250원 특가 - 조선일보",
-    "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOZ1FMdnRvVUJwRHQ4RVkwNWdHRl9oTFpoZTljeC1uWENfcm44OVhVVk1DaDZSYUR3V25HRnh4RmR3ekgxWkVQZjlEcE50ZkY3NGJCc3IxdjNSRzdEZ1ROVWwtNDlET1AzVXRqVFlYTFZxT2dqZnFLVkxrUWZ5d3JUZE9aQWxmY3FHMkZF?oc=5",
-    "description": "손으로 일일이 살 발라내, 이혜정 뼈없는 순살 감자탕 한 냄비 7250원 특가  조선일보",
-    "date": "2026-06-13T20:34:14.000Z",
-    "sourceId": "chosun",
-    "sourceName": "조선일보 경제",
     "lang": "ko",
     "category": "Macro",
     "aiAnalysis": null,
@@ -5103,20 +4945,6 @@
     "isCurated": false,
     "region": "KR"
   },
-  "id_28g7fd": {
-    "id": "id_28g7fd",
-    "title": "정채희 기자 - 한경매거진&북",
-    "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9xay1yazVIVGdxLVFMMU8zWUtINFhZUllrdktnSnFKb0V1Y1lOQkd5ekFsTHJKNW1XLWNIRzlsY3pDZjM0akNuSEwzUlhvT1hiWnNQN1NkVndWanRtalJwbmhWUGh4WmhqUk5uaWlUVWc?oc=5",
-    "description": "정채희 기자  한경매거진&북",
-    "date": "2026-06-13T10:42:36.000Z",
-    "sourceId": "hankyung-eco",
-    "sourceName": "한국경제 경제",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR"
-  },
   "id_1984jfz": {
     "id": "id_1984jfz",
     "title": "트럼프 입에 모든 게 달렸다…美 기준금리 향방은 [주末머니] - 아시아경제",
@@ -5125,34 +4953,6 @@
     "date": "2026-06-13T10:21:00.000Z",
     "sourceId": "korean-markets-trend",
     "sourceName": "국내 금융/투자 종합 트렌드",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR"
-  },
-  "id_1y6w82k": {
-    "id": "id_1y6w82k",
-    "title": "“가득이요” 자신있게 외치세요, 제가 깎아드릴게…주유 할인카드 다시 뜬다 [머니앤리치] - 매일경제",
-    "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9FWi1lb1VfcTcwaDdaYUdnTnlXaFVNODBkOGVnVVRiMHRDOVpPUXFael9oUjdoT2lVNnI0WGtFcWoyVmxyQXczcEhyZUZuNnZ3LU1ETw?oc=5",
-    "description": "“가득이요” 자신있게 외치세요, 제가 깎아드릴게…주유 할인카드 다시 뜬다 [머니앤리치]  매일경제",
-    "date": "2026-06-13T10:04:16.000Z",
-    "sourceId": "maekyung",
-    "sourceName": "매일경제 경제",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR"
-  },
-  "id_ujam15": {
-    "id": "id_ujam15",
-    "title": "한경비즈니스 - 한경매거진&북",
-    "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9RQk5oYktZb0RWazNOMC1CTllPNFJoM3NHbDgzejNZTDZ2bm9STjRJTWJ4SG1yak1wUG5PRGo2b3VKS3IxSE5lUTRxdDN4MkRBWmt6YXFGajltNGZrZV8zNm9ibmF4Sl93?oc=5",
-    "description": "한경비즈니스  한경매거진&북",
-    "date": "2026-06-13T09:04:33.000Z",
-    "sourceId": "hankyung-fin",
-    "sourceName": "한국경제 증권",
     "lang": "ko",
     "category": "Macro",
     "aiAnalysis": null,
@@ -5789,20 +5589,6 @@
     "isCurated": false,
     "region": "KR"
   },
-  "id_t2q1pk": {
-    "id": "id_t2q1pk",
-    "title": "강홍민 기자 - 한경매거진&북",
-    "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9uT0pRbEdsV3ptbm9yLUlGZlU2ZThnOGQ3UkVfT3g5dkIxME9KUURucGhFSkxKbTNIeXRTSFpxdGFPT2JHWVJwc0hOOFlVNkFxYjltbTNpdVBGcGQyYmhoWlNfVktjd2tmMmxudA?oc=5",
-    "description": "강홍민 기자  한경매거진&북",
-    "date": "2026-06-11T22:50:13.000Z",
-    "sourceId": "hankyung-eco",
-    "sourceName": "한국경제 경제",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR"
-  },
   "id_gsf7wk": {
     "id": "id_gsf7wk",
     "title": "Oracle Shares Plunge 11% Amid $20 Billion Capital Raise Announcement - Intellectia AI",
@@ -6077,20 +5863,6 @@
     "region": "KR",
     "isCurated": false
   },
-  "id_a0ev9v": {
-    "id": "id_a0ev9v",
-    "title": "이진호 기자 - 한경매거진&북",
-    "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1CVU1QazVsWlhDQ3RmYjRUMk5tNlh6emNwQ3JiZ2NfMUtjRk9zVmh2X1d1aklFVXJ0eUNqNVU3aDFTWGNWQ3Q5Q2F3QTlobFZvaHlUWkQtZzBoZ1FoTmpkTUlhMXFISlNhR2RaNWFSQWRfdw?oc=5",
-    "description": "이진호 기자  한경매거진&북",
-    "date": "2026-06-14T10:37:21.000Z",
-    "sourceId": "hankyung-eco",
-    "sourceName": "한국경제 경제",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR"
-  },
   "id_1ts4xer": {
     "id": "id_1ts4xer",
     "title": "수산세보틱스(017550)::한경유레카 NO.1 AI투자서비스 - 한경유레카",
@@ -6357,20 +6129,6 @@
     "isCurated": false,
     "region": "KR"
   },
-  "id_zjo3z": {
-    "id": "id_zjo3z",
-    "title": "경총 \"최저임금 업종별 차등 적용해야...숙박·음식점업 감당 못해\" - 조선일보",
-    "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxON05HSEY4NjZLU3ZaakxZeWZlaGZNYTRScE5YZC1mblhxZGJrMUNRbXFHc1pZWi0zUWNJM1dYTUJLZVl0bGtOQ1I0Mk9XWWg3QmQ0QjNvclV2bHZjZ3c3MlFPb2J4OFhqV0RKeGg4QVhsRFljcV9rLUsybE50dlk3anE0SkhLbWxPcGNsMnBRUQ?oc=5",
-    "description": "경총 \"최저임금 업종별 차등 적용해야...숙박·음식점업 감당 못해\"  조선일보",
-    "date": "2026-06-14T05:08:52.000Z",
-    "sourceId": "chosun",
-    "sourceName": "조선일보 경제",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR"
-  },
   "id_10epq08": {
     "id": "id_10epq08",
     "title": "제네시스, 르망 데뷔전 완주했다…13위로 24시간 질주 마쳐 - 조선일보",
@@ -6553,20 +6311,6 @@
     "isCurated": false,
     "region": "KR"
   },
-  "id_8sndzd": {
-    "id": "id_8sndzd",
-    "title": "경총, 최저임금 업종별 구분 적용해야···숙박·음식점업 감당 어려워 - 매일경제",
-    "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBoZnNMLUVMdjlHREMwclctTkpnQUV0TnNueXJRZzUybGNucHJvRlhiN1ZIY1ZKUWdxUy1tSjBhZmtaSkNhLUNMdGFhY0ZGTHV3OExqOA?oc=5",
-    "description": "경총, 최저임금 업종별 구분 적용해야···숙박·음식점업 감당 어려워  매일경제",
-    "date": "2026-06-14T08:44:56.000Z",
-    "sourceId": "maekyung",
-    "sourceName": "매일경제 경제",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR"
-  },
   "id_1k2dos7": {
     "id": "id_1k2dos7",
     "title": "은행 예금금리 다시 3%대로…머니무브에도 정기예금은 증가세 - 매일경제",
@@ -6587,20 +6331,6 @@
     "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5vb0RzTGJrVHBBUkkyaGc5ZUlNOGh1UDAxMTVuQzhuTi1XSzVUdGhiNFV6ZTdLd0lKa3MxRFRIeDh1Q3hzYTB4TmlWRmd3X0pNQ09wcg?oc=5",
     "description": "[단독] “국가 핵심기술 유출 직접 잡겠다”…산업부, 특사경 신설 추진  매일경제",
     "date": "2026-06-14T08:50:00.000Z",
-    "sourceId": "maekyung",
-    "sourceName": "매일경제 경제",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR"
-  },
-  "id_nqu7n9": {
-    "id": "id_nqu7n9",
-    "title": "“여름휴가, 제값 주고 가면 바보?”…항공권 할인받는 카드 꿀팁은 - 매일경제",
-    "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBrVnVGZGROY2FkUzlyNjhZWGN3RjVOUGo3aFNzQzE1Vk9GblRXOVFob2lIMElIZ0EzVFpGSnJOR09MSGYxNkVvdnc0eXJFVk5oS0Y3cg?oc=5",
-    "description": "“여름휴가, 제값 주고 가면 바보?”…항공권 할인받는 카드 꿀팁은  매일경제",
-    "date": "2026-06-14T06:30:49.000Z",
     "sourceId": "maekyung",
     "sourceName": "매일경제 경제",
     "lang": "ko",
@@ -7337,20 +7067,6 @@
     "isCurated": false,
     "region": "KR"
   },
-  "id_11nx2oe": {
-    "id": "id_11nx2oe",
-    "title": "K뷰티 열풍 확산… 美 개점 첫날 오픈런-日선 편집숍 120개 입점 - 동아일보",
-    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1WWTE5S3ZkNjduanh5N1FfbDNVMU9BejJXUXpHZEg1SkVreGE2dnpudm9Vb0pVMDAxSWkzSTZ6cVZwekgzamNZcDkwa3RSVm9zQzRGSWdEQV9IVWNUMDNaMjVNOWd0QzRWZU9PeWpqRG91RXdyVnfSAWZBVV95cUxPMTlPT3NCTzBFWGdxNU9abXUtTXlaRENOSzR0MHktS0hBQlp4bklmbndmRk84ZXd5eG9iUmlvSlUxQW9qNXMyU09QemNxWVhFZDRZUm9HckpMMTZZLVFKMGFDU0JSelE?oc=5",
-    "description": "K뷰티 열풍 확산… 美 개점 첫날 오픈런-日선 편집숍 120개 입점  동아일보",
-    "date": "2026-06-14T15:30:00.000Z",
-    "sourceId": "donga",
-    "sourceName": "동아일보 경제",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR"
-  },
   "id_1cxl2ll": {
     "id": "id_1cxl2ll",
     "title": "신혼부부 아니어도 ‘신생아 특공’ 가능해진다…2세 미만 자녀 가구 해당 - 동아일보",
@@ -7426,20 +7142,6 @@
     "title": "2차 국민성장펀드 3분기에 나온다… 6000억 규모 - 동아일보",
     "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE50YzY4aXNFbUFqYnhLdVU5RldZQ2VGNWE2OWRJTHVvenhPTEo1UktLTDUxazBSWmZManVjUUtjZVRKM1B4a1F1NkI2T0JiS1h3SW5RdGJjcEEtQWc4Y1pIVlk2RGwwY1FqVDJxUDJjV05aeTdST1HSAWZBVV95cUxNLVlmUVBnV3lBXzlBTkdZanhMMTdOQTNFdXg2SS1nbWcwR2tKSnBfMW0yYXlxWFQ4WVRfajRBdkRDUWYyMWpab1pkM1JockRPTTNCYVlDdzlqWkV4RlJsWDF3S0V4Vmc?oc=5",
     "description": "2차 국민성장펀드 3분기에 나온다… 6000억 규모  동아일보",
-    "date": "2026-06-14T15:30:00.000Z",
-    "sourceId": "donga",
-    "sourceName": "동아일보 경제",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR"
-  },
-  "id_19ipnb7": {
-    "id": "id_19ipnb7",
-    "title": "동원F&B, 1400억 투입 ‘단백질식품 생산기지’ 가동 - 동아일보",
-    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE55dlZWMzBSSkE3UkV4LU5SalVTVk9YV3BUXzBSN0cyd0hiSEJ1XzlwZFB2V3kwLVFxSW1uTVViOFQ1MlRMdUM0TVNLRTR6WkhvOUV1RmRTNG1IckJzZndyQlBpckF0ZU9PbE9DdzdmWFNQaDdEaXfSAWZBVV95cUxQMVFEWV9GQktHREhxR2w2dnNidnJsYmdHUFFJX0RxUnFYa1Y3c3cyVVVKd1k3QlZ1M2NtZHFlb0gzOW5VMmhDTWVPSGs5cXRsYmRYQmMxYnNoc1hEMkF1SmpudnNnS2c?oc=5",
-    "description": "동원F&B, 1400억 투입 ‘단백질식품 생산기지’ 가동  동아일보",
     "date": "2026-06-14T15:30:00.000Z",
     "sourceId": "donga",
     "sourceName": "동아일보 경제",
@@ -7611,20 +7313,6 @@
     "date": "2026-06-15T00:35:02.000Z",
     "sourceId": "hankyung-fin",
     "sourceName": "한국경제 증권",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "region": "KR",
-    "isCurated": false
-  },
-  "id_5jcudm": {
-    "id": "id_5jcudm",
-    "title": "시사·교양 - 생글생글",
-    "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1GcTE2d0hEMG8tS1ZoUUg4WW1EX1hjdU83aGhlWXVyUTF5cm5xaTRCaTNqTnd4Qjhhd1hsNUYwUWg4T2lrVmFHTEloa2FqdzZDMXJqNEpDSjY1NGY2Wlc4?oc=5",
-    "description": "시사·교양  생글생글",
-    "date": "2026-06-15T00:07:36.000Z",
-    "sourceId": "hankyung-eco",
-    "sourceName": "한국경제 경제",
     "lang": "ko",
     "category": "Macro",
     "aiAnalysis": null,
@@ -8387,20 +8075,6 @@
     "isCurated": false,
     "region": "KR"
   },
-  "id_1bsaiyv": {
-    "id": "id_1bsaiyv",
-    "title": "민영주택 청약에도 ‘신생아 특공’… 결혼기간 상관없이 신청 가능 - 동아일보",
-    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9MSlgxQjBCT3pHZENBN21xYndCTWFFSXQ2b0pLOWlsbUVHMXFUUXYwb2xLNmV5MF9WZEhTYTlZejZuWGU3azhTc2hwclZrZkdjaFVPVTJXZGFwMmthbnZqUzhoM3Q1aFpCTzgwR2NLV3Q4bVFLV2fSAWZBVV95cUxOM1l2bWVGc0JPTkxkaVNHU1RCZjN0ZEpYX2pEM045TmhkZXZpTnhxNHlqUFV0T0pfMDVEYmhoUkVIcVV0OExaa1NaVWdfVUxwcnZWS0F3YVBGQ0thME9ZU3JpTzR3Z2c?oc=5",
-    "description": "민영주택 청약에도 ‘신생아 특공’… 결혼기간 상관없이 신청 가능  동아일보",
-    "date": "2026-06-14T19:30:00.000Z",
-    "sourceId": "donga",
-    "sourceName": "동아일보 경제",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "region": "KR",
-    "isCurated": false
-  },
   "id_m48hle": {
     "id": "id_m48hle",
     "title": "“나도 모르게 낸 전기료 돌려받는다”…인터넷 설비 꼼수 부과 보상 개시 - 동아일보",
@@ -8484,24 +8158,6 @@
     "aiAnalysis": null,
     "region": "KR",
     "isCurated": false
-  },
-  "id_1jmv94p": {
-    "id": "id_1jmv94p",
-    "title": "강홍민 기자 - 한경매거진&북",
-    "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBiSl8xQmZ6RWloekl0Q2ZPWTVfMTQ2eDJPSUdubnpSSVFDeUNFZjBOcnZOa3o2d1VCU000dXAyU0R5UGFHS1UyZTROelljcldUa2RCXy1haDdEV1cyYjhoWlRjUnBxbDdvRjJWRg?oc=5",
-    "description": "강홍민 기자  한경매거진&북",
-    "date": "2026-06-16T05:48:22.000Z",
-    "sourceId": "hankyung-fin",
-    "sourceName": "한국경제 증권",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "region": "KR",
-    "isCurated": false,
-    "specialistScore": 4,
-    "specialistAnalysis": [
-      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
-    ]
   },
   "id_176orae": {
     "id": "id_176orae",
@@ -9639,42 +9295,6 @@
     "isCurated": false,
     "region": "KR"
   },
-  "id_aqgt7v": {
-    "id": "id_aqgt7v",
-    "title": "부쩍 허해졌다면, 홍삼까지 넣은 흑염소 30포 1만6000원 초특가 - 조선일보",
-    "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQN19YaDhQR2pKSmJ2dFZHT29sR0JBdzBpTG1qTUhoVHBLeFpKRVYxYlJ1Z09mX1NVRDRlcllXd2huN29ra2JXS0xMUVQ2S1paNkZfVmhVT0k5ZEtOSEhvZDZJc05HNExIb3FXTmxELUFSR3Z3S3EtU09TUmk2V0EwejVhTzdWZzF2eWpZ?oc=5",
-    "description": "부쩍 허해졌다면, 홍삼까지 넣은 흑염소 30포 1만6000원 초특가  조선일보",
-    "date": "2026-06-15T20:30:00.000Z",
-    "sourceId": "chosun",
-    "sourceName": "조선일보 경제",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR",
-    "specialistScore": 5,
-    "specialistAnalysis": [
-      "오프라인 분석 대기"
-    ]
-  },
-  "id_1ifs8c2": {
-    "id": "id_1ifs8c2",
-    "title": "이렇게 쫄깃하다니, 포항 반건조 가자미 한 마리 최저 3000원 초특가 - 조선일보",
-    "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPWGxZbF85ZVNubHZRU0wxSlV2UVVMS0M1OGtNc0xLSmlJTi1FeTd3dTVWV1huOEpfR05pdXh5STYzV2liX1o2S3ZPeWM0eEhROXVlQWRSd3ZfZEhuNmVJOUxQUF9nS2MzZEhtbEQ3N2F2R2hWWG8yaFVaakxnaHp6NUZ2M212VUxDX1VJ?oc=5",
-    "description": "이렇게 쫄깃하다니, 포항 반건조 가자미 한 마리 최저 3000원 초특가  조선일보",
-    "date": "2026-06-15T20:10:00.000Z",
-    "sourceId": "chosun",
-    "sourceName": "조선일보 경제",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR",
-    "specialistScore": 5,
-    "specialistAnalysis": [
-      "오프라인 분석 대기"
-    ]
-  },
   "id_zk78x3": {
     "id": "id_zk78x3",
     "title": "수입물가 상승률 코로나 이후 최고…‘반도체 효과’ 수출물가는 47%↑ - 조선일보",
@@ -10575,20 +10195,6 @@
     "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1nSmZQcFpmSkFfclA3U0RSYk9TS1JZc2FjY1JybzdrNkpTdDNzTjUwRlFBMlZFVGlDVUxFcHp6RlBGZmNBejR3Uzl1ZTNNNEI3X2pSQg?oc=5",
     "description": "韓 태양광 발전원가, 국제 평균의 2배  매일경제",
     "date": "2026-06-15T08:43:20.000Z",
-    "sourceId": "maekyung",
-    "sourceName": "매일경제 경제",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "region": "KR",
-    "isCurated": false
-  },
-  "id_1szi511": {
-    "id": "id_1szi511",
-    "title": "“한집 건너 편의점, 포화 아닌가요?”…신선 특화 매장으로 돌파구 찾는다 - 매일경제",
-    "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1WcHpDSkpFUTZieDBCQXlpSDYxRGhzYjFaOHhRYmNiVnlGX3ZEZHlEOEdVN3VqSV9BYkc0eDVSVUllQlhVRE5UYnBteDd4aVRoREdkSg?oc=5",
-    "description": "“한집 건너 편의점, 포화 아닌가요?”…신선 특화 매장으로 돌파구 찾는다  매일경제",
-    "date": "2026-06-15T07:50:57.000Z",
     "sourceId": "maekyung",
     "sourceName": "매일경제 경제",
     "lang": "ko",
@@ -11723,26 +11329,6 @@
     "specialistScore": 4,
     "specialistAnalysis": [
       "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
-    ]
-  },
-  "id_otqajm": {
-    "id": "id_otqajm",
-    "title": "스마트폰이 전 세계 출산율 끌어내리고 있다 - 조선일보",
-    "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQYjhnVnZaTlYwRlRqLWlmUFpILU1zZHo1bjZGM0JseUhZZlRidTY2SV92ODhKR0NBQW15WFNyNDlmQm9EbGdweFdYRU03SXppMlhEektoX2xLWjVpT1pfLVhaM2szT3ZkRnVHOENRNDM0N0lQaFpTLU9tY0hpcEdvb3JUZ1U5QQ?oc=5",
-    "description": "스마트폰이 전 세계 출산율 끌어내리고 있다  조선일보",
-    "date": "2026-06-15T18:04:41.000Z",
-    "sourceId": "chosun",
-    "sourceName": "조선일보 경제",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "region": "KR",
-    "isCurated": false,
-    "specialistScore": 3,
-    "specialistAnalysis": [
-      "스마트폰이 전 세계 출산율 하락의 원인 중 하나로 지목됨.",
-      "한국의 심각한 저출산 문제에 대한 장기적 사회경제적 우려 반영.",
-      "국내 노동력 감소 및 내수 시장 위축 등 장기 성장 동력에 부정적 영향."
     ]
   },
   "id_1teosu2": {
@@ -13305,36 +12891,6 @@
     "isCurated": false,
     "region": "KR"
   },
-  "id_1p2ii1p": {
-    "id": "id_1p2ii1p",
-    "title": "[속보]마이크론6%↓반도체투매 나스닥1%하락 - 문화일보",
-    "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBZN3A1YWd0YjhCeDlXcWoxMzhCYUZLeTZFejRiZjJqOXlBbl96MkhSMS1BWnRia3l2bGotdmt0UTlYaTdWbkhqWDU3VzVKT3pF?oc=5",
-    "description": "[속보]마이크론6%↓반도체투매 나스닥1%하락  문화일보",
-    "date": "2026-06-16T21:05:02.000Z",
-    "sourceId": "korean-markets-trend",
-    "sourceName": "국내 금융/투자 종합 트렌드",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": {
-      "translatedTitle": "마이크론 6% 폭락 여파...나스닥 1% 하락 마감하며 기술주 조정 국면 돌입",
-      "summary": [
-        "메모리 반도체 공급 과잉 가능성 및 가격 사이클 고점 도달 우려가 불거지며 마이크론 테크놀로지가 6% 넘게 고꾸라졌습니다.",
-        "이 여파로 시가총액 가중치가 높은 빅테크 전반에 패닉 셀링이 유발되어 기술주 중심의 나스닥 지수가 1% 이상 큰 폭으로 하락했습니다.",
-        "고금리 기조 장기화 속에서 고평가 지적을 받아온 대형 기술주들의 숨고르기 장세가 본격 전개되고 있다는 분석입니다."
-      ],
-      "implications": [
-        "기술주 멀티플 부담이 해소되기 전까지 나스닥 추종 ETF(QQQ)나 레버리지 상품 진입은 지양하는 것이 좋습니다.",
-        "전통 제약/바이오, 방산 등 반도체 업황 조정을 피할 수 있는 비기술 대안 섹터의 분산 투자가 필요합니다."
-      ],
-      "isPremiumCuration": true
-    },
-    "specialistScore": 4,
-    "specialistAnalysis": [
-      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
-    ],
-    "isCurated": false,
-    "region": "KR"
-  },
   "id_tz4e5s": {
     "id": "id_tz4e5s",
     "title": "상반기에만 13조원…K바이오 기술수출, 올해 또 ‘역대 최대’ 경신하나 - 조선일보",
@@ -13605,36 +13161,6 @@
     ],
     "isCurated": false
   },
-  "id_1pgfvb8": {
-    "id": "id_1pgfvb8",
-    "title": "70만팩 대박, 한돈·한우로 만든 육즙 폭탄 이혜정 함박스테이크 3450원 단독 특가 - 조선일보",
-    "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPMDhBa0xmbWt4TnlRLXZ1QjVaVHduVWRXXzl6U1d3d25mdzNDMEI5b3p1bXJLeTl4UjFxVEs4b0I1V0FnRWRQRmtKZmc5a3RyWHk1NTVrVV82aUFHVHhvX0lWRnByWUIyLUNrYzktT0gyREw3bFlHdW9IZmhJQXFDN2dnanZKNG5yUWxr?oc=5",
-    "description": "70만팩 대박, 한돈·한우로 만든 육즙 폭탄 이혜정 함박스테이크 3450원 단독 특가  조선일보",
-    "date": "2026-06-16T20:10:00.000Z",
-    "sourceId": "chosun",
-    "sourceName": "조선일보 경제",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": {
-      "translatedTitle": "70만팩 대박, 한돈·한우로 만든 육즙 폭탄 이혜정 함박스테이크 3450원 단독 특가 - 조선일보",
-      "summary": [
-        "🔍 [사건 개요 및 맥락] 70만팩 대박, 한돈·한우로 만든 육즙 폭탄 이혜정 함박스테이크 3450원 단독 특가 - 조선일보",
-        "📈 [세부 지표 및 사실 정보] 네트워크 임시 대기 상태",
-        "💡 [투자 시사점 및 전략] 원본 확인 권장"
-      ],
-      "implications": [
-        "시스템 상태 점검 필요",
-        "다음 배치에서 업데이트 예정"
-      ],
-      "isPremiumCuration": true
-    },
-    "region": "KR",
-    "specialistScore": 4,
-    "specialistAnalysis": [
-      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
-    ],
-    "isCurated": false
-  },
   "id_zz0wpz": {
     "id": "id_zz0wpz",
     "title": "Oil Prices Continue to Fall as Traders Assess U.S.-Iran Deal",
@@ -13840,32 +13366,6 @@
       "기사는 소비자들이 제품의 '성분'과 '원가'를 분석하여 가치를 평가하는 경향이 강해지고 있음을 주요 내용으로 하며, 이러한 소비 행태 변화가 새로운 시장 트렌드로 자리 잡고 있음을 제시합니다.",
       "이러한 소비 행태는 물가 상승 압력에 대한 소비자의 민감도 증가를 반영할 수 있으며, 국내 소비재 및 유통 관련 코스피/코스닥 상장 기업들의 수익성에 영향을 미치고, 궁극적으로 한국은행의 물가 관리 부담에도 간접적인 영향을 줄 수 있습니다."
     ]
-  },
-  "id_1904722": {
-    "id": "id_1904722",
-    "title": "나만의 K뷰티에 외국인 관광객 ‘엄지 척’ - 동아일보",
-    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE0xOFQwSjdaQmw4ajdOcXJsRFpUYkdEdHM3M0gtREJpb2tNMF9zMlhxOFpTN1dMZGtxQlQ2Y0pFT1ZTSTRlV1FCSmc4Z3YzSWVGRkhVc0lCakJLNEswMFVyUS14dnhsQUpIdTVXV0lIVDBMbWJDYkHSAWZBVV95cUxQZU9Vd29iaDVjaG5LMTY2S29BRWxRbEFQQTZwQl9DRFVxcFVVNWtOaVVtNjNLZUZKODhaVW9RNGpiQWR5UUl2THFidE4tSnpLY1ZCZEppSUh1RE56OVZveUFPVFJrMVE?oc=5",
-    "description": "나만의 K뷰티에 외국인 관광객 ‘엄지 척’  동아일보",
-    "date": "2026-06-16T18:49:48.000Z",
-    "sourceId": "donga",
-    "sourceName": "동아일보 경제",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": {
-      "translatedTitle": "나만의 K뷰티에 외국인 관광객 ‘엄지 척’ - 동아일보",
-      "summary": [
-        "🔍 [사건 개요 및 맥락] 나만의 K뷰티에 외국인 관광객 ‘엄지 척’ - 동아일보",
-        "📈 [세부 지표 및 사실 정보] 네트워크 임시 대기 상태",
-        "💡 [투자 시사점 및 전략] 원본 확인 권장"
-      ],
-      "implications": [
-        "시스템 상태 점검 필요",
-        "다음 배치에서 업데이트 예정"
-      ],
-      "isPremiumCuration": true
-    },
-    "region": "KR",
-    "isCurated": false
   },
   "id_1rbewxv": {
     "id": "id_1rbewxv",
@@ -15347,24 +14847,6 @@
       "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
     ]
   },
-  "id_7g65s5": {
-    "id": "id_7g65s5",
-    "title": "한경비즈니스 - 한경매거진&북",
-    "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBsYm5TMUt2YS1MWnp5R1RWSDEzMnZydFhNWEk4Y2ZpUmpQaTZ0VWRrUWdxSmcyVmN0Z29iaEhmdUVpUFZsOG9aV0VsblJFZ1FOcm9PbTVpczlESVZLVFBOUFFud3lxMEFV?oc=5",
-    "description": "한경비즈니스  한경매거진&북",
-    "date": "2026-06-16T03:41:40.000Z",
-    "sourceId": "hankyung-fin",
-    "sourceName": "한국경제 증권",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR",
-    "specialistScore": 4,
-    "specialistAnalysis": [
-      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
-    ]
-  },
   "id_uch540": {
     "id": "id_uch540",
     "title": "신동빈 “AX는 선택 아닌 생존과제”…직접 실무교육 받아 - 동아일보",
@@ -15517,20 +14999,6 @@
     "category": "Markets",
     "aiAnalysis": null,
     "region": "US",
-    "isCurated": false
-  },
-  "id_1amlu73": {
-    "id": "id_1amlu73",
-    "title": "이진호 기자 - 한경매거진&북",
-    "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE84VWloMmNGVVJSSlNneHItTHFycl9wZG1zbDhyVWFKTGpGdWhmQWRWQVdsLW5vWk12YVFRejM4Q0ZON2djNHlPbUxrV1NERlI1UGZpOURpT19SS0tJYWpjRXoxS1lvNVNfVF84R0NneUo1dw?oc=5",
-    "description": "이진호 기자  한경매거진&북",
-    "date": "2026-06-14T10:37:00.000Z",
-    "sourceId": "hankyung-eco",
-    "sourceName": "한국경제 경제",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "region": "KR",
     "isCurated": false
   },
   "id_v6egcr": {
@@ -15723,20 +15191,6 @@
     "isCurated": false,
     "region": "KR"
   },
-  "id_t8qadd": {
-    "id": "id_t8qadd",
-    "title": "한경비즈니스 - 한경매거진&북",
-    "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5nelNCbXdlaDRraVVMMkZkbUVEcEl0eE5US254TjA2S3hGY1Z0YTF3TVEzaHo0SDVpMmxfMWpEZW5PVUE0UjlGZUJCQk1mWTZPZ0lETUhUYXhlV0pFMkZlY3ZZeWhxYWdy?oc=5",
-    "description": "한경비즈니스  한경매거진&북",
-    "date": "2026-06-15T05:51:48.000Z",
-    "sourceId": "hankyung-fin",
-    "sourceName": "한국경제 증권",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "region": "KR",
-    "isCurated": false
-  },
   "id_znuoxb": {
     "id": "id_znuoxb",
     "title": "“8·11·14단지 수주 정조준”… 대우건설, 목동서 조합원 접점 넓힌다 - 동아일보",
@@ -15869,38 +15323,6 @@
     "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE92S1I1WkFldXpucXZOc1ZkTmlLemRmM2pORlEwNy10eC1aN2t4eXhpc1cyUDh4MGhlVGVuMXlDcVFZeFVZNDl1UjJhN0xUSkYtUE9n?oc=5",
     "description": "SK텔레콤(017670)::한경유레카 NO.1 AI투자서비스  한경유레카",
     "date": "2026-06-02T06:30:22.000Z",
-    "sourceId": "kr-hankyung-eco",
-    "sourceName": "한국경제 경제",
-    "lang": "ko",
-    "category": "Macro",
-    "region": "KR",
-    "aiAnalysis": null,
-    "specialistScore": 0,
-    "specialistAnalysis": null,
-    "isCurated": false
-  },
-  "id_1p8eitt": {
-    "id": "id_1p8eitt",
-    "title": "잡앤조이 - 한경매거진&북",
-    "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9sQk5HeHVUQlhNVmJYd3Zwby1sQ2pXajg1VWRtdzQxSkNGV3B4ZndWS0oxaXo5bFNQeHU2MkZZUlNCSEY0YThPb01CbTZmSHB4ODlvOWN1X3lrMW9HcUkzZmxCQQ?oc=5",
-    "description": "잡앤조이  한경매거진&북",
-    "date": "2025-02-09T02:10:24.000Z",
-    "sourceId": "kr-hankyung-fin",
-    "sourceName": "한국경제 증권",
-    "lang": "ko",
-    "category": "Macro",
-    "region": "KR",
-    "aiAnalysis": null,
-    "specialistScore": 0,
-    "specialistAnalysis": null,
-    "isCurated": false
-  },
-  "id_1jvfygn": {
-    "id": "id_1jvfygn",
-    "title": "한경비즈니스외고 기자 - 한경매거진&북",
-    "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1ZUGFxUU8yYmlTVk0xS2ZFNXZGaUNYT0dDem4wZHFtSUlJQ0pkemxBMTRmRlI2V1htM3JkZzdhcEhSR2N5VE8yaUwzN1A0bmFSLWJ6Z3d4amtrWTA?oc=5",
-    "description": "한경비즈니스외고 기자  한경매거진&북",
-    "date": "2021-02-03T00:40:53.000Z",
     "sourceId": "kr-hankyung-eco",
     "sourceName": "한국경제 경제",
     "lang": "ko",
@@ -16345,36 +15767,6 @@
     ],
     "isCurated": false
   },
-  "id_ahuuxp": {
-    "id": "id_ahuuxp",
-    "title": "‘저거 진짜 되는거야?’ 의심 뜷고 10만대 판매 돌파, 감전식 모기 퇴치기 특가 공구 - 조선일보",
-    "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQUmRKYjRyeDgtcWxmeXVLc05hWFI1Qm5xWG1sNXNVQ1NJQjVyNml0ZVN5Q2x5TW1nMXlFUWR5cGNsQkg1QVV1T3pUZE5aeHdkS2xuMVZWcGdSX1lhenNSWG1vTjZlQ0M1X3ZfZFF3N2IzTDFIenViZm1OYy1PUnJLM2hpZU11Qk9KMTRN?oc=5",
-    "description": "‘저거 진짜 되는거야?’ 의심 뜷고 10만대 판매 돌파, 감전식 모기 퇴치기 특가 공구  조선일보",
-    "date": "2026-06-17T01:03:00.000Z",
-    "sourceId": "kr-chosun",
-    "sourceName": "조선일보 경제",
-    "lang": "ko",
-    "category": "Macro",
-    "region": "KR",
-    "aiAnalysis": {
-      "translatedTitle": "‘저거 진짜 되는거야?’ 의심 뜷고 10만대 판매 돌파, 감전식 모기 퇴치기 특가 공구",
-      "summary": [
-        "실효성에 대한 초기 소비자들의 의구심을 깨고 고효율 감전식 모기 퇴치 기기가 단일 제품군으로 누적 10만 대 판매 돌파 기록을 달성했습니다.",
-        "여름철 고온다습한 날씨로 해충 피해 예방 수요가 급증하는 가운데, 인체 무해 친환경 유인 램프 기술이 소셜 미디어 입소문을 타고 선전했습니다.",
-        "제조사는 유통 단계를 최소화한 특가 공동구매 채널을 개설하여 2030 주거 가구 및 캠핑족의 신규 구매 전환율을 높이고 있습니다."
-      ],
-      "implications": [
-        "전통적인 가전 브랜드를 뛰어넘는 타겟 틈새 계절 가전 시장의 빠른 기획 상품화 및 유통 다각화 비즈니스의 고수익성을 증명합니다.",
-        "생활 잡화 및 레저 특수 미디어 커머스를 영위하는 강소 유통사 및 플랫폼 업체의 단기 3분기 깜짝 실적 증가가 예상됩니다."
-      ],
-      "isPremiumCuration": true
-    },
-    "specialistScore": 4,
-    "specialistAnalysis": [
-      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
-    ],
-    "isCurated": false
-  },
   "id_iw2h8t": {
     "id": "id_iw2h8t",
     "title": "“빚투 개미, 도대체 얼마나 많길래”…돈 빌려, 대출해주는 증권사들 - 매일경제",
@@ -16610,38 +16002,6 @@
       "미국 및 글로벌 금융 시장에 미치는 영향은 전혀 없습니다."
     ],
     "isCurated": false
-  },
-  "id_1phgzjc": {
-    "id": "id_1phgzjc",
-    "title": "“숙박·음식업은 더 낮게”…최저임금 ‘차등 적용’ 오늘 노사 담판 - 동아일보",
-    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE93N0JXT09DWmVybmw1dVowSWp3clVLNjBIRE0tLWxZQU9DMGc5LWdkTklFN2dkUFl1djBRRExNcS1rSW9WRVpJLWFHbWZwaTdSU1pVTExXTXhhUXZVUmFKRmpuRWxXTFhVWnI4QmVfa3JSdTRxckHSAWZBVV95cUxOdlE2RDlVa0pFYUdKcEVaLWxsZHc5S0VweGE2bkZBc1VadEtCSzNGMk5xR3VVXzd4VGd1dEtxOFljalFXdjhaSnhCLXF4c2E2YlV4NjJQanZXNjF4T0xibWppeWQ0dEE?oc=5",
-    "description": "“숙박·음식업은 더 낮게”…최저임금 ‘차등 적용’ 오늘 노사 담판  동아일보",
-    "date": "2026-06-17T22:36:25.000Z",
-    "sourceId": "kr-donga",
-    "sourceName": "동아일보 경제",
-    "lang": "ko",
-    "category": "Macro",
-    "region": "KR",
-    "aiAnalysis": {
-      "translatedTitle": "“숙박·음식업은 더 낮게”…최저임금 ‘업종별 차등 적용’ 노사 최종 표결 돌입",
-      "summary": [
-        "내년도 최저임금 심의에서 경영난이 가중된 편의점, 택시, 숙박·음식업 등 특정 업종에 최저임금을 낮게 책정하는 '업종별 차등 적용'을 두고 경영계와 노동계가 막판 정면 충돌했습니다.",
-        "소상공인연합회 등 경영계는 자영업자의 지불 능력이 한계에 도달해 차등 적용이 생존을 위한 필수 조건이라 주장하는 반면, 노동계는 특정 업종에 대한 낙인 효과와 노동 강도 저하 우려로 절대 불가 방침을 고수 중입니다.",
-        "최저임금위원회는 공익위원들의 중재 하에 표결 처리를 시도할 예정이며, 이번 결정은 내년 최저임금 1만 원 돌파 여부의 향방을 가를 최대 분수령이 될 것으로 보입니다."
-      ],
-      "implications": [
-        "내수 유통, 식음료 가맹사업 및 프랜차이즈 기업들의 인건비 부담 증대 우려가 확산되고 있어 단기 실적 모니터링이 필요합니다.",
-        "최저임금의 급격한 상승이 자영업자 폐업률 증가 및 고용 둔화로 이어질 경우 정부의 내수 진작책 강도가 높아질 가능성이 있습니다."
-      ],
-      "isPremiumCuration": true
-    },
-    "specialistScore": 7,
-    "specialistAnalysis": [
-      "숙박·음식업 등 특정 업종에 최저임금 차등 적용 여부 논의는 해당 산업의 비용 구조와 수익성에 직접적인 영향을 미칩니다.",
-      "기사 제목에서 \"숙박·음식업은 더 낮게\"라는 내용으로 차등 적용의 방향성을 제시하며, 오늘 노사 담판이 진행될 예정임을 알립니다.",
-      "국내 서비스업, 특히 소상공인 중심의 숙박·음식업 기업들의 고용 및 투자 심리에 영향을 주며, 관련 상장사들의 주가에도 간접적인 영향을 미칠 수 있습니다."
-    ],
-    "isCurated": true
   },
   "id_16v3xpo": {
     "id": "id_16v3xpo",
@@ -17395,24 +16755,6 @@
     ],
     "isCurated": false
   },
-  "id_19d8nhy": {
-    "id": "id_19d8nhy",
-    "title": "SpaceX’s Growing Warchest ",
-    "link": "https://www.nytimes.com/2026/06/17/business/dealbook/spacex-stock-cursor-ai.html",
-    "description": "Shares in Elon Musk’s SpaceX have been on a tear, giving the rockets and artificial intelligence company financial resources to box out competitors.",
-    "date": "2026-06-17T12:05:03.000Z",
-    "sourceId": "us-nyt-biz",
-    "sourceName": "NYT 비즈니스",
-    "lang": "en",
-    "category": "Markets",
-    "region": "US",
-    "aiAnalysis": null,
-    "specialistScore": 4,
-    "specialistAnalysis": [
-      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
-    ],
-    "isCurated": false
-  },
   "id_whempy": {
     "id": "id_whempy",
     "title": "원전 더 지을수 있는 넓은 땅 강점 … 영덕 주민들 \"지역 활력 기대\" - 매일경제",
@@ -17694,24 +17036,6 @@
     "lang": "en",
     "category": "Markets",
     "region": "US",
-    "aiAnalysis": null,
-    "specialistScore": 4,
-    "specialistAnalysis": [
-      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
-    ],
-    "isCurated": false
-  },
-  "id_75h0y5": {
-    "id": "id_75h0y5",
-    "title": "이진호 기자 - 한경매거진&북",
-    "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNTTd6ekI0d3FjZEwxanluNkNGNklscGF2NWw1NXZrLVNkcDRaNENxVTZYTnVvOW1DWENVLTdBN2wtSXZ3T2hKVkZWZEVyZnl5bTh0SUg2bWljSFg1eEpscHE0RXh4X2I2SmpXZEVTaXJVcmgyamY0VVEwYWZ0WTNSOQ?oc=5",
-    "description": "이진호 기자  한경매거진&북",
-    "date": "2026-06-17T04:28:11.000Z",
-    "sourceId": "kr-hankyung-fin",
-    "sourceName": "한국경제 증권",
-    "lang": "ko",
-    "category": "Macro",
-    "region": "KR",
     "aiAnalysis": null,
     "specialistScore": 4,
     "specialistAnalysis": [
@@ -18030,24 +17354,6 @@
     "lang": "en",
     "category": "Markets",
     "region": "US",
-    "aiAnalysis": null,
-    "specialistScore": 4,
-    "specialistAnalysis": [
-      "네트워크 오류 또는 분석 실패로 인한 임시 분석 항목입니다."
-    ],
-    "isCurated": false
-  },
-  "id_1gsfg7v": {
-    "id": "id_1gsfg7v",
-    "title": "20년 PDRN 한 우물…파마리서치의 K에스테틱 청사진 [글로벌 K뷰티 콘퍼런스] - 매일경제",
-    "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE4yLXkwSTllUnpxU24wT2RKblFlZVN6a0dxZS15SDhxWTYtekFaVnF0R0hjZjN1amotVVdRYVdMUEJNZ1hRdzRCVUc4blEwOS1sQVZmVw?oc=5",
-    "description": "20년 PDRN 한 우물…파마리서치의 K에스테틱 청사진 [글로벌 K뷰티 콘퍼런스]  매일경제",
-    "date": "2026-06-17T07:31:28.000Z",
-    "sourceId": "kr-maekyung",
-    "sourceName": "매일경제 경제",
-    "lang": "ko",
-    "category": "Macro",
-    "region": "KR",
     "aiAnalysis": null,
     "specialistScore": 4,
     "specialistAnalysis": [
@@ -18384,22 +17690,6 @@
     "lang": "en",
     "category": "Markets",
     "region": "US",
-    "aiAnalysis": null,
-    "specialistScore": 0,
-    "specialistAnalysis": null,
-    "isCurated": false
-  },
-  "id_1wm78j": {
-    "id": "id_1wm78j",
-    "title": "경영감사 - 한경용어사전",
-    "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9yWUtUd1hJNWJPdFo4bk9zdFEzM21hR05RSkNUSlZBeWQtbkt3RzlUcjJuTWJBLUJNRmxwOGJFSlVSZW03azl0UEVJLXZjN3BqaXFIdzlHQlhkM0JLWEE?oc=5",
-    "description": "경영감사  한경용어사전",
-    "date": "2026-06-18T20:57:35.000Z",
-    "sourceId": "kr-hankyung-eco",
-    "sourceName": "한국경제 경제",
-    "lang": "ko",
-    "category": "Macro",
-    "region": "KR",
     "aiAnalysis": null,
     "specialistScore": 0,
     "specialistAnalysis": null,
@@ -19253,22 +18543,6 @@
     "specialistAnalysis": null,
     "isCurated": false
   },
-  "id_qo8rg9": {
-    "id": "id_qo8rg9",
-    "title": "한국 넘어 전 세계 향한다…美 진출 비법 공유한 올리브영 [글로벌 K뷰티 콘퍼런스] - 매일경제",
-    "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBfLXFMWHlJU1JXbWtFVGw1QmV4eThnQUZSRlFxSWFuQmtPOGVwSUp2Nlh5OWNQOWdKR21ZWkxXTUlCOTFEWW5UTW9LRy1oZEJvZVJuNA?oc=5",
-    "description": "한국 넘어 전 세계 향한다…美 진출 비법 공유한 올리브영 [글로벌 K뷰티 콘퍼런스]  매일경제",
-    "date": "2026-06-18T00:03:03.000Z",
-    "sourceId": "kr-maekyung",
-    "sourceName": "매일경제 경제",
-    "lang": "ko",
-    "category": "Macro",
-    "region": "KR",
-    "aiAnalysis": null,
-    "specialistScore": 0,
-    "specialistAnalysis": null,
-    "isCurated": false
-  },
   "id_126z8rn": {
     "id": "id_126z8rn",
     "title": "한국 딜로이트 그룹, AI 전담 조직·자체 플랫폼 기반 기업 AI 전환 본격화 - 한국경제",
@@ -19552,22 +18826,6 @@
     "lang": "en",
     "category": "Markets",
     "region": "US",
-    "aiAnalysis": null,
-    "specialistScore": 0,
-    "specialistAnalysis": null,
-    "isCurated": false
-  },
-  "id_rztiym": {
-    "id": "id_rztiym",
-    "title": "초성 퀴즈 - 한국경제",
-    "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE4ySjc5YVlKSHg5cC12dWlUMnhCZ18wZ0twVTJhbTJYZGx6UldZclo0YlBmWjRfTkJJRGJuZjJwWVdWVlI0RE5wRVE5V3RBT0RWUzNB?oc=5",
-    "description": "초성 퀴즈  한국경제",
-    "date": "2025-08-19T12:10:37.000Z",
-    "sourceId": "kr-hankyung-eco",
-    "sourceName": "한국경제 경제",
-    "lang": "ko",
-    "category": "Macro",
-    "region": "KR",
     "aiAnalysis": null,
     "specialistScore": 0,
     "specialistAnalysis": null,
