@@ -1504,6 +1504,7 @@ button {
 .following-space      { border-left-color: #06b6d4 !important; }
 .following-crypto     { border-left-color: #f59e0b !important; }
 .following-nuclear    { border-left-color: #10b981 !important; }
+.following-power-infra { border-left-color: #f97316 !important; }
 
 /* 기업 칩 필터 컨테이너 */
 .company-chip-container {

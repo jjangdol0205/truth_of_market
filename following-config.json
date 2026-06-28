@@ -44,6 +44,15 @@
       "color": "#10b981",
       "searchKeywords": ["nuclear power", "SMR", "small modular reactor", "nuclear energy", "uranium", "clean energy", "power grid", "data center power"],
       "companyIds": [60, 61, 62, 63, 64, 65, 66, 67, 68, 69]
+    },
+    {
+      "id": "power-infra",
+      "name": "전력인프라",
+      "nameEn": "Power Infrastructure",
+      "emoji": "🔌",
+      "color": "#f97316",
+      "searchKeywords": ["power infrastructure", "electrical grid", "data center power", "switchgear", "power distribution", "electrical construction", "grid upgrade", "utility infrastructure"],
+      "companyIds": [70, 71, 72, 73, 74, 75, 76, 77, 78, 79]
     }
   ],
   "companies": [
@@ -114,6 +123,16 @@
     { "id": 66, "name": "Constellation Energy", "ticker": "CEG", "exchange": "NASDAQ", "industry": "nuclear", "searchQuery": "Constellation Energy CEG nuclear clean electricity" },
     { "id": 67, "name": "Centrus Energy", "ticker": "LEU", "exchange": "NYSE", "industry": "nuclear", "searchQuery": "Centrus Energy LEU uranium enrichment HALEU" },
     { "id": 68, "name": "BWX Technologies", "ticker": "BWXT", "exchange": "NYSE", "industry": "nuclear", "searchQuery": "BWX Technologies BWXT nuclear components" },
-    { "id": 69, "name": "Doosan Enerbility", "ticker": "034020.KS", "exchange": "KRX", "industry": "nuclear", "searchQuery": "Doosan Enerbility nuclear SMR power plant" }
+    { "id": 69, "name": "Doosan Enerbility", "ticker": "034020.KS", "exchange": "KRX", "industry": "nuclear", "searchQuery": "Doosan Enerbility nuclear SMR power plant" },
+    { "id": 70, "name": "Eaton Corporation", "ticker": "ETN", "exchange": "NYSE", "industry": "power-infra", "searchQuery": "Eaton ETN electrical infrastructure power management data center" },
+    { "id": 71, "name": "Vertiv Holdings", "ticker": "VRT", "exchange": "NYSE", "industry": "power-infra", "searchQuery": "Vertiv VRT data center power cooling infrastructure" },
+    { "id": 72, "name": "Quanta Services", "ticker": "PWR", "exchange": "NYSE", "industry": "power-infra", "searchQuery": "Quanta Services PWR power grid electric utility contractor" },
+    { "id": 73, "name": "Hubbell Incorporated", "ticker": "HUBB", "exchange": "NYSE", "industry": "power-infra", "searchQuery": "Hubbell HUBB electrical grid components utility" },
+    { "id": 74, "name": "Wesco International", "ticker": "WCC", "exchange": "NYSE", "industry": "power-infra", "searchQuery": "Wesco WCC electrical distribution infrastructure" },
+    { "id": 75, "name": "Atkore", "ticker": "ATKR", "exchange": "NYSE", "industry": "power-infra", "searchQuery": "Atkore ATKR electrical conduit raceway infrastructure" },
+    { "id": 76, "name": "Powell Industries", "ticker": "POWL", "exchange": "NASDAQ", "industry": "power-infra", "searchQuery": "Powell Industries POWL switchgear power distribution" },
+    { "id": 77, "name": "MYR Group", "ticker": "MYRG", "exchange": "NASDAQ", "industry": "power-infra", "searchQuery": "MYR Group MYRG electrical construction utility" },
+    { "id": 78, "name": "nVent Electric", "ticker": "NVT", "exchange": "NYSE", "industry": "power-infra", "searchQuery": "nVent NVT electrical enclosures thermal management" },
+    { "id": 79, "name": "Preformed Line Products", "ticker": "PLPC", "exchange": "NASDAQ", "industry": "power-infra", "searchQuery": "Preformed Line Products PLPC power line hardware" }
   ]
 }
