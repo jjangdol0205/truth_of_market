@@ -17,62 +17,6 @@
       "오프라인 분석 대기"
     ]
   },
-  "id_iotpq7": {
-    "id": "id_iotpq7",
-    "title": "Cleve Moler, Who Unlocked the Power of Computing for Millions, Dies at 86",
-    "link": "https://www.nytimes.com/2026/06/11/science/cleve-moler-dead.html",
-    "description": "He built interfaces that allowed engineers, scientists and everyday people to solve difficult problems without having to write the underlying code.",
-    "date": "2026-06-13T15:07:40.000Z",
-    "sourceId": "nyt-biz",
-    "sourceName": "NYT 비즈니스",
-    "lang": "en",
-    "category": "Markets",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "US"
-  },
-  "id_17hmw1v": {
-    "id": "id_17hmw1v",
-    "title": "[경제 포커스] ‘반도체 호황 쌍둥이’ 한국과 대만, 고용 성적표는 정반대 - 조선비즈 - Chosunbiz",
-    "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOVjUweVFkWDd5Xy1jLUZRVnBweUtrTy1rWlh0RDlIUjRGSG9qcnRXcDB2cldpM0VvcFhYeGZLMmtMN3FvMlFZUXB6WExlNjMzMWh3SldxOW1BNTB4NXF6dlh2RHl0OFZwYmI0RnRuVWJaOTltQUlvTktWWXkwNi0yOG9SYzlmZ9IBmgFBVV95cUxNblpMTlNSMFRaMi1sTHRGYXRra01ZaTdOZmVJcmVES2tzaGtnZk5vSlM3bDlzZVkwdHFOZy1MbGl1RTd3Nkp1WV91Q1owQVY2T1FsbWlGdG55Y25sSGxyMTkzVGY4OXhoRVhKNnY1N0Rka21YSWV0akN6clFFRVpROXdYMFRfYlRneTFnaGFUUXJTQjZOMldjM0lB?oc=5",
-    "description": "[경제 포커스] ‘반도체 호황 쌍둥이’ 한국과 대만, 고용 성적표는 정반대 - 조선비즈  Chosunbiz",
-    "date": "2026-06-13T01:31:00.000Z",
-    "sourceId": "korean-markets-trend",
-    "sourceName": "국내 금융/투자 종합 트렌드",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR"
-  },
-  "id_4rxo6t": {
-    "id": "id_4rxo6t",
-    "title": "Elon Musk’s Big Bet for SpaceX",
-    "link": "https://www.nytimes.com/video/business/100000010953560/elon-musk-spacex-initial-public-offering.html",
-    "description": "Elon Musk is taking SpaceX public and keeping almost all the power. Ryan Mac, a technology reporter for The Times, breaks down why the company’s record I.P.O. is both a big bet on Musk’s vision and a risk for investors.",
-    "date": "2026-06-13T16:26:23.000Z",
-    "sourceId": "nyt-biz",
-    "sourceName": "NYT 비즈니스",
-    "lang": "en",
-    "category": "Markets",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "US"
-  },
-  "id_gly9h5": {
-    "id": "id_gly9h5",
-    "title": "A Guide to Chicago’s South Side, Home of the New Obama Center",
-    "link": "https://www.nytimes.com/2026/06/12/travel/chicago-south-side-obama-center.html",
-    "description": "The Obama Presidential Center, opening on June 19, is poised to attract visitors to an often-overlooked area. Here’s what you’ll find in Hyde Park and beyond.",
-    "date": "2026-06-13T14:53:33.000Z",
-    "sourceId": "nyt-biz",
-    "sourceName": "NYT 비즈니스",
-    "lang": "en",
-    "category": "Markets",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "US"
-  },
   "id_hr6uuh": {
     "id": "id_hr6uuh",
     "title": "시장금리 상승에 예금금리 다시 3%대…은행권, 기업 자금 유치 총력전 - 데일리안",
@@ -493,356 +437,6 @@
     "isCurated": false,
     "region": "KR"
   },
-  "id_mcob2t": {
-    "id": "id_mcob2t",
-    "title": "역대급 상장 성공한 스페이스X, 함께 오를 한국 주식은? - 조선일보",
-    "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPYmdLVHdWQ1pmY2F5WjFfOU1IRmdYdWFvdkwwX3B0QzMzdHZTbDdCNk5tTnUxSkFPNWFHT0htZ1dtakxFR0g4YWl4bERvdXpJN3RfUldWd1JiRy1VT2YwWlZWRXFSZ2VlakxNVjhLSEpaU0tUamRMN0ZZa3h2MjNQOA?oc=5",
-    "description": "역대급 상장 성공한 스페이스X, 함께 오를 한국 주식은?  조선일보",
-    "date": "2026-06-13T20:30:00.000Z",
-    "sourceId": "chosun",
-    "sourceName": "조선일보 경제",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR"
-  },
-  "id_1gljqdd": {
-    "id": "id_1gljqdd",
-    "title": "'빚투 열풍' 은행권 신용대출 열흘새 1.6조 급증…금리 상단 6% 돌파 - 뉴스1",
-    "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1qYVBIVnppTEdoR09MeUZlU2h6VWc2S2xsMjBBVWhlbHdsM3FPV0VLdllzUEVXOFVSYVZDb3FybC1PUVpqY0hxUWhIUFBBWXlEZ2YwdWw2V3IwVjRQYXJQMVl3?oc=5",
-    "description": "'빚투 열풍' 은행권 신용대출 열흘새 1.6조 급증…금리 상단 6% 돌파  뉴스1",
-    "date": "2026-06-13T20:00:00.000Z",
-    "sourceId": "korean-markets-trend",
-    "sourceName": "국내 금융/투자 종합 트렌드",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR"
-  },
-  "id_z19tc2": {
-    "id": "id_z19tc2",
-    "title": "靑 \"환율 좀 안정돼야…대미투자 펀드 논의에 도움\" - v.daum.net",
-    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBnZzYzVW5vbHJrLXpmdEsxN0xscWtHZEpYdWdXRnB0YV9SNEVlOWhKcEVWTVZjXzc2WEZ0al9kQmpCYy12QjZQM2JTR1BuTlU?oc=5",
-    "description": "靑 \"환율 좀 안정돼야…대미투자 펀드 논의에 도움\"  v.daum.net",
-    "date": "2026-06-13T18:27:00.000Z",
-    "sourceId": "korean-markets-trend",
-    "sourceName": "국내 금융/투자 종합 트렌드",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR"
-  },
-  "id_1whrkka": {
-    "id": "id_1whrkka",
-    "title": "일 얘기는 천천히… 5번 홀에서 15번 홀 사이에 꺼내라 - 조선일보",
-    "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOU0hxZkVmbEhrSDRadVMwV194d2UySEg2eng5ZGdWRmEzTzdUTVMxSXA4Q3luOVF3cjFxZEdXYmdMbEZTcE9DZHRSdjZXMUJlNmFaNEV0UDhaeVFlUDRDRzZOREJjSnVPQTJndVlUMU5qUWdQNXpBeXlrSHg0b0ZhQzhGVXdpQQ?oc=5",
-    "description": "일 얘기는 천천히… 5번 홀에서 15번 홀 사이에 꺼내라  조선일보",
-    "date": "2026-06-13T18:06:48.000Z",
-    "sourceId": "chosun",
-    "sourceName": "조선일보 경제",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR"
-  },
-  "id_1kn9ul1": {
-    "id": "id_1kn9ul1",
-    "title": "At the Canadian Screen Awards, the Industry Steps Outside Hollywood’s Shadow",
-    "link": "https://www.nytimes.com/2026/06/13/world/canada/canadian-screen-awards-heated-rivalry-toronto.html",
-    "description": "No longer content with being just “Hollywood North,” the Canadian screen industry is asserting itself and telling its own stories.",
-    "date": "2026-06-13T17:16:45.000Z",
-    "sourceId": "nyt-biz",
-    "sourceName": "NYT 비즈니스",
-    "lang": "en",
-    "category": "Markets",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "US"
-  },
-  "id_ccq2yf": {
-    "id": "id_ccq2yf",
-    "title": "Iran says signing of Islamabad memorandum will not take place on Sunday - Ada Derana",
-    "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9ZRzFLV3I3bFI1aFlWX0Rfc2p0X3ZzdDZZNV9iM0E5QVFFRXhwX0NHMnlrV1FBcXhIbWlHcV9WcmwtUkhSblkzczBxYnhOZGFkYWhqQld4WS1VZ3hFbFc4cg?oc=5",
-    "description": "Iran says signing of Islamabad memorandum will not take place on Sunday  Ada Derana",
-    "date": "2026-06-13T16:14:39.000Z",
-    "sourceId": "global-invest",
-    "sourceName": "글로벌 투자 뉴스 (Reuters/Bloomberg/CNBC)",
-    "lang": "en",
-    "category": "Markets",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "US"
-  },
-  "id_1cwy1ve": {
-    "id": "id_1cwy1ve",
-    "title": "이 대통령, 이탈리아서 화상 수보회의…투표용지 사태·환율 등 보고 - KBS 뉴스",
-    "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBQalgybEdBa0ZHb2NCS2UzRlgxUXF5VnFCQlJMcngyYnRPZU93RUtfcExTRGV6VTRNeWpaZm1aUElMWC1DRHJIbjNUSS11OG5xWXF0aWRsS0o4Tkk?oc=5",
-    "description": "이 대통령, 이탈리아서 화상 수보회의…투표용지 사태·환율 등 보고  KBS 뉴스",
-    "date": "2026-06-13T16:06:00.000Z",
-    "sourceId": "korean-markets-trend",
-    "sourceName": "국내 금융/투자 종합 트렌드",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR"
-  },
-  "id_1v0vebz": {
-    "id": "id_1v0vebz",
-    "title": "반도체로 성장성 올리고 채권으로 하락장 방어…운용사 상품 키워드는 '균형 투자' - 더구루",
-    "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9helJTWFZzdmFvYlMySEZQRXBQa3RaY1hzOTBoQ2JKLW5pV3RrVHlWRG5RREttSHpYXzg2dUJDQWJTT1hnX19JVzhrOEcybTRNS21jeVhNb09oRmNmaXc?oc=5",
-    "description": "반도체로 성장성 올리고 채권으로 하락장 방어…운용사 상품 키워드는 '균형 투자'  더구루",
-    "date": "2026-06-13T15:00:08.000Z",
-    "sourceId": "korean-markets-trend",
-    "sourceName": "국내 금융/투자 종합 트렌드",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR"
-  },
-  "id_1s2efpi": {
-    "id": "id_1s2efpi",
-    "title": "Wages Are Falling. Wealth Is Surging. No Wonder Americans Are Unhappy.",
-    "link": "https://www.nytimes.com/2026/06/13/business/economy-trillionaire-wealth-wages.html",
-    "description": "As Elon Musk became the world’s first trillionaire, workers are facing higher prices and fears of A.I.-driven job losses.",
-    "date": "2026-06-13T12:28:36.000Z",
-    "sourceId": "nyt-biz",
-    "sourceName": "NYT 비즈니스",
-    "lang": "en",
-    "category": "Markets",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "US"
-  },
-  "id_cd7bc1": {
-    "id": "id_cd7bc1",
-    "title": "Weekend Morning Brew: SpaceX IPO Soars; GSK Acquires Nuvalent - GuruFocus",
-    "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQTnN4UWE1dGhtak5vVzVWb2lNWjdyVUs5V0V4VXl4Q2VPMERuenlQaHlzZlhXYnd0ZEY5TmtURmZ0YUJKR293VE1UM3Zrb1dZeENBQ2NpTUs4NkFsZjlpZVU5LUR1b3lmUU16ZS1mYTBiaGdSUDRIV29pTFByUnZJczRRckFkVXkwVzR1RXlVc1pZYkRNY3JQRVQ4alhsOUE?oc=5",
-    "description": "Weekend Morning Brew: SpaceX IPO Soars; GSK Acquires Nuvalent  GuruFocus",
-    "date": "2026-06-13T11:55:18.000Z",
-    "sourceId": "global-invest",
-    "sourceName": "글로벌 투자 뉴스 (Reuters/Bloomberg/CNBC)",
-    "lang": "en",
-    "category": "Markets",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "US"
-  },
-  "id_99w8s1": {
-    "id": "id_99w8s1",
-    "title": "靑 \"환율은 안정돼야\"…대미투자 앞두고 외환시장 관리 의지 시사 - 연합인포맥스",
-    "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBtdWJZOUlQSmFpNnhROXpaLVN0SzNuN01Wcld4eUdzOTJMN0JhYmRsb0RCU0lWMVAzcEU2SVdMNm1KOHRIX3VBNk9RSEpURXhacldBSWR2cHZSVFotYXgtMGhwR1BFRkwyUGNidFlTQ3k?oc=5",
-    "description": "靑 \"환율은 안정돼야\"…대미투자 앞두고 외환시장 관리 의지 시사  연합인포맥스",
-    "date": "2026-06-13T11:19:55.000Z",
-    "sourceId": "korean-markets-trend",
-    "sourceName": "국내 금융/투자 종합 트렌드",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR"
-  },
-  "id_1984jfz": {
-    "id": "id_1984jfz",
-    "title": "트럼프 입에 모든 게 달렸다…美 기준금리 향방은 [주末머니] - 아시아경제",
-    "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBIUzM4akJkZDQxT3pOckdoQTcwdC1kcE5YX0xrTWkwWDBUejFQQkgwRkZiUHplQTFsN19tZXFnUUhQZ2FDTjdCUU9Ld0x6YXdJOS1sX2xsMVhyTHVISmZJNA?oc=5",
-    "description": "트럼프 입에 모든 게 달렸다…美 기준금리 향방은 [주末머니]  아시아경제",
-    "date": "2026-06-13T10:21:00.000Z",
-    "sourceId": "korean-markets-trend",
-    "sourceName": "국내 금융/투자 종합 트렌드",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR"
-  },
-  "id_8zfdkv": {
-    "id": "id_8zfdkv",
-    "title": "Mega I.P.O. Frenzy Could Be a Harbinger of a Stock Bubble",
-    "link": "https://www.nytimes.com/2026/06/13/business/spacex-ipo-musk-stock-bubble.html",
-    "description": "Rampant enthusiasm is buoying tech shares to levels that defy gravity. Invest with caution, our columnist says.",
-    "date": "2026-06-13T09:01:43.000Z",
-    "sourceId": "nyt-biz",
-    "sourceName": "NYT 비즈니스",
-    "lang": "en",
-    "category": "Markets",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "US"
-  },
-  "id_g3ja6z": {
-    "id": "id_g3ja6z",
-    "title": "Despite US Help, Little Oil Has Gone Through Strait of Hormuz",
-    "link": "https://www.nytimes.com/2026/06/13/business/oil-strait-of-hormuz.html",
-    "description": "President Trump said more than 200 commercial vessels had safely traveled through the strait. That’s still far fewer than before the start of the war.",
-    "date": "2026-06-13T09:00:57.000Z",
-    "sourceId": "nyt-biz",
-    "sourceName": "NYT 비즈니스",
-    "lang": "en",
-    "category": "Markets",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "US"
-  },
-  "id_1fvuwx1": {
-    "id": "id_1fvuwx1",
-    "title": "6월 FOMC 금리 유지에 무게…관건은 케빈 워시 의장의 입 - v.daum.net",
-    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5tVGNyRlFzbjYzUGp1czExTUtkMVpzNjV1elR1cXNkc0ltZjBPTzRrS1BxTFAzMXVhWTZKN2t2NEpoUXF1WXkwSV94NmZCb2s?oc=5",
-    "description": "6월 FOMC 금리 유지에 무게…관건은 케빈 워시 의장의 입  v.daum.net",
-    "date": "2026-06-13T08:12:00.000Z",
-    "sourceId": "korean-markets-trend",
-    "sourceName": "국내 금융/투자 종합 트렌드",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR"
-  },
-  "id_1g0lcx1": {
-    "id": "id_1g0lcx1",
-    "title": "용인 반도체클러스터 ‘셧다운’…배처플랜트 설치 돌파구 찾나 - 대한경제",
-    "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE4wdXMzRXZBWXJIcFhxUHJpOVJMcUJmS1JOcmFGLTlJSGZsOENzaDlnT2VKV3E2cl9NU2s1WDhPQjRDdDY0RFptWENlRjhTYllBU0d6R284dFNsQkpvQWgxWVFCeFZxczZWZ21NWWJaLVFOZExX?oc=5",
-    "description": "용인 반도체클러스터 ‘셧다운’…배처플랜트 설치 돌파구 찾나  대한경제",
-    "date": "2026-06-13T07:20:22.000Z",
-    "sourceId": "korean-markets-trend",
-    "sourceName": "국내 금융/투자 종합 트렌드",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR"
-  },
-  "id_wxq1uw": {
-    "id": "id_wxq1uw",
-    "title": "“우리도 성과급 늘려 달라”…유통업계까지 번진 노사 갈등 - 매일경제",
-    "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBtdG5fUkRwVENidTJxN3hRYURTNHlqLUVCQk5pQ0IzQ3JPai1vVWNTbG5jaG44emhwUXZocEo5UXpNVElWZVY5aUwxOFZrUWJpQ2VpUw?oc=5",
-    "description": "“우리도 성과급 늘려 달라”…유통업계까지 번진 노사 갈등  매일경제",
-    "date": "2026-06-13T06:39:44.000Z",
-    "sourceId": "maekyung",
-    "sourceName": "매일경제 경제",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "region": "KR",
-    "isCurated": false
-  },
-  "id_66w9dh": {
-    "id": "id_66w9dh",
-    "title": "환율 1600원 뚫리면 물가 폭탄…한국은행이 한꺼번에 0.5%P 올릴까 [주末머니] - v.daum.net",
-    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBXTC1WT2JwRWVUeFluRzJEdVpWNWFPaXRuLUpOWTBpMVhBVV92WmVIYlE1Sm5EWnpzNFJxTTFkVVk2M20ybG5QQWYtbGFxdVk?oc=5",
-    "description": "환율 1600원 뚫리면 물가 폭탄…한국은행이 한꺼번에 0.5%P 올릴까 [주末머니]  v.daum.net",
-    "date": "2026-06-13T06:16:34.000Z",
-    "sourceId": "korean-markets-trend",
-    "sourceName": "국내 금융/투자 종합 트렌드",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR"
-  },
-  "id_1xag1fx": {
-    "id": "id_1xag1fx",
-    "title": "머스크, 세계 최초 ‘조만장자’ 됐다... 대만 GDP보다 많아 - 조선일보",
-    "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPbjczeU4ydHFBNDhhSmxFNlg0b1Atb0VsQ1Zla0RNVXFEZEdKcG40Q2xsaURqMmppTi1oRnE3eV9VZjhEXzNodFdTenl4LXZpT253NWJYQ1FkMzRDVEJjR184QzhkbUthRFJaUDhfZmlPZ0ZWdXNIenp1X0xXanVfamE1QQ?oc=5",
-    "description": "머스크, 세계 최초 ‘조만장자’ 됐다... 대만 GDP보다 많아  조선일보",
-    "date": "2026-06-13T06:01:37.000Z",
-    "sourceId": "chosun",
-    "sourceName": "조선일보 경제",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR"
-  },
-  "id_1a6dz25": {
-    "id": "id_1a6dz25",
-    "title": "청와대 “미 재무부, 한국 환율 사정 깊이 이해…대미투자, 외환시장 안정화 돼야” - 경향신문",
-    "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1ZenlLR2tzZVBkSXBkOXU5bXYtZWxkeUtoNUtfLVFzMi1ldzdtM2RHMkk4V3B1aVRTZE5FNmU3ODB5Xzdtbzl0MTBkNmM1ajIxRWpXQ1FKY2pYQdIBX0FVX3lxTE9JZjgzODJvTDZYTkR2Z1lpa2o0Ni1Rc202VXhjRDJKdk1rWEdGSjFTcmh4ZjUzRkpfOGVOaVFFRzNweThkbkpLWDVIV3dsX3RlNlEtZmp6MDdUVlV0UEZj?oc=5",
-    "description": "청와대 “미 재무부, 한국 환율 사정 깊이 이해…대미투자, 외환시장 안정화 돼야”  경향신문",
-    "date": "2026-06-13T06:00:00.000Z",
-    "sourceId": "korean-markets-trend",
-    "sourceName": "국내 금융/투자 종합 트렌드",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR"
-  },
-  "id_eijwfi": {
-    "id": "id_eijwfi",
-    "title": "고압경제 후폭풍, 전쟁 끝나면 시작…로켓과 깃털 효과, 이번에는[한상춘의 국제경제 심층읽기] - 한경매거진&북",
-    "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1kQTk4ZFFjdXZpekg1enJCTXZ2QWdWR09ZbGZoSGR0bFRMcEg2UHN4a1hIVVF4MjltblZWeVBfTUdQdVpweDlpeWZWbUtiVUxCX2hsUjFjZXI0eE5UWVZrWGlPbU10YUFLdHJVWg?oc=5",
-    "description": "고압경제 후폭풍, 전쟁 끝나면 시작…로켓과 깃털 효과, 이번에는[한상춘의 국제경제 심층읽기]  한경매거진&북",
-    "date": "2026-06-13T05:20:00.000Z",
-    "sourceId": "hankyung-eco",
-    "sourceName": "한국경제 경제",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "region": "KR",
-    "isCurated": false
-  },
-  "id_1dd0g5d": {
-    "id": "id_1dd0g5d",
-    "title": "“챗GPT·클로드 하나쯤은 쓰시죠?”…카드사들 ‘AI 구독자’ 캐시백 경쟁 - 매일경제",
-    "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1iamNFajBoeVN0VDVGdFZzTmJONVhEWHNxSU56WlQ5OVJyRkMtQnk2TDhuN0VNMWhJOWNxMkt5MDYtdnV1NXgzbGRYYjl4RHVrT2dXSA?oc=5",
-    "description": "“챗GPT·클로드 하나쯤은 쓰시죠?”…카드사들 ‘AI 구독자’ 캐시백 경쟁  매일경제",
-    "date": "2026-06-13T04:49:50.000Z",
-    "sourceId": "maekyung",
-    "sourceName": "매일경제 경제",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR"
-  },
-  "id_5n3meu": {
-    "id": "id_5n3meu",
-    "title": "U.S. Bars Foreigners From Using Anthropic’s Most Advanced A.I. Models",
-    "link": "https://www.nytimes.com/2026/06/12/technology/anthropic-mythos-fable5-blocked.html",
-    "description": "The company said on Friday night that the federal government had ordered limits on its Mythos and Fable 5 A.I. systems, citing national security concerns.",
-    "date": "2026-06-13T03:48:18.000Z",
-    "sourceId": "nyt-tech",
-    "sourceName": "NYT 테크놀로지",
-    "lang": "en",
-    "category": "Tech",
-    "aiAnalysis": null,
-    "region": "US",
-    "isCurated": false
-  },
-  "id_aiiuwp": {
-    "id": "id_aiiuwp",
-    "title": "서울 아파트 전세난에…비아파트도 이사 대신 ‘갱신’ 택해 - 동아일보",
-    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9lNVF4M3BQejdrRnpJRUJ2Y2FNSTVHd0NkYXBQS0xmRVU1d2I0Wk1ZeWhjWk40Q3dZZU1pdi0tLVlQa1RzTlk4S21tbG1nLXRqQ2JaNmw4SXI1TmRDNzM1dmhPRVc5Q1A3Y2tkVGxhem1NX2tWUXfSAWZBVV95cUxQOE5GN1J3S3dBRG1JaTQtRGJ0empVU0J3YVFxSzdPbU5YOFFDRm55X0JkaVNBUGJGZjdjdXA2RkFHc1RyOEpCUEhxNDZMRE15ZmJqVlFwcVEzN1BENV95Uzg4b3FzR1E?oc=5",
-    "description": "서울 아파트 전세난에…비아파트도 이사 대신 ‘갱신’ 택해  동아일보",
-    "date": "2026-06-13T02:48:45.000Z",
-    "sourceId": "donga",
-    "sourceName": "동아일보 경제",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR"
-  },
-  "id_e6pdtz": {
-    "id": "id_e6pdtz",
-    "title": "돔페리뇽 마시며... 월가, 스페이스X 상장 호화파티 - 조선일보",
-    "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNa056YTB2eFhJYi1PNVAxTDRxUThNM1pKQmc3MzVpMEc4emFoZkZhdi1MTE5ldUEzYUlRekNNclJ2MjczQ0tMSzAxR1JzQTBxdFc5Si1TWHdqRUZpTjRjLVhDeWJoZGd6TDNUU0ZYbnAwN0x2TUdSZVV5dXA0S3F4WWhEaw?oc=5",
-    "description": "돔페리뇽 마시며... 월가, 스페이스X 상장 호화파티  조선일보",
-    "date": "2026-06-13T01:41:36.000Z",
-    "sourceId": "chosun",
-    "sourceName": "조선일보 경제",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR"
-  },
   "id_urcfw4": {
     "id": "id_urcfw4",
     "title": "Merger Cleared, David Ellison to Join Trump at U.F.C. Bouts",
@@ -991,20 +585,6 @@
     "region": "KR",
     "isCurated": false
   },
-  "id_1ts4xer": {
-    "id": "id_1ts4xer",
-    "title": "수산세보틱스(017550)::한경유레카 NO.1 AI투자서비스 - 한경유레카",
-    "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1jaHU1NzVkOWlLNWI5aW9kVnpqNnBmSDVvZDIzOVMtQy14cHo5R29xTTdlVkVsd0RpVDN0YmF2SDBoZTh3SldjdktVbFdFZm8yT3dB?oc=5",
-    "description": "수산세보틱스(017550)::한경유레카 NO.1 AI투자서비스  한경유레카",
-    "date": "2026-06-13T08:30:15.000Z",
-    "sourceId": "hankyung-eco",
-    "sourceName": "한국경제 경제",
-    "lang": "ko",
-    "category": "Macro",
-    "aiAnalysis": null,
-    "isCurated": false,
-    "region": "KR"
-  },
   "id_7q7qva": {
     "id": "id_7q7qva",
     "title": "정부, 올 3분기 국민참여성장펀드 6000억 추가 출시 - 한국경제",
@@ -1088,20 +668,6 @@
     "aiAnalysis": null,
     "isCurated": false,
     "region": "US"
-  },
-  "id_1hcf7qb": {
-    "id": "id_1hcf7qb",
-    "title": "Iran says draft US deal includes oil sanctions waiver and asset release - Ada Derana",
-    "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE81RFZvaVRuLW9VRVgzeGdiSDl4Tzh4V3hGTzlieHdDSEh0bC1PUWpTWUphc2R1ZGk2enYzVFgxWE1jNEJlTGo4aktTNVlZV2RYcG5Od21iblJIWGVOSzJ1Qg?oc=5",
-    "description": "Iran says draft US deal includes oil sanctions waiver and asset release  Ada Derana",
-    "date": "2026-06-13T07:00:00.000Z",
-    "sourceId": "global-invest",
-    "sourceName": "글로벌 투자 뉴스 (Reuters/Bloomberg/CNBC)",
-    "lang": "en",
-    "category": "Markets",
-    "aiAnalysis": null,
-    "region": "US",
-    "isCurated": false
   },
   "id_1xr31lx": {
     "id": "id_1xr31lx",
@@ -4406,20 +3972,6 @@
     "specialistAnalysis": [
       "오프라인 분석 대기"
     ]
-  },
-  "id_33sfsn": {
-    "id": "id_33sfsn",
-    "title": "SpaceX Stock Surges as Musk Becomes First Trillionaire - MEXC",
-    "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE8zdzBwRjR5cENzQUFRWUNwVHVRVXNtdEVxazE3TEM2Umt2NWhJT0doMldBdk90VEV5Yk8xZEdBZ1BIVUJPaXhLVw?oc=5",
-    "description": "SpaceX Stock Surges as Musk Becomes First Trillionaire  MEXC",
-    "date": "2026-06-13T19:41:07.000Z",
-    "sourceId": "global-invest",
-    "sourceName": "글로벌 투자 뉴스 (Reuters/Bloomberg/CNBC)",
-    "lang": "en",
-    "category": "Markets",
-    "aiAnalysis": null,
-    "region": "US",
-    "isCurated": false
   },
   "id_v6wif3": {
     "id": "id_v6wif3",
@@ -14673,10 +14225,22 @@
     "lang": "ko",
     "category": "Macro",
     "region": "KR",
-    "aiAnalysis": null,
+    "aiAnalysis": {
+      "translatedTitle": "티웨이항공 소액주주, '소노인터 IPO'에 반발하며 금융당국에 탄원서 제출",
+      "summary": [
+        "티웨이항공의 소액주주들이 대명소노그룹 계열사인 소노인터내셔널의 기업공개(IPO) 추진에 반발하며 금융당국에 탄원서를 제출했습니다. 소액주주들은 이번 IPO가 대명소노그룹의 이익만을 위한 것이며, 티웨이항공의 기업 가치를 훼손할 수 있다고 주장하고 있습니다.",
+        "대명소노그룹은 티웨이항공의 모회사인 티웨이홀딩스의 최대주주이며, 소노인터내셔널은 대명소노그룹의 핵심 레저 사업 부문입니다. 소액주주들은 그룹 차원에서 티웨이항공에 대한 지원을 소홀히 하고 오히려 소노인터내셔널의 상장을 추진하는 것에 불만을 표출하고 있습니다.",
+        "이러한 소액주주의 반발은 지배구조 투명성 및 주주 가치 제고에 대한 요구가 증대되고 있는 국내 자본시장의 현주소를 반영하며, 금융당국의 판단에 따라 소노인터내셔널 IPO 일정 및 기업 가치 평가에 영향을 미칠 수 있습니다."
+      ],
+      "implications": [
+        "티웨이항공 주주들은 기업 지배구조 및 주주환원 정책의 변화 가능성을 주시해야 합니다. 소액주주의 탄원 결과에 따라 그룹사의 지배구조 개편 압력이 커질 수 있으며, 이는 티웨이항공의 주가에 단기적인 변동성을 유발할 수 있습니다.",
+        "향후 대명소노그룹의 소노인터내셔널 IPO 진행 과정과 금융당국의 심사 결과가 핵심 관전 포인트입니다. 지배구조 관련 논란은 국내 다른 기업들의 IPO 및 합병·분할 과정에서도 유사한 주주 반발을 초래할 수 있으므로, 관련 사례들을 주시할 필요가 있습니다."
+      ],
+      "isPremiumCuration": true
+    },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": false
+    "isCurated": true
   },
   "id_17hh834": {
     "id": "id_17hh834",
@@ -14689,10 +14253,22 @@
     "lang": "ko",
     "category": "Macro",
     "region": "KR",
-    "aiAnalysis": null,
+    "aiAnalysis": {
+      "translatedTitle": "회생 신청 후폭풍: 금감원, JTBC·중앙일보 회계 공시 정밀 검토 착수",
+      "summary": [
+        "JTBC와 중앙일보 등 중앙그룹 계열사들이 회생 신청을 하면서 발생한 후폭풍으로, 금융감독원(금감원)이 이들 기업의 회계 공시 내용을 정밀 검토하기 시작했습니다. 이는 회생 신청의 배경과 과정에서 발생했을 수 있는 재무 건전성 및 공시의 적정성 문제를 파악하기 위함입니다.",
+        "중앙그룹은 최근 재무적 어려움을 겪으며 주요 계열사들이 법정 관리를 신청하는 등 유동성 위기에 직면했습니다. 금감원의 이번 검토는 단순히 회계 처리 적정성 여부를 넘어, 그룹 전반의 재무 위험과 공시 투명성 확보에 초점을 맞출 것으로 예상됩니다.",
+        "금감원의 감리 결과에 따라 JTBC 및 중앙일보를 포함한 중앙그룹 계열사들은 회계 처리 기준 위반에 따른 제재를 받을 수 있으며, 이는 그룹의 신뢰도와 향후 회생 절차 진행에 중대한 영향을 미칠 수 있습니다."
+      ],
+      "implications": [
+        "중앙그룹 관련 채권자 및 투자자들은 금감원의 감리 결과와 그에 따른 후속 조치를 면밀히 주시해야 합니다. 회계 부정이나 공시 위반이 확인될 경우, 자산 가치 평가 및 채권 회수 가능성에 부정적인 영향을 미칠 수 있습니다.",
+        "이번 사태는 국내 미디어 및 콘텐츠 산업 내 다른 기업들의 재무 건전성 및 회계 투명성 관리에 대한 경각심을 높일 것으로 보입니다. 투자자들은 기업의 재무제표와 공시 내용에 대한 더욱 철저한 분석이 필요함을 시사합니다."
+      ],
+      "isPremiumCuration": true
+    },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": false
+    "isCurated": true
   },
   "id_1yqq2ey": {
     "id": "id_1yqq2ey",
@@ -18953,8 +18529,12 @@
     "followingIndustry": "space",
     "followingCompanyIds": [],
     "aiAnalysis": null,
-    "specialistScore": 0,
-    "specialistAnalysis": null,
+    "specialistScore": 4,
+    "specialistAnalysis": [
+      "스페이스X의 반덴버그 우주군 기지에서의 스타링크 발사 소식은 위성 인터넷 서비스 확장을 위한 지속적인 노력을 보여주는 일상적인 운영 뉴스입니다.",
+      "성공적인 발사는 스타링크의 글로벌 네트워크를 강화하고 서비스 품질을 향상시키는 데 기여하며, 장기적인 성장 기반을 다지는 중요한 과정입니다.",
+      "미국 시장에서는 통신 인프라 및 우주 산업 관련 기업들의 꾸준한 발전을 시사하지만, 직접적인 시장 변동성보다는 장기적인 산업 동향에 더 큰 영향을 미칩니다."
+    ],
     "isCurated": false
   },
   "id_1k39mxm": {
@@ -22508,6 +22088,815 @@
       3
     ],
     "companyTicker": "GOOGL",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_xx0nbo": {
+    "id": "id_xx0nbo",
+    "title": "Bitcoin falls below $60,000, on track for a rare back-to-back quarterly loss - CoinDesk",
+    "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOOHRCWjlYSFA1ak9lQ3dBQ2paWDRaSWhoTHdnamx1T2NpSkMtdzNibElvVkhfdlIxU2wtMUR1Ml9VMVhwVG5BQnhqNDljczAwU1dtb0lJT2pwMlpOTWU2X2VWdEQzZ0M3ZE9YeG1WbWZGaHk2dDFuU0VwYmEzWEZ4WlZmaGFCbkxCbmpsWkloY015cmFGcG0tbXp6c2pXWk9YaG1HZERGTVNRajdDZXdkaG16NG1ZSTZjLXRpM0ln?oc=5",
+    "description": "Bitcoin falls below $60,000, on track for a rare back-to-back quarterly loss  CoinDesk",
+    "date": "2026-06-28T07:11:56.000Z",
+    "sourceId": "following-industry-crypto",
+    "sourceName": "₿ Crypto & Blockchain News",
+    "lang": "en",
+    "category": "Crypto & Blockchain",
+    "region": "US",
+    "followingIndustry": "crypto",
+    "followingCompanyIds": [
+      9,
+      12,
+      29
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 6,
+    "specialistAnalysis": [
+      "비트코인이 6만 달러 아래로 하락하며 이례적인 분기 연속 손실을 기록할 전망이어서 암호화폐 시장에 대한 투자 심리가 위축되고 있습니다.",
+      "주요 지지선 붕괴는 투자자들 사이의 매도 압력 증가와 시장의 위험 회피 심리를 반영하며, 이는 더 넓은 자산 시장에도 영향을 미칠 수 있습니다.",
+      "미국 시장 투자자들에게는 암호화폐 노출 포트폴리오의 리스크 관리 필요성을 강조하며, 전반적인 위험 선호도 변화의 신호로 해석될 수 있습니다."
+    ],
+    "isCurated": false
+  },
+  "id_2b9r5z": {
+    "id": "id_2b9r5z",
+    "title": "In Idaho, the next generation of US nuclear reactors nears reality - The Economic Times",
+    "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNS1dmdzBqbXkxaWI4RWtMSVdKQnpheHNYa2l4RGpqX3R0Nl9VZW0ybWVQSnRoNmN1QzdMa2owTDRGazVlZWFfY1ZEaUN4UmZaaE1UOG94TDdwRHdlVzg2SFNWdVVaT1dDd2V5RXpXMlZKVmVZcmZ6VzJDZ1hONXBJbk5oWk51WGNlY0NDbEIzZElnSHdoeVRqS0JUZjZrVWwxeVB5Ukpxd3dna3JDTWd5eEVtQUpVaTZPZHNoLXQ5S1lFemVxRjdqVVppTC14VmlnQ2ZuNVoxTXNLYXRERV9WVW5OSHo2SFHSAewBQVVfeXFMT2JIWXdRNjFPNk1PY3lGdkVtbzZlWEFkdWRvdHhiRlMtX1ZOZGtSbHFxMW5GOXBOakRKbDRTUTExMkhZamRrVS1yQU83dEx5TS0yVVBDYVBydHVicEVjX2QyVEktbmZiSmZZckZUS0R1SGduTXZZa0doQWxRTFFBek9ocE9jX3ZteTVtdzZmR3liSkp5bFpYLWlHTks3Z21FSE9mOEpMSmhFd3pZSXRVeVo1UDZzU3hFdExnTTIzMmt0eVNSSk9LUzJJcURWbm9jQTZMdzFvcHhIWkZiWkpDUGJBaGVLLUlDY2FlNW0?oc=5",
+    "description": "In Idaho, the next generation of US nuclear reactors nears reality  The Economic Times",
+    "date": "2026-06-28T05:54:45.000Z",
+    "sourceId": "following-industry-nuclear",
+    "sourceName": "⚡ Nuclear & Energy News",
+    "lang": "en",
+    "category": "Nuclear & Energy",
+    "region": "US",
+    "followingIndustry": "nuclear",
+    "followingCompanyIds": [
+      9
+    ],
+    "aiAnalysis": {
+      "translatedTitle": "미국 아이다호주, 차세대 원자로 개발 현실화 임박",
+      "summary": [
+        "미국 아이다호주에서 차세대 원자로 개발이 현실화 단계에 접어들고 있으며, 이는 AI 데이터 센터의 급증하는 전력 수요에 대한 장기적인 해결책으로 중요한 의미를 가집니다.",
+        "이러한 신형 원자로의 개발은 미국의 에너지 독립성 강화와 전력망 안정화에 크게 기여할 것으로 예상되며, 에너지 안보 측면에서 중요한 진전으로 평가됩니다.",
+        "장기적으로는 Big Tech 기업들의 AI 성장 동력을 안정적으로 뒷받침하고, 관련 에너지 인프라 및 기술 기업들의 주가에 긍정적인 영향을 미칠 것으로 전망됩니다."
+      ],
+      "implications": [
+        "차세대 원자력 발전 기술의 진보는 안정적이고 대규모 전력 공급이 필수적인 AI 데이터 센터 산업의 핵심적인 에너지 솔루션으로 부상할 것이며, 이는 전력 공급의 패러다임을 바꿀 잠재력을 가집니다.",
+        "원자력 발전 기술 개발 및 건설 관련 기업들, 그리고 전력망 현대화 프로젝트에 참여하는 기업들에게 투자 기회가 확대될 수 있으므로, 관련 기업들의 수주 및 기술 개발 동향을 면밀히 주시해야 합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 7,
+    "specialistAnalysis": [
+      "아이다호에서 차세대 미국 원자로 개발이 현실화되고 있다는 소식은 AI 데이터 센터의 전력 수요 증가에 대한 장기적 해결책으로 중요합니다.",
+      "이러한 진전은 미국의 에너지 독립성 강화와 전력망 안정화에 기여하며, 에너지 관련 기업들의 투자 기회를 창출할 수 있습니다.",
+      "장기적으로는 Big Tech의 AI 성장 동력을 뒷받침하고 관련 인프라 및 기술 기업의 주가에 긍정적인 영향을 미칠 수 있습니다."
+    ],
+    "isCurated": true
+  },
+  "id_1pbavk8": {
+    "id": "id_1pbavk8",
+    "title": "Nuclear Energy Stocks For AI Data Center Power Demand - simplywall.st",
+    "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOME1aeENDWS1tM00xOGdrRzUyODlCVFYxR0h2eVJRYVhzb0lZSElZcVJjY1EwbjE4Z0JWYTVVZmszakRTRmh6Znk0RmN0d19HUG5LOWJrRkxKT1pGRjBaUnkwWE1hZGN6R0xUUmJnbnh2bVk1LTdXd0RIYjZaMzVUTzhwUWxVRnpJVEV6SEVFZV9BNVJtRkpjSi1MSGltWDhsY0ZyNHpBSmFkQTBDUHAydVJVSm9laDJxNzJaTXlzOXl6MTBoblHSAcsBQVVfeXFMT3VYdVlWNHNCU2VmaVVNRDNDdWdQMlhjdzB4WndKeld6SGtrRnFmUFdxZ09oSnN6OUVlTzZfbVRlUm5GUTBVeDcxai03NFN3SFZKem5PRHdpcEdDQnRtYVI5VGxEWlEteDlsM184VEI4b292OW5yQ09JQ296REQ4UnM1S2lsZ0o3YnVNcjdfazFCQlJ0Q3A4Y0d5c3cxM1l1Z2IxX0dKaF9XZXRoS1ZZaEZEWnVYVWVEcEF0VVBGTE4wVnVNMU1hbl9RVFk?oc=5",
+    "description": "Nuclear Energy Stocks For AI Data Center Power Demand  simplywall.st",
+    "date": "2026-06-28T03:55:12.000Z",
+    "sourceId": "following-industry-power-infra",
+    "sourceName": "🔌 Power Infrastructure News",
+    "lang": "en",
+    "category": "Power Infrastructure",
+    "region": "US",
+    "followingIndustry": "power-infra",
+    "followingCompanyIds": [
+      12,
+      20
+    ],
+    "aiAnalysis": {
+      "translatedTitle": "AI 데이터센터 전력 수요 증가, 원자력 에너지 주식에 대한 관심 증폭",
+      "summary": [
+        "AI 기술 발전과 함께 데이터 센터의 전력 수요가 폭발적으로 증가하면서, 안정적이고 대규모 전력 공급이 가능한 원자력 에너지가 핵심 대안으로 급부상하고 있습니다.",
+        "이는 AI 성장의 주요 병목 중 하나인 에너지 공급 문제를 해결하려는 시장의 움직임을 명확히 보여주며, 글로벌 에너지 믹스에서 원자력의 중요성이 재조명되고 있음을 시사합니다.",
+        "미국 시장에서는 원자력 발전 및 관련 인프라 기업들이 AI 섹터 성장의 간접적인 주요 수혜주로 인식되며, 투자자들의 포트폴리오에서 이들 기업에 대한 배분이 증가하는 추세입니다."
+      ],
+      "implications": [
+        "원자력 발전 기술을 보유하거나 원전 건설 및 유지보수, 핵연료 공급 등의 인프라를 제공하는 기업들은 장기적인 성장 잠재력을 가질 것으로 예상됩니다. 특히 차세대 소형모듈원자로(SMR) 기술 개발 기업에 주목할 필요가 있습니다.",
+        "AI 관련 직접 투자 외에, AI 인프라 확장에 필수적인 에너지 공급원으로서 원자력 에너지 섹터를 포트폴리오에 포함하여 간접적인 성장 수혜를 노리는 전략을 고려할 수 있습니다. 정부 정책 및 규제 변화가 주요 변수가 될 것입니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 8,
+    "specialistAnalysis": [
+      "AI 데이터 센터의 급증하는 전력 수요를 충족시키기 위한 대안으로 원자력 에너지 관련 주식에 대한 관심이 높아지고 있습니다.",
+      "이것은 AI 기술 발전의 핵심 병목 중 하나인 에너지 공급 문제를 해결하려는 시장의 움직임을 보여주며, 관련 기업들의 성장 잠재력을 부각합니다.",
+      "미국 시장에서 원자력 발전 및 관련 인프라 기업들은 AI 섹터 성장의 간접 수혜주로 부상하며 투자자들의 포트폴리오 재조정에 영향을 줄 수 있습니다."
+    ],
+    "isCurated": true
+  },
+  "id_1bf0p7z": {
+    "id": "id_1bf0p7z",
+    "title": "Why GE Vernova (GEV) Is Down 5.8% After Joining Russell Top 50 And Securing US$2.4 Billion In AI Data Center Orders - simplywall.st",
+    "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOMUhBSnZBZGViSzRub1ZuYUVCUmx2bGNDSGgzZzNwdVBpRFA3VVFNcG1TdEd6Vm5JcXo1YkdEblNQQXBJbE1YQVpycjRqbl9URTJsV2pPT29JNm1IdWZHVS05VXJPcTMxS2RWRlYzWk9pSnk1LUhlSWV5RExUUEhTd1V1aWNpV1ZXRndXXy1XdGI3Ni0wSENwYkN0bTRxamdaYVVweVdSdlZzMTJDb3RUaS1hLWFqZnNBNXNaQVd6a0xZTGI5WHVPa1RNd9IB0AFBVV95cUxNYUgwektzcW9kM2NWWnl2Y2xYOExzaEtFWGFaUG1SUXFCSS1LWmFDN2dDVDZMTzFmTXBUMzJxSlJzNEs3bWl3aU5ULUstTzlub24yc3p3SGFOZEt4OVNjWnBPUGw4ekFHZ1lzUjZ2b2JEQXZRR0d2OU5fX2pzUkFoUE02RTh5MzNUZC1NX0FwWm14OEJBMzNQTXgtaEVSclZYNU5obUV0bjJieFBVSm1kVlh4ZW9Tb3BFWHVoYWRGVXI3YWR5TDBxM0tMMDZNaDhY?oc=5",
+    "description": "Why GE Vernova (GEV) Is Down 5.8% After Joining Russell Top 50 And Securing US$2.4 Billion In AI Data Center Orders  simplywall.st",
+    "date": "2026-06-28T02:24:57.000Z",
+    "sourceId": "following-industry-power-infra",
+    "sourceName": "🔌 Power Infrastructure News",
+    "lang": "en",
+    "category": "Power Infrastructure",
+    "region": "US",
+    "followingIndustry": "power-infra",
+    "followingCompanyIds": [
+      9,
+      12,
+      20,
+      61
+    ],
+    "aiAnalysis": {
+      "translatedTitle": "GE 버노바, 러셀 Top 50 편입 및 24억 달러 AI 데이터 센터 수주에도 주가 5.8% 하락 분석",
+      "summary": [
+        "GE Vernova(GEV)는 최근 러셀 Top 50 지수에 편입되고 24억 달러 규모의 AI 데이터 센터 관련 신규 주문을 확보하는 등 긍정적인 소식이 있었음에도 불구하고 주가가 5.8% 하락했습니다.",
+        "이러한 주가 하락은 시장이 이미 해당 호재를 선반영했거나, 단기 차익 실현 매물이 출회되었을 가능성, 또는 투자자들이 다른 잠재적 우려 사항을 반영하고 있음을 시사합니다.",
+        "이는 AI 에너지 인프라 관련 기업들의 밸류에이션과 실제 주가 움직임 사이에 괴리가 발생할 수 있음을 보여주는 사례로, 시장의 복합적인 심리가 작용하고 있음을 나타냅니다."
+      ],
+      "implications": [
+        "긍정적인 사업 실적과 지수 편입 등의 호재에도 불구하고 주가가 하락하는 경우, 시장은 이미 기대치를 주가에 반영했거나 다른 리스크 요인을 고려하고 있을 수 있으므로 투자에 신중해야 합니다.",
+        "투자자들은 AI 에너지 인프라 관련 기업에 투자할 때 단기적인 호재보다는 장기적인 성장 잠재력과 함께 과열된 밸류에이션, 잠재적 리스크 요인 등을 종합적으로 분석해야 하며, 이러한 시장의 움직임은 다른 관련 기업들의 주가에도 영향을 미칠 수 있습니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 7,
+    "specialistAnalysis": [
+      "GE Vernova가 Russell Top 50 편입 및 24억 달러 규모의 AI 데이터 센터 주문 확보에도 불구하고 5.8% 하락한 것은 시장의 복잡한 심리를 보여줍니다.",
+      "이러한 움직임은 긍정적인 뉴스에도 불구하고 투자자들이 이미 해당 호재를 주가에 반영했거나, 단기 차익 실현, 또는 다른 우려 사항이 있음을 시사합니다.",
+      "미국 시장에서 AI 에너지 인프라 관련 기업들의 밸류에이션과 실제 주가 움직임 간의 괴리를 주시해야 하며, 이는 다른 관련 기업에도 영향을 줄 수 있습니다."
+    ],
+    "isCurated": true
+  },
+  "id_ya8vsq": {
+    "id": "id_ya8vsq",
+    "title": "Should You Buy Bitcoin While It's Under $70,000? The Answer Might Surprise You. - Yahoo Finance",
+    "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPSUdmS2VoNUQtcDRwdDJ6TDZ2MmpQMnBiNnBKUDBlV1UwTHZxdGdVTDJQbzFjcF9BMm16WHZWVlRJYlU0UnlLTDVlTnZWZGxXTUVnaE9lUUdoUmk2eHFUYkJXRVpDLXlUUEJUdmNpWVZTaXBRRk1Zc1BQa1VHdHpiYk9FNmxaQ2k3NWpRMEdZY0dfWjN6OUE?oc=5",
+    "description": "Should You Buy Bitcoin While It's Under $70,000? The Answer Might Surprise You.  Yahoo Finance",
+    "date": "2026-06-28T00:01:00.000Z",
+    "sourceId": "following-industry-crypto",
+    "sourceName": "₿ Crypto & Blockchain News",
+    "lang": "en",
+    "category": "Crypto & Blockchain",
+    "region": "US",
+    "followingIndustry": "crypto",
+    "followingCompanyIds": [
+      29
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 5,
+    "specialistAnalysis": [
+      "비트코인이 7만 달러 아래로 내려간 상황에서 매수할지에 대한 질문은 암호화폐 시장의 현재 투자 심리와 변동성을 반영합니다.",
+      "이 기사는 가격 하락 이후 투자자들이 겪는 고민을 다루며, 잠재적 저가 매수 기회 또는 추가 하락 위험에 대한 논의를 촉발합니다.",
+      "미국 시장 투자자들에게는 암호화폐 투자의 위험과 보상을 재고하게 하며, 전반적인 시장의 위험 선호도에 대한 단서를 제공할 수 있습니다."
+    ],
+    "isCurated": false
+  },
+  "id_60tef7": {
+    "id": "id_60tef7",
+    "title": "The $7 Trillion AI Boom Is Turning Into The Energy Trade of the Century - Crude Oil Prices Today | OilPrice.com",
+    "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNUFJ4LWc5NXVQU3Y3RkV1ZlpmZHlZb2FqMXVoNHQwVVhkODZpamtFNkdKUnZZN2hfZXU3cGRtYzZseGFRZTZHT0s3eS15T2N4bE1hckFTV0swTlNJQXVWMG1lUjFJVmV5NjZ3LVBIdXduNVY3cS1oT2c0eXpYaEJEQXNXWHlHXzIzVWZkUkZYRVFwN3RrMVNqSmRaM3BQUXQxV0k3amJZeG1ra0NMVDFXd3lCYlV0WTlsY2E4dHRYMNIBvwFBVV95cUxNUFJ4LWc5NXVQU3Y3RkV1ZlpmZHlZb2FqMXVoNHQwVVhkODZpamtFNkdKUnZZN2hfZXU3cGRtYzZseGFRZTZHT0s3eS15T2N4bE1hckFTV0swTlNJQXVWMG1lUjFJVmV5NjZ3LVBIdXduNVY3cS1oT2c0eXpYaEJEQXNXWHlHXzIzVWZkUkZYRVFwN3RrMVNqSmRaM3BQUXQxV0k3amJZeG1ra0NMVDFXd3lCYlV0WTlsY2E4dHRYMA?oc=5",
+    "description": "The $7 Trillion AI Boom Is Turning Into The Energy Trade of the Century  Crude Oil Prices Today | OilPrice.com",
+    "date": "2026-06-27T23:00:00.000Z",
+    "sourceId": "following-industry-power-infra",
+    "sourceName": "🔌 Power Infrastructure News",
+    "lang": "en",
+    "category": "Power Infrastructure",
+    "region": "US",
+    "followingIndustry": "power-infra",
+    "followingCompanyIds": [
+      9
+    ],
+    "aiAnalysis": {
+      "translatedTitle": "7조 달러 AI 붐, '세기의 에너지 트레이드'로 부상",
+      "summary": [
+        "AI 기술 발전으로 인한 전 세계 경제의 AI 붐이 약 7조 달러 규모로 추산되며, 이는 에너지 시장의 구조적인 변화를 야기하는 '세기의 에너지 트레이드'로 전환되고 있습니다.",
+        "AI 데이터 센터의 폭발적인 증가로 전력 소비가 급증하고 있으며, 이는 화석 연료, 재생 에너지, 원자력 등 기존 에너지원과 더불어 새로운 에너지 기술에 대한 전례 없는 규모의 대규모 투자를 촉진할 것입니다.",
+        "미국 시장에서는 구글, 아마존, 마이크로소프트 등 빅테크 기업들이 안정적인 에너지 공급망 확보를 위해 적극적으로 나서고 있으며, 이는 장기적으로 에너지 관련 주식 및 인프라 기업들에 대한 투자 심리를 강화할 주요 동인이 되고 있습니다."
+      ],
+      "implications": [
+        "AI 성장과 맞물려 에너지 생산, 전송, 저장 등 전반적인 에너지 밸류체인에 걸쳐 투자 기회가 확대될 것으로 예상됩니다. 특히 전력 수요 급증에 직접적으로 대응할 수 있는 발전 및 송배전 기업, 에너지 인프라 개발 기업에 주목할 필요가 있습니다.",
+        "S&P 500 및 Nasdaq 지수 내에서 AI와 연관된 에너지 섹터 기업들의 비중이 증가하고 있으며, 이는 포트폴리오 다각화 및 장기 성장을 추구하는 투자자들에게 새로운 핵심 동력으로 작용할 수 있습니다. 관련 정책 변화 및 기술 혁신 동향을 지속적으로 모니터링해야 합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 9,
+    "specialistAnalysis": [
+      "7조 달러 규모의 AI 붐이 세기의 에너지 트레이드로 변모하고 있다는 분석은 AI 기술 발전이 에너지 수요 구조에 근본적인 변화를 가져올 것임을 시사합니다.",
+      "이것은 AI 데이터 센터의 전력 소비 급증이 기존 에너지원(화석 연료, 재생 에너지, 원자력) 및 신규 에너지 기술에 대한 대규모 투자를 촉진할 것임을 의미합니다.",
+      "미국 시장에서는 Big Tech 기업들의 에너지 공급망 확보 노력과 함께 에너지 관련 주식 및 인프라 기업에 대한 장기적인 투자 트렌드를 형성하며 S&P 500과 Nasdaq의 핵심 동인이 될 수 있습니다."
+    ],
+    "isCurated": true
+  },
+  "id_zdrf1j": {
+    "id": "id_zdrf1j",
+    "title": "How Many Starlink Satellites Can SpaceX Launch This Year? - Yahoo Finance",
+    "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOVno4Q3d2NmdoYnN4d3otNXE3enkzY2I3V3NlN3NlWXM0Uk1uZ0s0UUl4MFNFRTBfblpjTUhVeTY0aHVXdXBlX21tcTJ6OHdHMEhtNUxzbGJLdmhCX2RCYWhka2NPbFVHSTFVcmUxZ0Nvd2dfQjc0eFNjVDBDUmZsLXV6SDl6U0ZtQThNeXA4Y1ZBOENKTS03dm9aMkhXcWNIV3NvTndB?oc=5",
+    "description": "How Many Starlink Satellites Can SpaceX Launch This Year?  Yahoo Finance",
+    "date": "2026-06-27T22:50:00.000Z",
+    "sourceId": "following-industry-space",
+    "sourceName": "🚀 Space & Defense News",
+    "lang": "en",
+    "category": "Space & Defense",
+    "region": "US",
+    "followingIndustry": "space",
+    "followingCompanyIds": [
+      37
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 6,
+    "specialistAnalysis": [
+      "스페이스X가 올해 스타링크 위성을 얼마나 발사할 수 있는지는 글로벌 위성 인터넷 서비스 확장 및 관련 인프라 발전에 중요한 지표입니다.",
+      "높은 발사 능력은 스타링크 서비스의 커버리지 확대와 사용자 증가로 이어져, 특히 외딴 지역의 디지털 접근성을 개선하고 관련 기술 기업에 영향을 줄 수 있습니다.",
+      "미국 시장에서는 통신 인프라, 위성 기술 관련 기업 및 Big Tech의 클라우드 서비스 확장에 간접적인 영향을 미치며 장기적인 성장 잠재력을 보여줍니다."
+    ],
+    "isCurated": false
+  },
+  "id_1wskce1": {
+    "id": "id_1wskce1",
+    "title": "Tesla (TSLA) Launches 16 Gigawatt Virtual Power Plant For AI Data Center Demand - simplywall.st",
+    "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQRzVLclJSek1Ydl9Jdk1DLWp2VE1qWmZxSndteXlfYnFlQnBMa3phS19NcWVGUFdlYmtSR0V5QnRSbXRTNEZ1Qm9YOVRIVnRmM1psazB2c004eFZDN0JicWM2cE5KOHhFN3l5UE1NcS0zM0U2aTFFVmRzYVQ0WGR0bktDMjhzVFowemRCMHZ0NVE5clhzWXhrRjVaMVpRQUJYWEUyRUpvSGRKNGN3NUpyMWdPLWRzQzJrYlo0QWZsdzVqazNaV1HSAcsBQVVfeXFMUGhMYWVFWVk0ZDZXRjFWNGFnamRocGk1Y3FvSlNuRTF6RzFGRGVQSGg1aUx0czk3SW9lNExaYVZ4SEEwRjlXRjJaUFRkcDloMWRCRTJXUl9qcWppbUhETE5JdkNjV2tzbUZqNzVTbklGY1BjaHZJSTRnMWdaZVVFdktQMTJ3blNXS2VQc1ZneFJKTEg0N05hdllrQXpFNG5aRFVfZkhQTmRWYkhKaTdDLVk1cFlvV0Mtakp6bF9QWG1GZTZvdDRwYno1V2s?oc=5",
+    "description": "Tesla (TSLA) Launches 16 Gigawatt Virtual Power Plant For AI Data Center Demand  simplywall.st",
+    "date": "2026-06-27T22:18:49.000Z",
+    "sourceId": "following-industry-power-infra",
+    "sourceName": "🔌 Power Infrastructure News",
+    "lang": "en",
+    "category": "Power Infrastructure",
+    "region": "US",
+    "followingIndustry": "power-infra",
+    "followingCompanyIds": [
+      2,
+      12,
+      20
+    ],
+    "aiAnalysis": {
+      "translatedTitle": "테슬라, AI 데이터센터 전력 수요 대응 위해 16기가와트 가상 발전소(VPP) 출시",
+      "summary": [
+        "테슬라(TSLA)가 AI 데이터 센터의 급증하는 전력 수요에 대응하기 위해 16기가와트(GW) 규모의 가상 발전소(VPP, Virtual Power Plant)를 출시했습니다. 이는 빅테크 기업들이 AI 시대의 에너지 공급 문제 해결에 적극적으로 투자하고 있음을 보여주는 중요한 사례입니다.",
+        "가상 발전소는 분산된 소규모 에너지원(태양광 패널, 배터리 저장 시스템 등)을 통합하여 하나의 대규모 발전소처럼 운영하는 시스템으로, 테슬라의 에너지 저장 솔루션인 메가팩(Megapack) 및 파워월(Powerwall) 기술을 활용할 것으로 예상됩니다.",
+        "이번 VPP 출시는 테슬라가 단순한 전기차 제조사를 넘어 에너지 솔루션 제공 기업으로 사업 영역을 확장하고 있음을 시사하며, AI 시대의 새로운 에너지 인프라 시장에서 경쟁 우위를 확보하려는 전략의 일환으로 풀이됩니다."
+      ],
+      "implications": [
+        "테슬라의 VPP 사업은 새로운 고수익 사업 모델로 자리매김할 가능성이 있으며, 이는 장기적으로 테슬라의 매출 다각화 및 기업 가치 상승에 긍정적인 영향을 미칠 수 있습니다. 투자자들은 에너지 부문의 성과를 주시해야 합니다.",
+        "다른 빅테크 기업들 또한 AI 데이터센터의 막대한 전력 수요를 충족시키기 위해 혁신적인 에너지 솔루션 개발 및 투자를 가속화할 것으로 예상됩니다. 이는 관련 에너지 기술 기업 및 인프라 구축 기업들에게 새로운 시장 기회를 제공할 것입니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 8,
+    "specialistAnalysis": [
+      "테슬라(TSLA)가 AI 데이터 센터 수요를 위해 16기가와트 규모의 가상 발전소(VPP)를 출시한 것은 Big Tech 기업들이 에너지 문제에 적극적으로 대응하고 있음을 보여줍니다.",
+      "이러한 전략은 테슬라의 사업 다각화 및 새로운 수익원 창출 가능성을 시사하며, AI 시대의 에너지 솔루션 시장에서의 경쟁을 가속화할 것입니다.",
+      "미국 시장에서 테슬라의 주가에 긍정적인 영향을 미칠 수 있으며, 다른 Big Tech 기업들에게도 AI 에너지 수요에 대한 혁신적인 접근 방식의 중요성을 부각합니다."
+    ],
+    "isCurated": true
+  },
+  "id_1v6hjyg": {
+    "id": "id_1v6hjyg",
+    "title": "How Energy Infrastructure Is Reshaping Demand for Industrial Land and Specialized Commercial Real Estate - Energies Media",
+    "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOZUJWN29BdTZnU0p5cnhNUXlDWnAwa2ZsX1lENHdXcUg4RmN4M0I4eE9WN294S3Uwb3ZZbGxneUJ2RXFqNml6dzdqUmJDRXh1WVVmMUk3TFUydmpGdE1zcFBWQlNhcXRkT2d6eFhvNEhFMmRFMDhXdlBBbjFsUXEzSVMzTnl0ejk3blMtQW5YTS12TjBYZnBnZWZENVowWWpXSmQzd1hta3VqRHMxbkg1cTFIZzdOYi05X3A4bUlDOVI0THhfdkl4eTBmSQ?oc=5",
+    "description": "How Energy Infrastructure Is Reshaping Demand for Industrial Land and Specialized Commercial Real Estate  Energies Media",
+    "date": "2026-06-27T20:23:45.000Z",
+    "sourceId": "following-industry-power-infra",
+    "sourceName": "🔌 Power Infrastructure News",
+    "lang": "en",
+    "category": "Power Infrastructure",
+    "region": "US",
+    "followingIndustry": "power-infra",
+    "followingCompanyIds": [],
+    "aiAnalysis": {
+      "translatedTitle": "에너지 인프라 변화가 산업용 토지 및 특수 상업용 부동산 수요 재편",
+      "summary": [
+        "AI 시대의 막대한 에너지 수요 증가로 인해 데이터 센터 및 신규 발전소 건설이 급증하면서 산업용 토지 및 특수 상업용 부동산 시장의 수요가 근본적으로 재편되고 있습니다.",
+        "특히 전력 인프라가 잘 갖춰진 지역을 중심으로 부지 확보 경쟁이 심화되면서 특정 지역의 부동산 가치가 상승하고 있으며, 이는 건설 및 엔지니어링 산업에 새로운 기회를 제공하고 있습니다.",
+        "이러한 추세는 미국 시장에서 부동산 투자 신탁(REITs) 및 건설 관련 기업들의 투자 환경에 중요한 변화를 가져오고 있으며, 장기적으로 지역 경제 발전에도 광범위한 영향을 미칠 것으로 분석됩니다."
+      ],
+      "implications": [
+        "데이터 센터 및 신규 에너지 시설 건설은 산업용 토지와 특정 상업용 부동산 시장의 구조적 성장을 이끌며, 관련 REITs 및 부동산 개발 기업에 대한 투자 기회를 확대할 수 있습니다.",
+        "투자자들은 전력 인프라 확충이 활발한 지역의 부동산 시장 동향과 함께, 관련 건설 및 엔지니어링 기업들의 수주 현황 및 사업 다각화 전략을 면밀히 모니터링하여 장기적인 투자 기회를 발굴해야 합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 7,
+    "specialistAnalysis": [
+      "에너지 인프라의 변화가 산업용 토지 및 특수 상업용 부동산 수요를 재편하고 있다는 것은 AI 시대의 에너지 수요가 경제 전반에 미치는 광범위한 영향을 보여줍니다.",
+      "데이터 센터 및 신규 발전소 건설을 위한 부지 확보 경쟁은 특정 지역의 부동산 가치를 상승시키고 건설 및 엔지니어링 산업에 새로운 기회를 제공합니다.",
+      "미국 시장에서 이러한 추세는 REIT(부동산 투자 신탁) 및 건설 관련 기업들의 투자 환경에 중요한 변화를 가져오며, 지역 경제 발전에도 영향을 미칩니다."
+    ],
+    "isCurated": true
+  },
+  "id_1jz5pz0": {
+    "id": "id_1jz5pz0",
+    "title": "Pick solar over risky natural gas to power Iowa data centers | Opinion - The Des Moines Register",
+    "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOSzE1VkUwbXNBUDlNZF9hMlhqc0dhS0NsQVhvOU1adGFJSlNTRzZZZlRLdnpnbHBUQlN5bTZVSTd5UFQwcV9iWTJWb1hDSFludXNpR1RaMEliOGZVa1hhU29VX2p2VExDRzFVUTljS2RpQzg2VUJUcVZwX1FFSUtqWGtGNmRqR2ZscERWV2VrYW9CYzExOEk3d3hQakczZllDQzlEdlI5UUxJM1lrYngxR0FkeVdXYlR5TDh3RmpyM1BNanNvRmhB?oc=5",
+    "description": "Pick solar over risky natural gas to power Iowa data centers | Opinion  The Des Moines Register",
+    "date": "2026-06-27T20:15:00.000Z",
+    "sourceId": "following-industry-power-infra",
+    "sourceName": "🔌 Power Infrastructure News",
+    "lang": "en",
+    "category": "Power Infrastructure",
+    "region": "US",
+    "followingIndustry": "power-infra",
+    "followingCompanyIds": [
+      9,
+      12
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 5,
+    "specialistAnalysis": [
+      "아이오와 데이터 센터에 태양광 발전이 천연가스보다 선호되어야 한다는 의견은 AI 데이터 센터의 친환경 에너지 전환에 대한 사회적 및 정책적 논의를 반영합니다.",
+      "이러한 주장은 재생 에너지(태양광) 투자 증가와 함께 화석 연료 의존도를 줄이려는 노력이 계속될 것임을 시사하며, 관련 기업들의 입지에 영향을 줍니다.",
+      "미국 시장에서는 태양광 에너지 및 재생 에너지 인프라 기업들에 대한 관심이 커질 수 있으며, Big Tech 기업들의 ESG(환경, 사회, 지배구조) 경영 전략에도 영향을 미칠 수 있습니다."
+    ],
+    "isCurated": false
+  },
+  "id_1dkipev": {
+    "id": "id_1dkipev",
+    "title": "Bitcoin faces fresh capitulation risk as 50K BTC moved at a loss - TradingView",
+    "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQYVF1d2pmQmNacjB3NnhIczJBaEZ0Z0JYT1NXZFBuSUtaSFpWV0JPbE5oSkQzR0VXWFUzYTVnU0kwdEZodlZKekNmVldCeWdzWjNLUG9SWGpGZHJ0ZDQ4NU43aUJGWnlKa0VYa2dIaWlwNy1lcTdkRzRRZjFEdjRBbnRoSWhtQXZxU0RCNmxEU05YTmZxQW9MbEhkUHNWTmRaOW9mS3VaVmxadnRoUzh2cV9yVmxMNDNkcmdnZGxWeUZ2cnN6NmJn?oc=5",
+    "description": "Bitcoin faces fresh capitulation risk as 50K BTC moved at a loss  TradingView",
+    "date": "2026-06-27T19:27:44.000Z",
+    "sourceId": "following-industry-crypto",
+    "sourceName": "₿ Crypto & Blockchain News",
+    "lang": "en",
+    "category": "Crypto & Blockchain",
+    "region": "US",
+    "followingIndustry": "crypto",
+    "followingCompanyIds": [
+      9,
+      29
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 6,
+    "specialistAnalysis": [
+      "5만 BTC가 손실을 보고 이동했다는 소식은 비트코인 시장에서 새로운 투매(capitulation) 위험이 고조되고 있음을 시사하며 투자 심리 약화를 반영합니다.",
+      "대규모 손실 매도는 시장 참여자들의 불안감이 커지고 있음을 나타내며, 이는 단기적으로 추가적인 가격 하락 압력으로 작용할 수 있습니다.",
+      "미국 시장 투자자들에게는 암호화폐 포트폴리오의 리스크를 재평가하게 만들며, 전반적인 위험 자산에 대한 경계심을 높일 수 있습니다."
+    ],
+    "isCurated": false
+  },
+  "id_1fur0dt": {
+    "id": "id_1fur0dt",
+    "title": "From 800V HVDC and Chroma’s Testing Platforms to Delta’s High-Voltage Infrastructure - semivision",
+    "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQcWpfZno1N29GUUprQmIyMlJuUW1wNE5vZnlhdjF4WGZ3SW9UR1lyb3YteFVpNlM2N2Rhdko3S1Rsc1BMYTFDZ1NZbGl3SldfN1lkRlhoVWNUeHozcFJuRHctdzJuMDN1UmVIUG95VzdGZVAxcXlhTGcwdUpmM005Yw?oc=5",
+    "description": "From 800V HVDC and Chroma’s Testing Platforms to Delta’s High-Voltage Infrastructure  semivision",
+    "date": "2026-06-27T12:43:57.000Z",
+    "sourceId": "following-industry-power-infra",
+    "sourceName": "🔌 Power Infrastructure News",
+    "lang": "en",
+    "category": "Power Infrastructure",
+    "region": "US",
+    "followingIndustry": "power-infra",
+    "followingCompanyIds": [
+      9,
+      20
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 6,
+    "specialistAnalysis": [
+      "800V HVDC 및 고전압 인프라에 대한 논의는 AI 데이터 센터의 전력 효율성과 안정적인 공급을 위한 핵심 기술 발전을 보여줍니다.",
+      "이는 전력 전송 및 변환 기술의 중요성을 강조하며, 관련 테스트 플랫폼 및 고전압 솔루션을 제공하는 기업들에게 새로운 기회를 제공합니다.",
+      "미국 시장에서 전력 인프라 및 반도체 장비 관련 기업들(특히 전력 관리 솔루션 제공업체)에 대한 투자 관심이 증가할 수 있습니다."
+    ],
+    "isCurated": false
+  },
+  "id_rbk3zl": {
+    "id": "id_rbk3zl",
+    "title": "The virtual power plant era has arrived - pv magazine USA",
+    "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPdGtKdmk4UDQ2d0p1ZUwxTC1JLS1Ecm02X1pKZG1qTVg5OVY5MVVvUlVTc1o1OFBseWs0cHhnSllBMUczT1FTQnFBeEVmcG5XVXoyUHpOSmFuMHZEalpKNjNZVTRFTmpSc2RScFE5Q19LRUlNUjM5b2tuN2M2VDE4dkpaRkpEdw?oc=5",
+    "description": "The virtual power plant era has arrived  pv magazine USA",
+    "date": "2026-06-27T12:14:52.000Z",
+    "sourceId": "following-industry-power-infra",
+    "sourceName": "🔌 Power Infrastructure News",
+    "lang": "en",
+    "category": "Power Infrastructure",
+    "region": "US",
+    "followingIndustry": "power-infra",
+    "followingCompanyIds": [
+      20
+    ],
+    "aiAnalysis": {
+      "translatedTitle": "가상 발전소(VPP) 시대 도래, 분산형 에너지 관리의 핵심으로 부상",
+      "summary": [
+        "가상 발전소(VPP) 시대의 도래는 분산형 에너지 자원의 효율적인 관리와 전력망 안정성 확보에 있어 중요한 전환점을 마련하고 있습니다.",
+        "VPP 기술은 태양광, 풍력 등 재생 에너지 통합을 가속화하고 전력 효율성을 극대화하여, AI 데이터 센터와 같은 대규모 전력 소비처의 수요에 효과적으로 대응할 수 있습니다.",
+        "이는 미국 시장에서 유틸리티 기업, 재생 에너지 개발사, 에너지 관리 시스템 및 스마트 그리드 솔루션 제공 기업들에게 큰 성장 기회를 제공하며, 빅테크 기업들의 에너지 전략에도 핵심적인 역할을 할 것입니다."
+      ],
+      "implications": [
+        "VPP 기술은 전력망의 유연성과 회복탄력성을 높이는 데 기여하며, 재생 에너지 확대와 AI 데이터 센터의 안정적인 전력 공급이라는 두 가지 목표를 동시에 달성할 수 있는 핵심 솔루션입니다.",
+        "투자자들은 VPP 관련 소프트웨어 및 하드웨어 솔루션을 제공하는 기업, 분산형 에너지 자원(DER)을 운영하는 기업, 그리고 스마트 그리드 인프라 구축 기업들의 기술 개발 및 시장 확대 동향을 주목해야 합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 7,
+    "specialistAnalysis": [
+      "가상 발전소(VPP) 시대의 도래는 분산형 에너지 자원 관리와 전력망 안정성 확보에 있어 중요한 전환점을 의미하며, AI 데이터 센터 전력 수요에 효과적으로 대응할 수 있습니다.",
+      "VPP 기술은 재생 에너지 통합을 가속화하고 전력 효율성을 높여, 에너지 관리 시스템 및 스마트 그리드 솔루션 제공 기업들에게 큰 성장 기회를 제공합니다.",
+      "미국 시장에서 유틸리티 기업, 재생 에너지 개발사, 그리고 에너지 관리 기술 기업들의 투자 환경에 긍정적인 영향을 미치며, Big Tech의 에너지 전략에도 핵심적인 역할을 할 것입니다."
+    ],
+    "isCurated": true
+  },
+  "id_1igw7rc": {
+    "id": "id_1igw7rc",
+    "title": "Vertiv Stock And 2 AI Power Infrastructure Picks For Data Center Demand - simplywall.st",
+    "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPWV9pam5BN19qQmlEN1R4M1g1RzNlb3hIMTF5X3NjeW9MZ0ZENG5aNG9va3ZmUHk0YmpnYXVTa1dMNktxWmJaYXVGVnk0M2hzQVR6dFNIU2QyTFY4c1lXWGl1V0JsajE2RGIxZHdqT2VQdnVHU1R3ZTkybFFHTjZaSURZMjdVNjBvRTdUVHFkS05hVXJmdXFYMWJRU1QySmE4QlA0alJWZjNhMF9QbHNSYnNXQTkwalNpWjBPZ1ZlQTM4TXlPVENCNUNfb3HSAdIBQVVfeXFMTzRNZXdUaW02ZGVBY3JfZEdENmU0SGhDcUlwblQwWFBIZEp2OFkwbkIyUHhsYnJXQlNzTzJzTHF3RVVZZElSMjZaVlRUNkIwYnFYSy1hRzFGbUlianJMUmNqcnRHMjBCdmxBWU9Xd0d6NmdOa2VmX1NsbHVTLUtZUndOOG84VExSQldNM09YRmRKMEYyQ2VjelNLTGEwU3RKdmphMjdtZUU0Sm51WldOZ05TZnFCUlU1VEV2T1g2Mm9HRDhXd2xPdjRXczVNS0lHVHNB?oc=5",
+    "description": "Vertiv Stock And 2 AI Power Infrastructure Picks For Data Center Demand  simplywall.st",
+    "date": "2026-06-27T09:15:20.000Z",
+    "sourceId": "following-industry-power-infra",
+    "sourceName": "🔌 Power Infrastructure News",
+    "lang": "en",
+    "category": "Power Infrastructure",
+    "region": "US",
+    "followingIndustry": "power-infra",
+    "followingCompanyIds": [
+      12,
+      20
+    ],
+    "aiAnalysis": {
+      "translatedTitle": "AI 데이터센터 수요 급증: Vertiv 및 전력 인프라 유망주 분석",
+      "summary": [
+        "AI 기술의 급격한 발전으로 데이터 센터의 전력 및 냉각 인프라 수요가 폭발적으로 증가하고 있으며, 이는 관련 산업 전반에 걸쳐 핵심 투자 테마로 부상하고 있습니다.",
+        "Simply Wall St는 이러한 추세에 발맞춰 Vertiv를 포함한 두 가지 AI 전력 인프라 관련 유망주를 선정하여 투자자들에게 구체적인 가이드를 제시했습니다.",
+        "이번 분석은 미국 시장에서 S&P 500 및 Nasdaq에 포함된 기술 및 인프라 기업 중 AI 데이터 센터 수혜 기업을 찾는 투자자들에게 중요한 정보를 제공합니다."
+      ],
+      "implications": [
+        "AI 데이터 센터 인프라 관련 기업들은 AI 시대의 핵심 수혜주로, 전력 공급 및 열 관리 솔루션 제공 기업들의 성장 잠재력이 매우 높으므로 해당 분야에 대한 심층적인 분석이 필요합니다.",
+        "투자자들은 Vertiv와 같은 전력 및 냉각 인프라 전문 기업들의 재무 성과와 수주 동향을 면밀히 주시하여 장기적인 성장 기회를 포착하고, 관련 공급망 전반의 변화를 모니터링해야 합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 8,
+    "specialistAnalysis": [
+      "Vertiv 주식과 AI 전력 인프라 관련 유망주 선정은 데이터 센터 수요 급증에 따른 핵심 투자 테마를 제시하며 투자자들에게 구체적인 가이드를 제공합니다.",
+      "이러한 분석은 AI 기술 발전의 필수 요소인 전력 및 냉각 인프라 공급 기업들의 성장 잠재력을 부각하며, 관련 기업들의 주가 상승에 기여할 수 있습니다.",
+      "미국 시장에서 S&P 500 및 Nasdaq에 포함된 기술 및 인프라 기업 중 AI 데이터 센터 수혜주를 찾는 투자자들에게 중요한 정보를 제공합니다."
+    ],
+    "isCurated": true
+  },
+  "id_19yibwv": {
+    "id": "id_19yibwv",
+    "title": "Feds Move to Eliminate Brake Pedals in Fully Autonomous Vehicles - Commercial Carrier Journal",
+    "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxONTNpbTFLcktadUQxTnVrUFJjLWc0Q1AwZ3p0d3JJa1poNUR4R01FdXpCVGhxRW1JLVFPWnptcUk3MENDVzBTd1ZJbFdXcHVDRXlvUDd3VFM1VXdmQmdRY0QzcV9QTmNRNlFDX2VXM0hNa3VTdkY2cXFYSmRPc1NuT19HVWoydnRXWWFFbGh5WGxCcHk4cWg5ZzYyNTJBQ1loRmJmMUF1bzRYZ1pjeVBlN2lXejdhMTdic09oSw?oc=5",
+    "description": "Feds Move to Eliminate Brake Pedals in Fully Autonomous Vehicles  Commercial Carrier Journal",
+    "date": "2026-06-26T19:14:03.000Z",
+    "sourceId": "following-industry-autonomous",
+    "sourceName": "🚗 Autonomous Driving News",
+    "lang": "en",
+    "category": "Autonomous Driving",
+    "region": "US",
+    "followingIndustry": "autonomous",
+    "followingCompanyIds": [
+      9
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1x286rt": {
+    "id": "id_1x286rt",
+    "title": "AI Data Center Loads Rewrite the Utility Playbook - Data Center Knowledge",
+    "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNSmxJbDlxQkJDYU9MVU43MjVEZTFuMlVSZWp5N3l2ODk2ZnF1ZHlGeWVNMnlsTDBBb0ppZkF0Rkx1Umw4WHN4YkJiU0dMX3BOV3F1b0FpODNMbUY3Rk5hX3BrWm8tcjM1MDFOU2JTbmk4dEVuejcyRkNUSHBSTFNoWVZLaVhFaS0tQnlrRDJfZlhIcnl4eldIRzB6ZksySXQt?oc=5",
+    "description": "AI Data Center Loads Rewrite the Utility Playbook  Data Center Knowledge",
+    "date": "2026-06-26T19:09:29.000Z",
+    "sourceId": "following-industry-power-infra",
+    "sourceName": "🔌 Power Infrastructure News",
+    "lang": "en",
+    "category": "Power Infrastructure",
+    "region": "US",
+    "followingIndustry": "power-infra",
+    "followingCompanyIds": [
+      12,
+      20
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_18apt0v": {
+    "id": "id_18apt0v",
+    "title": "A transmission line built to fix grid congestion has become Oklahoma’s hottest data center address - Public Radio Tulsa",
+    "link": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxQay0tdzhNa3U2cWFMeWxKVkk4LU1pbUpDQzhIYTZROVpaT3c0bERjUXdOaHZiN0VRSHRRUVdVNWx3RGpDSFFobXpORmZncF9vUzkyVFMxWHFWVlIxcGlKSTAyUVdiX1FsQWtqcmEwR0RQeWFJandnbkpNU3liazU4RlR6NkYxazhybk03TjJtN2FCNjNnWjZpS0Y0OXVRNzNaQjZ6OExMRkZQY2xVeWVQRmc4NFo3NVVJNjBUN2p4My16dUhuUTYzU3N2Z2drRURjdGZCSWJ2eWs4V1VoNGhkNk8zTWJENUNYbzY3c3RDdDBabUJ1cVpiaWVn?oc=5",
+    "description": "A transmission line built to fix grid congestion has become Oklahoma’s hottest data center address  Public Radio Tulsa",
+    "date": "2026-06-26T17:29:00.000Z",
+    "sourceId": "following-industry-power-infra",
+    "sourceName": "🔌 Power Infrastructure News",
+    "lang": "en",
+    "category": "Power Infrastructure",
+    "region": "US",
+    "followingIndustry": "power-infra",
+    "followingCompanyIds": [
+      9,
+      12
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1ylrpz8": {
+    "id": "id_1ylrpz8",
+    "title": "Data centers are ready to negotiate flexibility for speed - Utility Dive",
+    "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOOWtRMjVSOVJ2Z3QycUs4Wk5FazQtU1puRFd0dDE3aEJVazk5TXk5d191aHlYcGIzNVYwenVXMjJkV29YdUxPT1dPaDh2bldqSFlSWm9VRlhkLVN1YV9SY0llMllCT1lLWkYxQ2hkWTBzbjFLQm5PTVRfa3c2dFMxazcxa3BoOUdBNkdZaWloVGNEZGo2?oc=5",
+    "description": "Data centers are ready to negotiate flexibility for speed  Utility Dive",
+    "date": "2026-06-26T15:08:15.000Z",
+    "sourceId": "following-industry-power-infra",
+    "sourceName": "🔌 Power Infrastructure News",
+    "lang": "en",
+    "category": "Power Infrastructure",
+    "region": "US",
+    "followingIndustry": "power-infra",
+    "followingCompanyIds": [
+      12
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1v0rl8c": {
+    "id": "id_1v0rl8c",
+    "title": "AI Growth Faces Power Grid Challenge - Mexico Business News",
+    "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE0yd19aWE5ra1Fob2RKRzBhZjl2QVZtNFBXR0ZQdXFySnBqS0E2RFZDVUJlaVowUjBidGI3NWVoaUxUcFlXZjY5Z0E0R3JUT0FZTXdiMmJPVzdTSmJZNmJ4ZWpjTUVkZ1kyaGFuRUg0Zzk0Q19pYUE2MG1feWhkcEU?oc=5",
+    "description": "AI Growth Faces Power Grid Challenge  Mexico Business News",
+    "date": "2026-06-26T15:07:41.000Z",
+    "sourceId": "following-industry-power-infra",
+    "sourceName": "🔌 Power Infrastructure News",
+    "lang": "en",
+    "category": "Power Infrastructure",
+    "region": "US",
+    "followingIndustry": "power-infra",
+    "followingCompanyIds": [],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1jhqa61": {
+    "id": "id_1jhqa61",
+    "title": "Elea Announces the Amazon Region's First AI Data Center With Power Infrastructure From Axia Energia - PR Newswire",
+    "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPTEV3YlpEalpfTDVrUnBvZ3JyazJ6ZG5zb0xDeUxuQVVLeHljT09JVllsYWtZTUlXaGhldHpfQWtjOU1xdmdIcUpzTGlidlFrZGtDWmV6eXY4ZzBwVXJ4OXJiQ0xNb2RReVZnb1FyWU5SaDZWSW50UGU0c2pJMmx4Sk5zOGVubGs3UWM2NmUybGFNQWRkWElqZktrN250LWVORTVLYUtjVzg4N3c3NTZIX2ZuMWh5VW5VQkQ4MnZVRTJBdlYtZHUteWw0ZzB1eG02MDFNbHB2UFhlTTRQaE5LTG0yR2U1ODVwUWc?oc=5",
+    "description": "Elea Announces the Amazon Region's First AI Data Center With Power Infrastructure From Axia Energia  PR Newswire",
+    "date": "2026-06-26T14:07:00.000Z",
+    "sourceId": "following-industry-power-infra",
+    "sourceName": "🔌 Power Infrastructure News",
+    "lang": "en",
+    "category": "Power Infrastructure",
+    "region": "US",
+    "followingIndustry": "power-infra",
+    "followingCompanyIds": [
+      9,
+      12
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_azrct3": {
+    "id": "id_azrct3",
+    "title": "Artemis II Sparks Next‑Gen Space Race – Rocket Lab, Intuitive Machines Will Outrun Boeing, Lockheed, Says NASA Fund Manager - Stocktwits",
+    "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQUVBPdHVvNTFmaF93SmpXeDZvWnJ2RWx4Z3lXNERtdzVWWnVZT05iZTZnd1BOalpwckFabTl5R1lEdzI3T185YW1YM0s5M3pFczdJT3BNMGZLVUxvVmtRX0tCZHI1cHFmbXlaSWktQmZVbmNWSDhCVW1CUXhidGpDRkNIRWRHcjFTaEpPNndmZzh2b3lhTWFIaEctX0I1bUpwZ2swNnJuMl8tUnJRTWhUbTdCdVYybkkwaG1vV0tZRDVEMFZIazMtZ2hzMU1RQnFmaTlOU3RJZEQweFJfeDZKVFhTVQ?oc=5",
+    "description": "Artemis II Sparks Next‑Gen Space Race – Rocket Lab, Intuitive Machines Will Outrun Boeing, Lockheed, Says NASA Fund Manager  Stocktwits",
+    "date": "2026-06-26T14:03:32.000Z",
+    "sourceId": "following-company-27",
+    "sourceName": "[LUNR] Intuitive Machines",
+    "lang": "en",
+    "category": "space",
+    "region": "US",
+    "followingIndustry": "space",
+    "followingCompanyIds": [
+      27
+    ],
+    "companyTicker": "LUNR",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_5pzvjd": {
+    "id": "id_5pzvjd",
+    "title": "Hundreds of data centers are coming to Texas. Here’s what you need to know - Houston Public Media",
+    "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOSl9JYWtWRWJjZWpIQ2NvVzVwQkdsM3lMZTdfYmF0QXJsa011MFdhUW5YMS1Rc2FvekZwVXFpWXdMNXRLMTFzVWNlY1kyMGhmVWZ2T1BURkFhYThMeDEtNVVtd292NVd3dmZsSU5nNkNweDNKU0FHc2ViM0dWcGhic2ctdUZSOExhU3E3MUlVQXJtQWJ6b1Z6TWM0NW9HeFFocnA0a3g4LXktUXRTbG5lcW5XVXVYQXAzRDltbGlLeWJnZnfSAcMBQVVfeXFMTkpfSWFrVkViY2VqSENjb1c1cEJHbDN5TGU3X2JhdEFybGtNdTBXYVFuWDEtUXNhb3pGcFVxaVl3TDV0SzExc1VjZWNZMjBoZlVmdk9QVEZBYWE4THgxLTVVbXdvdjVXd3ZmbElOZzZDcHgzSlNBR3NlYjNHVnBoYnNnLXVGUjhMYVNxNzFJVUFybUFiem9Wek1jNDVvR3hRaHJwNGt4OC15LVF0U2xuZXFuV1V1WEFwM0Q5bWxpS3liZ2Z3?oc=5",
+    "description": "Hundreds of data centers are coming to Texas. Here’s what you need to know  Houston Public Media",
+    "date": "2026-06-26T13:39:41.000Z",
+    "sourceId": "following-industry-power-infra",
+    "sourceName": "🔌 Power Infrastructure News",
+    "lang": "en",
+    "category": "Power Infrastructure",
+    "region": "US",
+    "followingIndustry": "power-infra",
+    "followingCompanyIds": [
+      9,
+      12
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_7fh1kh": {
+    "id": "id_7fh1kh",
+    "title": "Data Centers in Colorado – Local Governments Take the Lead in Regulating Siting - Spencer Fane",
+    "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNby1EaC1jVm40V2Z4bmtrQWJYOXZ2dEpISGJnV1hRUExKTUR3eDNNLUZzM0g2bjMtOXdNdFlQZHFQVmhMNG13bElkSmVCUzZWV2JxbUNGM05ncDlfVWRqVkc0NnExbGVDMFJic0FvZGFDcG5IZUtaZ0pTSk12Q29ydDNMWmtxRlpIcHFaUDJSZkJRZWRic3BlMTd6X1ZOZmJnSktOT1dJUGtyT0pJRWZJMmdWNWg?oc=5",
+    "description": "Data Centers in Colorado – Local Governments Take the Lead in Regulating Siting  Spencer Fane",
+    "date": "2026-06-26T13:01:01.000Z",
+    "sourceId": "following-industry-power-infra",
+    "sourceName": "🔌 Power Infrastructure News",
+    "lang": "en",
+    "category": "Power Infrastructure",
+    "region": "US",
+    "followingIndustry": "power-infra",
+    "followingCompanyIds": [
+      12
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_x148vv": {
+    "id": "id_x148vv",
+    "title": "Piper Sandler Highlights Intuitive Surgical (ISRG) on Long-Term Growth Catalysts - Insider Monkey",
+    "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQRnFfTFZ0UXBsNWFZOXJUeWdfMWRmSWFPVGd2VWh1QkZtOVo1cGRyR2IxMjdJc3BEN2dPZEQwOWFXd1VTZFV5QWtHZi12Smh4MlFBNVdqRHhpNE1jNTdWaXlyelh5b3lTb3VrRWp0MFZTaUg1TEY3TXFUZ2l4NjNOakxpRmtmZEdGLVVHVDRUd3Z4aGlLbks4S0lTMlVYcHRhMFNsWDRRbUF3U0U2enJGYWpVcWlqdERHdEFGbDZJbEpHNUVPeTFn0gHHAUFVX3lxTFBGcV9MVnRRcGw1YVk5clR5Z18xZGZJYU9UZ3ZVaHVCRm05WjVwZHJHYjEyN0lzcEQ3Z09kRDA5YVd3VVNkVXlBa0dmLXZKaHgyUUE1V2pEeGk0TWM1N1ZpeXJ6WHlveVNvdWtFanQwVlNpSDVMRjdNcVRnaXg2M05qTGlGa2ZkR0YtVUdUNFR3dnhoaUtuSzhLSVMyVVhwdGEwU2xYNFFtQXdTRTZ6ckZhalVxaWp0REd0QUZsNklsSkc1RU95MWc?oc=5",
+    "description": "Piper Sandler Highlights Intuitive Surgical (ISRG) on Long-Term Growth Catalysts  Insider Monkey",
+    "date": "2026-06-26T11:13:54.000Z",
+    "sourceId": "following-company-10",
+    "sourceName": "[ISRG] Intuitive Surgical",
+    "lang": "en",
+    "category": "robotics",
+    "region": "US",
+    "followingIndustry": "robotics",
+    "followingCompanyIds": [
+      10
+    ],
+    "companyTicker": "ISRG",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1eq8j86": {
+    "id": "id_1eq8j86",
+    "title": "Hundreds of data centers are coming to Texas. Here’s what you need to know. - The Texas Tribune",
+    "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNbnQ5dkk4Q3d6Tkx2TG11VFltYXIwMUpuRWdUcnIzajVOR19SaTRfdGdCcXVfQTU5aGlUa0poeTBsZzJKY3RFbjRKMkE2VFZVa2x1TUYtREw4ejFrMjJ4Q25saGdtX2V6bEM5a29TYUhoTk83XzFjaW1Eek45Y2hhbzZTQTlHU3lSbkVfdzhHYw?oc=5",
+    "description": "Hundreds of data centers are coming to Texas. Here’s what you need to know.  The Texas Tribune",
+    "date": "2026-06-26T10:00:00.000Z",
+    "sourceId": "following-industry-power-infra",
+    "sourceName": "🔌 Power Infrastructure News",
+    "lang": "en",
+    "category": "Power Infrastructure",
+    "region": "US",
+    "followingIndustry": "power-infra",
+    "followingCompanyIds": [
+      12
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1n7waoy": {
+    "id": "id_1n7waoy",
+    "title": "Battle of the Artificial Intelligence (AI) Computing Companies: Is AMD, Broadcom, Nvidia, or Marvell the Best Stock to Buy Now? - The Globe and Mail",
+    "link": "https://news.google.com/rss/articles/CBMirAJBVV95cUxNUFNZT0tUX196dERfYjVtSnR3c2RqU1ZqbmFpT2RQaVhrOFFqMEd3MEZWdklOMDNwQXV3RVpiaFVBdWctTHRBWDZ4S2FMZUFjSnNfeEZCMDNZNjIyQ3Mzc002MmlfQ1oxUUFVYmJUQ0tVTGVPTDZEY2hkMTQ1R21uZnU0T2dwRkhKalRTRGplOEdSdmFtVDBkMjRZdFdyV0NkSkZ4VEI3T1FWZXZKMDJrZHVGTFZ1QnJYTlZyamYwRXlUSjJUdGRlS0xmWUhfMHhPZ21QdkJpQlpoZ2xPamhlMlZPLVRqRjUtd1luRjNKUm4xckZabXFnVTgwdzY2ek4zUVNsUEpLV2NBTGRfOU1VMWRjY0Z4aWh1RUxPUFFGUTdndExyMzZ3a2Y4Znc?oc=5",
+    "description": "Battle of the Artificial Intelligence (AI) Computing Companies: Is AMD, Broadcom, Nvidia, or Marvell the Best Stock to Buy Now?  The Globe and Mail",
+    "date": "2026-06-25T20:40:24.000Z",
+    "sourceId": "following-company-1",
+    "sourceName": "[NVDA] Nvidia",
+    "lang": "en",
+    "category": "autonomous",
+    "region": "US",
+    "followingIndustry": "autonomous",
+    "followingCompanyIds": [
+      1
+    ],
+    "companyTicker": "NVDA",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_qpfqn4": {
+    "id": "id_qpfqn4",
+    "title": "Texas AI Data Centers: Power, Policy, and Progress - Data Center Knowledge",
+    "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNaU0weDZXdllhUzc5Uko5ZWNpY05WWFZOV0YzTzBCdWVVY1Ayc3RpUlJXSXlDOWRySW1HczBmTWpWT1JfaFVLd1ZkcWdzRDJGbGI4cm1WMXlFNHdnc1FHTFVFRXFHazBCbXVCSVp5QWpsSzdid3locEcyRVM3VGtvTGRLUENHLTROSmJON3pGOVZtRDJESjk5djQ5WkNvOGFYcktYaWp2R0E0MS0t?oc=5",
+    "description": "Texas AI Data Centers: Power, Policy, and Progress  Data Center Knowledge",
+    "date": "2026-06-25T18:19:54.000Z",
+    "sourceId": "following-industry-power-infra",
+    "sourceName": "🔌 Power Infrastructure News",
+    "lang": "en",
+    "category": "Power Infrastructure",
+    "region": "US",
+    "followingIndustry": "power-infra",
+    "followingCompanyIds": [
+      12
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_64j1t9": {
+    "id": "id_64j1t9",
+    "title": "AI meets the grid: Shaping the data center power play - Capgemini",
+    "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNS3VXcVczQ2VPNXJqc2hPZlZzbjVjWmsxZWxVSEhPSm1ETEZRaWJCQ2dIeVd0cjNuMHJLVkRIai1tWGM0bUF5VEdXVWlrQTdSc0RqZWUwR3lKb3ZrX092SzlVTTJxaEd2WmpHb1JFZURVdzhXNEhGeGVaU2RUclpaMjc0M1BlMUk3ZjRJazlOWVI3Zw?oc=5",
+    "description": "AI meets the grid: Shaping the data center power play  Capgemini",
+    "date": "2026-06-25T14:18:41.000Z",
+    "sourceId": "following-industry-power-infra",
+    "sourceName": "🔌 Power Infrastructure News",
+    "lang": "en",
+    "category": "Power Infrastructure",
+    "region": "US",
+    "followingIndustry": "power-infra",
+    "followingCompanyIds": [
+      12,
+      20
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_a1kqxm": {
+    "id": "id_a1kqxm",
+    "title": "China’s robot rush: Morgan Stanley raises 2026 forecast to 50,000 units - South China Morning Post",
+    "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOODRYR3lNTkZvN0Flb0ZhY29fSXB4aHRnTVNUQmpwNWYwQlBHY2pUZ0stc2hFeW4xV3N1amNxVFlSdGVOMk9PY2pOVFU2V3lHQjROUV9lQVFPSjhldmZvQkZueDFnZm5VZC05ZF9FZEpYLTMyZXE3VnlOMjg5WGpTNW4zdnVuQ3JpcV9yMHduYXJFNnVfbDJQcVpMYzhjVndkdlVOVmJqZ2lLUEdoV080emdNSTfSAbQBQVVfeXFMTVFiN0JrN3JCQ0QyMjBlSjJFNEtWeDAyVDN3S0t5aDdWT2ZtRUVodGYwUnBmVEdTWkozaENPZHFDV1RPZURZSll5MkhTMC15QU40bVdjbWF1czRSbnFoZVd0cE1ERFg3eEZVcjN2amQwdENrLUxTSnRsQXZZQXVhMXZMUGNZUWpSRlE5b0EzaTI1S1ZHNzgzVlpjeUI0OFg4UXBocGtsMlozZGY1dzVVbEFQSExa?oc=5",
+    "description": "China’s robot rush: Morgan Stanley raises 2026 forecast to 50,000 units  South China Morning Post",
+    "date": "2026-06-24T10:30:11.000Z",
+    "sourceId": "following-industry-robotics",
+    "sourceName": "🤖 Robotics & Automation News",
+    "lang": "en",
+    "category": "Robotics & Automation",
+    "region": "US",
+    "followingIndustry": "robotics",
+    "followingCompanyIds": [],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1pw0g7w": {
+    "id": "id_1pw0g7w",
+    "title": "Tech companies would have to pay AI data center energy costs under bill moving in Congress - CNBC",
+    "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQVzMyRTJVbTVlQ3E3ZkdUNFdTQkw5TENuLXExUjhIZDlhWWpCVlFxUWpQZktUWk1HaTljbF8xYUVxTjR1SWRrUllpV1hVb09qUm9oUkdsUmZmNWdaU3RuQ090ZkhHTHRJTWRnaHI5Zm10bjZfSVZVblVJR2s3WElZQTJieDNVd2hZZ2RKTlRWcXV3YknSAZgBQVVfeXFMT1habnBpSTUxVGVKWTB3UEt4SEhNVk1yaTd0M3ZrSDVpWWdfZ1VyV2ZTZTlFMnVqNWZEaTBPY0FVY0NyOHJJQktmSjFNS3VtZmkzWVpJWGw0RUtFYU5Lc2dMVVZkZUVCbG5jRUJtUy1jV2U3djVwY1Y0NDdZc0U3cWlUeGNNUlFEbFo4T2tlaDZHWmZEa3FMUmo?oc=5",
+    "description": "Tech companies would have to pay AI data center energy costs under bill moving in Congress  CNBC",
+    "date": "2026-06-24T10:00:01.000Z",
+    "sourceId": "following-industry-power-infra",
+    "sourceName": "🔌 Power Infrastructure News",
+    "lang": "en",
+    "category": "Power Infrastructure",
+    "region": "US",
+    "followingIndustry": "power-infra",
+    "followingCompanyIds": [
+      9,
+      12
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_118vvfg": {
+    "id": "id_118vvfg",
+    "title": "Tesla: The Vision Is Real - The Execution Isn't (NASDAQ:TSLA) - Seeking Alpha",
+    "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNSmFlMExXTVgwa25xRFZtN0ptRVRUS1Z0U2F3TnR6bGJwYl93bzJOakhNVkE0dUljc2tUcm1RVWoydGk3NVRwcEpxLUdWNXZDcnNkQ3JpdlRRV1l1bUY3d1dwaXVYQW5Jc090clRTaHJXNk9PT0M2VFJNY3BMZUdZSzJwaXRkXzluUFRrbQ?oc=5",
+    "description": "Tesla: The Vision Is Real - The Execution Isn't (NASDAQ:TSLA)  Seeking Alpha",
+    "date": "2026-06-24T00:02:45.000Z",
+    "sourceId": "following-company-2",
+    "sourceName": "[TSLA] Tesla",
+    "lang": "en",
+    "category": "autonomous",
+    "region": "US",
+    "followingIndustry": "autonomous",
+    "followingCompanyIds": [
+      2
+    ],
+    "companyTicker": "TSLA",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_hrhmim": {
+    "id": "id_hrhmim",
+    "title": "Is Aurora Innovation (AUR) The Best Self-Driving Stock to Buy? - Insider Monkey",
+    "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNMTNUVVJEUW9HVWdTYU1BdkwyVUxtaHhsN0s1bmlYUS1sbTVqRHV1T25RU1lIalc4REJDX05sYmVkQXdSQmt4bmh1d3c4aXRJTWo3dU90TTJDekxFNWszWnFuQnBLT2NfanBlTC1NZkR2TDI2SG4xUWNJNjY0YzF0c21oZDNEZllMaU0xclJGRXItNHZPdzg1elI3TTZ3dlZ5bEc1S3J30gGuAUFVX3lxTE91STRIdkJEb2JIVWVsSHdmdTV5NldQY2RTTGt1VlpSOFBFcGpySlZiQzNnRlhpc0hVU3BGajNDNUNGb0JGeExrVHZuLXJmUF84UWFSVDBvMFIxaUhHOGxfU0pmWEhKZFZJNEtUOEkwNDN0NHZMNWlmY2tqVlMtX3dDMDBkeGx5NF9PRVVMRUlKN2N4MHVVRllkX2xDV21BeHdqZTduUklhZjVsVzJjUQ?oc=5",
+    "description": "Is Aurora Innovation (AUR) The Best Self-Driving Stock to Buy?  Insider Monkey",
+    "date": "2026-06-23T19:56:55.000Z",
+    "sourceId": "following-company-44",
+    "sourceName": "[AUR] Aurora Innovation",
+    "lang": "en",
+    "category": "autonomous",
+    "region": "US",
+    "followingIndustry": "autonomous",
+    "followingCompanyIds": [
+      44
+    ],
+    "companyTicker": "AUR",
     "aiAnalysis": null,
     "specialistScore": 0,
     "specialistAnalysis": null,
