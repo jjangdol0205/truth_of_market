@@ -15,8 +15,8 @@ const parser = new Parser({
   timeout: 10000
 });
 
-// following-config.json 로드
-const CONFIG_FILE = path.join(__dirname, '..', 'following-config.json');
+// following-config.json 로드 (프로젝트 루트 기준)
+const CONFIG_FILE = path.join(__dirname, '..', '..', 'following-config.json');
 let followingConfig = null;
 
 function loadConfig() {
