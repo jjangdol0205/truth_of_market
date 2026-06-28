@@ -1279,10 +1279,10 @@ app.listen(PORT, async () => {
   console.log(`💾 [아카이브] 로컬 뉴스 아카이브 ${Object.keys(newsArchive).length}건을 성공적으로 불러왔습니다.`);
   console.log(`💾 [API 최소화] 로컬 AI 분석 캐시 ${Object.keys(aiCache).length}건을 성공적으로 불러왔습니다.`);
 
-  // 매일 오전 6시, 오후 6시에 주기적으로 RSS 수집 실행 (Asia/Seoul 기준)
-  cron.schedule('0 6,18 * * *', async () => {
+  // 매일 오전 8시, 오후 3시에 주기적으로 RSS 수집 실행 (Asia/Seoul 기준)
+  cron.schedule('0 8,15 * * *', async () => {
     await archiveDailyNews();
   }, { timezone: 'Asia/Seoul' });
 
-  console.log('⏰ [스케줄링 완료] 매일 오전 6시, 오후 6시 뉴스 수집 스케줄러가 등록되었습니다.');
+  console.log('⏰ [스케줄링 완료] 매일 오전 8시, 오후 3시 뉴스 수집 스케줄러가 등록되었습니다.');
 });
