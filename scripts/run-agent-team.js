@@ -158,12 +158,12 @@ async function run() {
     if (list.length === 0) continue;
 
     if (regionCallCount > 0) {
-      console.log('⏳ Rate Limit 방지를 위해 13초 대기 중...');
+      console.log('⧓ Rate Limit 방지를 위해 13초 대기 중...');
       await sleep(13000);
     }
 
-    // [오프라인 모드 전환] 실시간 API 호출을 차단하고 빈 결과를 리턴합니다.
-    const specResults = list.map(art => ({ id: art.id, score: 5, analysis: ['오프라인 분석 대기'] }));
+    // 실제 전문가 분석 에이전트 호출
+    const specResults = await analyzeArticlesBatched(list, region, apiKey);
     regionCallCount++;
 
     specResults.forEach(res => {
@@ -246,8 +246,8 @@ async function run() {
       await sleep(13000);
     }
 
-    // [오프라인 모드 전환] 실시간 에디터 API 호출을 차단하고 빈 결과를 할당하여 Antigravity 오프라인 분석 주입 상태로 둡니다.
-    const editorResults = batch.map(art => ({ id: art.id, aiAnalysis: null }));
+    // 실제 Genius Editor API 호출로 AI 요약 생성
+    const editorResults = await editArticlesBatched(batch, apiKey);
 
     editorResults.forEach(res => {
       const archiveItem = newsArchive[res.id];
