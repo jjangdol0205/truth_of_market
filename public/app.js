@@ -174,6 +174,7 @@ function setupEventListeners() {
         'following-crypto': '₿ 크립토/블록체인 최신 외신',
         'following-nuclear': '⚡ 전력/원전/에너지 최신 외신',
         'following-power-infra': '🔌 전력인프라 최신 외신',
+        'following-battery': '🔋 이차전지 최신 외신',
       };
       document.getElementById('currentCategoryTitle').innerText = titles[filter] || '투자 뉴스';
       

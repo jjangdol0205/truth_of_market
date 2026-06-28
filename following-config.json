@@ -53,6 +53,15 @@
       "color": "#f97316",
       "searchKeywords": ["power infrastructure", "electrical grid", "data center power", "switchgear", "power distribution", "electrical construction", "grid upgrade", "utility infrastructure"],
       "companyIds": [70, 71, 72, 73, 74, 75, 76, 77, 78, 79]
+    },
+    {
+      "id": "battery",
+      "name": "이차전지",
+      "nameEn": "Secondary Battery",
+      "emoji": "🔋",
+      "color": "#ec4899",
+      "searchKeywords": ["EV battery", "secondary battery", "lithium ion", "LFP", "solid state battery", "cathode", "anode", "battery recycling", "배터리", "이차전지", "양극재", "음극재", "전고체"],
+      "companyIds": [80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95]
     }
   ],
   "companies": [
@@ -133,6 +142,22 @@
     { "id": 76, "name": "Powell Industries", "ticker": "POWL", "exchange": "NASDAQ", "industry": "power-infra", "searchQuery": "Powell Industries POWL switchgear power distribution" },
     { "id": 77, "name": "MYR Group", "ticker": "MYRG", "exchange": "NASDAQ", "industry": "power-infra", "searchQuery": "MYR Group MYRG electrical construction utility" },
     { "id": 78, "name": "nVent Electric", "ticker": "NVT", "exchange": "NYSE", "industry": "power-infra", "searchQuery": "nVent NVT electrical enclosures thermal management" },
-    { "id": 79, "name": "Preformed Line Products", "ticker": "PLPC", "exchange": "NASDAQ", "industry": "power-infra", "searchQuery": "Preformed Line Products PLPC power line hardware" }
+    { "id": 79, "name": "Preformed Line Products", "ticker": "PLPC", "exchange": "NASDAQ", "industry": "power-infra", "searchQuery": "Preformed Line Products PLPC power line hardware" },
+    { "id": 80, "name": "LG Energy Solution", "ticker": "373220.KS", "exchange": "KRX", "industry": "battery", "searchQuery": "LG Energy Solution LG에너지솔루션 battery" },
+    { "id": 81, "name": "Samsung SDI", "ticker": "006400.KS", "exchange": "KRX", "industry": "battery", "searchQuery": "Samsung SDI 삼성SDI battery" },
+    { "id": 82, "name": "SK Innovation", "ticker": "096770.KS", "exchange": "KRX", "industry": "battery", "searchQuery": "SK Innovation SK이노베이션 SK On battery" },
+    { "id": 83, "name": "POSCO Holdings", "ticker": "005490.KS", "exchange": "KRX", "industry": "battery", "searchQuery": "POSCO Holdings 포스코홀딩스 lithium" },
+    { "id": 84, "name": "POSCO Future M", "ticker": "003670.KS", "exchange": "KRX", "industry": "battery", "searchQuery": "POSCO Future M 포스코퓨처엠 cathode anode" },
+    { "id": 85, "name": "Ecopro", "ticker": "086520.KQ", "exchange": "KRX", "industry": "battery", "searchQuery": "Ecopro 에코프로 battery materials" },
+    { "id": 86, "name": "Ecopro BM", "ticker": "247540.KQ", "exchange": "KRX", "industry": "battery", "searchQuery": "Ecopro BM 에코프로비엠 cathode" },
+    { "id": 87, "name": "LG Chem", "ticker": "051910.KS", "exchange": "KRX", "industry": "battery", "searchQuery": "LG Chem LG화학 battery materials cathode" },
+    { "id": 88, "name": "L&F", "ticker": "066970.KQ", "exchange": "KRX", "industry": "battery", "searchQuery": "L&F 엘앤에프 cathode" },
+    { "id": 89, "name": "Enchem", "ticker": "348370.KQ", "exchange": "KRX", "industry": "battery", "searchQuery": "Enchem 엔켐 electrolyte" },
+    { "id": 90, "name": "Korea Zinc", "ticker": "010130.KS", "exchange": "KRX", "industry": "battery", "searchQuery": "Korea Zinc 고려아연 battery materials nickel" },
+    { "id": 91, "name": "Daejoo Electronic", "ticker": "078600.KQ", "exchange": "KRX", "industry": "battery", "searchQuery": "Daejoo Electronic 대주전자재료 silicon anode" },
+    { "id": 92, "name": "WCP", "ticker": "393890.KQ", "exchange": "KRX", "industry": "battery", "searchQuery": "WCP separator battery" },
+    { "id": 93, "name": "SKIET", "ticker": "361610.KS", "exchange": "KRX", "industry": "battery", "searchQuery": "SKIET SK아이이테크놀로지 separator" },
+    { "id": 94, "name": "SungEel HiTech", "ticker": "365340.KQ", "exchange": "KRX", "industry": "battery", "searchQuery": "SungEel HiTech 성일하이텍 battery recycling" },
+    { "id": 95, "name": "Saebitchem", "ticker": "107600.KQ", "exchange": "KRX", "industry": "battery", "searchQuery": "Saebitchem 새빗켐 battery recycling" }
   ]
 }
