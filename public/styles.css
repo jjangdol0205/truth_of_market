@@ -1469,3 +1469,78 @@ button {
     align-self: center;
   }
 }
+
+/* ========================
+   팔로잉 엔진 전용 스타일
+   ======================== */
+
+/* 티커 배지 (예: [TSLA]) */
+.ticker-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  font-family: var(--font-display);
+  color: hsl(var(--accent-gold));
+  background: rgba(220, 160, 42, 0.1);
+  border: 1px solid rgba(220, 160, 42, 0.3);
+  padding: 2px 6px;
+  border-radius: 5px;
+  letter-spacing: 0.5px;
+}
+
+/* 산업 이모지 배지 */
+.industry-emoji-badge {
+  font-size: 0.85rem;
+  padding: 1px 4px;
+  border-radius: 4px;
+  background: hsla(var(--glass-border), 0.4);
+}
+
+/* 팔로잉 카드 산업별 좌측 테두리 색상 */
+.following-card {
+  border-left-width: 3px !important;
+}
+.following-autonomous { border-left-color: #3b82f6 !important; }
+.following-robotics   { border-left-color: #8b5cf6 !important; }
+.following-space      { border-left-color: #06b6d4 !important; }
+.following-crypto     { border-left-color: #f59e0b !important; }
+.following-nuclear    { border-left-color: #10b981 !important; }
+
+/* 기업 칩 필터 컨테이너 */
+.company-chip-container {
+  overflow: hidden;
+  padding: 6px 0 10px;
+}
+.chip-scroll-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 4px 2px;
+}
+
+/* 기업 칩 버튼 */
+.company-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  font-family: var(--font-display);
+  background: hsla(var(--glass-border), 0.6);
+  border: 1px solid hsla(var(--glass-border));
+  color: hsl(var(--text-muted));
+  cursor: pointer;
+  transition: var(--transition-fast);
+  white-space: nowrap;
+}
+.company-chip:hover {
+  background: hsla(var(--glass-border), 1);
+  color: hsl(var(--text-main));
+  border-color: hsla(var(--accent-cyan), 0.4);
+}
+.company-chip.active {
+  background: linear-gradient(135deg, rgba(var(--accent-cyan-rgb), 0.2), rgba(var(--accent-cyan-rgb), 0.08));
+  border-color: hsl(var(--accent-cyan));
+  color: hsl(var(--accent-cyan));
+}

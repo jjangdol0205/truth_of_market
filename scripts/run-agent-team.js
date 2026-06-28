@@ -90,7 +90,9 @@ async function run() {
     return;
   }
 
-  // 2. Merge scraped articles into newsArchive
+
+  // 2. Merge scraped articles into newsArchive (following 메타데이터 보존)
+  let newArticlesCount = 0;
   scraped.forEach(art => {
     if (!newsArchive[art.id]) {
       newsArchive[art.id] = {
@@ -100,10 +102,26 @@ async function run() {
         specialistAnalysis: null,
         isCurated: false
       };
+      newArticlesCount++;
     } else {
-      newsArchive[art.id].region = art.region;
+      // 기존 기사에 following 메타데이터 업데이트 (없으면 보완)
+      const existing = newsArchive[art.id];
+      if (art.followingIndustry && !existing.followingIndustry) {
+        existing.followingIndustry = art.followingIndustry;
+      }
+      if (art.followingCompanyIds && art.followingCompanyIds.length > 0) {
+        existing.followingCompanyIds = [...new Set([
+          ...(existing.followingCompanyIds || []),
+          ...art.followingCompanyIds
+        ])];
+      }
+      if (art.companyTicker && !existing.companyTicker) {
+        existing.companyTicker = art.companyTicker;
+      }
     }
   });
+  console.log(`➕ [Agent Team] 신규 기사 ${newArticlesCount}건 저장 (전체 스크래퍼 ${scraped.length}건 수집).`);
+
 
   // API 키 없으면 수집된 기사 저장만 하고 종료
   if (!apiKey) {
@@ -156,12 +174,21 @@ async function run() {
     });
   }
 
-  // 4. Gather candidates for Curation (all articles within the last 3 days)
-  const threeDaysAgo = new Date();
-  threeDaysAgo.setDate(threeDaysAgo.getDate() - 3);
-  const curationCandidates = Object.values(newsArchive).filter(art => {
-    return new Date(art.date) >= threeDaysAgo;
-  });
+
+  // 4. Gather candidates for Curation (all articles within the last 5 days)
+  // following 메타데이터가 있는 기사를 우선 편햤하여 큰레이션 풀에 담습니다.
+  const fiveDaysAgo = new Date();
+  fiveDaysAgo.setDate(fiveDaysAgo.getDate() - 5);
+  const curationCandidates = Object.values(newsArchive)
+    .filter(art => new Date(art.date) >= fiveDaysAgo)
+    .sort((a, b) => {
+      // following 태그된 기사를 우선적으로 큰레이션
+      const aScore = (a.followingCompanyIds && a.followingCompanyIds.length > 0) ? 1 : 0;
+      const bScore = (b.followingCompanyIds && b.followingCompanyIds.length > 0) ? 1 : 0;
+      if (bScore !== aScore) return bScore - aScore;
+      return new Date(b.date) - new Date(a.date);
+    });
+
 
   // 5. Run Orchestrator to select Top N based on time of day
   // 아침(오전 6시)에는 20개, 저녁(오후 6시)에는 10개를 큐레이션하여 일일 총 30개 유지

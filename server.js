@@ -112,7 +112,60 @@ app.get('/insights/:slug', (req, res) => {
   }
 });
 
-// ─── 개별 기사 상세 URL 라우트 (/article/:id) ─────────────────────
+// ─── 팔로잉 기업 목록 API (/api/companies) ─────────────────────────
+app.get('/api/companies', (req, res) => {
+  try {
+    const configFile = path.join(__dirname, 'following-config.json');
+    if (!fs.existsSync(configFile)) {
+      return res.status(404).json({ error: 'following-config.json not found' });
+    }
+    const config = JSON.parse(fs.readFileSync(configFile, 'utf8'));
+    res.json({
+      industries: config.industries,
+      companies: config.companies
+    });
+  } catch (e) {
+    console.error('❌ /api/companies 오류:', e.message);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+// ─── 팔로잉 뉴스 필터링 API (/api/news/following) ──────────────────
+app.get('/api/news/following', (req, res) => {
+  try {
+    loadNewsArchive();
+    const { industry, companyId, limit = 50 } = req.query;
+
+    let articles = Object.values(newsArchive)
+      .filter(art => art.aiAnalysis != null) // 요약 완료된 기사만
+      .sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    // 산업 필터
+    if (industry) {
+      articles = articles.filter(art => art.followingIndustry === industry);
+    }
+
+    // 기업 ID 필터
+    if (companyId) {
+      const cId = parseInt(companyId);
+      articles = articles.filter(art =>
+        art.followingCompanyIds && art.followingCompanyIds.includes(cId)
+      );
+    }
+
+    // following 태그가 있는 기사만 우선 반환 (없으면 전체에서 최신순)
+    const followingArticles = articles.filter(art =>
+      art.followingIndustry || (art.followingCompanyIds && art.followingCompanyIds.length > 0)
+    );
+
+    const result = followingArticles.length > 0 ? followingArticles : articles;
+    res.json(result.slice(0, parseInt(limit)));
+  } catch (e) {
+    console.error('❌ /api/news/following 오류:', e.message);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
 app.get('/article/:id', (req, res) => {
   try {
     const article = newsArchive[req.params.id];

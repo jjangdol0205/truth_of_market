@@ -3,16 +3,18 @@
    ========================================================================= */
 
 // 전역 상태 객체
-// 전역 상태 객체
 const state = {
-  articles: [],        // 수집된 국내외 뉴스 기사
+  articles: [],        // 수집된 외신 기사
   customFeeds: [],     // 사용자가 추가한 커스텀 RSS 피드 리스트
   bookmarks: [],       // 스터디 보관함에 저장된 AI 분석 노트 목록
-  currentFilter: 'curated',// 현재 선택된 카테고리 필터 (curated, all, Markets, Macro, Tech, custom, bookmarks)
+  currentFilter: 'curated', // 현재 선택된 필터
+  currentIndustry: null,    // 현재 선택된 산업 ID (following 모드일 때)
+  currentCompanyId: null,   // 현재 선택된 기업 ID
   searchQuery: '',     // 검색 필터 텍스트
   currentSelectedArticle: null, // 현재 AI 모달에 활성화된 기사
-  aiCache: {},         // 이번 세션에 로드된 기사의 AI 분석 결과 캐시 (동일 기사 중복 호출 방지)
-  isAdmin: false       // 관리자 분석 권한 모드 여부
+  aiCache: {},         // AI 분석 결과 캐시
+  isAdmin: false,      // 관리자 분석 권한 모드 여부
+  followingConfig: null // /api/companies 에서 로드한 following 설정
 };
 
 // 1. 초기 로드 및 이벤트 리스너 설정
@@ -60,10 +62,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
   fetchMarketTicker();
   checkApiStatus();
+  fetchFollowingConfig(); // 팔로잉 기업/산업 설정 로드
 
   // 사용자 요청에 따라 API 사용량을 최소화하기 위해 10분마다 시황을 자동 갱신합니다.
   setInterval(fetchMarketTicker, 10 * 60 * 1000);
 });
+
+// 팔로잉 설정 로드 (/api/companies)
+async function fetchFollowingConfig() {
+  try {
+    const res = await fetch('/api/companies');
+    if (res.ok) {
+      state.followingConfig = await res.json();
+      console.log(`✅ [Following] ${state.followingConfig.companies.length}개 기업, ${state.followingConfig.industries.length}개 산업 팔로잉 설정 로드 완료.`);
+    }
+  } catch (e) {
+    console.warn('⚠️ [Following] /api/companies 로드 실패:', e.message);
+  }
+}
 
 // 테마 초기화 (기본 다크모드)
 function initTheme() {
@@ -144,26 +160,45 @@ function setupEventListeners() {
       
       const filter = target.getAttribute('data-filter');
       state.currentFilter = filter;
+      state.currentIndustry = target.getAttribute('data-industry') || null;
+      state.currentCompanyId = null; // 산업 클릭 시 기업 필터 초기화
       
       // 필터 클릭 시 제목 변경
       const titles = {
-        curated: '오늘의 핵심 30선',
-        all: '전체 실시간 투자 뉴스',
-        Markets: '글로벌 경제 & 투자 뉴스 (US)',
-        Macro: '국내 거시경제 및 금융 뉴스 (KR)',
-        Tech: '테크 & 성장주 핵심 뉴스 (US)',
-        custom: '나만의 등록 뉴스 피드',
-        bookmarks: '보관한 AI 경제 학습노트'
+        curated: '⭐ 오늘의 핵심 30선',
+        all: '🌐 전체 외신 피드',
+        bookmarks: '📚 보관한 AI 경제 학습노트',
+        'following-autonomous': '🚗 자율주행 최신 외신',
+        'following-robotics': '🤖 로봇/자동화 최신 외신',
+        'following-space': '🚀 우주/방산 최신 외신',
+        'following-crypto': '₿ 크립토/블록체인 최신 외신',
+        'following-nuclear': '⚡ 전력/원전/에너지 최신 외신',
       };
       document.getElementById('currentCategoryTitle').innerText = titles[filter] || '투자 뉴스';
       
-      // 기사 렌더링
-      if (filter === 'bookmarks') {
-        renderArticles();
+      // 팔로잉 산업 필터 활성화 시 기업 칩 렌더링
+      const chipContainer = document.getElementById('companyChipContainer');
+      if (filter.startsWith('following-') && state.followingConfig) {
+        const industryId = state.currentIndustry;
+        chipContainer.style.display = 'block';
+        renderCompanyChips(industryId);
       } else {
-        renderArticles();
+        chipContainer.style.display = 'none';
       }
+      
+      renderArticles();
     });
+  });
+
+  // 기업 칩 클릭 이벤트 위임
+  document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('company-chip')) {
+      document.querySelectorAll('.company-chip').forEach(c => c.classList.remove('active'));
+      e.target.classList.add('active');
+      const cid = e.target.getAttribute('data-company-id');
+      state.currentCompanyId = cid === 'all' ? null : parseInt(cid);
+      renderArticles();
+    }
   });
 
   // 새로고침 버튼
@@ -285,6 +320,29 @@ async function fetchCustomFeedsArticles() {
   await Promise.all(customPromises);
 }
 
+// 기업 칩 렌더링
+function renderCompanyChips(industryId) {
+  if (!state.followingConfig) return;
+  const wrapper = document.querySelector('.chip-scroll-wrapper');
+  if (!wrapper) return;
+  
+  const industry = state.followingConfig.industries.find(i => i.id === industryId);
+  if (!industry) return;
+  
+  const companiesInIndustry = state.followingConfig.companies.filter(c =>
+    industry.companyIds.includes(c.id)
+  );
+  
+  wrapper.innerHTML = '<button class="company-chip active" data-company-id="all">전체 보기</button>';
+  companiesInIndustry.forEach(company => {
+    const chip = document.createElement('button');
+    chip.className = 'company-chip';
+    chip.setAttribute('data-company-id', company.id);
+    chip.innerHTML = `[${company.ticker}] ${company.name}`;
+    wrapper.appendChild(chip);
+  });
+}
+
 // 3. 기사 렌더링 엔진
 function renderArticles() {
   const gridEl = document.getElementById('newsGrid');
@@ -298,39 +356,33 @@ function renderArticles() {
   let filtered = [];
 
   if (state.currentFilter === 'bookmarks') {
-    // 북마크된 스터디 데이터 바인딩
     filtered = [...state.bookmarks];
-  } else {
-    // 카테고리별 필터링
-    if (state.currentFilter === 'curated') {
-      // 에이전트 팀이 큐레이션한 핵심 30선 기사 필터링
-      filtered = state.articles.filter(art => art.isCurated || (art.aiAnalysis && art.aiAnalysis.isPremiumCuration));
-    } else if (state.currentFilter === 'all') {
-      filtered = [...state.articles];
-    } else if (state.currentFilter === 'custom') {
-      // 나만의 커스텀 등록 피드 뉴스만 필터링
-      filtered = state.articles.filter(art => {
-        return !['chosun', 'joongang', 'donga', 'hani', 'khan', 'global-invest', 'nyt-biz', 'nyt-tech'].includes(art.sourceId);
-      });
-    } else {
-      filtered = state.articles.filter(art => art.category === state.currentFilter);
+  } else if (state.currentFilter === 'curated') {
+    filtered = state.articles.filter(art => art.isCurated || (art.aiAnalysis && art.aiAnalysis.isPremiumCuration));
+  } else if (state.currentFilter === 'all') {
+    filtered = [...state.articles];
+  } else if (state.currentFilter.startsWith('following-')) {
+    // 팔로잉 산업 필터
+    const industryId = state.currentIndustry;
+    filtered = state.articles.filter(art => art.followingIndustry === industryId);
+    // 기업 칩 필터 추가 적용
+    if (state.currentCompanyId) {
+      filtered = filtered.filter(art =>
+        art.followingCompanyIds && art.followingCompanyIds.includes(state.currentCompanyId)
+      );
     }
+  } else {
+    filtered = state.articles.filter(art => art.category === state.currentFilter);
   }
 
-  // 실시간 검색 키워드 필터링 적용
+  // 실시간 검색 키워드 필터링
   if (state.searchQuery) {
     filtered = filtered.filter(art => {
-      const titleText = art.title || '';
-      const descText = art.description || '';
-      const transTitleText = art.translatedTitle || '';
-      
-      return titleText.toLowerCase().includes(state.searchQuery) || 
-             descText.toLowerCase().includes(state.searchQuery) ||
-             transTitleText.toLowerCase().includes(state.searchQuery);
+      const text = `${art.title || ''} ${art.description || ''} ${art.companyTicker || ''}`.toLowerCase();
+      return text.includes(state.searchQuery);
     });
   }
 
-  // 기사 건수 출력
   countEl.innerText = `총 ${filtered.length}건`;
 
   if (filtered.length === 0) {
@@ -338,30 +390,41 @@ function renderArticles() {
     emptyEl.classList.remove('hidden');
     document.getElementById('emptyMessage').innerText = state.searchQuery 
       ? `"${state.searchQuery}" 관련 뉴스를 찾을 수 없습니다.` 
-      : '현재 카테고리에 표시할 뉴스가 없습니다.';
+      : '현재 필터에 표시할 뉴스가 없습니다. 새로고침 버튼을 눌러 최신 외신을 수집해보세요.';
     return;
   }
 
   emptyEl.classList.add('hidden');
   gridEl.classList.remove('hidden');
 
+  const industryEmojiMap = { autonomous: '🚗', robotics: '🤖', space: '🚀', crypto: '₿', nuclear: '⚡' };
+
   // 뉴스 카드 그리기
   filtered.forEach(art => {
     const isBookmarked = state.bookmarks.some(b => b.id === art.id);
     const timeString = getRelativeTime(art.date);
     
-    // 미국 언론 기사 플래그
     const isEn = art.lang === 'en';
     const flag = isEn ? '🇺🇸 US' : '🇰🇷 KR';
+    const industryEmoji = art.followingIndustry ? (industryEmojiMap[art.followingIndustry] || '') : '';
+    const tickerBadge = art.companyTicker ? `<span class="ticker-badge">[${art.companyTicker}]</span>` : '';
+    const industryBadge = industryEmoji ? `<span class="industry-emoji-badge">${industryEmoji}</span>` : '';
+
+    const followingClass = art.followingIndustry ? ` following-card following-${art.followingIndustry}` : '';
 
     const card = document.createElement('div');
-    card.className = 'news-card';
+    card.className = `news-card${followingClass}`;
+    card.setAttribute('data-industry', art.followingIndustry || '');
+    card.setAttribute('data-companies', (art.followingCompanyIds || []).join(','));
     card.innerHTML = `
       <div class="news-card-header">
         <span class="source-badge">${art.sourceName}</span>
-        <span class="lang-flag">${flag}</span>
+        <div style="display:flex; gap:4px; align-items:center;">
+          ${tickerBadge}${industryBadge}
+          <span class="lang-flag">${flag}</span>
+        </div>
       </div>
-      <h3>${art.translatedTitle || art.title}</h3>
+      <h3>${art.aiAnalysis && art.aiAnalysis.translatedTitle ? art.aiAnalysis.translatedTitle : art.title}</h3>
       <p class="news-card-desc">${art.description || '본문 요약이 없는 기사입니다. AI 스터디 기능을 활용하여 상세 정보를 번역하고 파악해보세요.'}</p>
       <div class="news-card-footer">
         <span class="news-time"><i class="fa-regular fa-calendar-days"></i> ${timeString}</span>
@@ -379,7 +442,6 @@ function renderArticles() {
       </div>
     `;
     
-    // 카드 전체 클릭 시 AI 스터디 실행되도록 함
     card.addEventListener('click', () => openAiStudyModal(art.id));
     gridEl.appendChild(card);
   });
