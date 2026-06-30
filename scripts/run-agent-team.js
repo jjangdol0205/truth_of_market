@@ -123,10 +123,37 @@ async function run() {
   console.log(`➕ [Agent Team] 신규 기사 ${newArticlesCount}건 저장 (전체 스크래퍼 ${scraped.length}건 수집).`);
 
 
-  // API 키 없으면 수집된 기사 저장만 하고 종료
+  // API 키 없으면 AI 분석은 건너뛰고 큐레이션만 실행
   if (!apiKey) {
+    // 기존 curated 플래그 초기화 (오전 런: 전체 초기화 / 오후 런: 기존 유지)
+    const kstHour = parseInt(new Intl.DateTimeFormat('ko-KR', {
+      hour: 'numeric', hour12: false, timeZone: 'Asia/Seoul'
+    }).format(new Date()));
+    const isMorningRun = kstHour >= 4 && kstHour < 12;
+    if (isMorningRun) {
+      for (const id in newsArchive) newsArchive[id].isCurated = false;
+    }
+
+    // 최근 3일 기사 중 AI분석 있는 것 우선, 없으면 최신순으로 30개 큐레이션
+    const threeDaysAgo = new Date();
+    threeDaysAgo.setDate(threeDaysAgo.getDate() - 3);
+    const candidates = Object.values(newsArchive)
+      .filter(a => new Date(a.date) >= threeDaysAgo && (isMorningRun || !a.isCurated))
+      .sort((a, b) => {
+        const aHasAI = a.aiAnalysis ? 1 : 0;
+        const bHasAI = b.aiAnalysis ? 1 : 0;
+        if (bHasAI !== aHasAI) return bHasAI - aHasAI;
+        return new Date(b.date) - new Date(a.date);
+      });
+
+    const limit = isMorningRun ? 20 : 10;
+    candidates.slice(0, limit).forEach(a => {
+      newsArchive[a.id].isCurated = true;
+    });
+    console.log(`🎯 [Curation] ${isMorningRun ? '오전' : '오후'} 런 - ${Math.min(candidates.length, limit)}건 큐레이션 완료`);
+
     saveFiles();
-    console.log(`✅ [Agent Team] RSS 수집 완료. 신규 기사 ${scraped.length}건 저장. (AI 분석 건너뜀)`);
+    console.log(`✅ [Agent Team] RSS 수집 + 큐레이션 완료. 신규 기사 ${newArticlesCount}건. (AI 분석 건너뜀)`);
     return;
   }
 

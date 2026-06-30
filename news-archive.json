@@ -11457,7 +11457,7 @@
     "specialistAnalysis": [
       "오프라인 분석 대기"
     ],
-    "isCurated": true
+    "isCurated": false
   },
   "id_tz2uef": {
     "id": "id_tz2uef",
@@ -11574,7 +11574,7 @@
     "specialistAnalysis": [
       "오프라인 분석 대기"
     ],
-    "isCurated": true
+    "isCurated": false
   },
   "id_rs3hvv": {
     "id": "id_rs3hvv",
@@ -11604,7 +11604,7 @@
     "specialistAnalysis": [
       "오프라인 분석 대기"
     ],
-    "isCurated": true
+    "isCurated": false
   },
   "id_1xdb8x5": {
     "id": "id_1xdb8x5",
@@ -11692,7 +11692,7 @@
       "이러한 현상은 나스닥 등 미국 기술주 중심 지수에도 부정적인 영향을 미칠 수 있으며, 국제 유가 변동성과 함께 전반적인 시장 불안정성을 높입니다.",
       "미국 S&P 500 및 나스닥 지수의 하방 압력으로 작용할 수 있으며, 빅테크 기업들에 대한 투자자들의 신중한 접근을 유도할 수 있습니다."
     ],
-    "isCurated": true
+    "isCurated": false
   },
   "id_1xfp1e9": {
     "id": "id_1xfp1e9",
@@ -11724,7 +11724,7 @@
       "기사는 유가가 4개월 만에 전쟁 이전 수준으로 돌아왔으며, 이란 전쟁이 세계 경제에 미치는 영향을 실시간으로 보여주는 지표라고 언급합니다.",
       "유가 하락은 기업 이익 마진 개선과 소비자 구매력 증대에 기여하여 S&P 500 지수에 긍정적이며, 연준의 금리 인상 압력을 줄여 증시 전반에 우호적인 환경을 조성할 수 있습니다."
     ],
-    "isCurated": true
+    "isCurated": false
   },
   "id_3l5n5x": {
     "id": "id_3l5n5x",
@@ -11896,7 +11896,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_8mgke3": {
     "id": "id_8mgke3",
@@ -11956,7 +11956,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_1f2ao1h": {
     "id": "id_1f2ao1h",
@@ -15101,7 +15101,7 @@
       "연방 자동차 안전 기준(FMVSS) 변경으로 브레이크 페달 없는 자율주행차 디자인이 가능해졌음을 시사하며 기술 발전에 대한 규제당국의 신뢰를 보여줍니다.",
       "테슬라(Tesla), 웨이모(Waymo/Alphabet), 크루즈(Cruise/GM) 등 자율주행 기술을 개발하는 미국 빅테크 및 자동차 기업들의 사업 전망에 긍정적인 영향을 미치고, 관련 기술주에 대한 투자 심리를 고양시킬 수 있습니다."
     ],
-    "isCurated": true
+    "isCurated": false
   },
   "id_1i5gmpe": {
     "id": "id_1i5gmpe",
@@ -15138,7 +15138,7 @@
       "두 회사의 AI 칩 기술, 시장 점유율, 성장 잠재력 등을 비교 분석하여 투자 매력도를 평가하며 핵심 데이터를 제공합니다.",
       "나스닥과 S&P 500의 주요 구성 요소인 엔비디아와 알파벳 주가에 대한 투자자들의 인식을 형성하며, AI 산업 전반에 대한 투자 심리에 큰 영향을 미칩니다."
     ],
-    "isCurated": true
+    "isCurated": false
   },
   "id_152vf4h": {
     "id": "id_152vf4h",
@@ -15245,7 +15245,7 @@
       "로보택시 경쟁에서 가장 많은 투자를 하는 회사가 차량을 직접 만들지 않는다는 점을 지적하며 소프트웨어/AI 중심의 경쟁 양상을 부각합니다.",
       "테슬라(Tesla)와 알파벳(Alphabet)이라는 두 미국 빅테크 기업의 주가에 대한 투자자들의 평가에 영향을 미치고, 자율주행 기술 및 AI 관련주에 대한 투자 전략 수립에 중요한 참고 자료가 됩니다."
     ],
-    "isCurated": true,
+    "isCurated": false,
     "companyTicker": "GOOGL"
   },
   "id_1m4vcf7": {
@@ -20183,7 +20183,7 @@
       "이것은 AI 기술 발전의 핵심 병목 중 하나인 에너지 공급 문제를 해결하려는 시장의 움직임을 보여주며, 관련 기업들의 성장 잠재력을 부각합니다.",
       "미국 시장에서 원자력 발전 및 관련 인프라 기업들은 AI 섹터 성장의 간접 수혜주로 부상하며 투자자들의 포트폴리오 재조정에 영향을 줄 수 있습니다."
     ],
-    "isCurated": true
+    "isCurated": false
   },
   "id_1bf0p7z": {
     "id": "id_1bf0p7z",
@@ -20282,7 +20282,7 @@
       "이것은 AI 데이터 센터의 전력 소비 급증이 기존 에너지원(화석 연료, 재생 에너지, 원자력) 및 신규 에너지 기술에 대한 대규모 투자를 촉진할 것임을 의미합니다.",
       "미국 시장에서는 Big Tech 기업들의 에너지 공급망 확보 노력과 함께 에너지 관련 주식 및 인프라 기업에 대한 장기적인 투자 트렌드를 형성하며 S&P 500과 Nasdaq의 핵심 동인이 될 수 있습니다."
     ],
-    "isCurated": true
+    "isCurated": false
   },
   "id_zdrf1j": {
     "id": "id_zdrf1j",
@@ -20356,7 +20356,7 @@
       "이러한 전략은 테슬라의 사업 다각화 및 새로운 수익원 창출 가능성을 시사하며, AI 시대의 에너지 솔루션 시장에서의 경쟁을 가속화할 것입니다.",
       "미국 시장에서 테슬라의 주가에 긍정적인 영향을 미칠 수 있으며, 다른 Big Tech 기업들에게도 AI 에너지 수요에 대한 혁신적인 접근 방식의 중요성을 부각합니다."
     ],
-    "isCurated": true
+    "isCurated": false
   },
   "id_1v6hjyg": {
     "id": "id_1v6hjyg",
@@ -20538,7 +20538,7 @@
       "이러한 분석은 AI 기술 발전의 필수 요소인 전력 및 냉각 인프라 공급 기업들의 성장 잠재력을 부각하며, 관련 기업들의 주가 상승에 기여할 수 있습니다.",
       "미국 시장에서 S&P 500 및 Nasdaq에 포함된 기술 및 인프라 기업 중 AI 데이터 센터 수혜주를 찾는 투자자들에게 중요한 정보를 제공합니다."
     ],
-    "isCurated": true
+    "isCurated": false
   },
   "id_19yibwv": {
     "id": "id_19yibwv",
@@ -20942,7 +20942,7 @@
       "특정 기업의 생산 이정표는 AI 및 로봇 산업의 성장세를 시사하며 기술 혁신 모멘텀을 지지합니다.",
       "미국 기술 섹터, 특히 AI 및 자동화 관련 기업에 긍정적이지만, 전반적인 시장에 미치는 영향은 제한적입니다."
     ],
-    "isCurated": true
+    "isCurated": false
   },
   "id_1icalk": {
     "id": "id_1icalk",
@@ -20979,7 +20979,7 @@
       "구체적인 시장 영향 데이터는 없으며, 위성 통신 서비스의 인프라 확장이라는 의미가 있습니다.",
       "미국 시장, 특히 S&P 500이나 나스닥 지수에 직접적인 영향은 거의 없으며 개별 기업 뉴스에 가깝습니다."
     ],
-    "isCurated": true
+    "isCurated": false
   },
   "id_1oa1mts": {
     "id": "id_1oa1mts",
@@ -21016,7 +21016,7 @@
       "특정 기업의 생산 이정표는 AI 및 로봇 산업의 성장세를 시사하며 기술 혁신 모멘텀을 지지합니다.",
       "미국 기술 섹터, 특히 AI 및 자동화 관련 기업에 긍정적이지만, 전반적인 시장에 미치는 영향은 제한적입니다."
     ],
-    "isCurated": true
+    "isCurated": false
   },
   "id_z9x1a0": {
     "id": "id_z9x1a0",
@@ -21050,7 +21050,7 @@
       "이러한 인재 유치는 GM의 자율주행 기술 투자와 시장 선점 의지를 나타내며, 관련 기업의 기술 발전 가속화를 의미합니다.",
       "미국 자동차 및 AI 기술 관련 기업에 긍정적이며, 장기적으로 해당 산업의 성장 잠재력을 높일 수 있습니다."
     ],
-    "isCurated": true
+    "isCurated": false
   },
   "id_8umq7p": {
     "id": "id_8umq7p",
@@ -21902,7 +21902,7 @@
       "일리노이와 시카고에서 Waymo 서비스 승인을 신속히 처리해야 한다는 사설의 주장이 주요 내용입니다.",
       "규제 완화 시 자율주행 기술 상용화가 가속화되어 관련 빅테크 기업(Alphabet)의 주가에 긍정적이며, 운송 산업 전반에 변화를 가져올 수 있습니다."
     ],
-    "isCurated": true
+    "isCurated": false
   },
   "id_kbngtz": {
     "id": "id_kbngtz",
@@ -21939,7 +21939,7 @@
       "기사는 특정 AI 스타트업이 자율주행 기술에서 테슬라 및 Waymo와 경쟁하고 있다는 내용을 다룹니다.",
       "경쟁 심화는 테슬라와 Alphabet 등 기존 강자들의 시장 점유율 및 수익성에 영향을 줄 수 있으며, 관련 빅테크 기업 주가 변동 요인이 됩니다."
     ],
-    "isCurated": true
+    "isCurated": false
   },
   "id_1kxt8v": {
     "id": "id_1kxt8v",
@@ -21973,7 +21973,7 @@
       "NASA가 고장난 우주망원경을 살리기 위한 과감한 노력을 하고 있다는 내용이 기사의 주요 골자입니다.",
       "이 뉴스는 S&P 500, 나스닥, 연준 정책, 주요 빅테크 기업 주가에 직접적인 시장 움직임을 유발할 가능성이 매우 낮습니다."
     ],
-    "isCurated": true
+    "isCurated": false
   },
   "id_ti49r6": {
     "id": "id_ti49r6",
@@ -22007,7 +22007,7 @@
       "독일의 셰플러(Schaeffler AG)가 휴머노이드 로봇 부문의 주요 수혜자 중 하나로 언급됩니다.",
       "휴머노이드 로봇 시장의 성장은 엔비디아, 테슬라 등 미국 빅테크 기업의 AI 및 로봇 기술 개발에 대한 투자 매력을 높일 수 있습니다."
     ],
-    "isCurated": true
+    "isCurated": false
   },
   "id_6k9ell": {
     "id": "id_6k9ell",
@@ -22044,7 +22044,7 @@
       "기사는 마이크론이 AI 데이터센터 이외의 영역에서 수십 년간 지속될 수 있는 성장 기회를 공개했다고 강조합니다.",
       "이는 반도체 산업의 투자 초점을 확장시키고, 나스닥 및 S&P 500 내 기술주 섹터 전반에 긍정적인 영향을 미치며, 마이크론 주가에 중대한 영향을 줄 수 있습니다."
     ],
-    "isCurated": true
+    "isCurated": false
   },
   "id_coa979": {
     "id": "id_coa979",
@@ -22081,7 +22081,7 @@
       "CNN에서 엔비디아 주가 시세와 전망에 대한 정보를 제공한다는 내용입니다.",
       "엔비디아 주가의 움직임은 S&P 500과 나스닥 지수의 방향성을 결정하는 주요 요소 중 하나이며, 빅테크 투자 심리에 직접적으로 작용합니다."
     ],
-    "isCurated": true
+    "isCurated": false
   },
   "id_ke19f2": {
     "id": "id_ke19f2",
@@ -22119,7 +22119,7 @@
       "비트코인이 이례적으로 두 분기 연속 하락세를 기록했다는 점이 핵심 정보입니다.",
       "암호화폐 시장의 침체는 전반적인 투자 심리에 부정적인 영향을 미칠 수 있으나, 미국 주식 시장이나 빅테크 기업에 직접적인 단기적 영향은 제한적입니다."
     ],
-    "isCurated": true
+    "isCurated": false
   },
   "id_muv90i": {
     "id": "id_muv90i",
@@ -22252,7 +22252,7 @@
       "테슬라의 2026년 투자 가치와 1.5조 달러의 기업 가치가 AI와 로보택시 사업에 의해 정의된다는 내용이 제시됩니다.",
       "테슬라의 AI 및 로보택시 비전 실현 여부는 나스닥과 S&P 500 기술주의 방향성을 결정하는 중요한 요소이며, 빅테크 전반의 성장 기대감에 영향을 미칩니다."
     ],
-    "isCurated": true
+    "isCurated": false
   },
   "id_1xezw0z": {
     "id": "id_1xezw0z",
@@ -23531,7 +23531,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_3cbszn": {
     "id": "id_3cbszn",
@@ -23563,7 +23563,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_1kztpoy": {
     "id": "id_1kztpoy",
@@ -23595,7 +23595,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_4dqoj5": {
     "id": "id_4dqoj5",
@@ -23628,7 +23628,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_1va9p02": {
     "id": "id_1va9p02",
@@ -23658,7 +23658,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_1e9umir": {
     "id": "id_1e9umir",
@@ -23693,7 +23693,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_1f5cu3w": {
     "id": "id_1f5cu3w",
@@ -23723,7 +23723,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_17m8sks": {
     "id": "id_17m8sks",
@@ -23755,7 +23755,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_65k71": {
     "id": "id_65k71",
@@ -23787,7 +23787,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true,
+    "isCurated": false,
     "companyTicker": "MSTR"
   },
   "id_875bcb": {
@@ -23821,7 +23821,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_18xy2wt": {
     "id": "id_18xy2wt",
@@ -23853,7 +23853,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_125jex": {
     "id": "id_125jex",
@@ -23885,7 +23885,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_1ov2zpi": {
     "id": "id_1ov2zpi",
@@ -23917,7 +23917,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_18pr2j3": {
     "id": "id_18pr2j3",
@@ -23949,7 +23949,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_1m3lqkg": {
     "id": "id_1m3lqkg",
@@ -23982,7 +23982,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_17ued6f": {
     "id": "id_17ued6f",
@@ -24015,7 +24015,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_17we41r": {
     "id": "id_17we41r",
@@ -24048,7 +24048,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_ecv43v": {
     "id": "id_ecv43v",
@@ -24078,7 +24078,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_j4rqj0": {
     "id": "id_j4rqj0",
@@ -24111,7 +24111,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_17n497v": {
     "id": "id_17n497v",
@@ -24144,7 +24144,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_baqukz": {
     "id": "id_baqukz",
@@ -24177,7 +24177,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_4e83h6": {
     "id": "id_4e83h6",
@@ -24207,7 +24207,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_6nrb40": {
     "id": "id_6nrb40",
@@ -24240,7 +24240,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_1yolfk5": {
     "id": "id_1yolfk5",
@@ -24272,7 +24272,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_1koiska": {
     "id": "id_1koiska",
