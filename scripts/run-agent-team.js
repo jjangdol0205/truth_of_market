@@ -134,10 +134,12 @@ async function run() {
       for (const id in newsArchive) newsArchive[id].isCurated = false;
     }
 
-    // 최근 3일 기사 중 AI분석 있는 것 우선, 없으면 최신순으로 30개 큐레이션
+    // 최근 3일 기사 중 각 산업(Industry)별로 3개씩 균등하게 큐레이션 (총 21~30개)
     const threeDaysAgo = new Date();
     threeDaysAgo.setDate(threeDaysAgo.getDate() - 3);
-    const candidates = Object.values(newsArchive)
+    
+    // AI 분석 여부 및 최신순 정렬
+    const recentArticles = Object.values(newsArchive)
       .filter(a => new Date(a.date) >= threeDaysAgo && (isMorningRun || !a.isCurated))
       .sort((a, b) => {
         const aHasAI = a.aiAnalysis ? 1 : 0;
@@ -146,11 +148,23 @@ async function run() {
         return new Date(b.date) - new Date(a.date);
       });
 
-    const limit = isMorningRun ? 20 : 10;
-    candidates.slice(0, limit).forEach(a => {
+    const byIndustry = {};
+    recentArticles.forEach(a => {
+      const ind = a.followingIndustry || 'General';
+      if (!byIndustry[ind]) byIndustry[ind] = [];
+      if (byIndustry[ind].length < 3) byIndustry[ind].push(a); // 산업당 최대 3개
+    });
+
+    const candidates = [];
+    for (const ind in byIndustry) {
+      candidates.push(...byIndustry[ind]);
+    }
+
+    // 최종 큐레이션 플래그 설정
+    candidates.forEach(a => {
       newsArchive[a.id].isCurated = true;
     });
-    console.log(`🎯 [Curation] ${isMorningRun ? '오전' : '오후'} 런 - ${Math.min(candidates.length, limit)}건 큐레이션 완료`);
+    console.log(`🎯 [Curation] ${isMorningRun ? '오전' : '오후'} 런 - 각 산업당 3개씩, 총 ${candidates.length}건 큐레이션 완료`);
 
     saveFiles();
     console.log(`✅ [Agent Team] RSS 수집 + 큐레이션 완료. 신규 기사 ${newArticlesCount}건. (AI 분석 건너뜀)`);
