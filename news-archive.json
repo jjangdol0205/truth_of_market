@@ -23755,7 +23755,8 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": false
+    "isCurated": false,
+    "companyTicker": "MSTR"
   },
   "id_65k71": {
     "id": "id_65k71",
@@ -25462,12 +25463,14 @@
     "region": "US",
     "followingIndustry": "autonomous",
     "followingCompanyIds": [
-      4
+      4,
+      3
     ],
     "aiAnalysis": null,
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": false
+    "isCurated": false,
+    "companyTicker": "GOOGL"
   },
   "id_lz4ae7": {
     "id": "id_lz4ae7",
@@ -37080,7 +37083,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_du4ffn": {
     "id": "id_du4ffn",
@@ -37112,7 +37115,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_ghf6vf": {
     "id": "id_ghf6vf",
@@ -37144,7 +37147,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_s2ufsp": {
     "id": "id_s2ufsp",
@@ -37177,7 +37180,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_1fd5uj9": {
     "id": "id_1fd5uj9",
@@ -37209,7 +37212,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_1bkmopy": {
     "id": "id_1bkmopy",
@@ -37241,7 +37244,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_1620ro0": {
     "id": "id_1620ro0",
@@ -37274,7 +37277,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_1y8sbri": {
     "id": "id_1y8sbri",
@@ -37307,7 +37310,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_13j5ion": {
     "id": "id_13j5ion",
@@ -37340,7 +37343,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_eefz7d": {
     "id": "id_eefz7d",
@@ -37372,7 +37375,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_1putycx": {
     "id": "id_1putycx",
@@ -37404,7 +37407,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_10rey0v": {
     "id": "id_10rey0v",
@@ -37436,7 +37439,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_kohizo": {
     "id": "id_kohizo",
@@ -37468,7 +37471,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_x8s046": {
     "id": "id_x8s046",
@@ -37501,7 +37504,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_1wnkrc": {
     "id": "id_1wnkrc",
@@ -37535,7 +37538,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_4xnwtw": {
     "id": "id_4xnwtw",
@@ -37568,7 +37571,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_i6ed5h": {
     "id": "id_i6ed5h",
@@ -37621,7 +37624,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_yfmq5l": {
     "id": "id_yfmq5l",
@@ -37654,7 +37657,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_xuz88j": {
     "id": "id_xuz88j",
@@ -37728,7 +37731,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_5f9zqz": {
     "id": "id_5f9zqz",
@@ -37762,7 +37765,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_1kf413g": {
     "id": "id_1kf413g",
@@ -37794,7 +37797,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_o8i3q1": {
     "id": "id_o8i3q1",
@@ -37826,7 +37829,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_s81lxf": {
     "id": "id_s81lxf",
@@ -37858,7 +37861,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_107qa2h": {
     "id": "id_107qa2h",
@@ -37953,7 +37956,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_1arflnm": {
     "id": "id_1arflnm",
@@ -37985,7 +37988,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_8r7321": {
     "id": "id_8r7321",
@@ -38015,7 +38018,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_1iyp1u0": {
     "id": "id_1iyp1u0",
@@ -38085,7 +38088,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_13ggge5": {
     "id": "id_13ggge5",
@@ -38119,7 +38122,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_1ous0x8": {
     "id": "id_1ous0x8",
@@ -38152,7 +38155,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_yqjiln": {
     "id": "id_yqjiln",
@@ -38206,7 +38209,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_1a1yxh9": {
     "id": "id_1a1yxh9",
@@ -38238,7 +38241,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_10ewxvo": {
     "id": "id_10ewxvo",
@@ -38312,7 +38315,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_xphpkp": {
     "id": "id_xphpkp",
@@ -38365,7 +38368,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_1cktopb": {
     "id": "id_1cktopb",
@@ -38398,7 +38401,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_132q19q": {
     "id": "id_132q19q",
@@ -38493,7 +38496,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": true
+    "isCurated": false
   },
   "id_ia4zak": {
     "id": "id_ia4zak",
@@ -38793,6 +38796,3314 @@
       29
     ],
     "companyTicker": "COIN",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_17a0gxh": {
+    "id": "id_17a0gxh",
+    "title": "A blockchain-enabled IoT framework for smart electro-medical waste management - Nature",
+    "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9HQmdURWk5R1QwajluVGc4M0lOSXJpYld2bVBqakQ3bUE4R01xOVdKek11OXBFUUlLNG1CYkYzdm9jZXk4SFd1QU8tblJuUU92UDBiY19tbGdNSHl2cE1J?oc=5",
+    "description": "A blockchain-enabled IoT framework for smart electro-medical waste management  Nature",
+    "date": "2026-07-03T00:59:05.000Z",
+    "sourceId": "following-industry-crypto",
+    "sourceName": "₿ Crypto & Blockchain News",
+    "lang": "en",
+    "category": "Crypto & Blockchain",
+    "region": "US",
+    "followingIndustry": "crypto",
+    "followingCompanyIds": [
+      34
+    ],
+    "aiAnalysis": {
+      "translatedTitle": "스마트 의료 폐기물 관리를 위한 블록체인 기반 사물인터넷(IoT) 프레임워크",
+      "summary": [
+        "국제 학술지 네이처(Nature)에 IoT 센서와 블록체인 스마트 컨트랙트를 결합하여 병원의 의료 폐기물 배출부터 소각까지의 전 과정을 투명하게 추적하는 프레임워크 연구가 게재되었습니다.",
+        "이 기술은 전염성 폐기물의 불법 투기나 데이터 조작을 원천적으로 차단하며, 병원-운송업체-폐기물 처리장 간의 신뢰 비용을 극단적으로 낮출 수 있습니다.",
+        "블록체인이 단순 금융 거래(DeFi)를 넘어, 생명과 직결된 공공 헬스케어 및 환경(ESG) 인프라의 핵심 데이터 레이어로 실생활에 깊숙이 침투하고 있음을 보여주는 강력한 사례입니다."
+      ],
+      "implications": [
+        "사물인터넷(IoT) 데이터의 무결성을 증명하는 블록체인 미들웨어(Middleware) 플랫폼들이 물류, 의료, 탄소 배출권 추적 시장에서 거대한 B2B 솔루션 파이프라인을 구축할 전망입니다.",
+        "실물 자산 토큰화(RWA)와 결합하여 폐기물 처리 크레딧을 토큰화하는 신규 비즈니스 모델이 등장하며 관련 엔터프라이즈 블록체인 관련주의 밸류에이션 리레이팅이 기대됩니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": true
+  },
+  "id_1k0o1wv": {
+    "id": "id_1k0o1wv",
+    "title": "Why Bitcoin Jumped towards $62,000 and What Could Carry It to $70,000 - Yahoo Finance",
+    "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPTGtNQzJyeEJTQTF1S1BVb2l2dnlmWktST01xeVlxbkZYTjBuZkx1OUVvektkdU5fdmtRTExDTGZCU0hXX09tTUpWbllKV0VueXpYa2kwZ0Y5Z1NfM2dJUjFtTHVEWEY4NWE5Q21Zb2xFaVlxZzZ5TGhwYTA4TW01Y2kzSi0tVEc3WUgyaE9XazJPOGU0b0tQU2lB?oc=5",
+    "description": "Why Bitcoin Jumped towards $62,000 and What Could Carry It to $70,000  Yahoo Finance",
+    "date": "2026-07-03T00:37:00.000Z",
+    "sourceId": "following-industry-crypto",
+    "sourceName": "₿ Crypto & Blockchain News",
+    "lang": "en",
+    "category": "Crypto & Blockchain",
+    "region": "US",
+    "followingIndustry": "crypto",
+    "followingCompanyIds": [
+      29
+    ],
+    "aiAnalysis": {
+      "translatedTitle": "비트코인 6만 2천 달러 돌파 이유와 7만 달러 탈환을 이끌 동력",
+      "summary": [
+        "비트코인이 저항선을 뚫고 6만 2천 달러 선을 강하게 회복한 주된 원인으로, 마운트곡스 채권자 상환이라는 최악의 오버행(잠재적 매도 물량) 악재가 시장에서 선반영되어 소멸되었기 때문으로 분석됩니다.",
+        "야후 파이낸스는 향후 7만 달러 돌파의 핵심 촉매제로 하반기 연준의 금리 인하 기대감 상승과 함께, 미국 대선에서 양당 후보들의 친(親) 암호화폐 정책 경쟁이 불붙고 있다는 점을 꼽았습니다.",
+        "현물 ETF로 유입되는 기관의 패시브 자금이 하락장을 방어하는 든든한 쿠션 역할을 해내며, 비트코인이 전형적인 위험 자산에서 거시 경제 피벗(Pivot)을 선행하는 안전 자산으로 성격이 변모하고 있습니다."
+      ],
+      "implications": [
+        "기관 투자자들이 단기적 악재(퍼드, FUD)에 흔들리지 않고 저점 매수(Buy the dip) 기조를 유지함에 따라 비트코인의 바닥이 한층 견고해졌음을 시사합니다.",
+        "정치적 불확실성이 오히려 코인 시장에 우호적인 규제 환경을 조성하는 역설적인 상황이 전개되며, 관련 수탁(Custody) 및 거래소 플랫폼의 구조적 성장이 돋보일 것입니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": true
+  },
+  "id_6w4qb2": {
+    "id": "id_6w4qb2",
+    "title": "SpaceX Satellite Phones Poised to Disrupt Mobile Communications - 조선일보",
+    "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOOWNFRTdWTURaQXZuNEwyR0trRG83c21jZ05aN1poTjVGb0RfblZXVWQzUU1GLUFzSU5xTVZxMEIyMC1TY1o0eVJLVGxPOXZ1dEJFT2pPN2IyREoyRkItYW1wYXB3cFVNT0VBWWtYQk9GYXJ1dkVlcUtycl82amZWeGZuTWRQREw2?oc=5",
+    "description": "SpaceX Satellite Phones Poised to Disrupt Mobile Communications  조선일보",
+    "date": "2026-07-03T00:25:15.000Z",
+    "sourceId": "following-industry-space",
+    "sourceName": "🚀 Space & Defense News",
+    "lang": "en",
+    "category": "Space & Defense",
+    "region": "US",
+    "followingIndustry": "space",
+    "followingCompanyIds": [
+      9,
+      47
+    ],
+    "aiAnalysis": {
+      "translatedTitle": "스페이스X 위성 폰, 모바일 통신 시장의 파괴적 혁신 예고",
+      "summary": [
+        "스페이스X의 스타링크 다이렉트-투-셀(Direct-to-Cell) 서비스가 스마트폰에 별도의 장비 없이 우주에서 직접 텍스트와 음성, 데이터를 쏘아 보내는 기술을 입증하며 전통 이동통신 시장에 거대한 지각 변동을 예고하고 있습니다.",
+        "기존 통신사들이 수조 원을 들여 촘촘하게 지상 기지국(사각지대)을 세워야 했던 인프라 투자 공식을 완벽히 파괴하고, 산간 오지와 해상 등 전 지구적 커버리지를 단숨에 확보하는 혁신적 비즈니스 모델입니다.",
+        "스페이스X는 T-모바일 등 글로벌 통신 공룡들과 제휴를 맺으며 경쟁자가 아닌 백홀 파트너로서 생태계를 장악하고, 궁극적으로는 통신 요금제를 주도하는 최상위 플랫폼으로 군림하려 하고 있습니다."
+      ],
+      "implications": [
+        "지상망과 위성망 사이의 매끄러운 통신 전환(핸드오버)을 지원하는 통신 칩(모뎀) 설계 능력을 보유한 팹리스 반도체 기업들이 스마트폰 하드웨어 밸류체인의 슈퍼스타로 떠오를 전망입니다.",
+        "기존 해저 광케이블 및 지상 중계기(기지국) 장비 업체들은 막대한 타격을 받을 수 있으며, 위상배열 안테나(Phased Array) 등 우주-지상 간 통신 부품 생태계로 시장의 자본이 급격히 쏠리게 될 것입니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": true
+  },
+  "id_560ddo": {
+    "id": "id_560ddo",
+    "title": "Nuclear Capacity Set To Reach 619 GW By 2050, But More Collaboration Needed Between Countries - NucNet",
+    "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNcGdCdTgyMEpQMG1Jd0R0MThGWUtKZ3pxQ2lOMXQ0MTdLY1VDY2tvSl9rVEVxZjVPYTJrSlZfRUpWa1JvZFJ0TEJUQXJZNGhSdGZDbHBQUHJyUXVVUDFFZ3QtTFRvSlc2ajZVNGotZURMVW1IalFmYUJiLVR5SjBWSHlDLVdXY0dpZGZJS0dpTHZsZ1puRjFkUVlpY2dhMlZidG91bHRQWmF0aXVwQ1RiSS1KMzFYTlM1dHk1Z3pJUlhwdUlDX3VBMQ?oc=5",
+    "description": "Nuclear Capacity Set To Reach 619 GW By 2050, But More Collaboration Needed Between Countries  NucNet",
+    "date": "2026-07-02T23:30:27.000Z",
+    "sourceId": "following-industry-nuclear",
+    "sourceName": "⚡ Nuclear & Energy News",
+    "lang": "en",
+    "category": "Nuclear & Energy",
+    "region": "US",
+    "followingIndustry": "nuclear",
+    "followingCompanyIds": [
+      9
+    ],
+    "aiAnalysis": {
+      "translatedTitle": "원자력 발전 용량, 2050년까지 619GW 도달 전망... 다만 국가 간 더 긴밀한 협력 필수적",
+      "summary": [
+        "글로벌 원자력 매체 NucNet은 AI 전력 수요와 탄소 중립 목표가 융합되면서 전 세계 원자력 발전 용량이 2050년까지 무려 619GW(기가와트)로 2배 이상 폭발적으로 팽창할 것이라는 최신 전망을 내놓았습니다.",
+        "다만 보고서는 이러한 막대한 설비 투자가 현실화되기 위해서는 농축 우라늄 등 핵연료 공급망의 특정 국가(러시아 등) 의존도를 탈피하고, 서방 국가 연합이 규제 표준화와 자본 조달(PF)을 위한 긴밀한 협력체를 신속히 구축해야 한다고 경고했습니다.",
+        "원자력 르네상스가 단순한 선언을 넘어 실체적인 EPC(설계·시공) 수주로 폭발하기 직전의 임계점에 도달해 있으며, 글로벌 원전 생태계의 블록화 현상이 강력한 지각 변동을 일으키고 있습니다."
+      ],
+      "implications": [
+        "수십 년간 침체기를 겪었던 우라늄 광산 채굴 및 농축 기업, 그리고 원자로 주기기(압력 용기, 터빈)를 제조하는 소수의 핵심 독과점 벤더들이 향후 20년간 이어질 강력한 수주 슈퍼 사이클의 초입에 진입했습니다.",
+        "국가 간 공동 인허가 승인(Regulatory Harmonization)이 가속화될 경우, 공장에서 찍어내듯 수출할 수 있는 SMR(소형 모듈 원자로) 설계 보유 기업들의 밸류에이션 파이프라인이 기하급수적으로 확장될 것입니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": true
+  },
+  "id_ue2io6": {
+    "id": "id_ue2io6",
+    "title": "Amazon Leo Launches 29 More Satellites into Orbit - Broadband Breakfast",
+    "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPSGxqcDdvU2QzSy1tMFZIWVZaUnFjb2JQMkYwSmZsNGJZX3JkT1lnWTMySnZudGxseE1uYTNMTlNhQnR3VTRVbUFWVFN2ZHlCMm90Zkczb1R4R3VIREFlellUVzZOQzN5andXbEh3NWFieHVCYlBrTzlaRVVpUU54X2lBTUs5anpa?oc=5",
+    "description": "Amazon Leo Launches 29 More Satellites into Orbit  Broadband Breakfast",
+    "date": "2026-07-02T23:29:55.000Z",
+    "sourceId": "following-industry-space",
+    "sourceName": "🚀 Space & Defense News",
+    "lang": "en",
+    "category": "Space & Defense",
+    "region": "US",
+    "followingIndustry": "space",
+    "followingCompanyIds": [
+      9
+    ],
+    "aiAnalysis": {
+      "translatedTitle": "아마존, 카이퍼 프로젝트 위성 29기 추가로 궤도에 올려",
+      "summary": [
+        "아마존(Amazon)이 거액을 투자한 글로벌 위성 인터넷 사업 '프로젝트 카이퍼(Project Kuiper)'의 본격적인 상용망 구축을 위해 29기의 저궤도(LEO) 통신 위성을 한꺼번에 성공적으로 발사했습니다.",
+        "이는 스페이스X 스타링크의 독점적 지위를 견제하려는 제프 베이조스의 야심이 실체화된 것으로, 아마존은 자사의 AWS 클라우드 서비스와 위성 인터넷을 번들링하여 기업 고객(B2B)을 강력하게 락인(Lock-in)시키겠다는 전략입니다.",
+        "빅테크 기업들이 지상 데이터센터를 넘어 우주 공간에 초고속 통신 백본(Backbone)망을 직접 구축하면서, 우주를 무대로 한 테크 자이언트들의 거대한 인프라 패권 전쟁이 2막에 돌입했습니다."
+      ],
+      "implications": [
+        "아마존 카이퍼 생태계 진입에 성공한 위성체 조립, 고주파 안테나 모듈, 전력 증폭기 등 항공우주 부품사들이 스페이스X 밸류체인과 쌍벽을 이루는 거대한 장기 수주 사이클을 확보하게 되었습니다.",
+        "여러 위성망 사업자 간의 주파수 간섭을 해결하고 위성 궤도 충돌을 방지하기 위한 우주 관제 소프트웨어(Space Traffic Management) 스타트업들의 기업 가치가 폭발적으로 재평가될 것입니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": true
+  },
+  "id_15v9q0q": {
+    "id": "id_15v9q0q",
+    "title": "Oregon gov. talks POWER Act requiring large data centers pay more for infrastructure - KATU",
+    "link": "https://news.google.com/rss/articles/CBMiwAJBVV95cUxNcHdlNFZIeUNBalJISGY2cVZvWmVoM3BMRWFoODN0VkJQTHZUY2RZZWFuWlpoU2NzLW5XaVRUTUMxRXZMWHVGVmdZN29TT3FLc1lYblN1dXRnQUozQjM2TVgtZTBoSTMxVmhVV1FYWmlLZWs5RFk0NkE5U1pkYjVza2NpaEdkT3N4VWhsRG5uR2JwNTVCaGdhYXhYSXNlOU4tVDJoMHdJQWZKQkNUWWczRTFWQ3hyemNhWUphbEQ3aW1qcWZ3WGgybE5QWUJfYV8yUXEtVlI0WmZ2M0llZWRmTHJvZHlWLXBuWVNwdV93cXpxSkJuRWs1SWVGZ3JRSG9MTUY5bU0xeU4zNkZvdzlHZ25KTzdqb1pJS1FfT08wNW9FRW9KZW5YQlZ0ejNYMnU2em93QzhLb0JxbFFSbUh2SA?oc=5",
+    "description": "Oregon gov. talks POWER Act requiring large data centers pay more for infrastructure  KATU",
+    "date": "2026-07-02T23:22:41.000Z",
+    "sourceId": "following-industry-power-infra",
+    "sourceName": "🔌 Power Infrastructure News",
+    "lang": "en",
+    "category": "Power Infrastructure",
+    "region": "US",
+    "followingIndustry": "power-infra",
+    "followingCompanyIds": [
+      9,
+      12
+    ],
+    "aiAnalysis": {
+      "translatedTitle": "오리건 주지사, 대규모 데이터센터에 인프라 비용 분담 의무화하는 POWER 법안 지지",
+      "summary": [
+        "미국 데이터센터의 메카로 불리는 오리건 주에서, 전력을 블랙홀처럼 빨아들이는 빅테크 기업들에게 송전망 업그레이드 등 인프라 비용을 의무적으로 분담하게 하는 이른바 'POWER Act(전력망 보호 법안)' 도입 논의가 급물살을 타고 있습니다.",
+        "이는 아마존, 구글 등 데이터센터가 가져오는 세수 혜택보다 지역 내 전기 요금 폭등과 블랙아웃 위협 등 부작용이 훨씬 커지자 주 정부 차원에서 빅테크에 노골적인 청구서를 들이미는 상징적인 규제 변화입니다.",
+        "AI 인프라 확장이 지역 주민(님비 현상) 및 낡은 유틸리티 인프라와 정면충돌하는 갈등의 임계점에 도달했음을 보여주며, 향후 데이터센터 건립 비용(CAPEX)이 기하급수적으로 상승할 것임을 강력하게 시사합니다."
+      ],
+      "implications": [
+        "전력망 연결 비용 및 망 사용료 부과 리스크를 피하기 위해, 천연가스 열병합(CHP) 및 연료전지 등 데이터센터 자체 마이크로그리드(Micro-grid) 구축을 위한 인프라 설비 수요가 폭발적으로 증가할 것입니다.",
+        "지역 유틸리티 기업들은 데이터센터 고객들로부터 수취한 대규모 분담금을 노후 변압기 교체 및 송전망 고도화에 공격적으로 쏟아부으며 전력기자재 소부장 업계의 슈퍼 사이클이 한층 장기화될 전망입니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": true
+  },
+  "id_1ul9ajy": {
+    "id": "id_1ul9ajy",
+    "title": "Oregon gov. talks POWER Act requiring large data centers pay more for infrastructure - KVAL",
+    "link": "https://news.google.com/rss/articles/CBMiywJBVV95cUxOT0piYTM2Z2hLeS1Qd2ZuQm9sUlI1R0lvd2ZWQXhBMW5ma216S0U1dmZWaUduYVAzY011NGROU3F2YkNDUXhuS1dKaUZoMGJaSFJjOFN3eXdGdDVaYXpkNkMyMkpDLTJ2YzBFOTNNeG94Z0FNeXgxeHh3ZTFHWUZwcXNGRjBkMVQtcExlVE9MWGhoZFVPR3M1UWxlUXBJdmtHTG45NTI2NUEybDJnaWE4RC1JcXVUU01BcEVYV1NLOG5mTFlCUzV4eXNFSUdGSi1fVVNkT0RMLWVuM2NtemNLNmpnVTk1bkhOOV90anZqQWw2bUJ0NjFubUtqQ1hxQlpnSGMyYkltRWJUQm1ZbGkzd1hOLUE2YkRfT29MdGc2VlhfZEt5dDRGdGRnU19Pb1lHd3FQdkV2cDNTTDhRQ2d0bTFiZWpmblZGZW1F?oc=5",
+    "description": "Oregon gov. talks POWER Act requiring large data centers pay more for infrastructure  KVAL",
+    "date": "2026-07-02T23:09:35.000Z",
+    "sourceId": "following-industry-power-infra",
+    "sourceName": "🔌 Power Infrastructure News",
+    "lang": "en",
+    "category": "Power Infrastructure",
+    "region": "US",
+    "followingIndustry": "power-infra",
+    "followingCompanyIds": [
+      9,
+      12
+    ],
+    "aiAnalysis": {
+      "translatedTitle": "오리건 주지사, 데이터센터 전력망 부담금 법안(POWER Act) 통과 촉구",
+      "summary": [
+        "오리건 주지사가 거대 IT 기업들의 무분별한 AI 데이터센터 증설로 인해 지역 전력망이 마비될 위기에 처했다며, 이들에게 송배전망 확충 비용을 직접 부과하는 POWER 법안의 신속한 의회 통과를 강력히 촉구했습니다.",
+        "오리건을 비롯해 버지니아, 텍사스 등 미국의 핵심 데이터 허브 주(State)들이 빅테크의 무임승차를 용인하지 않겠다는 정책적 카르텔을 형성하고 있어 전 세계 인프라 투자자들의 이목이 집중되고 있습니다.",
+        "이러한 강력한 페널티성 규제의 등장은 클라우드 사업자들에게 치명적인 원가 상승 압박으로 작용하며, 전력 효율성을 극한으로 끌어올리거나 아예 전력망이 닿지 않는 오지(원자력 연계 등)로 입지를 이전하는 극단적 지형 변화를 강제하고 있습니다."
+      ],
+      "implications": [
+        "규제 장벽이 높아질수록 전력 최적화 AI 소프트웨어 및 액침 냉각 등 극한의 에너지 효율 설루션을 제공하는 벤더들의 밸류에이션 리레이팅(프리미엄 부여)이 폭발적으로 진행될 것입니다.",
+        "빅테크 기업들이 정책 리스크를 회피하기 위해 전력 인프라 펀드(PEF)와 대규모 조인트 벤처(JV)를 설립하여 발전소부터 전선까지 자체 인프라 밸류체인을 수직 계열화하려는 거대한 M&A 바람이 불어닥칠 것입니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": true
+  },
+  "id_1ar2x02": {
+    "id": "id_1ar2x02",
+    "title": "Tesla FSD Driver Faces Manslaughter in Fatal Texas Crash - The Tech Buzz",
+    "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOWTdXQ1dUSndxMjZJNXpUSEZoSS1nQlE1LXp4by1TX0lIZzV4N1pJS042bm1RdFpoTXZhbVRsanFHQ3F4SGJ5b2xYV2tuUUFmdlQ2dWRwLWlSVVN4bUZUMUwxWHBMM3laY3VlakF1TkE0NXhxT2JxUjdVSU55UC15U3dKVFgwVHdab2F5MkpEQ1RMWlE?oc=5",
+    "description": "Tesla FSD Driver Faces Manslaughter in Fatal Texas Crash  The Tech Buzz",
+    "date": "2026-07-02T22:47:00.000Z",
+    "sourceId": "following-industry-autonomous",
+    "sourceName": "🚗 Autonomous Driving News",
+    "lang": "en",
+    "category": "Autonomous Driving",
+    "region": "US",
+    "followingIndustry": "autonomous",
+    "followingCompanyIds": [
+      2,
+      12
+    ],
+    "aiAnalysis": {
+      "translatedTitle": "테슬라 완전자율주행(FSD) 이용 운전자, 텍사스 치명적 충돌 사고로 과실 치사 혐의 직면",
+      "summary": [
+        "미국 텍사스에서 테슬라의 FSD(완전자율주행) 베타 모드를 작동 중이던 운전자가 오토바이와 충돌해 사망 사고를 낸 사건과 관련하여, 검찰이 운전자에게 과실 치사 혐의를 적용할 움직임을 보이며 큰 파장이 일고 있습니다.",
+        "이 사건은 자율주행 알고리즘의 한계로 인해 발생한 사고의 법적 책임이 레벨 2~3 단계 시스템 특성상 오롯이 운전자의 전방 주시 태만으로 귀결됨을 다시 한번 각인시키는 날카로운 법적 판례가 될 전망입니다.",
+        "테슬라 8월 로보택시 발표를 앞두고 FSD 기술의 완벽성에 대한 규제 당국(NHTSA)의 감시가 극도로 깐깐해지는 가운데, 기술적 진보와 법적 책임의 괴리라는 자율주행 산업의 가장 깊은 아킬레스건을 건드리고 있습니다."
+      ],
+      "implications": [
+        "자율주행 사고 발생 시 책임 소재를 명확히 가리기 위한 차량 내부 모니터링 카메라(In-cabin sensor) 및 블랙박스 데이터 로깅 소프트웨어 기업들에 대한 의무 장착 규제가 강화되며 매출 잭팟이 터질 수 있습니다.",
+        "법적 리스크가 해소되지 않는 한 승용차(B2C) 로보택시의 전면 상용화는 지연될 수밖에 없으며, 반대로 제한된 구간을 오가는 B2B 화물 트럭 자율주행 섹터로 기관 투자자들의 자금이 더욱 안전하게 쏠리게 될 것입니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": true
+  },
+  "id_v0llra": {
+    "id": "id_v0llra",
+    "title": "Boston Dynamics’ New Atlas Humanoid Robot: ‘Order Of Magnitude’ Simpler - Forbes",
+    "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPM0p6VG8zYXlMS2lPSVdRaHM1TTZKT05rUVF5bVM2RmFlUnNKeFJBSVBESDdMbXlzUXJmZ3k4WlgxVmdYUW5uQV9QUWFDUlhfS1JndHo2WVVfWjR1bFNUTFMyLTUyWGhRR1BpR1FPTVd4Nm10ekY4YTM1TmpTemRoMkMyNERKRmhOS0ZKZmY0UFVheXdTWTBEb012WmtJRGxvcWZBVDhWTnl1ZjY4X1UwLWotczhjWURwOW9ZNTdn?oc=5",
+    "description": "Boston Dynamics’ New Atlas Humanoid Robot: ‘Order Of Magnitude’ Simpler  Forbes",
+    "date": "2026-07-02T22:42:29.000Z",
+    "sourceId": "following-industry-robotics",
+    "sourceName": "🤖 Robotics & Automation News",
+    "lang": "en",
+    "category": "Robotics & Automation",
+    "region": "US",
+    "followingIndustry": "robotics",
+    "followingCompanyIds": [
+      9,
+      20
+    ],
+    "aiAnalysis": {
+      "translatedTitle": "보스턴 다이내믹스의 새로운 아틀라스 휴머노이드 로봇: 유압을 버리고 한 차원 더 단순해진 진화",
+      "summary": [
+        "포브스(Forbes)는 현대차그룹 산하의 로봇 명가 보스턴 다이내믹스가 10년 이상 고수해 온 복잡한 유압식 구동 방식을 과감히 폐기하고, 100% 전기 모터 구동 방식(All-electric)으로 새롭게 설계한 차세대 '아틀라스(Atlas)' 휴머노이드가 상용화의 가장 거대한 허들을 넘었다고 평가했습니다.",
+        "기존 유압 시스템의 치명적 단점인 오일 누유, 거대한 부피, 천문학적인 단가를 해결한 전기식 아틀라스는, 단순해진 관절 설계와 향상된 AI 강압 학습을 결합해 인간의 가동 범위를 뛰어넘는 기괴할 정도의 유연성을 확보했습니다.",
+        "이는 단순한 연구소용 장난감이 아니라, 테슬라 옵티머스 등 저가형 양산 모델들과 본격적인 B2B 공장 투입 경쟁(현대차 스마트 팩토리 등)을 벌이기 위해 경제성(Cost-effectiveness)과 대량 양산(Mass-production)이라는 철저한 자본주의 논리로 무장했음을 상징합니다."
+      ],
+      "implications": [
+        "전기 모터식 구동 방식이 휴머노이드의 완벽한 글로벌 표준으로 자리 잡음에 따라, 초정밀 하모닉 감속기, 고효율 서보 모터, 구동 제어 칩(MCU)을 납품하는 정밀 기계 소부장 기업들의 역사적인 슈퍼 사이클이 확정되었습니다.",
+        "현대차그룹 등 제조 공정 혁신을 노리는 대기업들이 자사 자동차 조립 라인에 휴머노이드를 투입하여 실증(PoC) 데이터를 독식하면서, 로봇 하드웨어와 AI 소프트웨어를 수직 계열화하는 메가트렌드를 선도할 것입니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": true
+  },
+  "id_crb7ly": {
+    "id": "id_crb7ly",
+    "title": "TRUNNANO launches battery materials division for sodium-ion layered oxide cathodes - Charged EVs",
+    "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPUEswQTZpNjlPeUo5djVVd1ZBVnVBNF9QR2pVRDZvM3paWEJqVGtLekNrbE4wWFB1SWh0UnNQd3BvTW54OXNBTE9RN3JZcXhnOXZjcXY2QUlsbmhkY1Iybkd4b1oyTHR4UFpxTm91LW52N0l2Y18xaEg0RDVYN19NZ2tDZjN4R05JNG5KRVhNSU1BQmF6eTItQlctMXNielVhV1pSMmxxRXpGQllwOTR0b1RGSHd0QQ?oc=5",
+    "description": "TRUNNANO launches battery materials division for sodium-ion layered oxide cathodes  Charged EVs",
+    "date": "2026-07-02T22:33:10.000Z",
+    "sourceId": "following-industry-battery",
+    "sourceName": "🔋 Secondary Battery News",
+    "lang": "en",
+    "category": "Secondary Battery",
+    "region": "US",
+    "followingIndustry": "battery",
+    "followingCompanyIds": [
+      9,
+      12
+    ],
+    "aiAnalysis": {
+      "translatedTitle": "트루나노(TRUNNANO), 나트륨 이온 층상 산화물 양극재 전담 배터리 신소재 부서 공식 출범",
+      "summary": [
+        "글로벌 나노 소재 전문 기업 트루나노(TRUNNANO)가 리튬 의존도를 획기적으로 낮출 수 있는 차세대 게임체인저 기술인 나트륨 이온(Sodium-ion) 배터리용 층상 산화물 양극재를 대량 생산하기 위한 전담 사업부를 신설했다고 발표했습니다.",
+        "리튬 광물 가격 변동성과 공급망의 중국 예속이라는 아킬레스건을 끊어내기 위해, 바닷물에 무한히 널려있는 소금을 원료로 하는 나트륨 배터리가 2륜차(스쿠터) 및 대규모 전력망 ESS(에너지 저장 장치) 시장을 중심으로 폭발적인 상용화 궤도에 진입하고 있습니다.",
+        "특히 기존 리튬이온 공정 인프라를 그대로 재활용(Drop-in)할 수 있는 소재 혁신이 이루어지면서, 저렴한 원가 경쟁력을 바탕으로 한 나트륨 배터리의 시장 침투율이 예상보다 훨씬 가파르게 전개될 것임을 강력히 시사합니다."
+      ],
+      "implications": [
+        "수십조 원이 투자된 리튬 기반 양극재 밸류체인(에코프로 등) 기업들이 차세대 나트륨 소재 포트폴리오 다변화에 성공했는지 여부가 향후 2~3년 내 가장 핵심적인 밸류에이션 옥석 가리기 지표로 작용할 것입니다.",
+        "나트륨 배터리의 유일한 단점인 낮은 에너지 밀도를 극복하기 위해 하드카본 음극재 및 특수 전해액 첨가제를 공급하는 정밀 화학 소부장 강소 기업들의 몸값이 천정부지로 치솟게 될 전망입니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": true
+  },
+  "id_1qm45jr": {
+    "id": "id_1qm45jr",
+    "title": "Trump says ‘nothing illegal’ about massive crypto profits - KARK",
+    "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPOXBrZnRvN3JFX1YyYzE4MHRwNGFnSm93cG1MeWpacjRkUUVrbm9SV1otZFdiX3E0N0NKWG9aYTJINXBBWkFJQlp6LUdLTGdtYW5Ha2hzRVk3WG1fb1VBand3VmZYYzZNN19oQmZmRmh4Rktyczh0NDJWZDlnb2h5czVrTjB5ZTE4dTFMR0dFRDE3bU5ycnc?oc=5",
+    "description": "Trump says ‘nothing illegal’ about massive crypto profits  KARK",
+    "date": "2026-07-02T22:33:00.000Z",
+    "sourceId": "following-industry-crypto",
+    "sourceName": "₿ Crypto & Blockchain News",
+    "lang": "en",
+    "category": "Crypto & Blockchain",
+    "region": "US",
+    "followingIndustry": "crypto",
+    "followingCompanyIds": [],
+    "aiAnalysis": {
+      "translatedTitle": "트럼프, 거액의 암호화폐 수익에 대해 \"불법적인 부분 전혀 없다\" 발언",
+      "summary": [
+        "미국 대선 공화당 유력 후보인 도널드 트럼프 전 대통령이 자신과 관련된 NFT(대체불가토큰) 프로젝트 및 암호화폐 투자로 거둔 막대한 수익에 대해 법적 문제가 없음을 강력히 주장하며 가상자산 친화적 행보를 이어갔습니다.",
+        "트럼프 캠프는 최근 암호화폐로 선거 자금 기부를 공식 허용하고, 바이든 행정부의 가혹한 코인 규제를 철폐하겠다는 공약을 전면에 내세우며 5천만 명에 달하는 미국 크립토 유권자들을 맹렬히 공략하고 있습니다.",
+        "대권 주자가 암호화폐를 '사기'로 치부하던 과거에서 벗어나, 전략적 선거 무기이자 합법적 자산 증식 수단으로 옹호함에 따라 업계 전반의 규제 리스크가 급격히 해소되는 분위기입니다."
+      ],
+      "implications": [
+        "11월 미 대선을 앞두고 '트럼프 트레이드(Trump Trade)'의 핵심 수혜 섹터로 암호화폐가 지목되며, 규제 완화에 베팅하는 월가의 선제적 자금 유입이 가속화될 전망입니다.",
+        "SEC의 규제 칼날 아래 신음하던 이더리움, 솔라나 등 주요 레이어1 알트코인들이 증권성 시비에서 벗어나 합법적인 생태계 확장을 이룰 수 있는 강력한 정책적 동력을 얻게 됩니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": true
+  },
+  "id_1d55rv1": {
+    "id": "id_1d55rv1",
+    "title": "JPMorgan Sounds the Alarm on MicroStrategy’s New Bitcoin Sales Policy - Yahoo Finance",
+    "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNQmhSTTh4THQ2YkduT0loV01sWEVzbGJYUkVjV3g2MnZKVS1zZl9sNkRxSm1zdndzTVVldHZ4a3VISGw5cENIYnIxTWdBZEV3SExkd1JoVFdmSDhuT3RkdG1fV2dPcnlIZkJUOGhjZDhqWGozU21vOWZRWElNbllYMHlPREx3OG12R190TlQxWExDRGJFUnJHYjhFTktXdl9qUC1ZNkwyN04xbFhl?oc=5",
+    "description": "JPMorgan Sounds the Alarm on MicroStrategy’s New Bitcoin Sales Policy  Yahoo Finance",
+    "date": "2026-07-02T22:30:00.000Z",
+    "sourceId": "following-industry-crypto",
+    "sourceName": "₿ Crypto & Blockchain News",
+    "lang": "en",
+    "category": "Crypto & Blockchain",
+    "region": "US",
+    "followingIndustry": "crypto",
+    "followingCompanyIds": [
+      9,
+      29,
+      30
+    ],
+    "aiAnalysis": {
+      "translatedTitle": "JP모건, 마이크로스트래티지의 새로운 비트코인 매각 정책에 경고음 울리다",
+      "summary": [
+        "JP모건 애널리스트들이 비트코인 최대 보유 상장사인 마이크로스트래티지(MSTR)가 단기적 현금 흐름 창출을 위해 보유 비트코인 일부를 활용할 수 있다는 새로운 재무 가이던스에 대해 잠재적 시장 리스크를 경고했습니다.",
+        "지금까지 MSTR은 절대 팔지 않는 '다이아몬드 핸드' 전략으로 비트코인 가격 하방을 지지해 왔으나, 주식 담보 대출이나 파생상품 운용을 위한 전략적 유동화가 자칫 암호화폐 시장 전체의 매도 압력으로 작용할 수 있다는 우려입니다.",
+        "하지만 회사 측은 단순 매각이 아닌 비트코인을 담보로 추가적인 레버리지(이자 수익)를 창출하여 기업 내재 가치를 극대화하려는 고도화된 금융 기법의 도입이라고 반박하고 있습니다."
+      ],
+      "implications": [
+        "비트코인을 단순 보유하는 것을 넘어, 이를 기초 자산으로 하는 파생상품(DeFi, 옵션 거래) 및 B2B 담보 대출 비즈니스가 팽창하며 크립토 기관 금융의 시대가 본격 개막하고 있음을 시사합니다.",
+        "MSTR 주가의 프리미엄이 유지되기 위해서는 단순 코인 가격 상승뿐만 아니라, 비트코인 인프라 소프트웨어 비즈니스 등 독자적인 캐시카우 창출 능력이 시장에서 재평가되어야 합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": true
+  },
+  "id_qcvu42": {
+    "id": "id_qcvu42",
+    "title": "Satellite rescue mission to NASA orbiting observatory postponed - Reuters",
+    "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNWXNQcjY1TVJjMnNTSmZIMUNUVnJ0RlgxNHlfdUxCckp4b08tMnkyYTN2U1FMV1dvY3NhbVdIMW5uVW82YXd2aF9CNnUxVm5tR3J6MkdwajBkTGp0LVlEQ25rMWlnejIzcUhqT0NMQmt0a2JiVjVDWlRFMV9xYVB3RDlsY0FSOVc4aHRmTlpLc3dERjhxTDd4SHBvdzNjSENWNXRyR2pQdw?oc=5",
+    "description": "Satellite rescue mission to NASA orbiting observatory postponed  Reuters",
+    "date": "2026-07-02T21:36:46.000Z",
+    "sourceId": "following-industry-space",
+    "sourceName": "🚀 Space & Defense News",
+    "lang": "en",
+    "category": "Space & Defense",
+    "region": "US",
+    "followingIndustry": "space",
+    "followingCompanyIds": [
+      9,
+      12
+    ],
+    "aiAnalysis": {
+      "translatedTitle": "미 항공우주국(NASA), 지구 궤도 관측소 위성 구조 임무 연기 결정",
+      "summary": [
+        "미국 항공우주국(NASA)이 수명을 다해가는 핵심 지구 궤도 관측 위성을 수리하고 궤도를 상승시키려던 사상 최초의 민간 궤도 내 서비스(In-orbit Servicing) 임무를 기술적 검토 문제로 돌연 연기했습니다.",
+        "이는 우주 쓰레기 증가를 막고 고가의 위성을 수리해 재활용하려는 '우주 견인차' 기술이 로봇 팔 제어, 초정밀 도킹 등 아직 극한의 엔지니어링 난제들을 완전히 극복하지 못했음을 보여줍니다.",
+        "그럼에도 불구하고 이 임무는 수조 원짜리 위성을 한 번 쓰고 버리는 기존의 낭비적 패러다임을 끝내기 위해 NASA와 상업 우주 기업들이 사활을 걸고 있는 메가 트렌드의 첫걸음이라는 점에서 매우 상징적인 의미를 지닙니다."
+      ],
+      "implications": [
+        "우주 환경에서 무인 도킹, 연료 재급유, 모듈 교체 등을 수행할 수 있는 우주 로보틱스(Space Robotics) 및 머신비전 원천 기술 보유 기업들이 차세대 킬러 밸류체인으로 부상하며 막대한 펀딩을 흡수할 것입니다.",
+        "인 궤도 서비스(OOS)의 상용화 지연은 역설적으로 위성의 잦은 교체 수요를 유지시켜, 위성 버스(Bus) 조립 및 초소형 발사체(소형 로켓) 시장의 단기적인 호황을 연장하는 요인으로 작용할 수 있습니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": true
+  },
+  "id_1imsl2h": {
+    "id": "id_1imsl2h",
+    "title": "Got $1,000 to Invest? Buy These 2 Stocks Right Now and Hold Them for Decades. - The Globe and Mail",
+    "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPM0wzZmhzbjMySUMzUGN6RFJ0Z1JfbEhoWmRPSGp4enpCSXdCWHZueXFVWllEWkRLXy1oREZsOUNnemNSOTA2QS01U3pPSHM1UUcwMnFuZEx3R19lTVhnaGRlcm92aFJvRjBDdjc3VlNwQUdPWldXQ0FwUGNpc1VhZ2FNUlRQZHdkR2tWeHBKWURPaV9RT0tDazkxVjllWGN4M1ZERTVVR2lBeFp1Q3hlaUVFaXMxelVZTmZWdnQ2X3NzQlBNckE1cm54XzYyTUx1VTdpaDl2YUtrTmgzdGZWYk1mOGlrUHNxYTQwUWJxcndLZVk?oc=5",
+    "description": "Got $1,000 to Invest? Buy These 2 Stocks Right Now and Hold Them for Decades.  The Globe and Mail",
+    "date": "2026-07-02T21:34:20.000Z",
+    "sourceId": "following-company-65",
+    "sourceName": "[OKLO] Oklo Inc.",
+    "lang": "en",
+    "category": "nuclear",
+    "region": "US",
+    "followingIndustry": "nuclear",
+    "followingCompanyIds": [
+      65
+    ],
+    "companyTicker": "OKLO",
+    "aiAnalysis": {
+      "translatedTitle": "투자할 1,000달러가 있다면? 지금 당장 사서 수십 년간 보유해야 할 2가지 주식",
+      "summary": [
+        "글로브 앤 메일(The Globe and Mail)은 AI 데이터센터 발 전력 대란이라는 구조적 메가 트렌드 속에서, 은퇴할 때까지 묻어두어도 좋을 장기 가치 투자처로 북미의 우라늄 채굴 리더 기업과 대형 원자력 유틸리티 주식을 강력히 추천했습니다.",
+        "풍력이나 태양광 같은 간헐적 재생 에너지로는 24시간 100% 가동되어야 하는 AI 팩토리의 기저 부하를 절대 감당할 수 없다는 시장의 뒤늦은 깨달음이, 원전 섹터에 10년 만에 가장 거대한 자본 유입(Re-rating)을 촉발하고 있습니다.",
+        "이는 단순한 유행 테마가 아닌, 마이크로소프트, 구글 등 빅테크 고객들이 전력을 선점하기 위해 장기 전력 구매 계약(PPA)을 맺고 프리미엄 요금을 지불하는 완전한 공급자 우위(숏티지) 시장으로 진입했음을 의미합니다."
+      ],
+      "implications": [
+        "원전 관련 주식이 전통적인 '유틸리티 배당주'의 지루한 틀을 깨고, 빅테크의 성장에 직접적으로 연동된 고성장 'AI 인프라 수혜주'로 재평가(Re-rating) 받으며 멀티플(PER) 확장이 지속될 전망입니다.",
+        "현물 우라늄 펀드 및 핵연료 밸류체인 전반에 막대한 기관 패시브 자금이 쏠리면서, 광산 개발부터 플랜트 유지 보수에 이르는 전방위적 생태계 호황이 찾아올 것입니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": true
+  },
+  "id_moy5eg": {
+    "id": "id_moy5eg",
+    "title": "Isaac 1 - A Baymax-like robot that folds your laundry for $8,000 - Korben",
+    "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBBS2EtRVVWeWppZXFEWXEwV0x0ajcxelVkdHFvcnFMeWlPbl96NHFrNEJMSlUwejRYcDliMV9aY0ktVUdybkZ3QXFJVHZsa1dyY19tdy1pN0pmRWhKWjA0MW1jYjA2Q3Z6emNKdGIxTQ?oc=5",
+    "description": "Isaac 1 - A Baymax-like robot that folds your laundry for $8,000  Korben",
+    "date": "2026-07-02T21:21:52.000Z",
+    "sourceId": "following-industry-robotics",
+    "sourceName": "🤖 Robotics & Automation News",
+    "lang": "en",
+    "category": "Robotics & Automation",
+    "region": "US",
+    "followingIndustry": "robotics",
+    "followingCompanyIds": [],
+    "aiAnalysis": {
+      "translatedTitle": "8,000달러짜리 빅 히어로 '베이맥스'? 빨래 개는 가사 로봇 아이작 1(Isaac 1) 등장",
+      "summary": [
+        "테크 매체 Korben은 디즈니 애니메이션의 베이맥스를 연상시키는 부드러운 소재와 외관을 지닌 가정용 가사 보조 로봇 '아이작 1'이 8,000달러라는 비교적 파격적인 가격에 공개되어 일상 로보틱스의 새로운 지평을 열었다고 보도했습니다.",
+        "로봇 팔 끝에 정밀한 촉각 센서와 비전 AI를 장착한 아이작 1은 단순히 바닥을 쓸고 닦는 로봇 청소기를 뛰어넘어, 흐트러진 옷가지를 인식하고 정갈하게 빨래를 개는 등 극도로 섬세한 고난이도의 3차원 가사 노동을 성공적으로 시연했습니다.",
+        "수십만 달러에 달하던 산업용 로봇 팔이 소비자(B2C)가 접근 가능한 자동차 한 대 가격 수준으로 하락했으며, 방대한 영상 데이터 학습(VLA 모델)을 통해 일상의 비정형화된 가사 변수들을 로봇이 스스로 통제할 수 있는 티핑 포인트에 도달했음을 보여줍니다."
+      ],
+      "implications": [
+        "기존 가전제품 중심의 스마트홈 생태계가 능동적으로 움직이며 물리적 서비스를 제공하는 가정용 서비스 로봇 허브 생태계로 진화함에 따라, 삼성, LG 등 글로벌 가전 메이커들의 로보틱스 M&A 투자가 거세게 불타오를 전망입니다.",
+        "인간 주변에서 작동 시 안전사고를 방지하는 충돌 제어 소프트웨어, 부드러운 실리콘 구동기(Soft Robotics 소재), 3D ToF 센서 모듈 부품사들의 구조적인 밸류에이션 리레이팅이 기대됩니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": true
+  },
+  "id_1eoqn4t": {
+    "id": "id_1eoqn4t",
+    "title": "Valar Atomics Powers Nvidia Chip Using Advanced Nuclear Microreactor - asatunews.co.id",
+    "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5PYzdmMXByc2s3Mmx3c3dackZyWi1tc0MzdXdIRVZLZ1F2cmdTMTl1R2VOaE94TzFhRmNKSEU4QnZiUW5tS0YwdkZxYmRwb2VtZUFwT3BzMkVEclhOM3JBMUV3ZnZnUXd0MEFNUHAxTTdpYXVqdzB6QzBRbw?oc=5",
+    "description": "Valar Atomics Powers Nvidia Chip Using Advanced Nuclear Microreactor  asatunews.co.id",
+    "date": "2026-07-02T21:11:00.000Z",
+    "sourceId": "following-company-65",
+    "sourceName": "[OKLO] Oklo Inc.",
+    "lang": "en",
+    "category": "nuclear",
+    "region": "US",
+    "followingIndustry": "nuclear",
+    "followingCompanyIds": [
+      65
+    ],
+    "companyTicker": "OKLO",
+    "aiAnalysis": {
+      "translatedTitle": "발라르 아토믹스(Valar Atomics), 첨단 원자력 마이크로 원자로 활용해 엔비디아 칩 가동",
+      "summary": [
+        "초소형 원자로(Micro-reactor) 스타트업 발라르 아토믹스가 복잡한 송전망 없이 데이터센터 현장에 직접 전력을 공급하는 플러그 앤 플레이 방식의 혁신적인 원자로를 통해 엔비디아의 고성능 AI 칩 클러스터를 가동하는 데 성공했다고 발표했습니다.",
+        "트럭으로 배송될 만큼 작고 안전하며 수자원이 불필요한 이 초소형 원전 모델은, 전력망 연결 대기 시간(수년)을 몇 달로 획기적으로 줄여주어 1분 1초가 다급한 글로벌 빅테크 기업들의 극한의 전력 갈증을 완벽하게 해소할 구원 투수로 떠오르고 있습니다.",
+        "전력 인프라의 개념이 중앙집중형 대형 발전소에서, 반도체 팹과 데이터센터 옆에 소형 원전을 지어 직결하는 거대한 독립 분산형 에너지(Micro-grid) 구조로 파괴적 전환(Disruption)을 맞이하고 있습니다."
+      ],
+      "implications": [
+        "기존 SMR보다 규제 문턱이 낮고 도입 속도가 빠른 초소형(Micro) 원자로 기술을 확보한 스타트업들이 차세대 데이터센터 인프라 솔루션 벤더로 등극하며 벤처 자금의 블랙홀이 될 가능성이 큽니다.",
+        "원전을 외부 해킹과 물리적 위협으로부터 보호하는 사이버 보안 소프트웨어 및 물리적 통합 관제 시스템 생태계가 원전 상용화와 함께 필수 불가결한 성장 섹터로 동반 부상할 것입니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": true
+  },
+  "id_awhmqb": {
+    "id": "id_awhmqb",
+    "title": "Oregon gov. talks POWER Act requiring large data centers pay more for infrastructure - KPIC",
+    "link": "https://news.google.com/rss/articles/CBMiwAJBVV95cUxPSWV4YUwtVzNjMDA2X2ZKX1RGektURGZaZUhrOVRVcFkza3B1VlJGdHRiRktJWWZLSlU3SFd2blNXRm9KSEdxT2U1WkxqVnVCUnphS1lUVEdNNlI3MjZBSmV3bUdvVlROOW9DelBzN29XZVBOYXhhaDVOZkdMSEJGSlNsX3pVZDJhNkwwUFdmT3dUbmJ4emx1aWhHNW91WXJ6OUpTNXU2WlNqRmVCUkZhR04yS2sxcWdxaVI3SHBuNVoyVmpZaXhLUEZZSkJyQ3FOTERFcnlEX0EwNG82Q0toRnE0ZG5JakNXdU5zZU4tamFxZ1FQcldhZzlJc0QtMmdGUUFTd010X0hoMHJvQ1FIMDlxc09SOExXdEZRa0tpRmlJTjkzYTJMWTNTRTdySDdzQS14RVVCcWdPTnZRQUVmYQ?oc=5",
+    "description": "Oregon gov. talks POWER Act requiring large data centers pay more for infrastructure  KPIC",
+    "date": "2026-07-02T21:10:46.000Z",
+    "sourceId": "following-industry-power-infra",
+    "sourceName": "🔌 Power Infrastructure News",
+    "lang": "en",
+    "category": "Power Infrastructure",
+    "region": "US",
+    "followingIndustry": "power-infra",
+    "followingCompanyIds": [
+      9,
+      12
+    ],
+    "aiAnalysis": {
+      "translatedTitle": "오리건 주지사의 POWER 법안, 데이터센터 인프라 지출 패러다임을 바꿀까?",
+      "summary": [
+        "지역 매체들에 따르면, 오리건 주에서 논의 중인 POWER 법안이 향후 연방 정부 차원의 빅테크 데이터센터 인프라 규제의 마중물이 될 수 있다는 우려 섞인 분석이 확산되고 있습니다.",
+        "핵심은 막대한 전력을 소모하면서도 일자리 창출 효과는 미미한 AI 공장(데이터센터)에 대해 주 정부들이 더 이상 세금 감면 혜택을 남발하지 않고 철저한 인프라 청구서(그리드망 교체 비용 등)를 내밀기 시작했다는 점입니다.",
+        "결과적으로 AI 혁명의 가장 큰 바틀넥(병목 현상)은 엔비디아 칩의 부족이 아니라, 현지 주민들의 반발과 인프라 규제 허들을 넘어서는 고도의 전력망 엔지니어링 및 딜 메이킹 역량이 될 것임을 보여줍니다."
+      ],
+      "implications": [
+        "유틸리티 인허가 지연이 일상화됨에 따라 변압기, 개폐기, 초고압 케이블을 미리 대량으로 발주(선점)해 둔 대형 전력기자재 업체들의 판매 단가(ASP) 인상 폭이 꺾이지 않고 구조적 고공행진을 이어갈 것입니다.",
+        "데이터센터 인프라 투자 심리가 송전망(Grid) 부하를 일으키지 않는 BESS(대용량 에너지 저장 장치) 및 현장 가스발전 플랜트 사업을 영위하는 에너지 솔루션 섹터로 강력하게 로테이션 될 전망입니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": true
+  },
+  "id_1sh2587": {
+    "id": "id_1sh2587",
+    "title": "Calif. man pleads guilty to harassing Guthrie family with bitcoin ransom messages - Tucson Sentinel",
+    "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQWDNWc0ZaZTREY3lVQVZKX0FMZ3VXRkRUUmVqeG13bVdBWmdrVjdhM2w0aXRHcExlRzVnVjZrUnRrRzJlUndfWnU5bl9lS25TWUpteWdlVzlvdG9kLUU3WjdiS3JOYm4yMHRlMDJleDFDODYwY2dRbXNBbS1BcTFxWXhwbUlldG5RREJUd0V6NVhtczRJaDN5VU1tanhIRE9leWlzZUpKX3QwRFE4T19uWlJnY0ZCU0oyT0ZzY1FWUzYtNTVTTVYzeUhSd3d0eFZaMlNSOHhPVGFBOU1WUjI5d0JYVGVRN3JF?oc=5",
+    "description": "Calif. man pleads guilty to harassing Guthrie family with bitcoin ransom messages  Tucson Sentinel",
+    "date": "2026-07-02T21:03:40.000Z",
+    "sourceId": "following-industry-crypto",
+    "sourceName": "₿ Crypto & Blockchain News",
+    "lang": "en",
+    "category": "Crypto & Blockchain",
+    "region": "US",
+    "followingIndustry": "crypto",
+    "followingCompanyIds": [
+      9,
+      20,
+      29
+    ],
+    "aiAnalysis": {
+      "translatedTitle": "캘리포니아 남성, 비트코인 요구하며 거스리 가문 협박한 혐의 인정",
+      "summary": [
+        "미국 캘리포니아의 한 해커가 유명 가문(거스리 가문)의 개인 정보를 해킹한 뒤 이를 온라인에 유포하겠다고 협박하며 거액의 비트코인 랜섬웨어를 요구한 혐의에 대해 유죄를 인정했습니다.",
+        "이번 사건은 블록체인의 익명성을 악용한 사이버 범죄에 대해 연방수사국(FBI) 등 사법 당국이 고도화된 온체인 추적(On-chain Analysis) 기술을 동원해 암호화폐 흐름을 끝까지 추적해 낸 성과로 꼽힙니다.",
+        "가상자산이 범죄의 온상이라는 오명을 벗기 위해 규제 당국과 코인베이스 등 중앙화 거래소(CEX) 간의 자금 세탁 방지(AML) 공조 체계가 그 어느 때보다 강력하게 작동하고 있음을 보여줍니다."
+      ],
+      "implications": [
+        "블록체인 지갑의 자금 흐름을 실시간으로 감시하고 범죄 연루 자산을 동결하는 체이널리시스(Chainalysis) 같은 암호화폐 보안/규제 준수(RegTech) 소프트웨어 기업들의 매출이 급증할 것입니다.",
+        "제도권 편입의 가장 큰 걸림돌이었던 자금 세탁 문제가 해소되면서 전통 금융(TradFi) 기관들의 비트코인 신탁 및 수탁(Custody) 사업 진출이 폭발적으로 가속화될 전망입니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": true
+  },
+  "id_1lt3zyr": {
+    "id": "id_1lt3zyr",
+    "title": "Robinhood Blockchain Could Spur This ETF - ETF Database",
+    "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNcDU3RXZxaUtkTlZFakpiRU14cFZOYXkxaE0tNXRwV1hIWXMxbHdlMnNYdU93bFliU0NYRFlyZ3QxNVhxNmVmX3F6MzU0OHNCYTRkSWtUWGl0WWMwMnlWOUhyUWF4TVZrWjVXQ3g4VjdrWkxScXgxVlUxS2hrZzVmZmhpZUVBdw?oc=5",
+    "description": "Robinhood Blockchain Could Spur This ETF  ETF Database",
+    "date": "2026-07-02T20:48:32.000Z",
+    "sourceId": "following-industry-crypto",
+    "sourceName": "₿ Crypto & Blockchain News",
+    "lang": "en",
+    "category": "Crypto & Blockchain",
+    "region": "US",
+    "followingIndustry": "crypto",
+    "followingCompanyIds": [
+      34,
+      35
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1mlbwo1": {
+    "id": "id_1mlbwo1",
+    "title": "JPMorgan warns of risks from Strategy's Bitcoin sales policy - Yahoo Finance",
+    "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOZC1TVjVOcmlkemhGMmlEbi1YZXdsd05kNHdEMHNudlFfOWpVTHY2OVBBbDc1ZFlhVGwtTnRFNl9BbXRiRExaamxDTnNlOE5kX1Zmem9Jc0NWRndmbW1vVmRrZ2xxeEtsRjJEZEllRUhDelAweVFNMjhpUlc1MUVid3JNNGFHLVN2WEJvMUVlMHdHVzJleTZxTkdVQkVvZ2t6a3c3YWdR?oc=5",
+    "description": "JPMorgan warns of risks from Strategy's Bitcoin sales policy  Yahoo Finance",
+    "date": "2026-07-02T20:18:04.000Z",
+    "sourceId": "following-industry-crypto",
+    "sourceName": "₿ Crypto & Blockchain News",
+    "lang": "en",
+    "category": "Crypto & Blockchain",
+    "region": "US",
+    "followingIndustry": "crypto",
+    "followingCompanyIds": [
+      29
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_ei0nqa": {
+    "id": "id_ei0nqa",
+    "title": "Bitcoin firm advertised by Nigel Farage loses 15% of asset value - The Guardian",
+    "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQRzhxaXc5azVWTlBuMU15dHhTOE43ZkVLTUx6NnhFUUp0elFNZ1lXRl9Xdm1VUFZRU0NXWEtHOE1USk5TeGFFWUxyenFJdGpvQU9pbjlBU1BDdFBLN29kQ3V1VzhEUGZ5UmtMb0pseTlqazd0RXVlQ2VpN09yWEx3X1lObUlTZ1hDcDdjMHZHV3pqdk9vS25zdGRuc3YzaGo4bTRFUGF4M094NG5KVVlkd29welNvTkpy?oc=5",
+    "description": "Bitcoin firm advertised by Nigel Farage loses 15% of asset value  The Guardian",
+    "date": "2026-07-02T20:08:00.000Z",
+    "sourceId": "following-industry-crypto",
+    "sourceName": "₿ Crypto & Blockchain News",
+    "lang": "en",
+    "category": "Crypto & Blockchain",
+    "region": "US",
+    "followingIndustry": "crypto",
+    "followingCompanyIds": [
+      29
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1oi8er0": {
+    "id": "id_1oi8er0",
+    "title": "NHTSA Proposes AV Brake Standard Updates and Withdraws AV STEP Program: What You Need to Know - Crowell & Moring LLP",
+    "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNOU1tN2k4WllJek4tRkhyekRxS1ducXNxRGx3dFBlYjFfc1NGWGp0b2RxaDZGRk1JaW1WWGE3ajB6dUJNdTI0a1J3d2dfT283ZnlrZThwbFlwVEY0Y21ILS1WZWlBa3BMQ1hkelRnMHNBcHlkT013OWFudFcyQmU2MWpjdFUweWxEU202bUVsZlBwYTcxSEdVOFhjRlowMmVxang3VV9QWXhvbWNzTnZsMzBJcGRWdFVPTjQ3MGtpaGNxTE8tM2k1RXg2ei1DOUItbDhrVWVza2djdkMyWHczOWtnQ0hxeE80?oc=5",
+    "description": "NHTSA Proposes AV Brake Standard Updates and Withdraws AV STEP Program: What You Need to Know  Crowell & Moring LLP",
+    "date": "2026-07-02T20:08:00.000Z",
+    "sourceId": "following-industry-autonomous",
+    "sourceName": "🚗 Autonomous Driving News",
+    "lang": "en",
+    "category": "Autonomous Driving",
+    "region": "US",
+    "followingIndustry": "autonomous",
+    "followingCompanyIds": [],
+    "aiAnalysis": {
+      "translatedTitle": "미 교통안전국(NHTSA), 자율주행차(AV) 브레이크 표준 업데이트 제안 및 AV STEP 프로그램 철회",
+      "summary": [
+        "미국 도로교통안전국(NHTSA)이 페달이나 스티어링 휠 등 인간 운전자를 위한 전통적 장비가 아예 없는 완전 무인 자율주행차량을 위해 브레이크 성능 및 안전 표준을 대대적으로 업데이트하는 규제 개편안을 내놓았습니다.",
+        "이와 동시에 기존의 과도기적 규제 실험 모델이었던 AV STEP 프로그램을 철회함으로써, 미 정부가 테슬라 사이버캡 등 스티어링 휠 없는 형태의 목적 기반 차량(PBV) 상용화가 임박했음을 인지하고 본격적인 제도권 편입을 서두르고 있음을 시사합니다.",
+        "이는 규제의 불확실성을 거둬내어 완성차 업체들이 운전석이 없는 파격적인 형태의 차세대 레벨 4 이상 로보택시 양산 설계(Design)에 천문학적 자본을 마음 놓고 투자할 수 있는 든든한 법적 토대를 마련해 줍니다."
+      ],
+      "implications": [
+        "운전대와 페달이 사라짐에 따라 차량 내부 공간(실내 인테리어)이 거대한 엔터테인먼트 룸으로 변모하며, 프리미엄 차량용 인포테인먼트(IVI) 시스템 및 고해상도 디스플레이 소부장 기업들의 가치가 급상승할 것입니다.",
+        "전자식 스티어링(Steer-by-wire)과 전자식 브레이크(Brake-by-wire) 등 물리적 기계 연결을 대체하는 고도화된 섀시 제어 전장 부품 밸류체인의 폭발적인 수요 랠리가 확정되었습니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": true
+  },
+  "id_vvaye7": {
+    "id": "id_vvaye7",
+    "title": "A new playbook for data center development - Axios",
+    "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPZWRxRWhiUUtfcE9hajhRUXdHSWFfdE9CSkdIWGJYM2o3MkJVeFBQMkhWLXFsYUNkaEUzMnI4ZW9QU0tKcEV4UFVjUmV6Y3hPamQzRUo1LTJDc1RUNG0tX0tUVVBRcHJuZXRRWThpNWluRlFTQVJXc005TTFhY1k5M25WcnVtVndDVTFQaFNiNG9oVWpwZENaQVhB?oc=5",
+    "description": "A new playbook for data center development  Axios",
+    "date": "2026-07-02T20:06:49.000Z",
+    "sourceId": "following-industry-power-infra",
+    "sourceName": "🔌 Power Infrastructure News",
+    "lang": "en",
+    "category": "Power Infrastructure",
+    "region": "US",
+    "followingIndustry": "power-infra",
+    "followingCompanyIds": [
+      12,
+      20
+    ],
+    "aiAnalysis": {
+      "translatedTitle": "데이터센터 개발을 위한 새로운 플레이북: 전력 선점이 곧 승리다",
+      "summary": [
+        "정치·경제 전문 매체 악시오스(Axios)는 폭증하는 AI 수요 속에서 부동산 디벨로퍼와 빅테크들이 데이터센터를 짓기 위해 사용하는 전통적 방식(부지 매입 후 전력 확보)이 완전히 붕괴되고 새로운 플레이북이 등장했다고 보도했습니다.",
+        "새로운 성공 방정식은 폐쇄된 석탄 발전소나 유휴 원자력 발전소 부지처럼 이미 변전소와 대규모 송전 라이선스를 확보하고 있는 '그리드 기득권(Grid-privileged)' 부동산을 웃돈을 주고서라도 통째로 싹쓸이하는 것입니다.",
+        "결국 AI 시대의 금광(Gold Rush)은 그래픽 카드(GPU)가 아니라, 수년간의 인허가를 우회할 수 있게 해주는 '수십 메가와트(MW)의 전력 접속 권한' 그 자체로 밸류에이션의 척도가 완전히 뒤바뀌고 있습니다."
+      ],
+      "implications": [
+        "전력망 접속 권한을 보유한 기존 노후 화력/원자력 유틸리티 기업들이 B2B 전력 계약 시장의 슈퍼갑(甲)으로 등극하며, 역사상 유례없는 밸류에이션(PER) 재평가와 배당 확대 슈퍼 사이클에 돌입할 전망입니다.",
+        "단순 건물 시공이 아닌 전력 인프라 컨설팅, 변전소 자체 설계 능력을 내재화한 극소수의 하이엔드 인프라 리츠(REITs) 및 EPC 전문 기업들만이 조 단위의 데이터센터 프로젝트를 독식하게 될 것입니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": true
+  },
+  "id_bdgrxq": {
+    "id": "id_bdgrxq",
+    "title": "Is NVIDIA Corporation (NVDA) Stock Positioned for AI Growth Through New NVIDIA Blackwell Infrastructure Deal? - Yahoo Finance Singapore",
+    "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxObVpPbXNOWU9VejlnYUZZeGFzbDQ3eWdMdjQxcVFLWDItbVZvQkJJWG9PSnJ0blJEZXE4X0RVTE9XV2hqZTJFUk55SDRSVnIzYy1PUnhEMFdlc1VYV3hCX1RmdUxKelRLdjNPdVM0UGlYcGI4elF0M3puWmxBTklaeXFURlZ1RFloUk1IeW1VRDhfaVE?oc=5",
+    "description": "Is NVIDIA Corporation (NVDA) Stock Positioned for AI Growth Through New NVIDIA Blackwell Infrastructure Deal?  Yahoo Finance Singapore",
+    "date": "2026-07-02T19:56:14.000Z",
+    "sourceId": "following-company-1",
+    "sourceName": "[NVDA] Nvidia",
+    "lang": "en",
+    "category": "autonomous",
+    "region": "US",
+    "followingIndustry": "autonomous",
+    "followingCompanyIds": [
+      1
+    ],
+    "companyTicker": "NVDA",
+    "aiAnalysis": {
+      "translatedTitle": "엔비디아(NVDA), 블랙웰 인프라 신규 계약 통해 모빌리티 AI 혁신 이끄나?",
+      "summary": [
+        "야후 파이낸스에 따르면 엔비디아가 자사의 차세대 극강 성능 AI 칩인 '블랙웰(Blackwell)'을 자율주행 생태계 및 대형 완성차(OEM)들의 백엔드 인프라에 공급하는 초대형 계약을 목전에 두고 있으며, 이는 엔비디아의 모멘텀을 한층 강화시킬 전망입니다.",
+        "현존 최고 성능의 블랙웰 칩은 클라우드 상에서 수백만 대의 차량이 쏟아내는 방대한 비전 데이터를 실시간으로 시뮬레이션하고 추론 파운데이션 모델(VLA)을 훈련시키는 자율주행 인프라의 절대적인 '두뇌' 역할을 수행하게 됩니다.",
+        "자율주행의 패러다임이 코딩 기반의 규칙(Rule-based)에서 압도적인 연산력이 깡패가 되는 엔드투엔드(End-to-End) AI 모델로 완전히 넘어감에 따라, 모빌리티 시장 역시 엔비디아 생태계에 완벽히 종속(Lock-in)되는 현상이 가속화되고 있습니다."
+      ],
+      "implications": [
+        "자율주행 인프라 경쟁이 결국 '누가 더 많은 GPU 훈련 클러스터를 보유했는가'의 싸움으로 귀결되며, 엔비디아를 비롯해 고대역폭 메모리(HBM), 첨단 패키징 장비를 공급하는 반도체 소부장 밸류체인의 호황 사이클이 장기화될 것입니다.",
+        "막대한 AI 훈련 비용을 감당할 수 없는 중소형 완성차 업체들이 도태되고, 자체 칩(NPU)을 개발하거나 엔비디아와 끈끈한 파트너십을 맺은 소수의 플랫폼 기업 중심의 글로벌 모빌리티 승자 독식 체제가 굳어질 전망입니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": true
+  },
+  "id_lisqii": {
+    "id": "id_lisqii",
+    "title": "Trump made more than $1 billion from his cryptocurrencies. Many who invested in them weren’t so lucky. - NBC News",
+    "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPbTFaS1ZFVjl0dGh3MXdNemZrX1I3ZDJsOHU4bnRyLU52bGNvaGxlaWRyanVDckk0TDRJRWp4U0dxNmk3QXhUVWdhYWQtUzVKV1ctbEF1WWlLcWtJQUxCNXRpRVpCbTlNQ0gxWWtWak5YUkVWLVVDTTM4aW92T0ZUbS0tN0MyZElGZXlaRDhCZUUyMUxseXpRcmNB?oc=5",
+    "description": "Trump made more than $1 billion from his cryptocurrencies. Many who invested in them weren’t so lucky.  NBC News",
+    "date": "2026-07-02T19:43:21.000Z",
+    "sourceId": "following-industry-crypto",
+    "sourceName": "₿ Crypto & Blockchain News",
+    "lang": "en",
+    "category": "Crypto & Blockchain",
+    "region": "US",
+    "followingIndustry": "crypto",
+    "followingCompanyIds": [
+      9
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_4f0xfm": {
+    "id": "id_4f0xfm",
+    "title": "Microsoft Expands Global Data Center Capacity with 2 GW Data Center and Co-Located Power Facility in West Texas - orrick.com",
+    "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOT1dHY2RIYmdSNFo3STEyQXJHQVE4dU5oOG5nVjBtYW12SmJjODFMY3A3MkFoTDBuZFNReWNadGw3dXZKZ0xUX1FxdWlCMTBkcUJ1RTJfMmxScXJLLTNZZVRyNUtlNWlmZ25DbGtIVTl1cXMzUEN3VElGVmpWZTNlU0V6dGc3OUJLM04zN25YQWhSdVJ2ZHhPUWtZaE1xaGF5NUkwV2NPNl9OZWFfM1JKZ29ZWWpWY0lwWVozeTlzSHJ6OHhYM29tS05OZVkwa1g3NHc?oc=5",
+    "description": "Microsoft Expands Global Data Center Capacity with 2 GW Data Center and Co-Located Power Facility in West Texas  orrick.com",
+    "date": "2026-07-02T19:38:49.000Z",
+    "sourceId": "following-industry-power-infra",
+    "sourceName": "🔌 Power Infrastructure News",
+    "lang": "en",
+    "category": "Power Infrastructure",
+    "region": "US",
+    "followingIndustry": "power-infra",
+    "followingCompanyIds": [
+      12
+    ],
+    "aiAnalysis": {
+      "translatedTitle": "마이크로소프트, 서부 텍사스에 2GW급 데이터센터 및 복합 전력 시설 확충",
+      "summary": [
+        "초거대 AI 패권을 노리는 마이크로소프트(MS)가 미국 서부 텍사스에 무려 2기가와트(GW) - 원자력 발전소 2기에 맞먹는 규모 - 전력 사용이 가능한 초대형 하이퍼스케일 데이터센터 및 현지 전원 공급 설비 구축 프로젝트를 가동했습니다.",
+        "MS는 불안정한 외부 전력망에 의존하는 리스크를 제거하기 위해, 태양광 팜과 천연가스 발전 설비(Co-Located Power)를 데이터센터 부지 안에 통째로 구겨 넣는 극한의 에너지 자급자족(Micro-grid) 모델을 채택했습니다.",
+        "이는 실리콘밸리 빅테크 기업들이 단순한 소프트웨어 공급자를 넘어 에너지와 전력망을 직접 설계하고 소유하는 거대 복합 유틸리티 기업으로 그 정체성을 완전히 탈바꿈하고 있음을 시사하는 기념비적 사건입니다."
+      ],
+      "implications": [
+        "빅테크의 자본 지출(CAPEX)이 초고압 변압기, 송배전반, 가스 터빈, 대규모 배터리 저장 장치(BESS) 등 중후장대 전력기자재 시장으로 쓰나미처럼 밀려들며 관련 하드웨어 소부장 밸류체인의 초장기 호황을 담보합니다.",
+        "전력망 인프라의 주도권이 국가 공공 기관에서 민간 테크 기업으로 이양되면서, 가상 발전소(VPP) 및 전력 수요 반응(DR) 통제 소프트웨어 시장이 테크 투자의 새로운 엘도라도로 부상할 전망입니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": true
+  },
+  "id_zbsqo3": {
+    "id": "id_zbsqo3",
+    "title": "Fayette Co. Honda plant begins producing housing and industrial batteries, shifts from EV batteries - WOSU Public Media",
+    "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOTl8teHJ1RnBvTWNzSXVGMkloNk5paHJRT2NTMzN4QXlMVWk5cWZNRE5QYmFVRG1NUmFlQjdXcE5VdGFySDktMnhkQm9Ib3pWcUNsYkgzM1ljaXhrWHhrV0JuMEFMWEdreE1FeWJoRkR6VnR6M0llUl9sRFM4THpzVXZFOHhBVGZ0a0VjT3NrRTFGRjVyb1NNRFZjXzIyckswM1VQNUVEMm5OOVpWQl93NHlMaHFUcEZJZHctbUxEdjRNTTRiRkI5RXQxQlk3SDA4emtSS2dR?oc=5",
+    "description": "Fayette Co. Honda plant begins producing housing and industrial batteries, shifts from EV batteries  WOSU Public Media",
+    "date": "2026-07-02T19:11:00.000Z",
+    "sourceId": "following-industry-battery",
+    "sourceName": "🔋 Secondary Battery News",
+    "lang": "en",
+    "category": "Secondary Battery",
+    "region": "US",
+    "followingIndustry": "battery",
+    "followingCompanyIds": [
+      9,
+      12,
+      20,
+      47
+    ],
+    "aiAnalysis": {
+      "translatedTitle": "페이엣(Fayette) 카운티 혼다 공장, EV 전기차 배터리 대신 가정/산업용 ESS 배터리로 파격 전환",
+      "summary": [
+        "미국 오하이오 주에 위치한 일본 완성차 거인 혼다(Honda)의 신규 대형 배터리 공장이 당초 예상되었던 전기차(EV) 구동용 배터리 셀 생산 대신 가정 및 상업 시설을 타겟으로 한 대규모 에너지 저장 장치(ESS) 생산 기지로 노선을 전격 선회했습니다.",
+        "고금리와 보조금 축소로 인한 북미 전기차 수요 둔화(캐즘)라는 뼈아픈 현실을 반영한 조치이기도 하지만, 역설적으로 AI 데이터센터 붐과 전력망 불안정으로 인해 전력을 저장해두는 ESS 시장의 폭발적인 마진율이 EV 배터리를 아득히 추월하기 시작했음을 보여주는 결정적 장면입니다.",
+        "완성차 업체들이 수조 원을 쏟아부은 배터리 합작 법인(JV)의 라인 셧다운 리스크를 회피하고 투자금을 조기 회수하기 위해, 모빌리티를 넘어 거대한 전력 인프라 산업으로 유연하게 비즈니스 엣지를 전환하는 생존 전략의 일환입니다."
+      ],
+      "implications": [
+        "배터리 투자의 메가 트렌드가 '바퀴 달린 전기차(EV)'에서 '땅에 고정된 전력망(ESS)'으로 거세게 로테이션되며, 전력 변환 장치(PCS), 대규모 컨테이너 하우징 및 열 관리 시스템 등 ESS 후방 밸류체인의 강력한 랠리가 지속될 것입니다.",
+        "단일 고객사(완성차)에 종속되지 않고 글로벌 유틸리티 기업들을 대상으로 BESS(배터리 에너지 저장 장치) 프로젝트 턴키(Turn-key) 수주 능력을 갖춘 배터리 셀 기업들의 실적 안정성이 대폭 프리미엄을 받게 됩니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": true
+  },
+  "id_1vfc5wf": {
+    "id": "id_1vfc5wf",
+    "title": "Teslas without steering wheels, brakes? Prototype testing in Texas - MySA",
+    "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNX3c4di1yRjBFMEx1c2tlSjZicTBBZk54dVVfVGZtY3BSaHFoUm94ZG9RVWVuUHNiZnQxTFdmRVRQQjB0RVprOHV6NHNVR2pRTzVfUE42MHpfSHhfcjR2V3dVd3dfQmtpUjdJamFkLXdSRE5PMDU0WlVzWGhvdHlvRUxEZkt4S1hLVFc3WjZyZGxpMUV6R091eTFpZFYyT1VU?oc=5",
+    "description": "Teslas without steering wheels, brakes? Prototype testing in Texas  MySA",
+    "date": "2026-07-02T19:09:04.000Z",
+    "sourceId": "following-industry-autonomous",
+    "sourceName": "🚗 Autonomous Driving News",
+    "lang": "en",
+    "category": "Autonomous Driving",
+    "region": "US",
+    "followingIndustry": "autonomous",
+    "followingCompanyIds": [
+      2
+    ],
+    "aiAnalysis": {
+      "translatedTitle": "스티어링 휠과 브레이크 페달 없는 테슬라 로보택시, 텍사스에서 프로토타입 테스트 포착",
+      "summary": [
+        "오는 8월 8일 예정된 테슬라의 대형 이벤트를 앞두고, 텍사스 오스틴 기가팩토리 인근 도로에서 스티어링 휠과 브레이크 페달이 완전히 제거된 파격적인 형태의 차세대 로보택시 프로토타입(가칭 사이버캡)이 위장막을 쓴 채 주행하는 모습이 포착되었습니다.",
+        "이는 일론 머스크가 호언장담했던 운전자 개입이 원천적으로 차단된 진정한 의미의 레벨 4~5 목적 기반 차량(PBV) 디자인이 상상도나 렌더링을 넘어 물리적 양산 검증 단계에 진입했음을 보여주는 강력한 시그널입니다.",
+        "테슬라가 저가형 전기차 모델 2를 보류하고 로보택시 파생 모델에 회사 역량을 올인하는 위험한 도박을 강행하는 가운데, 이번 유출 샷은 월가의 반신반의하는 시각을 불식시키고 하반기 최대 자율주행 모멘텀에 불을 지피고 있습니다."
+      ],
+      "implications": [
+        "테슬라의 파격적인 로보택시 플랫폼 양산이 임박함에 따라, 자율주행 핵심 센서 카메라 렌즈 벤더들과 기가 캐스팅(통주물) 공법 등 테슬라 전용 하드웨어 밸류체인 소부장 기업들의 강한 숏커버링 랠리가 기대됩니다.",
+        "기존 라이드 헤일링(승차 공유) 시장의 강자인 우버(Uber)와 리프트(Lyft)의 사업 모델이 테슬라 로보택시 네트워크의 등장으로 치명적인 위협을 받거나, 혹은 플랫폼 파트너로 흡수되는 거대한 지각 변동이 일어날 수 있습니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": true
+  },
+  "id_23h8mb": {
+    "id": "id_23h8mb",
+    "title": "To Reduce Electrical Grid Strain Amid Heat Wave, Data Centers Are Ordered to Use Backup Power - The New York Times",
+    "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQNjJWVzFLQXVTU3UtcVgtWW1SWGtzTzVmbHJCcndvcUxsZzJkVXN1M18yVFlJbG1Ib2FXMHVxUnVNZ0lhLU1QN3FLVGRIcEVrRzJLV2huSnFhWUV4VW00MTBpc0FxUFJKSUs5MG84TmI3akdCbFY0RjlCVzRsaHhkcjBXUVgxcTJLd1ZZRVJxdU1FOFE5UHVFT0VvUk90TFU?oc=5",
+    "description": "To Reduce Electrical Grid Strain Amid Heat Wave, Data Centers Are Ordered to Use Backup Power  The New York Times",
+    "date": "2026-07-02T18:54:00.000Z",
+    "sourceId": "following-industry-power-infra",
+    "sourceName": "🔌 Power Infrastructure News",
+    "lang": "en",
+    "category": "Power Infrastructure",
+    "region": "US",
+    "followingIndustry": "power-infra",
+    "followingCompanyIds": [
+      12
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_162214l": {
+    "id": "id_162214l",
+    "title": "500 BTC Linked to Irish Drug Dealer Deposited to Coinbase After Decade of Dormancy - CryptoRank",
+    "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOTVlPdjdhaEpBOE9PMEVnMDZUeVJnV0xDM0tQaDh1TktHVnMzSFdiMHlyVnpvaWpGem5GU1pxRHB6aG9xV19jOE5xcXZxWHl0cmo5V3NoSDFZN3huMlpoVWs4ZEMzR2tGZldvZm1ZeG9xT3BHNUtoSU1vVWgzdWJNaGhzeEh4R2s?oc=5",
+    "description": "500 BTC Linked to Irish Drug Dealer Deposited to Coinbase After Decade of Dormancy  CryptoRank",
+    "date": "2026-07-02T18:31:23.000Z",
+    "sourceId": "following-company-29",
+    "sourceName": "[COIN] Coinbase Global",
+    "lang": "en",
+    "category": "crypto",
+    "region": "US",
+    "followingIndustry": "crypto",
+    "followingCompanyIds": [
+      29
+    ],
+    "companyTicker": "COIN",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1bu7h6b": {
+    "id": "id_1bu7h6b",
+    "title": "Humanoid robot climbs Ecuador’s highest peak to test research in extreme environments - EFE - Agencia de noticias",
+    "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNTXgxZVZPMnhIWjBXRWhJM0tpTl9IbmFsUHNtSkdhQkRYTXphQ2hQN3VZVDQ0QWh2dDVTZFgzaVNfZ3B3MnpIbEFURW1USGxiZC1Ca2xfMHREZ3ItSVE4N28zQmluTnJnZklISWtSLV9RVmtucElSRWlLTldqRTg5czAtem9SekhGeGVjWjBDUFBXTmlIalh4dXhhbm1Oc0FIdFlCNC1xSTZuNU8xQ2E0bjBNdzJzend0TE05V05neGpuVjJDTHN1WHByWW1mMFU2V2VNdlFvcFF5MVU?oc=5",
+    "description": "Humanoid robot climbs Ecuador’s highest peak to test research in extreme environments  EFE - Agencia de noticias",
+    "date": "2026-07-02T18:30:41.000Z",
+    "sourceId": "following-industry-robotics",
+    "sourceName": "🤖 Robotics & Automation News",
+    "lang": "en",
+    "category": "Robotics & Automation",
+    "region": "US",
+    "followingIndustry": "robotics",
+    "followingCompanyIds": [
+      9
+    ],
+    "aiAnalysis": {
+      "translatedTitle": "극한 환경 테스트를 위해 에콰도르 최고봉 안데스 산맥을 오르는 휴머노이드 로봇",
+      "summary": [
+        "유럽 통신사 EFE는 고도화된 이족 보행 능력을 갖춘 최신 휴머노이드 로봇이 혹한의 추위와 희박한 산소, 예측 불가능한 빙판길로 이루어진 에콰도르 최고봉 안데스 산맥을 등반하며 극한 환경에서의 실증 테스트를 진행 중이라고 전했습니다.",
+        "잘 정돈된 실험실이나 평평한 공장 바닥을 벗어나 미끄러짐, 돌풍 등 통제 불가능한 자연환경 속에서 스스로 균형을 잡고 보행 경로를 탐색(SLAM)하는 능력은 차세대 로봇 인공지능이 갖춰야 할 궁극의 적응력(Adaptability)을 상징합니다.",
+        "이러한 가혹한 야외 필드 테스트의 성공은, 향후 붕괴된 재난 현장 인명 구조, 해저 파이프 점검, 나아가 심우주 행성 표면 탐사 등 인간의 한계를 대신할 특수 목적 로보틱스 상용화 타임라인을 획기적으로 앞당길 핵심 데이터베이스가 됩니다."
+      ],
+      "implications": [
+        "단순 반복 노동 대체재를 넘어, 위험 수당이 높은 극한 환경의 인간 노동력을 즉각 대체할 방산 및 재난 구조 특수 로봇 시장이 각국 정부의 주도하에 막대한 초기 예산(CAPEX)을 빨아들이는 신규 캐시카우로 부상할 것입니다.",
+        "기압, 온도 변화에 견디는 특수 방한·방수 하우징 소재, 극한 환경용 전고체 배터리, 그리고 비전 카메라가 먹통이 될 때 의존해야 하는 정밀 라이다(LiDAR) 밸류체인의 동반 수혜가 돋보입니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": true
+  },
+  "id_1p1elw8": {
+    "id": "id_1p1elw8",
+    "title": "Why AST SpaceMobile Stock Fell 21.6% In June - The Motley Fool",
+    "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxON2c5OFhabFJzUGxyanNtS2FraXdJanYxOUd6RzFRaktWZEtmQzBpQWtJWGl4aV9iak5CZHFiMlk0dUhHS0Q3QVljZEVPZ0Z4M0cxNlNtNEtMeDB2dnNfN1ZjZnZ5X3kwQTZZZkRteldJVFdpX213N1czOUhnYnFpcEt3Wmpoa0psVmd0MGRR?oc=5",
+    "description": "Why AST SpaceMobile Stock Fell 21.6% In June  The Motley Fool",
+    "date": "2026-07-02T18:29:00.000Z",
+    "sourceId": "following-company-50",
+    "sourceName": "[ASTS] AST SpaceMobile",
+    "lang": "en",
+    "category": "space",
+    "region": "US",
+    "followingIndustry": "space",
+    "followingCompanyIds": [
+      50
+    ],
+    "companyTicker": "ASTS",
+    "aiAnalysis": {
+      "translatedTitle": "AST 스페이스모바일 주가가 6월에 21.6% 하락한 이유",
+      "summary": [
+        "투자 전문 매체 모틀리 풀(The Motley Fool)은 저궤도 위성 통신 스타트업 AST 스페이스모바일의 주가가 6월 한 달 동안 21% 이상 급락한 원인을 대규모 자금 조달(유상증자)에 따른 주주 가치 희석과 상업용 위성 발사 일정 지연 우려 때문이라고 분석했습니다.",
+        "AT&T, 버라이즌 등 초대형 통신사들과의 파트너십이라는 강력한 호재에도 불구하고, 우주 인프라 구축에는 천문학적인 초기 자본 지출(CAPEX)이 필요하며 현금 흐름 창출(흑자 전환)까지 견뎌야 하는 데스밸리가 얼마나 깊은지 여실히 보여주는 사례입니다.",
+        "이러한 현상은 우주 산업 투자가 단순한 비전과 내러티브를 넘어, 발사 타임라인 준수와 현금 소진율(Cash Burn Rate) 방어라는 철저한 펀더멘탈 검증 국면에 진입했음을 시사합니다."
+      ],
+      "implications": [
+        "비상장 상태에서 충분한 자본을 확보하지 못하고 섣불리 상장한 우주 SPAC 기업들에 대한 혹독한 옥석 가리기가 진행되며, 스페이스X나 로켓 랩처럼 확고한 매출(수주 잔고)을 증명한 1등 기업으로만 자금이 블랙홀처럼 쏠리게 될 것입니다.",
+        "통신 위성의 대형화 트렌드 속에서 태양광 전지판 및 위상배열 안테나 부품을 저비용으로 대량 양산할 수 있는 제조 역량을 갖춘 벤더들만이 살아남아 승자 독식의 과실을 누리게 됩니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": true
+  },
+  "id_wrfp7u": {
+    "id": "id_wrfp7u",
+    "title": "Second-life, recycled, and solid-state EV batteries mark major leap - MSN",
+    "link": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxNcG5BQzA0cDBLYlk4NXBIS1owZHp2Y3RJWl9qUW5WUHJseFFOYXRmZlNFdm9rekxONEtUM1hmdFU5RWxRcEtLbzlQOWZtXzlhdGU1Q25EaGw4TWY2SHhrMk15WXFLLUcxUFFud1VLSjlNYVJlRElpRmNjLVAyWUV6UVFQM2xCaUJqM2ZaY0Vva2F5SmN6NjRpeHBVbl9vWkRUazhxWWt1Y0lzUFBQNnFFVmlKbzlkempuN2dUdFlpbWpCYWkwYlZfeXRBVHYxMWZqTUg2b0haTy1mYUVJbFhSOEpTZEItYnFLdW9PaUlnRG5XdUowSnEyZ3F3?oc=5",
+    "description": "Second-life, recycled, and solid-state EV batteries mark major leap  MSN",
+    "date": "2026-07-02T18:27:45.000Z",
+    "sourceId": "following-industry-battery",
+    "sourceName": "🔋 Secondary Battery News",
+    "lang": "en",
+    "category": "Secondary Battery",
+    "region": "US",
+    "followingIndustry": "battery",
+    "followingCompanyIds": [
+      9,
+      12
+    ],
+    "aiAnalysis": {
+      "translatedTitle": "MSN 리포트: 세컨드 라이프 재사용, 리사이클링, 전고체 기술이 EV 배터리 도약을 이끌다",
+      "summary": [
+        "종합 매체 MSN이 다룬 차세대 배터리 트렌드 리포트에 따르면, 단순 주행거리 확장을 넘어 수명을 다한 배터리를 ESS로 재사용(Second-life)하고 희귀 금속을 완벽히 추출해 내는 순환 경제 기술이 산업의 핵심 화두로 떠오르고 있습니다.",
+        "동시에 꿈의 기술로 불리던 화재 위험 제로의 전고체 배터리(Solid-state)가 연구실을 벗어나 프로토타입 팩 생산 단계에 속속 진입하며 100년 내연기관의 숨통을 끊을 진정한 파괴적 혁신의 카운트다운을 시작했습니다.",
+        "이러한 삼각편대(재사용, 재활용, 전고체 차세대 소재)의 등장은 글로벌 배터리 밸류체인이 양적 팽창(단순 캐파 증설) 시대를 지나 고도의 질적 소프트웨어 최적화 및 화학 공정 고도화 시대로 구조적 전환을 맞이했음을 선언합니다."
+      ],
+      "implications": [
+        "폐배터리 잔존 수명을 진단하는 AI 머신비전 솔루션 및 방전 소프트웨어 장비 업체, 그리고 습식/건식 제련 원천 특허를 보유한 화학 리사이클링 기업들에 기관 자금의 강력한 쏠림 현상이 나타날 전망입니다.",
+        "전고체 배터리 양산의 최대 난제인 황화물계 고체 전해질 대량 합성 공정을 마스터한 정밀 소재 강소 기업들이 기존 액체 전해액 시장을 급격히 대체하며 주도주 지형을 흔들어 놓을 것입니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": true
+  },
+  "id_uneelo": {
+    "id": "id_uneelo",
+    "title": "Isar Aerospace to launch German-built Planet imaging satellite - SpaceNews",
+    "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPeEtjdkhNakRfMkxjam5PY3NPYmhPcUpPa081V0daZ2lGQWZ4Rmx5X3prUzNWMnRWMUZ2OGVjb2ZqQ3F1WkpyMU5MeTdyQ0hYYmMyeFVtenB0NFB6dTJ4VF9OR3FkeFlsTW5YUXJtV0x5emh6TFZ6VEotUTg3MVZfMUhmRkRHYlhlbVpkeDdn?oc=5",
+    "description": "Isar Aerospace to launch German-built Planet imaging satellite  SpaceNews",
+    "date": "2026-07-02T18:20:48.000Z",
+    "sourceId": "following-industry-space",
+    "sourceName": "🚀 Space & Defense News",
+    "lang": "en",
+    "category": "Space & Defense",
+    "region": "US",
+    "followingIndustry": "space",
+    "followingCompanyIds": [
+      20
+    ],
+    "aiAnalysis": {
+      "translatedTitle": "이사르 에어로스페이스(Isar Aerospace), 독일이 제작한 플래닛 지구 관측 위성 발사 계약 체결",
+      "summary": [
+        "유럽을 대표하는 우주 발사체 스타트업 이사르 에어로스페이스(Isar Aerospace)가 글로벌 지구 관측 선두주자인 플래닛(Planet Labs)의 신형 위성을 자사의 스펙트럼(Spectrum) 로켓으로 발사하는 대형 계약을 성공적으로 따냈습니다.",
+        "스페이스X의 독주에 위기감을 느낀 유럽 연합(EU)이 역내 우주 주권을 확보하기 위해 강력히 밀어붙이는 자국 발사체 생태계 육성 프로젝트의 가장 큰 성과 중 하나로 평가받습니다.",
+        "이번 계약은 미국의 팰컨 9에 의존하지 않고도 독일산 로켓으로 유럽 영토 내에서 민간 위성을 쏘아 올릴 수 있는 상업적 자생력이 궤도에 올랐음을 증명하며, 대서양 양안의 우주 인프라 패권 경쟁에 불을 지피고 있습니다."
+      ],
+      "implications": [
+        "우주 발사체 시장이 특정 기업의 독점을 회피하려는 국가 안보적 수요(소버린 스페이스, Sovereign Space)와 결합되며, 유럽과 아시아 각국의 '로컬 탑티어' 발사체 및 위성 부품 기업들에 강력한 국가 보조금과 수주 랠리가 보장될 것입니다.",
+        "마이크로 발사체(소형 로켓) 시장의 상용화 성공은 초소형 군집 위성(CubeSat) 제조 밸류체인의 폭발적인 성장세를 뒷받침하는 핵심 인프라 토대가 됩니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": true
+  },
+  "id_1ptverr": {
+    "id": "id_1ptverr",
+    "title": "Tesla sales set record to signal worst of Musk backlash may be fading | Daily Sabah - Daily Sabah",
+    "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQSGZzeGx6MDY5QTdtTDU2Z0lOaVNSMmplRkxRQ0xWZFhWQVctR016VEdJYnczVXFQOWFzVURyeUtlNGRrRDFsSEtGNGVfc1dRM1JaWEpxUGw5M1RsUUNhbFZOMGlQLTNkY1lnWlBjUHJrSUl2em43TGVvQ3pXMGJkV3V0WkdPclF1TUlaWHBKRW5PMHFneThfNDFXaGVrbFd1YkgzbEswZUxUTmZXeTJ0UkUycVBsTVpN0gG4AUFVX3lxTFBIZnN4bHowNjlBN21MNTZnSU5pU1IyamVGTFFDTFZkWFZBVy1HTXpUR0lidzNVcVA5YXNVRHJ5S2U0ZGtEMWxIS0Y0ZV9zV1EzUlpYSnFQbDkzVGxRQ2FsVk4waVAtM2RjWWdaUGNQcmtJSXZ6bjdMZW9DelcwYmRXdXRaR09yUXVNSVpYcEpFbk8wcWd5OF80MVdoZWtsV3ViSDNsSzBlTFROZld5MnRSRTJxUGxNWk0?oc=5",
+    "description": "Tesla sales set record to signal worst of Musk backlash may be fading | Daily Sabah  Daily Sabah",
+    "date": "2026-07-02T18:08:00.000Z",
+    "sourceId": "following-industry-autonomous",
+    "sourceName": "🚗 Autonomous Driving News",
+    "lang": "en",
+    "category": "Autonomous Driving",
+    "region": "US",
+    "followingIndustry": "autonomous",
+    "followingCompanyIds": [
+      2
+    ],
+    "aiAnalysis": {
+      "translatedTitle": "테슬라 깜짝 판매 실적 기록, 일론 머스크 리스크 축소 신호탄인가",
+      "summary": [
+        "테슬라의 2분기 글로벌 차량 인도량이 시장의 참담했던 컨센서스를 여유 있게 뛰어넘으며 깜짝 선방(Surprise)을 기록하자, 그동안 일론 머스크의 잦은 구설수와 트위터 이슈로 짓눌렸던 투심이 일거에 폭발하며 주가 급등을 연출했습니다.",
+        "매체 데일리 사바(Daily Sabah)는 전기차 캐즘(Chasm)이라는 최악의 거시 환경 속에서도 에너지 저장 장치(ESS) 메가팩의 역대급 판매 호조와 겹치며 테슬라 펀더멘탈의 최악의 순간(Bottom)은 지났다는 강한 안도감이 확산되었다고 진단했습니다.",
+        "결과적으로 투자자들의 초점은 지루한 분기별 차량 판매 대수(Hardware)에서 벗어나, 올여름 공개될 차세대 로보택시와 옵티머스 휴머노이드 로봇 등 AI 및 소프트웨어 플랫폼 기업으로서의 새로운 내러티브(Narrative)로 완전히 이동하고 있습니다."
+      ],
+      "implications": [
+        "전기차 시장 내 테슬라의 가격 인하(치킨 게임) 출혈 경쟁이 마무리 단계에 접어들었다는 신호로 작용하며, K-배터리 셀 업체 및 양극재 밸류체인 전반에 가해지던 역성장 공포심(디스카운트)이 급격히 해소될 수 있습니다.",
+        "에너지 부문(ESS)의 폭발적인 마진율 성장이 자동차 부문의 부진을 완벽히 메워주는 사업 구조가 입증됨에 따라, BESS(대규모 배터리 팩) 밸류체인 및 전력망 관련 수혜주들이 테슬라 반등의 숨은 승자로 부각될 전망입니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": true
+  },
+  "id_15n7e3b": {
+    "id": "id_15n7e3b",
+    "title": "Why Tesla (TSLA) Shares Are Getting Obliterated Today - StockStory",
+    "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOUlFIY2VsV3B6REk0TncwVUxuYXEzMW8tUW5hTUR2YUJUU1lfQjcyaENIblBrdWpZRVA2ODl0OUJuWko3cjZmX3l6eUdRV3lMbUkwa1daZjEwakdUWlFQbW9JQ0ktVEVKeUJkbzRiTnNoUC1uak5FZGxleG05M2pZdVF1WlhRUkFGUEkwbHBEVFJFQ2ZBSGMxM3hjY1RYUU53Vjh3NWVZVlJ2NDJkMkZSNGlzcw?oc=5",
+    "description": "Why Tesla (TSLA) Shares Are Getting Obliterated Today  StockStory",
+    "date": "2026-07-02T18:05:33.000Z",
+    "sourceId": "following-company-2",
+    "sourceName": "[TSLA] Tesla",
+    "lang": "en",
+    "category": "autonomous",
+    "region": "US",
+    "followingIndustry": "autonomous",
+    "followingCompanyIds": [
+      2
+    ],
+    "companyTicker": "TSLA",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_8j51ru": {
+    "id": "id_8j51ru",
+    "title": "Dutch launch humanoid robot center to 'kickstart' race with China - Tech Xplore",
+    "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNaHZLelVWNWhKcnBtWjExNHhERnBkRTdnbGp6ZkV3S28tLXp5NElwYjZ4dC1sb0ltSEdHb0xWb183YTBOSEtKVFJ6Y0NWT3ZpOGF3bG5jLXRqenlPSjlaTHBscFF3NUJLMTdFZ09LNjZkTnRTU2dsN3RPQ2VPSjFDRTRQdWo?oc=5",
+    "description": "Dutch launch humanoid robot center to 'kickstart' race with China  Tech Xplore",
+    "date": "2026-07-02T18:00:04.000Z",
+    "sourceId": "following-industry-robotics",
+    "sourceName": "🤖 Robotics & Automation News",
+    "lang": "en",
+    "category": "Robotics & Automation",
+    "region": "US",
+    "followingIndustry": "robotics",
+    "followingCompanyIds": [
+      12,
+      20
+    ],
+    "aiAnalysis": {
+      "translatedTitle": "네덜란드, 중국과의 기술 패권 경쟁 위해 국가 주도 휴머노이드 로봇 센터 전격 출범",
+      "summary": [
+        "미국 테크 매체 Tech Xplore는 기술 강국 네덜란드가 막강한 자본과 하드웨어 양산 능력을 앞세워 세계 시장을 집어삼키고 있는 중국의 로봇 굴기에 맞서기 위해, 산학연이 총결집한 국가 주도의 휴머노이드 혁신 센터를 공식 출범시켰다고 보도했습니다.",
+        "미국이 AI 소프트웨어의 두뇌(오픈AI 등)를 독점하고 중국이 압도적인 로봇 팔다리(하드웨어) 생산 기지로 군림하는 양강 구도 속에서, 유럽 연합(EU) 역시 자국의 첨단 제조업(ASML 등) 인프라를 지켜내기 위한 소버린(Sovereign) 로보틱스 주권 확보에 사활을 걸기 시작했습니다.",
+        "이는 차세대 로봇 공학 기술이 단순한 기업 간의 비즈니스를 넘어 반도체에 버금가는 국가 핵심 전략 자산이자 안보 이슈로 격상되었음을 명백히 보여주며 글로벌 로봇 밸류체인의 강력한 보호무역 블록화 현상을 예고합니다."
+      ],
+      "implications": [
+        "글로벌 로보틱스 공급망이 서방 연합과 중국 중심으로 분열됨에 따라, 특정 국가의 눈치를 보지 않고 핵심 구동 부품(모터, 감속기, 센서)을 자체 양산할 수 있는 한국, 일본 내 소부장 기업들의 전략적 몸값(프리미엄)이 수직 상승할 전망입니다.",
+        "각국 정부의 천문학적인 로봇 R&D 보조금과 세제 혜택이 쏟아지며, 대학 연구실 수준에 머물던 기초 로봇 벤처 기업들이 대거 나스닥 및 글로벌 증시에 입성하는 화려한 벤처 캐피털 엑시트 사이클이 열릴 것입니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": true
+  },
+  "id_115u9a9": {
+    "id": "id_115u9a9",
+    "title": "The U.S. Has More SMR Projects Than Its Four Closest Rivals Combined - Crude Oil Prices Today | OilPrice.com",
+    "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOWk5TSDhwVW52QVZ3ZWxpVEJodVFpa0VvNmRZQnNwRlFNRXVCTVRFUGVFMHBMQVFEWmJKbGxCX3hIVHZ2dVZjNnduWktqb3IyRmU2Yi1hYXRjcTZkdmFFOWVKVk5wRFVpZEtNdkx1V2lKb3RDZ21nczR6UFpLT2xYUmZrdklOLXgzQ3NXZHhfWE5PX2I4eTlPVXBJM0JNbmtyOGh4YzJWRG1Ga01RY1VIWTFJWmxiMDVGNUlJUHl3amtBa0nSAcgBQVVfeXFMT1NpMjdDdWZOQmpScXVwdUR3dEFsMEF0cTZIRFBpTnB0VWwzdE1YQ3ZqamI2V3E1MGhhbUs1N3MzR3Z5YVVKd0tWdS1Fb25falVmUGdOX08yMUVVYXFoUmQycmFKYnN3X2J3NW9SRS1QOVBJUjllY1oyQ0lKOExIWUFlWWdLdVZOa1NFTTJpcmFCYmM5cW16MnBaUVJoNmN5bmt3bGpzZjNUd29Qd0xxa3E4N2NTVEZ6TUF6NE9waGRHWFh6ZXR1cU8?oc=5",
+    "description": "The U.S. Has More SMR Projects Than Its Four Closest Rivals Combined  Crude Oil Prices Today | OilPrice.com",
+    "date": "2026-07-02T18:00:00.000Z",
+    "sourceId": "following-industry-nuclear",
+    "sourceName": "⚡ Nuclear & Energy News",
+    "lang": "en",
+    "category": "Nuclear & Energy",
+    "region": "US",
+    "followingIndustry": "nuclear",
+    "followingCompanyIds": [
+      64
+    ],
+    "aiAnalysis": {
+      "translatedTitle": "미국, 경쟁 4개국을 모두 합친 것보다 더 많은 SMR 프로젝트 추진 중",
+      "summary": [
+        "오일프라이스(OilPrice)의 최신 에너지 동향 보고서에 따르면, 미국이 러시아, 중국, 영국, 프랑스 등 글로벌 경쟁국 4곳의 프로젝트를 모두 합친 것보다 더 많은 숫자의 소형 모듈 원자로(SMR) 개발 및 실증 프로젝트를 진행하며 원전 패권 탈환에 사활을 걸고 있습니다.",
+        "미 에너지부(DOE)의 천문학적인 보조금 융단 폭격과 빌 게이츠 등 실리콘밸리 거물들의 벤처 자본이 결합되면서, 과거 IT 혁명을 주도했던 실리콘밸리의 혁신 DNA가 이제는 무탄소 에너지 인프라(SMR) 섹터로 고스란히 이식되고 있습니다.",
+        "이는 차세대 SMR 시장이 기술적 개념 단계를 완전히 벗어나, 초기 시장(First Mover) 지배력을 장악하기 위한 미국 자본주의 특유의 물량 공세 및 국가 안보 차원의 쩐의 전쟁으로 비화되었음을 강력히 시사합니다."
+      ],
+      "implications": [
+        "미국 정부의 인허가를 가장 먼저 통과한 선도 SMR 설계(뉴스케일, 테라파워 등)는 글로벌 표준(Global Standard)으로 자리 잡으며 전 세계 우방국으로 수백조 원 규모의 수출 잭팟을 터뜨릴 독점적 지위를 누리게 될 것입니다.",
+        "한국 원전 소부장 밸류체인(두산에너빌리티, 현대건설 등)이 이들 미국 설계사들의 핵심 기자재 파운드리(위탁 생산) 및 시공 파트너로 낙점되며 역사적인 구조적 장기 낙수 효과를 향유하게 됩니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": true
+  },
+  "id_b1qz2v": {
+    "id": "id_b1qz2v",
+    "title": "Craig-Hallum Sticks to Its Buy Rating for Intuitive Machines (LUNR) - The Globe and Mail",
+    "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPWmhPdVJuVlg3UVEyTU1COVdEUDZhVmdqVFBzSVlKWDMwX2VTd1ZvUnJzM0hXUzFhRkxkUDE0NlZUdXVvMEpQZDNDcmdtTVJqMWE4am13cEw1aTlsVnNuS1pvaWdVeFRfX25uWTJqOENvdUwzUHFLbE9lTkhRU245QWZqS2p5VnZpclJZamljdWJXTDl2OXhfejJMbzVVM0lnd1NHc0l4NE5ZeVF1dFoyWFRPZFhrWUlXYUFldGliNEtJT0NPc0g5aE1ubTVlalNVUHF3clF4RFpOSFBScHBjaVdwU2dZV3c?oc=5",
+    "description": "Craig-Hallum Sticks to Its Buy Rating for Intuitive Machines (LUNR)  The Globe and Mail",
+    "date": "2026-07-02T17:54:00.000Z",
+    "sourceId": "following-company-27",
+    "sourceName": "[LUNR] Intuitive Machines",
+    "lang": "en",
+    "category": "space",
+    "region": "US",
+    "followingIndustry": "space",
+    "followingCompanyIds": [
+      27
+    ],
+    "companyTicker": "LUNR",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1cim9ig": {
+    "id": "id_1cim9ig",
+    "title": "This analyst just raised his price target on Rocket Lab USA - Cantech Letter",
+    "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPb0gyQXdleExjSktFbVRJdldmbHpqemRadzRUallvLUNNeEphTnFSZThXWFpKdFdDTE5rakxJaG02dDU5WEJvdTYzR1RWOXE1YzBhaEpQY1RnZFVqWmFvYU9oOW1JcmVTZHNFU1p2VnU5ZncxSHJzVWpoYk0tVUdIczhHVjFZWnducjZlNGtHSXZ1SzJRUHBTeVoxV2E2Q2vSAaQBQVVfeXFMTU14NHVvcU5FamNSeVFrbWlWaDdFQ2NjSlRxZ01ibkk2cWNRUGNwVWN2NjZQMjl5MDNlN3RyVUhqS2M4LTZlaHZnVFpveUVOTUJZdTV4QTN2NTV2bEFOV25FRzVLX19wbVNEcXBCb3I1cGhFVFozS1VBeTBpNVRrT2xHME14N2dmR0t2MWJlTWhlMUdKNE54MV9MRTdaczltd04tbVg?oc=5",
+    "description": "This analyst just raised his price target on Rocket Lab USA  Cantech Letter",
+    "date": "2026-07-02T17:54:00.000Z",
+    "sourceId": "following-company-19",
+    "sourceName": "[RKLB] Rocket Lab USA",
+    "lang": "en",
+    "category": "space",
+    "region": "US",
+    "followingIndustry": "space",
+    "followingCompanyIds": [
+      19
+    ],
+    "companyTicker": "RKLB",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_crgvgu": {
+    "id": "id_crgvgu",
+    "title": "Why AST SpaceMobile Stock Fell 21.6% In June - The Globe and Mail",
+    "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOTVpkMUFwTkR5OUMzbEp0QXQ0dFAyUWR6N05qZU02bGhIc2NJOE9jZmNTb00xVzE4Q1RvZzZLRE5XSVNvTXRoSzNVM3hpX0JGSDVsdmREdVpCbUFDOGl5WmlGUWJCOFAycHdLWHVNU1VRVDlNUFlnTmVFMVJ5b0pVUmptdmNVand4elJuZnJrSTFKUGVaUHJ2emdONlJyWTlVWHB3Zlh5TnlTSkJkYWtRTGo5cjlsUFFJbDZlejYzb2NPaXRmNXluZ2J3?oc=5",
+    "description": "Why AST SpaceMobile Stock Fell 21.6% In June  The Globe and Mail",
+    "date": "2026-07-02T17:51:48.000Z",
+    "sourceId": "following-company-50",
+    "sourceName": "[ASTS] AST SpaceMobile",
+    "lang": "en",
+    "category": "space",
+    "region": "US",
+    "followingIndustry": "space",
+    "followingCompanyIds": [
+      50
+    ],
+    "companyTicker": "ASTS",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_vud9t1": {
+    "id": "id_vud9t1",
+    "title": "Holon still plans to build autonomous vehicles in Jacksonville - JaxToday",
+    "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9icDduMVM0Q3lxZjlRc3lTbk1adUhQY2dVOV9SZGxGMWVzWDg4WmtPZmxSSGlhZmc5VnpEZWJPeF9nN21ENE1FeEc0TmQzZnJCcmxfX0l0azJ1bWpsczFYVnNuS2FNWTdK?oc=5",
+    "description": "Holon still plans to build autonomous vehicles in Jacksonville  JaxToday",
+    "date": "2026-07-02T17:45:45.000Z",
+    "sourceId": "following-industry-autonomous",
+    "sourceName": "🚗 Autonomous Driving News",
+    "lang": "en",
+    "category": "Autonomous Driving",
+    "region": "US",
+    "followingIndustry": "autonomous",
+    "followingCompanyIds": [
+      9,
+      20
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_8rnh1s": {
+    "id": "id_8rnh1s",
+    "title": "Microsoft vs. Nvidia: Which Is the Better AI Stock to Own for the Next 3 Years? - The Motley Fool",
+    "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPRVc5NkVxTjBGMnRld0hNeVI5LVlGWjJtOURHM0JHQ19Qc1I5bzczdVBGWW40WWw3N0Q3ZkRLcTFPYTdYRldFM3daaWNKQVJ5VFUyWmhiQkJyQ2dod2xVajJLbmVsWTJkQi1hMTlvR0lJZHhqZ196X01DMkdnSU1uWDlTWXN4SzdlNkE?oc=5",
+    "description": "Microsoft vs. Nvidia: Which Is the Better AI Stock to Own for the Next 3 Years?  The Motley Fool",
+    "date": "2026-07-02T17:43:00.000Z",
+    "sourceId": "following-company-1",
+    "sourceName": "[NVDA] Nvidia",
+    "lang": "en",
+    "category": "autonomous",
+    "region": "US",
+    "followingIndustry": "autonomous",
+    "followingCompanyIds": [
+      1
+    ],
+    "companyTicker": "NVDA",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_ubgoy7": {
+    "id": "id_ubgoy7",
+    "title": "Space Stocks Are Exploding: RKLB Vs ASTS Vs LUNR — Which Space Stock Has The Biggest Future? Score Canadien Montreal (bb3GiHPStP) - Mshale",
+    "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5uWW9ua2oxUHZtZFFqLVRzeWpaRDFFMTNXSklNZGdKSlZJNHJfRmY2d3NkSDhKbW9BdlVDUFhMYWlFV2hTZ0gxYW1wUXlyQ2RjTThlcUZELVJEdGM?oc=5",
+    "description": "Space Stocks Are Exploding: RKLB Vs ASTS Vs LUNR — Which Space Stock Has The Biggest Future? Score Canadien Montreal (bb3GiHPStP)  Mshale",
+    "date": "2026-07-02T17:42:33.000Z",
+    "sourceId": "following-company-50",
+    "sourceName": "[ASTS] AST SpaceMobile",
+    "lang": "en",
+    "category": "space",
+    "region": "US",
+    "followingIndustry": "space",
+    "followingCompanyIds": [
+      50
+    ],
+    "companyTicker": "ASTS",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1bthv1x": {
+    "id": "id_1bthv1x",
+    "title": "Amazon launching Internet service later this year - Orange County Register",
+    "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOYldIRlRFZ3ktVXd2WXByRVZYWnFDYzllUFpoQ1RsRFFLYjY2OGFBNDFIZ25qb2dnQlZzOWtpZ0JMM0NYZV9HMTIzQ1ZPcWI2SGdhWUE2T2VMZjVsczJqSVp6VmdweC0xeDhsU0k3MXN6VjZ6TkJOWXNYdUZJQlM2TkVBY0c5S2MyeWRTWHZiRkpKUTVjNUQza25FcE8yaWhlbjhn?oc=5",
+    "description": "Amazon launching Internet service later this year  Orange County Register",
+    "date": "2026-07-02T17:42:31.000Z",
+    "sourceId": "following-industry-space",
+    "sourceName": "🚀 Space & Defense News",
+    "lang": "en",
+    "category": "Space & Defense",
+    "region": "US",
+    "followingIndustry": "space",
+    "followingCompanyIds": [
+      9,
+      12
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_ueaein": {
+    "id": "id_ueaein",
+    "title": "Amazon Leo says its latest launch gives it enough satellites to start broadband internet service - GeekWire",
+    "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBHOXN1a21MQ3lsY3I3Ym83ZllocnBmMG8wWHgxdmdWeUFHVFBGOXBjSU9CTXd2bzBzR1o5VmtxZGdUbUxQalVMSl93QjlLc2swMjk3QjBBR1JDMldfWmxMT1FKWm9pcTdKcDcxX3kzSjBvLXJNV1NwUg?oc=5",
+    "description": "Amazon Leo says its latest launch gives it enough satellites to start broadband internet service  GeekWire",
+    "date": "2026-07-02T17:42:06.000Z",
+    "sourceId": "following-industry-space",
+    "sourceName": "🚀 Space & Defense News",
+    "lang": "en",
+    "category": "Space & Defense",
+    "region": "US",
+    "followingIndustry": "space",
+    "followingCompanyIds": [
+      9,
+      12
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1hn706w": {
+    "id": "id_1hn706w",
+    "title": "Current price of Bitcoin for July 2, 2026 - Fortune",
+    "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1EUkdQQ3JIcm1URG8xeGg1bmZDeGI2LU4xYzN1R1pkMlpnSmFvU3AzOEhjOTdEVWhQYTg3REstUTk0ZlZUNndHN0M1RTMtUXJSS3dJWk5rMHV4Z2ljUUhTQ2UyajZrOFk?oc=5",
+    "description": "Current price of Bitcoin for July 2, 2026  Fortune",
+    "date": "2026-07-02T17:36:06.000Z",
+    "sourceId": "following-industry-crypto",
+    "sourceName": "₿ Crypto & Blockchain News",
+    "lang": "en",
+    "category": "Crypto & Blockchain",
+    "region": "US",
+    "followingIndustry": "crypto",
+    "followingCompanyIds": [
+      29
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_rg9agi": {
+    "id": "id_rg9agi",
+    "title": "NuScale Power is still under $13. Here's whether long-term investors should pounce. - MSN",
+    "link": "https://news.google.com/rss/articles/CBMi8AJBVV95cUxQay1IaG8tYTlHUEtuM2Fkem9Rd0h5LWZFRHVmbXZYU05RQkZIb2ZXMmViRE8wUk0wdnpEcUFEaUEwQ1pvOC1GNTNodDRFYWsyTUY2YllPcWk3WFk0aW9NVzlvMV9KMGlsNExTX2c4b1lHUnlDZXdZVFFyNXZrNFhSVkVHa28xblVrMndzLU5RTHVaVlE4SFpHRXRXeVg3RTQwcEktdVVSa3VuTURIZ0hkd3Y2LXNxMTVGMjRZMy01Skg5cHQ4RENJelh0dXBmNEk4cHVYU2dYMkZkMGNzNHA1WHRWVE9yTkFHaEwtRzRxR01iazBnblJrUmxpZVNWX21VejB0bDdTVm91WXVXSll0X1c4S09BVkdWTndVaGZVTHR5R2JsRGotUmNUQTBfaGNEZEE4Znk1b0FTYUZRQ3cySUI5enp0VEk1VF8wSFo2RWg3cy1oR25KM2JHb3l0LWFiUFFVNXNyMjNtc2xJWVhyYw?oc=5",
+    "description": "NuScale Power is still under $13. Here's whether long-term investors should pounce.  MSN",
+    "date": "2026-07-02T17:12:50.000Z",
+    "sourceId": "following-company-64",
+    "sourceName": "[SMR] NuScale Power",
+    "lang": "en",
+    "category": "nuclear",
+    "region": "US",
+    "followingIndustry": "nuclear",
+    "followingCompanyIds": [
+      64
+    ],
+    "companyTicker": "SMR",
+    "aiAnalysis": {
+      "translatedTitle": "뉴스케일 파워(NuScale Power) 주가 여전히 13달러 밑... 장기 투자자들 지금 뛰어들어야 할까?",
+      "summary": [
+        "월가에서는 미국 원자력규제위원회(NRC)의 SMR 설계 인증을 세계 최초로 획득한 상징적 기업 뉴스케일 파워(SMR)의 현재 주가 밸류에이션을 두고 단기 공매도 세력과 장기 가치 투자자 간의 치열한 공방전이 벌어지고 있습니다.",
+        "비판론자들은 막대한 프로젝트 파이낸싱 지연과 인플레이션으로 인한 원가 상승 리스크를 지적하는 반면, 옹호론자들은 AI 데이터센터 전력 수요 폭발로 인해 첫 상용로(VTR) 착공만 가시화되면 주가가 폭발적으로 리레이팅될 것으로 확신하고 있습니다.",
+        "이는 상업용 SMR 산업이 '현금 흐름 창출 이전의 데스밸리(Death Valley)' 구간을 통과하고 있음을 보여주며, 글로벌 테크 공룡들과의 대형 전력 수주 계약(PPA) 확보 여부가 기업 가치 대폭발의 결정적 트리거(Trigger)가 될 것임을 증명합니다."
+      ],
+      "implications": [
+        "개별 SMR 스타트업의 자금 조달 리스크를 회피하려는 기관 투자자들은 우라늄 현물 ETF, 원전 플랜트 1차 EPC 시공사, 고전압 케이블 기업 등 이미 확정된 실적을 내고 있는 우회 수혜주(Picks and Shovels) 밸류체인으로 거세게 몰려들 전망입니다.",
+        "향후 뉴스케일 파워 등 1티어 벤더들의 긍정적 수주 공시 하나가 억눌려 있던 원전 섹터 전반에 폭발적인 숏커버링(Short Covering) 랠리를 촉발하는 뇌관 역할을 할 가능성이 매우 농후합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": true
+  },
+  "id_ru7m90": {
+    "id": "id_ru7m90",
+    "title": "TerraFlow Energy to Advance Power Infrastructure Storage With NOV Fiber Glass Systems - CompositesWorld",
+    "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOU2JuNTlFY1YzdlZMbEN2VVNxNGlfdnA0Wk1jWE1RX3NIRktUU1hxaHBYQlc0clY2WjZ4RlFDV2RfNzlDWlo4c1JJSllkeTMtem85Zmc2eGtRZWxnU19QZFdUVlhpcTUxRmdJNEtGbEdaZFZPandicHNSbk5heVFwTmtsWXZ1ZHo0VFFHaWVPUDNxdlRKUEM1eHBHNkcwWjJ2ek9SMmxCV1lTWExaNWtPYnZkeS13aWpRRlNNNUNjaw?oc=5",
+    "description": "TerraFlow Energy to Advance Power Infrastructure Storage With NOV Fiber Glass Systems  CompositesWorld",
+    "date": "2026-07-02T17:05:30.000Z",
+    "sourceId": "following-industry-power-infra",
+    "sourceName": "🔌 Power Infrastructure News",
+    "lang": "en",
+    "category": "Power Infrastructure",
+    "region": "US",
+    "followingIndustry": "power-infra",
+    "followingCompanyIds": [
+      12
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_6eb8ug": {
+    "id": "id_6eb8ug",
+    "title": "Microsoft vs. Nvidia: Which Is the Better AI Stock to Own for the Next 3 Years? - The Globe and Mail",
+    "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQR1RTZFYzQ1lxLVI1Tkd2dGZsUXlJZHBjR1A5SEVDSklWYmVuT3Y0aVl3Z3ZLY2h3eGNKbUU1N1VibkV1WnNvWFItbjk5U2k1OGFVQW85S3gwNkJEakcySjgzZVRoUVBnYzBXNGoyNndkcUtDeHM1OTlqcVNhNkdUZXdFRm8zWkpsc1JvV0s0bU9WRktURDQxQ1o1WGhLQ1g3LUZGcDYtVktLMlNTTGxHVmVjR3Rval9xQURIU0NreGw5WFhLWWdGR0xkNnlEelVJa08ya3ZfRVNYbkZzSFlRU2t3UFlJX05XTFhWS1FoNGI1VEU?oc=5",
+    "description": "Microsoft vs. Nvidia: Which Is the Better AI Stock to Own for the Next 3 Years?  The Globe and Mail",
+    "date": "2026-07-02T17:04:21.000Z",
+    "sourceId": "following-company-1",
+    "sourceName": "[NVDA] Nvidia",
+    "lang": "en",
+    "category": "autonomous",
+    "region": "US",
+    "followingIndustry": "autonomous",
+    "followingCompanyIds": [
+      1
+    ],
+    "companyTicker": "NVDA",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_qm0m8q": {
+    "id": "id_qm0m8q",
+    "title": "Data centers say they pay their way; Texas will hold them to it - The Texas Energy and Power Newsletter",
+    "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9rQmZmMlZldno3dEJxNHBxVDIxSHBRSUFoWGF5MlhUeVhUODRHSFhPZ2FFLTBpTGNQVkRiMDg2dmw5ZmVlVHU5NHdYMFNKYzQzRlB6bmY5LVJlc21lOEh6S0pKWTZZOXEteGJxWUdvX3lQZnVuTmNhSjJHRmV4dw?oc=5",
+    "description": "Data centers say they pay their way; Texas will hold them to it  The Texas Energy and Power Newsletter",
+    "date": "2026-07-02T17:03:08.000Z",
+    "sourceId": "following-industry-power-infra",
+    "sourceName": "🔌 Power Infrastructure News",
+    "lang": "en",
+    "category": "Power Infrastructure",
+    "region": "US",
+    "followingIndustry": "power-infra",
+    "followingCompanyIds": [
+      12
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_11yf4vh": {
+    "id": "id_11yf4vh",
+    "title": "Extreme heat drives record demand threat as America's largest grid prepares emergency measures - Fox Business",
+    "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPTWMxd2dTT3NnOUQ4ck1QcWFTU21FWFV1WnVRMXV3OTd4bFZCRXMzeWdfTjN4ZC1xUnE0Y2ktS190RlVnWXpqN1NUTW5MV0p5OW43YXlKRDVYQWc5bUFIbDhEVkoxSldWN0dGbjZKb3lOTWhPNWM5bnJBbW1kVFJYcU1xQ1UtTkdpOXdLTGFpNUJJRjVsMmFJakJiTEUwZnk4STZpTkh4N1NVMkUzc08zcnhkS2lXa0FXMmhUMThCMk5LemPSAcgBQVVfeXFMT1hPbGJLSG5vaks2VExPbHJVY191V3J3STFSVnFfeTdJR2cwN2swOVdKWWo1RFlFY3A1dWZEQ202c05PM3JobmdOa19IbFdfUm54SzBBLVBpamljWWxfaWUtbTZfX0dPRXN3QVZReW5GZ3JnVkNPRWtpelNBY0RVQ0NNbjluMTktUWxYUGlLM19TTXlZNDV2b01iZnNsc1Z3ZHlsSlFacFRWcnFYdU5ILTMwbEZtTzRTclVJaEVicUFjWFNrX0FnYm8?oc=5",
+    "description": "Extreme heat drives record demand threat as America's largest grid prepares emergency measures  Fox Business",
+    "date": "2026-07-02T16:50:00.000Z",
+    "sourceId": "following-industry-power-infra",
+    "sourceName": "🔌 Power Infrastructure News",
+    "lang": "en",
+    "category": "Power Infrastructure",
+    "region": "US",
+    "followingIndustry": "power-infra",
+    "followingCompanyIds": [],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_xqes7c": {
+    "id": "id_xqes7c",
+    "title": "JPMorgan Says Saylor’s Strategy Adds New Risk to Bitcoin Market - Bloomberg.com",
+    "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNWE1vdmRyRUZGT29sMjhPY3dvaWZ6MDYtZi1KZE5hWWh5emRJOVJrbVczX2diTW5EcmsyM05SOHI5NldndGpWZnlBSlRHTnM1VnowTXFoZUJVc0dVbG8wdk9USTl4OVM4Qm5jdkJidE5zZEFrWHVVQW8tTUpSLTZwTUdYV2pfeXFhRE9Cb1doX014WFBHMDQ0YW52NmZsYVpibllNTjlzU0ZnSm9HRGFVNk9lS0c?oc=5",
+    "description": "JPMorgan Says Saylor’s Strategy Adds New Risk to Bitcoin Market  Bloomberg.com",
+    "date": "2026-07-02T16:45:49.000Z",
+    "sourceId": "following-industry-crypto",
+    "sourceName": "₿ Crypto & Blockchain News",
+    "lang": "en",
+    "category": "Crypto & Blockchain",
+    "region": "US",
+    "followingIndustry": "crypto",
+    "followingCompanyIds": [
+      29
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_vj9jqn": {
+    "id": "id_vj9jqn",
+    "title": "JPMorgan Says Saylor’s Strategy Adds New Risk to Bitcoin Market - Yahoo Finance",
+    "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQRGJlZnNmWWJrM3FGZ2FuNU5lR2RhRVQ5VGxLdnhEY0U5Rm41MEtWck5nZGFDTm9WMlJhMUZhZHZOUVF2LS16NzZoVjNvdWVLQmFxUEdiU29yQkJNT21paWlSM0pfc2R0OHoxZ1NFblhLaVlSVkNNNnhNQXVGREhCN2pNcVRXQU9lcWoyQ0hjOEdqM0xzNlRlVzM1NzJ1aHpt?oc=5",
+    "description": "JPMorgan Says Saylor’s Strategy Adds New Risk to Bitcoin Market  Yahoo Finance",
+    "date": "2026-07-02T16:45:49.000Z",
+    "sourceId": "following-industry-crypto",
+    "sourceName": "₿ Crypto & Blockchain News",
+    "lang": "en",
+    "category": "Crypto & Blockchain",
+    "region": "US",
+    "followingIndustry": "crypto",
+    "followingCompanyIds": [
+      29
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1x7gi4u": {
+    "id": "id_1x7gi4u",
+    "title": "Humanoid robot begs in China for 'electricity bills,' and passersby scan to pay - The Cool Down",
+    "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPLTMtWWdpTDVEV1VjOUZ3SGtuZ3pRV2xBQ1BSWmxybEx1NkpxVGU3blN3WWd2V19LbnFIUGdMVlBNUks1RWtiazEzXzl5bHJmX1M0azhBcV94TjgzX25jVmtnellqSUFIS3BERnlSR3d3Mi16cFNJSXd6aC1lNEZ5S3M0N1pMckdFWmtmNkx3?oc=5",
+    "description": "Humanoid robot begs in China for 'electricity bills,' and passersby scan to pay  The Cool Down",
+    "date": "2026-07-02T16:41:00.000Z",
+    "sourceId": "following-industry-robotics",
+    "sourceName": "🤖 Robotics & Automation News",
+    "lang": "en",
+    "category": "Robotics & Automation",
+    "region": "US",
+    "followingIndustry": "robotics",
+    "followingCompanyIds": [
+      37
+    ],
+    "aiAnalysis": {
+      "translatedTitle": "거리에서 \"전기 요금 좀 주세요\" 구걸하는 중국 휴머노이드 로봇, 모바일 스캔 결제 등장",
+      "summary": [
+        "중국 심천의 번화가에서 배터리 전기 요금을 충전하기 위해 행인들에게 QR 코드 스캔 적선을 요청하며 구걸(?)하는 기괴하면서도 유쾌한 휴머노이드 로봇의 영상이 소셜 미디어를 통해 확산되며 큰 화제를 모으고 있습니다.",
+        "이 흥미로운 퍼포먼스는 중국 내 서비스 로보틱스의 발전이 단순 시연을 넘어, 고도화된 모바일 핀테크(알리페이, 위챗페이) 환경과 완벽하게 융합되어 실생활 소비의 접점에 아무런 이질감 없이 스며들고 있음을 상징적으로 보여줍니다.",
+        "인간의 감정에 호소하는 AI의 사회 공학적 접근과 기계가 스스로 자신의 유지 보수 비용을 펀딩하는 이 코믹한 촌극은, 머지않아 자율주행 로보택시나 배달 로봇이 인간의 개입 없이 경제 활동 주체로서 마이크로 결제를 수행하는 M2M(Machine to Machine) 경제 시대의 도래를 은유합니다."
+      ],
+      "implications": [
+        "블록체인 스마트 컨트랙트 및 암호화폐 결제망과 로보틱스 생태계가 융합되어, 로봇이 스스로 노동 가치를 창출하고 에너지를 거래하는 인프라 소프트웨어(DePIN) 플랫폼 테마가 새로운 시장의 화두로 떠오를 수 있습니다.",
+        "일상 공간에서 로봇과 인간이 상호 작용하는 빈도가 급증함에 따라, 로봇 디스플레이, 대화형 음성 합성 AI API, 그리고 로봇-인간 상호 작용 디자인(HRI) 관련 소프트웨어 시장이 폭발적으로 개화할 전망입니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": true
+  },
+  "id_4hw3ak": {
+    "id": "id_4hw3ak",
+    "title": "Texas Tests New Rules for AI Campuses Behind Existing Power Plants - Data Center Knowledge",
+    "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOUkpuS09YbDB4RVlkX0ZKam1UMXdlQUtYbkFHYjV2dHpGVE9sUW5mVnd2NGd2eUp4Q1JTeXI1LVI3V2FuSEx2b0tQR3Axa0dNbFM1bl90a2xjTVpyM29LNUxoQUtJQXFXWFNhN1hESVZOT1ViM3A0M0VGSVNxNmNWZlVsejJsb09PRENRSERoNExXdjczTWU2SnV5OHdIX1ZrcHBVblluUEM0S3kwc2NBUldlVXBLTlRfdlJSQjB1MA?oc=5",
+    "description": "Texas Tests New Rules for AI Campuses Behind Existing Power Plants  Data Center Knowledge",
+    "date": "2026-07-02T16:30:13.000Z",
+    "sourceId": "following-industry-power-infra",
+    "sourceName": "🔌 Power Infrastructure News",
+    "lang": "en",
+    "category": "Power Infrastructure",
+    "region": "US",
+    "followingIndustry": "power-infra",
+    "followingCompanyIds": [
+      12,
+      20
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1xk86xs": {
+    "id": "id_1xk86xs",
+    "title": "Why L2++ might be the bridge between hype and reality for Autonomous Vehicles - Just Auto",
+    "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNd1JWR1FtMHQ5Y2tTdWZjemtWeGJ3SU9zTGlybkZTamJXOEs0dEU5ZmxsV2JMSzBrd0EwRTdkczN1cEJ1WlpMWUJ2V3p0c09TbWxLVThNRTBCQjZzS3YzQTVtN0JCVlVUN01FejJMRXJPXy1nM1owQWo2Ui1Xb2hUOUs1V3RtSXlNWWhiNkdOcVVzdGktTUhrYnhJLXdCbFgzbGlwSm5LRHQ4Tk5zNlVrTF9Ed19ZVEdhNGc?oc=5",
+    "description": "Why L2++ might be the bridge between hype and reality for Autonomous Vehicles  Just Auto",
+    "date": "2026-07-02T16:28:14.000Z",
+    "sourceId": "following-industry-autonomous",
+    "sourceName": "🚗 Autonomous Driving News",
+    "lang": "en",
+    "category": "Autonomous Driving",
+    "region": "US",
+    "followingIndustry": "autonomous",
+    "followingCompanyIds": [
+      9
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_13jq2x9": {
+    "id": "id_13jq2x9",
+    "title": "Launch Boosts Amazon Leo Satellite Count to Near 400 - 425business.com",
+    "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQRDF2aGl4bUtiUG9JZFFQOFFxczRYN2FSaXRMeTNYWk5rQ2l5cFUzWXVCREVQMURScHJBY0JrZm9xcFhRRjdYb2lIVkhwWV9XdTNJUzBCZmVDNVcyTURKRHpSWkI1R3ByTWNULUUxdzZJRTRMejZhV0c4cnp6UFNVdVRFbXRpT3U4SDBNak9EZEhuQ2M3WFZqSWhYSlZFekFFblNfMkxQTEJ2SWc?oc=5",
+    "description": "Launch Boosts Amazon Leo Satellite Count to Near 400  425business.com",
+    "date": "2026-07-02T16:17:00.000Z",
+    "sourceId": "following-industry-space",
+    "sourceName": "🚀 Space & Defense News",
+    "lang": "en",
+    "category": "Space & Defense",
+    "region": "US",
+    "followingIndustry": "space",
+    "followingCompanyIds": [
+      9
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1eolpmz": {
+    "id": "id_1eolpmz",
+    "title": "Tesla deliveries beat expectations on recovering Europe demand - The Detroit News",
+    "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOOHRZNmt0QXljMWlzMlFNQXlXS21PU0JIVFVwOXJWeXNrZGdQMUlrUXNfWGNReEFwNU9QT0kxZnlqY1lMclBpbzNlVXJVRUFzTjBSaXRPQUpsUnl5a0dGajRaNzVxQ3NWVFg1M0c3LWlEQkpBZXlONHFSdkd4RDIxeUtUbUlDeGJ3eDBvSVhUWTdueUlEVXJVdUZTcmowenAzTDhEZEJyb0I2UVJfLUFuQVdvTjVBZTF4Zjc5RDlfbjdnOXQz?oc=5",
+    "description": "Tesla deliveries beat expectations on recovering Europe demand  The Detroit News",
+    "date": "2026-07-02T16:13:00.000Z",
+    "sourceId": "following-industry-autonomous",
+    "sourceName": "🚗 Autonomous Driving News",
+    "lang": "en",
+    "category": "Autonomous Driving",
+    "region": "US",
+    "followingIndustry": "autonomous",
+    "followingCompanyIds": [
+      2,
+      9
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1xvsg5p": {
+    "id": "id_1xvsg5p",
+    "title": "Robot.com Named Official Robotics Partner of LEAP East, Bringing R-ads to Asia for the First Time - Yahoo Finance",
+    "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQbngwcXRmZ3pfY2NodjZGVWJNWTRIZENtQjl0YWd4R3ZpU3R5akJlWGFqUC1uYy10N1ZfczZhNVQzTWl3dlg2NXJ5V251MEF3YkVqZExjbUdoU25zNzFGVm1ILTJQUFFxaGJWNjV3S3FMTFJ3MmtTb3B5Qk9DWGxjbENfLWZvbVI5ZzBTNkpNelloRURwOWtFeVdjeGFxUQ?oc=5",
+    "description": "Robot.com Named Official Robotics Partner of LEAP East, Bringing R-ads to Asia for the First Time  Yahoo Finance",
+    "date": "2026-07-02T16:00:00.000Z",
+    "sourceId": "following-industry-robotics",
+    "sourceName": "🤖 Robotics & Automation News",
+    "lang": "en",
+    "category": "Robotics & Automation",
+    "region": "US",
+    "followingIndustry": "robotics",
+    "followingCompanyIds": [],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1c7u9xg": {
+    "id": "id_1c7u9xg",
+    "title": "Ontario startup's humanoid robots aim to replace 'backbreaking' and dangerous work - Yahoo! Finance Canada",
+    "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxONVlGMTRTeUdMZTdpYlpDaDBwQ2lvUXc1d1dVMFNjcHdyVHhVM1h1RGZLVzJVYTR6d3hYXzZsa0FQQmx3c3hkQzN5Mlc5RUVjLUI5anFaN1RSNXRtRUFJTHc0UWVLZ1M4NjE1TFZvYzB4ZnNrRG9zcXMtdXFSSTEzTWV0U3JyclBlcEFuR1B3?oc=5",
+    "description": "Ontario startup's humanoid robots aim to replace 'backbreaking' and dangerous work  Yahoo! Finance Canada",
+    "date": "2026-07-02T15:56:41.000Z",
+    "sourceId": "following-industry-robotics",
+    "sourceName": "🤖 Robotics & Automation News",
+    "lang": "en",
+    "category": "Robotics & Automation",
+    "region": "US",
+    "followingIndustry": "robotics",
+    "followingCompanyIds": [
+      9,
+      20,
+      37
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1xpi26b": {
+    "id": "id_1xpi26b",
+    "title": "The First Major Robotics IPO Is Here: 5 Robotics Stocks That Could Run in the Second Half of 2026 - 24/7 Wall St.",
+    "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNeTRWTTJJYjFtbUVENngwdUp3QVZmZFA0ZExERi1PeFBPYm5LSkxoaEt3VGVHYjBWVjQtd3ZPMVBEMW9SN09zQ0lCZjJJTHpuVnVkVnFKc0FUYm13U3dORmlTUG1lajdtTjVVUTNuY0lhME5ad0dUaDVPNjJCTFh0bkEta1J1dU5OYThLSzN4c0p4ZjJJRGVmVURjdTEtOTFFYzBfZ3N3TElBbm1ONW4xdkh4YTJFc2I5WVd1SDBWTy15NmU1SG5ocHV5R1V4dk5BanJ2NkpmOA?oc=5",
+    "description": "The First Major Robotics IPO Is Here: 5 Robotics Stocks That Could Run in the Second Half of 2026  24/7 Wall St.",
+    "date": "2026-07-02T15:53:54.000Z",
+    "sourceId": "following-industry-robotics",
+    "sourceName": "🤖 Robotics & Automation News",
+    "lang": "en",
+    "category": "Robotics & Automation",
+    "region": "US",
+    "followingIndustry": "robotics",
+    "followingCompanyIds": [
+      11
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_sz9rbt": {
+    "id": "id_sz9rbt",
+    "title": "World EV Battery Machine Vision Inspection - Market Analysis, Forecast, Size, Trends and Insights - IndexBox",
+    "link": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxQX3pua3drVlpWeU1wYXpsMTY1SVZnX1lxaTVydDBYNDVrN3hWQlBzOFZmcUFJUFE2S2FxWU9jcDBRclROcmNtbGNxQnYwSVgzQWRhdFVMbWVLRGpSZWlMekh2ZnQ0VXE2TFp5eFUteWFwcG1mQUNDZUZIdGFvOFJsaW1lM0xfNWxZcmMxNVFrYXJqN2hXODVGQXh0QXlIY3huUEZTVUJHVjRNdWFBV0ZoZ2ZaeXUxRDdIclRXTlFIaFdKVUdMcDUwa1k4XzlWUjE0RVVYVE10eHZfZ0hJNVJoRlM0dDJ6TG1ZSThrV2ZUWkVkcVliczNCNmVoVU0yUQ?oc=5",
+    "description": "World EV Battery Machine Vision Inspection - Market Analysis, Forecast, Size, Trends and Insights  IndexBox",
+    "date": "2026-07-02T15:46:35.000Z",
+    "sourceId": "following-industry-battery",
+    "sourceName": "🔋 Secondary Battery News",
+    "lang": "en",
+    "category": "Secondary Battery",
+    "region": "US",
+    "followingIndustry": "battery",
+    "followingCompanyIds": [
+      9,
+      12
+    ],
+    "aiAnalysis": {
+      "translatedTitle": "글로벌 EV 배터리 머신비전 검사 장비 시장: 분석, 규모, 트렌드 예측 리포트",
+      "summary": [
+        "인덱스박스가 발간한 최신 산업 보고서에 따르면, 전기차 화재 사고로 인한 천문학적 리콜 비용의 공포가 확산되면서 셀 제조 공정의 불량률을 잡아내는 인공지능 기반 머신비전(Machine Vision) 검사 장비 시장이 그야말로 잭팟을 터뜨리고 있습니다.",
+        "인간의 눈이나 기존 광학 센서로는 도저히 구별할 수 없는 미세한 분리막 주름, 양극재 코팅 결함, 용접 불량 등을 3D X-ray와 딥러닝 비전 알고리즘이 1분 1초의 오차 없이 전수 검사(100% Inspection) 해내고 있습니다.",
+        "배터리 공장이 수율(Yield) 90% 달성이라는 마의 구간을 뚫고 흑자 전환에 성공하기 위해서는 인간 작업자를 배제한 완전 무인 스마트 팩토리 인프라와 초정밀 AI 비전 소프트웨어의 도입이 선택이 아닌 절대적인 생존 필수 요건이 되었습니다."
+      ],
+      "implications": [
+        "과거 디스플레이나 반도체 라인에 납품되던 광학 렌즈, 조명, 자동화 검사 소프트웨어 소부장 밸류체인이 수익성이 압도적으로 높은 이차전지 퀄리티 컨트롤(QC) 시장으로 간판을 바꾸며 폭발적인 멀티플 확장을 누릴 것입니다.",
+        "단순 장비 납품을 넘어 공정 최적화 데이터(빅데이터)를 수집하고 배터리 결함 원인을 추론해 내는 엣지 AI 솔루션 플랫폼 기업들이 배터리 장비 섹터의 진정한 헤게모니를 쥐게 될 가능성이 높습니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": true
+  },
+  "id_clko3x": {
+    "id": "id_clko3x",
+    "title": "Ukraine to hold grant competition for developing humanoid robots for Ukrainian military - Gwara Media",
+    "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNc2kxVlJZaW9hS3M3WmR6UVEyalJBVGJYblBWb09iX21lNVR2RTROWWYyUlpBWmM3eDNNanVielBSTVAycUFVWTFzZmV4dDVtbjF4cDJLMjV1NTU3Nk52clRQSnA1bnFqcWhBU3N0bFMyZ2hTTHFlRi12Wlc1VDFzc1JJUXQ1NERPb1dPZ0laei1LUzJpazhZQ01BOHA3c3Rjdnc1eUFPTWxDNkhwb3dyRDhsVjY?oc=5",
+    "description": "Ukraine to hold grant competition for developing humanoid robots for Ukrainian military  Gwara Media",
+    "date": "2026-07-02T15:45:09.000Z",
+    "sourceId": "following-industry-robotics",
+    "sourceName": "🤖 Robotics & Automation News",
+    "lang": "en",
+    "category": "Robotics & Automation",
+    "region": "US",
+    "followingIndustry": "robotics",
+    "followingCompanyIds": [
+      9
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_gm4tl1": {
+    "id": "id_gm4tl1",
+    "title": "US scientists turn dead EV battery waste into high-performing new battery - Interesting Engineering",
+    "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQZTBxTkFNWEdCMUJ6Tk9UaThzZGpFb3FUS1FzRDZsX24waV9Gc19vOWhZMFNYSGdWOGtiZEt1ei1GZ2FQbDlPc1lsMXBwQk84cFJGN05FbWtXelFCNk5xa0QzOE5VZmlnbUFPdU1hbGcxcVJIV3o2S0hyWTZuUjdaLXlyWl91eDRjbWo0?oc=5",
+    "description": "US scientists turn dead EV battery waste into high-performing new battery  Interesting Engineering",
+    "date": "2026-07-02T15:45:00.000Z",
+    "sourceId": "following-industry-battery",
+    "sourceName": "🔋 Secondary Battery News",
+    "lang": "en",
+    "category": "Secondary Battery",
+    "region": "US",
+    "followingIndustry": "battery",
+    "followingCompanyIds": [
+      12
+    ],
+    "aiAnalysis": {
+      "translatedTitle": "미국 연구진, 수명을 다한 폐 EV 배터리 폐기물을 고성능 신규 배터리로 완벽히 재탄생시켜",
+      "summary": [
+        "미국 유명 대학 연구진이 복잡하고 환경오염을 유발하는 화학적 제련 공정(습식/건식)을 거치지 않고, 수명을 다한 폐배터리 양극재의 망가진 격자 구조에 리튬 이온을 물리적으로 직접 재주입(Direct Recycling)하여 새것 이상의 성능으로 복원하는 혁신적인 돌파구를 발표했습니다.",
+        "이 직접 재활용 신기술은 기존 배터리를 완전히 분해해 가루(블랙 파우더)로 만드는 막대한 에너지 소모와 탄소 배출을 획기적으로 줄여주며, 배터리 리사이클링 산업의 경제성을 폭발적으로 개선할 수 있는 궁극의 연금술로 찬사받고 있습니다.",
+        "폐배터리 처리 문제라는 전기차 생태계의 가장 무거운 짐이, 역설적으로 가장 저렴하고 깨끗한 원자재를 무한대로 공급받을 수 있는 '도심 속 광산(Urban Mining)'으로 환골탈태하며 시장의 패러다임을 송두리째 흔들고 있습니다."
+      ],
+      "implications": [
+        "기존 값비싼 용매 처리에 의존하던 화학 리사이클링 밸류체인이 무력화되고, 폐배터리 물리적 복원 및 재활성화(Revitalization) 관련 특허를 선점한 하이테크 소재 벤처 기업들로 막대한 ESG 투자 펀드 자금이 빨려 들어갈 것입니다.",
+        "원자재 조달 비용이 수직 낙하함에 따라, 향후 글로벌 폐배터리 매집 물량을 독점하는 수거/물류망 플랫폼 기업들이 배터리 산업 최상단의 절대 권력자로 군림하는 시나리오가 펼쳐집니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": true
+  },
+  "id_d7scj8": {
+    "id": "id_d7scj8",
+    "title": "Extend EV Battery Life with Smart Battery Management Systems - Fuel Cells Works",
+    "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNakJJYmh5aUh2RVJZMUtlQm04QXdsVWtBNmpuSkVOcUhTUHVzblJ5amJUSVUtYXFWbnFoYlJqeTZBZTkzakVkcHhFYndBNHU2TnlxTjRjMkNqSzZTajZYb3FOZGtMdHg1OHJ4VFBtdDE5Z044MWVHWnlxVUxwcUt0WS11SXk2MFRmZ0xHcm83cXhqTV8xM0VSeEswMjZleS11X2ZiN3ExWGR1ZUpud3p1ZzFn?oc=5",
+    "description": "Extend EV Battery Life with Smart Battery Management Systems  Fuel Cells Works",
+    "date": "2026-07-02T15:41:00.000Z",
+    "sourceId": "following-industry-battery",
+    "sourceName": "🔋 Secondary Battery News",
+    "lang": "en",
+    "category": "Secondary Battery",
+    "region": "US",
+    "followingIndustry": "battery",
+    "followingCompanyIds": [
+      12
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1rp0cvx": {
+    "id": "id_1rp0cvx",
+    "title": "Synthetic Driving Scenarios Market, Growth and Forecast 2036 - Fact.MR",
+    "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5kcl9VVUg5RktYSFQ1UFF1dGVFUzZKNzFtMC15dHVWLWk3U081RlZTQVI2Mm01VW1YeDdiVmpPcThKZG13Zjhob2s4aVo2c3liNkJWVXlGM3hDallXUHo2Q3JsVlZQZEFzNnN2UEhJWExTZw?oc=5",
+    "description": "Synthetic Driving Scenarios Market, Growth and Forecast 2036  Fact.MR",
+    "date": "2026-07-02T15:39:55.000Z",
+    "sourceId": "following-industry-autonomous",
+    "sourceName": "🚗 Autonomous Driving News",
+    "lang": "en",
+    "category": "Autonomous Driving",
+    "region": "US",
+    "followingIndustry": "autonomous",
+    "followingCompanyIds": [],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_a174z9": {
+    "id": "id_a174z9",
+    "title": "BTC price news: Bitcoin zooms above $61,000 as inflation fears soften - CoinDesk",
+    "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQODV3YlBVMnBhLVd4d3RvcVZBRjNoZk43eUpsYml6WlBaNWY0YmpRX2R2anlaSUdyWnFTdkZsSTZORGlCM09WRUNBbVFDazJFazBrSnFXakxET2VMdHVvNk5JTHpmT0kzQUdvcGxZYnBhc2h2Rk1WT0IxSVFVYWZWaE83T3FQWjJKSGJld1Bvc2RTYV9FVjRzT3AwZVJ6NkVq?oc=5",
+    "description": "BTC price news: Bitcoin zooms above $61,000 as inflation fears soften  CoinDesk",
+    "date": "2026-07-02T15:14:44.000Z",
+    "sourceId": "following-industry-crypto",
+    "sourceName": "₿ Crypto & Blockchain News",
+    "lang": "en",
+    "category": "Crypto & Blockchain",
+    "region": "US",
+    "followingIndustry": "crypto",
+    "followingCompanyIds": [
+      9,
+      29
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_ddx0yb": {
+    "id": "id_ddx0yb",
+    "title": "University of Michigan's smart thermal control could double EV battery life - MSN",
+    "link": "https://news.google.com/rss/articles/CBMiigJBVV95cUxOdlhHR2xBa3hhZ1RJNXRUemlfdzdqdzdlaVJ2Nm92OGV5eHF5Q1hfZWFJMkQtc0J3ZEcwZmlxdDNwTGh4MFh2NE9BRWNVOURQX2VxNG9LNnk5WXNhRTVUM2hyVktPZTVENjRXM2o4YWQtemtzUEg5eVE2NUdTeWE0UERqd0JzZFBwVHhrT3Z4aEFtVEJSd1hTSkVuZk1tZkFBNng3ODBGWlhhcFk5YmJKdl9kZ1NoMHF4bzZBbHpFQWRmc2dWMVh5MHJPeWwyc3FrMFVxTUNXcXRNVEZFNkt5M1Y4ajhyRkN3SmZwQXFqcXpYMFpTSUk2QVVpVFlDYVpTM1ExMkpSZkdOQQ?oc=5",
+    "description": "University of Michigan's smart thermal control could double EV battery life  MSN",
+    "date": "2026-07-02T15:13:45.000Z",
+    "sourceId": "following-industry-battery",
+    "sourceName": "🔋 Secondary Battery News",
+    "lang": "en",
+    "category": "Secondary Battery",
+    "region": "US",
+    "followingIndustry": "battery",
+    "followingCompanyIds": [
+      9,
+      12
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1raz3hg": {
+    "id": "id_1raz3hg",
+    "title": "Toyota's hybrid-first bet gains edge as rivals face $70B EV losses - MSN",
+    "link": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxOWTgtRzVlSElUbE54ZUs1NFVYY2FxY0Q0ZzdaTE5VUVozMUtSWGpCbkt1N1lIbGU3MHRjSHZSSXNUa2hJTkdaRzVLWXFOcktDSkw3UHZHUW8yWDRxeWNmS2JrYlo3aTF6UkkzV2owbkZ5cnRSRzRwM3pLejBlMTJmR2JOdmdPZGVKclE5aDBkUUtXZGI0WlRZQ2pscEFsbktRSVBDRVpfUDZhX1VuejR3OVBmRFdmM1dMcHZhNGpYYWJidGxDNG1HdHBpYXprbi1qRVVjX2JPS1A1czZwT0FJZjBBOGF5aTAzTUxFeE5PTXdhVEJjM3RwbFN1RFk?oc=5",
+    "description": "Toyota's hybrid-first bet gains edge as rivals face $70B EV losses  MSN",
+    "date": "2026-07-02T15:13:45.000Z",
+    "sourceId": "following-industry-battery",
+    "sourceName": "🔋 Secondary Battery News",
+    "lang": "en",
+    "category": "Secondary Battery",
+    "region": "US",
+    "followingIndustry": "battery",
+    "followingCompanyIds": [],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_slpkga": {
+    "id": "id_slpkga",
+    "title": "System Delta 88 welcomes new commander to lead $57B satellite communications programs - ssc.spaceforce.mil",
+    "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQanUzUXlaT3l6U1RpWE85d0h3MjI5SVQ2SHd6T05ub1BMNEpOaHF6Z2J1WWhVN3dnSGRiT3lwWDFaZXhkcHlkWlpFVUtEMGxKa2tFdXlMUm5XdElJR2tHS2g3a2YtU05ZZFU5Z2pJMUpsQ053d3RORVByVklDMVpuRUJTVFF1ejhnSVBmRlREY0pCUzNTXzZkYVVIVW1JS1dxMFllNlBYQllBeTV5YU9QMjFKMEJJaW9tRkNVVS1maTJOZjdieHNBZ0J1UDNlbkpU?oc=5",
+    "description": "System Delta 88 welcomes new commander to lead $57B satellite communications programs  ssc.spaceforce.mil",
+    "date": "2026-07-02T15:06:06.000Z",
+    "sourceId": "following-industry-space",
+    "sourceName": "🚀 Space & Defense News",
+    "lang": "en",
+    "category": "Space & Defense",
+    "region": "US",
+    "followingIndustry": "space",
+    "followingCompanyIds": [
+      9
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1dcoosl": {
+    "id": "id_1dcoosl",
+    "title": "AI data centers are reshaping the energy infrastructure landscape (BE:NYSE) - Seeking Alpha",
+    "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQWnZET2JGMUs1ZDhISGI1WDJVNElNd2MzcE5vejdHNENXUW91QnN0VEpTcjZqekRlaVpka0c5cHVZYVlmZkpVWk1IRW5IMjZpVUpfaUJ1LW1yLW9SZTUzQlZja1dZRkFsUjFKQXlOLU5qbzVoU2RTS2lLMTJ4UlVqVnpRNmlHM3c3dklyYUhjbnRITXNnNEZ0N05IN3h1ODhBRVhNYl9n?oc=5",
+    "description": "AI data centers are reshaping the energy infrastructure landscape (BE:NYSE)  Seeking Alpha",
+    "date": "2026-07-02T14:59:51.000Z",
+    "sourceId": "following-industry-power-infra",
+    "sourceName": "🔌 Power Infrastructure News",
+    "lang": "en",
+    "category": "Power Infrastructure",
+    "region": "US",
+    "followingIndustry": "power-infra",
+    "followingCompanyIds": [
+      12
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_pexx1a": {
+    "id": "id_pexx1a",
+    "title": "FBI Director Kash Patel's Undisclosed Stock Buy in Bitcoin Giant Strategy Is Down 44% - Yahoo Finance",
+    "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPTXVrcGtMZHNueVYyeU9aZlczU1pYNmh6VnBhbFFsNXUzLURjRXlYaVJsQUdqYWl0ZjVmUGRzZmxpUFltVXFWV0JNdEpQWmxDSEt5b0d2eEw2YTVBZ1p3RUstUFhZUnh4YS14RTdacEFiampIYnZxQWJVQ3pxSGdscjZ0V1pjLWt1SGhRWDhFa1pWb3F5TmhDb2xXcWVoQWpnQlNj?oc=5",
+    "description": "FBI Director Kash Patel's Undisclosed Stock Buy in Bitcoin Giant Strategy Is Down 44%  Yahoo Finance",
+    "date": "2026-07-02T14:50:18.000Z",
+    "sourceId": "following-industry-crypto",
+    "sourceName": "₿ Crypto & Blockchain News",
+    "lang": "en",
+    "category": "Crypto & Blockchain",
+    "region": "US",
+    "followingIndustry": "crypto",
+    "followingCompanyIds": [
+      29
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_occ8x8": {
+    "id": "id_occ8x8",
+    "title": "Turner Industries expands nuclear manufacturing footprint in Louisiana - BIC Magazine",
+    "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQM3ZfblBtekZUU1AwWVBqRWtSR0RGeWUxWUsxVUxhUDFpNklMVUdDdzZVcGo1NWFJNHpSZmZpZWY0VDI1SkhxZFN3UWFRSkp2cFhtdGhxRjQ2Rk1Obm5kbHYzUTJlTVdVN3R6aEdmZ2JxZUpQeDJKbXBnV0ptQ19RcG0wY29pZWVQWmljc1pZVHNoOWdMSjdSSDRyNXFGZmcydlRnN0g3YUtjeDlzbEFteGpnQQ?oc=5",
+    "description": "Turner Industries expands nuclear manufacturing footprint in Louisiana  BIC Magazine",
+    "date": "2026-07-02T14:41:14.000Z",
+    "sourceId": "following-industry-nuclear",
+    "sourceName": "⚡ Nuclear & Energy News",
+    "lang": "en",
+    "category": "Nuclear & Energy",
+    "region": "US",
+    "followingIndustry": "nuclear",
+    "followingCompanyIds": [],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_lcn5fu": {
+    "id": "id_lcn5fu",
+    "title": "Robinhood Jumps 6% on Bullish Analyst Initiations as Coinbase, Strategy Ride a Crypto-Stock Bounce - 24/7 Wall St.",
+    "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOWHJ3SXBKd2VSQTRGd3lqcHY4T29QME5uWUhrckZpUTNraWVDam5NOWlzeGIxZnVWTDh2Q2szNmNGT216YWFZTFR2LTZ5MWF4RDlFX2E3SGY3WjBoOXQwZDh2VGxSMkhhclRqLVdJejJSNk0xLVVBNHhqVW5YWG56OVFUMnFJbzJUdm9tcDk4U1JKbEt0d1lUTkgtY1AxeU5FWDZRSkhLRGl3Y1VrYm9fY0sxb1B2YjR3TEVkRWtCZHRFemlFem92Z2Q3djlla1BveHpncWR4VQ?oc=5",
+    "description": "Robinhood Jumps 6% on Bullish Analyst Initiations as Coinbase, Strategy Ride a Crypto-Stock Bounce  24/7 Wall St.",
+    "date": "2026-07-02T14:29:45.000Z",
+    "sourceId": "following-company-29",
+    "sourceName": "[COIN] Coinbase Global",
+    "lang": "en",
+    "category": "crypto",
+    "region": "US",
+    "followingIndustry": "crypto",
+    "followingCompanyIds": [
+      29
+    ],
+    "companyTicker": "COIN",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1l7nc29": {
+    "id": "id_1l7nc29",
+    "title": "Semiconductor Stocks July 2026: NVDA vs AMD Investment Analysis - Intellectia AI",
+    "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBfaG1MSEtVbHVQLUw2b3Y2d2VEMGdxcG5fUnZESkNtY2VzZTNJYlNCQ3J3MTc3QW9IYl93c050eDhoSnI1Y3M0ckh5T3duMElXZkZveUNXcW9MQmlmeFE3NHJrTTIwbGdtZnc?oc=5",
+    "description": "Semiconductor Stocks July 2026: NVDA vs AMD Investment Analysis  Intellectia AI",
+    "date": "2026-07-02T14:19:20.000Z",
+    "sourceId": "following-company-1",
+    "sourceName": "[NVDA] Nvidia",
+    "lang": "en",
+    "category": "autonomous",
+    "region": "US",
+    "followingIndustry": "autonomous",
+    "followingCompanyIds": [
+      1
+    ],
+    "companyTicker": "NVDA",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_273u7a": {
+    "id": "id_273u7a",
+    "title": "Traffic Regulators Vow to Unleash ‘Innovation’ by Eliminating Robotaxi Brake Pedals - The Drive",
+    "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNajZ2cmRONEhQSm5yWWdXZWItZkZ3dmxoR1g2VkFabVpvV1lYS0dtMDg0UFM0Q1gxX2d0VzZWRHowbUd1QXRhQlFwUmI2MXc1UnRYVGlNaGdxal9DMXZha1BFcndGdFFKY2FtRGE3N1pUWEdSTHV4OERnVEd1S3JjTkxISjJKYzJ5MmlCZThfNFBrRWVuZUZzNTFTLVlUUGpWM1JDRGZxcXBSZXlaanlNUw?oc=5",
+    "description": "Traffic Regulators Vow to Unleash ‘Innovation’ by Eliminating Robotaxi Brake Pedals  The Drive",
+    "date": "2026-07-02T14:16:34.000Z",
+    "sourceId": "following-industry-autonomous",
+    "sourceName": "🚗 Autonomous Driving News",
+    "lang": "en",
+    "category": "Autonomous Driving",
+    "region": "US",
+    "followingIndustry": "autonomous",
+    "followingCompanyIds": [
+      9
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1bi73i": {
+    "id": "id_1bi73i",
+    "title": "The 'Michael Burry Bear Case' for AI Chips Is Back, and This GPU Math Problem Won't Go Away - 24/7 Wall St.",
+    "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQUXhjMzZONDJJOUpmRnFpMC16QWN0ZmM0TE5Wdm5WUURrWEZCQlJtWlQyUjk5NmdDSlZfSGNxeXd2RHFraUI4WlJRQVk3VmFnWTd2S1hYdDNZU096ckhfWk9UUUZXeXRHUFIxbXVjMENWbnFISExvaU1fNTFpX2dnbzVGUi14T3lRWllsNkxlUlZWamtaVndxUnNyS0VsV0VCNXNNMXEzaHg1QkJRVGVNSTh5cUpNTWRfeFFpOFZmSld4UmxfTUd1cVR6Yw?oc=5",
+    "description": "The 'Michael Burry Bear Case' for AI Chips Is Back, and This GPU Math Problem Won't Go Away  24/7 Wall St.",
+    "date": "2026-07-02T14:13:54.000Z",
+    "sourceId": "following-company-1",
+    "sourceName": "[NVDA] Nvidia",
+    "lang": "en",
+    "category": "autonomous",
+    "region": "US",
+    "followingIndustry": "autonomous",
+    "followingCompanyIds": [
+      1
+    ],
+    "companyTicker": "NVDA",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1fnj4t3": {
+    "id": "id_1fnj4t3",
+    "title": "Turkish firm plans up to 20 small modular nuclear reactors with US partner - Anadolu Ajansı",
+    "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNMF8tSnI0b1VmQXJtUGNTczZ0cmhLLUFqTXlCNHozaU9ncUZuZ0h6Skd4Nkhob2oxeWdhbUFsZm9WNU1tT2Q3Vl9YZ2ozeE5vdlhzQXd2aVlSSFJQWGd6c29MaG01bFp0UVNTdG9Jby16cnZOa21NcWZQczZTYTBoOTUtaDdLQ3VfM05YM04zZS15SVo0bUFtZnFLQ1dMUXhEaEw5cG9ta21lWVB2RzZRTjlxWnRPZw?oc=5",
+    "description": "Turkish firm plans up to 20 small modular nuclear reactors with US partner  Anadolu Ajansı",
+    "date": "2026-07-02T14:09:30.000Z",
+    "sourceId": "following-industry-nuclear",
+    "sourceName": "⚡ Nuclear & Energy News",
+    "lang": "en",
+    "category": "Nuclear & Energy",
+    "region": "US",
+    "followingIndustry": "nuclear",
+    "followingCompanyIds": [
+      20
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_m98hp8": {
+    "id": "id_m98hp8",
+    "title": "Intuitive Machines: Modest NASA Award, Bigger Signal, (Rating Upgrade) (LUNR) - Seeking Alpha",
+    "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPc0FNc1BzNW8yc2VLNXFPSTh1QXB0bVV0d0RpQlBFeDAtYW5mVERMZVpUcG9lV1FIRnIwQXc2OVVlb2lndDF4NllDa3hGUkdDT1dZN0JTLTJRT2dFSjIzN2gyWkxuNGlNMU16Ujh5emdLYkhsRnpaT2dfTXhXajRpY1FpUTlGeHZmVk52cnJwTXM4WDk0b2FyMTZ4YXh2U0o3Y3UwZUlXUkNJQQ?oc=5",
+    "description": "Intuitive Machines: Modest NASA Award, Bigger Signal, (Rating Upgrade) (LUNR)  Seeking Alpha",
+    "date": "2026-07-02T14:06:52.000Z",
+    "sourceId": "following-company-27",
+    "sourceName": "[LUNR] Intuitive Machines",
+    "lang": "en",
+    "category": "space",
+    "region": "US",
+    "followingIndustry": "space",
+    "followingCompanyIds": [
+      27
+    ],
+    "companyTicker": "LUNR",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_p3s1mf": {
+    "id": "id_p3s1mf",
+    "title": "LG Energy wins battery supply deals with top humanoid robot makers - The Korea Economic Daily Global Edition",
+    "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9UalV2T25ER0FjY1RrVzkzTVBmNkpZb3ZVMW9jcWMyejZkZ092cGpiU1MtbGxXMzJlWDdtOVlaS3VSYlhKRnRsUHJvVENyQVh5d1RyaUJZREVZMDFtVnA5cmh6X3pmMDRKTW9iNg?oc=5",
+    "description": "LG Energy wins battery supply deals with top humanoid robot makers  The Korea Economic Daily Global Edition",
+    "date": "2026-07-02T13:58:00.000Z",
+    "sourceId": "following-industry-robotics",
+    "sourceName": "🤖 Robotics & Automation News",
+    "lang": "en",
+    "category": "Robotics & Automation",
+    "region": "US",
+    "followingIndustry": "robotics",
+    "followingCompanyIds": [
+      9,
+      12,
+      20
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_drlisc": {
+    "id": "id_drlisc",
+    "title": "Changpeng Zhao Forecasts Bitcoin’s Price Will Reach $1 Million - Yahoo Finance",
+    "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOSTJvcDg1TWhqTExVYUc2UFJNN2lycFgyck43YmxLbHhFMXNSQlRnQUoxZTdndVp1OTNjY0FXbXpORXJZT3FtRkNzSjE2YWJBUVJGdV9UUjJFMkE1Zl9HbFJJSVNLMmxFLVBONFVjdkJ2OWpmNlk4eFYwX3BueWxoN3FVZ0dlSDVNcy12eFJwMkVSRWVsYlRFcS0zX2RRZ05UU2NoVm13?oc=5",
+    "description": "Changpeng Zhao Forecasts Bitcoin’s Price Will Reach $1 Million  Yahoo Finance",
+    "date": "2026-07-02T13:53:00.000Z",
+    "sourceId": "following-industry-crypto",
+    "sourceName": "₿ Crypto & Blockchain News",
+    "lang": "en",
+    "category": "Crypto & Blockchain",
+    "region": "US",
+    "followingIndustry": "crypto",
+    "followingCompanyIds": [
+      9,
+      29,
+      50
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_srymw3": {
+    "id": "id_srymw3",
+    "title": "Making satellite communications more resilient - SpaceNews",
+    "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5LT1hrQm15SXBrQjZpM2VYYkg1REcwbGp5dUZXYmxHcGZtZHRTZGoxMGx0T1VHOGliNUQzWHBac3VLNlZNdGU0YTduMmR4VmxMc3ZLb212ZnpKR0VlcDZMZGRBM3VIYjJvVEY4QlBnN2hZNTJFRkRsSA?oc=5",
+    "description": "Making satellite communications more resilient  SpaceNews",
+    "date": "2026-07-02T13:50:47.000Z",
+    "sourceId": "following-industry-space",
+    "sourceName": "🚀 Space & Defense News",
+    "lang": "en",
+    "category": "Space & Defense",
+    "region": "US",
+    "followingIndustry": "space",
+    "followingCompanyIds": [
+      9
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_9l75k0": {
+    "id": "id_9l75k0",
+    "title": "Texas leads nation in proposed power plants for data centers, which would emit large amounts of air pollution - Houston Public Media",
+    "link": "https://news.google.com/rss/articles/CBMivAJBVV95cUxOdHZ3WEMzakpVQUdKRGs3bGNncEZIdjNQUkpSUjdRekUydzNDdkpPcG54LVJqRmtDU01Ha3FSQzRUSEVFVTVISUNlNl9SOXppUE9yN1UzQU5UMjRpR2FGVEVhZm5aSUFmd0lrNjlCUkd5YXVieFJUd3RVOWVPU1lmMjZtcS1Mem51UF9NN0lSNEJqSWVYM1oxckItbXBxUkZjNGlsaUFIVHNkRjNSeVZBMG1iWHBhdU5MTWpvVTV3Zl9WT2ZUeGtvZS1CblRYUUZqd1BNTjQ5Y3F6UXk3VEFZcFJVaFRBUERBTlgxTmZ1MzItaDVHSzgyUDBiVUpLYnE5elpOSDRudGxoTHBZckh6VjF2bVRabFEweXhpdVNlZ2JFUXI3eDNub2RHR0VyOUtSRTZhdElodWhaemd20gG8AkFVX3lxTE50dndYQzNqSlVBR0pEazdsY2dwRkh2M1BSSlJSN1F6RTJ3M0N2Sk9wbngtUmpGa0NTTUdrcVJDNFRIRUVVNUhJQ2U2X1I5emlQT3I3VTNBTlQyNGlHYUZURWFmblpJQWZ3SWs2OUJSR3lhdWJ4UlR3dFU5ZU9TWWYyNm1xLUx6bnVQX003SVI0QmpJZVgzWjFyQi1tcHFSRmM0aWxpQUhUc2RGM1J5VkEwbWJYcGF1TkxNam9VNXdmX1ZPZlR4a29lLUJuVFhRRmp3UE1ONDljcXpReTdUQVlwUlVoVEFQREFOWDFOZnUzMi1oNUdLODJQMGJVSkticTl6Wk5ING50bGhMcFlySHpWMXZtVFpsUTB5eGl1U2VnYkVRcjd4M25vZEdHRXI5S1JFNmF0SWh1aFp6Z3Y?oc=5",
+    "description": "Texas leads nation in proposed power plants for data centers, which would emit large amounts of air pollution  Houston Public Media",
+    "date": "2026-07-02T13:47:41.000Z",
+    "sourceId": "following-industry-power-infra",
+    "sourceName": "🔌 Power Infrastructure News",
+    "lang": "en",
+    "category": "Power Infrastructure",
+    "region": "US",
+    "followingIndustry": "power-infra",
+    "followingCompanyIds": [
+      9,
+      12,
+      20
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1xjfb2z": {
+    "id": "id_1xjfb2z",
+    "title": "Rolls-Royce plans £12m nuclear training centre in Derby - BBC",
+    "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5qUWphMm9ocE5ZNHNmR2JQNF9KWWFVWHF4bzhYSmZkTG41TDRYNk9BclN0bE1zcDB6UFhPMk1pbHRVYkRIQ0FhVmFaSkhfbzB3UmNIT2d4RXNZZw?oc=5",
+    "description": "Rolls-Royce plans £12m nuclear training centre in Derby  BBC",
+    "date": "2026-07-02T13:31:00.000Z",
+    "sourceId": "following-industry-nuclear",
+    "sourceName": "⚡ Nuclear & Energy News",
+    "lang": "en",
+    "category": "Nuclear & Energy",
+    "region": "US",
+    "followingIndustry": "nuclear",
+    "followingCompanyIds": [
+      20
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1w2rhsf": {
+    "id": "id_1w2rhsf",
+    "title": "Last-minute launch problem delays satellite rescue mission for NASA - ABC News - Breaking News, Latest News and Videos",
+    "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOZVRGb2EyVUV1X0RVWGRNbXV0c1NIZ2llOWV1dE1tMUh4MXpTS1FlcnVmYXV5MHp0b1lpRmIzclFQZ2VKQUY1b0x4M2ViR2p2RVdqRHFQOFREdDkyMkRpSE9yOS1yTGVyQkJZUWFNSEdZV3MtMlFjSjZfUFZLNUVtc1U3ZnZOcEU0YkViN29mSXdrWWNXc0c3c1hOV1FHNjFuanJKeUc5Zm5OLXQ1a3fSAbMBQVVfeXFMTlI1THpNWWd1T1hGay1kRkQ1YUc3Ujl3NkFFcVZ3ajdVemJ0MzBnT245aUhVclNfOGw0LWZtRDd6UFBUbkY5ZW9CMWlYYWVYM0laekRRbWlhTVN6Mm1LMHZUdEo3Yzh6UnN2N1YwbElCNGhVZXhudmF1azNvUVRuZTBnVXBhRHpMZ0dObVdqOFFqcF9MMmItOElaRmYwbDFEVllwS2FsRG5zdGpwQjdyS0xPVEk?oc=5",
+    "description": "Last-minute launch problem delays satellite rescue mission for NASA  ABC News - Breaking News, Latest News and Videos",
+    "date": "2026-07-02T13:30:59.000Z",
+    "sourceId": "following-industry-space",
+    "sourceName": "🚀 Space & Defense News",
+    "lang": "en",
+    "category": "Space & Defense",
+    "region": "US",
+    "followingIndustry": "space",
+    "followingCompanyIds": [
+      9
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1bczak2": {
+    "id": "id_1bczak2",
+    "title": "Strategy Stock Surges, Bitcoin Rebound Fuels Bullish Momentum - Strategy (NASDAQ:MSTR) - Benzinga",
+    "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPdWMza3p4RTdBaGktSHctWWJtdzJ5Y0RFMm5peXZPU3gzd19zQnlMOUY4aDhsaFUzdVZPTFZVeGpFc2wxTHFPbFZaaW1FSVhESWw2M1A0bkZRT0U5MlBjVnhjWVBsSGJLdVlxdWlablpXWHo4NG0yWlVDTVV1NmJ0R0tLOEQ2TkJTdy0yVEV6eXgwUWR3Wms0Q2pObGhwcVN1c2pFakstTktDRFBXSUdTTEk0YnRMelBlUklsOWRzdjlyZw?oc=5",
+    "description": "Strategy Stock Surges, Bitcoin Rebound Fuels Bullish Momentum - Strategy (NASDAQ:MSTR)  Benzinga",
+    "date": "2026-07-02T13:23:53.000Z",
+    "sourceId": "following-company-30",
+    "sourceName": "[MSTR] MicroStrategy (Strategy)",
+    "lang": "en",
+    "category": "crypto",
+    "region": "US",
+    "followingIndustry": "crypto",
+    "followingCompanyIds": [
+      30
+    ],
+    "companyTicker": "MSTR",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_zc6qfi": {
+    "id": "id_zc6qfi",
+    "title": "TVA clears huge hurdle in race to build America's first small nuclear reactor - Knoxville News Sentinel",
+    "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPcEl4SDVyc3ZWUzA1U1BkSk9waTNRT0hpLXpXTHZab1BXbzNET3FlclRiSlhpTHNBYWd4UWxwSnpSOFY0VEhfdHpvSXQ2YjVYVXBwWGxDaGpMQW5qdEh1dVE5c0kyb2xJVEZESTdVVFN2SkhERzFabFRrb2VhRE04QzJNdFkxU1pIY2VlNmFZWW9Id3pES0dYLVE4Wk1ZRkxrV2VheDd5MkRJZVVFUU1CMWpxc1dNazNkNzdfV202eTlqdG0zSjRDbi1vOTBEVzd2T084RVhJRzVXalhqWWRRMA?oc=5",
+    "description": "TVA clears huge hurdle in race to build America's first small nuclear reactor  Knoxville News Sentinel",
+    "date": "2026-07-02T13:19:00.000Z",
+    "sourceId": "following-industry-nuclear",
+    "sourceName": "⚡ Nuclear & Energy News",
+    "lang": "en",
+    "category": "Nuclear & Energy",
+    "region": "US",
+    "followingIndustry": "nuclear",
+    "followingCompanyIds": [],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_obq2db": {
+    "id": "id_obq2db",
+    "title": "Scenario-Based Autonomous Vehicle (AV) Testing Platforms Global Market Report 2026 - GlobeNewswire",
+    "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPUnpydGI2R2NVdTJ5RVVEa05xUkdPSzNtMnV6ZWJ6bDF0RklpS0Nabm9EQzh4c184cllqdmJ5MHByOEFOcms2c0didHZDTWdpNGZJeVZudG05ellkRk8yUHlSdXhzdWJJZjdTTW03UzI0OElTUmJGX0F4cWE4elQ4M0ZQbG5McjE2Z1dVWUMxUGliQXgtOTJBZmNYV1ZhRDFfZXFYY1p4eFEtcGNxc1ZaTGF0OWNjSjk3NTBCLXpBemdJeDlIQ00xWmpLMkthVXVoNHhDaVJnRmxUUTRubVlZdk9YeER0VXVOYkFJdw?oc=5",
+    "description": "Scenario-Based Autonomous Vehicle (AV) Testing Platforms Global Market Report 2026  GlobeNewswire",
+    "date": "2026-07-02T13:16:41.000Z",
+    "sourceId": "following-industry-autonomous",
+    "sourceName": "🚗 Autonomous Driving News",
+    "lang": "en",
+    "category": "Autonomous Driving",
+    "region": "US",
+    "followingIndustry": "autonomous",
+    "followingCompanyIds": [
+      9,
+      20
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1lsq725": {
+    "id": "id_1lsq725",
+    "title": "Global Autonomous Vehicle Safety Case Management Market - GlobeNewswire",
+    "link": "https://news.google.com/rss/articles/CBMilAJBVV95cUxPTk9feHZ3a0c5SFVmeVdYSGNSanBJQ1ZjM0JLR3pRbDV4WEVNaktvY184Ri1kREU1MlJWcGJ5VWNQVFJBTkJHWVpIY19RQ2RrUHRXYmtqS0lrNzdkYmZQTVdzZEhKU1dpQTlmckk3M2JjX0tlMlZRb01ldFVJWS14aWVuWHA4RThtZVlrNm10akVyY1J1ZFlaTEZ4bXNoOUQ4VkI3Zk5ReXdTXzJvVVN5VVZCak54QVBaejk5MThlSHRDQkprODFvQlhCZEFzc29MRjY5UUMzTFNGd3loUnRHUGdMUUxVaVV6MmlQS1hiWlpmUF9STndtRjdkam9xaDdIYmlRUUNKbmFFTVJ3emRTWVdhT2M?oc=5",
+    "description": "Global Autonomous Vehicle Safety Case Management Market  GlobeNewswire",
+    "date": "2026-07-02T13:15:45.000Z",
+    "sourceId": "following-industry-autonomous",
+    "sourceName": "🚗 Autonomous Driving News",
+    "lang": "en",
+    "category": "Autonomous Driving",
+    "region": "US",
+    "followingIndustry": "autonomous",
+    "followingCompanyIds": [
+      9
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1yyytjp": {
+    "id": "id_1yyytjp",
+    "title": "JPMorgan says Strategy's bitcoin sales policy adds 'two-way risk' to crypto markets - CoinDesk",
+    "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxObVdsYVczZ3oxZWt6UVJaX3lVOFRHNkN1VFZPSXN5SDlIcmd6NmhkZS1vTEFBS2N0ZU5TUFlINWI1NDVCd1hnLUdpUXJTeEZXZGJLa0NfSjI0RGFRbklWbXFxNXBkem80TUpLQXVCeHp1Ty1WWVdrTHR3RVA1SWdnWlFZWGNrdEcxYjBpNWVIMFEzVEtVTE9VbVZGdDZFb3hxU0dqUDl2U2N3T3Fid3ZUOWRLUjRxOTdteHdkcTkyMm1YTDQ?oc=5",
+    "description": "JPMorgan says Strategy's bitcoin sales policy adds 'two-way risk' to crypto markets  CoinDesk",
+    "date": "2026-07-02T13:13:18.000Z",
+    "sourceId": "following-industry-crypto",
+    "sourceName": "₿ Crypto & Blockchain News",
+    "lang": "en",
+    "category": "Crypto & Blockchain",
+    "region": "US",
+    "followingIndustry": "crypto",
+    "followingCompanyIds": [
+      29
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_120no6o": {
+    "id": "id_120no6o",
+    "title": "AGIBOT debuts A3 humanoid robot in Europe and launches UK Robot-as-a-Service model - Robotics & Automation News",
+    "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPMzNtX3BVR2IwZ1NtZ0Rhdmtia2RMWmVHWWhVSkdVb0FSUDRWbWRCdFp6eHA2blVXUkJzMzZ5dEt3V1IwdFNWSV9LZHUyTlZMZkpMTjBYNFN6N0QtbFRydVBuOGwwMGUxc2dOT251VDZqMVlGbTFOejNmRlNCc282WDFLUGcwUWRxRlFValM5TXExNWloTXV5VVBINE9kYV9kNXZSSnNZTUJPNHFWWXNzT25fQzhQbDVYNlBTVkQwc3Z5b3BjNUJOSjcwRjBoSVZEWGZaMEl3?oc=5",
+    "description": "AGIBOT debuts A3 humanoid robot in Europe and launches UK Robot-as-a-Service model  Robotics & Automation News",
+    "date": "2026-07-02T12:58:24.000Z",
+    "sourceId": "following-industry-robotics",
+    "sourceName": "🤖 Robotics & Automation News",
+    "lang": "en",
+    "category": "Robotics & Automation",
+    "region": "US",
+    "followingIndustry": "robotics",
+    "followingCompanyIds": [
+      9
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1yq0dbe": {
+    "id": "id_1yq0dbe",
+    "title": "Bitcoin and ethereum prices today, Thursday, July 2: Prices move up following June jobs report - Yahoo Finance",
+    "link": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxPWDhRSURHVHBZLXZZNDE1VElNcm1fV3BpM2ZnUjBOWHlIdzRtdGhWM1ZBQjA0cXRFMy10Tm9sZTVMdlEtQ3FyVFZoYm45Y2FsZmZja2xFRXN1NG5SejB0WW5xc0hSaDUxMGN2T0w1cXpRQk80UU1Odk9BLUdQRW5DV2NFU0xvM2FUNi1QUWtvZXYxaFR4TVo5VXRfSUNPRkxOVkVUWjYyMnBhRlVmZkxQa0dSOXNPMFpHSEZSQjJjYXMyLXdvbU9vd3RaY0wxeVgxMXFGTEV3dFdVUVd2VTZfWjdndllBOEtGSENDZ0F4bUxKTVEyME04ejdIWQ?oc=5",
+    "description": "Bitcoin and ethereum prices today, Thursday, July 2: Prices move up following June jobs report  Yahoo Finance",
+    "date": "2026-07-02T12:51:18.000Z",
+    "sourceId": "following-industry-crypto",
+    "sourceName": "₿ Crypto & Blockchain News",
+    "lang": "en",
+    "category": "Crypto & Blockchain",
+    "region": "US",
+    "followingIndustry": "crypto",
+    "followingCompanyIds": [
+      29
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_mvhy8b": {
+    "id": "id_mvhy8b",
+    "title": "From $4.8 to $101: Rocket Lab’s Wild Ride Into an $8 Billion SpaceX Showdown - 24/7 Wall St.",
+    "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQaHl3OHg5NWRDN1RFaS01Ym1GMk1ZeDIwYUlXUUgtZ3JjQ2xSdmJoZDZHYVc5UnZwTERIX2NIdnpubzMtYjk4eUxiN0JObVFreHQ3cThZM1lEeHZEMWpzcnhXXzRyd2ZEVW9NcTB3YXcwT0U4MTZvdnVqMVJpRm5ndUEySlVrZUh4YTg4aVQtLUhWZmRaSWVxSUw4dDNpbXdMLWxxTU5GOW9jWl9PTW9JSGdYZWRfdw?oc=5",
+    "description": "From $4.8 to $101: Rocket Lab’s Wild Ride Into an $8 Billion SpaceX Showdown  24/7 Wall St.",
+    "date": "2026-07-02T12:50:27.000Z",
+    "sourceId": "following-company-19",
+    "sourceName": "[RKLB] Rocket Lab USA",
+    "lang": "en",
+    "category": "space",
+    "region": "US",
+    "followingIndustry": "space",
+    "followingCompanyIds": [
+      19
+    ],
+    "companyTicker": "RKLB",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1n49ine": {
+    "id": "id_1n49ine",
+    "title": "Automated driving in urban traffic: final review of the STADT:up project - electrive.com",
+    "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPSzNzS0k3UU4xcEVMTGJ4bHphMHdyUnRQdlhxZ1ctR1A4QlNOblVuWE5OZ3lHLTZTaFZqT0pqZG1IVl9EVGhGSHNDWlpHQi1TTW9XSHNQMXB5cUsyMW9BX1B2amh4bi1mbmdDbWZxdHNXZ28ybzRrVEtrdnBiN0JEUTl0ZTRYaTczRDNxdC1Cb25rUjZKNUhBVmMyOE9yZFhWTVBLQWRnNGtkQ0lx?oc=5",
+    "description": "Automated driving in urban traffic: final review of the STADT:up project  electrive.com",
+    "date": "2026-07-02T12:45:58.000Z",
+    "sourceId": "following-industry-autonomous",
+    "sourceName": "🚗 Autonomous Driving News",
+    "lang": "en",
+    "category": "Autonomous Driving",
+    "region": "US",
+    "followingIndustry": "autonomous",
+    "followingCompanyIds": [],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_kk7brw": {
+    "id": "id_kk7brw",
+    "title": "Michael Saylor Just Changed the Rules for MSTR — And Investors May Not Like It - 24/7 Wall St.",
+    "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPS3JmdjZhUWk4aExra0x0b3Q5eFcxMTZseFNxblg4UmRqbVBaUy1oZmpLenU2WGdkQU9OdHIyWkFZblRNam1aZzJ5cVlod3VESEx1dldQcHhjS3R0eXI0WUpOWE1jVUhMcFpCTjNFWUdZR1liTWkwdDB1TEpXUjNyMzNQbWpjcDRaaVhabVJPUy1YajlwQ3JFamhIQk8yc3JIanhwbnk2NHZ2UG8tYzJSbGw3ZjBrN2ZwdG9WTw?oc=5",
+    "description": "Michael Saylor Just Changed the Rules for MSTR — And Investors May Not Like It  24/7 Wall St.",
+    "date": "2026-07-02T12:43:12.000Z",
+    "sourceId": "following-company-30",
+    "sourceName": "[MSTR] MicroStrategy (Strategy)",
+    "lang": "en",
+    "category": "crypto",
+    "region": "US",
+    "followingIndustry": "crypto",
+    "followingCompanyIds": [
+      30
+    ],
+    "companyTicker": "MSTR",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1ewxhju": {
+    "id": "id_1ewxhju",
+    "title": "Faster charging for EV batteries - Electronics360",
+    "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOdTlmZWlmNXFYNTUzclFkbmZNLXIxeERnTl9ielVjZ2RHd0FpSWVJcHJLZ1lPQUptNDN0ZFR6QUZ6OFlUTjFTR05HOWZxMmQ1YVozdW9XZnBKVmljSFBvOXltU294Q18zbmhqc1dQWjN5Y2V1N0haTnZYT0U3MTZZWVlqbWVLdE84Yl9OVg?oc=5",
+    "description": "Faster charging for EV batteries  Electronics360",
+    "date": "2026-07-02T12:17:20.000Z",
+    "sourceId": "following-industry-battery",
+    "sourceName": "🔋 Secondary Battery News",
+    "lang": "en",
+    "category": "Secondary Battery",
+    "region": "US",
+    "followingIndustry": "battery",
+    "followingCompanyIds": [
+      9,
+      12
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_uzgkba": {
+    "id": "id_uzgkba",
+    "title": "Aerogel technology at heart of UK EV battery safety project - bestmag.co.uk",
+    "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1TWnpHakNOelFvTFdMQXlkcW9nWFB0MkhzM0hWU2ZYWkR1UzBpS0pQbmJkSHk5YzdUdC1LcUtxZTdINDExVDBZWURWQkhlRFdzVXhBOEFDUGhsUWtRb3UxWXZOelc3Rjl1UHVZTmRB?oc=5",
+    "description": "Aerogel technology at heart of UK EV battery safety project  bestmag.co.uk",
+    "date": "2026-07-02T12:08:02.000Z",
+    "sourceId": "following-industry-battery",
+    "sourceName": "🔋 Secondary Battery News",
+    "lang": "en",
+    "category": "Secondary Battery",
+    "region": "US",
+    "followingIndustry": "battery",
+    "followingCompanyIds": [
+      12
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_nktcug": {
+    "id": "id_nktcug",
+    "title": "Micro-Modular Reactors: The Power Source the Indo-Pacific Cannot Ignore - The National Interest",
+    "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxON1Noc25pSldWTTZFYUc4Tkc2VTh3RDgzcnhGc0s2a3dNeWpxQW5uMTh6ZzRTMW5aamZaMXpEVTlGd29JUFlsSlVLaDl4YWdoN2lZY3JtOE04NHM1WENmTFg4VElYeEVzYXVBcmthMk56cTBTb3NNQUtRMzlEemtpeERPRVpMZ2R6NnVCdEtjVjU5M3NpcmY4MWZyOEhUNTFnR2VBdHoxRmk4aGRPczhvMzNMR0VJU3ky?oc=5",
+    "description": "Micro-Modular Reactors: The Power Source the Indo-Pacific Cannot Ignore  The National Interest",
+    "date": "2026-07-02T12:02:16.000Z",
+    "sourceId": "following-industry-nuclear",
+    "sourceName": "⚡ Nuclear & Energy News",
+    "lang": "en",
+    "category": "Nuclear & Energy",
+    "region": "US",
+    "followingIndustry": "nuclear",
+    "followingCompanyIds": [
+      9,
+      12,
+      37
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_625pfo": {
+    "id": "id_625pfo",
+    "title": "Polish billionaire seeks to build 14 small modular nuclear reactors in UK - Notes From Poland",
+    "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPRmIyaDBmTW5aX3dzYmxoVld5NzNwVTdtZThsdzFZbXh4dG12d1YzVVMwbGEwdkM2QmRaQTJZTWxOdE16VUdEVTkzTlJBNkV3TTd6YlpqTzlzUG9oa2daRU1Td2EtNHJXU1FlY2l4cThHV1B1TkpOZW1sRHlpS2I5VDB3dDFBZ21ZUU5DbWVFcXRfNF9mekZPQVRfak56UmJLdHZwWVlRRnFhTFhzREttNk1LTQ?oc=5",
+    "description": "Polish billionaire seeks to build 14 small modular nuclear reactors in UK  Notes From Poland",
+    "date": "2026-07-02T11:53:37.000Z",
+    "sourceId": "following-industry-nuclear",
+    "sourceName": "⚡ Nuclear & Energy News",
+    "lang": "en",
+    "category": "Nuclear & Energy",
+    "region": "US",
+    "followingIndustry": "nuclear",
+    "followingCompanyIds": [
+      9
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1x97wms": {
+    "id": "id_1x97wms",
+    "title": "Nvidia partners with AI clouds to unlock large-scale AI compute - Crypto Briefing",
+    "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9MdFM2SjFOdDNPendkV3lNeGo2RVUybUhqZnQwaDlxS09lbjRTQk5kUjFZdHYwX1NzMnZjeDIycjMtb01QVXVxSEd0Y2ZScXFmMTF2UF80T0M3c3FQQmYySG0tZDdzeF9WXzROdG9FazBvZw?oc=5",
+    "description": "Nvidia partners with AI clouds to unlock large-scale AI compute  Crypto Briefing",
+    "date": "2026-07-02T11:51:07.000Z",
+    "sourceId": "following-company-1",
+    "sourceName": "[NVDA] Nvidia",
+    "lang": "en",
+    "category": "autonomous",
+    "region": "US",
+    "followingIndustry": "autonomous",
+    "followingCompanyIds": [
+      1
+    ],
+    "companyTicker": "NVDA",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1pg4knw": {
+    "id": "id_1pg4knw",
+    "title": "NASA just launched a bold mission to rescue a falling space telescope before it crashes to Earth - Live Science",
+    "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPbjRZdmdRc18xX200bVp3dGNuaGZrdlVpNmxyQnNzTTlfWlI3eGIxZDljdzA0ck9KdlhnLXpvZHMzS0lyVHNmUGZuVENBRF91aUtTNU5MOXFVazI2UEpmRXRzLUJJRDBFSVBHQWFMSWNuMmNCRVVUS2JKd3QtT21ncnJZeTV6TjRRSmdxXy1UMzdPc29MYzZCU3ByczhkdnBBb2c5T3R5b3Q1SFdHb3RHazk0T2UxSm9QMThYUVc5ano3X2Y5Y2VSbXFuSjNIZw?oc=5",
+    "description": "NASA just launched a bold mission to rescue a falling space telescope before it crashes to Earth  Live Science",
+    "date": "2026-07-02T11:43:52.000Z",
+    "sourceId": "following-industry-space",
+    "sourceName": "🚀 Space & Defense News",
+    "lang": "en",
+    "category": "Space & Defense",
+    "region": "US",
+    "followingIndustry": "space",
+    "followingCompanyIds": [
+      9
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1xbalpv": {
+    "id": "id_1xbalpv",
+    "title": "Bitcoin miners are selling: is capitulation here? - Crypto News",
+    "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE44Q0U5X0JWOHpTOVl0YVFrbEFqeVpGRDJ5UlR5VU1rZWdrbXA2Y0VMOGFDc24zR1lxTkViMkl5djVkYmRpcXhpYTYzWEhyM2lYWjJkZlZfN09qTE9aV29sWmtsZzBoRFU?oc=5",
+    "description": "Bitcoin miners are selling: is capitulation here?  Crypto News",
+    "date": "2026-07-02T11:40:00.000Z",
+    "sourceId": "following-company-31",
+    "sourceName": "[MARA] Marathon Digital Holdings",
+    "lang": "en",
+    "category": "crypto",
+    "region": "US",
+    "followingIndustry": "crypto",
+    "followingCompanyIds": [
+      31
+    ],
+    "companyTicker": "MARA",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_ro25gp": {
+    "id": "id_ro25gp",
+    "title": "Space Coast launch schedule: - Sun Sentinel",
+    "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTFB3d1BzVHFLYlNuRUtiZkhBN0lBRGw0VmhqNnFJck04YVhHLUFack1DQ3VMVUpZMFV5MFlXZkMzR2JfcENPS2N0a0s2MV9yemh3V2N2OVJ2cVNIVVY3eXJqeHdvOVhPaXVmV2dCWWprZ3EzN3FsS3BmaFJB?oc=5",
+    "description": "Space Coast launch schedule:  Sun Sentinel",
+    "date": "2026-07-02T11:39:30.000Z",
+    "sourceId": "following-industry-space",
+    "sourceName": "🚀 Space & Defense News",
+    "lang": "en",
+    "category": "Space & Defense",
+    "region": "US",
+    "followingIndustry": "space",
+    "followingCompanyIds": [],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1hyni5": {
+    "id": "id_1hyni5",
+    "title": "Kyle Wool predicts new IPOs, autonomous vehicles will drive growth - Fox Business",
+    "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBRd0l6Q1Bpak5SQWRPMmdSNWlBblRSVnF5MFpMRlFueDhyZWpjVUZ0TGZxTGFOclpvNlhnbUZIR082U0JZNFV4TkJrTF95SmtxaFNNbUJXSlNwTk0?oc=5",
+    "description": "Kyle Wool predicts new IPOs, autonomous vehicles will drive growth  Fox Business",
+    "date": "2026-07-02T11:27:17.000Z",
+    "sourceId": "following-industry-autonomous",
+    "sourceName": "🚗 Autonomous Driving News",
+    "lang": "en",
+    "category": "Autonomous Driving",
+    "region": "US",
+    "followingIndustry": "autonomous",
+    "followingCompanyIds": [
+      9
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1fhqc9f": {
+    "id": "id_1fhqc9f",
+    "title": "VW confirms end of automated driving alliance with Bosch - electrive.com",
+    "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOSVRxZVdyYTd5NmJCZnA2OGpaVEl6SkRfNUswVGJaYnJFQnJDRUN2QUs3cVdjMVVFck9hcjFRZXFqcHN0dUtITjBYRjA5RjV6QldHUjBEeW83d3B6LTVyZ0t1R2xCX3NWbTMtUlBsVmdNd184SXQxdU93N1pMU0lHYlNZXy05ekljSDhURG96MkpvUTVZa2NCNFNB?oc=5",
+    "description": "VW confirms end of automated driving alliance with Bosch  electrive.com",
+    "date": "2026-07-02T11:00:00.000Z",
+    "sourceId": "following-industry-autonomous",
+    "sourceName": "🚗 Autonomous Driving News",
+    "lang": "en",
+    "category": "Autonomous Driving",
+    "region": "US",
+    "followingIndustry": "autonomous",
+    "followingCompanyIds": [
+      9
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_161fmru": {
+    "id": "id_161fmru",
+    "title": "Former ethics lawyer says Trump's crypto poses 'clear conflict of interest' - NPR",
+    "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE84SHJtTlBOd3YtWGtIZlZTZ3dCNkk1am5qMmdCZ180RUJNM01MMnJuV0VfQlBBazFJTXBVNTV1X2Q0U3VXT3IzZ01MS01GNGdqbWVUaWVpV3VQWmE1dVo5V2tLZC1KZVJwZFB5amU3MmFORWwtUU1wYndJcDZRZw?oc=5",
+    "description": "Former ethics lawyer says Trump's crypto poses 'clear conflict of interest'  NPR",
+    "date": "2026-07-02T10:44:01.000Z",
+    "sourceId": "following-industry-crypto",
+    "sourceName": "₿ Crypto & Blockchain News",
+    "lang": "en",
+    "category": "Crypto & Blockchain",
+    "region": "US",
+    "followingIndustry": "crypto",
+    "followingCompanyIds": [
+      9,
+      12
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_r51t6i": {
+    "id": "id_r51t6i",
+    "title": "Tesla Cybercabs with no brake pedals? New US proposal would cut requirements - Austin American-Statesman",
+    "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNeGVMTVI4aXc1amtZTl9QRHVYV3F3MWc1czF2Mk1ob0drZ2JvXzhrNDV2MENLbnZHSzFNU182d1JXSU16WWVSdjJ1S0VGM3lrYUhKQzExa1B5THg0cFRZZlZ5YVU4NzQ3NFpDd0o5bmVPb2VkSjBxWlRSVWNzd1UzbDJxN2Vxc2xTVFZKaWNJeHFQLUVIckVwb0d3?oc=5",
+    "description": "Tesla Cybercabs with no brake pedals? New US proposal would cut requirements  Austin American-Statesman",
+    "date": "2026-07-02T10:32:31.000Z",
+    "sourceId": "following-industry-autonomous",
+    "sourceName": "🚗 Autonomous Driving News",
+    "lang": "en",
+    "category": "Autonomous Driving",
+    "region": "US",
+    "followingIndustry": "autonomous",
+    "followingCompanyIds": [
+      2,
+      37
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_cdlzgn": {
+    "id": "id_cdlzgn",
+    "title": "Another power line fight brewing as Lovettsville residents resist multi-state project - Loudoun Times-Mirror",
+    "link": "https://news.google.com/rss/articles/CBMiqgJBVV95cUxQUWswZG03ZG9Ec3FBRDl5TnlUanJCZUFHdGM5OWFwUlRxdDFOTGdwRGVxOGRKTm5ZX0Z4Q29teW5lZmtCYVNOaThmRFdaRWdWOHdzRmhzWHAzMkJBa0ZRc0d4dDNCQU1pd1E1MmhhNkFPU2FBM1RITDFIZUtnRkJUVjR1S2o3Mmc4MkFZT09uQVVTY19jbVllS2xjOEwyU3N5MXpUX1NGVXdzaWtYMVJEbTRqZGpCV0RySGd6ZmdSdkwzRnN1bThiMlZvWDFFM2h0OWlueUFoYW96SVQ3NEFrb0V6UUpwUDRWenN4YTJOd3NicTQxM3htbzNpUGtFdl8xancybzZLS3luSldZU3QyU3pTRHNYc2RUcFJ6ZzAyN0tiR3JhOWVKMVZn?oc=5",
+    "description": "Another power line fight brewing as Lovettsville residents resist multi-state project  Loudoun Times-Mirror",
+    "date": "2026-07-02T10:30:00.000Z",
+    "sourceId": "following-industry-power-infra",
+    "sourceName": "🔌 Power Infrastructure News",
+    "lang": "en",
+    "category": "Power Infrastructure",
+    "region": "US",
+    "followingIndustry": "power-infra",
+    "followingCompanyIds": [],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_wxkejf": {
+    "id": "id_wxkejf",
+    "title": "How BMW is Using Figure AI Humanoid Robots in Production - Manufacturing Digital",
+    "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQU3R0NmgySGFjbTlkY0k1VERWT2NBWjFGUFlyUjBPSUtlWGw4SkpfMUhWVk9MYmdsX1R3a0lsaW5ZR1VQaDRqckdjMGZQV0lIYm1RLUI4V015c2kyZW8yMkdLcFgwZEk2N2xLX1piR1hzVVVaY21kRnVZRG15dW16VmR2NGwwMHUzY04wQ1NQTWZPVWwzNzcyMG1uWlZwaHc?oc=5",
+    "description": "How BMW is Using Figure AI Humanoid Robots in Production  Manufacturing Digital",
+    "date": "2026-07-02T10:23:26.000Z",
+    "sourceId": "following-industry-robotics",
+    "sourceName": "🤖 Robotics & Automation News",
+    "lang": "en",
+    "category": "Robotics & Automation",
+    "region": "US",
+    "followingIndustry": "robotics",
+    "followingCompanyIds": [
+      9
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1775ba": {
+    "id": "id_1775ba",
+    "title": "The new reality for data centers: No easy answers - Latitude Media",
+    "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPWVUzZ2k0bTNsaW5HQWZaVWdCak5mWGd1NDVJUkFldFZxVjJKaHhZTmREVkMtTEoyRHl2LTlacDZhNW5DZTIxWDNINzRMX2R4cWhVdnBSR1A5ejFNci1nZTVRb2Zvc0VuQjhHTXVfNThPbWwtU2E2SFJFdTlRVXFIWFRnWmVfdEVvYWN1S2prV1QwMHlVb3pXREhxeVVCdw?oc=5",
+    "description": "The new reality for data centers: No easy answers  Latitude Media",
+    "date": "2026-07-02T10:16:53.000Z",
+    "sourceId": "following-industry-power-infra",
+    "sourceName": "🔌 Power Infrastructure News",
+    "lang": "en",
+    "category": "Power Infrastructure",
+    "region": "US",
+    "followingIndustry": "power-infra",
+    "followingCompanyIds": [
+      12
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_zqxmxo": {
+    "id": "id_zqxmxo",
+    "title": "ESCO Israel shares NIS 25 billion plan to tackle AI data centers' energy crisis - The Jerusalem Post",
+    "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQU2pkZWVWZndZMTgwRTdKNVpsY1FaZUNHbjg3SjJlbFVfal8tdUVIMWhqV001RXN6WWxxRTFaMjlMUVRPVDNlRFJnVl9zMmNRSHhQc1k0OGZxSkhTd1EySFo4czFObFJJbUJUZ2czbGJBTzMwaHcwZG5COGdEOWdqMWh5OWcyZkQzV1d3UXl3SQ?oc=5",
+    "description": "ESCO Israel shares NIS 25 billion plan to tackle AI data centers' energy crisis  The Jerusalem Post",
+    "date": "2026-07-02T10:02:00.000Z",
+    "sourceId": "following-industry-power-infra",
+    "sourceName": "🔌 Power Infrastructure News",
+    "lang": "en",
+    "category": "Power Infrastructure",
+    "region": "US",
+    "followingIndustry": "power-infra",
+    "followingCompanyIds": [
+      9,
+      12,
+      20
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1cm3xq3": {
+    "id": "id_1cm3xq3",
+    "title": "Nvidia Launches New AI Infrastructure Collaboration Model: Providing GPU Financial Guarantees, Tapping Into Cloud Service Revenue Sharing - TradingKey",
+    "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOWjg2NkpZaGpMWHBNT2ppelVPblc4ZU90MTd6SUZ2azRhRU9XaWd2UGxndTJORnJyU2pQU2VBTU9QUmNNYzBKQVNXUUdMVk4wbnc1WWQ3eEJOdWpLclpiN3R3cHRzTEUzWjc2dVdKVVZBbWh4cUhKQS1QUjFSNUU2bTZRZUJtUTRDbmpuczBrWkxiSXB1T1RSM2xyRmhvUURVTnd0eG1SNXNUTmVlaHYyekJQcnFlendMbG9hTmZIT1V5UUctcDduYUNRYVVNVUtKcGl6UXRvRQ?oc=5",
+    "description": "Nvidia Launches New AI Infrastructure Collaboration Model: Providing GPU Financial Guarantees, Tapping Into Cloud Service Revenue Sharing  TradingKey",
+    "date": "2026-07-02T09:59:42.000Z",
+    "sourceId": "following-company-1",
+    "sourceName": "[NVDA] Nvidia",
+    "lang": "en",
+    "category": "autonomous",
+    "region": "US",
+    "followingIndustry": "autonomous",
+    "followingCompanyIds": [
+      1
+    ],
+    "companyTicker": "NVDA",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_u0akft": {
+    "id": "id_u0akft",
+    "title": "Beshear’s instincts on data centers are good but his tools are few - Kentucky Lantern",
+    "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOX2RiS1JONDR6MTIxTXRjX3hNdzNqd0xSSFF4RmhWc1llYmhiem1wWnZ5OVZFYlJyNFF2M0Ixdll5c01YZ1JHdmRHMk5UNTd2ZkRhcHA3XzJTX3FTNks5N0NrUzNpbDY5OVJrVnNNS2ZjeG9HeHp1Vkt4aWtqSlBxbGszNXdEQ0lJMFRUTVhfV1o4eVJKZjBFZkczRXRuRWViZHJ6Q1MzMlQ?oc=5",
+    "description": "Beshear’s instincts on data centers are good but his tools are few  Kentucky Lantern",
+    "date": "2026-07-02T09:48:58.000Z",
+    "sourceId": "following-industry-power-infra",
+    "sourceName": "🔌 Power Infrastructure News",
+    "lang": "en",
+    "category": "Power Infrastructure",
+    "region": "US",
+    "followingIndustry": "power-infra",
+    "followingCompanyIds": [
+      9,
+      12
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_169umme": {
+    "id": "id_169umme",
+    "title": "Bitcoin Price Prediction for July 2026 - 24/7 Wall St.",
+    "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOQkYzYkJJeTE4QmJIS0c1RGdSbmtVSkgxeDI5WTM2QlBDSkdxSTNBUzBURVZDcFpwRS1FWV9KMjczanRFTGFyYnZBcGE4a1ZqRm80WS1oaWFEZ2FCT2JPVWktNjFyYUR3bGRsbEw1WnNYb3RFMVpQbW1VTkRjUTA2ZVhsa1Q2LTZteS1qVUhTdWNYNnhmalFDUFdzdGVOUQ?oc=5",
+    "description": "Bitcoin Price Prediction for July 2026  24/7 Wall St.",
+    "date": "2026-07-02T09:34:35.000Z",
+    "sourceId": "following-industry-crypto",
+    "sourceName": "₿ Crypto & Blockchain News",
+    "lang": "en",
+    "category": "Crypto & Blockchain",
+    "region": "US",
+    "followingIndustry": "crypto",
+    "followingCompanyIds": [
+      9,
+      29
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1mvbp1h": {
+    "id": "id_1mvbp1h",
+    "title": "China's UBTech launches AI-powered lifelike companion robots - Reuters",
+    "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOaG5sV3pDOVlNQUNyUU5idk1vaHloY3Yya3dnSmdNblRDVDVvblJVbXpNWVgyaGFmQkNFUXBHaTJHZnYwRFN5WGk5Y2UycHZxcWZMT0t6VGZLZml4VWl1MklpVENiVFBjVGVGZk1kcDZ6WjVtdUpHNzdiSE9fU1F3TTZwMjNVOVdBdVoxYjBJQ0FFS05WUnAtV3lwdERjTVVTOTMzSEM4aHd2dw?oc=5",
+    "description": "China's UBTech launches AI-powered lifelike companion robots  Reuters",
+    "date": "2026-07-02T09:25:46.000Z",
+    "sourceId": "following-industry-robotics",
+    "sourceName": "🤖 Robotics & Automation News",
+    "lang": "en",
+    "category": "Robotics & Automation",
+    "region": "US",
+    "followingIndustry": "robotics",
+    "followingCompanyIds": [
+      9,
+      12
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1drafe4": {
+    "id": "id_1drafe4",
+    "title": "Ross Gerber Says Trump's $1 Billion Crypto Windfall Is Why 'Bitcoin Went Down and Isn't Going Anywhere' - Yahoo Finance",
+    "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNVDBPWXpfNzQtb3puZmJoUnNoOE9XX29tNDJ2Nk11VTFWbTl5ZnFqbm5DSjdtMG1fVWVsSExuWGhnZlZacEEzb25mWW8zcEhEcHdXVEZGSFl0VDdxdE1uS0hSRGpyalZrZmFkUm1xMEdFcy1YSVRoM3ZOMlJrSzk4ZElzdjhfaUpYblM4TXVCQ01jWFY5?oc=5",
+    "description": "Ross Gerber Says Trump's $1 Billion Crypto Windfall Is Why 'Bitcoin Went Down and Isn't Going Anywhere'  Yahoo Finance",
+    "date": "2026-07-02T08:25:41.000Z",
+    "sourceId": "following-industry-crypto",
+    "sourceName": "₿ Crypto & Blockchain News",
+    "lang": "en",
+    "category": "Crypto & Blockchain",
+    "region": "US",
+    "followingIndustry": "crypto",
+    "followingCompanyIds": [
+      9,
+      29
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_94slig": {
+    "id": "id_94slig",
+    "title": "🚖 Robotaxi has already achieved the leap from 0 to 1. - Moomoo",
+    "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPN25FOFlhdm9DeS0xUEhyaXdGS1dEc0FzdGxhN1FtaVJMb0hzWk1OZUVIbUJiZGZrSUNFM05EV2dFT0VEUEZ4TVpfcGxnaWlDNmpvUXRxTUVzc1NNUGRDNVZycnZaS2JBRWpSYm10ZDVHRVRudkE5clZQOUotZVhxTzdEamcydkRjUWw0QlhIYkhQMk1ZcEJNdGpqUEwyY0hBaVFxVDRUclk?oc=5",
+    "description": "🚖 Robotaxi has already achieved the leap from 0 to 1.  Moomoo",
+    "date": "2026-07-02T07:51:00.000Z",
+    "sourceId": "following-company-2",
+    "sourceName": "[TSLA] Tesla",
+    "lang": "en",
+    "category": "autonomous",
+    "region": "US",
+    "followingIndustry": "autonomous",
+    "followingCompanyIds": [
+      2
+    ],
+    "companyTicker": "TSLA",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_nv5lbv": {
+    "id": "id_nv5lbv",
+    "title": "Symbotic Acquires ARMS Innovations to Expand Warehouse Automation Into AI-Powered Operational Intelligence - Quiver Quantitative",
+    "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNWTkwMVVEYXR4V0RqUjI0VDY4SzdhV0hKU1lyZnF6TjBIeGd3RUFmMzh0eEZDNnlXcUdWZnZrZERPUW5ybmk1ZWF4SnhSVW9vMzlRTEQ5NThxUGtEeVlaNU45YnZrWUk1Z19FdkZod2JvTTFDUjRkeF9IVXZQNXhNZG54TUQwTUk3MWN6cnJWaXI5MTE0Sk1WNjhUNm52S0tGMkx2dXZYb09BZmg2T2gzZElMLUZHc3FlbFlBbno2Tkh0UEl4bm9FS0czRnhQRExTVzNvUUVn?oc=5",
+    "description": "Symbotic Acquires ARMS Innovations to Expand Warehouse Automation Into AI-Powered Operational Intelligence  Quiver Quantitative",
+    "date": "2026-07-02T07:10:00.000Z",
+    "sourceId": "following-company-11",
+    "sourceName": "[SYM] Symbotic",
+    "lang": "en",
+    "category": "robotics",
+    "region": "US",
+    "followingIndustry": "robotics",
+    "followingCompanyIds": [
+      11
+    ],
+    "companyTicker": "SYM",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1o5yjo7": {
+    "id": "id_1o5yjo7",
+    "title": "Symbotic Announces Acquisition of ARMS Innovations, Advancing a New Era of Warehouse Operations Optimization - The Globe and Mail",
+    "link": "https://news.google.com/rss/articles/CBMingJBVV95cUxNTVRPXzhrNjBGMW5WQUMtZFBzVWJNTDFkMXk4Wnd0Vnd5d1NoN2JtSDU5dl9RRTlnOWZrVFlLUFBjS0w0TW5YQUJVTFduMnpocEswYjJLTkJDRHU0S2xTNV9uVnl3aTQ2WmI1anJmS2piWlFQRWhxaEhMMXZFSnVCLVhSVjRyZll2WEZ4S2VaV09nZ1lIbkZhUTNudUc4cWZIeDZtSjFlb293TXl6eVhpU3RRdGduRmZFY0xyb29zNFV2N0hrSktFN2psczRUV3Q1Qm1vRWpMNmFIR0YyWFdRRWExeF96dWQzd21KZnpmRUxOSy1YRnFuTE54enY4d2pXWjJFNGJ4TlBTNUZ5M2dpZjFJeGJMbGYyY1lpYjZB?oc=5",
+    "description": "Symbotic Announces Acquisition of ARMS Innovations, Advancing a New Era of Warehouse Operations Optimization  The Globe and Mail",
+    "date": "2026-07-02T07:00:00.000Z",
+    "sourceId": "following-company-11",
+    "sourceName": "[SYM] Symbotic",
+    "lang": "en",
+    "category": "robotics",
+    "region": "US",
+    "followingIndustry": "robotics",
+    "followingCompanyIds": [
+      11
+    ],
+    "companyTicker": "SYM",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_i0sxsb": {
+    "id": "id_i0sxsb",
+    "title": "EV market grows amid tech gains and supply chain strains - MSN",
+    "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQNmlCT1Vub2pfWU93QVk1ZlN0bVY3cUZ1Mlk5Z093V2RHTlkxV21nSnphaEpfcWdtcmxmUzdZR3dlZDF4NjlnZzBuSXFyRy1ndUNTMGdyekdmdkZaSTlrQzFqUVZ3VVpnbjM1U200LXRmSXhtS2t4dFYzdGE2SUhYRHM0TUllUy10YnNMSVEwWmhFNWJ2R1pmTnpQdG85SjhhdzYwaHg4cGZTajA3dG9UWDVya1B2SGF0MHl2emcyQVpmbTZZWGp5dDdwZFp0dTNsbkhOY0UxRkRvdmZ1aE12VVdOOTBqYWUwNDZKT1lwVDA?oc=5",
+    "description": "EV market grows amid tech gains and supply chain strains  MSN",
+    "date": "2026-07-02T05:47:34.000Z",
+    "sourceId": "following-industry-battery",
+    "sourceName": "🔋 Secondary Battery News",
+    "lang": "en",
+    "category": "Secondary Battery",
+    "region": "US",
+    "followingIndustry": "battery",
+    "followingCompanyIds": [
+      20
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1chpado": {
+    "id": "id_1chpado",
+    "title": "Aurora (AUR) Safety Case Earns Positive Review - Insider Monkey",
+    "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPa3FLdFd2WDZkUThid3BfYWdtbk5JU2RsRWhJaGIwcXNMSnVldDQtTF95bC1MRDM3dUFnSmY5TEFfek1uTmhXd0VWRl9NbTZGNEMwZXVWX3ZGWVZBVzVOSktqZnoxVG44dFlkd1ZOb3lZS01MWjhIdFpmS25nVWlqU3pTNGlRWGwzZlp0S3Q1eWRDd9IBmgFBVV95cUxOVnVBRmRHWGNLYlFIOC02WC1GR1h6SWdEVloyRThyNk4tQl9OLWRJaFl1cDlyaHc1bjBPeDAybHhQdE81NGFvVWJSa3N1bGZQcVo4VGlOaWxvcjdDdzBrQ1luN0I5WG80ZjRraHY4ZjZVVmc2TmZMMDFKNHczNFFUNTItQW9pT1k1N0FUWF95VE1uemdKaWxaQXV3?oc=5",
+    "description": "Aurora (AUR) Safety Case Earns Positive Review  Insider Monkey",
+    "date": "2026-07-01T21:28:37.000Z",
+    "sourceId": "following-company-44",
+    "sourceName": "[AUR] Aurora Innovation",
+    "lang": "en",
+    "category": "autonomous",
+    "region": "US",
+    "followingIndustry": "autonomous",
+    "followingCompanyIds": [
+      44
+    ],
+    "companyTicker": "AUR",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1bs2jvp": {
+    "id": "id_1bs2jvp",
+    "title": "10 Best Crypto Exchanges Of 2026 - Forbes",
+    "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOLVZtY3F3d0w5U0lneDdFM1dCN291TmJTSlBLbGNZT09xQWtDTlBoZHRBUkZWS0NFRksxVUhyTDBMbUFIai0tYWFLdTMxWEZQRHVPbzBCa0tfcXRRM1ZiRFV2c3YxTFFYcmhMOG8zeG4xNjhaUWtlZTQ2VzMtaWVoWnZ5Q28?oc=5",
+    "description": "10 Best Crypto Exchanges Of 2026  Forbes",
+    "date": "2026-07-01T18:59:00.000Z",
+    "sourceId": "following-company-29",
+    "sourceName": "[COIN] Coinbase Global",
+    "lang": "en",
+    "category": "crypto",
+    "region": "US",
+    "followingIndustry": "crypto",
+    "followingCompanyIds": [
+      29
+    ],
+    "companyTicker": "COIN",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_wn3sqt": {
+    "id": "id_wn3sqt",
+    "title": "MicroStrategy Stock Surges Over 9% in Early Trading: What’s Behind the Move? - CryptoRank",
+    "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOZWV3UEYtQWRSNWdNODQtWTVYVXVVMUNQbVFlOG5QUmVGNllnYkhrVjRWOENPYnYta0p4bFQ4Sk1tcDJPaVJSM21CRS1MZjMxTGZjbmJwMTZoNG5vUUM0SVdYVHBIdlVERXpuX1ZBbzlxYjJKNE1GLW1ZejdkX1J0T1NETk0?oc=5",
+    "description": "MicroStrategy Stock Surges Over 9% in Early Trading: What’s Behind the Move?  CryptoRank",
+    "date": "2026-07-01T16:11:16.000Z",
+    "sourceId": "following-company-30",
+    "sourceName": "[MSTR] MicroStrategy (Strategy)",
+    "lang": "en",
+    "category": "crypto",
+    "region": "US",
+    "followingIndustry": "crypto",
+    "followingCompanyIds": [
+      30
+    ],
+    "companyTicker": "MSTR",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_g6hxzg": {
+    "id": "id_g6hxzg",
+    "title": "Spent EV batteries get second life as higher-performance battery material - Tech Xplore",
+    "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE8tU0kzNHVCVFVlSVRSZjE0TEFWMy0tQzRmTktEaWZEMUJwSU1qTHNqMmItLXp4ZFJuUWQzMGNUQ0g0aWM4aGpPcllBY0FuWXF3dVItc0ItZ1laUExOZzN6SWtTQm5lUF9GVU1ORWlNU2tET0trckVVbHJwOA?oc=5",
+    "description": "Spent EV batteries get second life as higher-performance battery material  Tech Xplore",
+    "date": "2026-07-01T15:40:08.000Z",
+    "sourceId": "following-industry-battery",
+    "sourceName": "🔋 Secondary Battery News",
+    "lang": "en",
+    "category": "Secondary Battery",
+    "region": "US",
+    "followingIndustry": "battery",
+    "followingCompanyIds": [
+      9,
+      12,
+      20
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_16ckuvd": {
+    "id": "id_16ckuvd",
+    "title": "Cathie Wood's Ark Invest Goes on $77 Million Buying Spree for Coinbase, Circle Amid Crypto Rout - finance.biggo.com",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5VN09zZThWcldHd3JzTkRzMmkyLU9JSUVBdktEa0NaaWdILTNuWUdtbXBOblV3cmlUYjNCTklucVlkb0xkT0xrRVliZGdGX296VTk1VEdUd1JkVEVrZXc0WE5sSTY3ZEJNdWxzRUVMSHFIMEJSUEE?oc=5",
+    "description": "Cathie Wood's Ark Invest Goes on $77 Million Buying Spree for Coinbase, Circle Amid Crypto Rout  finance.biggo.com",
+    "date": "2026-07-01T12:36:00.000Z",
+    "sourceId": "following-company-29",
+    "sourceName": "[COIN] Coinbase Global",
+    "lang": "en",
+    "category": "crypto",
+    "region": "US",
+    "followingIndustry": "crypto",
+    "followingCompanyIds": [
+      29
+    ],
+    "companyTicker": "COIN",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_17msaj7": {
+    "id": "id_17msaj7",
+    "title": "3 Nasdaq 100 Stocks with Promising Prospects - The Globe and Mail",
+    "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOTUdINnljX01rWlNDdk9PaHJ4dnFVOTVyY3ExZ3ktd2pKNXd6Vmx5MnVFa1hUaWtKR2pDNWZERVJZMDBsUUU2T0lXaURocWZXTzRzREN6b2xEamxLN0hIM2lPSG5iWVpNUVVoZkNqWVEyU0ZBWXFTZVFhLTRvcHNFTnN0TWJ1NEczTzFFd1NVOE00eVZzSXQweEo3NUtoSmJ6VFJTTTc1RF82MUl1ZU52TlR2YUFpUEN6a0FDSWtkRHRjdXBmYmFmSA?oc=5",
+    "description": "3 Nasdaq 100 Stocks with Promising Prospects  The Globe and Mail",
+    "date": "2026-07-01T09:06:50.000Z",
+    "sourceId": "following-company-10",
+    "sourceName": "[ISRG] Intuitive Surgical",
+    "lang": "en",
+    "category": "robotics",
+    "region": "US",
+    "followingIndustry": "robotics",
+    "followingCompanyIds": [
+      10
+    ],
+    "companyTicker": "ISRG",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_10ahwxf": {
+    "id": "id_10ahwxf",
+    "title": "IAEA Holds First SMR School in a Technology Provider Country - International Atomic Energy Agency",
+    "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOdmFzVHlXb2tVMjZ3T3VoLVZlQXlXRHJGSnl4NWJOZzV4am9tUm1zREdBRS1iRzNDbTJpeG9GN284VVhXZWFJUjcwZ3ZZWVBsTUhhT2FQTG5JbHVBS3F0d3F5NFlIUHBWWXNZcThqT3Y2WTM5S3ZoY3FUTGR4REpUQjBpaWNKeUp2RVJFbURpd0xkZkR3MmowaUFtcmg?oc=5",
+    "description": "IAEA Holds First SMR School in a Technology Provider Country  International Atomic Energy Agency",
+    "date": "2026-07-01T06:30:05.000Z",
+    "sourceId": "following-industry-nuclear",
+    "sourceName": "⚡ Nuclear & Energy News",
+    "lang": "en",
+    "category": "Nuclear & Energy",
+    "region": "US",
+    "followingIndustry": "nuclear",
+    "followingCompanyIds": [
+      9,
+      12,
+      64
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_v0wazh": {
+    "id": "id_v0wazh",
+    "title": "RKLB Stock Slips Overnight: Rocket Lab Stands Down From 92nd Satellite Launch For Japan’s QPS - Yahoo Finance",
+    "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPSENmZE1IOEFJaURHLW90LXlRelBTczN1emFnRTBibENENEVyaFBaUGNPSmpJdldYLWFjaFRNZ2Z6b3ZBN3hxQTV5bjNKZlo5QUxQdDVTVm8yZVB3UWVSTWpaUDEzbVBaVVlveFhCQVQ5Z01xM1hSV0RTN3FwMHl1QU50YlA0ZDBPU0VCODduRm5EWUkwVWlLN20wU2wxb3M?oc=5",
+    "description": "RKLB Stock Slips Overnight: Rocket Lab Stands Down From 92nd Satellite Launch For Japan’s QPS  Yahoo Finance",
+    "date": "2026-07-01T02:50:00.000Z",
+    "sourceId": "following-company-19",
+    "sourceName": "[RKLB] Rocket Lab USA",
+    "lang": "en",
+    "category": "space",
+    "region": "US",
+    "followingIndustry": "space",
+    "followingCompanyIds": [
+      19
+    ],
+    "companyTicker": "RKLB",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_yy7hee": {
+    "id": "id_yy7hee",
+    "title": "MARA, CLSK Stocks Face Earnings Test After Last Week’s AI-Fueled Rally: Retail Sentiment Diverges - Stocktwits",
+    "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQLWVEX1pmUjMwSXNSaFI4UlMzblhzMV9uNmVualZYS3BMTHluRVJBWWg0ajNvZVVJdG5ORTRxd3Rya3Y4SzlMdEhnUEpHTXNuNHo1SUtsaV83MlA4aUpkNzFNYlVVQkNCQURJWHh6RmxWSlhqdmNpTkdUa1ZHSXkxSXcwOHdYTzJRYnMxY3FZQlVkTlRBZmpFS2NEeDk4OVJOOVVkUDdKZzBzSDVYQ2lKc0puQ1FsbW5kWU5GekFhd2ZrTlF6cDkwWkJveDlBZVNSaWVUUDRWZXg?oc=5",
+    "description": "MARA, CLSK Stocks Face Earnings Test After Last Week’s AI-Fueled Rally: Retail Sentiment Diverges  Stocktwits",
+    "date": "2026-06-30T23:46:20.000Z",
+    "sourceId": "following-company-31",
+    "sourceName": "[MARA] Marathon Digital Holdings",
+    "lang": "en",
+    "category": "crypto",
+    "region": "US",
+    "followingIndustry": "crypto",
+    "followingCompanyIds": [
+      31
+    ],
+    "companyTicker": "MARA",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1q2otg2": {
+    "id": "id_1q2otg2",
+    "title": "NuScale Power (SMR): Is the Nuclear AI Power Trade Still Early? - MEXC",
+    "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQWlhUSnlnNk85MTJvdVc2czRYRFR3aWpwTTBZWUFfcE5BU3hjZzZtbzVfVjJfc3RCZnh6TGFVeXNYb3F0eU83eVZhdHZhRnBjLWdzamtfZVZkZ3YyQzNaNjFjTUlydVo5MHAyaTV5VHppZGRJX2VuOFpTNS1sYUJKVzNmU0JZZ2tVaGZsaWpkZFVnMXlaRmh5ZkpPaC04UW9UX2U2NQ?oc=5",
+    "description": "NuScale Power (SMR): Is the Nuclear AI Power Trade Still Early?  MEXC",
+    "date": "2026-06-30T15:38:10.000Z",
+    "sourceId": "following-company-64",
+    "sourceName": "[SMR] NuScale Power",
+    "lang": "en",
+    "category": "nuclear",
+    "region": "US",
+    "followingIndustry": "nuclear",
+    "followingCompanyIds": [
+      64
+    ],
+    "companyTicker": "SMR",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_bsmuu9": {
+    "id": "id_bsmuu9",
+    "title": "One Year After Executive Orders, U.S. Nuclear Energy Renaissance Is in Full Swing - Department of Energy (.gov)",
+    "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPRy1tYVk5SkpESWYySlFVbWpCMDd0djMxeHNLTUJDSGZDekxSNnpxdFJwWE5pQzcwdERZaER6cXRPeEpFZEhVWDhmZTQ5S29vOUxqOVZ0Vm1malRva3RkUjZKeXlITzF5bThDU2hKOTVnZUZpNU1NN2VWOW8wSVFPNTJjOVNkZF81MjBXckxuQXNHb2hiR1RjRmYzb01DVEhMU3ZKTDNQMC14Vlk?oc=5",
+    "description": "One Year After Executive Orders, U.S. Nuclear Energy Renaissance Is in Full Swing  Department of Energy (.gov)",
+    "date": "2026-06-30T13:00:29.000Z",
+    "sourceId": "following-industry-nuclear",
+    "sourceName": "⚡ Nuclear & Energy News",
+    "lang": "en",
+    "category": "Nuclear & Energy",
+    "region": "US",
+    "followingIndustry": "nuclear",
+    "followingCompanyIds": [
+      9,
+      12
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_rnx1m7": {
+    "id": "id_rnx1m7",
+    "title": "INFOGRAPHIC: Advanced Reactor Development - Department of Energy (.gov)",
+    "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOMThCZ2hyTi1USVdJUDZkeVZhSkpwUzZ0c2t6WVduMFVUcjR5a1FKV1hldDFib2dkNjNrVEx6bkdDX2UxYV9JenZmb1otNDF6UTJBQ3RGLVNLSHd5ZnlyNDV1ZE5QTHFqb29peHZ5QW8zelM0Y0ZZUXhwTU5hZUJZcw?oc=5",
+    "description": "INFOGRAPHIC: Advanced Reactor Development  Department of Energy (.gov)",
+    "date": "2026-06-30T13:00:29.000Z",
+    "sourceId": "following-industry-nuclear",
+    "sourceName": "⚡ Nuclear & Energy News",
+    "lang": "en",
+    "category": "Nuclear & Energy",
+    "region": "US",
+    "followingIndustry": "nuclear",
+    "followingCompanyIds": [],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_13d2iau": {
+    "id": "id_13d2iau",
+    "title": "BlackRock clients pull $300M from Bitcoin ETF amid wave of institutional outflows - Crypto Briefing",
+    "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPLWxSRjVlbWpRVnNzdU9YWmU2Q3NFMC1oYkxzRGQ3V1VzVVhFM2kxV3dGRjdBMlRtUFplcGpQaE9fRXB3Zm1HY1RhOEJ0TWtxYUJPZHM4TDZ0alJNTzYxV1Z6T1JycmxBQ0NOTjRKay1rMTY2azI0SkNYejZxU0xpZg?oc=5",
+    "description": "BlackRock clients pull $300M from Bitcoin ETF amid wave of institutional outflows  Crypto Briefing",
+    "date": "2026-06-30T06:14:01.000Z",
+    "sourceId": "following-company-29",
+    "sourceName": "[COIN] Coinbase Global",
+    "lang": "en",
+    "category": "crypto",
+    "region": "US",
+    "followingIndustry": "crypto",
+    "followingCompanyIds": [
+      29
+    ],
+    "companyTicker": "COIN",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_rj6ssn": {
+    "id": "id_rj6ssn",
+    "title": "Coinbase Reports Surprise Q1 Loss, Stock Tumbles In Extended Trading - Yellow.com",
+    "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5EZEgwQXBwbk9aTlhUeGN2amw4bkJDYUFoNEplZ0tNSkhYbmpSTlpUR09OMXRSU09mWWtodXYzRUZ5cFItbjZtSDd0VXhLS1VYQkR5ckJ6UkhZSV85UjZnRk9tOEE?oc=5",
+    "description": "Coinbase Reports Surprise Q1 Loss, Stock Tumbles In Extended Trading  Yellow.com",
+    "date": "2026-06-30T05:39:19.000Z",
+    "sourceId": "following-company-29",
+    "sourceName": "[COIN] Coinbase Global",
+    "lang": "en",
+    "category": "crypto",
+    "region": "US",
+    "followingIndustry": "crypto",
+    "followingCompanyIds": [
+      29
+    ],
+    "companyTicker": "COIN",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1w566dq": {
+    "id": "id_1w566dq",
+    "title": "Uber, Waymo end robotaxi partnership in Phoenix - Reuters",
+    "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOVFhWSHl4RkpSamZpOGZXRnNLNUVuQnZzTFRBSHpxX2hrQzBnRk9iOW5jbnMzZ3FleFlTb1BtM18temswYW5Hc2F1Zy1FQkhwVzlMQ0E4U0RpYmR3eENaX2JDajhzbFJsT281V1FRMGdobzVtS2JYT2ZXUE9aRnp5VFpnWFlDN2NWYVBwSHkwX3JSUQ?oc=5",
+    "description": "Uber, Waymo end robotaxi partnership in Phoenix  Reuters",
+    "date": "2026-06-29T22:43:43.000Z",
+    "sourceId": "following-company-3",
+    "sourceName": "[GOOGL] Alphabet (Waymo)",
+    "lang": "en",
+    "category": "autonomous",
+    "region": "US",
+    "followingIndustry": "autonomous",
+    "followingCompanyIds": [
+      3
+    ],
+    "companyTicker": "GOOGL",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1nrf3wn": {
+    "id": "id_1nrf3wn",
+    "title": "Sui (SUI) Price USD Today, News, Charts, Market Cap - Coinbase",
+    "link": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBJc1Y1RXppR00xeUZ4WVplcVNiVWstYjFYS2JqeTdMNTA0dC1LOGFwWDhCa2RPbTIzVW9FS1lUV2kweGVmVW5oczBn?oc=5",
+    "description": "Sui (SUI) Price USD Today, News, Charts, Market Cap  Coinbase",
+    "date": "2026-06-29T07:00:00.000Z",
+    "sourceId": "following-company-29",
+    "sourceName": "[COIN] Coinbase Global",
+    "lang": "en",
+    "category": "crypto",
+    "region": "US",
+    "followingIndustry": "crypto",
+    "followingCompanyIds": [
+      29
+    ],
+    "companyTicker": "COIN",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1jieclt": {
+    "id": "id_1jieclt",
+    "title": "Pi Price, PI Price, Live Charts, and Marketcap: pi coin value, pi value, pi coin - Coinbase Portugal - Coinbase",
+    "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9HdEVPMG9TUHUzOHJZemhXdnpDemE0Rks5eldpYzBkaVhtMmo3OGdBODlXeGNCcGNRRHUwNUFoTzVFemVQWlEtZEV5WkZ6RUdP?oc=5",
+    "description": "Pi Price, PI Price, Live Charts, and Marketcap: pi coin value, pi value, pi coin - Coinbase Portugal  Coinbase",
+    "date": "2026-06-29T07:00:00.000Z",
+    "sourceId": "following-company-29",
+    "sourceName": "[COIN] Coinbase Global",
+    "lang": "en",
+    "category": "crypto",
+    "region": "US",
+    "followingIndustry": "crypto",
+    "followingCompanyIds": [
+      29
+    ],
+    "companyTicker": "COIN",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_g87lho": {
+    "id": "id_g87lho",
+    "title": "Constellation Energy and Walmart Forge Long-Term Nuclear Power Deal for Clean Energy Supply - Analyst Consensus Shift - dars.gov.et",
+    "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNLVRQZ051bEk1WFJidlhWV1FxUjBPQjQ0N0tualBJYU5Yd1R5Ti05djRVRWFyX2dJUjVFV2s2VjByYVZSaUhWVHlGMjVkZGxlVWVIYzNrcUxsUGJBS3E5LWc1TzZzQ0VtS1NvQ2VfaFc1QUgtWDFVbFNsTEpLcnpwS0d2cUtWLVZMV3FyaXphOHNveU5wQmNzbHVyTC1oN01XNGhXT2JuSE1zcVhoN1NGSENPS3pxU1pBdl9LVHhXM3U3Y3JwaU94Ri13WXlfRU0?oc=5",
+    "description": "Constellation Energy and Walmart Forge Long-Term Nuclear Power Deal for Clean Energy Supply - Analyst Consensus Shift  dars.gov.et",
+    "date": "2026-06-28T18:09:48.000Z",
+    "sourceId": "following-company-66",
+    "sourceName": "[CEG] Constellation Energy",
+    "lang": "en",
+    "category": "nuclear",
+    "region": "US",
+    "followingIndustry": "nuclear",
+    "followingCompanyIds": [
+      66
+    ],
+    "companyTicker": "CEG",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_rxt2dh": {
+    "id": "id_rxt2dh",
+    "title": "Aurora Innovation (AUR) Stock Price, News & Analysis $AUR - MarketBeat",
+    "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5kVm9mcWZLSTBkZjVydVFjUk9TV2dlZGdQN2ZfZ2RMSk9tY3FIVTMzRFQtU0E1TnQzdGp6ejJPWE9HYldRdFl0aDJkcVB2TzByVVI5VjdadVk?oc=5",
+    "description": "Aurora Innovation (AUR) Stock Price, News & Analysis $AUR  MarketBeat",
+    "date": "2021-11-06T09:16:55.000Z",
+    "sourceId": "following-company-44",
+    "sourceName": "[AUR] Aurora Innovation",
+    "lang": "en",
+    "category": "autonomous",
+    "region": "US",
+    "followingIndustry": "autonomous",
+    "followingCompanyIds": [
+      44
+    ],
+    "companyTicker": "AUR",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_oi20yz": {
+    "id": "id_oi20yz",
+    "title": "ISRG News Today | Why did Intuitive Surgical stock go up today? $ISRG - MarketBeat",
+    "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9zRTUyV1hJUTdVcGlKNUlrMG9JOFNWZGt1cXp1bmRlMFFGdnBPRHU3elNyRHV3eExJdEpBaTVLZENBUFctSGpEeDJ4SVUwUVd1UVhHald3c3BGdU45cmdtWA?oc=5",
+    "description": "ISRG News Today | Why did Intuitive Surgical stock go up today? $ISRG  MarketBeat",
+    "date": "2018-06-22T01:34:15.000Z",
+    "sourceId": "following-company-10",
+    "sourceName": "[ISRG] Intuitive Surgical",
+    "lang": "en",
+    "category": "robotics",
+    "region": "US",
+    "followingIndustry": "robotics",
+    "followingCompanyIds": [
+      10
+    ],
+    "companyTicker": "ISRG",
     "aiAnalysis": null,
     "specialistScore": 0,
     "specialistAnalysis": null,
