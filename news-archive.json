@@ -35523,7 +35523,9 @@
     "region": "US",
     "followingIndustry": "autonomous",
     "followingCompanyIds": [
-      1
+      1,
+      9,
+      18
     ],
     "companyTicker": "NVDA",
     "aiAnalysis": null,
@@ -37083,7 +37085,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": false
+    "isCurated": true
   },
   "id_du4ffn": {
     "id": "id_du4ffn",
@@ -37115,7 +37117,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": false
+    "isCurated": true
   },
   "id_ghf6vf": {
     "id": "id_ghf6vf",
@@ -37147,7 +37149,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": false
+    "isCurated": true
   },
   "id_s2ufsp": {
     "id": "id_s2ufsp",
@@ -37180,7 +37182,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": false
+    "isCurated": true
   },
   "id_1fd5uj9": {
     "id": "id_1fd5uj9",
@@ -37212,7 +37214,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": false
+    "isCurated": true
   },
   "id_1bkmopy": {
     "id": "id_1bkmopy",
@@ -37244,7 +37246,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": false
+    "isCurated": true
   },
   "id_1620ro0": {
     "id": "id_1620ro0",
@@ -37277,7 +37279,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": false
+    "isCurated": true
   },
   "id_1y8sbri": {
     "id": "id_1y8sbri",
@@ -37310,7 +37312,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": false
+    "isCurated": true
   },
   "id_13j5ion": {
     "id": "id_13j5ion",
@@ -37343,7 +37345,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": false
+    "isCurated": true
   },
   "id_eefz7d": {
     "id": "id_eefz7d",
@@ -37375,7 +37377,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": false
+    "isCurated": true
   },
   "id_1putycx": {
     "id": "id_1putycx",
@@ -37407,7 +37409,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": false
+    "isCurated": true
   },
   "id_10rey0v": {
     "id": "id_10rey0v",
@@ -37439,7 +37441,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": false
+    "isCurated": true
   },
   "id_kohizo": {
     "id": "id_kohizo",
@@ -37471,7 +37473,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": false
+    "isCurated": true
   },
   "id_x8s046": {
     "id": "id_x8s046",
@@ -37504,7 +37506,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": false
+    "isCurated": true
   },
   "id_1wnkrc": {
     "id": "id_1wnkrc",
@@ -37538,7 +37540,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": false
+    "isCurated": true
   },
   "id_4xnwtw": {
     "id": "id_4xnwtw",
@@ -37571,7 +37573,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": false
+    "isCurated": true
   },
   "id_i6ed5h": {
     "id": "id_i6ed5h",
@@ -37624,7 +37626,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": false
+    "isCurated": true
   },
   "id_yfmq5l": {
     "id": "id_yfmq5l",
@@ -37657,7 +37659,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": false
+    "isCurated": true
   },
   "id_xuz88j": {
     "id": "id_xuz88j",
@@ -37731,7 +37733,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": false
+    "isCurated": true
   },
   "id_5f9zqz": {
     "id": "id_5f9zqz",
@@ -37765,7 +37767,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": false
+    "isCurated": true
   },
   "id_1kf413g": {
     "id": "id_1kf413g",
@@ -37797,7 +37799,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": false
+    "isCurated": true
   },
   "id_o8i3q1": {
     "id": "id_o8i3q1",
@@ -37829,7 +37831,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": false
+    "isCurated": true
   },
   "id_s81lxf": {
     "id": "id_s81lxf",
@@ -37861,7 +37863,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": false
+    "isCurated": true
   },
   "id_107qa2h": {
     "id": "id_107qa2h",
@@ -37956,7 +37958,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": false
+    "isCurated": true
   },
   "id_1arflnm": {
     "id": "id_1arflnm",
@@ -37988,7 +37990,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": false
+    "isCurated": true
   },
   "id_8r7321": {
     "id": "id_8r7321",
@@ -38018,7 +38020,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": false
+    "isCurated": true
   },
   "id_1iyp1u0": {
     "id": "id_1iyp1u0",
@@ -38088,7 +38090,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": false
+    "isCurated": true
   },
   "id_13ggge5": {
     "id": "id_13ggge5",
@@ -38122,7 +38124,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": false
+    "isCurated": true
   },
   "id_1ous0x8": {
     "id": "id_1ous0x8",
@@ -38155,7 +38157,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": false
+    "isCurated": true
   },
   "id_yqjiln": {
     "id": "id_yqjiln",
@@ -38209,7 +38211,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": false
+    "isCurated": true
   },
   "id_1a1yxh9": {
     "id": "id_1a1yxh9",
@@ -38241,7 +38243,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": false
+    "isCurated": true
   },
   "id_10ewxvo": {
     "id": "id_10ewxvo",
@@ -38315,7 +38317,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": false
+    "isCurated": true
   },
   "id_xphpkp": {
     "id": "id_xphpkp",
@@ -38368,7 +38370,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": false
+    "isCurated": true
   },
   "id_1cktopb": {
     "id": "id_1cktopb",
@@ -38401,7 +38403,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": false
+    "isCurated": true
   },
   "id_132q19q": {
     "id": "id_132q19q",
@@ -38496,7 +38498,7 @@
     },
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": false
+    "isCurated": true
   },
   "id_ia4zak": {
     "id": "id_ia4zak",
@@ -38879,7 +38881,8 @@
     "followingIndustry": "space",
     "followingCompanyIds": [
       9,
-      47
+      47,
+      106
     ],
     "aiAnalysis": {
       "translatedTitle": "스페이스X 위성 폰, 모바일 통신 시장의 파괴적 혁신 예고",
@@ -39172,7 +39175,8 @@
     "followingCompanyIds": [
       9,
       29,
-      30
+      30,
+      97
     ],
     "aiAnalysis": {
       "translatedTitle": "JP모건, 마이크로스트래티지의 새로운 비트코인 매각 정책에 경고음 울리다",
@@ -40464,7 +40468,8 @@
     "aiAnalysis": null,
     "specialistScore": 0,
     "specialistAnalysis": null,
-    "isCurated": false
+    "isCurated": false,
+    "companyTicker": "SYM"
   },
   "id_sz9rbt": {
     "id": "id_sz9rbt",
@@ -42104,6 +42109,1766 @@
       10
     ],
     "companyTicker": "ISRG",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_735t68": {
+    "id": "id_735t68",
+    "title": "South Korea Picks Sites for New Nuclear Power Projects - Industrial Info Resources",
+    "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOQmJnQUtBM1lZVmJTVlVCNUlESkMtbTBJbFJ6TzNiWHpMTzl4VFk1c0JRZ3lMU3BSY2NZUm10dmI0eW5qVzBPcDJleWhpdlUwUDJvbjNTcVAyanNWUnNEbEJORFVKd1dyc21fMnhoMHdLRlhDNFlBYTNRV1FnSTZGaDBIUzRDZ3BiS2lnX2tBZkRCYy05bXBPUmJuT2RrY2ltRHBTcEVxenh1QQ?oc=5",
+    "description": "South Korea Picks Sites for New Nuclear Power Projects  Industrial Info Resources",
+    "date": "2026-07-03T06:12:43.000Z",
+    "sourceId": "following-industry-nuclear",
+    "sourceName": "⚡ Nuclear & Energy News",
+    "lang": "en",
+    "category": "Nuclear & Energy",
+    "region": "US",
+    "followingIndustry": "nuclear",
+    "followingCompanyIds": [],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1jzkj0m": {
+    "id": "id_1jzkj0m",
+    "title": "Finally. $221 million flow into Bitcoin ETFs, ending a painful 10-day outflow streak - CoinDesk",
+    "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQQWV1WFJwRWhTWk83OTFOX1RRRXhWQk5MY2pjb2V0aVJCOGtDNlVtZkZIelZ4ek9Mb3NOWWFlYVU1LVF2QURPQWR3LUZ1ZnVQNzM4MkRud2w4OFFNcElrNVVSZEI0NXNMbnlLMWtZV09IcWRhbDVKNnVvcW0tcTBGV2ZPamh3bGJjTjRXSXFrZFU4SVBmSFVxYmw0WjEtSi1NMHZiMzh5Z3AxR3hFMVlieE4xOThVaXVGR0txWnVRYTBoWTViTDdF?oc=5",
+    "description": "Finally. $221 million flow into Bitcoin ETFs, ending a painful 10-day outflow streak  CoinDesk",
+    "date": "2026-07-03T05:55:34.000Z",
+    "sourceId": "following-industry-crypto",
+    "sourceName": "₿ Crypto & Blockchain News",
+    "lang": "en",
+    "category": "Crypto & Blockchain",
+    "region": "US",
+    "followingIndustry": "crypto",
+    "followingCompanyIds": [
+      9,
+      29
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_ls9aqo": {
+    "id": "id_ls9aqo",
+    "title": "Will the next Messi be a robot? - The Korea Herald",
+    "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5Sc2dXWFhxRndIT3pZZ1lFRTdQcHpVZ2RrODRWVDNCVXE2ZXduWlhGYVBJMWJzdG5FekJCWW9heDVuQWhvR19yM2ZTMmo4TWRVZng3WEl6WQ?oc=5",
+    "description": "Will the next Messi be a robot?  The Korea Herald",
+    "date": "2026-07-03T05:40:24.000Z",
+    "sourceId": "following-industry-robotics",
+    "sourceName": "🤖 Robotics & Automation News",
+    "lang": "en",
+    "category": "Robotics & Automation",
+    "region": "US",
+    "followingIndustry": "robotics",
+    "followingCompanyIds": [],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_6y3vuv": {
+    "id": "id_6y3vuv",
+    "title": "Chinese robot maker Unitree wins approval for $619 million Shanghai IPO - Yahoo Finance",
+    "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOWjlEaUJWMzFxcnV4bDdQQ3ZILV9pTDEzem0xWC13dFpkZ1JvZ1V3TEdVM3UzWFBxWENGM0ZfTTVpeWFVVjZMNXAzenpFSDEzLXRDRzVpR0dMQ3JkU3hpbFNDSGxaXzVaLURXNF9qT0NobVdfNVg0TUtXV1VkMFM4eUZsaC1wR1l0VVdXMnpFc21vdmxFWndwSw?oc=5",
+    "description": "Chinese robot maker Unitree wins approval for $619 million Shanghai IPO  Yahoo Finance",
+    "date": "2026-07-03T05:27:00.000Z",
+    "sourceId": "following-industry-robotics",
+    "sourceName": "🤖 Robotics & Automation News",
+    "lang": "en",
+    "category": "Robotics & Automation",
+    "region": "US",
+    "followingIndustry": "robotics",
+    "followingCompanyIds": [
+      9
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_nmdihr": {
+    "id": "id_nmdihr",
+    "title": "Ether and solana extend gains as a short squeeze lifts bitcoin toward $62,000 - CoinDesk",
+    "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxObF9uM3d5d213WENiMm1rc0s2bVRiWEo0RmphY2pENjJfa1JOR3VoUDFldHF5OG1TSHhtQkpxRTNMVzZGaExCUGNxOG1EWDhWZjY0UnVqbkl2ZW1oLWI4SkxISGpZUXB1Mk1jS05sUU5scDhQcE1XVm03cVBVOFB2RkxjNUhlZ1JRbktvMlo5T2lLSE5sWkxqOTF5cWJoWnAzMHZWS09pUm51VUFOTVVsVWNQdGZFYnRBRHhqNVVHNm0?oc=5",
+    "description": "Ether and solana extend gains as a short squeeze lifts bitcoin toward $62,000  CoinDesk",
+    "date": "2026-07-03T05:20:53.000Z",
+    "sourceId": "following-industry-crypto",
+    "sourceName": "₿ Crypto & Blockchain News",
+    "lang": "en",
+    "category": "Crypto & Blockchain",
+    "region": "US",
+    "followingIndustry": "crypto",
+    "followingCompanyIds": [
+      29
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1ufn1vv": {
+    "id": "id_1ufn1vv",
+    "title": "After Amazon launch, all of ULA’s Atlas V rockets reserved for Starliner - Decatur Daily",
+    "link": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxOc0RPRUJvVHUteGFXelF4MGtlald2STZ3VkVDcWVDUllYWUFLNGZfM3ZDR1pQQTB6LXlfbjREV25sRXUzX3lQaEZXaWwtemRXbDlydW9xTTRvZkU4T25YRkp1YWdlX3VZekhHQTF4ZTJDazQyeHptV1dUUGNybHlPOE51WkxGYXBjRlM5Z0ZOeGstTE9OZTQ0cG14OFg2U3M3V1htZnF1MmxIOEl1TTZaeUtiQk1UWTRlMWc5bE9vT0JMbDFXcTBLcFZKbGJmcFpBYnAyYS1ObGppbW4yaVdjZHpRR1ZQYmhHcjIyNjJYM21Mc3VlbkVvcmNPQUE0UUxrV0E0UUFWZHA?oc=5",
+    "description": "After Amazon launch, all of ULA’s Atlas V rockets reserved for Starliner  Decatur Daily",
+    "date": "2026-07-03T05:15:00.000Z",
+    "sourceId": "following-industry-space",
+    "sourceName": "🚀 Space & Defense News",
+    "lang": "en",
+    "category": "Space & Defense",
+    "region": "US",
+    "followingIndustry": "space",
+    "followingCompanyIds": [
+      9,
+      12
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_kb5tsd": {
+    "id": "id_kb5tsd",
+    "title": "World 800V High Voltage Fast Charging Battery - Market Analysis, Forecast, Size, Trends and Insights - IndexBox",
+    "link": "https://news.google.com/rss/articles/CBMijAJBVV95cUxPdDNpQmRtMW8yd0pGLTI2UVd6UHQ2Y2NoOC1tNnBBQW1DbHVCTWVVOHVHci03cnBtQ0o1aEhUS0pkaEJfWDZjZHhOU3c1M3RYQ2g1X1VyTUp4Q25hTlkwVU5OT0ZiMXlqRkVyd2tMQlk4RHJiR2JIdEpKLTJkRmRYXzVaelZuNHFsa2tSSmZPUHpsckNsZ21YdDBoejd5bnFTLTZqS290OHVyeTFtSnd2dzNCSlg4dXllYzF2ZTJ1ZzJ2U09ueTl3WlRPZ0ljM2YwZldsWWtjbXAyM21MV0ZXaVNJdDU4MXp0czJHT0w2TjV3NUU2YVVtQVVGbWRhSkNualk3UW5KLWV6bkk1?oc=5",
+    "description": "World 800V High Voltage Fast Charging Battery - Market Analysis, Forecast, Size, Trends and Insights  IndexBox",
+    "date": "2026-07-03T05:11:08.000Z",
+    "sourceId": "following-industry-battery",
+    "sourceName": "🔋 Secondary Battery News",
+    "lang": "en",
+    "category": "Secondary Battery",
+    "region": "US",
+    "followingIndustry": "battery",
+    "followingCompanyIds": [
+      12
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1gaxssr": {
+    "id": "id_1gaxssr",
+    "title": "Turkish-US venture to build 20 small modular nuclear reactors - Arabian Gulf Business Insight | AGBI",
+    "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOLW9lRFJ6R29XRXVESEVyMUtlbnd0ZmlNbk1iTi0zcUR4c19GSGhRa1VDaVU1VUFzQ21nbVFEcXBfcUxtT1M2b0VFcDg2eUw5Q2podXVpVFNBVkxmX2tWV3NmM1pkY3RDSGxvRkpZSmtzMmdBbUJ4UGJVZ0JYeW9wcEViZC1jNHJkVnhtNnE2bjJLV0dGQ2RKLWkzbEZvUHc?oc=5",
+    "description": "Turkish-US venture to build 20 small modular nuclear reactors  Arabian Gulf Business Insight | AGBI",
+    "date": "2026-07-03T05:09:24.000Z",
+    "sourceId": "following-industry-nuclear",
+    "sourceName": "⚡ Nuclear & Energy News",
+    "lang": "en",
+    "category": "Nuclear & Energy",
+    "region": "US",
+    "followingIndustry": "nuclear",
+    "followingCompanyIds": [],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_iskbf7": {
+    "id": "id_iskbf7",
+    "title": "Central Asia’s power expansion becomes a major investment test - Euronews",
+    "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdUVaMFNueXMzYkdkVFY1MWpfZ0s5RlR5c3VLdHlINk1ubzhPSTRkeFZMQUdTQ1ZYQTAtZUdJYXBWaVptSU9yd3o2SXp0SVZ2WEg3S01FMnFubVBaUlVtT085LW1TbndNekJzYk1QZFlmeUhqNDI0aXUzQmNZMmg1QVp0MW85S1JBRXE3dHpFS3JxNVBMYjBmanpjdzdDbklxcDhRXzNHcXNNUQ?oc=5",
+    "description": "Central Asia’s power expansion becomes a major investment test  Euronews",
+    "date": "2026-07-03T05:00:51.000Z",
+    "sourceId": "following-industry-power-infra",
+    "sourceName": "🔌 Power Infrastructure News",
+    "lang": "en",
+    "category": "Power Infrastructure",
+    "region": "US",
+    "followingIndustry": "power-infra",
+    "followingCompanyIds": [
+      9
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_wb6ak0": {
+    "id": "id_wb6ak0",
+    "title": "Russia Automotive Sodium Ion Battery - Market Analysis, Forecast, Size, Trends and Insights - IndexBox",
+    "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNdkdWeVoxY1ZWZFhyeU1Ra3lfSGxaSHYyOUlmNVpobS1FSEdGdkl2RGFzYXVvTm1OVXhqNVl5VHNlMmVXY0FQQ3MxOGRuM0pmVml0T3ljWTZpM2RETkIzVEdOa1padW1nX3h6THRucG9RclIzVFZrUl9VcjFpS1FkcHZtMzY0QkdRbVZwSEtRYXFTUlZCTUJYRFNEOTQ4ajBzdEhIQ01veUJBR01aeDY5dmhidGhueTdG?oc=5",
+    "description": "Russia Automotive Sodium Ion Battery - Market Analysis, Forecast, Size, Trends and Insights  IndexBox",
+    "date": "2026-07-03T04:56:45.000Z",
+    "sourceId": "following-industry-battery",
+    "sourceName": "🔋 Secondary Battery News",
+    "lang": "en",
+    "category": "Secondary Battery",
+    "region": "US",
+    "followingIndustry": "battery",
+    "followingCompanyIds": [
+      9,
+      12
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_47u63d": {
+    "id": "id_47u63d",
+    "title": "Behind Every Robot: The Hidden Supply Chain Driving Industrial Innovation - ARC Advisory Group",
+    "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPYmdvZnBqV0hDbUhYSktOVUhOOTZxYVdjcVVuOG5ULWFMWGtqOXRBU0ViSTh4VjdrSEdnN05wOWRnVk4yVnc3MjV0M0NlMFdLb3JSNDA3OHhPRzJabnVQT0k3N1RsUHVjSUJxNmRQZjQ0M2lfZE03aGJKRHo4cHVJbUx0bHRseXNBcjV5NXJRWHBNUmFPTXFzR1c3ZzE?oc=5",
+    "description": "Behind Every Robot: The Hidden Supply Chain Driving Industrial Innovation  ARC Advisory Group",
+    "date": "2026-07-03T04:51:45.000Z",
+    "sourceId": "following-industry-robotics",
+    "sourceName": "🤖 Robotics & Automation News",
+    "lang": "en",
+    "category": "Robotics & Automation",
+    "region": "US",
+    "followingIndustry": "robotics",
+    "followingCompanyIds": [
+      9,
+      20
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_xv7kcj": {
+    "id": "id_xv7kcj",
+    "title": "Nvidia's AI chip sales in China stall, as local chipmakers like Huawei take the lead - AOL.com",
+    "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBlN3Z0ZlNFYWxTcUpCUXVIQmNMbHlwTFk5YXRMaTF5QmRDd1VsV2FhSFRBSEdsdHl6RFJJQjFGUFNDRmlDN3NoQ0xPWFJKVlUtY29rdC1rWUNDRk5DcEkxZkpfdkNUVUdBRllOVmtiLW1YenVEeFNnallJVQ?oc=5",
+    "description": "Nvidia's AI chip sales in China stall, as local chipmakers like Huawei take the lead  AOL.com",
+    "date": "2026-07-03T04:47:29.000Z",
+    "sourceId": "following-industry-on-device-ai",
+    "sourceName": "📱 On-Device AI News",
+    "lang": "en",
+    "category": "On-Device AI",
+    "region": "US",
+    "followingIndustry": "on-device-ai",
+    "followingCompanyIds": [
+      1,
+      18
+    ],
+    "aiAnalysis": {
+      "translatedTitle": "엔비디아의 중국 내 AI 칩 판매 부진과 화웨이 등 현지 업체의 약진",
+      "summary": [
+        "엔비디아가 미국의 강력한 대중 반도체 수출 통제로 인해 중국 시장에 맞춤형 다운그레이드 칩을 공급하고 있으나, 현지 기업들의 외면 속에 판매가 부진한 것으로 나타났습니다.",
+        "반면 화웨이 등 중국 토종 반도체 기업들은 정부의 천문학적 보조금과 애국 소비 지렛대를 활용하여 빠르게 기술 격차를 좁히고 현지 AI 가속기 시장 점유율을 탈환하고 있습니다.",
+        "이는 단순한 지정학적 갈등을 넘어, 온디바이스 AI 시장의 핵심 무대인 중국에서 글로벌 칩 메이커들의 헤게모니가 구조적으로 위협받고 있음을 보여주는 중요한 시그널입니다."
+      ],
+      "implications": [
+        "미중 디커플링 심화로 인해 중국 본토의 AI 디바이스 및 스마트폰 제조사들은 화웨이 하이실리콘 등 자국산 NPU(신경망처리장치) 탑재 비중을 폭발적으로 늘릴 전망입니다.",
+        "엔비디아의 중국 매출 비중이 영구적으로 축소될 수 있는 리스크가 대두되며, 반대로 탈중국 공급망 재편의 반사이익을 얻는 한국 및 대만 파운드리(위탁생산) 밸류체인의 재평가가 기대됩니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": true
+  },
+  "id_ad2wg6": {
+    "id": "id_ad2wg6",
+    "title": "Gary Black Targets Elon Musk's Self-Driving Efforts as Rivian Stock Rally Shows no 'Newfound Infatuation' - Benzinga",
+    "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPdHpibUhCNTBUMjF6NnFwQmxZVFJfZXExLTJFYmQtTTZyYlRlUkRaQVd3SEduMU01Sm43T29zSVZIQUZ3UmV0SG9KLUJHWWdQNmp0ZWxoTEVKWERQblp1VkhHWFR5elk1THpMVVQyQnF0OXRIQTBFdEg2N1QzUmlhdjhOWnRrei1YYUp6TzFOR2RDbGdEWnR5ZGwwb0R0MXJSc3pJSmxBNjZYMmdIbGxxN0JrVDVMTVA1emw4Wk9MSGxDWW1NNTBlV0ZpMXRnTlJsRDZQM2p0ODZmY1lq?oc=5",
+    "description": "Gary Black Targets Elon Musk's Self-Driving Efforts as Rivian Stock Rally Shows no 'Newfound Infatuation'  Benzinga",
+    "date": "2026-07-03T04:45:13.000Z",
+    "sourceId": "following-industry-autonomous",
+    "sourceName": "🚗 Autonomous Driving News",
+    "lang": "en",
+    "category": "Autonomous Driving",
+    "region": "US",
+    "followingIndustry": "autonomous",
+    "followingCompanyIds": [
+      2
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_gssknq": {
+    "id": "id_gssknq",
+    "title": "We took a self-driving car on the road for 100 days to see how it handled itself – these are the mistakes it kept making - The Conversation",
+    "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQd1NETG9YMUxKQ3o4TjJLOGkyeVJiRXlmeFhKWUVUdE14dDYwbm5RcmRoQlN3ZWkzb1BjQ2c2N0pLdlNIX2lLc3J3VTZYUUx3cDU1NHUxQXdjRGRHLXRnSWE4eFRvUjRNOUY1eXVheFZiNUxQUmRzaDhuT3ZvWk5nQ3JRNDQwenlZX0o2b3JfM1djakVQbklSY3NUTURBdF8wMXcwekhqR0xWOTNFbWpFcUtjYS1OWEdQRU80eXA4MlRZT0NQcnROOHpMY2gzV1Z5WjdZSE1GVzhkdUVYVnBPZzY0bVprSU5Z?oc=5",
+    "description": "We took a self-driving car on the road for 100 days to see how it handled itself – these are the mistakes it kept making  The Conversation",
+    "date": "2026-07-03T04:35:50.000Z",
+    "sourceId": "following-industry-autonomous",
+    "sourceName": "🚗 Autonomous Driving News",
+    "lang": "en",
+    "category": "Autonomous Driving",
+    "region": "US",
+    "followingIndustry": "autonomous",
+    "followingCompanyIds": [
+      9
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1q4wlsy": {
+    "id": "id_1q4wlsy",
+    "title": "Connected and autonomous vehicles - Partnership to pioneer robotaxi expansion in Europe - Smart Cities World",
+    "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNWjBLcUJBTDA1UHNqUTYyY21aZDRDX0VCYTYtd21zNmhMTW9CX3doNGxEVGVWY3BzNlJEWUdCdVNsRUp6S0tLT2NXclBvaXIzUzdRZGJGN2hOM2w2UllMUXI3N2lqckhWNmhEMFRDamluOGgybmJQRnFXaExUR2NwQnhBMnBQdVg2Zm84S25leFZFVFVvNmNhWUloVFBDQ3VZM2JwbHo3QUVzbTQwUmRNQ2NjSG9UQmZaSENBdlp3dVVhZw?oc=5",
+    "description": "Connected and autonomous vehicles - Partnership to pioneer robotaxi expansion in Europe  Smart Cities World",
+    "date": "2026-07-03T04:35:19.000Z",
+    "sourceId": "following-industry-autonomous",
+    "sourceName": "🚗 Autonomous Driving News",
+    "lang": "en",
+    "category": "Autonomous Driving",
+    "region": "US",
+    "followingIndustry": "autonomous",
+    "followingCompanyIds": [
+      9
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1t096tx": {
+    "id": "id_1t096tx",
+    "title": "Chinese tech cuts desalination cost; light plane crash dilemma: 7 highlights - South China Morning Post",
+    "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQVXQwdmZXd0xmWUJDb3hBdFZUWTJpTldLUml3QWpfa0RidWppTWRTMEllQXhQSEl0Slpid0x2dG5saGdFRnN5T3JhanBlQ0puZEdMR19XSHBTYm9WR29BRFNsVkQtWG1RZGRMRGxibG1UTDJnSUQ3NFM0LWVLaDdYNnNqSVFuWEYxemlZSThPMGNYcVdXaTU0OWc5ZWZrRkZaZmFETjkwaktUa1lTdUk0Wklyb2w2ZUszM09XT0I1UjZDaGZ3N2Y40gHHAUFVX3lxTFBVdDB2Zld3TGZZQkNveEF0VlRZMmlOV0tSaXdBal9rRGJ1amlNZFMwSWVBeFBISXRKWmJ3THZ0bmxoZ0VGc3lPcmFqcGVDSm5kR0xHX1dIcFNib1ZHb0FEU2xWRC1YbVFkZExEbGJsbVRMMmdJRDc0UzQtZUtoN1g2c2pJUW5YRjF6aVlJOE8wY1hxV1dpNTQ5ZzllZmtGRlpmYUROOTBqS1RrWVN1STRaSXJvbDZlSzMzT1dPQjVSNkNoZnc3Zjg?oc=5",
+    "description": "Chinese tech cuts desalination cost; light plane crash dilemma: 7 highlights  South China Morning Post",
+    "date": "2026-07-03T04:34:04.000Z",
+    "sourceId": "following-industry-robotics",
+    "sourceName": "🤖 Robotics & Automation News",
+    "lang": "en",
+    "category": "Robotics & Automation",
+    "region": "US",
+    "followingIndustry": "robotics",
+    "followingCompanyIds": [
+      9,
+      20
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_10ljqfw": {
+    "id": "id_10ljqfw",
+    "title": "UBTech's Hyper-Realistic U1 Robot Series Priced Up to 990,000 Yuan, Orders Top 10,000 Sparking 'Cyber Companion' Debate - finance.biggo.com",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBqcmZRc3B6ckstZG5jaVpCb2w3WUQ2eHBpTHY1UXF4T0hRaW9hakFWVXU5LWZqT2lqMUtCM0wtZkV2dG80NFBUQTV1UzdwVkR0RkdxSE1sUnBQU3E0WjlOZGJEcF9tRUcxRXFWekpwczFhVHlrZHc?oc=5",
+    "description": "UBTech's Hyper-Realistic U1 Robot Series Priced Up to 990,000 Yuan, Orders Top 10,000 Sparking 'Cyber Companion' Debate  finance.biggo.com",
+    "date": "2026-07-03T02:55:00.000Z",
+    "sourceId": "following-industry-robotics",
+    "sourceName": "🤖 Robotics & Automation News",
+    "lang": "en",
+    "category": "Robotics & Automation",
+    "region": "US",
+    "followingIndustry": "robotics",
+    "followingCompanyIds": [
+      9
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_18han8i": {
+    "id": "id_18han8i",
+    "title": "Bitcoin ETFs Bleed $8.95 Billion in Two Months, and the Selling Isn’t Over - Yahoo Finance",
+    "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOb2VlcG9ZUW01eXJ1QkpVS1BMYjhzV21yZjR0RmdPay13YTZ0UWRQcWZoSDlqVVVkWDVOV0lVYUQ0NHY3U1dvZEdwX3FGQmZQLXh6MzR3WlFBVGZXY1RRTHNzMEVfTUh3ZHBwS0Zxc1F6TUk1b1VSb2RLWjRhYlNMMlNJczlkWXhRU2Q1R0ZfVVBUdw?oc=5",
+    "description": "Bitcoin ETFs Bleed $8.95 Billion in Two Months, and the Selling Isn’t Over  Yahoo Finance",
+    "date": "2026-07-03T02:45:00.000Z",
+    "sourceId": "following-industry-crypto",
+    "sourceName": "₿ Crypto & Blockchain News",
+    "lang": "en",
+    "category": "Crypto & Blockchain",
+    "region": "US",
+    "followingIndustry": "crypto",
+    "followingCompanyIds": [
+      9,
+      29
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_cirfnd": {
+    "id": "id_cirfnd",
+    "title": "ON Semiconductor (ON) Stock Faces Investor Investigation After Synaptics Deal - Yahoo Finance",
+    "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQUHMwTllyTnF3ZkMtejJCZG5PMEZsQ1Y1Nk9aYVMyZm4zY1FmNFV0TGhQN01hbnRIaXJROUI4RjJyZmNvRHQ0LWZFekdYZlVtLUpLQVAzLWdhWVpjRFpIdmVyYzJ3QnlOUVZjeWVLRXZiRXRfcG1QZHNQSjdZRzhUN01pMXhkcXBMVWs0M3pna1dqTmxlTHY1NnhodThhRXV5cXhjd2FzYXBzczB0cEhMLWJqWQ?oc=5",
+    "description": "ON Semiconductor (ON) Stock Faces Investor Investigation After Synaptics Deal  Yahoo Finance",
+    "date": "2026-07-03T02:10:00.000Z",
+    "sourceId": "following-industry-semiconductor",
+    "sourceName": "🔬 Semiconductor News",
+    "lang": "en",
+    "category": "Semiconductor",
+    "region": "US",
+    "followingIndustry": "semiconductor",
+    "followingCompanyIds": [
+      9,
+      12
+    ],
+    "aiAnalysis": {
+      "translatedTitle": "온세미컨덕터(ON), 시냅틱스(Synaptics) 계약 이후 투자자 집단 소송 및 조사 직면",
+      "summary": [
+        "야후 파이낸스에 따르면, 글로벌 전력 반도체 및 센서 솔루션 선도 기업인 온세미컨덕터(ON Semiconductor)가 최근 시냅틱스와 맺은 대규모 M&A 혹은 라이선스 계약과 관련하여 주주 가치 훼손 논란에 휩싸이며 투자자들의 법적 조사에 직면했습니다.",
+        "경영진이 계약의 핵심 리스크를 고의로 축소했거나 실적 가이던스를 부풀려 투자자들을 기만했다는 의혹이 불거지면서, 탄탄했던 전기차(EV) 및 자율주행 칩 수요 모멘텀에도 불구하고 주가가 큰 폭의 변동성을 보이고 있습니다.",
+        "이는 반도체 산업 내 합종연횡(빅딜)이 가속화되는 가운데, 무리한 외형 확장 전략이 철저한 규제 당국(SEC)과 주주들의 현미경 검증을 통과하지 못할 경우 치명적인 거버넌스 리스크로 전락할 수 있음을 보여줍니다."
+      ],
+      "implications": [
+        "차량용 실리콘카바이드(SiC) 전력 반도체 시장의 1티어 벤더인 온세미컨덕터의 소송 리스크가 장기화될 경우, 인피니언이나 ST마이크로 등 경쟁사들로 고객사 물량이 대거 이탈하는 반사이익 사이클이 형성될 수 있습니다.",
+        "반도체 팹리스 및 파운드리 기업 투자에 있어 단순 기술력(해자)뿐만 아니라 M&A 자본 배분(Capital Allocation) 투명성이 프리미엄 밸류에이션(PER)을 유지하는 가장 중요한 핵심 지표로 부상하고 있습니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": true
+  },
+  "id_qj8dyv": {
+    "id": "id_qj8dyv",
+    "title": "SKF and Leaderdrive Form a Venture for Humanoid Robot Components - AI Insider",
+    "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNNnlXY2h0bXgtWlV3T1hlcU1JTTd1c0pCS2V1YUtqZ0ZMdmFDTVl2RGFBV25sQjZ5NFpRZFJUcDVVR0I1VXNkSXBYbFA0SllKVnpnbl9XdjhrODZBeEw5T1VIQjUzMlhKWDlDVWhVY3RLTUV5d2NVRG1KaVZWZlFjZDVkVmRSYUdISlFnMGpoTEROdXhSSmd3aHpLRWpHZl85Y0ItMA?oc=5",
+    "description": "SKF and Leaderdrive Form a Venture for Humanoid Robot Components  AI Insider",
+    "date": "2026-07-03T01:53:01.000Z",
+    "sourceId": "following-industry-robotics",
+    "sourceName": "🤖 Robotics & Automation News",
+    "lang": "en",
+    "category": "Robotics & Automation",
+    "region": "US",
+    "followingIndustry": "robotics",
+    "followingCompanyIds": [
+      9
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1wi7bln": {
+    "id": "id_1wi7bln",
+    "title": "Scenario-Based Autonomous Vehicle (AV) Testing Platforms Global Market Report 2026 - Supply Chain Digital",
+    "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1fc25qSk5XNDIxU25mRVF5YkR5ZC1kRU8zV01QZXJWQjZkenR3dmF5WEw2TkxvMnBla0d1VWRsN1VGZzY0ZU9LZjF0MXhDZUI0WGNxUlI2WDlFX1Q3NVo3X2t3?oc=5",
+    "description": "Scenario-Based Autonomous Vehicle (AV) Testing Platforms Global Market Report 2026  Supply Chain Digital",
+    "date": "2026-07-03T00:17:38.000Z",
+    "sourceId": "following-industry-autonomous",
+    "sourceName": "🚗 Autonomous Driving News",
+    "lang": "en",
+    "category": "Autonomous Driving",
+    "region": "US",
+    "followingIndustry": "autonomous",
+    "followingCompanyIds": [
+      9,
+      20
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1m05gjw": {
+    "id": "id_1m05gjw",
+    "title": "Stock prices were sharply mixed as U.S. electric vehicle makers reported second-quarter vehicle deli.. - 매일경제",
+    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5wczBNeHJBMkliVTRaQVYtbDlGaTNZTllDU3YwTGlPcVhkcUZ2eGJNOXRXWkJFRGFDNi1aSWVfemF0NXJhT3lMR2pUZ0tjOHM?oc=5",
+    "description": "Stock prices were sharply mixed as U.S. electric vehicle makers reported second-quarter vehicle deli..  매일경제",
+    "date": "2026-07-03T00:13:51.000Z",
+    "sourceId": "following-company-2",
+    "sourceName": "[TSLA] Tesla",
+    "lang": "en",
+    "category": "autonomous",
+    "region": "US",
+    "followingIndustry": "autonomous",
+    "followingCompanyIds": [
+      2
+    ],
+    "companyTicker": "TSLA",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1lfwq5g": {
+    "id": "id_1lfwq5g",
+    "title": "World Lithium Ion Battery Testing Chambers for Automotive - Market Analysis, Forecast, Size, Trends and Insights - IndexBox",
+    "link": "https://news.google.com/rss/articles/CBMijAJBVV95cUxQZjE3Sjd2dnlyYzU0MmJydXMyVkwwT203Q0RxeTBiZ2gxRXliZHBCQWN1VXB2WmpoWFlNdldPbHVLTW9yNmlVZFJlN3dEbHl2SDVfc24zaW9VS3Zxbm1lM3JvblJUbzFLcDJGODRrLW9jZXBEVG8zaE5PdDJ6X1RLcmhpODFLQ2ZheUhFQWZzTUNKOC1HNElmcU94ZG1PbjNtSWc2NFNBYmw0MnJaZklPNlVtanVKNEk1b2d3SHh3ZWozZU9abXNNRXVmaThzRjNHUmpsbG8tOTVUOG5JUjZZVUw4aENwY1lMQ3pVcDVIbmRIMjBhUENjeXdvWkU5S3czU25Zd21HLThfbzZZ?oc=5",
+    "description": "World Lithium Ion Battery Testing Chambers for Automotive - Market Analysis, Forecast, Size, Trends and Insights  IndexBox",
+    "date": "2026-07-02T23:26:08.000Z",
+    "sourceId": "following-industry-battery",
+    "sourceName": "🔋 Secondary Battery News",
+    "lang": "en",
+    "category": "Secondary Battery",
+    "region": "US",
+    "followingIndustry": "battery",
+    "followingCompanyIds": [
+      9,
+      12
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_6lelym": {
+    "id": "id_6lelym",
+    "title": "Oregon gov. talks POWER Act requiring large data centers pay more for infrastructure - KCBY",
+    "link": "https://news.google.com/rss/articles/CBMiywJBVV95cUxOaHA5Q2JFX2IxX2VnTi15MUt2VlRpOEE4NFZUaEdTSzhyQUFaTkJpTFFsR3g4VnRWajVEY193QzhNSGh2VV9vZHFPODd1a0pLcG9kYmcya2Rualh0cFFzOUpWbmlYRVBPZFlvMy1tWGlGSGRSaUstRXNjZmJVWVV4YXpPVlRaY205ZGhoc3kwVTUzbkpRQjJCTkc0SVljMnpzR1pVb3U3REdHMGhxOUdSWXJKZU5NVURqUUxpWUZjYTZCRFNuX3REaWhLM2hQRjBuSm1kQ0pHYXBHQVZodHVmQ0dOa2FIZjRlN2hUUVhoOU1NZWJoelNKNHBVaTl4RDRTMXhLUi05MS02TzRNdEVKRVpIVDhZSzJTeW9RNUlNNUxsMl9CakVxRVZNSl80UVNNalprdWlTOWJQYnBfeVZfTGN2TVlxV3ZxNjdz?oc=5",
+    "description": "Oregon gov. talks POWER Act requiring large data centers pay more for infrastructure  KCBY",
+    "date": "2026-07-02T23:09:32.000Z",
+    "sourceId": "following-industry-power-infra",
+    "sourceName": "🔌 Power Infrastructure News",
+    "lang": "en",
+    "category": "Power Infrastructure",
+    "region": "US",
+    "followingIndustry": "power-infra",
+    "followingCompanyIds": [
+      9,
+      12
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1dummi5": {
+    "id": "id_1dummi5",
+    "title": "Real estate, watches and guitars: Trump's 2025 $2.2B income wasn't all from cryptocurrency - ABC News - Breaking News, Latest News and Videos",
+    "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQSm1NSkxuTEt5UjdMMTVqWjFycExIWmpWZmR3S3FXSVFjRV9OdWJtVG0xQXJNX3d0d2R0NlE4blRhY0dlMWp3UE40R1hCMnpOVS1sd0RoOGxDMElWZFdkR2QzSXF3VFVzSXhjdGEtMlp4RWRNWldldVNYcXlXY01CS0s5VWxzU0xweVRqai14Y0xBbXExSG5lNS1mcWRteUHSAaQBQVVfeXFMTlhQblo4SUtwTU9wNVVDS3hkajk4ME4tdkpoLUlILUd2d0dUTTVBNUx2Ym9CeWUzbzNBYUlST1A2UmgwcmktNGFDdEFHMlpyeXpuMk1yQldEUjU1d2dyOVM2eDI5ekdxR3JyUUdyY1R6dExLMVEyQkQ5dnE3aGZFWHZUUU5LRzVqdzdfVUdnaWEzWExXT0ZZZ3JWRThQb3IyZ2Z5aDk?oc=5",
+    "description": "Real estate, watches and guitars: Trump's 2025 $2.2B income wasn't all from cryptocurrency  ABC News - Breaking News, Latest News and Videos",
+    "date": "2026-07-02T22:50:25.000Z",
+    "sourceId": "following-industry-crypto",
+    "sourceName": "₿ Crypto & Blockchain News",
+    "lang": "en",
+    "category": "Crypto & Blockchain",
+    "region": "US",
+    "followingIndustry": "crypto",
+    "followingCompanyIds": [],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_2swzy9": {
+    "id": "id_2swzy9",
+    "title": "Lawmakers share new details on Centre Foundry redevelopment - WTRF",
+    "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPNDl0WU1GMWpwQzhpRDc1eHFOamRscHFDakczekVTM2EyMElQeUFQaS1kNGNVVTRGNXpBZ0M4aW80SWZkdF9raGRvaDJ5a2t5S2lpbWprZlEzZDhaSk9YQmpfd2ZVUzB1a1Q4MmRMMk1FdF82elE4RGR4MTM3WDJZV29pdnk4YXVsc3h3U2JGc9IBlAFBVV95cUxOd2tWQy1rc0hZMWtzYld0NlY2RmpkVmJLclkybDgyMUVrRmRyV1QyYS1IOGotQ1lyOS1Xbk16VHlWdlJ5cjBnZFBZc2RvX0psaV9ieDZfdjVUcUhRTUZyT3BiX0M0cGg1ZFZNb0JLeGxVQTI3N2hRdmdmZ01QV3hoaUZySlZVV2NmTEd0dmZ1RTNEcExp?oc=5",
+    "description": "Lawmakers share new details on Centre Foundry redevelopment  WTRF",
+    "date": "2026-07-02T22:38:54.000Z",
+    "sourceId": "following-industry-semiconductor",
+    "sourceName": "🔬 Semiconductor News",
+    "lang": "en",
+    "category": "Semiconductor",
+    "region": "US",
+    "followingIndustry": "semiconductor",
+    "followingCompanyIds": [
+      9
+    ],
+    "aiAnalysis": {
+      "translatedTitle": "지역 의원들, 대규모 센터 파운드리(Centre Foundry) 재개발 프로젝트 세부 계획 전격 공개",
+      "summary": [
+        "미국의 핵심 기술 패권 전략에 발맞춰, 지역 의원들이 노후화된 산업 단지를 최첨단 센터 파운드리(반도체 위탁 생산 거점) 인프라로 재개발하기 위한 대규모 자금 투입 및 세제 혜택 등 구체적인 마스터플랜을 발표했습니다.",
+        "미국 정부의 '칩스법(CHIPS Act)' 보조금과 지방 정부의 인센티브가 결합된 전형적인 '온쇼어링(On-shoring)' 프로젝트로, 아시아에 편중된 반도체 공급망을 자국 내로 회귀시키려는 거대한 국가적 리쇼어링 메가트렌드를 상징합니다.",
+        "수십억 달러의 세금이 투입되는 파운드리 재개발 사업은 단순한 공장 유치를 넘어 지역 내 양질의 일자리 창출과 수력/전력 인프라 확충이라는 정치적 어젠다와 강하게 맞물려 폭발적인 탄력을 받고 있습니다."
+      ],
+      "implications": [
+        "미국 본토 내 파운드리 팹(Fab) 착공이 줄을 이으면서, 클린룸 설비 시공, 공조 시스템, 특수 가스 배관망 등 1차 반도체 인프라(소재/부품/장비) 전문 기업들의 수주 잔고가 역사적 최대치로 폭증할 전망입니다.",
+        "글로벌 반도체 기업들이 미국 현지 공장 라인을 셋업하기 위해 핵심 소부장(Supply Chain) 파트너사들을 대거 동반 진출시킬 수밖에 없어, 국내 K-반도체 장비사들의 북미 시장 진출(수출 파이프라인) 르네상스가 도래합니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": true
+  },
+  "id_amyf73": {
+    "id": "id_amyf73",
+    "title": "ON Semiconductor Corp. (ON) Stock Moves -3.60%: What You Should Know - Yahoo Finance",
+    "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQbUZ3Q1EwNjBKd1lMQ0U4bXR6eWhLLXpYQjEtODJLRXpNRTAtZkZpM1FCMmpWbFl6c2h2U2pBSWJRRTFac3pDOEJ0dzJrQkJaNnFEN3ZnbkFzRHNHSDlvNl8xd0NYSDltY3N3N3dSNnhUekxTa3ZLTlhRQ3pvQWdlX0VkSGdXdTY2ZV9XY1U2a3J1ZUgycHNVODlBdU9LZw?oc=5",
+    "description": "ON Semiconductor Corp. (ON) Stock Moves -3.60%: What You Should Know  Yahoo Finance",
+    "date": "2026-07-02T22:00:04.000Z",
+    "sourceId": "following-industry-semiconductor",
+    "sourceName": "🔬 Semiconductor News",
+    "lang": "en",
+    "category": "Semiconductor",
+    "region": "US",
+    "followingIndustry": "semiconductor",
+    "followingCompanyIds": [
+      9
+    ],
+    "aiAnalysis": {
+      "translatedTitle": "온세미컨덕터(ON) 주가 3.6% 하락: 투자자들이 반드시 주목해야 할 핵심 팩터",
+      "summary": [
+        "글로벌 차량용 반도체 강자인 온세미컨덕터(ON)의 주가가 시장 기대치를 하회하는 가이던스와 최근 불거진 투자자 소송 리스크 등의 악재가 겹치며 단기적으로 3.6% 이상 의미 있는 조정을 받았습니다.",
+        "전문가들은 전기차(EV) 수요 캐즘(일시적 둔화)으로 인해 완성차(OEM) 업체들의 재고 조정이 예상보다 길어지고 있으며, 이에 따라 실리콘카바이드(SiC) 등 전력 반도체 수주 물량이 이연된 것이 근본 원인이라고 분석합니다.",
+        "다만 자율주행 고도화 및 산업용 로봇 자동화에 들어가는 필수 이미지 센서와 아날로그 칩에 대한 구조적 수요는 훼손되지 않았으므로, 현 구간은 철저한 중장기 옥석 가리기의 변곡점이라는 지적도 팽팽하게 맞서고 있습니다."
+      ],
+      "implications": [
+        "글로벌 완성차 및 테슬라의 전기차 판매량 데이터가 바닥을 다지는(Bottom-out) 턴어라운드 시점이 전력 반도체 섹터 전체의 강한 숏커버링과 주가 반등을 알리는 가장 확실한 매수 트리거가 될 것입니다.",
+        "순수 전기차(BEV)를 넘어 하이브리드(PHEV) 및 AI 데이터센터 전원 공급 장치로 다변화된 매출 포트폴리오를 보유한 아날로그 반도체 기업들만이 이번 하락장에서 방어력을 입증하며 프리미엄을 부여받게 됩니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": true
+  },
+  "id_7ico51": {
+    "id": "id_7ico51",
+    "title": "SpaceX fires up all 6 of Starship's engines ahead of 13th test flight (video) - Space",
+    "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNNVh4N2w0SGZVTk12N1V3QVZZZDluUElSc1J1ZVoxZmVpcGM5RURwWDM0MGlfck9SMV9YMzRQdFJVMXJFUDVSYjR1R2NhNzExRXhXMmpZZ3c4LS1OT0l6M2ZmUm5lTHNTS2t1YUNwQmIyNkhFVk1YV2l2dGxpajEtTFpvRjYtbUFkX0xHcDVmdWZMZUJYRFZwakdpMkxrUGJBVkhaRllxSGJNN1Q4cFdBa1J2VDJEN1VuQ2RNbTZuZWtQQ1RHVUNKS0F3b3o5YVU?oc=5",
+    "description": "SpaceX fires up all 6 of Starship's engines ahead of 13th test flight (video)  Space",
+    "date": "2026-07-02T22:00:00.000Z",
+    "sourceId": "following-industry-space",
+    "sourceName": "🚀 Space & Defense News",
+    "lang": "en",
+    "category": "Space & Defense",
+    "region": "US",
+    "followingIndustry": "space",
+    "followingCompanyIds": [],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_r3hl46": {
+    "id": "id_r3hl46",
+    "title": "Zircon Based Coating for Foundry Market Forecast Points Higher Toward 2035, Driven by Aerospace Casting Demand - IndexBox",
+    "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPYlg2R0xUUWU3TDEybnBVTlJKbGgxZUdpLVVucjRZRTdrdERSbm9tMFduaVhBVkNHQlFBSnZBRUpvX05QeUw0R2dBNlowcHFTWGwwNjB6WnFjb3BjemUtMkV0aFVrSW9HeTNBUm1YVWVoR1pzVmk2bVloUmJQNmo0a1lDMDlMb05LZDZvbmxBdmtTQ19LTTJNT3RLRXk3bzlMQTk1aTFNdFAwMXJZTTY2a3E4R1hLeXBjRVRDbjVaNkU5Si1ydGpHSWI0X3QwNGtGSUQ4NUtn?oc=5",
+    "description": "Zircon Based Coating for Foundry Market Forecast Points Higher Toward 2035, Driven by Aerospace Casting Demand  IndexBox",
+    "date": "2026-07-02T21:56:07.000Z",
+    "sourceId": "following-industry-semiconductor",
+    "sourceName": "🔬 Semiconductor News",
+    "lang": "en",
+    "category": "Semiconductor",
+    "region": "US",
+    "followingIndustry": "semiconductor",
+    "followingCompanyIds": [
+      9
+    ],
+    "aiAnalysis": {
+      "translatedTitle": "파운드리 시장용 지르콘 코팅 수요, 항공우주 부품 주조 확대로 2035년까지 폭발적 고성장 전망",
+      "summary": [
+        "글로벌 시장 조사 기관 인덱스박스(IndexBox)는 첨단 반도체 파운드리 장비 및 부품 주조에 필수적인 '지르콘(Zircon) 기반 코팅재' 시장이 글로벌 항공우주 및 극한 환경 부품 수요 폭발과 맞물려 2035년까지 기하급수적으로 성장할 것이라고 전망했습니다.",
+        "초미세 공정(EUV)이 한계에 달할수록 반도체 식각 장비 내부의 플라즈마 마모를 견디고 파티클 오염을 원천 차단하는 초고내열·고내식성 세라믹/지르콘 특수 코팅 기술이 수율(Yield)을 좌우하는 핵심 마법의 가루로 부상하고 있습니다.",
+        "단순히 칩셋을 작게 깎는 기술(미세화)을 넘어, 이를 만들어내는 초정밀 장비 자체가 가혹한 환경을 버틸 수 있도록 보호하는 특수 소재(Material) 과학 패권이 반도체 밸류체인의 최상위 권력을 형성하고 있음을 시사합니다."
+      ],
+      "implications": [
+        "전방 파운드리(TSMC, 삼성전자) 고객사들의 3나노 이하 선단 공정 전환이 가속화될수록, 극한의 장비 보호 코팅 기술과 희소성 높은 합성 쿼츠, 실리콘 카바이드 소재(Parts) 벤더들의 판매 단가(ASP)가 천정부지로 솟구칠 것입니다.",
+        "파운드리의 장비 유지 보수 교체 주기가 짧아지는 구조적 수혜가 확정되며, 소모성 부품(After-market)과 특수 코팅 원천 특허를 독점한 강소 기업들이 반도체 투자 슈퍼 사이클의 진정한 알짜 캐시카우를 독식하게 됩니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": true
+  },
+  "id_3wx6bz": {
+    "id": "id_3wx6bz",
+    "title": "Anthropic Claude Goes GA in Microsoft Foundry - Redmondmag.com",
+    "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPVE1LWjhRQ29OT1dwVjdnZFRRQ29zOGFSeXYtaVM4NG9QdTRBLWVYTTlNQ3JzQWtoQ0dVZkoyWDFUTzRaLV90ZWNxVERwSFNvWDFabFdnR0toY0pIV0Z5MXpJMVZfZURuR0NWcE5zMmJBX25oQUtraUdFeWludjdmMU5lbnN6RFNKRWxmYndTd2xGQ3NkU1hZaQ?oc=5",
+    "description": "Anthropic Claude Goes GA in Microsoft Foundry  Redmondmag.com",
+    "date": "2026-07-02T21:52:05.000Z",
+    "sourceId": "following-industry-semiconductor",
+    "sourceName": "🔬 Semiconductor News",
+    "lang": "en",
+    "category": "Semiconductor",
+    "region": "US",
+    "followingIndustry": "semiconductor",
+    "followingCompanyIds": [
+      9
+    ],
+    "aiAnalysis": {
+      "translatedTitle": "앤스로픽(Anthropic) 클로드(Claude) AI 모델, 마이크로소프트 파운드리 플랫폼 정식 출시(GA)",
+      "summary": [
+        "오픈AI의 최대 대항마로 꼽히는 앤스로픽(Anthropic)의 최상위 대규모 언어 모델 '클로드(Claude)'가 마이크로소프트의 기업용 AI 개발 및 배포 플랫폼인 '애저 AI 파운드리(Azure AI Foundry)'에 정식으로 서비스(GA)를 시작했습니다.",
+        "이는 단순히 소프트웨어 클라우드 뉴스를 넘어, MS가 사실상 독점 파트너였던 오픈AI(GPT) 모델뿐만 아니라 경쟁 AI 모델들까지 자사의 파운드리 플랫폼 안으로 모두 집어삼키려는 무서운 생태계 포식자(Aggregator) 전략을 가동한 것입니다.",
+        "마치 TSMC가 엔비디아와 AMD 칩을 동시에 위탁 생산(파운드리)하듯, 마이크로소프트 역시 클라우드 컴퓨팅 파워를 무기로 글로벌 B2B 인공지능 모델 훈련 및 배포 시장의 완벽한 1위 'AI 파운드리'로 군림하겠다는 야심이 실체화되었습니다."
+      ],
+      "implications": [
+        "수십 개의 난립하는 AI 파운데이션 모델들이 결국 MS 애저나 아마존 AWS 같은 거대 인프라 '파운드리' 플랫폼 종속 하에 놓이게 되며, 이들 빅테크 기업의 잉여 현금 흐름 창출력과 클라우드 부문 밸류에이션이 폭발적으로 확장될 전망입니다.",
+        "거대 AI 모델의 병렬 연산을 완벽하게 뒷받침하기 위해 이들 파운드리 기업들이 자체 설계하는 맞춤형 신경망 처리 칩(커스텀 실리콘) 수요가 급증하면서, ARM 아키텍처 및 칩렛(Chiplet) 패키징 밸류체인에 막대한 낙수 효과가 떨어질 것입니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": true
+  },
+  "id_d4urcr": {
+    "id": "id_d4urcr",
+    "title": "Schumer announces new Bing U. laboratory, Make More In America Act - Press & Sun-Bulletin",
+    "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQeGliQXIyVU5zOXhMY3pzR01EMlJJYU5LU09LM29nZjlKSGwxR3pvUTNMRTFtWHBwcGppeHN0VHBzRWpmRXJDNnhvcG96Vkd6dG5qQ3RDQWVfQ05GZXFBMUVqSWt0RldxM2dyT2JkUnJaN08yaWJ3NmpGMFJRMG5KYkZmMGlYNDF5THpCUVJiakpWeFNhdDBNWDRVNU9mTVNCMDJrZzB5RXhaa1BlZUFybUFnZXBmMGRoV3o5U1l2Rk93SWM2VnA1VmVUWkU3NTY2UmsycndnYjR1OHA0LUNzRkVBenpmS3pVOUE?oc=5",
+    "description": "Schumer announces new Bing U. laboratory, Make More In America Act  Press & Sun-Bulletin",
+    "date": "2026-07-02T21:43:00.000Z",
+    "sourceId": "following-industry-semiconductor",
+    "sourceName": "🔬 Semiconductor News",
+    "lang": "en",
+    "category": "Semiconductor",
+    "region": "US",
+    "followingIndustry": "semiconductor",
+    "followingCompanyIds": [],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_17vuzzm": {
+    "id": "id_17vuzzm",
+    "title": "Energy Dept. directs data centers to use backup generators during heat wave, freeing up power for AC - CNN",
+    "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOS1k1ZFZSXzh4aTMwcU5QZUdta0VaOGE4aGRBMnVOLU4zU0tLbEdBdU1kV2VrUTdxRXNuZTlIbGt1RllRTmNWc2tfd2RrOTlPTXJDbjkyR2wxR2hOWFIyekZWVTlxMExjT21DMDdZMmFtNm5ZaW9BVlVBTmhQOW43WjNsRXg1QQ?oc=5",
+    "description": "Energy Dept. directs data centers to use backup generators during heat wave, freeing up power for AC  CNN",
+    "date": "2026-07-02T21:41:14.000Z",
+    "sourceId": "following-industry-power-infra",
+    "sourceName": "🔌 Power Infrastructure News",
+    "lang": "en",
+    "category": "Power Infrastructure",
+    "region": "US",
+    "followingIndustry": "power-infra",
+    "followingCompanyIds": [
+      12
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_aiadoo": {
+    "id": "id_aiadoo",
+    "title": "Queretaro Highlights Power Challenge Behind Data Center Growth - Mexico Business News",
+    "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQU3hMR2UyNmRiT1lSd1NOc2pOU09IZDhtblF6STJRdlJzVlNEVUhNemNTSi1jbUtyMmRXYkQ0eXp1QTIxRW1feF8tcnpCT0Ezb0x1NmVDanFuLW9hbHJ1SUVfaWgxUDVZbmZtd1BabXpIOXJlaU1GVVlJbEF5WmtWMzBvU1pjQWpmUHBVMDMzelhWZUF0b2lyeTZhR0JEMGJQWlNaUkJHUG0zNUZMUXlj?oc=5",
+    "description": "Queretaro Highlights Power Challenge Behind Data Center Growth  Mexico Business News",
+    "date": "2026-07-02T21:30:26.000Z",
+    "sourceId": "following-industry-power-infra",
+    "sourceName": "🔌 Power Infrastructure News",
+    "lang": "en",
+    "category": "Power Infrastructure",
+    "region": "US",
+    "followingIndustry": "power-infra",
+    "followingCompanyIds": [
+      12
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1b0e5bp": {
+    "id": "id_1b0e5bp",
+    "title": "Are AI-powered robots German carmaker BMW's future? - DW.com",
+    "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOYVFrUy12OUttb1VVaDJVMWF4R3JYdXRwSmRFRDdhaUNUeFlIOU4yZExhdTZ1SUlNV3JCSEdsSC1yTTBSallpQ3ZydEJwUEExS1BMTGF1eVFjOWN3dlIyVksxcVFvYURYQW40QWtCYVBES2VGOXlGa2ZKZTlmTEdPd0kzQ3JhS203Mm1xdWp4RQ?oc=5",
+    "description": "Are AI-powered robots German carmaker BMW's future?  DW.com",
+    "date": "2026-07-02T21:22:02.000Z",
+    "sourceId": "following-industry-robotics",
+    "sourceName": "🤖 Robotics & Automation News",
+    "lang": "en",
+    "category": "Robotics & Automation",
+    "region": "US",
+    "followingIndustry": "robotics",
+    "followingCompanyIds": [
+      97
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_17oz58w": {
+    "id": "id_17oz58w",
+    "title": "Hybrid Electric Vehicle Hev Battery Solar Powered Market Growth to Accelerate by 2035 Amid Rising Solar-EV Integration - News and Statistics - IndexBox",
+    "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNT3RrTk1CSzNaYXFUSV9uV1JpcnZvRkdoa1NkNWMzVUo0SVhiR3ZNQTZ0ODFYR01UM0Z4ZnFoV0tSLUFoaWlTX0h3OGNmSGxpOXk3eHptUkFRN3ZCYzZ4U3pNY2dDSXpsVUdYVzJwNkhxRlNYczFrMHVROEZ5WERpZ01OeGcxeURpWUpuQVV3djJ3QUFaQ3oxRUF5ZFVuNjBTUy02V3AydkRsZVhVcjJYU2hxbXhBN3BBemRtRXZtdExZcjFYZGRKQ1pEY2U0Y2s4WFRaWUh3NEs1bjUtX3hPV0IwYlJwTjREempuUmVWdFJHY3M?oc=5",
+    "description": "Hybrid Electric Vehicle Hev Battery Solar Powered Market Growth to Accelerate by 2035 Amid Rising Solar-EV Integration - News and Statistics  IndexBox",
+    "date": "2026-07-02T21:16:07.000Z",
+    "sourceId": "following-industry-battery",
+    "sourceName": "🔋 Secondary Battery News",
+    "lang": "en",
+    "category": "Secondary Battery",
+    "region": "US",
+    "followingIndustry": "battery",
+    "followingCompanyIds": [
+      9,
+      12
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_15kyaie": {
+    "id": "id_15kyaie",
+    "title": "Oregon chip industry faces 'stagnation, decline, irrelevance,' state report says - The Business Journals",
+    "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxObEtsSlctdFI1NlVpZWNRMXVKX2JqTWRpZnQ1VmVIdG11REZxQVJNeVBaMUFaM2VHZi1VbUlQREdWdm9SM3M2cmluQV9YcDVGa3hsajhvUUdaZU42bW10TTUwemhoM25iN2dHV0JqMkxhakdPQVpJZVpLYlplVFdkSE5FUERBT29CUTJfOS1adHRSekpsXzY5cjlnOXZ1dFhC?oc=5",
+    "description": "Oregon chip industry faces 'stagnation, decline, irrelevance,' state report says  The Business Journals",
+    "date": "2026-07-02T21:00:00.000Z",
+    "sourceId": "following-industry-semiconductor",
+    "sourceName": "🔬 Semiconductor News",
+    "lang": "en",
+    "category": "Semiconductor",
+    "region": "US",
+    "followingIndustry": "semiconductor",
+    "followingCompanyIds": [
+      9
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1bw0ntj": {
+    "id": "id_1bw0ntj",
+    "title": "Broadcom vs. ON Semiconductor: Which Technology Stock Is a Better Buy in 2026? - The Motley Fool",
+    "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOSWthSmtFenEzWl9fRW5odDJxYzRsLTZEd1VwMGZHODVXOGNuNG14bjRvTlJQRmp3YTRmV0kwaUt0REZyR0xINnNDSFRIOEtXOFFISE1kZUU0VzNTYjl4eEctS2lTaUJjcnBOeklpd1FWRG5tTmFndnRkNjhjdU1jX21KWFBfUkFkLTctX2pJZ1hHRHdMNWFPWXI4aDNrdGJvUHVsY0IzM1c5YURBOHRqa1dMaTR2d0t1LWtMS2g1QXRhNEZ2UE1J?oc=5",
+    "description": "Broadcom vs. ON Semiconductor: Which Technology Stock Is a Better Buy in 2026?  The Motley Fool",
+    "date": "2026-07-02T20:59:00.000Z",
+    "sourceId": "following-industry-semiconductor",
+    "sourceName": "🔬 Semiconductor News",
+    "lang": "en",
+    "category": "Semiconductor",
+    "region": "US",
+    "followingIndustry": "semiconductor",
+    "followingCompanyIds": [
+      9,
+      12,
+      104
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1e8b8zi": {
+    "id": "id_1e8b8zi",
+    "title": "Got $1,000 to Invest? Buy These 2 Stocks Right Now and Hold Them for Decades. - The Globe and Mail",
+    "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPeWVvOXgyUEtFdEpnczVkV05jY1Y5YklOQmMtOHhIcEMwalJISUZZLUozTERzM2FEV1hxVWlfZ3JoUVg1MXFBXzhJODJ4WV9qZU1iU0syTTRVeFNBUVdLZmoxaU52bGdyaXk1YXZlUFdKRGRpRGlFdnNQVTZNNkZIcEpYbmc1Q3lFdm9Qa190dDBOYWVWblhEMm9LdHFibjc1Qnc3NW1CTTRfZ1hXQVhfSzNmZTNES0toM2JXTlNmUWZ3SFJXMnFtczU2WWR6djMxVkZpRnJISXdEMDhmc0U1NV9PQUxtcnprUWNYUVF5NzAzdW8?oc=5",
+    "description": "Got $1,000 to Invest? Buy These 2 Stocks Right Now and Hold Them for Decades.  The Globe and Mail",
+    "date": "2026-07-02T20:57:00.000Z",
+    "sourceId": "following-company-65",
+    "sourceName": "[OKLO] Oklo Inc.",
+    "lang": "en",
+    "category": "nuclear",
+    "region": "US",
+    "followingIndustry": "nuclear",
+    "followingCompanyIds": [
+      65
+    ],
+    "companyTicker": "OKLO",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1djajma": {
+    "id": "id_1djajma",
+    "title": "Building a Future in Semiconductors at Lam Research (Podcast) - Lam Research Newsroom",
+    "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPYzhvX0NIZ3BNeG5pMkIzblpYbmRzVDhBM1p6Z3E1UXhYV0tQZVJzMHVSNkgwVVFpZmFWLUVWV2RmbXJINldpcDBQTEN2ZzhvX3VPeGhJdjIwME9hU2Jocmxua2VoSmVjWkFqaF9wTmFyUnRkZmxLMnNVcmQtYkRUeVIwUFdqWnhzV2NKWGxHTQ?oc=5",
+    "description": "Building a Future in Semiconductors at Lam Research (Podcast)  Lam Research Newsroom",
+    "date": "2026-07-02T20:08:15.000Z",
+    "sourceId": "following-industry-semiconductor",
+    "sourceName": "🔬 Semiconductor News",
+    "lang": "en",
+    "category": "Semiconductor",
+    "region": "US",
+    "followingIndustry": "semiconductor",
+    "followingCompanyIds": [
+      9,
+      108
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_9sel8h": {
+    "id": "id_9sel8h",
+    "title": "Western Digital, MACOM, and Lattice Semiconductor Shares Are Falling, What You Need To Know - StockStory",
+    "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQS1VxbU41c0hqcXFuUWRVYUFsNngtaFV6NGJ1ZURmWUlpM29HRzM0X2JkZWNlUlFsaXZmZTRVYU5TTnFMREk5NWtJT3oyQjNYRGRMV1Q4bDI0QUZ5bG1ZMm5nRXZBYU9MQi1BZkxzT2d1LTE3WmdEaDdTeGxHMXJ3TTR5TnJFWXpoaFRkMHRvZUlSTWJyQjhZUHdsSVlNb1JBdEZPdTUzU05oUlNEenJUQmdNVnU0TVNVN25SajBseV9SSUIzaDdmVjhPdkZPUnBzTzRTMmtNeXpzUG9LVG1UVXlxTQ?oc=5",
+    "description": "Western Digital, MACOM, and Lattice Semiconductor Shares Are Falling, What You Need To Know  StockStory",
+    "date": "2026-07-02T20:06:19.000Z",
+    "sourceId": "following-industry-semiconductor",
+    "sourceName": "🔬 Semiconductor News",
+    "lang": "en",
+    "category": "Semiconductor",
+    "region": "US",
+    "followingIndustry": "semiconductor",
+    "followingCompanyIds": [
+      9,
+      12
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_biifnp": {
+    "id": "id_biifnp",
+    "title": "Isar Aerospace Lands Big Win With Planet Launch Contract - Via Satellite",
+    "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPNGZ5NWVzZGdGYm40aUtrWnB6SFFtVkVPSHlNdWRUOXU3TkcxbXVBa2VfXzduTURIMVFfZlFOOE00UlFwdjl5d3ExNVpfNVVieE90NVUtU2RmVHloNlBGNVFaTUpxdjhSOUxGYmVwNEhGenZqeHlzMm85eU9tMXl5NkVyeDY2RWR3ZDVkRHY0UDFEYTFWeEM2RUE4bFAwNWlDbE8za0tuSEFvdw?oc=5",
+    "description": "Isar Aerospace Lands Big Win With Planet Launch Contract  Via Satellite",
+    "date": "2026-07-02T19:50:13.000Z",
+    "sourceId": "following-industry-space",
+    "sourceName": "🚀 Space & Defense News",
+    "lang": "en",
+    "category": "Space & Defense",
+    "region": "US",
+    "followingIndustry": "space",
+    "followingCompanyIds": [
+      9,
+      20
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1q3pcew": {
+    "id": "id_1q3pcew",
+    "title": "California-based Semiconductor Company Lands $24.2M Grant for DFW Manufacturing Facility - D Magazine",
+    "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOZTVpazc2SE9mU3ItdDcxS0NoZ2o4WkZDOUtGWjh3ZzgxYm9CSVZKZ25RRE9uZ2xtTGhkQTFFdE84b3N2dnBLcldoRGxoNmI0elQxYzFBSklnV0RrUGc5NEJlQzBXVWNZUEg1ek5LZEx3Y21qYUlqN2s2OF9VQTZ6WW1pZ19xRmlUZVVEQ0tOa053MXFMRW1wdFhTMTdReTIzZzZZ?oc=5",
+    "description": "California-based Semiconductor Company Lands $24.2M Grant for DFW Manufacturing Facility  D Magazine",
+    "date": "2026-07-02T19:13:47.000Z",
+    "sourceId": "following-industry-semiconductor",
+    "sourceName": "🔬 Semiconductor News",
+    "lang": "en",
+    "category": "Semiconductor",
+    "region": "US",
+    "followingIndustry": "semiconductor",
+    "followingCompanyIds": [
+      9
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_javl9o": {
+    "id": "id_javl9o",
+    "title": "Role in Building National Semiconductor Workforce Grows - The University of Texas at Dallas",
+    "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOb25EaG56RHNCMUNSQjBBaV9ueVZPWmR3ZGVJRDdhR19iQkJFX01FT0dqYzBIU1FXM0l0SEJfTUJYSFhKTm1hOWxLVGtwOEc4TFBiaE1INF9KdjZSaUVwLW1NLUFoc2ZBRXJlZ1lCaGhBWXFtNjlCX0llRnJiZUp6Tldiblc3ZWoxSmpxei1B?oc=5",
+    "description": "Role in Building National Semiconductor Workforce Grows  The University of Texas at Dallas",
+    "date": "2026-07-02T18:27:19.000Z",
+    "sourceId": "following-industry-semiconductor",
+    "sourceName": "🔬 Semiconductor News",
+    "lang": "en",
+    "category": "Semiconductor",
+    "region": "US",
+    "followingIndustry": "semiconductor",
+    "followingCompanyIds": [
+      9
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_brs693": {
+    "id": "id_brs693",
+    "title": "Lead time economics: What semiconductor supply chains reveal about strategic planning - Supply Chain Management Review",
+    "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOSURTVmpyQkdxalBIVnpNYS1hWTBxMHVBdHdpcnZZNTBDX01IdEdFMHlnVXFtQ2JVRjBST0NrU29ycGEyUUl2Rm05MmdGUk9ubkpZSDkzOVBFQ1FWaG1Ia3VPNmdUSkpUM0pIVFFrMjdJcEtfdEdMLUlyQ0s3b29WVzFDWHFiWm9XVkd5NFpmc1JNOUFZZTdHbzdBN2R6NlNRYmFhSlV5Vk9uTmFTalVfZFV2SQ?oc=5",
+    "description": "Lead time economics: What semiconductor supply chains reveal about strategic planning  Supply Chain Management Review",
+    "date": "2026-07-02T17:59:00.000Z",
+    "sourceId": "following-industry-semiconductor",
+    "sourceName": "🔬 Semiconductor News",
+    "lang": "en",
+    "category": "Semiconductor",
+    "region": "US",
+    "followingIndustry": "semiconductor",
+    "followingCompanyIds": [
+      9,
+      20
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1qur1yp": {
+    "id": "id_1qur1yp",
+    "title": "How crypto, real estate and watches added up for Trump last year - PBS",
+    "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPekpmZU1MbXE1TjJUejd6TmpSRUlQOW56RFljakpmSmU1NEZ0V29MMWZZYXRWdDU0N0NhbHVueW5EX3JXcDh3bHBIOVJvdWdQN28weEMyZ0R2TmI5eWNscjJFLXNDZ0tjYWpMNk1ZUkQ4RFRqLWgycWNSUmg1U1RiV3c3d0hjY2lMWF9qRFZRTVQ3LXBIdkJhZ3JDRGNzVFFBMzk00gGoAUFVX3lxTE5PdjhOcHZzM2tiWkwyc1Q0ZmJseklVcXVxUVpZVml5d1ZEc2J0VzE2WjRFaGtmUHhoRmdKbGlfNWpERmVUTWNMel95NWxfbnViTW9YZTM5OE1mUjMzbXY0cUxmWnNjQnBEbGJHX3NFWFg1WUl6ck5BTk9mTjQzTWFSQ3RJVkNhQUtINmhFTXFSRmZlMzhGeFh4bHFVdV9pWHRXUEtuY3dpUw?oc=5",
+    "description": "How crypto, real estate and watches added up for Trump last year  PBS",
+    "date": "2026-07-02T17:14:06.000Z",
+    "sourceId": "following-industry-crypto",
+    "sourceName": "₿ Crypto & Blockchain News",
+    "lang": "en",
+    "category": "Crypto & Blockchain",
+    "region": "US",
+    "followingIndustry": "crypto",
+    "followingCompanyIds": [],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1v6igx3": {
+    "id": "id_1v6igx3",
+    "title": "5 Small-Cap Semiconductor Stocks That Could Take Off | Investing - U.S. News - Money",
+    "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNTGFZdktSMmVrYTlGLVdtRjNOc3BvbXFqZ0RJNHNmelZOSEJIS2xUMmxkcW9zMEJRZ21DRWVkaGttU19sTnplT2N0UTlaUnRIVGp3YlVGaWMwLW9GYmwtTW84ZTBuUjZHbXpPY2V5YzFWdmVPWi1hVllNT2tzc091bU5Qc18xeFk4dFhIM19TSG0zVVBRTWxOSlpn?oc=5",
+    "description": "5 Small-Cap Semiconductor Stocks That Could Take Off | Investing  U.S. News - Money",
+    "date": "2026-07-02T17:08:00.000Z",
+    "sourceId": "following-industry-semiconductor",
+    "sourceName": "🔬 Semiconductor News",
+    "lang": "en",
+    "category": "Semiconductor",
+    "region": "US",
+    "followingIndustry": "semiconductor",
+    "followingCompanyIds": [
+      9
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_spa24n": {
+    "id": "id_spa24n",
+    "title": "Jeffrey Lai, Founder and CEO of IrisGo – Interview Series - Unite.AI",
+    "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPdUY4ZFpCU0RUMEctU2JwVjhYMDQ0TkphRlRXYnBVMFVFNU5mQVB4UW9YLWthei1COEE4VnEwTWFqM3JQYVRxYTBaZmx2c21FWTduMmJadUJZNk5XY0syTHo1ZGJjOS1yMUc0VWxEb2pZQU15TFJWM1pVaEZjQ1ZhT0d3?oc=5",
+    "description": "Jeffrey Lai, Founder and CEO of IrisGo – Interview Series  Unite.AI",
+    "date": "2026-07-02T16:57:48.000Z",
+    "sourceId": "following-industry-on-device-ai",
+    "sourceName": "📱 On-Device AI News",
+    "lang": "en",
+    "category": "On-Device AI",
+    "region": "US",
+    "followingIndustry": "on-device-ai",
+    "followingCompanyIds": [
+      12
+    ],
+    "aiAnalysis": {
+      "translatedTitle": "IrisGo 창립자 인터뷰: 온디바이스 비전 AI의 폭발적 확장성과 미래",
+      "summary": [
+        "비전 AI 전문 기업 IrisGo의 창립자 제프리 라이(Jeffrey Lai)는 최근 인터뷰에서, 모든 연산을 클라우드에 의존하던 기존의 한계를 극복하고 엣지(Edge) 기기 자체에서 실시간으로 시각 정보를 처리하는 온디바이스 비전 AI의 상용화가 임박했다고 강조했습니다.",
+        "온디바이스 비전 AI는 클라우드 서버로 데이터를 전송할 필요가 없어 지연 시간(Latency)이 거의 제로에 가깝고, 사용자 개인정보(Privacy)를 완벽하게 보호할 수 있는 치명적 강점을 지니고 있습니다.",
+        "이는 단순 스마트폰 카메라를 넘어 보안 CCTV, 자율주행 드론, 스마트 팩토리 불량 검수 로봇 등 산업 전방위적인 하드웨어 지각 변동을 촉발하는 핵심 동력으로 작용할 것입니다."
+      ],
+      "implications": [
+        "비전 처리 전용의 저전력 고효율 칩(NPU, VPU)을 전문적으로 설계하는 팹리스 기업들과, 압축된 경량화 AI 모델(sLLM) 구축 능력을 보유한 소프트웨어 벤더들의 거대한 성장 사이클이 열립니다.",
+        "오프라인 공간의 모든 데이터를 실시간으로 수집하고 판단하는 지능형 사물인터넷(AIoT) 생태계가 개화하며, 관련 하드웨어 부품사들의 구조적인 매출 잭팟이 기대됩니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": true
+  },
+  "id_tztgqi": {
+    "id": "id_tztgqi",
+    "title": "Semiconductor stocks face worst two-day selloff in a month as AI hype meets reality - Crypto Briefing",
+    "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5XMFFfLVctUkxXeW5MX2YtNlc3anlHbVAxRXg4TUFiLTZhQ2JFMEN6aEl6LVp6V3J2TGlBaVJmOTJva3Y1WVVVb1dmR2NsNTRGNzczc1pISTZ2T3pFNXpXNW5wa1dCT3hCcHFISzRpcWlvUQ?oc=5",
+    "description": "Semiconductor stocks face worst two-day selloff in a month as AI hype meets reality  Crypto Briefing",
+    "date": "2026-07-02T16:57:35.000Z",
+    "sourceId": "following-industry-semiconductor",
+    "sourceName": "🔬 Semiconductor News",
+    "lang": "en",
+    "category": "Semiconductor",
+    "region": "US",
+    "followingIndustry": "semiconductor",
+    "followingCompanyIds": [
+      9
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1m1qmkp": {
+    "id": "id_1m1qmkp",
+    "title": "Why AI and semiconductor stocks stumbled - Axios",
+    "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8xRXEtNnkwVER3WUFzT1RMbm5qQnNYN2VJSHB6VncyV3R5eFRiTEVqaVBuQmFJSmlNS0FWaVQyNzNmMFVhTVpCc2djelc1RklzVjk4U0NRS1NSQ19PcU1KeVJoTQ?oc=5",
+    "description": "Why AI and semiconductor stocks stumbled  Axios",
+    "date": "2026-07-02T16:10:45.000Z",
+    "sourceId": "following-industry-semiconductor",
+    "sourceName": "🔬 Semiconductor News",
+    "lang": "en",
+    "category": "Semiconductor",
+    "region": "US",
+    "followingIndustry": "semiconductor",
+    "followingCompanyIds": [
+      9
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_nu4vsp": {
+    "id": "id_nu4vsp",
+    "title": "Rocket Lab’s CEO Just Bet $8 Billion on Taking Down SpaceX. Here’s the ‘1+1=3’ Logic - 24/7 Wall St.",
+    "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPUkJpWGVrNm83ZWxaYmNoNXF6WEVGd3BQT29GTlRKWGhoNGRuRnVpT2hodWRGUW1FS1c5TnNYMjR1R291YkFCVE04V2g3UzRqcDBpMWZSLUJWQnJMbWtlbmEyenZHaWUyMXlmZ2MzRHA4WmpTa0RseXQybHJ4UGhGd2l4ZDVMTlhTazRiMGUyWjVJdFVrV0w3SUVySUM4X2syd1FVaVBrcFBDTmR0c1l6d3FtUWFqeC1XYlBJZg?oc=5",
+    "description": "Rocket Lab’s CEO Just Bet $8 Billion on Taking Down SpaceX. Here’s the ‘1+1=3’ Logic  24/7 Wall St.",
+    "date": "2026-07-02T15:45:00.000Z",
+    "sourceId": "following-company-19",
+    "sourceName": "[RKLB] Rocket Lab USA",
+    "lang": "en",
+    "category": "space",
+    "region": "US",
+    "followingIndustry": "space",
+    "followingCompanyIds": [
+      19
+    ],
+    "companyTicker": "RKLB",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_bgw52q": {
+    "id": "id_bgw52q",
+    "title": "A $7,999 Home Robot Joins the Race to Automate Household Chores - Business Insider",
+    "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxObGZLQ09BeEdrZUQ3NjdEaXVhcUt0RkgxSVRtVHo2Q0ZQaXQ1Vkppb3FTMkpUVVBEdHQ4VUQtbVpkSEFDM21UOTRRVGZFQ2x2RktrYmNsUzlzdENzYUhRRDVLc2NqNGhUVjdYOF9QQ0NVeGNKSEdfREl1ck5pWjI5MjFIRUJmcngweW5Xaw?oc=5",
+    "description": "A $7,999 Home Robot Joins the Race to Automate Household Chores  Business Insider",
+    "date": "2026-07-02T15:19:00.000Z",
+    "sourceId": "following-industry-robotics",
+    "sourceName": "🤖 Robotics & Automation News",
+    "lang": "en",
+    "category": "Robotics & Automation",
+    "region": "US",
+    "followingIndustry": "robotics",
+    "followingCompanyIds": [],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_f04pw1": {
+    "id": "id_f04pw1",
+    "title": "Nvidia's Bold New Bet on AI Neoclouds: Brilliant Platform Strategy or Latest Sign of an AI Bubble? - 24/7 Wall St.",
+    "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOYnplNXo4SmpRY2JlWTgyVzdOcTNnN0N6OEc4aUhnMDFWZzU2dHRFTGF5RlMtdlpMMWZOWXhKU052ZmNjRXRnQk9TTFFoM3RDQ1hRUXVtNHlfUnY5WkJlSnhiTVd5Xy03YkV5YkU5alR1WXFBRjRtbUVpNk5qUXpiZWpSN2ZkcnJzeUhwdE5YZnRXODRrSXpWQ01BT2hsY0NPMDJISk1PaWxmY1ptRjVYSXZmSDM0YnlNZ2VDclItZ1R2Tmc0X05GdUtZYjZlQVNSMThUZjZB?oc=5",
+    "description": "Nvidia's Bold New Bet on AI Neoclouds: Brilliant Platform Strategy or Latest Sign of an AI Bubble?  24/7 Wall St.",
+    "date": "2026-07-02T14:56:17.000Z",
+    "sourceId": "following-company-1",
+    "sourceName": "[NVDA] Nvidia",
+    "lang": "en",
+    "category": "autonomous",
+    "region": "US",
+    "followingIndustry": "autonomous",
+    "followingCompanyIds": [
+      1
+    ],
+    "companyTicker": "NVDA",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_8ry5pq": {
+    "id": "id_8ry5pq",
+    "title": "Will Microsoft's New Surface Devices Reignite the Hardware Business? - TradingView",
+    "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPXzN3RTIzVVJPb1ZudDdNTklEbms5REc0dnpuSUhSUk10UkRWZDNGaWhaTElwZFdKRkZQZEVNR0U3Zm5TbC1YTFV6UGt1YmhyaU41Ql93OEtMNjhiUnJ0Q1h4RDJnQVZwNUNfRFNQc1l2VDkySDh0cWpoY2hmV3dxZ3hXS3RIY1V3dDV5NS0tSnpucGJtZG9PLUpOLTNmcEF3RVlQazBJMlhnc3hNQ0tEb3Ywb0tlbGt4cldBYTN1YjQ?oc=5",
+    "description": "Will Microsoft's New Surface Devices Reignite the Hardware Business?  TradingView",
+    "date": "2026-07-02T14:30:00.000Z",
+    "sourceId": "following-industry-on-device-ai",
+    "sourceName": "📱 On-Device AI News",
+    "lang": "en",
+    "category": "On-Device AI",
+    "region": "US",
+    "followingIndustry": "on-device-ai",
+    "followingCompanyIds": [],
+    "aiAnalysis": {
+      "translatedTitle": "마이크로소프트의 새로운 서피스(Surface) AI PC, 하드웨어 비즈니스 부활의 신호탄인가",
+      "summary": [
+        "마이크로소프트(MS)가 자사의 윈도우 OS 운영체제 안에 자체 개발한 AI 비서 코파일럿(Copilot)을 하드웨어 단까지 완벽하게 통합한 차세대 코파일럿+ 서피스(Surface) PC 라인업을 새롭게 선보였습니다.",
+        "새로운 서피스 기기들은 퀄컴의 고성능 스냅드래곤 X 엘리트 칩을 탑재해 배터리 효율과 NPU 연산 속도를 획기적으로 끌어올렸으며, 네트워크 연결 없이도 기기 자체에서 강력한 AI 작업이 가능합니다.",
+        "이는 MS가 장기간 정체되었던 자사의 전통적인 하드웨어 디바이스 비즈니스를, AI 생태계의 전초기지이자 새로운 수익 창출의 강력한 캐시카우로 탈바꿈시키려는 전략적 승부수입니다."
+      ],
+      "implications": [
+        "AI PC 폼팩터의 교체 주기가 본격적으로 도래하면서, 메모리 탑재량이 기존 대비 2배 이상 요구되는 고사양 D램(LPDDR5X) 모듈 밸류체인의 폭발적인 출하량 증가가 담보됩니다.",
+        "운영체제(OS) 장악력을 무기로 애플 실리콘(M 시리즈)의 독주에 제동을 걸려는 MS와 안드로이드 진영 간의 '온디바이스 AI 운영체제 락인(Lock-in)' 전쟁이 부품 시장 전반에 역대급 호황을 몰고 올 것입니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": true
+  },
+  "id_cy3roc": {
+    "id": "id_cy3roc",
+    "title": "Proposed Texas AI power plants could emit 287 million tons of greenhouse gases annually, report says - KERA News",
+    "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQY0pXOWdlMHBsUFUwS3BmUm1SYzRtU0pYWjNJT3p5RDlibnJGeVZXMnhyYUxfZkhKM05fcVpWMDF2ZlVaWE5kWGY4S1VSMmY3dmZleDF5UzRINU5yWlItTDdlNEEycGEzcjZRLUFzTmhYQXZVS2RSQ2lJeU90SlRyMG9wZE9yTGxSY3pFN1BXaG5jdC1BSDVYTnpMWTRNVGk2QXJZMjMyMWVlSWtuam5PM0FqbzQ?oc=5",
+    "description": "Proposed Texas AI power plants could emit 287 million tons of greenhouse gases annually, report says  KERA News",
+    "date": "2026-07-02T14:12:00.000Z",
+    "sourceId": "following-industry-power-infra",
+    "sourceName": "🔌 Power Infrastructure News",
+    "lang": "en",
+    "category": "Power Infrastructure",
+    "region": "US",
+    "followingIndustry": "power-infra",
+    "followingCompanyIds": [
+      9,
+      20
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1wez3c4": {
+    "id": "id_1wez3c4",
+    "title": "The AMD Ryzen AI Software Suite - Advanced Micro Devices Inc. leans into local AI on PCs - Ad-hoc-news.de",
+    "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQd0wta3JvaU9xRmNzUjYyZXNoTElscGdBQjJoRmdnYWxkX2xKbWJ4aHVzakU5Z1FJNG04TmFFSUhaVWR2UG05cXJGN1NIYmRMT09ORE52c0RQWjdoaUMza2pVejdKU0FhcE5WcXdKNkNqdy0wM3JlLXhUMVFwaTR3SlliWkZueVoxTWJzZG1PNC1TLURpR1BTQW5oYnhWMFlFeHllODYydS16YnlVZkZPMGVxQUI5NHA3U2ZPRS1vVjBYWlJxUUEw?oc=5",
+    "description": "The AMD Ryzen AI Software Suite - Advanced Micro Devices Inc. leans into local AI on PCs  Ad-hoc-news.de",
+    "date": "2026-07-02T14:00:59.000Z",
+    "sourceId": "following-industry-on-device-ai",
+    "sourceName": "📱 On-Device AI News",
+    "lang": "en",
+    "category": "On-Device AI",
+    "region": "US",
+    "followingIndustry": "on-device-ai",
+    "followingCompanyIds": [
+      9,
+      100
+    ],
+    "aiAnalysis": {
+      "translatedTitle": "AMD 라이젠 AI 소프트웨어 스위트: 로컬 AI PC 시장 선점을 향한 전략적 베팅",
+      "summary": [
+        "미국의 반도체 대기업 AMD가 클라우드 의존도를 낮추고 로컬 PC 환경에서 직접 AI를 구동하는 데 최적화된 독자적 생태계 구축 무기인 '라이젠 AI 소프트웨어 스위트(Ryzen AI Software Suite)'를 전면 배포했습니다.",
+        "소프트웨어 개발자들이 복잡한 코딩 없이도 AMD의 하드웨어 NPU 성능을 최대치로 끌어올려 다양한 온디바이스 AI 애플리케이션을 손쉽게 개발할 수 있도록 지원하는 핵심 파운데이션 도구입니다.",
+        "인텔의 코어 울트라(Core Ultra)와 퀄컴에 맞서 하드웨어(칩셋)뿐만 아니라 생태계(소프트웨어) 지배력까지 완벽히 장악하려는 리사 수 CEO의 치밀한 락인(Lock-in) 전략이 본격화되었음을 의미합니다."
+      ],
+      "implications": [
+        "엔비디아가 쿠다(CUDA) 소프트웨어로 클라우드 AI 시장을 평정했듯, 엣지(Edge) 단말기에서의 AI 구동 프레임워크 표준을 선점하는 기업이 수백조 원 규모의 온디바이스 시장을 독식할 전망입니다.",
+        "개발자 친화적인 개방형 AI 생태계를 주도하는 반도체 벤더로 글로벌 자금이 몰려들며, 윈도우 OS 기반의 AI 모델 경량화 솔루션 기업들이 강력한 파트너 수혜주로 부상할 것입니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": true
+  },
+  "id_1o8lmky": {
+    "id": "id_1o8lmky",
+    "title": "Quantum semiconductor design could expand search for dark matter - Phys.org",
+    "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBRU1lnMjB3RS1NRzlBMno4N0xuTEt6SHczai1MUWYwZjh1M1NjUWV6aFZZTGtVUUd6S3UwRldHWE1RdmV5MHFwS21sSTVLSl9RLXhmZXpHWXZwNlpoNFNGVnd5TFdMM3U2N2ZRa2RR?oc=5",
+    "description": "Quantum semiconductor design could expand search for dark matter  Phys.org",
+    "date": "2026-07-02T14:00:03.000Z",
+    "sourceId": "following-industry-semiconductor",
+    "sourceName": "🔬 Semiconductor News",
+    "lang": "en",
+    "category": "Semiconductor",
+    "region": "US",
+    "followingIndustry": "semiconductor",
+    "followingCompanyIds": [
+      9,
+      12
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_5azzhk": {
+    "id": "id_5azzhk",
+    "title": "System Delta 88 welcomes new commander to lead $57B satellite communications programs - ssc.spaceforce.mil",
+    "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOODVibDJUcnhxZHJSOGhlcGZRUXNOX0hEOG5QTWM2YzBuZ19tQ1lyMnhKUmIydk16blRVb3FhaFNrcDVVOXhZY0JuT3JJTWp2VVpMQXdxUzJ2NDllbm1LZVBURXdTcEhUSlZRcnJDd1J2d1pvaVZzdnM2WE9RSTlYdnU5WHEyT3o5d0xXTkdPckoxY3pCUkgxYmtETzF6N1Foc2k4ZHZ4VzdQVnZ3Z0I0M3dnN0FHX0xzOU9URXNEUE9tbktjQlVOTkhOQ2ZlQklVaWpxMThncl9iMmM4SGVRU1RtNnFadw?oc=5",
+    "description": "System Delta 88 welcomes new commander to lead $57B satellite communications programs  ssc.spaceforce.mil",
+    "date": "2026-07-02T13:54:46.000Z",
+    "sourceId": "following-industry-space",
+    "sourceName": "🚀 Space & Defense News",
+    "lang": "en",
+    "category": "Space & Defense",
+    "region": "US",
+    "followingIndustry": "space",
+    "followingCompanyIds": [
+      9,
+      106
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_14q6fym": {
+    "id": "id_14q6fym",
+    "title": "CCRAFT Raises $7.8 Million to Expand Swiss Photonic Chip Foundry - The Quantum Insider",
+    "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPc3pvbW5adGVqcDBlY0xZQmhxMFpoMWloZUZIdkhQbnVRMGRZUkI0Rk1nSEkyUElpZlI2bkdLdkFLRVVpVTRNODcyUHhiY2pnS3RFMWJoNDFWMmRETjl6d1ZrVnJlYl9LMHpTeUdJeGF6dVRBaXBtcUNveTFreHJtNldLRzJDX0JVSncydlZzN01lWXExTlNVdXI3TXRLODV4QTZWZ1F0RGZxallXdm81c1NBYWVQUFVKOERCLW9icjE?oc=5",
+    "description": "CCRAFT Raises $7.8 Million to Expand Swiss Photonic Chip Foundry  The Quantum Insider",
+    "date": "2026-07-02T13:22:48.000Z",
+    "sourceId": "following-industry-semiconductor",
+    "sourceName": "🔬 Semiconductor News",
+    "lang": "en",
+    "category": "Semiconductor",
+    "region": "US",
+    "followingIndustry": "semiconductor",
+    "followingCompanyIds": [
+      9
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1r7ea34": {
+    "id": "id_1r7ea34",
+    "title": "Longsys Hits Monthly Output of One Million Micro SSDs, Fueling Edge AI Expansion - finance.biggo.com",
+    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9odUZTNVhoVERCLUtFRW55WGNCS05YejJOa2hBZjNKS2hxQmUwZGY0ejlIeGlLd3Vud0p2c2VuWFJNZ0M5d1RJSFo5blh5eUdlRVJ4X0pObWpjMUM5c3czNjBmYXpOM3VsRllyOElZUXNFQTMxS2c?oc=5",
+    "description": "Longsys Hits Monthly Output of One Million Micro SSDs, Fueling Edge AI Expansion  finance.biggo.com",
+    "date": "2026-07-02T12:35:00.000Z",
+    "sourceId": "following-industry-on-device-ai",
+    "sourceName": "📱 On-Device AI News",
+    "lang": "en",
+    "category": "On-Device AI",
+    "region": "US",
+    "followingIndustry": "on-device-ai",
+    "followingCompanyIds": [
+      9
+    ],
+    "aiAnalysis": {
+      "translatedTitle": "Longsys 초소형 SSD 월간 생산량 100만 개 돌파, 엣지 AI 디바이스 생태계 대중화 견인",
+      "summary": [
+        "글로벌 메모리 스토리지 기업 Longsys가 온디바이스 AI 처리에 특화된 초소형(Micro) SSD 제품의 월간 생산량 100만 개 돌파라는 상징적인 마일스톤을 달성하며 폭발적인 수요 대응에 나섰습니다.",
+        "클라우드 대신 기기 내부에서 방대한 매개변수(파라미터)의 AI 모델을 직접 읽고 쓰기 위해서는, 기존 eMMC 대비 압도적인 읽기/쓰기 속도와 초저전력을 자랑하는 소형 고성능 낸드 플래시 메모리가 절대적으로 필수적입니다.",
+        "단순히 칩셋의 연산 능력(NPU)을 넘어, 스마트폰과 웨어러블 디바이스의 제한된 물리적 공간 안에 얼마나 더 많은 고속 저장 공간을 구겨 넣을 수 있느냐가 온디바이스 AI 혁명의 새로운 기술적 병목(Bottleneck)으로 작용하고 있습니다."
+      ],
+      "implications": [
+        "온디바이스 AI 확산의 가장 큰 수혜는 NPU 팹리스뿐만 아니라, 모바일 기기당 탑재되는 낸드 플래시와 D램의 용량이 2~3배 급증함에 따른 글로벌 메모리 반도체 소부장(삼성전자, SK하이닉스 등) 생태계로 귀결됩니다.",
+        "초소형 폼팩터 내에서 발열을 통제하고 전력 소모를 최소화하는 첨단 멀티칩 패키징(MCP) 및 방열판(TIM) 소재 기업들의 가치가 기하급수적으로 폭증할 전망입니다."
+      ],
+      "isPremiumCuration": true
+    },
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": true
+  },
+  "id_xyi3km": {
+    "id": "id_xyi3km",
+    "title": "Longsys Reaches One Million Monthly mSSD Capacity - Let's Data Science",
+    "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPb0xBS2hRNW5HYU9tQk51UEd6aHJoLUpHUTFmR0ZGcjJkWm5zbUI2d1RZVkhaM1J0cGZaQW5Mdi00WkFHZzZQU2hSSzhfSlBhZUE3aDQ2cUU5bGJmUTNjY3p6MWI4aW5DMjRlcjJQbWROM0dxOUJJNjBqRGRKa1doSkloaTMyQlVsTmo2RnN6Z0VmWkNJclE?oc=5",
+    "description": "Longsys Reaches One Million Monthly mSSD Capacity  Let's Data Science",
+    "date": "2026-07-02T12:26:20.000Z",
+    "sourceId": "following-industry-on-device-ai",
+    "sourceName": "📱 On-Device AI News",
+    "lang": "en",
+    "category": "On-Device AI",
+    "region": "US",
+    "followingIndustry": "on-device-ai",
+    "followingCompanyIds": [
+      9
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_6zice": {
+    "id": "id_6zice",
+    "title": "Forget silicon. Diamond may be the next semiconductor material - Chemical & Engineering News",
+    "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPZU9SSS1ITWVzMkRnU3BiSURCaWlNdjExZjVmUERJcUxOTjNJaWYwWlROQTdPQm9xX3dXcVN1bm9Gbk9NRXVZbnA1cU5abTlZNWV2VEFZT0NFZUJwcUZFRFBYcFlIaXFvVzZ6c2hkS2ktTmtMNkJiM3owYWxFeU9LSG8tVW9NcFFjc2NCZ1ZOaHhvVWEwQmU5d1hrcE1NZEZBa0VDTDNiMzFzclVz?oc=5",
+    "description": "Forget silicon. Diamond may be the next semiconductor material  Chemical & Engineering News",
+    "date": "2026-07-02T12:07:25.000Z",
+    "sourceId": "following-industry-semiconductor",
+    "sourceName": "🔬 Semiconductor News",
+    "lang": "en",
+    "category": "Semiconductor",
+    "region": "US",
+    "followingIndustry": "semiconductor",
+    "followingCompanyIds": [
+      9,
+      12
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_rksg1z": {
+    "id": "id_rksg1z",
+    "title": "Hungary threatens clampdown on EV battery industry after pollution case - Automotive News",
+    "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVVNuREtOUlUzalZBVEt0QUtsek9OUzNENW50NUdfMklIQzhQS1BhVzVZSDZVMmc2ZmdLZVZkekt3cjZnMDl3VHYwT3M0MGZKQXY3Wkp2VEg4dXVnWkVBcTdMWGZkcm1VakQ2VkQxWlpaY0tPeFdQSW9uUV9Tc1VJSVJTaUE3VFZCSURkLUR2RXR6Vk85aUw2Qm4ycVc?oc=5",
+    "description": "Hungary threatens clampdown on EV battery industry after pollution case  Automotive News",
+    "date": "2026-07-02T11:54:00.000Z",
+    "sourceId": "following-industry-battery",
+    "sourceName": "🔋 Secondary Battery News",
+    "lang": "en",
+    "category": "Secondary Battery",
+    "region": "US",
+    "followingIndustry": "battery",
+    "followingCompanyIds": [
+      9,
+      12
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_14sqy8a": {
+    "id": "id_14sqy8a",
+    "title": "\"PS5 Will Be My Last Console\": After 45K Votes, 86% of DF Viewers Say Sony Should Reconsider Killing Physical Games - Digital Foundry",
+    "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPeUx5QlhBYWdTZ0QzTEJyUUdPbjl6cjNELUFzQXlEcHpncTM1cE5XcWFwbkdfTXlLVWg3YXZRNVFCeV9pSlFGNlhXell4SGwyZlZHYjhmbzU5Q05JaXVjQW04SGRXbVdtSkZReWtMaE9zTE1fSWVEUGd4ZkRHdEI0YVhVOEQ1NEJwaklTQ2Zzc3RPZnBnVlh6TnBlOTA1d044Ym5uNVJIdkNuOUFJZ3RJTFFyQjJOOXo5TmVhYXlUQ2U0cDkxOExhYnhSc056SUs0Y1ByczNKTS1aMzZsX09qbXhkalhrWTlTLTZGdG5OMzBPVDQ?oc=5",
+    "description": "\"PS5 Will Be My Last Console\": After 45K Votes, 86% of DF Viewers Say Sony Should Reconsider Killing Physical Games  Digital Foundry",
+    "date": "2026-07-02T11:00:00.000Z",
+    "sourceId": "following-industry-semiconductor",
+    "sourceName": "🔬 Semiconductor News",
+    "lang": "en",
+    "category": "Semiconductor",
+    "region": "US",
+    "followingIndustry": "semiconductor",
+    "followingCompanyIds": [
+      9,
+      12
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_ukzan6": {
+    "id": "id_ukzan6",
+    "title": "One of the best 4th of July deals drop Acer's latest Swift Go 2K touchscreen 32GB RAM Copilot+ PC down to $900 ($650 off) - 9to5Toys",
+    "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPcXRUZENTVFo3ZEhKdEN4dUpEbHlseGdfWHpHUndTR2pKbmxRd09PWk1xSGNBdjJIUTZhdFhpd2lmTndWTDBCam5GSGRmYkZnbDlOYkc4VmxCeWNuV3VRXzlIMlhZenkxWEx1bENYMzVqd2xKbk1CVlJQSFBuTFBUUFlVT2dtWGxxVXp6cTRIMlRuS09sdmVzZGwzbm00bEJnMlVyQ2Q0YVVFemM?oc=5",
+    "description": "One of the best 4th of July deals drop Acer's latest Swift Go 2K touchscreen 32GB RAM Copilot+ PC down to $900 ($650 off)  9to5Toys",
+    "date": "2026-07-02T10:49:00.000Z",
+    "sourceId": "following-industry-on-device-ai",
+    "sourceName": "📱 On-Device AI News",
+    "lang": "en",
+    "category": "On-Device AI",
+    "region": "US",
+    "followingIndustry": "on-device-ai",
+    "followingCompanyIds": [
+      9
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1rru8tm": {
+    "id": "id_1rru8tm",
+    "title": "HP Philippines unveils new AI PCs, workplace solutions - speed.ph",
+    "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1uODJ3ZkoxS293dzUwWU9XOVZ1cUV2ekpIN2dTTUFhb1NXYktVODNmSExqbm53N25IVXBaOEs2V3lKWlp5Qjk2X1pmN2RSNVhBa0VIOXZqREtxZE9DRlF2VHFVVG03Qy14NkwyX3JaaEZIU2tSVy1Zdg?oc=5",
+    "description": "HP Philippines unveils new AI PCs, workplace solutions  speed.ph",
+    "date": "2026-07-02T02:23:15.000Z",
+    "sourceId": "following-industry-on-device-ai",
+    "sourceName": "📱 On-Device AI News",
+    "lang": "en",
+    "category": "On-Device AI",
+    "region": "US",
+    "followingIndustry": "on-device-ai",
+    "followingCompanyIds": [
+      9,
+      20
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_10sibro": {
+    "id": "id_10sibro",
+    "title": "Your next computer won’t wait for you: inside the AI agent PC race - Ynetnews",
+    "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE41Rnh4RHRZOENNcjhWaFhqcXVReFNCck16R1E4c2NQUDJjbW4xVjJVMkVsTXNpeWxsOU1NRW1jZkFvdl80OS02Ri00Y3JzbXZ1ajZSaTA5Yi1nZDg1SWNadTQ1Wk9DNDB0MmpIWA?oc=5",
+    "description": "Your next computer won’t wait for you: inside the AI agent PC race  Ynetnews",
+    "date": "2026-07-01T23:50:18.000Z",
+    "sourceId": "following-industry-on-device-ai",
+    "sourceName": "📱 On-Device AI News",
+    "lang": "en",
+    "category": "On-Device AI",
+    "region": "US",
+    "followingIndustry": "on-device-ai",
+    "followingCompanyIds": [
+      9,
+      12,
+      70
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1bcy0fs": {
+    "id": "id_1bcy0fs",
+    "title": "Texas leads nation in proposed power plants for data centers, which would emit large amounts of greenhouse gases - The Texas Tribune",
+    "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOZkVxblhJLUZJN2dHX205aW5EVEZEdmNwZzZVWU1GZFl1cjFOQi1uQ2lSS0szejdKX1kzTkFZb3g0ZDBPMkhXOGNlQ0RWclJPRDl4Qm93SFcxT0FyY1RMY1Y2M0ZtQnh2T2hwb3U3UEVmNTFaVnVrMnNyYVZQMmVQR2NiWkN0TGs?oc=5",
+    "description": "Texas leads nation in proposed power plants for data centers, which would emit large amounts of greenhouse gases  The Texas Tribune",
+    "date": "2026-07-01T19:14:31.000Z",
+    "sourceId": "following-industry-power-infra",
+    "sourceName": "🔌 Power Infrastructure News",
+    "lang": "en",
+    "category": "Power Infrastructure",
+    "region": "US",
+    "followingIndustry": "power-infra",
+    "followingCompanyIds": [
+      9,
+      12,
+      20
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1xngj51": {
+    "id": "id_1xngj51",
+    "title": "Will AI PCs reduce enterprise dependence on the cloud? - Spiceworks",
+    "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPcllTRjVlS3hLM3RxQ0NXT2E4ZGRwZHg0ZTloNHJrSWdvaEIzanRTVGdQMnE2Rmd6U0FVd21oUVVqbU1YQ3YxUDVLdGx3bm5lRkVQZHVNWXQ3aFk2SnE0Q0tSYVNQRTBuR3VFeHRLNzdIbklOd2JDSWhNaVYyd2F4NExiVG11bVpwdzNiXzl1YzlrUFpVU19PLQ?oc=5",
+    "description": "Will AI PCs reduce enterprise dependence on the cloud?  Spiceworks",
+    "date": "2026-07-01T13:46:59.000Z",
+    "sourceId": "following-industry-on-device-ai",
+    "sourceName": "📱 On-Device AI News",
+    "lang": "en",
+    "category": "On-Device AI",
+    "region": "US",
+    "followingIndustry": "on-device-ai",
+    "followingCompanyIds": [
+      9,
+      12
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1ie19zh": {
+    "id": "id_1ie19zh",
+    "title": "NuScale Power to Hold Second Quarter 2026 Earnings Conference Call - NuScale Power",
+    "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPSGNrUWxDMmRlTktNLVB5b2FlZkViMTJlbW9QaFdZdzF4aHNaZ2taT3ZkSXBvVzFfdjlLWncwQkZGS0FKTE1pcDZRM3FMVVB0RDVDbWRXendodTh6U0NTVkRkdTlDN3JIVTJVclM4OWxjTW9Zd3docTBNV1oxQnNod3I0c0JGNFkzeVJVOTRILXF6M1hvZmxYdE9IUXd6V2JzbFBuXzZCOERfMFlxSXRVNnFPZXBZZ9IBxgFBVV95cUxNR0dtdDYySEtSNkdyUVBDQkhZVnNsR29qRENrbTFaUEY3T2syYkRnTEU5X25uSkp0SnFBUFhHUDlnbnl5V2hNOERjSmVrRFoxMEdaNFNWbjJPSHNINHd6b3RnYWJsVkpPWndxN1pZdUU5blEwamJOWGlXdF9BdWIwOV9JeVE2T092dU1yaTZzRF9rOE42bGZzeDlzS0FRZzJ3LVowaVBPTVNtb194TkpQQlhmM184R0FRWFlxU3ZHVlNNQXNvRHc?oc=5",
+    "description": "NuScale Power to Hold Second Quarter 2026 Earnings Conference Call  NuScale Power",
+    "date": "2026-07-01T12:11:15.000Z",
+    "sourceId": "following-industry-nuclear",
+    "sourceName": "⚡ Nuclear & Energy News",
+    "lang": "en",
+    "category": "Nuclear & Energy",
+    "region": "US",
+    "followingIndustry": "nuclear",
+    "followingCompanyIds": [
+      9,
+      12,
+      64
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_18or27h": {
+    "id": "id_18or27h",
+    "title": "Tesla: Execution Risks Mount (NASDAQ:TSLA) - Seeking Alpha",
+    "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBVTkRwclR2WWI2blBpb1o0cHZYTjRVRU10VnVUWGN0dUlIN3FYbVNXZ1BvUkp4ZWxtdDFDcnRNSWh3bGdJV0NTWEhwcUV5R3p0OVJKTGplMEx3U1pSQnFfS3VqWHQ1azJpVk9GV2VfLTY1WTJiLTZj?oc=5",
+    "description": "Tesla: Execution Risks Mount (NASDAQ:TSLA)  Seeking Alpha",
+    "date": "2026-07-01T00:00:23.000Z",
+    "sourceId": "following-company-2",
+    "sourceName": "[TSLA] Tesla",
+    "lang": "en",
+    "category": "autonomous",
+    "region": "US",
+    "followingIndustry": "autonomous",
+    "followingCompanyIds": [
+      2
+    ],
+    "companyTicker": "TSLA",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_11f1m03": {
+    "id": "id_11f1m03",
+    "title": "CEG or DUK: Which Stock Deserves to Be in Your Portfolio Now? - The Globe and Mail",
+    "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQanRmSTFPXzlVS1VMQzk1TlpJNk1SYlpZRUdVNDZuTTJjbmJ1b3RzZEEyVzYzMDd6NmlCYnZKUTBUcFc3a1JSUmtyTHVldUJEZ0J3ZUJmWXBfV2NXYlA0S04tVzNOUDcwQWJhZG85QUl1QUZBOWZ4Rk9oeTNVUmo4RnlWVEFyVXQwT3JuMUpSVzljd0NQeElJMWdOckNfcG04ejNtcmpUQ1llTXRMNDRJdVkwd1NkRlFLLXhaeUhKZEp0LVRUMld6Ulp4ZXhQbW51UWlrdzJYS01GNGs?oc=5",
+    "description": "CEG or DUK: Which Stock Deserves to Be in Your Portfolio Now?  The Globe and Mail",
+    "date": "2026-06-30T16:00:00.000Z",
+    "sourceId": "following-company-66",
+    "sourceName": "[CEG] Constellation Energy",
+    "lang": "en",
+    "category": "nuclear",
+    "region": "US",
+    "followingIndustry": "nuclear",
+    "followingCompanyIds": [
+      66
+    ],
+    "companyTicker": "CEG",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_13ys7w5": {
+    "id": "id_13ys7w5",
+    "title": "Lenovo cuts Yoga Slim 7x Copilot+ price - Let's Data Science",
+    "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOQW5XMWNNcXVBMHdOTWFHN3BHbjVXSHpQb3d4b3hva3FuSkxaTzYxU1hvSXdKRi0tUHNKaUdFNkRlWVBMenludzBGLU9NX2pOZlRhUU5Mc1dXektKNE1IOXNkZ3pRVE8tdVZnM0s5eUNCLVpQcDk2Q3pvenIyeWR6Nk9lbmtqcUE?oc=5",
+    "description": "Lenovo cuts Yoga Slim 7x Copilot+ price  Let's Data Science",
+    "date": "2026-06-30T10:45:05.000Z",
+    "sourceId": "following-industry-on-device-ai",
+    "sourceName": "📱 On-Device AI News",
+    "lang": "en",
+    "category": "On-Device AI",
+    "region": "US",
+    "followingIndustry": "on-device-ai",
+    "followingCompanyIds": [],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_o1iqbz": {
+    "id": "id_o1iqbz",
+    "title": "Microsoft keeps reinstalling Copilot, but this Group Policy removes it for good - MSN",
+    "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNX2praERPUEw2WXc1RHpCSS1Xb1ZRVDNON2plNHFQeVQ2aTYyajMtOGVZUTk5YXFNYmdpMGNzSXZFQUxPeDV6YVU4ckcxMkNrTXoydmRqRVhEQzBtWUpVRGpraDNORWlzaEhXVkJJSWZ0c1VSRWh5M3UwRU1RbTZfZWt5X09YU2VsRzVDd1A3ZmtMZ1pOeXhLNmJxMXQwSEJnR0laV2FmSjJEOTBJMDNieW9tVUROQTFTa0gxNzJCVmpLQ19WU3J5ZzFvU1BNam8tNS1QSm9OUFg3aHRv?oc=5",
+    "description": "Microsoft keeps reinstalling Copilot, but this Group Policy removes it for good  MSN",
+    "date": "2026-06-30T08:46:48.000Z",
+    "sourceId": "following-industry-on-device-ai",
+    "sourceName": "📱 On-Device AI News",
+    "lang": "en",
+    "category": "On-Device AI",
+    "region": "US",
+    "followingIndustry": "on-device-ai",
+    "followingCompanyIds": [],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1fqg052": {
+    "id": "id_1fqg052",
+    "title": "\"My Agent in Your Hand\"... Smartphones Join PCs as AI Control Centers - 아시아경제",
+    "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9VelRwVW1mZEN2SlBRWG80SXlpY3hZOE5LVU1WRjR0UFdHOEhnTEtWN0ZUSmh2dWY5aVlPcWlOaHJCSWcyYm5SZTdSSXdadFdkMjY3UzU4LXc0UHpONTAtNmVnZ1BaT25j?oc=5",
+    "description": "\"My Agent in Your Hand\"... Smartphones Join PCs as AI Control Centers  아시아경제",
+    "date": "2026-06-30T07:56:30.000Z",
+    "sourceId": "following-industry-on-device-ai",
+    "sourceName": "📱 On-Device AI News",
+    "lang": "en",
+    "category": "On-Device AI",
+    "region": "US",
+    "followingIndustry": "on-device-ai",
+    "followingCompanyIds": [
+      9,
+      12,
+      47
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_7nfab6": {
+    "id": "id_7nfab6",
+    "title": "TSLA Stock Trims Losses Overnight: Tesla Cybercab Starts Austin Tests Without ‘Steering Wheel Or Pedals’ - TradingView",
+    "link": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxPTWFYaFFrQ185cnFOdF9kMFRNZ2stRHpwaXZZVm0xV1o3Nmh5NFZSWTR5Wkx1RERObDVpTzMyQWZnblFnX3RNdEItcjl6aUJQVVdTbXIzU2dhWFZlU01VMFMxOWZ3TE10bHFia1hFZVgtQUx4VkhBU3M5UXVNcEYwc2o1RExUTUlReVRtNjJpakFkMUhKbFF5RzZ6eTctNnpaTmJIMWNmUmxVbDhReUZlWC1KRFBaUi14UVpQdzRqMDluOXZZNHFlZTNkZGtYaXNPWVlqSUplMGRJaDJubzJLUS1KTVBhSFhDRVNVSi1qSmt6RTBI?oc=5",
+    "description": "TSLA Stock Trims Losses Overnight: Tesla Cybercab Starts Austin Tests Without ‘Steering Wheel Or Pedals’  TradingView",
+    "date": "2026-06-30T06:17:00.000Z",
+    "sourceId": "following-company-2",
+    "sourceName": "[TSLA] Tesla",
+    "lang": "en",
+    "category": "autonomous",
+    "region": "US",
+    "followingIndustry": "autonomous",
+    "followingCompanyIds": [
+      2
+    ],
+    "companyTicker": "TSLA",
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_18w78ea": {
+    "id": "id_18w78ea",
+    "title": "Chrome Has Been Secretly Downloading AI to Your Computer. Here's What You Can Do - cnet.com",
+    "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNOUFCaUVUWXV0TDk2Z1VBS1ZVVkgzNHBEbFNCbERTbDN1VWRaU25MREZfR3N3Zmh0aHB6YW9QV3FBNWpxR2ljRngtdHh4eHphWUd0V1BVME5KNWpFdDVEMTFHa1JSRU82UUZUcXZfZnVuYjdBSnhNNjVLN3J1OFhiMjlYZmhfcFNYb0YwREpza3B6YTllNnktb01yb2pSYktDbkRnM1dVS2Q4Z2NrOWg4SWJfLVNFblA1UDZMR2lLRGpsSG1RbGhXUw?oc=5",
+    "description": "Chrome Has Been Secretly Downloading AI to Your Computer. Here's What You Can Do  cnet.com",
+    "date": "2026-06-29T15:00:00.000Z",
+    "sourceId": "following-industry-on-device-ai",
+    "sourceName": "📱 On-Device AI News",
+    "lang": "en",
+    "category": "On-Device AI",
+    "region": "US",
+    "followingIndustry": "on-device-ai",
+    "followingCompanyIds": [
+      12,
+      37
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_104oh19": {
+    "id": "id_104oh19",
+    "title": "“As We Look Ahead to 2026, AI Will Be At The Core Of Our Innovation Strategy At Acer” - digital terminal",
+    "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQT09PaGthOHFUbkhad1lhOFV3aFhFMEVXY0ZRT0hJTHRkb3RaT0tTS256a3piSHk4SHNSamQ0dkY2YXlrY09wUEFOWllRTUhsa3RsTXNBMk1Nc1NCdnhUTHZWT3BkVGlPUUtfUGJldDh0d2NSdjJmQWZOWGhUSnF3MXJiWGJra2tLSzg0Y2N6d0VUUkFGTndLbnkwUUpCYjdyV3hGbDFsNVlrdFRPbWE0d3MxUjVkMTlmNWpn0gHIAUFVX3lxTFBWNXZnZEZEbFd5MldXTTRpbi1UaWIwcll4X3o0ckhzN1pDZjBzSzRrallVU1FGR19acEs3aU1ja0I4RkhPUWVkRUt3a25kYnRJc0J1eHUtNWhfTXFndEpmck5paFdQcUcySk5JLTV2N3dsSkNITEUtdXJqVEtQLW5jN01nM2RROUVWZXU1UHdaQXR2Ylg2dTE0aG9fblAtbnhwb3pKejJTcEk5RW9RN0tNRTVOYl9UNV9lWHhWdUl1aEZEQnZRM21L?oc=5",
+    "description": "“As We Look Ahead to 2026, AI Will Be At The Core Of Our Innovation Strategy At Acer”  digital terminal",
+    "date": "2026-06-29T09:03:19.000Z",
+    "sourceId": "following-industry-on-device-ai",
+    "sourceName": "📱 On-Device AI News",
+    "lang": "en",
+    "category": "On-Device AI",
+    "region": "US",
+    "followingIndustry": "on-device-ai",
+    "followingCompanyIds": [
+      9,
+      12
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_1vvxaum": {
+    "id": "id_1vvxaum",
+    "title": "AI’s next phase: From memory winners to efficiency enablers - FXStreet",
+    "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOc0hDYXVmdjdUVWxJMTUyQ1V4bE5RVGxtZHlqWjVxX0p1NjBrMTVhcllscFlNU2tCVEZSSk05UFRuU2pWbURBMi00WGxMajBsdzhDVE1qVGtsWUVycENHb2oxVzZqTl9MMl9CN1RzTjEwT3VoMXRKcV93YWdaeWRSODZIaFpHVDNiRFNDV0xXZ203RHpOZE5ZcEpqVUJLRGozcVE?oc=5",
+    "description": "AI’s next phase: From memory winners to efficiency enablers  FXStreet",
+    "date": "2026-06-29T07:31:36.000Z",
+    "sourceId": "following-industry-on-device-ai",
+    "sourceName": "📱 On-Device AI News",
+    "lang": "en",
+    "category": "On-Device AI",
+    "region": "US",
+    "followingIndustry": "on-device-ai",
+    "followingCompanyIds": [],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_265s0z": {
+    "id": "id_265s0z",
+    "title": "The Qualcomm AI Hub from Qualcomm Inc. - one code base for phones and PCs - Ad-hoc-news.de",
+    "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNejJuRm5FcHpVV3V2SFJQUXM0aVNpT2QyT09PNzZQYnZWRXAtVC1OZm9GZWJZQXFRMzhnZFdUdURGT3FDSXRxTmtTNHo2R1RDdDMtYjNJc3ByRkhodnVodUM4RkVFMzQzY2tiRVM3cnhCcmFSb1daVlBwU2pBeXdGUkJRT25YS09lamJTN0w3cWFiTUx5VXowaU4xZThEdnVOS3dWXy1ULVpBMVFuQ3RqQUlvQVlidDNRQzF0TGJqaGpzYmV2aVNkUw?oc=5",
+    "description": "The Qualcomm AI Hub from Qualcomm Inc. - one code base for phones and PCs  Ad-hoc-news.de",
+    "date": "2026-06-29T02:31:51.000Z",
+    "sourceId": "following-industry-on-device-ai",
+    "sourceName": "📱 On-Device AI News",
+    "lang": "en",
+    "category": "On-Device AI",
+    "region": "US",
+    "followingIndustry": "on-device-ai",
+    "followingCompanyIds": [
+      5,
+      9,
+      47
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_sru366": {
+    "id": "id_sru366",
+    "title": "Microsoft launches cheaper Surface models but faces value concerns - MSN",
+    "link": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxQZzlhNkoyV1ByOG5KNkREOFhIYktUN1JQSDF0RzJsRjl6S2dtcFdvZmRKSHFhVEN1ZEFIaFk1YWJhZDVER1ZnNWN0cDNpV0JOYVVHaGFzang4WWtOLTUyOE9HbTNFbGtCNUNhT3Jhc1ZBR0QtYm80OGtWSnJsUHdPMHZmTno0Y251MS1jM2d0THhJR2xBZGJ1RGxXbkZmWWJEaGhKdzFPTTZxOHZHVzdQclNtdFlnYWdnbHVnTjZUSXVaTjFZZUJ0TlU0QXlSQVJkbU15Q19yenpCMG5VWk90OC1lZUV1T3AzRTVQRmpkaDdhcnFXa0ZPY19WYjQ?oc=5",
+    "description": "Microsoft launches cheaper Surface models but faces value concerns  MSN",
+    "date": "2026-06-28T15:12:45.000Z",
+    "sourceId": "following-industry-on-device-ai",
+    "sourceName": "📱 On-Device AI News",
+    "lang": "en",
+    "category": "On-Device AI",
+    "region": "US",
+    "followingIndustry": "on-device-ai",
+    "followingCompanyIds": [
+      9
+    ],
+    "aiAnalysis": null,
+    "specialistScore": 0,
+    "specialistAnalysis": null,
+    "isCurated": false
+  },
+  "id_4082ol": {
+    "id": "id_4082ol",
+    "title": "Microsoft unveils cheaper Surface models with 8GB RAM trade-off - MSN",
+    "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPVU9FaFVOeFczMmEyUFY5bjgwUVJQZnhVYU1Wb0pOYWVJZ1QtR2ZvYnVnVlM3TE5KbUJ2YVNzengzR3REUi1rN3hrYjR5dlk5WEN4N3IzcjBRa0UxRV80YjVKWml3XzZJSUpxTDVOdW1zei1CX0N2eVdhaWMwVzEyc1FRUklNSi0zYkN3ZFhFQ0lCc1lza3lqV1NWNDNrcjc1c0tDOUs1cE5NVjRBZzB6dHJaTmtueUJCVEJaX3pPMS12QWxDTHk3MnhSdVVuT3RoaXRsYmZCemtkbVNtRXhMdXpXeFJLVzFMZmZWRV9MQlNGSjVFamhRMg?oc=5",
+    "description": "Microsoft unveils cheaper Surface models with 8GB RAM trade-off  MSN",
+    "date": "2026-06-28T15:12:45.000Z",
+    "sourceId": "following-industry-on-device-ai",
+    "sourceName": "📱 On-Device AI News",
+    "lang": "en",
+    "category": "On-Device AI",
+    "region": "US",
+    "followingIndustry": "on-device-ai",
+    "followingCompanyIds": [],
     "aiAnalysis": null,
     "specialistScore": 0,
     "specialistAnalysis": null,

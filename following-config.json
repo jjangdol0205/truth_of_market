@@ -6,8 +6,32 @@
       "nameEn": "Autonomous Driving",
       "emoji": "🚗",
       "color": "#3b82f6",
-      "searchKeywords": ["autonomous driving", "self-driving", "robotaxi", "ADAS", "lidar", "waymo", "autonomous vehicle"],
-      "companyIds": [1, 2, 3, 4, 5, 6, 7, 8, 9, 44, 45, 46, 47, 48, 49]
+      "searchKeywords": [
+        "autonomous driving",
+        "self-driving",
+        "robotaxi",
+        "ADAS",
+        "lidar",
+        "waymo",
+        "autonomous vehicle"
+      ],
+      "companyIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ]
     },
     {
       "id": "robotics",
@@ -15,8 +39,26 @@
       "nameEn": "Robotics & Automation",
       "emoji": "🤖",
       "color": "#8b5cf6",
-      "searchKeywords": ["robotics", "automation", "humanoid robot", "industrial robot", "AI robot", "collaborative robot", "cobot"],
-      "companyIds": [1, 10, 11, 12, 13, 14, 15, 16, 17]
+      "searchKeywords": [
+        "robotics",
+        "automation",
+        "humanoid robot",
+        "industrial robot",
+        "AI robot",
+        "collaborative robot",
+        "cobot"
+      ],
+      "companyIds": [
+        1,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
     },
     {
       "id": "space",
@@ -24,8 +66,34 @@
       "nameEn": "Space & Defense",
       "emoji": "🚀",
       "color": "#06b6d4",
-      "searchKeywords": ["SpaceX", "space launch", "satellite", "space exploration", "defense", "UAV", "drone defense", "space economy"],
-      "companyIds": [17, 18, 19, 20, 21, 22, 24, 25, 26, 27, 28, 50, 51, 52, 53, 54]
+      "searchKeywords": [
+        "SpaceX",
+        "space launch",
+        "satellite",
+        "space exploration",
+        "defense",
+        "UAV",
+        "drone defense",
+        "space economy"
+      ],
+      "companyIds": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        24,
+        25,
+        26,
+        27,
+        28,
+        50,
+        51,
+        52,
+        53,
+        54
+      ]
     },
     {
       "id": "crypto",
@@ -33,8 +101,38 @@
       "nameEn": "Crypto & Blockchain",
       "emoji": "₿",
       "color": "#f59e0b",
-      "searchKeywords": ["bitcoin", "cryptocurrency", "blockchain", "crypto mining", "stablecoin", "DeFi", "web3", "digital asset"],
-      "companyIds": [29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 55, 56, 57, 58, 59]
+      "searchKeywords": [
+        "bitcoin",
+        "cryptocurrency",
+        "blockchain",
+        "crypto mining",
+        "stablecoin",
+        "DeFi",
+        "web3",
+        "digital asset"
+      ],
+      "companyIds": [
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        55,
+        56,
+        57,
+        58,
+        59
+      ]
     },
     {
       "id": "nuclear",
@@ -42,8 +140,28 @@
       "nameEn": "Nuclear & Energy",
       "emoji": "⚡",
       "color": "#10b981",
-      "searchKeywords": ["nuclear power", "SMR", "small modular reactor", "nuclear energy", "uranium", "clean energy", "power grid", "data center power"],
-      "companyIds": [60, 61, 62, 63, 64, 65, 66, 67, 68, 69]
+      "searchKeywords": [
+        "nuclear power",
+        "SMR",
+        "small modular reactor",
+        "nuclear energy",
+        "uranium",
+        "clean energy",
+        "power grid",
+        "data center power"
+      ],
+      "companyIds": [
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69
+      ]
     },
     {
       "id": "power-infra",
@@ -51,8 +169,28 @@
       "nameEn": "Power Infrastructure",
       "emoji": "🔌",
       "color": "#f97316",
-      "searchKeywords": ["power infrastructure", "electrical grid", "data center power", "switchgear", "power distribution", "electrical construction", "grid upgrade", "utility infrastructure"],
-      "companyIds": [70, 71, 72, 73, 74, 75, 76, 77, 78, 79]
+      "searchKeywords": [
+        "power infrastructure",
+        "electrical grid",
+        "data center power",
+        "switchgear",
+        "power distribution",
+        "electrical construction",
+        "grid upgrade",
+        "utility infrastructure"
+      ],
+      "companyIds": [
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79
+      ]
     },
     {
       "id": "battery",
@@ -60,104 +198,966 @@
       "nameEn": "Secondary Battery",
       "emoji": "🔋",
       "color": "#ec4899",
-      "searchKeywords": ["EV battery", "secondary battery", "lithium ion", "LFP", "solid state battery", "cathode", "anode", "battery recycling", "배터리", "이차전지", "양극재", "음극재", "전고체"],
-      "companyIds": [80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95]
+      "searchKeywords": [
+        "EV battery",
+        "secondary battery",
+        "lithium ion",
+        "LFP",
+        "solid state battery",
+        "cathode",
+        "anode",
+        "battery recycling",
+        "배터리",
+        "이차전지",
+        "양극재",
+        "음극재",
+        "전고체"
+      ],
+      "companyIds": [
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95
+      ]
+    },
+    {
+      "id": "on-device-ai",
+      "name": "온디바이스AI",
+      "nameEn": "On-Device AI",
+      "emoji": "📱",
+      "color": "#8b5cf6",
+      "searchKeywords": [
+        "on-device AI",
+        "edge AI",
+        "AI PC",
+        "AI smartphone",
+        "NPU",
+        "온디바이스 AI",
+        "AI device"
+      ],
+      "companyIds": [
+        96,
+        97,
+        98,
+        99,
+        100,
+        101
+      ]
+    },
+    {
+      "id": "semiconductor",
+      "name": "반도체",
+      "nameEn": "Semiconductor",
+      "emoji": "🔬",
+      "color": "#3b82f6",
+      "searchKeywords": [
+        "semiconductor",
+        "foundry",
+        "wafer",
+        "memory chip",
+        "HBM",
+        "EUV",
+        "advanced packaging",
+        "반도체",
+        "파운드리"
+      ],
+      "companyIds": [
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110
+      ]
     }
   ],
   "companies": [
-    { "id": 1, "name": "Nvidia", "ticker": "NVDA", "exchange": "NASDAQ", "industry": "autonomous", "searchQuery": "Nvidia NVDA GPU AI chip" },
-    { "id": 2, "name": "Tesla", "ticker": "TSLA", "exchange": "NASDAQ", "industry": "autonomous", "searchQuery": "Tesla TSLA autonomous FSD robotaxi" },
-    { "id": 3, "name": "Alphabet (Waymo)", "ticker": "GOOGL", "exchange": "NASDAQ", "industry": "autonomous", "searchQuery": "Waymo Alphabet Google autonomous driving" },
-    { "id": 4, "name": "Uber", "ticker": "UBER", "exchange": "NYSE", "industry": "autonomous", "searchQuery": "Uber UBER autonomous ride-hailing robotaxi" },
-    { "id": 5, "name": "Qualcomm", "ticker": "QCOM", "exchange": "NASDAQ", "industry": "autonomous", "searchQuery": "Qualcomm QCOM automotive chip ADAS" },
-    { "id": 6, "name": "Mobileye", "ticker": "MBLY", "exchange": "NASDAQ", "industry": "autonomous", "searchQuery": "Mobileye MBLY ADAS self-driving chip" },
-    { "id": 7, "name": "Aptiv", "ticker": "APTV", "exchange": "NYSE", "industry": "autonomous", "searchQuery": "Aptiv APTV automotive technology" },
-    { "id": 8, "name": "NXP Semiconductors", "ticker": "NXPI", "exchange": "NASDAQ", "industry": "autonomous", "searchQuery": "NXP Semiconductors NXPI automotive chip" },
-    { "id": 9, "name": "ON Semiconductor", "ticker": "ON", "exchange": "NASDAQ", "industry": "autonomous", "searchQuery": "ON Semiconductor automotive EV chip" },
-    { "id": 10, "name": "Intuitive Surgical", "ticker": "ISRG", "exchange": "NASDAQ", "industry": "robotics", "searchQuery": "Intuitive Surgical ISRG da Vinci surgical robot" },
-    { "id": 11, "name": "Symbotic", "ticker": "SYM", "exchange": "NASDAQ", "industry": "robotics", "searchQuery": "Symbotic SYM warehouse robot automation" },
-    { "id": 12, "name": "Teradyne", "ticker": "TER", "exchange": "NASDAQ", "industry": "robotics", "searchQuery": "Teradyne TER collaborative robot Universal Robots" },
-    { "id": 13, "name": "Rockwell Automation", "ticker": "ROK", "exchange": "NYSE", "industry": "robotics", "searchQuery": "Rockwell Automation ROK industrial automation" },
-    { "id": 14, "name": "Zebra Technologies", "ticker": "ZBRA", "exchange": "NASDAQ", "industry": "robotics", "searchQuery": "Zebra Technologies ZBRA enterprise automation" },
-    { "id": 15, "name": "UiPath", "ticker": "PATH", "exchange": "NYSE", "industry": "robotics", "searchQuery": "UiPath PATH RPA automation AI" },
-    { "id": 16, "name": "Cognex", "ticker": "CGNX", "exchange": "NASDAQ", "industry": "robotics", "searchQuery": "Cognex CGNX machine vision industrial" },
-    { "id": 17, "name": "AeroVironment", "ticker": "AVAV", "exchange": "NASDAQ", "industry": "space", "searchQuery": "AeroVironment AVAV drone UAV defense" },
-    { "id": 18, "name": "Nvidia (Space AI)", "ticker": "NVDA", "exchange": "NASDAQ", "industry": "space", "searchQuery": "Nvidia space AI computing satellite" },
-    { "id": 19, "name": "Rocket Lab USA", "ticker": "RKLB", "exchange": "NASDAQ", "industry": "space", "searchQuery": "Rocket Lab RKLB launch satellite" },
-    { "id": 20, "name": "Planet Labs", "ticker": "PL", "exchange": "NYSE", "industry": "space", "searchQuery": "Planet Labs PL earth observation satellite" },
-    { "id": 21, "name": "Viasat", "ticker": "VSAT", "exchange": "NASDAQ", "industry": "space", "searchQuery": "Viasat VSAT satellite broadband" },
-    { "id": 22, "name": "Kratos Defense & Security", "ticker": "KTOS", "exchange": "NASDAQ", "industry": "space", "searchQuery": "Kratos KTOS defense drone satellite" },
-    { "id": 24, "name": "L3Harris Technologies", "ticker": "LHX", "exchange": "NYSE", "industry": "space", "searchQuery": "L3Harris LHX defense electronics space" },
-    { "id": 25, "name": "Northrop Grumman", "ticker": "NOC", "exchange": "NYSE", "industry": "space", "searchQuery": "Northrop Grumman NOC space defense" },
-    { "id": 26, "name": "Virgin Galactic", "ticker": "SPCE", "exchange": "NYSE", "industry": "space", "searchQuery": "Virgin Galactic SPCE space tourism" },
-    { "id": 27, "name": "Intuitive Machines", "ticker": "LUNR", "exchange": "NASDAQ", "industry": "space", "searchQuery": "Intuitive Machines LUNR lunar NASA" },
-    { "id": 28, "name": "Lockheed Martin", "ticker": "LMT", "exchange": "NYSE", "industry": "space", "searchQuery": "Lockheed Martin LMT defense aerospace" },
-    { "id": 29, "name": "Coinbase Global", "ticker": "COIN", "exchange": "NASDAQ", "industry": "crypto", "searchQuery": "Coinbase COIN crypto exchange bitcoin" },
-    { "id": 30, "name": "MicroStrategy (Strategy)", "ticker": "MSTR", "exchange": "NASDAQ", "industry": "crypto", "searchQuery": "MicroStrategy MSTR Strategy bitcoin treasury" },
-    { "id": 31, "name": "Marathon Digital Holdings", "ticker": "MARA", "exchange": "NASDAQ", "industry": "crypto", "searchQuery": "Marathon Digital MARA bitcoin mining" },
-    { "id": 32, "name": "Riot Platforms", "ticker": "RIOT", "exchange": "NASDAQ", "industry": "crypto", "searchQuery": "Riot Platforms RIOT bitcoin mining" },
-    { "id": 33, "name": "CleanSpark", "ticker": "CLSK", "exchange": "NASDAQ", "industry": "crypto", "searchQuery": "CleanSpark CLSK bitcoin mining" },
-    { "id": 34, "name": "Block (Square)", "ticker": "XYZ", "exchange": "NYSE", "industry": "crypto", "searchQuery": "Block Square XYZ crypto payments bitcoin" },
-    { "id": 35, "name": "Robinhood Markets", "ticker": "HOOD", "exchange": "NASDAQ", "industry": "crypto", "searchQuery": "Robinhood HOOD crypto trading retail" },
-    { "id": 36, "name": "PayPal Holdings", "ticker": "PYPL", "exchange": "NASDAQ", "industry": "crypto", "searchQuery": "PayPal PYPL stablecoin PYUSD crypto" },
-    { "id": 37, "name": "Canaan Inc", "ticker": "CAN", "exchange": "NASDAQ", "industry": "crypto", "searchQuery": "Canaan CAN ASIC bitcoin mining hardware" },
-    { "id": 38, "name": "Hut 8 Mining", "ticker": "HUT", "exchange": "NASDAQ", "industry": "crypto", "searchQuery": "Hut 8 HUT bitcoin mining" },
-    { "id": 39, "name": "Core Scientific", "ticker": "CORZ", "exchange": "NASDAQ", "industry": "crypto", "searchQuery": "Core Scientific CORZ bitcoin mining" },
-    { "id": 40, "name": "Bakkt Holdings", "ticker": "BKKT", "exchange": "NYSE", "industry": "crypto", "searchQuery": "Bakkt BKKT crypto digital assets" },
-    { "id": 41, "name": "Cipher Mining", "ticker": "CIFR", "exchange": "NASDAQ", "industry": "crypto", "searchQuery": "Cipher Mining CIFR bitcoin" },
-    { "id": 42, "name": "Galaxy Digital", "ticker": "GLXY", "exchange": "TSX", "industry": "crypto", "searchQuery": "Galaxy Digital GLXY crypto asset management" },
-    { "id": 43, "name": "Circle Internet Group", "ticker": "CRCL", "exchange": "NYSE", "industry": "crypto", "searchQuery": "Circle CRCL USDC stablecoin" },
-    { "id": 44, "name": "Aurora Innovation", "ticker": "AUR", "exchange": "NASDAQ", "industry": "autonomous", "searchQuery": "Aurora Innovation AUR autonomous trucking" },
-    { "id": 45, "name": "Pony.ai", "ticker": "PONY", "exchange": "NASDAQ", "industry": "autonomous", "searchQuery": "Pony.ai PONY autonomous driving China" },
-    { "id": 46, "name": "WeRide", "ticker": "WRD", "exchange": "NASDAQ", "industry": "autonomous", "searchQuery": "WeRide WRD robotaxi autonomous China" },
-    { "id": 47, "name": "Honeywell International", "ticker": "HON", "exchange": "NASDAQ", "industry": "autonomous", "searchQuery": "Honeywell HON aerospace automation" },
-    { "id": 48, "name": "Emerson Electric", "ticker": "EMR", "exchange": "NYSE", "industry": "autonomous", "searchQuery": "Emerson Electric EMR automation process" },
-    { "id": 49, "name": "CEVA Inc", "ticker": "CEVA", "exchange": "NASDAQ", "industry": "autonomous", "searchQuery": "CEVA CEVA semiconductor IP ADAS" },
-    { "id": 50, "name": "AST SpaceMobile", "ticker": "ASTS", "exchange": "NASDAQ", "industry": "space", "searchQuery": "AST SpaceMobile ASTS satellite broadband direct" },
-    { "id": 51, "name": "Iridium Communications", "ticker": "IRDM", "exchange": "NASDAQ", "industry": "space", "searchQuery": "Iridium IRDM satellite communications" },
-    { "id": 52, "name": "Globalstar", "ticker": "GSAT", "exchange": "NYSE", "industry": "space", "searchQuery": "Globalstar GSAT satellite Apple" },
-    { "id": 53, "name": "Spire Global", "ticker": "SPIR", "exchange": "NYSE", "industry": "space", "searchQuery": "Spire Global SPIR satellite data weather" },
-    { "id": 54, "name": "BlackSky Technology", "ticker": "BKSY", "exchange": "NYSE", "industry": "space", "searchQuery": "BlackSky BKSY satellite imagery intelligence" },
-    { "id": 55, "name": "Bitdeer Technologies", "ticker": "BTDR", "exchange": "NASDAQ", "industry": "crypto", "searchQuery": "Bitdeer BTDR bitcoin mining AI computing" },
-    { "id": 56, "name": "Applied Digital", "ticker": "APLD", "exchange": "NASDAQ", "industry": "crypto", "searchQuery": "Applied Digital APLD HPC AI data center mining" },
-    { "id": 57, "name": "TeraWulf", "ticker": "WULF", "exchange": "NASDAQ", "industry": "crypto", "searchQuery": "TeraWulf WULF bitcoin mining nuclear" },
-    { "id": 58, "name": "Iris Energy", "ticker": "IREN", "exchange": "NASDAQ", "industry": "crypto", "searchQuery": "Iris Energy IREN bitcoin mining renewable" },
-    { "id": 59, "name": "Bit Digital", "ticker": "BTBT", "exchange": "NASDAQ", "industry": "crypto", "searchQuery": "Bit Digital BTBT bitcoin mining GPU" },
-    { "id": 60, "name": "ACM Research", "ticker": "ACMR", "exchange": "NASDAQ", "industry": "nuclear", "searchQuery": "ACM Research ACMR semiconductor equipment" },
-    { "id": 61, "name": "GE Vernova", "ticker": "GEV", "exchange": "NYSE", "industry": "nuclear", "searchQuery": "GE Vernova GEV power grid turbine energy" },
-    { "id": 62, "name": "Siemens Energy", "ticker": "SMEGF", "exchange": "OTC", "industry": "nuclear", "searchQuery": "Siemens Energy power grid transformer nuclear" },
-    { "id": 63, "name": "Mitsubishi Heavy Industries", "ticker": "MHVYF", "exchange": "OTC", "industry": "nuclear", "searchQuery": "Mitsubishi Heavy Industries nuclear reactor" },
-    { "id": 64, "name": "NuScale Power", "ticker": "SMR", "exchange": "NYSE", "industry": "nuclear", "searchQuery": "NuScale SMR small modular reactor nuclear" },
-    { "id": 65, "name": "Oklo Inc.", "ticker": "OKLO", "exchange": "NYSE", "industry": "nuclear", "searchQuery": "Oklo OKLO nuclear microreactor AI power" },
-    { "id": 66, "name": "Constellation Energy", "ticker": "CEG", "exchange": "NASDAQ", "industry": "nuclear", "searchQuery": "Constellation Energy CEG nuclear clean electricity" },
-    { "id": 67, "name": "Centrus Energy", "ticker": "LEU", "exchange": "NYSE", "industry": "nuclear", "searchQuery": "Centrus Energy LEU uranium enrichment HALEU" },
-    { "id": 68, "name": "BWX Technologies", "ticker": "BWXT", "exchange": "NYSE", "industry": "nuclear", "searchQuery": "BWX Technologies BWXT nuclear components" },
-    { "id": 69, "name": "Doosan Enerbility", "ticker": "034020.KS", "exchange": "KRX", "industry": "nuclear", "searchQuery": "Doosan Enerbility nuclear SMR power plant" },
-    { "id": 70, "name": "Eaton Corporation", "ticker": "ETN", "exchange": "NYSE", "industry": "power-infra", "searchQuery": "Eaton ETN electrical infrastructure power management data center" },
-    { "id": 71, "name": "Vertiv Holdings", "ticker": "VRT", "exchange": "NYSE", "industry": "power-infra", "searchQuery": "Vertiv VRT data center power cooling infrastructure" },
-    { "id": 72, "name": "Quanta Services", "ticker": "PWR", "exchange": "NYSE", "industry": "power-infra", "searchQuery": "Quanta Services PWR power grid electric utility contractor" },
-    { "id": 73, "name": "Hubbell Incorporated", "ticker": "HUBB", "exchange": "NYSE", "industry": "power-infra", "searchQuery": "Hubbell HUBB electrical grid components utility" },
-    { "id": 74, "name": "Wesco International", "ticker": "WCC", "exchange": "NYSE", "industry": "power-infra", "searchQuery": "Wesco WCC electrical distribution infrastructure" },
-    { "id": 75, "name": "Atkore", "ticker": "ATKR", "exchange": "NYSE", "industry": "power-infra", "searchQuery": "Atkore ATKR electrical conduit raceway infrastructure" },
-    { "id": 76, "name": "Powell Industries", "ticker": "POWL", "exchange": "NASDAQ", "industry": "power-infra", "searchQuery": "Powell Industries POWL switchgear power distribution" },
-    { "id": 77, "name": "MYR Group", "ticker": "MYRG", "exchange": "NASDAQ", "industry": "power-infra", "searchQuery": "MYR Group MYRG electrical construction utility" },
-    { "id": 78, "name": "nVent Electric", "ticker": "NVT", "exchange": "NYSE", "industry": "power-infra", "searchQuery": "nVent NVT electrical enclosures thermal management" },
-    { "id": 79, "name": "Preformed Line Products", "ticker": "PLPC", "exchange": "NASDAQ", "industry": "power-infra", "searchQuery": "Preformed Line Products PLPC power line hardware" },
-    { "id": 80, "name": "LG Energy Solution", "ticker": "373220.KS", "exchange": "KRX", "industry": "battery", "searchQuery": "LG Energy Solution LG에너지솔루션 battery" },
-    { "id": 81, "name": "Samsung SDI", "ticker": "006400.KS", "exchange": "KRX", "industry": "battery", "searchQuery": "Samsung SDI 삼성SDI battery" },
-    { "id": 82, "name": "SK Innovation", "ticker": "096770.KS", "exchange": "KRX", "industry": "battery", "searchQuery": "SK Innovation SK이노베이션 SK On battery" },
-    { "id": 83, "name": "POSCO Holdings", "ticker": "005490.KS", "exchange": "KRX", "industry": "battery", "searchQuery": "POSCO Holdings 포스코홀딩스 lithium" },
-    { "id": 84, "name": "POSCO Future M", "ticker": "003670.KS", "exchange": "KRX", "industry": "battery", "searchQuery": "POSCO Future M 포스코퓨처엠 cathode anode" },
-    { "id": 85, "name": "Ecopro", "ticker": "086520.KQ", "exchange": "KRX", "industry": "battery", "searchQuery": "Ecopro 에코프로 battery materials" },
-    { "id": 86, "name": "Ecopro BM", "ticker": "247540.KQ", "exchange": "KRX", "industry": "battery", "searchQuery": "Ecopro BM 에코프로비엠 cathode" },
-    { "id": 87, "name": "LG Chem", "ticker": "051910.KS", "exchange": "KRX", "industry": "battery", "searchQuery": "LG Chem LG화학 battery materials cathode" },
-    { "id": 88, "name": "L&F", "ticker": "066970.KQ", "exchange": "KRX", "industry": "battery", "searchQuery": "L&F 엘앤에프 cathode" },
-    { "id": 89, "name": "Enchem", "ticker": "348370.KQ", "exchange": "KRX", "industry": "battery", "searchQuery": "Enchem 엔켐 electrolyte" },
-    { "id": 90, "name": "Korea Zinc", "ticker": "010130.KS", "exchange": "KRX", "industry": "battery", "searchQuery": "Korea Zinc 고려아연 battery materials nickel" },
-    { "id": 91, "name": "Daejoo Electronic", "ticker": "078600.KQ", "exchange": "KRX", "industry": "battery", "searchQuery": "Daejoo Electronic 대주전자재료 silicon anode" },
-    { "id": 92, "name": "WCP", "ticker": "393890.KQ", "exchange": "KRX", "industry": "battery", "searchQuery": "WCP separator battery" },
-    { "id": 93, "name": "SKIET", "ticker": "361610.KS", "exchange": "KRX", "industry": "battery", "searchQuery": "SKIET SK아이이테크놀로지 separator" },
-    { "id": 94, "name": "SungEel HiTech", "ticker": "365340.KQ", "exchange": "KRX", "industry": "battery", "searchQuery": "SungEel HiTech 성일하이텍 battery recycling" },
-    { "id": 95, "name": "Saebitchem", "ticker": "107600.KQ", "exchange": "KRX", "industry": "battery", "searchQuery": "Saebitchem 새빗켐 battery recycling" }
+    {
+      "id": 1,
+      "name": "Nvidia",
+      "ticker": "NVDA",
+      "exchange": "NASDAQ",
+      "industry": "autonomous",
+      "searchQuery": "Nvidia NVDA GPU AI chip"
+    },
+    {
+      "id": 2,
+      "name": "Tesla",
+      "ticker": "TSLA",
+      "exchange": "NASDAQ",
+      "industry": "autonomous",
+      "searchQuery": "Tesla TSLA autonomous FSD robotaxi"
+    },
+    {
+      "id": 3,
+      "name": "Alphabet (Waymo)",
+      "ticker": "GOOGL",
+      "exchange": "NASDAQ",
+      "industry": "autonomous",
+      "searchQuery": "Waymo Alphabet Google autonomous driving"
+    },
+    {
+      "id": 4,
+      "name": "Uber",
+      "ticker": "UBER",
+      "exchange": "NYSE",
+      "industry": "autonomous",
+      "searchQuery": "Uber UBER autonomous ride-hailing robotaxi"
+    },
+    {
+      "id": 5,
+      "name": "Qualcomm",
+      "ticker": "QCOM",
+      "exchange": "NASDAQ",
+      "industry": "autonomous",
+      "searchQuery": "Qualcomm QCOM automotive chip ADAS"
+    },
+    {
+      "id": 6,
+      "name": "Mobileye",
+      "ticker": "MBLY",
+      "exchange": "NASDAQ",
+      "industry": "autonomous",
+      "searchQuery": "Mobileye MBLY ADAS self-driving chip"
+    },
+    {
+      "id": 7,
+      "name": "Aptiv",
+      "ticker": "APTV",
+      "exchange": "NYSE",
+      "industry": "autonomous",
+      "searchQuery": "Aptiv APTV automotive technology"
+    },
+    {
+      "id": 8,
+      "name": "NXP Semiconductors",
+      "ticker": "NXPI",
+      "exchange": "NASDAQ",
+      "industry": "autonomous",
+      "searchQuery": "NXP Semiconductors NXPI automotive chip"
+    },
+    {
+      "id": 9,
+      "name": "ON Semiconductor",
+      "ticker": "ON",
+      "exchange": "NASDAQ",
+      "industry": "autonomous",
+      "searchQuery": "ON Semiconductor automotive EV chip"
+    },
+    {
+      "id": 10,
+      "name": "Intuitive Surgical",
+      "ticker": "ISRG",
+      "exchange": "NASDAQ",
+      "industry": "robotics",
+      "searchQuery": "Intuitive Surgical ISRG da Vinci surgical robot"
+    },
+    {
+      "id": 11,
+      "name": "Symbotic",
+      "ticker": "SYM",
+      "exchange": "NASDAQ",
+      "industry": "robotics",
+      "searchQuery": "Symbotic SYM warehouse robot automation"
+    },
+    {
+      "id": 12,
+      "name": "Teradyne",
+      "ticker": "TER",
+      "exchange": "NASDAQ",
+      "industry": "robotics",
+      "searchQuery": "Teradyne TER collaborative robot Universal Robots"
+    },
+    {
+      "id": 13,
+      "name": "Rockwell Automation",
+      "ticker": "ROK",
+      "exchange": "NYSE",
+      "industry": "robotics",
+      "searchQuery": "Rockwell Automation ROK industrial automation"
+    },
+    {
+      "id": 14,
+      "name": "Zebra Technologies",
+      "ticker": "ZBRA",
+      "exchange": "NASDAQ",
+      "industry": "robotics",
+      "searchQuery": "Zebra Technologies ZBRA enterprise automation"
+    },
+    {
+      "id": 15,
+      "name": "UiPath",
+      "ticker": "PATH",
+      "exchange": "NYSE",
+      "industry": "robotics",
+      "searchQuery": "UiPath PATH RPA automation AI"
+    },
+    {
+      "id": 16,
+      "name": "Cognex",
+      "ticker": "CGNX",
+      "exchange": "NASDAQ",
+      "industry": "robotics",
+      "searchQuery": "Cognex CGNX machine vision industrial"
+    },
+    {
+      "id": 17,
+      "name": "AeroVironment",
+      "ticker": "AVAV",
+      "exchange": "NASDAQ",
+      "industry": "space",
+      "searchQuery": "AeroVironment AVAV drone UAV defense"
+    },
+    {
+      "id": 18,
+      "name": "Nvidia (Space AI)",
+      "ticker": "NVDA",
+      "exchange": "NASDAQ",
+      "industry": "space",
+      "searchQuery": "Nvidia space AI computing satellite"
+    },
+    {
+      "id": 19,
+      "name": "Rocket Lab USA",
+      "ticker": "RKLB",
+      "exchange": "NASDAQ",
+      "industry": "space",
+      "searchQuery": "Rocket Lab RKLB launch satellite"
+    },
+    {
+      "id": 20,
+      "name": "Planet Labs",
+      "ticker": "PL",
+      "exchange": "NYSE",
+      "industry": "space",
+      "searchQuery": "Planet Labs PL earth observation satellite"
+    },
+    {
+      "id": 21,
+      "name": "Viasat",
+      "ticker": "VSAT",
+      "exchange": "NASDAQ",
+      "industry": "space",
+      "searchQuery": "Viasat VSAT satellite broadband"
+    },
+    {
+      "id": 22,
+      "name": "Kratos Defense & Security",
+      "ticker": "KTOS",
+      "exchange": "NASDAQ",
+      "industry": "space",
+      "searchQuery": "Kratos KTOS defense drone satellite"
+    },
+    {
+      "id": 24,
+      "name": "L3Harris Technologies",
+      "ticker": "LHX",
+      "exchange": "NYSE",
+      "industry": "space",
+      "searchQuery": "L3Harris LHX defense electronics space"
+    },
+    {
+      "id": 25,
+      "name": "Northrop Grumman",
+      "ticker": "NOC",
+      "exchange": "NYSE",
+      "industry": "space",
+      "searchQuery": "Northrop Grumman NOC space defense"
+    },
+    {
+      "id": 26,
+      "name": "Virgin Galactic",
+      "ticker": "SPCE",
+      "exchange": "NYSE",
+      "industry": "space",
+      "searchQuery": "Virgin Galactic SPCE space tourism"
+    },
+    {
+      "id": 27,
+      "name": "Intuitive Machines",
+      "ticker": "LUNR",
+      "exchange": "NASDAQ",
+      "industry": "space",
+      "searchQuery": "Intuitive Machines LUNR lunar NASA"
+    },
+    {
+      "id": 28,
+      "name": "Lockheed Martin",
+      "ticker": "LMT",
+      "exchange": "NYSE",
+      "industry": "space",
+      "searchQuery": "Lockheed Martin LMT defense aerospace"
+    },
+    {
+      "id": 29,
+      "name": "Coinbase Global",
+      "ticker": "COIN",
+      "exchange": "NASDAQ",
+      "industry": "crypto",
+      "searchQuery": "Coinbase COIN crypto exchange bitcoin"
+    },
+    {
+      "id": 30,
+      "name": "MicroStrategy (Strategy)",
+      "ticker": "MSTR",
+      "exchange": "NASDAQ",
+      "industry": "crypto",
+      "searchQuery": "MicroStrategy MSTR Strategy bitcoin treasury"
+    },
+    {
+      "id": 31,
+      "name": "Marathon Digital Holdings",
+      "ticker": "MARA",
+      "exchange": "NASDAQ",
+      "industry": "crypto",
+      "searchQuery": "Marathon Digital MARA bitcoin mining"
+    },
+    {
+      "id": 32,
+      "name": "Riot Platforms",
+      "ticker": "RIOT",
+      "exchange": "NASDAQ",
+      "industry": "crypto",
+      "searchQuery": "Riot Platforms RIOT bitcoin mining"
+    },
+    {
+      "id": 33,
+      "name": "CleanSpark",
+      "ticker": "CLSK",
+      "exchange": "NASDAQ",
+      "industry": "crypto",
+      "searchQuery": "CleanSpark CLSK bitcoin mining"
+    },
+    {
+      "id": 34,
+      "name": "Block (Square)",
+      "ticker": "XYZ",
+      "exchange": "NYSE",
+      "industry": "crypto",
+      "searchQuery": "Block Square XYZ crypto payments bitcoin"
+    },
+    {
+      "id": 35,
+      "name": "Robinhood Markets",
+      "ticker": "HOOD",
+      "exchange": "NASDAQ",
+      "industry": "crypto",
+      "searchQuery": "Robinhood HOOD crypto trading retail"
+    },
+    {
+      "id": 36,
+      "name": "PayPal Holdings",
+      "ticker": "PYPL",
+      "exchange": "NASDAQ",
+      "industry": "crypto",
+      "searchQuery": "PayPal PYPL stablecoin PYUSD crypto"
+    },
+    {
+      "id": 37,
+      "name": "Canaan Inc",
+      "ticker": "CAN",
+      "exchange": "NASDAQ",
+      "industry": "crypto",
+      "searchQuery": "Canaan CAN ASIC bitcoin mining hardware"
+    },
+    {
+      "id": 38,
+      "name": "Hut 8 Mining",
+      "ticker": "HUT",
+      "exchange": "NASDAQ",
+      "industry": "crypto",
+      "searchQuery": "Hut 8 HUT bitcoin mining"
+    },
+    {
+      "id": 39,
+      "name": "Core Scientific",
+      "ticker": "CORZ",
+      "exchange": "NASDAQ",
+      "industry": "crypto",
+      "searchQuery": "Core Scientific CORZ bitcoin mining"
+    },
+    {
+      "id": 40,
+      "name": "Bakkt Holdings",
+      "ticker": "BKKT",
+      "exchange": "NYSE",
+      "industry": "crypto",
+      "searchQuery": "Bakkt BKKT crypto digital assets"
+    },
+    {
+      "id": 41,
+      "name": "Cipher Mining",
+      "ticker": "CIFR",
+      "exchange": "NASDAQ",
+      "industry": "crypto",
+      "searchQuery": "Cipher Mining CIFR bitcoin"
+    },
+    {
+      "id": 42,
+      "name": "Galaxy Digital",
+      "ticker": "GLXY",
+      "exchange": "TSX",
+      "industry": "crypto",
+      "searchQuery": "Galaxy Digital GLXY crypto asset management"
+    },
+    {
+      "id": 43,
+      "name": "Circle Internet Group",
+      "ticker": "CRCL",
+      "exchange": "NYSE",
+      "industry": "crypto",
+      "searchQuery": "Circle CRCL USDC stablecoin"
+    },
+    {
+      "id": 44,
+      "name": "Aurora Innovation",
+      "ticker": "AUR",
+      "exchange": "NASDAQ",
+      "industry": "autonomous",
+      "searchQuery": "Aurora Innovation AUR autonomous trucking"
+    },
+    {
+      "id": 45,
+      "name": "Pony.ai",
+      "ticker": "PONY",
+      "exchange": "NASDAQ",
+      "industry": "autonomous",
+      "searchQuery": "Pony.ai PONY autonomous driving China"
+    },
+    {
+      "id": 46,
+      "name": "WeRide",
+      "ticker": "WRD",
+      "exchange": "NASDAQ",
+      "industry": "autonomous",
+      "searchQuery": "WeRide WRD robotaxi autonomous China"
+    },
+    {
+      "id": 47,
+      "name": "Honeywell International",
+      "ticker": "HON",
+      "exchange": "NASDAQ",
+      "industry": "autonomous",
+      "searchQuery": "Honeywell HON aerospace automation"
+    },
+    {
+      "id": 48,
+      "name": "Emerson Electric",
+      "ticker": "EMR",
+      "exchange": "NYSE",
+      "industry": "autonomous",
+      "searchQuery": "Emerson Electric EMR automation process"
+    },
+    {
+      "id": 49,
+      "name": "CEVA Inc",
+      "ticker": "CEVA",
+      "exchange": "NASDAQ",
+      "industry": "autonomous",
+      "searchQuery": "CEVA CEVA semiconductor IP ADAS"
+    },
+    {
+      "id": 50,
+      "name": "AST SpaceMobile",
+      "ticker": "ASTS",
+      "exchange": "NASDAQ",
+      "industry": "space",
+      "searchQuery": "AST SpaceMobile ASTS satellite broadband direct"
+    },
+    {
+      "id": 51,
+      "name": "Iridium Communications",
+      "ticker": "IRDM",
+      "exchange": "NASDAQ",
+      "industry": "space",
+      "searchQuery": "Iridium IRDM satellite communications"
+    },
+    {
+      "id": 52,
+      "name": "Globalstar",
+      "ticker": "GSAT",
+      "exchange": "NYSE",
+      "industry": "space",
+      "searchQuery": "Globalstar GSAT satellite Apple"
+    },
+    {
+      "id": 53,
+      "name": "Spire Global",
+      "ticker": "SPIR",
+      "exchange": "NYSE",
+      "industry": "space",
+      "searchQuery": "Spire Global SPIR satellite data weather"
+    },
+    {
+      "id": 54,
+      "name": "BlackSky Technology",
+      "ticker": "BKSY",
+      "exchange": "NYSE",
+      "industry": "space",
+      "searchQuery": "BlackSky BKSY satellite imagery intelligence"
+    },
+    {
+      "id": 55,
+      "name": "Bitdeer Technologies",
+      "ticker": "BTDR",
+      "exchange": "NASDAQ",
+      "industry": "crypto",
+      "searchQuery": "Bitdeer BTDR bitcoin mining AI computing"
+    },
+    {
+      "id": 56,
+      "name": "Applied Digital",
+      "ticker": "APLD",
+      "exchange": "NASDAQ",
+      "industry": "crypto",
+      "searchQuery": "Applied Digital APLD HPC AI data center mining"
+    },
+    {
+      "id": 57,
+      "name": "TeraWulf",
+      "ticker": "WULF",
+      "exchange": "NASDAQ",
+      "industry": "crypto",
+      "searchQuery": "TeraWulf WULF bitcoin mining nuclear"
+    },
+    {
+      "id": 58,
+      "name": "Iris Energy",
+      "ticker": "IREN",
+      "exchange": "NASDAQ",
+      "industry": "crypto",
+      "searchQuery": "Iris Energy IREN bitcoin mining renewable"
+    },
+    {
+      "id": 59,
+      "name": "Bit Digital",
+      "ticker": "BTBT",
+      "exchange": "NASDAQ",
+      "industry": "crypto",
+      "searchQuery": "Bit Digital BTBT bitcoin mining GPU"
+    },
+    {
+      "id": 60,
+      "name": "ACM Research",
+      "ticker": "ACMR",
+      "exchange": "NASDAQ",
+      "industry": "nuclear",
+      "searchQuery": "ACM Research ACMR semiconductor equipment"
+    },
+    {
+      "id": 61,
+      "name": "GE Vernova",
+      "ticker": "GEV",
+      "exchange": "NYSE",
+      "industry": "nuclear",
+      "searchQuery": "GE Vernova GEV power grid turbine energy"
+    },
+    {
+      "id": 62,
+      "name": "Siemens Energy",
+      "ticker": "SMEGF",
+      "exchange": "OTC",
+      "industry": "nuclear",
+      "searchQuery": "Siemens Energy power grid transformer nuclear"
+    },
+    {
+      "id": 63,
+      "name": "Mitsubishi Heavy Industries",
+      "ticker": "MHVYF",
+      "exchange": "OTC",
+      "industry": "nuclear",
+      "searchQuery": "Mitsubishi Heavy Industries nuclear reactor"
+    },
+    {
+      "id": 64,
+      "name": "NuScale Power",
+      "ticker": "SMR",
+      "exchange": "NYSE",
+      "industry": "nuclear",
+      "searchQuery": "NuScale SMR small modular reactor nuclear"
+    },
+    {
+      "id": 65,
+      "name": "Oklo Inc.",
+      "ticker": "OKLO",
+      "exchange": "NYSE",
+      "industry": "nuclear",
+      "searchQuery": "Oklo OKLO nuclear microreactor AI power"
+    },
+    {
+      "id": 66,
+      "name": "Constellation Energy",
+      "ticker": "CEG",
+      "exchange": "NASDAQ",
+      "industry": "nuclear",
+      "searchQuery": "Constellation Energy CEG nuclear clean electricity"
+    },
+    {
+      "id": 67,
+      "name": "Centrus Energy",
+      "ticker": "LEU",
+      "exchange": "NYSE",
+      "industry": "nuclear",
+      "searchQuery": "Centrus Energy LEU uranium enrichment HALEU"
+    },
+    {
+      "id": 68,
+      "name": "BWX Technologies",
+      "ticker": "BWXT",
+      "exchange": "NYSE",
+      "industry": "nuclear",
+      "searchQuery": "BWX Technologies BWXT nuclear components"
+    },
+    {
+      "id": 69,
+      "name": "Doosan Enerbility",
+      "ticker": "034020.KS",
+      "exchange": "KRX",
+      "industry": "nuclear",
+      "searchQuery": "Doosan Enerbility nuclear SMR power plant"
+    },
+    {
+      "id": 70,
+      "name": "Eaton Corporation",
+      "ticker": "ETN",
+      "exchange": "NYSE",
+      "industry": "power-infra",
+      "searchQuery": "Eaton ETN electrical infrastructure power management data center"
+    },
+    {
+      "id": 71,
+      "name": "Vertiv Holdings",
+      "ticker": "VRT",
+      "exchange": "NYSE",
+      "industry": "power-infra",
+      "searchQuery": "Vertiv VRT data center power cooling infrastructure"
+    },
+    {
+      "id": 72,
+      "name": "Quanta Services",
+      "ticker": "PWR",
+      "exchange": "NYSE",
+      "industry": "power-infra",
+      "searchQuery": "Quanta Services PWR power grid electric utility contractor"
+    },
+    {
+      "id": 73,
+      "name": "Hubbell Incorporated",
+      "ticker": "HUBB",
+      "exchange": "NYSE",
+      "industry": "power-infra",
+      "searchQuery": "Hubbell HUBB electrical grid components utility"
+    },
+    {
+      "id": 74,
+      "name": "Wesco International",
+      "ticker": "WCC",
+      "exchange": "NYSE",
+      "industry": "power-infra",
+      "searchQuery": "Wesco WCC electrical distribution infrastructure"
+    },
+    {
+      "id": 75,
+      "name": "Atkore",
+      "ticker": "ATKR",
+      "exchange": "NYSE",
+      "industry": "power-infra",
+      "searchQuery": "Atkore ATKR electrical conduit raceway infrastructure"
+    },
+    {
+      "id": 76,
+      "name": "Powell Industries",
+      "ticker": "POWL",
+      "exchange": "NASDAQ",
+      "industry": "power-infra",
+      "searchQuery": "Powell Industries POWL switchgear power distribution"
+    },
+    {
+      "id": 77,
+      "name": "MYR Group",
+      "ticker": "MYRG",
+      "exchange": "NASDAQ",
+      "industry": "power-infra",
+      "searchQuery": "MYR Group MYRG electrical construction utility"
+    },
+    {
+      "id": 78,
+      "name": "nVent Electric",
+      "ticker": "NVT",
+      "exchange": "NYSE",
+      "industry": "power-infra",
+      "searchQuery": "nVent NVT electrical enclosures thermal management"
+    },
+    {
+      "id": 79,
+      "name": "Preformed Line Products",
+      "ticker": "PLPC",
+      "exchange": "NASDAQ",
+      "industry": "power-infra",
+      "searchQuery": "Preformed Line Products PLPC power line hardware"
+    },
+    {
+      "id": 80,
+      "name": "LG Energy Solution",
+      "ticker": "373220.KS",
+      "exchange": "KRX",
+      "industry": "battery",
+      "searchQuery": "LG Energy Solution LG에너지솔루션 battery"
+    },
+    {
+      "id": 81,
+      "name": "Samsung SDI",
+      "ticker": "006400.KS",
+      "exchange": "KRX",
+      "industry": "battery",
+      "searchQuery": "Samsung SDI 삼성SDI battery"
+    },
+    {
+      "id": 82,
+      "name": "SK Innovation",
+      "ticker": "096770.KS",
+      "exchange": "KRX",
+      "industry": "battery",
+      "searchQuery": "SK Innovation SK이노베이션 SK On battery"
+    },
+    {
+      "id": 83,
+      "name": "POSCO Holdings",
+      "ticker": "005490.KS",
+      "exchange": "KRX",
+      "industry": "battery",
+      "searchQuery": "POSCO Holdings 포스코홀딩스 lithium"
+    },
+    {
+      "id": 84,
+      "name": "POSCO Future M",
+      "ticker": "003670.KS",
+      "exchange": "KRX",
+      "industry": "battery",
+      "searchQuery": "POSCO Future M 포스코퓨처엠 cathode anode"
+    },
+    {
+      "id": 85,
+      "name": "Ecopro",
+      "ticker": "086520.KQ",
+      "exchange": "KRX",
+      "industry": "battery",
+      "searchQuery": "Ecopro 에코프로 battery materials"
+    },
+    {
+      "id": 86,
+      "name": "Ecopro BM",
+      "ticker": "247540.KQ",
+      "exchange": "KRX",
+      "industry": "battery",
+      "searchQuery": "Ecopro BM 에코프로비엠 cathode"
+    },
+    {
+      "id": 87,
+      "name": "LG Chem",
+      "ticker": "051910.KS",
+      "exchange": "KRX",
+      "industry": "battery",
+      "searchQuery": "LG Chem LG화학 battery materials cathode"
+    },
+    {
+      "id": 88,
+      "name": "L&F",
+      "ticker": "066970.KQ",
+      "exchange": "KRX",
+      "industry": "battery",
+      "searchQuery": "L&F 엘앤에프 cathode"
+    },
+    {
+      "id": 89,
+      "name": "Enchem",
+      "ticker": "348370.KQ",
+      "exchange": "KRX",
+      "industry": "battery",
+      "searchQuery": "Enchem 엔켐 electrolyte"
+    },
+    {
+      "id": 90,
+      "name": "Korea Zinc",
+      "ticker": "010130.KS",
+      "exchange": "KRX",
+      "industry": "battery",
+      "searchQuery": "Korea Zinc 고려아연 battery materials nickel"
+    },
+    {
+      "id": 91,
+      "name": "Daejoo Electronic",
+      "ticker": "078600.KQ",
+      "exchange": "KRX",
+      "industry": "battery",
+      "searchQuery": "Daejoo Electronic 대주전자재료 silicon anode"
+    },
+    {
+      "id": 92,
+      "name": "WCP",
+      "ticker": "393890.KQ",
+      "exchange": "KRX",
+      "industry": "battery",
+      "searchQuery": "WCP separator battery"
+    },
+    {
+      "id": 93,
+      "name": "SKIET",
+      "ticker": "361610.KS",
+      "exchange": "KRX",
+      "industry": "battery",
+      "searchQuery": "SKIET SK아이이테크놀로지 separator"
+    },
+    {
+      "id": 94,
+      "name": "SungEel HiTech",
+      "ticker": "365340.KQ",
+      "exchange": "KRX",
+      "industry": "battery",
+      "searchQuery": "SungEel HiTech 성일하이텍 battery recycling"
+    },
+    {
+      "id": 95,
+      "name": "Saebitchem",
+      "ticker": "107600.KQ",
+      "exchange": "KRX",
+      "industry": "battery",
+      "searchQuery": "Saebitchem 새빗켐 battery recycling"
+    },
+    {
+      "id": 96,
+      "name": "Apple",
+      "ticker": "AAPL",
+      "exchange": "NASDAQ",
+      "industry": "on-device-ai",
+      "searchQuery": "Apple AAPL on-device AI Apple Intelligence"
+    },
+    {
+      "id": 97,
+      "name": "ARM Holdings",
+      "ticker": "ARM",
+      "exchange": "NASDAQ",
+      "industry": "on-device-ai",
+      "searchQuery": "ARM Holdings ARM edge AI architecture"
+    },
+    {
+      "id": 98,
+      "name": "Samsung Electronics",
+      "ticker": "005930.KS",
+      "exchange": "KRX",
+      "industry": "on-device-ai",
+      "searchQuery": "Samsung Electronics 삼성전자 on-device AI Galaxy AI"
+    },
+    {
+      "id": 99,
+      "name": "Intel",
+      "ticker": "INTC",
+      "exchange": "NASDAQ",
+      "industry": "on-device-ai",
+      "searchQuery": "Intel INTC AI PC Core Ultra"
+    },
+    {
+      "id": 100,
+      "name": "AMD",
+      "ticker": "AMD",
+      "exchange": "NASDAQ",
+      "industry": "on-device-ai",
+      "searchQuery": "AMD AMD Ryzen AI PC"
+    },
+    {
+      "id": 101,
+      "name": "Dell Technologies",
+      "ticker": "DELL",
+      "exchange": "NYSE",
+      "industry": "on-device-ai",
+      "searchQuery": "Dell DELL AI PC hardware"
+    },
+    {
+      "id": 102,
+      "name": "TSMC",
+      "ticker": "TSM",
+      "exchange": "NYSE",
+      "industry": "semiconductor",
+      "searchQuery": "TSMC TSM foundry semiconductor"
+    },
+    {
+      "id": 103,
+      "name": "ASML",
+      "ticker": "ASML",
+      "exchange": "NASDAQ",
+      "industry": "semiconductor",
+      "searchQuery": "ASML ASML EUV semiconductor equipment"
+    },
+    {
+      "id": 104,
+      "name": "Broadcom",
+      "ticker": "AVGO",
+      "exchange": "NASDAQ",
+      "industry": "semiconductor",
+      "searchQuery": "Broadcom AVGO custom silicon semiconductor"
+    },
+    {
+      "id": 105,
+      "name": "SK Hynix",
+      "ticker": "000660.KS",
+      "exchange": "KRX",
+      "industry": "semiconductor",
+      "searchQuery": "SK Hynix SK하이닉스 HBM memory chip"
+    },
+    {
+      "id": 106,
+      "name": "Micron",
+      "ticker": "MU",
+      "exchange": "NASDAQ",
+      "industry": "semiconductor",
+      "searchQuery": "Micron MU HBM memory semiconductor"
+    },
+    {
+      "id": 107,
+      "name": "Applied Materials",
+      "ticker": "AMAT",
+      "exchange": "NASDAQ",
+      "industry": "semiconductor",
+      "searchQuery": "Applied Materials AMAT semiconductor equipment"
+    },
+    {
+      "id": 108,
+      "name": "Lam Research",
+      "ticker": "LRCX",
+      "exchange": "NASDAQ",
+      "industry": "semiconductor",
+      "searchQuery": "Lam Research LRCX semiconductor equipment wafer"
+    },
+    {
+      "id": 109,
+      "name": "KLA Corp",
+      "ticker": "KLAC",
+      "exchange": "NASDAQ",
+      "industry": "semiconductor",
+      "searchQuery": "KLA KLAC semiconductor metrology"
+    },
+    {
+      "id": 110,
+      "name": "Tokyo Electron",
+      "ticker": "TOELY",
+      "exchange": "OTC",
+      "industry": "semiconductor",
+      "searchQuery": "Tokyo Electron semiconductor equipment"
+    }
   ]
 }
