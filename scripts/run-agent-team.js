@@ -134,7 +134,7 @@ async function run() {
       for (const id in newsArchive) newsArchive[id].isCurated = false;
     }
 
-    // 최근 3일 기사 중 각 산업(Industry)별로 5개씩 균등하게 큐레이션 (총 35개 내외)
+    // 최근 3일 기사 중 각 산업(Industry)별로 3개씩 균등하게 큐레이션
     const threeDaysAgo = new Date();
     threeDaysAgo.setDate(threeDaysAgo.getDate() - 3);
     
@@ -152,7 +152,7 @@ async function run() {
     recentArticles.forEach(a => {
       const ind = a.followingIndustry || 'General';
       if (!byIndustry[ind]) byIndustry[ind] = [];
-      if (byIndustry[ind].length < 5) byIndustry[ind].push(a); // 산업당 최대 5개
+      if (byIndustry[ind].length < 3) byIndustry[ind].push(a); // 산업당 최대 3개
     });
 
     const candidates = [];
