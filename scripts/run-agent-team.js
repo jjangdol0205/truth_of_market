@@ -138,15 +138,10 @@ async function run() {
     const threeDaysAgo = new Date();
     threeDaysAgo.setDate(threeDaysAgo.getDate() - 3);
     
-    // AI 분석 여부 및 최신순 정렬
+    // 최신순 정렬 (큐레이션 대상 선별 시에는 날짜 기준)
     const recentArticles = Object.values(newsArchive)
       .filter(a => new Date(a.date) >= threeDaysAgo && (isMorningRun || !a.isCurated))
-      .sort((a, b) => {
-        const aHasAI = a.aiAnalysis ? 1 : 0;
-        const bHasAI = b.aiAnalysis ? 1 : 0;
-        if (bHasAI !== aHasAI) return bHasAI - aHasAI;
-        return new Date(b.date) - new Date(a.date);
-      });
+      .sort((a, b) => new Date(b.date) - new Date(a.date));
 
     const byIndustry = {};
     recentArticles.forEach(a => {
