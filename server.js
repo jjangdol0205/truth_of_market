@@ -772,6 +772,42 @@ app.post('/api/admin/verify', (req, res) => {
   }
 });
 
+// 4. 뉴스레터 구독 API
+app.post('/api/subscribe', (req, res) => {
+  const { email } = req.body;
+  if (!email || !email.includes('@')) {
+    return res.status(400).json({ error: '유효한 이메일 주소를 입력해주세요.' });
+  }
+
+  const subscribersPath = path.join(__dirname, 'subscribers.json');
+  let subscribers = [];
+  try {
+    if (fs.existsSync(subscribersPath)) {
+      subscribers = JSON.parse(fs.readFileSync(subscribersPath, 'utf8'));
+    }
+  } catch (error) {
+    console.error('Error reading subscribers.json:', error);
+  }
+
+  if (subscribers.some(sub => sub.email === email)) {
+    return res.status(400).json({ error: '이미 구독 중인 이메일입니다.' });
+  }
+
+  subscribers.push({
+    email,
+    subscribedAt: new Date().toISOString()
+  });
+
+  try {
+    fs.writeFileSync(subscribersPath, JSON.stringify(subscribers, null, 2), 'utf8');
+    console.log(`📫 [뉴스레터] 신규 구독자 추가: ${email}`);
+    res.json({ success: true, message: '구독이 완료되었습니다.' });
+  } catch (error) {
+    console.error('Error saving subscriber:', error);
+    res.status(500).json({ error: '구독 처리 중 서버 오류가 발생했습니다.' });
+  }
+});
+
 // 5. API 상태 진단 API
 app.get('/api/status', (req, res) => {
   res.json({

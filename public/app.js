@@ -1229,3 +1229,59 @@ async function fetchMarketTicker() {
     console.error('⚠️ [티커 연동 실패] 시황 정보를 갱신하지 못했습니다:', error);
   }
 }
+
+/* ==========================================================================
+   Newsletter Subscription Logic
+   ========================================================================== */
+document.addEventListener('DOMContentLoaded', () => {
+  const newsletterForm = document.getElementById('newsletterForm');
+  const newsletterEmail = document.getElementById('newsletterEmail');
+  const newsletterMsg = document.getElementById('newsletterMsg');
+
+  if (newsletterForm) {
+    newsletterForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = newsletterEmail.value.trim();
+      if (!email) return;
+
+      const submitBtn = newsletterForm.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerText;
+      submitBtn.innerText = '구독 신청 중...';
+      submitBtn.disabled = true;
+
+      try {
+        const response = await fetch('/api/subscribe', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ email })
+        });
+
+        const data = await response.json();
+        
+        newsletterMsg.classList.remove('hidden');
+        if (response.ok) {
+          newsletterMsg.innerText = '✅ 성공적으로 구독되었습니다! 내일 아침 8시 30분을 기대해주세요.';
+          newsletterMsg.className = 'newsletter-msg success';
+          newsletterEmail.value = '';
+        } else {
+          newsletterMsg.innerText = data.error || '❌ 구독 신청에 실패했습니다. 다시 시도해주세요.';
+          newsletterMsg.className = 'newsletter-msg error';
+        }
+      } catch (error) {
+        console.error('Newsletter error:', error);
+        newsletterMsg.classList.remove('hidden');
+        newsletterMsg.innerText = '❌ 서버와 연결할 수 없습니다.';
+        newsletterMsg.className = 'newsletter-msg error';
+      } finally {
+        submitBtn.innerText = originalText;
+        submitBtn.disabled = false;
+        
+        setTimeout(() => {
+          newsletterMsg.classList.add('hidden');
+        }, 5000);
+      }
+    });
+  }
+});

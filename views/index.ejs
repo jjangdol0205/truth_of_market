@@ -228,14 +228,17 @@
           </ul>
         </div>
 
-        <!-- [애드센스 대응] 사이드바 광고 영역 플레이스홀더 -->
-        <div class="sidebar-card adsense-sidebar-placeholder">
-          <div class="adsense-label">SPONSORED ADVERTISEMENT</div>
-          <div class="adsense-box">
-            <i class="fa-solid fa-rectangle-ad"></i>
-            <p>PREMIUM SPONSOR</p>
-            <span>Sponsor Inquiry</span>
+        <!-- 뉴스레터 구독 위젯 -->
+        <div class="sidebar-card newsletter-panel">
+          <div class="newsletter-header">
+            <h4><i class="fa-solid fa-envelope-open-text" style="color: hsl(var(--accent-gold));"></i> 프리미엄 뉴스레터</h4>
           </div>
+          <p class="newsletter-desc">매일 아침 8시 30분, 글로벌 핵심 투자 외신 30선과 AI 인사이트를 메일로 받아보세요.</p>
+          <form id="newsletterForm" class="newsletter-form">
+            <input type="email" id="newsletterEmail" placeholder="이메일 주소 입력" required>
+            <button type="submit" class="primary-btn pulse-effect" style="width: 100%; margin-top: 8px;">무료 구독하기</button>
+          </form>
+          <div id="newsletterMsg" class="newsletter-msg hidden"></div>
         </div>
       </aside>
 
@@ -257,18 +260,22 @@
           </div>
         </div>
 
-        <!-- [애드센스 대응] 메인 상단 리더보드 가로형 광고 플레이스홀더 -->
-        <div class="adsense-banner-placeholder">
-          <div class="adsense-banner-label">ADVERTISEMENT</div>
-          <div class="adsense-banner-content">
-            <i class="fa-solid fa-rectangle-ad animate-sparkle"></i>
-            <div class="adsense-banner-text">
-              <h5>PREMIUM SPONSOR & ADVERTISEMENT</h5>
-              <p>본 플랫폼은 양질의 글로벌 AI 투자 스터디 및 뉴스 브리핑 서비스를 무상으로 제공하기 위해 공식 파트너 스폰서십 및 제휴 광고 게재를 준비하고 있습니다.</p>
+        <!-- TradingView 제휴 마케팅 배너 -->
+        <a href="https://www.tradingview.com/" target="_blank" class="affiliate-banner-link" rel="noopener noreferrer">
+          <div class="affiliate-banner-container">
+            <div class="affiliate-banner-label">SPONSORED</div>
+            <div class="affiliate-banner-content">
+              <div class="tv-logo-placeholder">
+                <i class="fa-solid fa-chart-candlestick"></i>
+              </div>
+              <div class="affiliate-banner-text">
+                <h5>전 세계 1위 차트 분석 플랫폼, TradingView</h5>
+                <p>월 5,000만 명의 트레이더가 선택한 최고의 투자 도구. 지금 바로 가입하고 최대 $15 상당의 리워드를 받아보세요.</p>
+              </div>
+              <span class="banner-cta-btn">무료로 시작하기 <i class="fa-solid fa-arrow-right"></i></span>
             </div>
-            <span class="banner-badge">Sponsor Inquiry (제휴 문의)</span>
           </div>
-        </div>
+        </a>
 
         <!-- 뉴스 로딩 스피너 -->
         <div class="loading-container" id="newsLoading">

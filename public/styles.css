@@ -1245,99 +1245,155 @@ button {
    AdSense & Premium Footer Additions
    ========================================================================== */
 
-/* 1. 사이드바 광고 플레이스홀더 */
-.adsense-sidebar-placeholder {
-  border: 1px dashed hsla(var(--accent-cyan), 0.3) !important;
-  background-image: linear-gradient(135deg, hsla(var(--accent-cyan), 0.04), transparent) !important;
+/* 1. 사이드바 뉴스레터 폼 */
+.newsletter-panel {
+  background: linear-gradient(145deg, hsla(var(--glass-bg)), hsla(var(--bg-secondary), 0.6));
+  border: 1px solid hsla(var(--accent-gold), 0.3);
+  box-shadow: 0 4px 15px hsla(var(--accent-gold), 0.05);
 }
-.adsense-label {
-  font-size: 0.6rem;
+.newsletter-header h4 {
+  font-size: 0.95rem;
   font-weight: 700;
-  color: hsla(var(--accent-cyan), 0.6);
-  letter-spacing: 1.5px;
-  margin-bottom: 12px;
-  text-align: center;
-}
-.adsense-box {
+  color: white;
+  margin-bottom: 8px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 20px;
-  border-radius: 10px;
-  background: hsla(var(--bg-primary), 0.4);
-  border: 1px solid hsla(var(--glass-border), 0.4);
+  gap: 8px;
+}
+.newsletter-desc {
+  font-size: 0.8rem;
   color: hsl(var(--text-muted));
-  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+.newsletter-form input[type="email"] {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid hsla(var(--glass-border));
+  background: hsla(var(--bg-primary), 0.5);
+  color: white;
+  font-size: 0.85rem;
   transition: var(--transition-smooth);
 }
-.adsense-box i {
-  font-size: 2rem;
-  color: hsla(var(--accent-cyan), 0.5);
-  margin-bottom: 10px;
+.newsletter-form input[type="email"]:focus {
+  outline: none;
+  border-color: hsl(var(--accent-gold));
+  background: hsla(var(--bg-primary), 0.8);
 }
-.adsense-box p {
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: hsl(var(--text-main));
-  margin-bottom: 4px;
+.newsletter-msg {
+  font-size: 0.75rem;
+  margin-top: 8px;
+  text-align: center;
+  font-weight: 500;
 }
-.adsense-box span {
-  font-size: 0.68rem;
-  color: hsl(var(--text-muted));
-}
+.newsletter-msg.success { color: #3ddc84; }
+.newsletter-msg.error { color: #ff5252; }
 
-/* 2. 가로형 탑 리더보드 광고 배너 */
-.adsense-banner-placeholder {
-  border: 1px dashed hsla(var(--accent-cyan), 0.3);
-  background: hsla(var(--glass-bg));
-  backdrop-filter: blur(var(--glass-blur));
-  -webkit-backdrop-filter: blur(var(--glass-blur));
-  border-radius: 16px;
-  padding: 20px;
+/* 2. 가로형 탑 리더보드 트레이딩뷰 제휴 배너 */
+.affiliate-banner-link {
+  display: block;
+  text-decoration: none;
   margin-bottom: 20px;
-  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.adsense-banner-label {
-  font-size: 0.6rem;
+.affiliate-banner-link:hover {
+  transform: translateY(-2px);
+}
+.affiliate-banner-container {
+  background: linear-gradient(135deg, rgba(29, 34, 45, 0.8) 0%, rgba(19, 23, 34, 0.95) 100%);
+  border: 1px solid rgba(41, 98, 255, 0.4);
+  border-radius: 16px;
+  padding: 16px 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2), inset 0 0 0 1px rgba(255,255,255,0.05);
+  position: relative;
+  overflow: hidden;
+}
+.affiliate-banner-container::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle at top right, rgba(41, 98, 255, 0.15), transparent 60%);
+  pointer-events: none;
+}
+.affiliate-banner-label {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  background: rgba(41, 98, 255, 0.9);
+  color: white;
+  font-size: 0.55rem;
   font-weight: 700;
-  color: hsla(var(--accent-cyan), 0.6);
-  letter-spacing: 2px;
-  margin-bottom: 10px;
-  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 3px 8px;
+  border-radius: 0 0 4px 4px;
 }
-.adsense-banner-content {
+.affiliate-banner-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+  position: relative;
+  z-index: 1;
 }
-.adsense-banner-content i {
-  font-size: 2.2rem;
-  color: hsla(var(--accent-cyan), 0.6);
+.tv-logo-placeholder {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #2962FF, #0039CB);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(41, 98, 255, 0.3);
 }
-.adsense-banner-text {
+.affiliate-banner-text {
   flex: 1;
 }
-.adsense-banner-text h5 {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: hsl(var(--text-main));
+.affiliate-banner-text h5 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
   margin-bottom: 4px;
+  letter-spacing: -0.2px;
 }
-.adsense-banner-text p {
+.affiliate-banner-text p {
   font-size: 0.78rem;
-  color: hsl(var(--text-muted));
+  color: rgba(255, 255, 255, 0.7);
   line-height: 1.4;
+  margin: 0;
 }
-.banner-badge {
-  font-size: 0.7rem;
+.banner-cta-btn {
+  font-size: 0.75rem;
   font-weight: 600;
-  padding: 4px 10px;
-  border-radius: 20px;
-  background: hsla(var(--accent-cyan), 0.12);
-  color: hsl(var(--accent-cyan));
-  border: 1px solid hsla(var(--accent-cyan), 0.2);
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: white;
+  color: #131722;
+  border: none;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.affiliate-banner-link:hover .banner-cta-btn {
+  background: #2962FF;
+  color: white;
+  box-shadow: 0 4px 12px rgba(41, 98, 255, 0.4);
+}
+@media (max-width: 768px) {
+  .affiliate-banner-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+  .banner-cta-btn {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 /* 3. 대형 포털 푸터 */
