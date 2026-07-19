@@ -284,6 +284,167 @@
         109,
         110
       ]
+    },
+    {
+      "id": "gaming",
+      "name": "게임",
+      "nameEn": "Gaming",
+      "emoji": "🎮",
+      "color": "#7c3aed",
+      "searchKeywords": [
+        "video game",
+        "gaming industry",
+        "AI NPC",
+        "mobile game",
+        "esports",
+        "game engine",
+        "generative AI game"
+      ],
+      "companyIds": [
+        111,
+        112,
+        113,
+        114,
+        115
+      ]
+    },
+    {
+      "id": "entertainment",
+      "name": "엔터테인먼트",
+      "nameEn": "Entertainment & Media",
+      "emoji": "🎬",
+      "color": "#db2777",
+      "searchKeywords": [
+        "streaming",
+        "entertainment AI",
+        "K-pop",
+        "virtual idol",
+        "OTT platform",
+        "content creator",
+        "AI generated video"
+      ],
+      "companyIds": [
+        116,
+        117,
+        118,
+        119,
+        120
+      ]
+    },
+    {
+      "id": "shipbuilding",
+      "name": "조선",
+      "nameEn": "Shipbuilding & Marine",
+      "emoji": "⚓",
+      "color": "#0369a1",
+      "searchKeywords": [
+        "shipbuilding",
+        "LNG carrier",
+        "autonomous ship",
+        "green shipping",
+        "ammonia vessel",
+        "naval defense",
+        "maritime"
+      ],
+      "companyIds": [
+        121,
+        122,
+        123,
+        124,
+        125
+      ]
+    },
+    {
+      "id": "transport",
+      "name": "운송",
+      "nameEn": "Logistics & Transportation",
+      "emoji": "🚢",
+      "color": "#0891b2",
+      "searchKeywords": [
+        "eVTOL",
+        "urban air mobility",
+        "autonomous truck",
+        "drone delivery",
+        "logistics AI",
+        "freight",
+        "container shipping"
+      ],
+      "companyIds": [
+        126,
+        127,
+        128,
+        129,
+        130
+      ]
+    },
+    {
+      "id": "pharma",
+      "name": "제약/바이오",
+      "nameEn": "Pharma & Biotech",
+      "emoji": "💊",
+      "color": "#059669",
+      "searchKeywords": [
+        "drug discovery",
+        "AI pharma",
+        "GLP-1",
+        "CDMO",
+        "clinical trial",
+        "biotech",
+        "ADC antibody"
+      ],
+      "companyIds": [
+        131,
+        132,
+        133,
+        134,
+        135
+      ]
+    },
+    {
+      "id": "cosmetics",
+      "name": "화장품",
+      "nameEn": "Beauty & Cosmetics",
+      "emoji": "💄",
+      "color": "#e11d48",
+      "searchKeywords": [
+        "K-beauty",
+        "cosmetics market",
+        "skincare AI",
+        "beauty tech",
+        "ODM beauty",
+        "clean beauty",
+        "beauty export"
+      ],
+      "companyIds": [
+        136,
+        137,
+        138,
+        139,
+        140
+      ]
+    },
+    {
+      "id": "food",
+      "name": "식음료",
+      "nameEn": "Food & Beverage",
+      "emoji": "🍽️",
+      "color": "#d97706",
+      "searchKeywords": [
+        "K-food",
+        "alternative protein",
+        "food tech",
+        "precision fermentation",
+        "functional beverage",
+        "food supply chain AI",
+        "food export"
+      ],
+      "companyIds": [
+        141,
+        142,
+        143,
+        144,
+        145
+      ]
     }
   ],
   "companies": [
@@ -1158,6 +1319,286 @@
       "exchange": "OTC",
       "industry": "semiconductor",
       "searchQuery": "Tokyo Electron semiconductor equipment"
+    },
+    {
+      "id": 111,
+      "name": "Roblox",
+      "ticker": "RBLX",
+      "exchange": "NYSE",
+      "industry": "gaming",
+      "searchQuery": "Roblox RBLX gaming metaverse AI UGC"
+    },
+    {
+      "id": 112,
+      "name": "Unity Technologies",
+      "ticker": "U",
+      "exchange": "NYSE",
+      "industry": "gaming",
+      "searchQuery": "Unity Technologies U game engine AI"
+    },
+    {
+      "id": 113,
+      "name": "Take-Two Interactive",
+      "ticker": "TTWO",
+      "exchange": "NASDAQ",
+      "industry": "gaming",
+      "searchQuery": "Take-Two Interactive TTWO GTA gaming"
+    },
+    {
+      "id": 114,
+      "name": "AppLovin",
+      "ticker": "APP",
+      "exchange": "NASDAQ",
+      "industry": "gaming",
+      "searchQuery": "AppLovin APP mobile game AI advertising"
+    },
+    {
+      "id": 115,
+      "name": "Nexon",
+      "ticker": "3659.T",
+      "exchange": "TSE",
+      "industry": "gaming",
+      "searchQuery": "Nexon 넥슨 online game Korea Japan"
+    },
+    {
+      "id": 116,
+      "name": "Netflix",
+      "ticker": "NFLX",
+      "exchange": "NASDAQ",
+      "industry": "entertainment",
+      "searchQuery": "Netflix NFLX streaming AI content"
+    },
+    {
+      "id": 117,
+      "name": "HYBE",
+      "ticker": "352820.KS",
+      "exchange": "KRX",
+      "industry": "entertainment",
+      "searchQuery": "HYBE 하이브 K-pop BTS entertainment"
+    },
+    {
+      "id": 118,
+      "name": "Live Nation Entertainment",
+      "ticker": "LYV",
+      "exchange": "NYSE",
+      "industry": "entertainment",
+      "searchQuery": "Live Nation LYV concert event entertainment"
+    },
+    {
+      "id": 119,
+      "name": "The Trade Desk",
+      "ticker": "TTD",
+      "exchange": "NASDAQ",
+      "industry": "entertainment",
+      "searchQuery": "The Trade Desk TTD programmatic advertising streaming"
+    },
+    {
+      "id": 120,
+      "name": "SM Entertainment",
+      "ticker": "041510.KS",
+      "exchange": "KRX",
+      "industry": "entertainment",
+      "searchQuery": "SM Entertainment SM엔터테인먼트 K-pop idol"
+    },
+    {
+      "id": 121,
+      "name": "HD Korea Shipbuilding",
+      "ticker": "009540.KS",
+      "exchange": "KRX",
+      "industry": "shipbuilding",
+      "searchQuery": "HD현대중공업 HD Korea Shipbuilding LNG shipbuilding"
+    },
+    {
+      "id": 122,
+      "name": "Samsung Heavy Industries",
+      "ticker": "010140.KS",
+      "exchange": "KRX",
+      "industry": "shipbuilding",
+      "searchQuery": "Samsung Heavy Industries 삼성중공업 shipbuilding LNG"
+    },
+    {
+      "id": 123,
+      "name": "Hanwha Ocean",
+      "ticker": "042660.KS",
+      "exchange": "KRX",
+      "industry": "shipbuilding",
+      "searchQuery": "Hanwha Ocean 한화오션 shipbuilding defense vessel"
+    },
+    {
+      "id": 124,
+      "name": "Huntington Ingalls Industries",
+      "ticker": "HII",
+      "exchange": "NYSE",
+      "industry": "shipbuilding",
+      "searchQuery": "Huntington Ingalls HII naval shipbuilding defense"
+    },
+    {
+      "id": 125,
+      "name": "Carnival Corporation",
+      "ticker": "CCL",
+      "exchange": "NYSE",
+      "industry": "shipbuilding",
+      "searchQuery": "Carnival CCL cruise ship demand shipbuilding"
+    },
+    {
+      "id": 126,
+      "name": "Joby Aviation",
+      "ticker": "JOBY",
+      "exchange": "NYSE",
+      "industry": "transport",
+      "searchQuery": "Joby Aviation JOBY eVTOL air taxi FAA"
+    },
+    {
+      "id": 127,
+      "name": "Archer Aviation",
+      "ticker": "ACHR",
+      "exchange": "NYSE",
+      "industry": "transport",
+      "searchQuery": "Archer Aviation ACHR eVTOL urban air mobility"
+    },
+    {
+      "id": 128,
+      "name": "Aurora Innovation",
+      "ticker": "AUR",
+      "exchange": "NASDAQ",
+      "industry": "transport",
+      "searchQuery": "Aurora Innovation AUR autonomous truck freight"
+    },
+    {
+      "id": 129,
+      "name": "ZIM Integrated Shipping",
+      "ticker": "ZIM",
+      "exchange": "NYSE",
+      "industry": "transport",
+      "searchQuery": "ZIM shipping ZIM container freight"
+    },
+    {
+      "id": 130,
+      "name": "HMM",
+      "ticker": "011200.KS",
+      "exchange": "KRX",
+      "industry": "transport",
+      "searchQuery": "HMM 에이치엠엠 container shipping"
+    },
+    {
+      "id": 131,
+      "name": "Novo Nordisk",
+      "ticker": "NVO",
+      "exchange": "NYSE",
+      "industry": "pharma",
+      "searchQuery": "Novo Nordisk NVO GLP-1 Wegovy Ozempic obesity"
+    },
+    {
+      "id": 132,
+      "name": "Eli Lilly",
+      "ticker": "LLY",
+      "exchange": "NYSE",
+      "industry": "pharma",
+      "searchQuery": "Eli Lilly LLY GLP-1 Zepbound Mounjaro biotech"
+    },
+    {
+      "id": 133,
+      "name": "Samsung Biologics",
+      "ticker": "207940.KS",
+      "exchange": "KRX",
+      "industry": "pharma",
+      "searchQuery": "Samsung Biologics 삼성바이오로직스 CDMO biologic"
+    },
+    {
+      "id": 134,
+      "name": "Recursion Pharmaceuticals",
+      "ticker": "RXRX",
+      "exchange": "NASDAQ",
+      "industry": "pharma",
+      "searchQuery": "Recursion RXRX AI drug discovery biotech"
+    },
+    {
+      "id": 135,
+      "name": "Daiichi Sankyo",
+      "ticker": "4568.T",
+      "exchange": "TSE",
+      "industry": "pharma",
+      "searchQuery": "Daiichi Sankyo ADC antibody drug conjugate oncology"
+    },
+    {
+      "id": 136,
+      "name": "Amorepacific",
+      "ticker": "090430.KS",
+      "exchange": "KRX",
+      "industry": "cosmetics",
+      "searchQuery": "Amorepacific 아모레퍼시픽 K-beauty skincare export"
+    },
+    {
+      "id": 137,
+      "name": "LG H&H",
+      "ticker": "051900.KS",
+      "exchange": "KRX",
+      "industry": "cosmetics",
+      "searchQuery": "LG생활건강 LG H&H cosmetics beauty Korea"
+    },
+    {
+      "id": 138,
+      "name": "Cosmax",
+      "ticker": "192820.KS",
+      "exchange": "KRX",
+      "industry": "cosmetics",
+      "searchQuery": "Cosmax 코스맥스 ODM cosmetics manufacturer"
+    },
+    {
+      "id": 139,
+      "name": "Korea Kolmar",
+      "ticker": "161890.KS",
+      "exchange": "KRX",
+      "industry": "cosmetics",
+      "searchQuery": "Korea Kolmar 한국콜마 cosmetics ODM beauty"
+    },
+    {
+      "id": 140,
+      "name": "L'Oreal",
+      "ticker": "OR.PA",
+      "exchange": "EPA",
+      "industry": "cosmetics",
+      "searchQuery": "L'Oreal beauty AI skincare global cosmetics"
+    },
+    {
+      "id": 141,
+      "name": "CJ CheilJedang",
+      "ticker": "097950.KS",
+      "exchange": "KRX",
+      "industry": "food",
+      "searchQuery": "CJ제일제당 CJ CheilJedang K-food Bibigo export"
+    },
+    {
+      "id": 142,
+      "name": "Nongshim",
+      "ticker": "004370.KS",
+      "exchange": "KRX",
+      "industry": "food",
+      "searchQuery": "Nongshim 농심 ramen K-food export US"
+    },
+    {
+      "id": 143,
+      "name": "Monster Beverage",
+      "ticker": "MNST",
+      "exchange": "NASDAQ",
+      "industry": "food",
+      "searchQuery": "Monster Beverage MNST energy drink functional beverage"
+    },
+    {
+      "id": 144,
+      "name": "Celsius Holdings",
+      "ticker": "CELH",
+      "exchange": "NASDAQ",
+      "industry": "food",
+      "searchQuery": "Celsius Holdings CELH energy drink health beverage"
+    },
+    {
+      "id": 145,
+      "name": "Archer-Daniels-Midland",
+      "ticker": "ADM",
+      "exchange": "NYSE",
+      "industry": "food",
+      "searchQuery": "ADM Archer Daniels Midland protein alternative food supply"
     }
   ]
 }
