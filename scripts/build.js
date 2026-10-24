@@ -27,6 +27,14 @@ function copyRecursiveSync(src, dest) {
     if (!fs.existsSync(parentDir)) {
       fs.mkdirSync(parentDir, { recursive: true });
     }
+    if (/\.(png|jpg|jpeg|webp|mp4|zip|pdf)$/i.test(src) && fs.existsSync(dest)) {
+      try {
+        const destStats = fs.statSync(dest);
+        if (destStats.size === stats.size && destStats.mtimeMs >= stats.mtimeMs - 1000) {
+          return;
+        }
+      } catch (_) {}
+    }
     for (let attempt = 1; attempt <= 8; attempt++) {
       try {
         fs.copyFileSync(src, dest);
@@ -36,7 +44,10 @@ function copyRecursiveSync(src, dest) {
           fs.writeFileSync(dest, fs.readFileSync(src));
           break;
         } catch (writeErr) {
-          if (attempt === 8) throw writeErr;
+          if (attempt === 8) {
+            if (fs.existsSync(dest)) return;
+            throw writeErr;
+          }
           const waitTill = Date.now() + 150;
           while (Date.now() < waitTill) {}
         }
