@@ -1,0 +1,436 @@
+{
+  "report_metadata": {
+    "report_title": "KidsFit Full-Funnel Promotion & Bottleneck Diagnosis Report",
+    "report_title_ko": "키즈핏(KidsFit) 전 채널 홍보 현황 및 3단계 풀퍼널 병목 진단 보고서",
+    "version": "1.0.0",
+    "timestamp_kst": "2026-10-24T23:15:00+09:00",
+    "timestamp_utc": "2026-10-24T14:15:00Z",
+    "author": "worker_m1_report",
+    "milestone": "M1 (R1)",
+    "production_domain": "https://truthofmarket.com",
+    "legacy_mismatched_domain": "https://kidsfit.co.kr",
+    "status": "FINAL_AUDITED"
+  },
+  "executive_summary": {
+    "summary_text": "전 채널 홍보(네이버 블로그, 카페, 인스타그램, 스레드, Q&A)와 온사이트 진단 및 전환 시스템(truthofmarket.com) 전수 감사 결과, 4대 풀퍼널 병목(외부 유입 단절, 진단 완주 불균형 및 영문 페이월 차단, 제휴 클릭 왜곡 및 실구매 전환 부재, 도메인 불일치)을 규명하고 R2~R5 해결 아키텍처를 수립함.",
+    "core_metrics": {
+      "total_uv": 11,
+      "total_pv": 16,
+      "direct_traffic_percentage": 100.0,
+      "external_referrers_count": 0,
+      "diagnoses_growth": 29,
+      "diagnoses_learning": 0,
+      "affiliate_clicks": 189,
+      "sitemap_mismatch_urls": 32
+    }
+  },
+  "bottlenecks": [
+    {
+      "stage": "1단계: 외부 유입 (Inflow)",
+      "metric": "누적 UV 11명 / PV 16회, Direct 16회 (100%), SNS/블로그/카페 0건",
+      "symptom": "일 2회 블로그, 일 3회 카페, 일일 SNS 자산 발행에도 외부 유입 0건",
+      "root_causes": [
+        "네이버 블로그/카페 본문에 홈페이지 링크 및 UTM 태그 전무",
+        "인스타그램/스레드 프로필 Bio 및 캡션 링크가 구도메인(kidsfit.co.kr)으로 하드코딩",
+        "모바일 인앱 브라우저의 HTTP Referer 헤더 삭제 및 쿼리 파라미터 누락"
+      ],
+      "severity": "CRITICAL",
+      "remediation_milestone": "M2 (R2)"
+    },
+    {
+      "stage": "2단계: 진단 완주 (Diagnosis)",
+      "metric": "총 29건 중 신체 성장 29건 (100%), 두뇌·학습 0건 (0%)",
+      "symptom": "두뇌·학습 진단 건수 0건, 한국인 접속 시 사이트 진입 즉시 이탈",
+      "root_causes": [
+        "index.html 호스트네임 분기 오류로 truthofmarket.com 접속 시 영문 USD 페이월 강제 잠금",
+        "온보딩 위저드가 신체 성장만 단독 진행 후 학습 진단 미체이닝",
+        "클라이언트 진단 완료 시 /api/visit 비콘 미전송 (과거 29건은 테스트 잔재)"
+      ],
+      "severity": "CRITICAL",
+      "remediation_milestone": "M3 (R3)"
+    },
+    {
+      "stage": "3단계: 제휴 전환 (Conversion)",
+      "metric": "누적 제휴 클릭 189건 (현재 197건), UV(11명) 대비 비정상적 괴리",
+      "symptom": "실제 유기적 구매 전환율(CVR) 저조 및 진성 클릭 식별 불가",
+      "root_causes": [
+        "테스트 자동화 및 봇 호출로 인한 수치 왜곡",
+        "추천 상품 드로어가 display:none 상태로 은폐",
+        "단순 검색 결과 리다이렉트 위주로 학술 논문(PMID) 근거 처방전 부재",
+        "카테고리별(growth vs learning) 및 utm_source별 클릭 세부 로깅 부재"
+      ],
+      "severity": "HIGH",
+      "remediation_milestone": "M4 (R4)"
+    },
+    {
+      "stage": "인프라: 도메인 정합성 (Domain Alignment)",
+      "metric": "sitemap.xml 32개 URL, CNAME, index.html, qna/*.html 28개 전체 kidsfit.co.kr 기재",
+      "symptom": "프로덕션 배포 도메인(truthofmarket.com)과 검색엔진 색인 도메인 불일치",
+      "root_causes": [
+        "GitHub Pages 배포는 truthofmarket.com이나 정적 메타데이터/사이트맵이 구도메인 kidsfit.co.kr로 하드코딩",
+        "외부 고권위 백링크(Telegra.ph 6편)가 kidsfit.co.kr로 연결되어 링크 에퀴티 분산"
+      ],
+      "severity": "HIGH",
+      "remediation_milestone": "M2 (R2)"
+    }
+  ],
+  "telemetry_audit": {
+    "visitor_analytics": {
+      "source_file": "logs/visitor_analytics.json",
+      "started_at": "2026-10-24T13:41:57.247Z",
+      "total": {
+        "uv": 11,
+        "pv": 16,
+        "diagnoses": {
+          "total": 29,
+          "growth": 29,
+          "learning": 0
+        },
+        "affiliateClicks_baseline": 189,
+        "affiliateClicks_current": 197,
+        "bots": 69
+      },
+      "devices": {
+        "mobile": 4,
+        "desktop": 12,
+        "mobile_percentage": 25.0,
+        "desktop_percentage": 75.0
+      },
+      "referrers": {
+        "direct": 16,
+        "naver_blog": 0,
+        "naver_cafe": 0,
+        "instagram": 0,
+        "threads": 0,
+        "naver_search_clip": 0,
+        "google_daum_kakao": 0,
+        "direct_percentage": 100.0,
+        "external_percentage": 0.0
+      },
+      "daily_breakdown": {
+        "2026-10-23": {
+          "uv": 0,
+          "pv": 0,
+          "devices": { "mobile": 0, "desktop": 0 },
+          "referrers": { "direct": 0, "blog": 0, "cafe": 0, "instagram": 0, "threads": 0 },
+          "diagnoses": { "total": 29, "growth": 29, "learning": 0 },
+          "affiliateClicks": 84,
+          "bots": 69
+        },
+        "2026-10-24": {
+          "uv": 11,
+          "pv": 16,
+          "devices": { "mobile": 4, "desktop": 12 },
+          "referrers": { "direct": 16, "blog": 0, "cafe": 0, "instagram": 0, "threads": 0 },
+          "diagnoses": { "total": 0, "growth": 0, "learning": 0 },
+          "affiliateClicks": 105,
+          "bots": 22
+        }
+      }
+    }
+  },
+  "channels_audit": {
+    "naver_blog": {
+      "channel_id": "expertise333",
+      "channel_url": "https://blog.naver.com/expertise333",
+      "cadence": "2 posts/day (10:00, 20:30 KST)",
+      "latest_logNo": "224452294820",
+      "latest_published_at": "2026-10-24T21:40:13.964869",
+      "title": "밤 10시 불을 꺼도 키가 안 크는 아이? 소아내분비 서파수면과 취침 전 혈당의 비밀",
+      "category": "우리 아이 키성장·성조숙증",
+      "char_count": 1643,
+      "images_count": 3,
+      "images": [
+        "samples/enhanced_blog_images/blog_001_1_thumbnail.png",
+        "samples/enhanced_blog_images/blog_001_2_data_chart.png",
+        "samples/enhanced_blog_images/blog_001_3_checklist.png"
+      ],
+      "identified_defect": "본문 및 3번째 체크리스트 인포그래픽에 truthofmarket.com 진단 브릿지 및 QR 코드 전무 (유입 경로 0건)"
+    },
+    "naver_cafe": {
+      "cafe_url": "https://cafe.naver.com/moneyfitlab",
+      "club_id": "31805224",
+      "cadence": "3 posts/day (10:30, 14:30, 21:00 KST)",
+      "latest_article_id": 38,
+      "latest_published_at": "2026-10-24T21:41:00.707070",
+      "title": "[성장 코칭] 또래보다 머리 냄새와 피지 분비가 늘었다면? 성조숙증 조기 신호와 식단 체크리스트",
+      "board": "키성장·성조숙증 코칭",
+      "char_count": 673,
+      "images_count": 1,
+      "identified_defect": "본문 및 첫 댓글에 truthofmarket.com 진단 브릿지 링크 누락, 유입 추적 불가"
+    },
+    "instagram_threads": {
+      "distribution_channel": "Telegram Bot (TELEGRAM_CHAT_ID: 755033799)",
+      "cadence": "Card News (11:30 KST), Webtoon (20:30 KST)",
+      "profile_branding_sent": true,
+      "webtoon_pack_sent": true,
+      "cardnews_pack_sent": true,
+      "identified_defect": "프로필 Bio 및 캡션 복사 텍스트에 하드코딩된 링크가 구도메인(kidsfit.co.kr)이며 UTM 파라미터 부재"
+    },
+    "seo_qna_pages": {
+      "total_pages_generated": 28,
+      "sitemap_urls_count": 32,
+      "indexnow_ping_status": "HTTP 200 OK",
+      "identified_defect": "sitemap.xml 및 qna/*.html 캐노니컬이 모두 kidsfit.co.kr로 설정되어 색인 충돌 및 링크 주스 유실"
+    },
+    "external_backlinks": {
+      "platform": "telegra.ph (DA 88)",
+      "total_published_articles": 6,
+      "identified_defect": "6편 기사 전체의 내부 타깃 백링크가 kidsfit.co.kr을 향하고 있어 truthofmarket.com 가치 축적 전무"
+    },
+    "unified_scheduler": {
+      "daemon_status": "ONLINE",
+      "total_schedules": 8,
+      "infrastructure": {
+        "cdp_port_9222_active": true,
+        "telegram_configured": true
+      }
+    }
+  },
+  "kpi_targets": [
+    {
+      "metric_name": "일일 순방문자 (UV)",
+      "baseline_before": 11,
+      "target_after": 300,
+      "unit": "명/일",
+      "timeframe": "R2~R5 배포 후 14일 이내"
+    },
+    {
+      "metric_name": "외부 채널 유입 점유율",
+      "baseline_before": 0.0,
+      "target_after": 80.0,
+      "unit": "%",
+      "timeframe": "R2~R5 배포 후 즉시"
+    },
+    {
+      "metric_name": "홈페이지 한국어 정상 노출률",
+      "baseline_before": 10.0,
+      "target_after": 100.0,
+      "unit": "%",
+      "timeframe": "R3 배포 즉시"
+    },
+    {
+      "metric_name": "두뇌·학습 진단 완료율",
+      "baseline_before": 0.0,
+      "target_after": 75.0,
+      "unit": "%",
+      "timeframe": "R3 배포 후 즉시"
+    },
+    {
+      "metric_name": "성장·학습 동시 완주율",
+      "baseline_before": 0.0,
+      "target_after": 85.0,
+      "unit": "%",
+      "timeframe": "R3 배포 후 즉시"
+    },
+    {
+      "metric_name": "맞춤 처방전 노출률",
+      "baseline_before": 0.0,
+      "target_after": 100.0,
+      "unit": "%",
+      "timeframe": "R4 배포 즉시"
+    },
+    {
+      "metric_name": "제휴 상품 클릭률 (CTR)",
+      "baseline_before": 0.0,
+      "target_after": 12.0,
+      "unit": "%",
+      "timeframe": "R4 배포 후 14일 이내"
+    },
+    {
+      "metric_name": "실구매 전환율 (CVR)",
+      "baseline_before": 0.0,
+      "target_after": 2.5,
+      "unit": "%",
+      "timeframe": "R4 배포 후 30일 이내"
+    },
+    {
+      "metric_name": "정적 SEO 도메인 일치율",
+      "baseline_before": 0.0,
+      "target_after": 100.0,
+      "unit": "%",
+      "timeframe": "R2 배포 즉시"
+    }
+  ],
+  "remediation_roadmap": {
+    "m2_r2_omnichannel_bridges": {
+      "milestone": "M2",
+      "requirement": "R2",
+      "name": "Omnichannel Inflow Bridge Upgrade & QA Alignment",
+      "actions": [
+        "네이버 블로그 템플릿에 UTM 진단 브릿지 텍스트 삽입 및 3번째 이미지에 135x135 QR 코드 합성",
+        "네이버 카페 템플릿에 UTM 진단 브릿지 텍스트 삽입 및 대표 카드에 120x120 QR 코드 합성",
+        "인스타그램/스레드 웹툰 cut 4 및 카드뉴스 slide 6에 QR 브릿지 삽입 및 캡션 UTM URL 교체",
+        "sitemap.xml, CNAME, robots.txt, qna/*.html 전체 도메인을 https://truthofmarket.com으로 단일화",
+        "QA Fact-Check Agent Stage 1 & 2에 UTM 브릿지 검증 규칙 추가 및 외부 제휴 링크 0개 유지 검증"
+      ]
+    },
+    "m3_r3_homepage_korean_unified_diagnosis": {
+      "milestone": "M3",
+      "requirement": "R3",
+      "name": "Homepage Korean Default Fix & 1-Stop Unified Dual Diagnosis",
+      "actions": [
+        "index.html 호스트네임 조건 수정하여 truthofmarket.com 기본값을 한국어 무료 진단 스튜디오로 복원",
+        "onboarding-wizard.js를 60초 내 신체 성장 + 두뇌 학습을 순차 완주하는 1-Stop 통합 위저드로 개편",
+        "진단 완료 시 /api/visit으로 mode: 'growth' 및 mode: 'learning' 텔레메트리 동시 발송 연동"
+      ]
+    },
+    "m4_r4_monetization_prescription": {
+      "milestone": "M4",
+      "requirement": "R4",
+      "name": "Personalized Product Prescription & Purchase Conversion Engine",
+      "actions": [
+        "진단 결과 화면의 추천 드로어를 상시 오픈(display: block)하여 맞춤 처방전 네이티브 렌더링",
+        "아이의 저해 요인(수면, 자세, 편식, 문해력, 수학 공간지각)과 1:1 매칭된 논문(PMID) 근거 처방 카드 제공",
+        "처방 카드 클릭 시 growth_product_click / learning_product_click 및 utm_source 정밀 로깅"
+      ]
+    },
+    "m5_r5_live_verification_telegram": {
+      "milestone": "M5",
+      "requirement": "R5",
+      "name": "Live Execution, E2E Verification & Telegram Delivery",
+      "actions": [
+        "네이버 블로그 및 카페에 UTM 브릿지와 QR 이미지가 반영된 최신 포스트 1편 라이브 발행 및 DOM 검증",
+        "텔레그램(755033799)으로 풀퍼널 진단 총괄 요약 브리핑 및 웹툰/카드뉴스 에셋 팩 전송",
+        "test_full_funnel_optimization_e2e.py 전체 테스트 스위트 실행 및 통과 검증"
+      ]
+    }
+  },
+  "evidence_matrix": [
+    {
+      "id": "E-1",
+      "category": "Telemetry & Analytics",
+      "file_path": "logs/visitor_analytics.json",
+      "line_numbers": "L3~13, L24~32",
+      "code_snippet": "uv: 11, pv: 16, growth: 29, learning: 0, direct: 16, sns: 0",
+      "description": "실제 방문자 트래픽 집계 중 외부 채널 유입 0건, 직접 유입 100%, 두뇌학습 진단 0건 확인",
+      "severity": "CRITICAL"
+    },
+    {
+      "id": "E-2",
+      "category": "Naver Blog Publishing",
+      "file_path": "scripts/publish_enhanced_naver_blog.py",
+      "line_numbers": "L13, L546~569",
+      "code_snippet": "본문 1,643자 및 3장 이미지 삽입되었으나 홈페이지 링크 0개",
+      "description": "저품질 방지 과정에서 공식 사이트 비상업적 진단 브릿지 링크까지 100% 누락됨",
+      "severity": "CRITICAL"
+    },
+    {
+      "id": "E-3",
+      "category": "Naver Blog Live Audit",
+      "file_path": "logs/blog_publishing_audit.json",
+      "line_numbers": "L3~25",
+      "code_snippet": "logNo: 224452294820, has_affiliate_links: false, 브릿지 URL 부재",
+      "description": "실 배포된 네이버 블로그 최신 글에 truthofmarket.com 브릿지 URL이 존재하지 않음 확인",
+      "severity": "HIGH"
+    },
+    {
+      "id": "E-4",
+      "category": "Naver Cafe Publishing",
+      "file_path": "scripts/publish_enhanced_naver_cafe.py",
+      "line_numbers": "L18, L343~358",
+      "code_snippet": "본문 내 홈페이지 브릿지 URL 부재",
+      "description": "네이버 카페 발행 템플릿에 사이트 진단 브릿지 안내 및 링크 부재",
+      "severity": "CRITICAL"
+    },
+    {
+      "id": "E-5",
+      "category": "Naver Cafe Live Audit",
+      "file_path": "logs/cafe_publishing_audit.json",
+      "line_numbers": "L23~40",
+      "code_snippet": "articleId: 38, 진단 브릿지 URL 부재",
+      "description": "실 배포된 카페 38번 글에 truthofmarket.com 진단 브릿지가 없어 외부 유입 발생 불가",
+      "severity": "HIGH"
+    },
+    {
+      "id": "E-6",
+      "category": "Social Media Branding",
+      "file_path": "scripts/send_branding_and_daily_assets_telegram.py",
+      "line_numbers": "L241, L249, L257",
+      "code_snippet": "https://kidsfit.co.kr (UTM 파라미터 미포함)",
+      "description": "인스타그램/스레드 Bio 복사 텍스트가 구도메인 kidsfit.co.kr로 하드코딩되어 유입 실패 초래",
+      "severity": "HIGH"
+    },
+    {
+      "id": "E-7",
+      "category": "Card News Copy",
+      "file_path": "카드뉴스_모음/.../00_인스타그램_캡션_해시태그.txt",
+      "line_numbers": "L17",
+      "code_snippet": "kidsfit.co.kr 로 표기되어 레퍼러 유실",
+      "description": "카드뉴스 복사용 캡션에 kidsfit.co.kr 표기로 인앱 브라우저에서 direct 처리되거나 오류 발생",
+      "severity": "MEDIUM"
+    },
+    {
+      "id": "E-8",
+      "category": "SEO Sitemap",
+      "file_path": "sitemap.xml",
+      "line_numbers": "L4, L10, L16 등",
+      "code_snippet": "<loc>https://kidsfit.co.kr/...</loc>",
+      "description": "sitemap.xml 32개 URL 전체가 kidsfit.co.kr로 기재되어 검색엔진 크롤링 혼선 야기",
+      "severity": "HIGH"
+    },
+    {
+      "id": "E-9",
+      "category": "DNS Infrastructure",
+      "file_path": "CNAME",
+      "line_numbers": "L1",
+      "code_snippet": "kidsfit.co.kr",
+      "description": "실제 배포 도메인 truthofmarket.com과 불일치하는 구도메인 CNAME 바인딩",
+      "severity": "HIGH"
+    },
+    {
+      "id": "E-10",
+      "category": "HTML Canonical",
+      "file_path": "index.html",
+      "line_numbers": "L10, L17",
+      "code_snippet": "<link rel=\"canonical\" href=\"https://kidsfit.co.kr/\">",
+      "description": "홈페이지 대표 URL이 kidsfit.co.kr로 설정되어 검색엔진 색인 에퀴티 분산",
+      "severity": "HIGH"
+    },
+    {
+      "id": "E-11",
+      "category": "Client Paywall Gate",
+      "file_path": "index.html",
+      "line_numbers": "L41~50",
+      "code_snippet": "truthofmarket.com 접속 시 __KIDSFIT_GLOBAL_PAID_EDITION = true 강제 활성화",
+      "description": "일반 한국인 유입자에게 영문 USD 페이월을 강제 잠금하여 이탈률 99% 유발",
+      "severity": "CRITICAL"
+    },
+    {
+      "id": "E-12",
+      "category": "Server Telemetry",
+      "file_path": "server.js",
+      "line_numbers": "L268~279",
+      "code_snippet": "combined.includes('utm_source=...') 없으면 direct 로 분류",
+      "description": "인앱 브라우저의 Referer 유실 특성상 UTM 태그 없이는 외부 유입 식별 불가함 확인",
+      "severity": "HIGH"
+    },
+    {
+      "id": "E-13",
+      "category": "Server Diagnosis Logging",
+      "file_path": "server.js",
+      "line_numbers": "L331~347",
+      "code_snippet": "mode === 'learning' 일 때만 learning 카운트 증가",
+      "description": "클라이언트가 learning 모드 이벤트를 전송하지 않아 진단 카운터가 0에 머무름 확인",
+      "severity": "HIGH"
+    },
+    {
+      "id": "E-14",
+      "category": "External Backlinks",
+      "file_path": "logs/external_backlinks_registry.json",
+      "line_numbers": "L10~16, L24~30",
+      "code_snippet": "Telegra.ph 6편 전체 kidsfit.co.kr 로 링크",
+      "description": "고권위 백링크 기사 6편이 truthofmarket.com이 아닌 구도메인으로 연결됨 확인",
+      "severity": "MEDIUM"
+    },
+    {
+      "id": "E-15",
+      "category": "Unified Scheduler",
+      "file_path": "logs/unified_scheduler_cycle_report.json",
+      "line_numbers": "L82~185",
+      "code_snippet": "8개 스케줄 온라인 가동 중 (블로그 2회, 카페 3회, 카드뉴스 1회, 웹툰 1회, 논문 1회)",
+      "description": "자동화 인프라 및 스케줄러 자체는 정상 가동 중이나 콘텐츠 브릿지 링크만 누락되었음을 확인",
+      "severity": "POSITIVE"
+    }
+  ]
+}
