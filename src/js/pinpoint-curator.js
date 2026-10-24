@@ -2444,11 +2444,13 @@
       threePicks.push({ item: items[1], sub: sub2, badgeKo: '엄선 3위 (인기 대안)', badgeEn: 'Curated Pick #3' });
     }
 
+    const productCategory = (categoryType === 'supplement' || categoryType === 'toy') ? 'growth' : 'learning';
+
     if (isLearningCompact) {
       return `
         <div style="display: flex; flex-direction: column; gap: 0.55rem;">
           ${threePicks.map(({ item, sub }, idx) => `
-            <div class="pinpoint-item-card" data-item-id="${item.id}" style="background: #FFFFFF; border: 1px solid ${accentColor}; border-radius: 12px; padding: 0.75rem 0.85rem; display: flex; flex-direction: column; gap: 0.3rem;">
+            <div class="pinpoint-item-card" data-item-id="${item.id}" data-product-id="${item.id}" data-product-category="${productCategory}" style="background: #FFFFFF; border: 1px solid ${accentColor}; border-radius: 12px; padding: 0.75rem 0.85rem; display: flex; flex-direction: column; gap: 0.3rem;">
               <div style="font-size: 0.92rem; font-weight: 900; color: #0F172A; line-height: 1.32;">
                 <span style="color: #1D4ED8; margin-right:0.3rem;">${idx === 0 ? '1위' : idx === 1 ? '2위' : '3위'}</span>${isEn ? sub.titleEn : sub.titleKo}
               </div>
@@ -2456,10 +2458,10 @@
                 ${isEn ? sub.specEn : sub.specKo}
               </div>
               <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.35rem; margin-top: 0.1rem;">
-                <a href="${sub.coupangUrl}" target="_blank" rel="noopener noreferrer" class="pinpoint-direct-link mobile-touch-btn" data-merchant="coupang" style="display: flex; min-height: 36px; align-items: center; justify-content: center; background: #EFF6FF; border: 1px solid #BFDBFE; color: #0F172A; font-size: 0.78rem; font-weight: 800; padding: 0.3rem 0.5rem; border-radius: 8px; text-decoration: none; text-align: center;">
+                <a href="${sub.coupangUrl}" target="_blank" rel="noopener noreferrer" class="pinpoint-direct-link mobile-touch-btn" data-merchant="coupang" data-product-id="${item.id}" data-product-category="${productCategory}" style="display: flex; min-height: 36px; align-items: center; justify-content: center; background: #EFF6FF; border: 1px solid #BFDBFE; color: #0F172A; font-size: 0.78rem; font-weight: 800; padding: 0.3rem 0.5rem; border-radius: 8px; text-decoration: none; text-align: center;">
                   쿠팡 로켓배송 ↗
                 </a>
-                <a href="${sub.yes24Url}" target="_blank" rel="noopener noreferrer" class="pinpoint-direct-link mobile-touch-btn" data-merchant="linkprice" style="display: flex; min-height: 36px; align-items: center; justify-content: center; background: #EFF6FF; border: 1px solid #BFDBFE; color: #1D4ED8; font-size: 0.78rem; font-weight: 800; padding: 0.3rem 0.5rem; border-radius: 8px; text-decoration: none; text-align: center;">
+                <a href="${sub.yes24Url}" target="_blank" rel="noopener noreferrer" class="pinpoint-direct-link mobile-touch-btn" data-merchant="linkprice" data-product-id="${item.id}" data-product-category="${productCategory}" style="display: flex; min-height: 36px; align-items: center; justify-content: center; background: #EFF6FF; border: 1px solid #BFDBFE; color: #1D4ED8; font-size: 0.78rem; font-weight: 800; padding: 0.3rem 0.5rem; border-radius: 8px; text-decoration: none; text-align: center;">
                   YES24 도서 ↗
                 </a>
               </div>
@@ -2472,7 +2474,7 @@
     return `
       <div style="display: flex; flex-direction: column; gap: 0.7rem;">
         ${threePicks.map(({ item, sub, badgeKo, badgeEn }) => `
-          <div class="pinpoint-item-card" data-item-id="${item.id}" style="background: #FFFFFF; border: 1.5px solid ${accentColor}; border-radius: 14px; padding: 0.9rem 1rem; display: flex; flex-direction: column; gap: 0.45rem;">
+          <div class="pinpoint-item-card" data-item-id="${item.id}" data-product-id="${item.id}" data-product-category="${productCategory}" style="background: #FFFFFF; border: 1.5px solid ${accentColor}; border-radius: 14px; padding: 0.9rem 1rem; display: flex; flex-direction: column; gap: 0.45rem;">
             <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.35rem;">
               <span style="font-size: 0.74rem; font-weight: 900; color: #1D4ED8; background: #EFF6FF; padding: 0.16rem 0.55rem; border-radius: 9999px;">
                 ${isEn ? badgeEn : badgeKo}
@@ -2491,13 +2493,13 @@
             </div>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(135px, 1fr)); gap: 0.35rem; margin-top: 0.15rem;">
-              <a href="${sub.coupangUrl}" target="_blank" rel="noopener noreferrer" class="pinpoint-direct-link mobile-touch-btn" data-merchant="coupang" style="display: flex; min-height: 38px; align-items: center; justify-content: center; background: #EFF6FF; border: 1px solid #BFDBFE; color: #0F172A; font-size: 0.8rem; font-weight: 800; padding: 0.38rem 0.6rem; border-radius: 8px; text-decoration: none; text-align: center;">
+              <a href="${sub.coupangUrl}" target="_blank" rel="noopener noreferrer" class="pinpoint-direct-link mobile-touch-btn" data-merchant="coupang" data-product-id="${item.id}" data-product-category="${productCategory}" style="display: flex; min-height: 38px; align-items: center; justify-content: center; background: #EFF6FF; border: 1px solid #BFDBFE; color: #0F172A; font-size: 0.8rem; font-weight: 800; padding: 0.38rem 0.6rem; border-radius: 8px; text-decoration: none; text-align: center;">
                 쿠팡 로켓배송 ↗
               </a>
               ${categoryType === 'supplement'
-                ? `<a href="${sub.iherbUrl}" target="_blank" rel="noopener noreferrer" class="pinpoint-direct-link mobile-touch-btn" data-merchant="iherb" style="display: flex; min-height: 38px; align-items: center; justify-content: center; background: #EFF6FF; border: 1px solid #BFDBFE; color: #1D4ED8; font-size: 0.8rem; font-weight: 800; padding: 0.38rem 0.6rem; border-radius: 8px; text-decoration: none; text-align: center;">iHerb 직구 ↗</a>`
-                : `<a href="${sub.yes24Url}" target="_blank" rel="noopener noreferrer" class="pinpoint-direct-link mobile-touch-btn" data-merchant="linkprice" style="display: flex; min-height: 38px; align-items: center; justify-content: center; background: #EFF6FF; border: 1px solid #BFDBFE; color: #1D4ED8; font-size: 0.8rem; font-weight: 800; padding: 0.38rem 0.6rem; border-radius: 8px; text-decoration: none; text-align: center;">YES24 도서 ↗</a>`}
-              <a href="${sub.adpickShoppingUrl || `https://click.linkprice.com/click.php?m=11st&a=A100708867&l=9999&l_cd1=3&l_cd2=0&tu=${encodeURIComponent('https://search.11st.co.kr/pc/total-search?kwd=' + encodeURIComponent(sub.cpQuery || item.coupangQuery || item.name || ''))}`}" target="_blank" rel="noopener noreferrer" class="pinpoint-direct-link" data-merchant="linkprice-11st" style="display: flex; min-height: 38px; align-items: center; justify-content: center; background: #EFF6FF; border: 1px solid #BFDBFE; color: #1D4ED8; font-size: 0.78rem; font-weight: 800; padding: 0.38rem 0.5rem; border-radius: 8px; text-decoration: none; text-align: center;">11번가 ↗</a>
+                ? `<a href="${sub.iherbUrl}" target="_blank" rel="noopener noreferrer" class="pinpoint-direct-link mobile-touch-btn" data-merchant="iherb" data-product-id="${item.id}" data-product-category="${productCategory}" style="display: flex; min-height: 38px; align-items: center; justify-content: center; background: #EFF6FF; border: 1px solid #BFDBFE; color: #1D4ED8; font-size: 0.8rem; font-weight: 800; padding: 0.38rem 0.6rem; border-radius: 8px; text-decoration: none; text-align: center;">iHerb 직구 ↗</a>`
+                : `<a href="${sub.yes24Url}" target="_blank" rel="noopener noreferrer" class="pinpoint-direct-link mobile-touch-btn" data-merchant="linkprice" data-product-id="${item.id}" data-product-category="${productCategory}" style="display: flex; min-height: 38px; align-items: center; justify-content: center; background: #EFF6FF; border: 1px solid #BFDBFE; color: #1D4ED8; font-size: 0.8rem; font-weight: 800; padding: 0.38rem 0.6rem; border-radius: 8px; text-decoration: none; text-align: center;">YES24 도서 ↗</a>`}
+              <a href="${sub.adpickShoppingUrl || `https://click.linkprice.com/click.php?m=11st&a=A100708867&l=9999&l_cd1=3&l_cd2=0&tu=${encodeURIComponent('https://search.11st.co.kr/pc/total-search?kwd=' + encodeURIComponent(sub.cpQuery || item.coupangQuery || item.name || ''))}`}" target="_blank" rel="noopener noreferrer" class="pinpoint-direct-link" data-merchant="linkprice-11st" data-product-id="${item.id}" data-product-category="${productCategory}" style="display: flex; min-height: 38px; align-items: center; justify-content: center; background: #EFF6FF; border: 1px solid #BFDBFE; color: #1D4ED8; font-size: 0.78rem; font-weight: 800; padding: 0.38rem 0.5rem; border-radius: 8px; text-decoration: none; text-align: center;">11번가 ↗</a>
             </div>
           </div>
         `).join('')}
@@ -3185,7 +3187,7 @@
           </div>
           <div style="display: flex; flex-direction: column; gap: 0.55rem;">
             ${topBooks.map((item, idx) => `
-              <div class="pinpoint-item-card learning-curated-card" style="background: #FFFFFF; border: 1px solid #BFDBFE; border-radius: 12px; padding: 0.75rem 0.85rem; display: flex; flex-direction: column; gap: 0.3rem;">
+              <div class="pinpoint-item-card learning-curated-card" data-item-id="${item.key || 'workbook_' + idx}" data-product-id="${item.key || 'workbook_' + idx}" data-product-category="learning" style="background: #FFFFFF; border: 1px solid #BFDBFE; border-radius: 12px; padding: 0.75rem 0.85rem; display: flex; flex-direction: column; gap: 0.3rem;">
                 <div style="font-size: 0.92rem; font-weight: 900; color: #0F172A; line-height: 1.32;">
                   <span style="color: #1D4ED8; margin-right:0.3rem;">${idx === 0 ? '1위' : idx === 1 ? '2위' : '3위'}</span>${item.titleKo}
                 </div>
@@ -3193,10 +3195,10 @@
                   ${item.whyKo || item.specKo}
                 </div>
                 <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.35rem; margin-top: 0.1rem;">
-                  <a href="${item.yes24Url}" target="_blank" rel="noopener noreferrer" class="pinpoint-direct-link mobile-touch-btn" data-merchant="linkprice" style="display: flex; min-height: 36px; align-items: center; justify-content: center; background: #EFF6FF; border: 1px solid #BFDBFE; color: #0F172A; font-size: 0.78rem; font-weight: 800; padding: 0.3rem 0.5rem; border-radius: 8px; text-decoration: none; text-align: center;">
+                  <a href="${item.yes24Url}" target="_blank" rel="noopener noreferrer" class="pinpoint-direct-link mobile-touch-btn" data-merchant="linkprice" data-product-id="${item.key || 'workbook_' + idx}" data-product-category="learning" style="display: flex; min-height: 36px; align-items: center; justify-content: center; background: #EFF6FF; border: 1px solid #BFDBFE; color: #0F172A; font-size: 0.78rem; font-weight: 800; padding: 0.3rem 0.5rem; border-radius: 8px; text-decoration: none; text-align: center;">
                     YES24 도서 ↗
                   </a>
-                  <a href="${item.coupangUrl}" target="_blank" rel="noopener noreferrer" class="pinpoint-direct-link mobile-touch-btn" data-merchant="coupang" style="display: flex; min-height: 36px; align-items: center; justify-content: center; background: #F8FAFC; border: 1px solid #BFDBFE; color: #0F172A; text-decoration: none; text-align: center; font-size: 0.78rem; font-weight: 800; border-radius: 8px;">쿠팡 로켓배송 ↗</a>
+                  <a href="${item.coupangUrl}" target="_blank" rel="noopener noreferrer" class="pinpoint-direct-link mobile-touch-btn" data-merchant="coupang" data-product-id="${item.key || 'workbook_' + idx}" data-product-category="learning" style="display: flex; min-height: 36px; align-items: center; justify-content: center; background: #F8FAFC; border: 1px solid #BFDBFE; color: #0F172A; text-decoration: none; text-align: center; font-size: 0.78rem; font-weight: 800; border-radius: 8px;">쿠팡 로켓배송 ↗</a>
                 </div>
               </div>
             `).join('')}
@@ -3229,7 +3231,7 @@
           </div>
           <div style="display: flex; flex-direction: column; gap: 0.55rem;">
             ${regionalTickets.map((tk, idx) => `
-              <div class="regional-ticket-card" data-course-id="${tk.id}" style="background: #FFFFFF; border: 1px solid #BFDBFE; border-radius: 12px; padding: 0.75rem 0.85rem; display: flex; flex-direction: column; gap: 0.3rem;">
+              <div class="regional-ticket-card" data-course-id="${tk.id}" data-product-id="${tk.id}" data-product-category="learning" style="background: #FFFFFF; border: 1px solid #BFDBFE; border-radius: 12px; padding: 0.75rem 0.85rem; display: flex; flex-direction: column; gap: 0.3rem;">
                 <div style="font-size: 0.92rem; font-weight: 900; color: #0F172A; line-height: 1.32;">
                   <span style="color: #1D4ED8; margin-right:0.3rem;">${idx === 0 ? '1위' : idx === 1 ? '2위' : '3위'}</span>${tk.destination}
                 </div>
@@ -3237,10 +3239,10 @@
                   ${tk.ageSpecificGuide}
                 </div>
                 <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.35rem; margin-top: 0.1rem;">
-                  <a href="${tk.myrealtripUrl}" target="_blank" rel="noopener noreferrer" class="pinpoint-direct-link mobile-touch-btn" data-merchant="myrealtrip" style="display: flex; min-height: 36px; align-items: center; justify-content: center; background: #EFF6FF; border: 1px solid #BFDBFE; color: #1D4ED8; font-size: 0.78rem; font-weight: 900; padding: 0.3rem 0.5rem; border-radius: 8px; text-decoration: none; text-align: center;">
+                  <a href="${tk.myrealtripUrl}" target="_blank" rel="noopener noreferrer" class="pinpoint-direct-link mobile-touch-btn" data-merchant="myrealtrip" data-product-id="${tk.id}" data-product-category="learning" style="display: flex; min-height: 36px; align-items: center; justify-content: center; background: #EFF6FF; border: 1px solid #BFDBFE; color: #1D4ED8; font-size: 0.78rem; font-weight: 900; padding: 0.3rem 0.5rem; border-radius: 8px; text-decoration: none; text-align: center;">
                     마이리얼트립 ↗
                   </a>
-                  <a href="${tk.klookUrl}" target="_blank" rel="noopener noreferrer" class="pinpoint-direct-link" data-merchant="klook" style="display: flex; min-height: 36px; align-items: center; justify-content: center; background: #FFF7ED; border: 1.5px solid #FB923C; border-radius: 8px; color: #C2410C; font-size: 0.78rem; font-weight: 900; text-decoration: none; text-align: center;">
+                  <a href="${tk.klookUrl}" target="_blank" rel="noopener noreferrer" class="pinpoint-direct-link" data-merchant="klook" data-product-id="${tk.id}" data-product-category="learning" style="display: flex; min-height: 36px; align-items: center; justify-content: center; background: #FFF7ED; border: 1.5px solid #FB923C; border-radius: 8px; color: #C2410C; font-size: 0.78rem; font-weight: 900; text-decoration: none; text-align: center;">
                     클룩(Klook) ↗
                   </a>
                 </div>

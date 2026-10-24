@@ -2505,11 +2505,11 @@
 
         <div id="growth-curated-products-drawer" class="curated-product-recommendation-section" style="display: block; margin-top: 1.1rem; padding: 1.15rem; background: #FFFFFF; border: 2px solid #BFDBFE; border-radius: 20px;">
           <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.85rem; padding-bottom: 0.65rem; border-bottom: 1px dashed #BFDBFE;">
-            <span style="font-size: 0.96rem; font-weight: 900; color: #1D4ED8;">
-              [만 ${ageYears}세 × ${dietTraitLabelKo} · ${postureTraitLabelKo}] 분석 연동 맞춤 추천
+            <span style="font-size: 0.98rem; font-weight: 900; color: #1D4ED8;">
+              우리 아이 맞춤 성장 &amp; 두뇌·학습 처방 솔루션 (Paper-Matched Product Prescription) · 신체 성장
             </span>
             <span style="font-size: 0.76rem; color: #1D4ED8; font-weight: 800;">
-              연령·체형에 맞는 핵심 품목만 간결 추천
+              [만 ${ageYears}세 × ${dietTraitLabelKo} · ${postureTraitLabelKo}] 결핍 분석 기반 학술 근거(PMID/KDCA) 맞춤 처방
             </span>
           </div>
 
@@ -3583,11 +3583,11 @@
           <div id="learning-curated-products-drawer" class="curated-product-recommendation-section" style="display: block; margin-top: 1rem;">
             <div id="learning-step-8-links" style="background: #F8FAFC; border: 2px solid #93C5FD; border-radius: 20px; padding: 1.1rem 1.2rem; margin-bottom: 1.15rem; text-align: left;">
               <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.75rem; padding-bottom: 0.6rem; border-bottom: 1px dashed #BFDBFE;">
-                <span style="background: #1D4ED8; color: #FFFFFF; font-size: 0.78rem; font-weight: 900; padding: 0.22rem 0.75rem; border-radius: 9999px;">
-                  STEP 8 · 만 ${ageYears}세 × [${activeStyleInfo.badge}] 분석 연동 추천
+                <span style="background: #1D4ED8; color: #FFFFFF; font-size: 0.82rem; font-weight: 900; padding: 0.25rem 0.85rem; border-radius: 9999px;">
+                  우리 아이 맞춤 성장 &amp; 두뇌·학습 처방 솔루션 (Paper-Matched Product Prescription) · 두뇌·학습
                 </span>
                 <span style="font-size: 0.76rem; font-weight: 800; color: #1D4ED8;">
-                  강점 강화 &amp; 보완점 교정용 핵심 품목만 간결 매칭
+                  만 ${ageYears}세 × [${activeStyleInfo.badge}] 뇌과학·인지 발달 분석 연동 맞춤 처방
                 </span>
               </div>
 
