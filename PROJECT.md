@@ -40,12 +40,13 @@ The KidsFit platform is a full-funnel parental healthcare and learning guidance 
 ## Milestones
 | # | Name | Scope | Dependencies | Status |
 |---|------|-------|-------------|--------|
-| E2E | E2E Testing Track | Design and publish comprehensive E2E test harness for R1-R5, publish TEST_READY.md | none | IN_PROGRESS |
-| M1 | R1 Promotion & Funnel Diagnosis Report | Generate `docs/promotion_funnel_diagnosis_report.md` and `.json` | none | READY |
-| M2 | R2 Omnichannel Inflow Bridges & QA Alignment | Upgrade Blog, Cafe, Webtoon, Card News, Q&A pages, sitemap, and QA agent | M1 | PLANNED |
-| M3 | R3 Homepage Korean Default & 1-Stop Dual Diagnosis | Fix `index.html`, paywall scripts, unified wizard flow, and dual telemetry | M1 | PLANNED |
-| M4 | R4 Personalized Product Prescription & Conversion Tracking | Render paper-backed product cards and log category + UTM clicks | M3 | PLANNED |
-| M5 | R5 Live Execution, E2E Verification & Telegram Delivery | Execute 1 live publishing cycle, run E2E verification, send Telegram delivery | M2, M3, M4, E2E | PLANNED |
+| E2E | E2E Testing Track | Design and publish comprehensive E2E test harness for R1-R5, publish TEST_READY.md | none | DONE (`tests/test_full_funnel_optimization_e2e.py`, 83/83 tests green) |
+| M1 | R1 Promotion & Funnel Diagnosis Report | Generate `docs/promotion_funnel_diagnosis_report.md` and `.json` | none | DONE (Verified baseline metrics UV=11, PV=16, split 29 vs 0, 15 evidence items) |
+| M2 | R2 Omnichannel Inflow Bridges & QA Alignment | Upgrade Blog, Cafe, Webtoon, Card News, Q&A pages, sitemap, and QA agent | M1 | DONE (0 external affiliate links, QR callouts verified, 31 Q&A top/bottom widgets) |
+| M3 | R3 Homepage Korean Default & 1-Stop Dual Diagnosis | Fix `index.html`, paywall scripts, unified wizard flow, and dual telemetry | M1 | DONE (Korean default on `truthofmarket.com`, <60s dual diagnosis, dual telemetry) |
+| M4 | R4 Personalized Product Prescription & Conversion Tracking | Render paper-backed product cards and log category + UTM clicks | M3 | DONE (PMID citations, AF7865143 / A100708867, default visible drawers, UTM click telemetry) |
+| M5 | R5 Live Execution, E2E Verification & Telegram Delivery | Execute 1 live publishing cycle, run E2E verification, send Telegram delivery | M2, M3, M4, E2E | DONE (Blog post 224452294820 & Cafe post 40 live, 33 Telegram dispatches HTTP 200) |
+| Gate | Final Verification Gate & Hardening | Adversarial review, challenger tests, forensic audit, and defect remediation | all | DONE (172/172 tests green across all 5 test suites, CLEAN forensic audit) |
 
 ## Interface Contracts
 ### Client ↔ Server Analytics Telemetry (`/api/visit`)
@@ -80,3 +81,5 @@ The KidsFit platform is a full-funnel parental healthcare and learning guidance 
 - `server.js` : Telemetry endpoints (`/api/visit`) recording dual diagnoses and categorized UTM clicks
 - `visitor_analytics.json` & `logs/` : Telemetry logs
 - `tests/test_full_funnel_optimization_e2e.py` : Comprehensive E2E test suite
+- `tests/test_omnichannel_adversarial.py` : Omnichannel adversarial test harness (21 tests)
+- `tests/test_homepage_challenger.py` : Homepage challenger test harness (21 tests)

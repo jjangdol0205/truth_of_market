@@ -371,30 +371,34 @@ class TestF05QnAPagesBridgeSitemap(unittest.TestCase):
         self.assertNotIn(f"https://{LEGACY_DOMAIN}", content, f"Legacy domain {LEGACY_DOMAIN} must not be in canonical")
 
     def test_f05_top_diagnostic_bridge_widget(self):
-        """F05-3: Verify Q&A pages include top 1-click diagnostic bridge widget"""
-        topic_01 = self.qna_dir / "topic-01.html"
-        self.assertTrue(topic_01.exists())
-        with open(topic_01, "r", encoding="utf-8") as f:
-            content = f.read()
-        has_top_bridge = "utm_source=qna_top" in content or "diagnostic-bridge-top" in content
-        self.assertTrue(has_top_bridge, "Q&A page must include top diagnostic bridge with utm_source=qna_top")
+        """F05-3: Verify all Q&A pages include top 1-click diagnostic bridge widget"""
+        html_files = list(self.qna_dir.glob("*.html"))
+        self.assertGreaterEqual(len(html_files), 25)
+        for hf in html_files:
+            content = hf.read_text(encoding="utf-8")
+            has_top_bridge = "utm_source=qna_top" in content or "diagnostic-bridge-top" in content
+            self.assertTrue(has_top_bridge, f"Q&A page {hf.name} must include top diagnostic bridge with utm_source=qna_top")
 
     def test_f05_bottom_diagnostic_bridge_widget(self):
-        """F05-4: Verify Q&A pages include bottom 1-click diagnostic bridge widget"""
-        topic_01 = self.qna_dir / "topic-01.html"
-        self.assertTrue(topic_01.exists())
-        with open(topic_01, "r", encoding="utf-8") as f:
-            content = f.read()
-        has_bottom_bridge = "utm_source=qna_bottom" in content or "diagnostic-bridge-bottom" in content
-        self.assertTrue(has_bottom_bridge, "Q&A page must include bottom diagnostic bridge with utm_source=qna_bottom")
+        """F05-4: Verify all Q&A pages include bottom 1-click diagnostic bridge widget"""
+        html_files = list(self.qna_dir.glob("*.html"))
+        self.assertGreaterEqual(len(html_files), 25)
+        for hf in html_files:
+            content = hf.read_text(encoding="utf-8")
+            has_bottom_bridge = "utm_source=qna_bottom" in content or "diagnostic-bridge-bottom" in content
+            self.assertTrue(has_bottom_bridge, f"Q&A page {hf.name} must include bottom diagnostic bridge with utm_source=qna_bottom")
 
     def test_f05_sitemap_urls_unified_to_truthofmarket(self):
-        """F05-5: Verify sitemap.xml uses truthofmarket.com for all entries"""
+        """F05-5: Verify sitemap.xml uses truthofmarket.com for all entries and CNAME is truthofmarket.com"""
         self.assertTrue(self.sitemap_file.exists(), f"Missing sitemap: {self.sitemap_file}")
         with open(self.sitemap_file, "r", encoding="utf-8") as f:
             content = f.read()
         self.assertIn(f"https://{PRODUCTION_DOMAIN}", content, f"Sitemap must use {PRODUCTION_DOMAIN}")
         self.assertNotIn(f"https://{LEGACY_DOMAIN}", content, f"Sitemap must not contain legacy {LEGACY_DOMAIN}")
+        cname_file = ROOT_DIR / "CNAME"
+        self.assertTrue(cname_file.exists(), "CNAME file must exist at project root")
+        cname_content = cname_file.read_text(encoding="utf-8").strip()
+        self.assertEqual(cname_content, PRODUCTION_DOMAIN, f"CNAME must contain {PRODUCTION_DOMAIN}")
 
 
 class TestF06QAFactCheckAgentAlignment(unittest.TestCase):
@@ -462,6 +466,17 @@ class TestF07HomepageKoreanDefaultFix(unittest.TestCase):
             bad_check,
             "index.html must NOT force global paid edition when visiting truthofmarket.com"
         )
+        # Ensure server.js does NOT include truthofmarket.com in isGlobalHost definition
+        server_js = ROOT_DIR / "server.js"
+        if server_js.exists():
+            server_content = server_js.read_text(encoding="utf-8")
+            is_global_match = re.search(r"const\s+isGlobalHost\s*=\s*([^;]+);", server_content)
+            self.assertIsNotNone(is_global_match, "server.js must define isGlobalHost")
+            self.assertNotIn(
+                "truthofmarket.com",
+                is_global_match.group(1),
+                "server.js must NOT include truthofmarket.com in isGlobalHost definition"
+            )
 
     def test_f07_index_html_defaults_to_korean_lang(self):
         """F07-2: Verify html tag defaults to lang='ko'"""
@@ -820,6 +835,9 @@ class TestF13LiveExecutionTelegramDelivery(unittest.TestCase):
             content = f.read()
         # Verify it uses Telegram API rather than smtplib email
         self.assertIn("telegram.org", content.lower())
+
+
+TestF13LiveOmnichannelExecution = TestF13LiveExecutionTelegramDelivery
 
 
 # ==============================================================================

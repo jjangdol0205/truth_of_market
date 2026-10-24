@@ -50,7 +50,7 @@ function verifyMilestone1() {
     const cnamePath = path.join(ROOT_DIR, 'CNAME');
     if (!fs.existsSync(cnamePath)) throw new Error('CNAME missing');
     const content = fs.readFileSync(cnamePath, 'utf8').trim();
-    if (!['kidsfit.co.kr', 'truthofmarket.com'].includes(content)) {
+    if (content !== 'truthofmarket.com') {
       throw new Error(`CNAME contains unexpected content: "${content}"`);
     }
   });

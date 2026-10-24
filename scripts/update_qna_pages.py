@@ -59,6 +59,8 @@ def process_file(html_file: Path):
             content = content.replace("<article", f"{top_widget_html}\n    <article", 1)
         elif '<div class="wrap">' in content:
             content = content.replace('<div class="wrap">', f'<div class="wrap">\n    {top_widget_html}', 1)
+        elif '<main' in content:
+            content = re.sub(r'(<main[^>]*>)', rf'\1\n    {top_widget_html}', content, count=1)
 
     # 3. Bottom Bridge Widget
     bottom_widget_html = f"""<!-- BOTTOM 1-CLICK DIAGNOSTIC BRIDGE WIDGET -->

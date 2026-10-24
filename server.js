@@ -1130,7 +1130,7 @@ const server = http.createServer((req, res) => {
     const reqHost = String(req.headers['x-forwarded-host'] || req.headers.host || '').toLowerCase();
     const isGlobalHost =
       parsedUrl.searchParams.get('edition') !== 'ko' &&
-      (reqHost.includes('truthofmarket.com') || parsedUrl.searchParams.get('edition') === 'global' || parsedUrl.searchParams.get('paywall') === '1');
+      (parsedUrl.searchParams.get('edition') === 'global' || parsedUrl.searchParams.get('paywall') === '1');
 
     if (finalExt === '.html' && path.basename(filePath) === 'index.html' && isGlobalHost) {
       let htmlBody = fs.readFileSync(filePath, 'utf8');

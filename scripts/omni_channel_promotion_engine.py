@@ -22,14 +22,14 @@ from pathlib import Path
 
 sys.stdout.reconfigure(encoding="utf-8")
 
-ROOT = Path(r"d:\키즈핏")
+ROOT = Path(__file__).resolve().parent.parent
 PACK_DIR = ROOT / "samples" / "10_non_naver_omni_channel_pack"
 QNA_DIR = ROOT / "qna"
 DOC_PATH = ROOT / "docs" / "탈네이버_전채널_홍보_마스터플랜_다음_커뮤니티_SNS.md"
 STATUS_PATH = ROOT / "logs" / "omni_channel_promotion_status.json"
 CURSOR_PATH = ROOT / "logs" / "omni_channel_5x_daily_cursor.json"
 ENV_PATH = ROOT / ".env"
-SITE_URL = "https://kidsfit.co.kr"
+SITE_URL = "https://truthofmarket.com"
 INDEXNOW_KEY = "bb7865143f912a88c04d31d3921a0988"
 
 sys.path.insert(0, str(ROOT / "scripts"))

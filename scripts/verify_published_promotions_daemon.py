@@ -23,7 +23,7 @@ from playwright.sync_api import sync_playwright
 
 sys.stdout.reconfigure(encoding="utf-8")
 
-ROOT = Path(r"d:\키즈핏")
+ROOT = Path(__file__).resolve().parent.parent
 QNA_DIR = ROOT / "qna"
 BLOG_CURSOR_PATH = ROOT / "logs" / "blog_cafe_3x_daily_cursor.json"
 BACKLOG_STATE_PATH = ROOT / "logs" / "safe_backlog_state.json"
@@ -31,7 +31,7 @@ OMNI_CURSOR_PATH = ROOT / "logs" / "omni_channel_5x_daily_cursor.json"
 QA_REPORT_JSON = ROOT / "logs" / "promotion_qa_audit_report.json"
 QA_REPORT_MD = ROOT / "docs" / "홍보물_발행품질_및_라이브배포_자동점검_리포트.md"
 ENV_PATH = ROOT / ".env"
-SITE_URL = "https://kidsfit.co.kr"
+SITE_URL = "https://truthofmarket.com"
 
 
 def load_env():

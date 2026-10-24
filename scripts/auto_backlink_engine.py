@@ -22,7 +22,7 @@ from pathlib import Path
 
 sys.stdout.reconfigure(encoding="utf-8")
 
-ROOT = Path(r"d:\키즈핏")
+ROOT = Path(__file__).resolve().parent.parent
 DIST = ROOT / "dist"
 KB_PATH = ROOT / "src" / "data" / "research-knowledge-base.json"
 BLOG_CURSOR_PATH = ROOT / "logs" / "blog_cafe_3x_daily_cursor.json"
@@ -31,7 +31,7 @@ BACKLINK_LOG_PATH = ROOT / "logs" / "auto_backlink_status.json"
 EXT_BACKLINK_REGISTRY_PATH = ROOT / "logs" / "external_backlinks_registry.json"
 TELEGRAPH_TOKEN_PATH = ROOT / "logs" / "telegraph_account.json"
 
-SITE_URL = "https://kidsfit.co.kr"
+SITE_URL = "https://truthofmarket.com"
 ALT_SITE_URL = "https://truthofmarket.com"
 BLOG_URL = "https://blog.naver.com/expertise333"
 CAFE_URL = "https://cafe.naver.com/moneyfitlab"

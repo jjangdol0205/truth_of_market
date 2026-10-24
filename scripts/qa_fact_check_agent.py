@@ -670,10 +670,19 @@ def audit_pre_publish(content_dict: dict) -> tuple[bool, dict, list[str]]:
     sanitized_dict["has_diagnostic_bridge"] = has_diagnostic_bridge
 
     # Determine validation verdict:
-    # Fatal violations: missing images below minimum threshold, or length below limit for blog
+    # Fatal violations: missing images below minimum threshold, length below limit for blog,
+    # missing diagnostic bridge, commercial affiliate links, or legacy domain.
+    fatal_patterns = [
+        "deficient",
+        "below required 1,500",
+        "missing required diagnostic bridge",
+        "rejected commercial affiliate",
+        "rejected legacy domain"
+    ]
     is_valid = True
     for iss in issues:
-        if "deficient" in iss or "below required 1,500" in iss:
+        iss_lower = iss.lower()
+        if any(pat in iss_lower for pat in fatal_patterns):
             is_valid = False
             break
 
