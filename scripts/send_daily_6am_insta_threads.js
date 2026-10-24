@@ -258,6 +258,16 @@ async function main() {
   const epIdx = args.indexOf('--ep');
   const st = loadDailyState();
 
+  // Deduplicate if --advance was already triggered within the last 12 hours
+  if (epIdx === -1 && args.includes('--advance') && Array.isArray(st.history) && st.history.length > 0) {
+    const lastEntry = st.history[st.history.length - 1];
+    const lastMs = Date.parse(lastEntry.sentAt || '');
+    if (!isNaN(lastMs) && (Date.now() - lastMs) < 12 * 3600 * 1000) {
+      console.log(`  [Skip] Daily 6AM pack already sent today (Episode ${lastEntry.ep} at ${lastEntry.sentAt}).`);
+      return;
+    }
+  }
+
   let targetEpNum = null;
   if (epIdx !== -1 && args[epIdx + 1]) {
     targetEpNum = Number(args[epIdx + 1]);

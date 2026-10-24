@@ -361,11 +361,30 @@ def dispatch_webtoon_pack(dispatcher: TelegramDispatcher):
     return events
 
 
+def dispatch_diagnosis_summary(dispatcher: TelegramDispatcher):
+    """Dispatches executive summary message of the Promotion & Funnel Diagnosis Report"""
+    print("\n📋 === [0/3] Dispatching Promotion & Funnel Bottleneck Diagnosis Summary ===")
+    summary_text = (
+        "📊 [키즈핏(KidsFit) 풀퍼널 홍보 & 전환 병목 진단 보고서 총괄 요약]\n\n"
+        "1️⃣ 외부 유입 (Inflow):\n"
+        "• 기존: 누적 16PV 중 Direct 100%, 외부 마케팅 유입 0건\n"
+        "• 개선: 네이버 블로그/카페/웹툰/카드뉴스에 truthofmarket.com 비상업적 진단 브릿지 & QR 코드 전면 탑재\n\n"
+        "2️⃣ 진단 완주 (Diagnosis Split):\n"
+        "• 기존: 신체 성장 29건(100%) vs 두뇌·학습 0건(0%), 영문 USD 페이월 강제 잠금 버그\n"
+        "• 개선: truthofmarket.com 한국어 기본 복원 + 60초 1-Stop 통합(성장+학습) 정밀 진단 스튜디오 탑재\n\n"
+        "3️⃣ 제휴 구매 전환 (Conversion):\n"
+        "• 기존: 제휴 클릭 수치 왜곡, 상품 추천 드로어 display:none 은폐, 학술 처방전 부재\n"
+        "• 개선: KDCA/PMID 논문 기반 1:1 결핍 맞춤 처방전 상시 노출 및 카테고리/UTM 정밀 클릭 트래킹\n\n"
+        "🌐 프로덕션 도메인: https://truthofmarket.com"
+    )
+    return [dispatcher.send_message(summary_text)]
+
+
 def main():
     parser = argparse.ArgumentParser(description="KidsFit Branding & Daily Assets Telegram Delivery")
     parser.add_argument("--dry-run", action="store_true", default=False, help="Run validation without sending to Telegram")
     parser.add_argument("--live", action="store_true", default=False, help="Execute live dispatches to Telegram")
-    parser.add_argument("--scope", choices=["all", "branding", "cardnews", "webtoon"], default="all", help="Scope of dispatch")
+    parser.add_argument("--scope", choices=["all", "branding", "cardnews", "webtoon", "summary"], default="all", help="Scope of dispatch")
     args = parser.parse_args()
 
     is_live = args.live
@@ -389,6 +408,9 @@ def main():
 
     all_events = []
     try:
+        if args.scope in ("all", "summary"):
+            all_events.extend(dispatch_diagnosis_summary(dispatcher))
+
         if args.scope in ("all", "branding"):
             all_events.extend(dispatch_branding_kit(dispatcher))
 
@@ -401,6 +423,7 @@ def main():
     except Exception as e:
         print(f"\n❌ Error during Telegram dispatch: {e}")
         err_report = {
+            "timestamp": datetime.now(timezone.utc).isoformat(),
             "timestamp_utc": datetime.now(timezone.utc).isoformat(),
             "mode": "LIVE" if is_live else "DRY_RUN",
             "chat_id": chat_id,
@@ -414,6 +437,7 @@ def main():
     # Final summary message
     summary_msg = (
         f"✅ [키즈핏 에셋 배송 완료]\n"
+        f"• 풀퍼널 병목 진단 보고서 총괄 요약 브리핑\n"
         f"• 프로필 브랜딩 키트 (아바타 3종, 하이라이트 5종, 바이오, ZIP)\n"
         f"• 카드뉴스 1탄 (1080x1350 6슬라이드 + 캡션 + ZIP)\n"
         f"• 웹툰 1화 (1080x1080 4컷 + 캡션 + ZIP)\n\n"
@@ -423,11 +447,13 @@ def main():
         dispatcher.send_message(summary_msg)
 
     report_data = {
+        "timestamp": datetime.now(timezone.utc).isoformat(),
         "timestamp_utc": datetime.now(timezone.utc).isoformat(),
         "mode": "LIVE" if is_live else "DRY_RUN",
         "chat_id": chat_id,
         "bot_username": bot_info.get("username"),
         "total_dispatches": len(all_events),
+        "dispatches": all_events,
         "scope": args.scope,
         "success": True,
         "events": all_events,

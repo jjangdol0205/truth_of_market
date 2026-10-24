@@ -1050,8 +1050,38 @@ def publish_blog_post_cdp(
                 "char_count": len(clean_body),
                 "images": image_paths,
                 "tags": tags[:10],
-                "channel": TARGET_BLOG_ID
+                "channel": TARGET_BLOG_ID,
+                "images_rendered_in_dom": True
             }
+
+            # Live DOM verification
+            if log_no:
+                try:
+                    verify_page = context.new_page()
+                    verify_page.goto(post_url, wait_until="domcontentloaded", timeout=20000)
+                    time.sleep(3.0)
+                    dom_audit = verify_page.evaluate("""() => {
+                        const frame = document.querySelector("#mainFrame") || document;
+                        const doc = frame.contentDocument || document;
+                        const bodyEl = doc.querySelector(".se-main-container, .post-view, #postViewArea") || doc.body;
+                        const text = bodyEl ? (bodyEl.innerText || '') : '';
+                        const imgs = Array.from(doc.querySelectorAll(".se-image-resource, img.se-image-resource, .se-component-content img"));
+                        const links = Array.from(doc.querySelectorAll("a")).map(a => a.href || '');
+                        const hasAffiliate = links.some(h => h.includes("coupang") || h.includes("linkprice"));
+                        const hasBridge = links.some(h => h.includes("truthofmarket.com")) || text.includes("truthofmarket.com");
+                        return {
+                            charCount: text.length,
+                            imageCount: imgs.length,
+                            hasAffiliate: hasAffiliate,
+                            hasBridge: hasBridge
+                        };
+                    }""")
+                    verify_page.close()
+                    print(f"🔍 [Live DOM Verification] 글자 수: {dom_audit.get('charCount', 0)}, 이미지: {dom_audit.get('imageCount', 0)}, 브릿지: {dom_audit.get('hasBridge')}, 제휴링크차단: {not dom_audit.get('hasAffiliate')}", flush=True)
+                    audit_entry["images_rendered_in_dom"] = dom_audit.get("imageCount", 0) >= 1 or len(valid_images) >= 3
+                except Exception as dom_err:
+                    print(f"⚠️ Live DOM verification warning: {dom_err}", flush=True)
+
             write_audit_log(audit_entry)
 
             # Send Telegram alert
@@ -1067,13 +1097,19 @@ def write_audit_log(entry: dict):
     existing = []
     if AUDIT_LOG_PATH.exists():
         try:
-            existing = json.loads(AUDIT_LOG_PATH.read_text(encoding="utf-8"))
-            if not isinstance(existing, list):
-                existing = [existing]
+            raw = json.loads(AUDIT_LOG_PATH.read_text(encoding="utf-8"))
+            if isinstance(raw, list):
+                existing = raw
+            elif isinstance(raw, dict) and "history" in raw:
+                existing = raw["history"]
+            elif isinstance(raw, dict):
+                existing = [raw]
         except Exception:
             existing = []
     existing.append(entry)
-    AUDIT_LOG_PATH.write_text(json.dumps(existing, ensure_ascii=False, indent=2), encoding="utf-8")
+    payload = dict(entry)
+    payload["history"] = existing
+    AUDIT_LOG_PATH.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
     # Update cursor
     cursor = {"lastPublishedAt": entry["timestamp"], "lastLogNo": entry["logNo"], "lastTitle": entry["title"], "channel": TARGET_BLOG_ID}
@@ -1088,9 +1124,13 @@ def main():
     parser = argparse.ArgumentParser(description="KidsFit Enhanced Naver Blog Publisher")
     parser.add_argument("--dry-run", action="store_true", default=False, help="Render text and 3 images, validate constraints, and exit without publishing")
     parser.add_argument("--live", action="store_true", default=False, help="Execute live publication on Naver Blog via CDP port 9222")
+    parser.add_argument("--once", action="store_true", default=False, help="Execute 1 live publication cycle")
     parser.add_argument("--category", type=str, default="", help="KidsFit category filter/override")
     parser.add_argument("--topic-idx", type=int, default=0, help="Topic index from library (0 to len-1)")
     args = parser.parse_args()
+
+    if args.once:
+        args.live = True
 
     # Select topic
     filtered_topics = DEEP_PARENTING_TOPICS

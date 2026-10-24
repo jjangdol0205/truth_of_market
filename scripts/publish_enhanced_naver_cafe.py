@@ -662,6 +662,33 @@ def publish_cafe_post_cdp(
                 "tags": tags[:10],
                 "clubid": TARGET_CAFE_CLUBID
             }
+            # Live DOM verification for Cafe
+            if article_id and article_id != "unknown":
+                try:
+                    verify_page = context.new_page()
+                    verify_page.goto(post_url, wait_until="domcontentloaded", timeout=20000)
+                    time.sleep(3.0)
+                    dom_audit = verify_page.evaluate("""() => {
+                        const frame = document.querySelector("#cafe_main, #mainFrame") || document;
+                        const doc = frame.contentDocument || document;
+                        const bodyEl = doc.querySelector(".article_viewer, .se-main-container, .ContentRenderer") || doc.body;
+                        const text = bodyEl ? (bodyEl.innerText || '') : '';
+                        const imgs = Array.from(doc.querySelectorAll("img.se-image-resource, img.article_img, .se-component-content img"));
+                        const links = Array.from(doc.querySelectorAll("a")).map(a => a.href || '');
+                        const hasAffiliate = links.some(h => h.includes("coupang") || h.includes("linkprice"));
+                        const hasBridge = links.some(h => h.includes("truthofmarket.com")) || text.includes("truthofmarket.com");
+                        return {
+                            charCount: text.length,
+                            imageCount: imgs.length,
+                            hasAffiliate: hasAffiliate,
+                            hasBridge: hasBridge
+                        };
+                    }""")
+                    verify_page.close()
+                    print(f"🔍 [Live Cafe DOM Verification] 글자 수: {dom_audit.get('charCount', 0)}, 이미지: {dom_audit.get('imageCount', 0)}, 브릿지: {dom_audit.get('hasBridge')}, 제휴링크차단: {not dom_audit.get('hasAffiliate')}", flush=True)
+                except Exception as dom_err:
+                    print(f"⚠️ Live Cafe DOM verification warning: {dom_err}", flush=True)
+
             write_audit_log(audit_entry)
 
             # Send Telegram alert
@@ -677,13 +704,19 @@ def write_audit_log(entry: dict):
     existing = []
     if AUDIT_LOG_PATH.exists():
         try:
-            existing = json.loads(AUDIT_LOG_PATH.read_text(encoding="utf-8"))
-            if not isinstance(existing, list):
-                existing = [existing]
+            raw = json.loads(AUDIT_LOG_PATH.read_text(encoding="utf-8"))
+            if isinstance(raw, list):
+                existing = raw
+            elif isinstance(raw, dict) and "history" in raw:
+                existing = raw["history"]
+            elif isinstance(raw, dict):
+                existing = [raw]
         except Exception:
             existing = []
     existing.append(entry)
-    AUDIT_LOG_PATH.write_text(json.dumps(existing, ensure_ascii=False, indent=2), encoding="utf-8")
+    payload = dict(entry)
+    payload["history"] = existing
+    AUDIT_LOG_PATH.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
     # Update cursor
     cursor = {"lastPublishedAt": entry["timestamp"], "lastArticleId": entry["articleId"], "lastTitle": entry["title"], "board": entry["board"]}
@@ -698,10 +731,14 @@ def main():
     parser = argparse.ArgumentParser(description="KidsFit Enhanced Naver Cafe Publisher")
     parser.add_argument("--dry-run", action="store_true", default=False, help="Render text and image, validate constraints, and exit without publishing")
     parser.add_argument("--live", action="store_true", default=False, help="Execute live publication on Naver Cafe via CDP port 9222")
+    parser.add_argument("--once", action="store_true", default=False, help="Execute 1 live publication cycle")
     parser.add_argument("--board", type=str, default="", help="Board name or alias filter")
     parser.add_argument("--menu-id", type=int, default=0, help="Menu ID (1 to 7)")
     parser.add_argument("--topic-idx", type=int, default=0, help="Topic index from library (0 to len-1)")
     args = parser.parse_args()
+
+    if args.once:
+        args.live = True
 
     # Filter topics
     filtered_topics = CAFE_COMMUNITY_TOPICS

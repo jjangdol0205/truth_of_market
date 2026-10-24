@@ -848,6 +848,9 @@ const server = http.createServer((req, res) => {
 
     // 1-D. Klook Affiliate Dynamic Redirect Proxy (/api/klook)
     if (pathname === '/api/klook') {
+      const cat = parsedUrl.searchParams.get('cat') || parsedUrl.searchParams.get('category') || 'learning';
+      const utm = parsedUrl.searchParams.get('utm_source') || 'direct';
+      recordAffiliateClickEvent(cat, utm);
       const aid = parsedUrl.searchParams.get('aid') || '140161';
       const adid = parsedUrl.searchParams.get('aff_adid') || '1514603';
       const q = parsedUrl.searchParams.get('q') || '';
