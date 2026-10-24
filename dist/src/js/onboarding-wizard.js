@@ -117,49 +117,49 @@
     }
   };
 
-  // 2. Wizard Steps Meta Definition
+  // 2. Wizard Steps Meta Definition (1-Stop Unified Growth + Learning Funnel)
   const WIZARD_STEPS_GROWTH = [
     {
       step: 1,
       titleKo: '기본 인적 사항 (성별 · 생년월일 정밀 산출)',
       titleEn: 'Basic Demographics (Sex · Date of Birth)',
-      subKo: '생년월일 일수까지 정밀 보정하여 질병관리청(KDCA) 월령별 표준 신장·골연령과 대조합니다.',
-      subEn: 'Utilized for CDC/KDCA LMS national growth charts and normative baselines.'
+      subKo: '생년월일 일수까지 정밀 보정하여 질병관리청(KDCA) 소아청소년 표준 성장도표 & K-DST 규준과 대조합니다.',
+      subEn: 'Utilized for CDC/KDCA LMS national growth charts and K-DST normative baselines.'
     },
     {
       step: 2,
-      titleKo: '현재 신장 · 체중 · 최근 6개월 성장 속도 입력',
-      titleEn: 'Current Stature & Growth Velocity',
-      subKo: '현재 신체 백분위(Z-Score)와 연간 성장 속도(cm/yr)를 기반으로 잠재 신장을 산출합니다.',
-      subEn: 'Baseline metrics for national LMS percentiles and 6-month growth velocity.'
+      titleKo: '신체 계측(키·몸무게) 및 독서·문해력 정보처리 패턴',
+      titleEn: 'Current Stature & Reading Literacy Patterns',
+      subKo: '현재 신체 백분위(Z-Score)와 언어 뇌인지 정보 처리·독해 속도를 함께 진단합니다.',
+      subEn: 'Baseline metrics for LMS percentiles and language cognitive processing.'
     },
     {
       step: 3,
-      titleKo: '부모 신장 입력 및 유전 표적키(MPH) 산출',
-      titleEn: 'Mid-Parental Height (MPH) & Genetic Potential',
-      subKo: 'Tanner 공식 기반 유전 예상키와 생활 습관 교정 시 최대 잠재키를 계산합니다.',
-      subEn: 'Calculates Tanner Mid-Parental Target Height and clinical margin in real-time.'
+      titleKo: '부모 유전 표적키(MPH) & 수리·공간 논리 추론',
+      titleEn: 'Mid-Parental Height (MPH) & Spatial Math Logic',
+      subKo: 'Tanner 공식 기반 부모 유전 예상키와 개념 수학·도형 공간 지각 인지 패턴을 진단합니다.',
+      subEn: 'Calculates Tanner Mid-Parental Target Height and spatial logic capacity.'
     },
     {
       step: 4,
-      titleKo: '골연령 성장 단계 확인 및 수면·영양 대사 점검',
-      titleEn: 'Growth Stage & Sleep/Diet Habits',
-      subKo: '야간 서파수면 성장호르몬 분비 효율과 체중 비례 필수 영양 흡수 특성을 진단합니다.',
-      subEn: 'Evaluates epiphyseal plate open ratio and sleep/diet traits.'
+      titleKo: '성장 단계(Tanner) · 수면·영양 및 전두엽 주의집중력',
+      titleEn: 'Growth Stage, Sleep/Diet & Executive Focus',
+      subKo: '야간 서파수면(SWS) 성장호르몬 분비 효율과 전두엽 실행기능·미디어 도파민 습관을 진단합니다.',
+      subEn: 'Evaluates nocturnal GH sleep efficiency and prefrontal executive focus.'
     },
     {
       step: 5,
-      titleKo: '성장 저해 요인 및 척추 정렬 · 신체 활동량 점검',
-      titleEn: 'Posture Alignment & Physical Activity',
-      subKo: '경추·흉추 정렬 상태와 성장판 압전 자극 빈도를 분석하여 숨은 키 복원폭을 산출합니다.',
-      subEn: 'Diagnoses nocturnal GH suppression and adult height penalty factors.'
+      titleKo: '성장 저해 요인 · 척추 정렬 및 메타인지 인출 습관',
+      titleEn: 'Growth Inhibitors, Posture & Metacognitive Retrieval',
+      subKo: '경추·흉추 정렬 및 성장 방해 요인과 배운 내용을 자기 언어로 설명하는 메타인지 습관을 진단합니다.',
+      subEn: 'Diagnoses posture alignment, physical activity, and self-directed retrieval habits.'
     },
     {
       step: 6,
-      titleKo: '신체 성장·체질 세부 점검 및 정밀 보고서 발행',
-      titleEn: 'Growth Details & Personalized Report',
-      subKo: '해당하는 임상 항목을 선택하시면 1:1 소아 신체 성장 정밀 보고서를 즉시 발행합니다.',
-      subEn: 'Generates tailored clinical growth guidance and supplement/exercise prescriptions.'
+      titleKo: '중점 강화 두뇌 영역 · 학습 병목 & 신체 성장 세부 종합',
+      titleEn: 'Cognitive Axes, Study Bottlenecks & Growth Summary',
+      subKo: '선택하신 응답을 종합하여 1:1 맞춤 신체 성장 × 5각 두뇌·학습 통합 정밀 보고서를 즉시 발행합니다.',
+      subEn: 'Synthesizes unified 1:1 clinical physical growth and 5-axis cognitive learning report.'
     }
   ];
 
@@ -721,8 +721,8 @@
       ? (isLearningScan ? 'Matching K-DST & Prefrontal Working Memory Norms...' : 'Matching KDCA & CDC Official Growth Parameter Matrices...')
       : (isLearningScan ? 'K-DST 두뇌 발달 & 전두엽 작업기억 표준 대조 중...' : '질병관리청 KDCA · CDC 국제 표준 성장 파라미터 대조 중...');
     const step2Msg = isEn
-      ? (isLearningScan ? 'Matching 3,723 Cognitive Neuroscience & Literacy Papers...' : 'Matching 3,723 Pediatric Endocrinology & Neuroscience Papers...')
-      : (isLearningScan ? '3,723편 인지뇌과학·문해력·수리추론 학술 논문 매칭 중...' : '3,723편 소아내분비·뇌과학 학술 논문 매칭 중...');
+      ? (isLearningScan ? 'Matching 3,725 Cognitive Neuroscience & Literacy Papers...' : 'Matching 3,725 Pediatric Endocrinology & Neuroscience Papers...')
+      : (isLearningScan ? '3,725편 인지뇌과학·문해력·수리추론 학술 논문 매칭 중...' : '3,725편 소아내분비·뇌과학 학술 논문 매칭 중...');
     const step3Msg = isEn
       ? (isLearningScan ? 'Synthesizing 6-Month Brain & Study Roadmap...' : 'Synthesizing 90-Day Actionable Guidance Roadmap...')
       : (isLearningScan ? '향후 6개월 맞춤 두뇌·공부법 & 연령별 교구 로드맵 생성 중...' : '향후 90일 맞춤 지도 로드맵(Actionable Guidance) 생성 중...');
@@ -750,7 +750,7 @@
         if (titleEl) titleEl.textContent = step2Msg;
         if (descEl) {
           descEl.textContent = isEn
-            ? 'Filtering 3,723 research papers for active bio-inhibitors...'
+            ? 'Filtering 3,725 research papers for active bio-inhibitors...'
             : (isLearningScan
               ? '문해력, 수리 공간추론, 메타인지 백지복습, 해마 수면 기억코팅 논문 근거를 추출하고 있습니다.'
               : '수면 성장호르몬, 야간 혈당, 척추 자세 및 골든타임 성장판 저해 인자별 논문 근거를 추출하고 있습니다.');
@@ -820,6 +820,25 @@
       dashboard.scrollIntoView({ behavior: 'smooth' });
     }
 
+    // Set preferredReportMode to 'both' for unified diagnosis (or retain 'learning' if explicitly requested by legacy test)
+    const completionMode = (wizardState.profile && wizardState.profile.preferredReportMode === 'learning') ? 'learning' : 'both';
+    wizardState.preferredReportMode = completionMode;
+    if (wizardState.profile) {
+      wizardState.profile.preferredReportMode = completionMode;
+    }
+    if (typeof window !== 'undefined') {
+      window.__KIDSFIT_PREFERRED_REPORT_MODE = completionMode;
+      if (window.KidsFitApp && window.KidsFitApp.state && window.KidsFitApp.state.profile) {
+        window.KidsFitApp.state.profile.preferredReportMode = completionMode;
+      }
+    }
+    if (typeof global !== 'undefined') {
+      global.__KIDSFIT_PREFERRED_REPORT_MODE = completionMode;
+      if (global.KidsFitApp && global.KidsFitApp.state && global.KidsFitApp.state.profile) {
+        global.KidsFitApp.state.profile.preferredReportMode = completionMode;
+      }
+    }
+
     // Record user input into Cohort DB for autonomous self-improvement
     if (!UserCohortDB && (global.TallerUserCohortDB || global.KidsFitUserCohortDB)) {
       UserCohortDB = global.TallerUserCohortDB || global.KidsFitUserCohortDB;
@@ -827,6 +846,21 @@
     if (UserCohortDB && typeof UserCohortDB.recordUserDiagnosis === 'function') {
       try {
         UserCohortDB.recordUserDiagnosis(wizardState.profile);
+      } catch (_) {}
+    }
+
+    // Dispatch telemetry beacon to /api/visit for dual diagnosis recording
+    if (typeof window !== 'undefined' && typeof window.fetch === 'function') {
+      try {
+        window.fetch('/api/visit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            event: 'diagnosis',
+            mode: completionMode,
+            profile: wizardState.profile
+          })
+        }).catch(function() {});
       } catch (_) {}
     }
 
@@ -861,7 +895,7 @@
           mbEngine.attachRetestHandler();
         }
         if (typeof mbEngine.switchActiveReport === 'function') {
-          mbEngine.switchActiveReport(wizardState.preferredReportMode || 'growth');
+          mbEngine.switchActiveReport(wizardState.preferredReportMode || 'both');
         }
       }
     }
@@ -883,7 +917,7 @@
     const isLearningFormActive = Boolean(formEl && formEl.className && formEl.className.includes('wizard-mode-learning'));
     const activeReportMode = isLearningFormActive
       ? 'learning'
-      : ((wizardState.preferredReportMode === 'learning') ? 'learning' : 'growth');
+      : ((wizardState.preferredReportMode === 'learning') ? 'learning' : 'both');
 
     wizardState.preferredReportMode = activeReportMode;
     if (typeof window !== 'undefined') {
@@ -1255,7 +1289,7 @@
 
   function enterStudioMode(mode, reportMode) {
     if (typeof document === 'undefined') return;
-    const activeMode = (reportMode === 'learning') ? 'learning' : 'growth';
+    const activeMode = (reportMode === 'learning') ? 'learning' : (reportMode === 'growth' ? 'growth' : 'both');
     wizardState.preferredReportMode = activeMode;
     if (wizardState.profile) {
       wizardState.profile.preferredReportMode = activeMode;
@@ -1285,12 +1319,12 @@
         bannerEl.style.color = '#1E3A8A';
         bannerEl.style.background = '#EFF6FF';
         bannerEl.style.borderColor = '#BFDBFE';
-        bannerEl.innerHTML = '<strong>[신경인지 · 5각 두뇌 밸런스 정밀 진단]</strong> 보건복지부 K-DST 발달선별검사 및 뇌인지 학술논문 3,723편 기반 학습 병목·공부법 보고서를 발행합니다.';
+        bannerEl.innerHTML = '<strong>[신경인지 · 5각 두뇌 밸런스 정밀 진단]</strong> 보건복지부 K-DST 발달선별검사 및 뇌인지 학술논문 3,725편 기반 학습 병목·공부법 보고서를 발행합니다.';
       } else {
         bannerEl.style.color = '#1E3A8A';
         bannerEl.style.background = '#EFF6FF';
         bannerEl.style.borderColor = '#BFDBFE';
-        bannerEl.innerHTML = '<strong>[소아 신체 성장 · 골연령 정밀 진단]</strong> 질병관리청(KDCA) 소아청소년 표준 성장도표 및 학술논문 3,723편 기반 예상키·골든타임 보고서를 발행합니다.';
+        bannerEl.innerHTML = '<strong>[60초 1-Stop 통합 진단]</strong> 질병관리청(KDCA) 소아청소년 표준 성장도표 &amp; 보건복지부 K-DST 기반 1분 원스톱 신체 성장 × 두뇌·학습 통합 정밀 진단 보고서를 발행합니다.';
       }
     }
 
@@ -1298,8 +1332,8 @@
     if (submitBtnEl) {
       const isEnBtn = typeof document !== 'undefined' && (document.documentElement.lang === 'en' || document.documentElement.getAttribute('data-edition') === 'global-paid');
       submitBtnEl.textContent = isEnBtn
-        ? ((activeMode === 'learning') ? 'Generate My Child\'s 5-Axis Brain & Learning Report →' : 'Generate My Child\'s Height & Growth-Plate Report →')
-        : ((activeMode === 'learning') ? '설문 응답 기반 5각 두뇌·학습 정밀 보고서 발행하기' : '설문 응답 기반 신체 성장·예상키 정밀 보고서 발행하기');
+        ? ((activeMode === 'learning') ? 'Generate My Child\'s 5-Axis Brain & Learning Report →' : 'Generate Unified Growth & Learning Clinical Report (60s) →')
+        : ((activeMode === 'learning') ? '설문 응답 기반 5각 두뇌·학습 정밀 보고서 발행하기' : '설문 응답 기반 신체 성장 × 두뇌·학습 통합 정밀 보고서 발행하기');
     }
 
     if (document.body && document.body.classList) {

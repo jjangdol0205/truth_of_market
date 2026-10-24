@@ -2447,18 +2447,10 @@ svg {
   }
 }
 
-/* 24. DUAL-MODE SURVEY STUDIO (Growth Quiz vs Learning Quiz) */
-.wizard-mode-learning .mode-growth-field {
-  display: none !important;
-}
-.wizard-mode-learning .mode-learning-field {
+/* 24. 1-STOP UNIFIED SURVEY STUDIO (Unified Growth + Learning Funnel) */
+.mode-growth-field,
+.mode-learning-field {
   display: block !important;
-}
-.wizard-mode-growth .mode-growth-field {
-  display: block !important;
-}
-.wizard-mode-growth .mode-learning-field {
-  display: none !important;
 }
 
 /* ==========================================================================
