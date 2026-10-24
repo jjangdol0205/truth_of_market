@@ -1,87 +1,82 @@
-# Project: Taller Bio Labs 2-Phase Immersive Funnel & Master Briefing
+# Project: KidsFit Full-Funnel Inflow & Conversion Optimization System
 
 ## Architecture
-Taller Bio Labs is structured as a 2-Phase clinical pediatric growth and development analytics platform:
-1. **Phase 1: Input Funnel Only**:
-   - Focused single-slide card viewport with step progress bar (`Step 1 ~ Step 6`).
-   - Central card transition via smooth `translateX`.
-   - Results dashboard (`#results-dashboard`) and capsule tabs (`#capsule-tabs`) are 100% hidden (`display: none` / `.hidden`) on initial page load.
-   - Compact quick preset chip bar (`preset-card-1` ~ `preset-card-5`) for 1-second clinical simulation.
-   - 2.5~3s scanning animation sequence (KDCA/CDC LMS check -> 800+ academic papers matching -> 90-day actionable roadmap generation).
-2. **Phase 2: Master Briefing & Single Active Tab Results**:
-   - Patient summary bar with `[🔄 정보 다시 입력하기]` button to return to Phase 1.
-   - Master Briefing Card:
-     1) Current clinical status diagnosis (KDCA 2017, CDC 2000, K-DST, KDRIs percentiles, Z-score, ±cm vs standard, growth velocity trajectory, growth plate golden time).
-     2) Core causes & academic paper matching: Realtime filtering against `research-knowledge-base.json` (803 papers DB) showing actual paper title, authors, year, PMID/DOI link, and core statistical numbers for the user's inhibitors & age.
-     3) Actionable Roadmap (Top 3 Priorities): #1 Sleep/Hormone guidance, #2 Clinical Nutrition guidance (exact mg/g targets), #3 Decompression Exercise & Age-appropriate Brain/Habruta guidance.
-   - Single Active Tab View: Exactly 1 core tab rendered/visible at a time (other 4 tab panels `.hidden`).
-     - Core 1: Growth Trajectory & Prediction.
-     - Core 2: Hormones, Sleep & Clinical Nutrition.
-     - Core 3: Spinal Decompression & Growth Plate Coaching (timers).
-     - Core 4: Cognitive Development & Habruta Inquiry.
-     - Core 5: 90-day Tracker & A4 Report.
-   - Complete 2-page A4 print view (`@media print`) via `#clinic-print-report-container`.
-
-## Code Layout
-- `index.html`: Main HTML entry point, containing Phase 1 slide funnel and Phase 2 Master Briefing + 5 tab panes.
-- `src/css/style.css`: Design system, slide funnel viewport/track styles, Master Briefing card styles, single active tab rules, and print rules.
-- `src/js/app.js`: Main application controller, state management, tab switching, and rendering coordinator.
-- `src/js/onboarding-wizard.js`: 6-step slide funnel controller, validation, `translateX` stepper navigation, preset loader, 2.5~3s scanning animation.
-- `src/js/master-briefing.js` (or integrated into `growth-engine.js` / `app.js`): Dynamic academic paper matching against `window.KIDSFIT_RESEARCH_DATA` (803 papers) and 3-tier briefing generation.
-- `src/js/growth-engine.js`: Core 1 clinical calculations (KDCA 2017, US CDC 2000 LMS Z-scores, percentiles, MPH, velocity, 3-tier prediction curves).
-- `src/js/endocrinology-engine.js`: Core 2 circadian 24h GH simulation, SWS delta curve, insulin suppression.
-- `src/js/nutrition-engine.js`: Core 2 weight-proportional nutrient targets and bioavailability gauges.
-- `src/js/biomechanics-studio.js`: Core 3 decompression exercise timers.
-- `src/js/neuro-cognitive-matrix.js`: Core 4 5-axis radar chart and Habruta questions.
-- `src/js/growth-tracker.js`: Core 5 90-day tracking and 2-page A4 print generator.
-- `src/data/research-knowledge-base.json`: 803 peer-reviewed academic papers.
-- `scripts/build.js`: Asset copying and data inlining into `dist/`.
-- `scripts/verify-acceptance.js`: Acceptance test verification script.
-- `scripts/self-improve-engine.js`: 6-stage autonomous quality assurance and self-healing engine.
-- `tests/`: Pure Node.js CommonJS unit, integration, and adversarial tests.
+The KidsFit platform is a full-funnel parental healthcare and learning guidance system consisting of four tightly integrated layers:
+1. **Omnichannel Inflow Layer**:
+   - Naver Blog (`https://blog.naver.com/expertise333`) via CDP port 9222
+   - Naver Cafe (`https://cafe.naver.com/moneyfitlab`, Club ID 31805224) via CDP port 9222
+   - Instagram / Threads Daily Webtoon (4-cut) & Card News (6-slide) via Telegram Bot API (`755033799`)
+   - 31 SEO Q&A Landing Pages (`qna/*.html`), `sitemap.xml`, and CNAME binding to `https://truthofmarket.com`
+   - Independent QA Fact-Check Agent (`scripts/qa_fact_check_agent.py`) enforcing zero external affiliate links and validating official diagnostic bridge links with UTM tracking.
+2. **On-Site Diagnosis & Onboarding Funnel Layer (`https://truthofmarket.com`)**:
+   - Primary domain defaulting to Korean (`ko`) Free Growth & Learning Studio (disabling forced English paywall on primary domain).
+   - 1-Stop Unified 60-Second "Growth + Learning" Diagnostic Funnel executing both KDCA physical growth calculations and K-DST cognitive/learning evaluations in a single seamless flow.
+   - Dual telemetry recording both `diagnoses.growth` and `diagnoses.learning` events on completion.
+3. **Product Prescription & Conversion Monetization Layer**:
+   - Post-diagnosis personalized product recommendation engine dynamically matching diagnosed deficits (late sleep, picky eating, poor posture, reading literacy, math spatial block, digital dopamine) to academic-paper-backed products (HT042, MCHA Calcium, pull-up bar, trampoline, Gabe, workbooks).
+   - Embedded affiliate tracking codes: Coupang Partners (`AF7865143`) and LinkPrice YES24 (`A100708867`).
+   - Granular click conversion telemetry capturing `growth_product_click` vs `learning_product_click` and `utm_source` in `visitor_analytics.json`.
+4. **Verification & Live Execution Layer**:
+   - Automated test harness (`npm test`, `npm run verify`, and E2E test suite).
+   - Live cycle execution with Naver Blog/Cafe publishing and Telegram notification delivery.
 
 ## Feature Inventory
 | # | Feature | Description | Milestone | Source |
 |---|---------|-------------|-----------|--------|
-| 1 | Initial Dashboard Hide | `#results-dashboard` & `#capsule-tabs` 100% hidden (`display: none` / `.hidden`) on initial page load | M1 | Survey R1 |
-| 2 | 6-Slide Funnel Track | Central card viewport with smooth `translateX` sliding across Step 1 to 6 | M1 | Survey R1 |
-| 3 | Step 1 Inputs | Subject (Child/Self), Gender (Boy/Girl), Age slider (1~20) & months | M1 | Survey R1 |
-| 4 | Step 2 Inputs | Current Height, Weight, 6-month growth velocity (cm/yr) | M1 | Survey R1 |
-| 5 | Step 3 Inputs | Father & Mother height + realtime MPH preview badge | M1 | Survey R1 |
-| 6 | Step 4 Inputs | Tanner Phase 1~4 large touch cards | M1 | Survey R1 |
-| 7 | Step 5 Inputs | 5 biological inhibitors multi-select touch cards | M1 | Survey R1 |
-| 8 | Step 6 Inputs | 5-domain cognitive/inquiry axes + CTA button | M1 | Survey R1 |
-| 9 | 1-Sec Quick Presets Bar | Compact preset chip row (`preset-card-1` ~ `preset-card-5`) for 1-sec simulation | M1 | Survey R1 |
-| 10 | 2.5~3s Scan Animation | 3-stage scanning overlay (KDCA/CDC -> 800+ papers -> 90-day roadmap) | M1 | Survey R1 |
-| 11 | Funnel Re-Entry Button | User summary bar with `[🔄 정보 다시 입력하기]` button restoring Phase 1 | M1 | Survey R1 |
-| 12 | Master Briefing Card | Diagnostic overview card rendered at top of Phase 2 | M1 | Survey R2 |
-| 13 | MB Section 1: Clinical Diagnosis | KDCA/CDC Z-scores, percentiles, ±cm vs standard, velocity, golden time | M1 | Survey R2 |
-| 14 | MB Section 2: Realtime Papers Match | Realtime dynamic matching of 803 papers DB by user inhibitors & age with titles, authors, PMID/DOI links, statistics | M1 | Survey R2 |
-| 15 | MB Section 3: Actionable Roadmap | Top 3 Priorities: #1 Sleep/Hormone, #2 Nutrition exact mg/g, #3 Decompression & Habruta | M1 | Survey R2 |
-| 16 | Single Active Tab Navigation | Exactly 1 of the 5 Core tabs visible at a time (`.active`), other 4 hidden (`.hidden`) | M1 | Survey R3 |
-| 17 | 2-Page A4 Print View | Complete 2-page A4 clinic report rendered via `#clinic-print-report-container` in `@media print` | M1 | Survey R3 |
-| 18 | Feature & System Preservation | EN/KO, Dark/Light, reference chips, admin modal, 803 papers DB, 6-stage self-improve engine | M2 | Survey R4 |
-| 19 | Test Suite Alignment & Extension | Update tests to remove legacy `step-content-6` blocker and add tests for Phase 1, Phase 2, Single Tab | M2 | Survey R4 |
-| 20 | Build, Verify & Deploy | Pass `npm test`, `npm run verify`, `self-improve-engine.js`, commit and push to `origin/main` | M3 | Survey R4 |
+| F01 | Promotion & Funnel Bottleneck Diagnosis Report | Quantitative report in markdown and JSON analyzing UV/PV, referrers, diagnosis completion split (29 vs 0), affiliate clicks, and root cause matrix | M1 | ORIGINAL_REQUEST R1 |
+| F02 | Naver Blog Contextual Diagnostic Bridge & QR Infographic | High-CTR UTM diagnostic bridge text in blog posts + 135x135 QR code and callout banner in 3rd checklist infographic image | M2 | ORIGINAL_REQUEST R2 |
+| F03 | Naver Cafe Diagnostic Bridge & Card Upgrade | Contextual diagnostic bridge text in 7 cafe boards + 120x120 QR code and callout banner in cafe card image | M2 | ORIGINAL_REQUEST R2 |
+| F04 | Webtoon Cut 4 & Card News Slide 6 QR Bridge | Visual end-card QR code and callout banner in Webtoon cut 4 and Card News slide 6 + UTM-tagged copy text | M2 | ORIGINAL_REQUEST R2 |
+| F05 | 31 SEO Q&A Landing Pages Bridge Widgets & Sitemap Unification | Top & bottom 1-click diagnostic bridge widgets in all `qna/*.html`, canonical & sitemap unification to `truthofmarket.com` | M2 | ORIGINAL_REQUEST R2 |
+| F06 | QA Fact-Check Agent Rule Alignment | Stage 1 & 2 QA rules requiring `truthofmarket.com` UTM bridge links while strictly prohibiting commercial affiliate links on external channels | M2 | ORIGINAL_REQUEST R2 |
+| F07 | Primary Domain Korean Default Fix | Remove forced English paywall on `truthofmarket.com`, default to `lang="ko"` free studio, allow global paid mode only via `?edition=global` | M3 | ORIGINAL_REQUEST R3 |
+| F08 | 1-Stop Unified Growth + Learning Diagnosis Flow | Combine physical growth and cognitive learning survey into single <60s flow, removing CSS mutual exclusion | M3 | ORIGINAL_REQUEST R3 |
+| F09 | Dual Diagnosis Telemetry Recording | Record both `diagnoses.growth` and `diagnoses.learning` events in `visitor_analytics.json` and server upon diagnosis completion | M3 | ORIGINAL_REQUEST R3 |
+| F10 | Personalized Growth & Learning Prescription Engine | Render paper-backed product cards directly matched to child's diagnosed deficits with PMID citations and clean CTAs | M4 | ORIGINAL_REQUEST R4 |
+| F11 | Category & UTM Conversion Click Tracking | Intercept product clicks, record `growth_product_click` / `learning_product_click` with `utm_source` in `visitor_analytics.json` | M4 | ORIGINAL_REQUEST R4 |
+| F12 | Comprehensive E2E Test Suite | Automated test suite verifying R1~R5 requirements across Category-Partition, BVA, Pairwise, and Scenario tiers | E2E Track | ORIGINAL_REQUEST Criteria |
+| F13 | Live Omnichannel Execution & Telegram Delivery | 1 live blog post + 1 live cafe post published and verified via DOM, Telegram summary and asset pack sent to `755033799` | M5 | ORIGINAL_REQUEST R5 |
 
 ## Milestones
 | # | Name | Scope | Dependencies | Status |
 |---|------|-------|-------------|--------|
-| M1 | 2-Phase UX Transformation (Slide Funnel, Master Briefing, Single Tab) | Features 1-17: R1 (6-slide funnel, quick presets, scanning overlay, initial dashboard hide), R2 (Master Briefing card, 803 papers dynamic matching, Top 3 roadmap), R3 (Single active tab view, 2-page A4 print view) | none | DONE |
-| M2 | Test Suite Alignment, Verification & Self-Improvement Loop | Features 18-19: R4 (Fix legacy step-content-6 blockers, write comprehensive phase 1-2 tests, verify 33/33 checks, run 6-stage self-improve engine) | M1 | IN_PROGRESS |
-| M3 | Production Build, Verification & GitHub Deployment | Feature 20: R4 (Run npm run build, full test verification, git commit, push to origin/main, live verification) | M2 | PLANNED |
+| E2E | E2E Testing Track | Design and publish comprehensive E2E test harness for R1-R5, publish TEST_READY.md | none | IN_PROGRESS |
+| M1 | R1 Promotion & Funnel Diagnosis Report | Generate `docs/promotion_funnel_diagnosis_report.md` and `.json` | none | READY |
+| M2 | R2 Omnichannel Inflow Bridges & QA Alignment | Upgrade Blog, Cafe, Webtoon, Card News, Q&A pages, sitemap, and QA agent | M1 | PLANNED |
+| M3 | R3 Homepage Korean Default & 1-Stop Dual Diagnosis | Fix `index.html`, paywall scripts, unified wizard flow, and dual telemetry | M1 | PLANNED |
+| M4 | R4 Personalized Product Prescription & Conversion Tracking | Render paper-backed product cards and log category + UTM clicks | M3 | PLANNED |
+| M5 | R5 Live Execution, E2E Verification & Telegram Delivery | Execute 1 live publishing cycle, run E2E verification, send Telegram delivery | M2, M3, M4, E2E | PLANNED |
 
 ## Interface Contracts
-### OnboardingWizard ↔ AppCoordinator (`src/js/onboarding-wizard.js` ↔ `src/js/app.js`)
-- `OnboardingWizard.init(formSelector, onSubmitCallback)`: Initializes stepper, sets step=1, hides `#results-dashboard` and `#capsule-tabs`.
-- `OnboardingWizard.goToStep(stepNumber)`: Clamps between 1 and 6, translates track by `-((step-1)*100)%`, updates progress bar text and width.
-- `OnboardingWizard.getFormData()`: Returns `{ subject, gender, ageYears, ageMonths, height, weight, recentGrowth6m, fatherHeight, motherHeight, region, tannerPhase, habits: [], cognitiveAxes: [] }`.
-- `OnboardingWizard.startScan(callback)`: Executes 2.5~3s animation with KDCA/CDC -> 800+ papers -> 90-day roadmap steps, then invokes callback.
+### Client ↔ Server Analytics Telemetry (`/api/visit`)
+- **Diagnosis Completion**:
+  - Request: `POST /api/visit`
+  - Body: `{ event: 'diagnosis', mode: 'both', profile: {...} }`
+  - Action: increments `day.diagnoses.total`, `day.diagnoses.growth`, and `day.diagnoses.learning` in `visitor_analytics.json`.
+- **Product Click Conversion**:
+  - Request: `POST /api/visit`
+  - Body: `{ event: 'growth_product_click' | 'learning_product_click', category: 'growth' | 'learning', href: string, utm_source: string }`
+  - Action: increments `day.affiliateClicks`, `day.productClicks.growth` or `learning`, and registers click under `day.productClicks.byReferrer[utm_source]`.
 
-### MasterBriefingEngine ↔ AppCoordinator (`src/js/master-briefing.js` ↔ `src/js/app.js`)
-- `MasterBriefingEngine.matchPapers(habits, ageYears, tannerPhase, limit = 3)`: Returns array of `{ paper, matchedCause }` with valid PMID/DOI links.
-- `MasterBriefingEngine.render(profile)`: Returns complete HTML string for `#master-briefing-card` containing Sections 1, 2, and 3.
+### External Bridge ↔ Homepage Diagnostic URL Contract
+- **Naver Blog**: `https://truthofmarket.com/?utm_source=naver_blog&utm_medium=organic_social&utm_campaign=kidsfit_diagnosis`
+- **Naver Cafe**: `https://truthofmarket.com/?utm_source=naver_cafe&utm_medium=organic_social&utm_campaign=kidsfit_diagnosis`
+- **Instagram Bio**: `https://truthofmarket.com/?utm_source=instagram_bio&utm_medium=social_bio&utm_campaign=kidsfit_diagnosis`
+- **Instagram / Threads Captions**: `https://truthofmarket.com/?utm_source=instagram&utm_medium=organic_social&utm_campaign=kidsfit_diagnosis` / `utm_source=threads`
+- **Q&A Landing Pages**: `https://truthofmarket.com/?utm_source=qna_top` and `?utm_source=qna_bottom`
 
-### TabNavigation ↔ AppCoordinator (`src/js/app.js`)
-- `switchTab(tabId)`: Sets active capsule tab button, activates corresponding `#tab-pane-*`, adds `.hidden` (`display: none`) to all other 4 tab panes.
-- `retest()`: Triggered by `#btn-retest`, hides `#results-dashboard` and `#capsule-tabs`, shows `#quiz-section`, and calls `OnboardingWizard.goToStep(1)`.
+## Code Layout
+- `docs/promotion_funnel_diagnosis_report.md` & `.json` : Full-funnel bottleneck diagnosis report
+- `scripts/publish_enhanced_naver_blog.py` : Naver Blog publisher with UTM bridge and QR infographic
+- `scripts/publish_enhanced_naver_cafe.py` : Naver Cafe publisher with UTM bridge and QR card
+- `scripts/generate_webtoon_and_cardnews_packs.py` : Webtoon cut 4 and Card News slide 6 visual QR generators
+- `scripts/send_branding_and_daily_assets_telegram.py` : Telegram asset dispatch with updated UTM copy
+- `scripts/qa_fact_check_agent.py` : Stage 1 & Stage 2 QA agent enforcing UTM bridges and 0 external affiliate links
+- `qna/*.html` & `sitemap.xml` : 31 Q&A SEO landing pages and sitemap
+- `index.html` : Homepage shell, Korean default fix, 1-stop unified quiz wizard, product prescription rendering
+- `src/js/global-paywall-edition.js` & `src/js/i18n.js` : Paywall gating and language switcher logic
+- `src/js/onboarding-wizard.js` : 6-step unified growth + learning diagnosis flow
+- `src/js/pinpoint-curator.js` : Paper-backed product card generation with category attributes
+- `server.js` : Telemetry endpoints (`/api/visit`) recording dual diagnoses and categorized UTM clicks
+- `visitor_analytics.json` & `logs/` : Telemetry logs
+- `tests/test_full_funnel_optimization_e2e.py` : Comprehensive E2E test suite

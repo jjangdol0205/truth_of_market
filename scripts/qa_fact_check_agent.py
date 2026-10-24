@@ -69,6 +69,9 @@ KB_PATH = ROOT_DIR / "docs" / "hourly_benchmark_paper_kb.json"
 RESEARCH_DB_PATH = ROOT_DIR / "src" / "data" / "research-knowledge-base.json"
 
 # Targets & Constants from authoritative specifications
+PRODUCTION_DOMAIN = "truthofmarket.com"
+LEGACY_DOMAIN = "kidsfit.co.kr"
+
 TARGET_EMAIL = "beable9489@gmail.com"
 TARGET_BLOG_URL = "https://blog.naver.com/expertise333"
 TARGET_CAFE_URL = "https://cafe.naver.com/moneyfitlab"
@@ -477,6 +480,12 @@ def audit_promotional_and_affiliate_content(text: str) -> tuple[str, list[str]]:
         unique_tokens = list(set(detected_tokens))
         issues.append(f"Rejected commercial affiliate tokens/links: {', '.join(unique_tokens)}. Content sanitized for 100% academic non-promotional compliance.")
 
+    # Strict rejection of legacy domain kidsfit.co.kr in favor of production domain truthofmarket.com
+    if LEGACY_DOMAIN.lower() in clean.lower():
+        issues.append(f"Rejected legacy domain {LEGACY_DOMAIN}: All links must use {PRODUCTION_DOMAIN} with UTM attribution.")
+        clean = re.sub(rf"https?://{re.escape(LEGACY_DOMAIN)}", f"https://{PRODUCTION_DOMAIN}", clean, flags=re.IGNORECASE)
+        clean = re.sub(re.escape(LEGACY_DOMAIN), PRODUCTION_DOMAIN, clean, flags=re.IGNORECASE)
+
     return clean, issues
 
 
@@ -638,6 +647,11 @@ def audit_pre_publish(content_dict: dict) -> tuple[bool, dict, list[str]]:
     issues.extend(title_promo_issues)
     issues.extend(body_promo_issues)
 
+    # 3.1 Validate presence of contextual diagnostic bridge link (truthofmarket.com with utm_source)
+    has_diagnostic_bridge = PRODUCTION_DOMAIN in clean_body and "utm_source" in clean_body
+    if not has_diagnostic_bridge and content_type in ["blog", "cafe", "webtoon", "card_news"]:
+        issues.append(f"Missing required diagnostic bridge link to {PRODUCTION_DOMAIN} with utm_source attribution.")
+
     # 4. Validate academic citations (PMID, DOI, KDCA, K-DST)
     has_academic, verified_cits, cit_issues = audit_academic_citations(clean_body)
     issues.extend(cit_issues)
@@ -653,6 +667,7 @@ def audit_pre_publish(content_dict: dict) -> tuple[bool, dict, list[str]]:
     sanitized_dict["images"] = images
     sanitized_dict["category"] = category
     sanitized_dict["academic_citations"] = verified_cits
+    sanitized_dict["has_diagnostic_bridge"] = has_diagnostic_bridge
 
     # Determine validation verdict:
     # Fatal violations: missing images below minimum threshold, or length below limit for blog
@@ -760,6 +775,8 @@ def audit_post_publish(
         "has_raw_markdown": False,
         "has_affiliate_links": False,
         "has_broken_tokens": False,
+        "has_bridge": False,
+        "has_diagnostic_bridge": False,
         "category_verified": False,
         "category": "",
         "issues": []
@@ -778,6 +795,8 @@ def audit_post_publish(
         log["images_loaded"] = log["image_count"]
         log["category_verified"] = True
         log["category"] = "우리 아이 키성장·성조숙증" if post_type == "blog" else "키성장·성조숙증 코칭"
+        log["has_bridge"] = True
+        log["has_diagnostic_bridge"] = True
         record_qa_audit_log({"stage": "stage2_post_publish", "target_url": url, "is_valid": True, "log": log})
         return True, log
 
@@ -855,9 +874,9 @@ def audit_post_publish(
                     }
                 }
 
-                // Category element
-                let catEl = document.querySelector('.blog2_series, .link_board, span[class*="category"], a[class*="board"]');
-                const catText = catEl ? catEl.innerText.trim() : '';
+                // Diagnostic bridge check (truthofmarket.com with utm_source)
+                const hasBridge = links.some(l => l.includes('truthofmarket.com') && l.includes('utm_source'));
+                const hasLegacyDomain = text.includes('kidsfit.co.kr') || links.some(l => l.includes('kidsfit.co.kr'));
 
                 return {
                     charCount: text.length,
@@ -867,6 +886,8 @@ def audit_post_publish(
                     foundBroken: foundBroken,
                     rawMdTokens: rawMdTokens,
                     foundAffiliate: foundAffiliate,
+                    hasBridge: hasBridge,
+                    hasLegacyDomain: hasLegacyDomain,
                     category: catText
                 };
             }"""
@@ -876,6 +897,13 @@ def audit_post_publish(
             log["image_count"] = res.get("imageCount", 0)
             log["images_loaded"] = res.get("imagesLoadedCount", 0)
             log["category"] = res.get("category", "")
+            log["has_bridge"] = res.get("hasBridge", False)
+            log["has_diagnostic_bridge"] = log["has_bridge"]
+
+            if not log["has_bridge"]:
+                log["issues"].append(f"Live DOM missing diagnostic bridge link to {PRODUCTION_DOMAIN} with utm_source.")
+            if res.get("hasLegacyDomain"):
+                log["issues"].append(f"Live DOM contains banned legacy domain {LEGACY_DOMAIN}.")
 
             # Verify character length
             min_chars = 1500 if post_type == "blog" else 300

@@ -14,10 +14,29 @@ Generates sensuous, high-contrast, editorial-grade Webtoon & Cardnews packs:
 Also updates samples/2_webtoon_sample/ and samples/3_cardnews_sample/ with the upgraded sensuous design!
 """
 
+import sys
 import html
 import shutil
+import zipfile
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
+import qrcode
+
+# Safe Windows console stdout/stderr reconfigure
+if sys.platform == "win32":
+    try:
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+        sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
+
+# Production Domain & Diagnostic Bridge URLs
+PRODUCTION_DOMAIN = "truthofmarket.com"
+WEBTOON_QR_URL = f"https://{PRODUCTION_DOMAIN}/?utm_source=instagram_webtoon_qr&utm_medium=qr_code&utm_campaign=kidsfit_diagnosis"
+CARDNEWS_QR_URL = f"https://{PRODUCTION_DOMAIN}/?utm_source=cardnews_qr&utm_medium=qr_code&utm_campaign=kidsfit_diagnosis"
+THREADS_BRIDGE_URL = f"https://{PRODUCTION_DOMAIN}/?utm_source=threads&utm_medium=organic_social&utm_campaign=kidsfit_diagnosis"
+INSTAGRAM_BRIDGE_URL = f"https://{PRODUCTION_DOMAIN}/?utm_source=instagram&utm_medium=organic_social&utm_campaign=kidsfit_diagnosis"
+
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 ARTIFACTS_DIR = Path(r"C:\Users\jjang\.gemini\antigravity\brain\efdd0412-2586-40cf-bb28-0fa8976613df")
@@ -266,11 +285,13 @@ def render_webtoon_cut(
     step_badge: str,
     bubbles: list,
     accent_color=(79, 70, 229),
+    is_cut_4: bool = False,
 ) -> Image.Image:
     """
     Renders a pure, natural 1080x1080 Instatoon cut (@gangjidol style):
     - NO artificial UI header pills or speaker tags
     - Natural oval/capsule hand-drawn speech bubbles placed right next to the characters
+    - If is_cut_4: renders high-contrast bottom diagnostic banner with QR code to truthofmarket.com
     """
     canvas = load_square_art(raw_path, 1080)
 
@@ -284,6 +305,36 @@ def render_webtoon_cut(
             text=b["text"],
             is_narration=is_narr,
         )
+
+    if is_cut_4:
+        W, H = 1080, 1080
+        draw = ImageDraw.Draw(canvas)
+        banner_y1 = 926
+        banner_y2 = 1056
+        draw.rounded_rectangle(
+            [(24, banner_y1), (W - 24, banner_y2)],
+            radius=20,
+            fill=(30, 27, 75),  # Deep royal indigo #1E1B4B
+            outline=(79, 70, 229),
+            width=3
+        )
+        f_b1 = get_font(25, bold=True)
+        f_b2 = get_font(19, bold=True)
+        draw.text((44, banner_y1 + 18), "★ 우리 아이 예상키 + 두뇌·학습 1분 무료 진단", font=f_b1, fill=(253, 224, 71))  # Yellow
+        draw.text((44, banner_y1 + 68), "질병관리청 성장도표 & 논문 기반 맞춤 리포트 ▶ truthofmarket.com", font=f_b2, fill=(255, 255, 255))
+
+        # 110x110 QR Code
+        qr = qrcode.QRCode(version=1, box_size=3, border=1)
+        qr.add_data(WEBTOON_QR_URL)
+        qr.make(fit=True)
+        qr_img = qr.make_image(fill_color="black", back_color="white").convert("RGB")
+        qr_img = qr_img.resize((106, 106), Image.Resampling.LANCZOS)
+
+        qr_x = W - 24 - 124
+        qr_y = banner_y1 + 12
+        draw.rounded_rectangle([(qr_x - 3, qr_y - 3), (qr_x + 109, qr_y + 109)], radius=8, fill=(255, 255, 255), outline=(79, 70, 229), width=1)
+        canvas.paste(qr_img, (qr_x, qr_y))
+
     return canvas
 
 
@@ -297,6 +348,7 @@ def render_sensuous_cardnews_slide(
     floating_tag: str,
     points_3: list,
     theme_palette: dict,
+    is_slide_6: bool = False,
 ) -> Image.Image:
     """
     Renders an editorial, high-contrast, ZERO-MARGIN 1080x1350 Cardnews slide:
@@ -304,8 +356,7 @@ def render_sensuous_cardnews_slide(
       56pt bold white title with fluorescent highlight bar behind line 2, 30pt gold/mint subtitle.
     - Center Zone (y = 340..940): Full-bleed 1080px-wide illustration (zero left/right margin!)
       with a sleek floating insight pill badge at bottom-left of the artwork.
-    - Bottom Zone (y = 940..1350): 3 full-width rows (height 136px each, zero margin!)
-      with bold circular number badges (01, 02, 03) + large 36pt bold 1-line text + key phrase highlight!
+    - Bottom Zone (y = 940..1350): 3 full-width rows OR if is_slide_6: 2 rows + 150x150 QR code diagnostic CTA box!
     """
     W, H = 1080, 1350
     canvas = Image.new("RGB", (W, H), (255, 255, 255))
@@ -363,7 +414,78 @@ def render_sensuous_cardnews_slide(
     draw.line([(0, 340), (W, 340)], fill=neon_badge, width=4)
     draw.line([(0, 940), (W, 940)], fill=accent, width=5)
 
-    # 3. Bottom 3-Row Takeaway Zone (y = 940..1350, 3 rows, ZERO outer margin!)
+    # 3. Bottom Takeaway Zone
+    if is_slide_6:
+        # Bottom zone with 2 rows of points + high-contrast diagnostic bridge box with 150x150 QR code
+        row_y_starts = [940, 1046]
+        row_heights = [104, 104]
+        f_num = get_font(26, bold=True)
+        f_pt = get_font(31, bold=True)
+
+        for idx, pt_text in enumerate(points_3[:2]):
+            ry = row_y_starts[idx]
+            rh = row_heights[idx]
+            bg_c = row_even if idx % 2 == 0 else row_odd
+            draw.rectangle([(0, ry), (W, ry + rh)], fill=bg_c)
+            if idx > 0:
+                draw.line([(0, ry), (W, ry)], fill=(203, 213, 225), width=2)
+
+            # Left vertical accent bar
+            draw.rectangle([(0, ry), (12, ry + rh)], fill=accent if idx % 2 == 0 else neon_badge)
+
+            # Number Circle Badge (01, 02)
+            cx = 76
+            cy = ry + rh // 2
+            draw.ellipse([(cx - 28, cy - 28), (cx + 28, cy + 28)], fill=accent if idx != 1 else header_bg)
+            num_str = f"0{idx + 1}"
+            nb = draw.textbbox((0, 0), num_str, font=f_num)
+            nw = nb[2] - nb[0]
+            nh = nb[3] - nb[1]
+            draw.text((cx - nw // 2, cy - nh // 2 - 3), num_str, font=f_num, fill=(255, 255, 255))
+
+            clean_pt = pt_text.lstrip("①②③123. ").strip()
+            pb = draw.textbbox((0, 0), clean_pt, font=f_pt)
+            pw = pb[2] - pb[0]
+            ph = pb[3] - pb[1]
+            px = 136
+            py = ry + (rh - ph) // 2 - 4
+
+            draw.rounded_rectangle([(px - 4, py + ph - 8), (px + pw + 6, py + ph + 6)], radius=6, fill=point_hl)
+            draw.text((px, py), clean_pt, font=f_pt, fill=(15, 23, 42))
+
+        # Diagnostic Bridge Callout Box (y = 1158..1338, height 180)
+        box_y1 = 1158
+        box_y2 = 1338
+        draw.rounded_rectangle(
+            [(20, box_y1), (W - 20, box_y2)],
+            radius=20,
+            fill=(255, 255, 255),
+            outline=(79, 70, 229),
+            width=3
+        )
+        f_cta_title = get_font(27, bold=True)
+        f_cta_sub = get_font(20, bold=True)
+        f_cta_url = get_font(25, bold=True)
+
+        draw.text((44, box_y1 + 22), "내 아이 예상키 + 두뇌·학습 골든타임 1분 무료 진단", font=f_cta_title, fill=(30, 27, 75))
+        draw.text((44, box_y1 + 72), "회원가입 0초 · 질병관리청 & 논문 기반 맞춤 리포트 발급", font=f_cta_sub, fill=(5, 150, 105))
+        draw.text((44, box_y1 + 118), "👉 truthofmarket.com ↗", font=f_cta_url, fill=(234, 88, 12))
+
+        # 150x150 QR Code
+        qr = qrcode.QRCode(version=1, box_size=4, border=1)
+        qr.add_data(CARDNEWS_QR_URL)
+        qr.make(fit=True)
+        qr_img = qr.make_image(fill_color="black", back_color="white").convert("RGB")
+        qr_img = qr_img.resize((150, 150), Image.Resampling.LANCZOS)
+
+        qr_x = W - 20 - 165
+        qr_y = box_y1 + 15
+        draw.rounded_rectangle([(qr_x - 3, qr_y - 3), (qr_x + 153, qr_y + 153)], radius=10, fill=(255, 255, 255), outline=(79, 70, 229), width=1)
+        canvas.paste(qr_img, (qr_x, qr_y))
+
+        return canvas
+
+    # Normal 3-Row Takeaway Zone (y = 940..1350, 3 rows, ZERO outer margin!)
     row_y_starts = [940, 1076, 1212]
     row_heights = [136, 136, 138]
     f_num = get_font(30, bold=True)
@@ -667,10 +789,10 @@ WEBTOON_EPISODES = [
 저도 애가 왜 이렇게 고집이 세졌나 싶었는데, 소아 신경발달 데이터를 보고 완전히 반성했습니다. 만 2~4세 아이가 갑자기 모든 걸 자기 손으로 하겠다고 고집부리는 건 '반항'이 아니라, 대뇌 피질의 30%와 직결된 [손끝 소근육 민감기]가 열렸다는 뇌의 신호래요.
 
 뇌가 한창 손끝 시냅스를 연결하려고 애쓰는 중이라는 걸 알고 나니, 단추 하나 끼우느라 낑낑대는 고사리손이 그렇게 기특해 보일 수가 없더라고요. 주말에 나무 집게로 공 옮기기랑 안전가위 오리기를 해줬더니 혼자 하트를 오려와서 "엄마 선물!" 하고 건네는데 코끝이 찡했습니다🥹""",
-        "threads_reply_2": """오늘도 "내가 혼자 할 거야!" 병에 걸린 아이 기다려주느라 애쓰신 모든 엄빠들, 우리 아이 뇌가 폭풍 성장 중이라는 뜻이니 오늘 밤엔 꼭 한 번 더 안아주자고요 ♥
+        "threads_reply_2": f"""오늘도 "내가 혼자 할 거야!" 병에 걸린 아이 기다려주느라 애쓰신 모든 엄빠들, 우리 아이 뇌가 폭풍 성장 중이라는 뜻이니 오늘 밤엔 꼭 한 번 더 안아주자고요 ♥
 
 💡 우리 아이 개월 수별 소근육·두뇌 발달 밸런스랑 질병관리청 기준 키 백분위는 제가 참고한 무료 진단 리포트에서 회원가입 없이 1분 만에 확인해 보실 수 있어요!
-👉 https://kidsfit.co.kr""",
+👉 {THREADS_BRIDGE_URL}""",
     },
     {
         "ep_num": 2,
@@ -804,10 +926,10 @@ WEBTOON_EPISODES = [
 저도 우리 애가 국어 독해력이 부족한가 싶었는데, 인지뇌과학 데이터를 보고 완전히 반성했습니다. 초등 아이가 문장제 수학에서 막히는 건 국어 문제가 아니라, 머릿속 작은 칠판인 [전두엽 작업기억] 용량이 꽉 차서 앞줄 숫자가 지워지는 현상이래요!
 
 암산하라고 다그칠 게 아니라 문제집 여백에 '상자 그림' 하나만 그리게 해줬더니, 혼자 식 세우고 맞히면서 "엄마 나 수학 천재인가 봐!" 하고 하이파이브하는데 어찌나 기특하던지요🥹""",
-        "threads_reply_2": """오늘도 아이 문제집 옆에서 참을 인(忍) 세 번 새기며 애쓰신 모든 엄빠들, 아이 머릿속 칠판을 종이 여백으로 넓혀주는 작은 습관 하나로 오늘 저녁은 웃으며 하이파이브해 보자고요 ♥
+        "threads_reply_2": f"""오늘도 아이 문제집 옆에서 참을 인(忍) 세 번 새기며 애쓰신 모든 엄빠들, 아이 머릿속 칠판을 종이 여백으로 넓혀주는 작은 습관 하나로 오늘 저녁은 웃으며 하이파이브해 보자고요 ♥
 
 💡 우리 아이 전두엽 작업기억·문해력·수리력 5대 학습 역량(LQ) 점수랑 신체 성장 백분위는 제가 참고한 무료 리포트에서 회원가입 없이 1분 만에 확인하실 수 있어요!
-👉 https://kidsfit.co.kr""",
+👉 {THREADS_BRIDGE_URL}""",
     },
     {
         "ep_num": 3,
@@ -940,10 +1062,10 @@ WEBTOON_EPISODES = [
 저도 밤에 우유를 먹여야 자면서 키가 크는 줄 알았는데, 소아내분비학 논문을 보고 깜짝 놀랐습니다. 하루 성장호르몬의 70%가 밤 10시~새벽 2시 깊은 서파수면에서 나오는데, 자기 전 2시간 안에 우유나 야식이 들어가서 인슐린 수치가 올라가면 뇌에서 성장호르몬 분비 스위치를 꺼버린대요!
 
 그 길로 밤 우유는 끊고 저녁 식사 때 두부·치즈·비타민D3를 챙겨준 뒤, 밤 9시 40분에 무릎·종아리 성장판 마사지 5분 해주고 10시에 재웠더니 이번 달에 드디어 키가 1cm 훌쩍 자랐습니다🥹""",
-        "threads_reply_2": """오늘 밤엔 자기 전 간식 대신 따뜻한 손길로 아이 무릎이랑 종아리를 5분만 토닥여주자고요. 엄마 손길이 세상 최고의 성장호르몬 스위치니까요 ♥
+        "threads_reply_2": f"""오늘 밤엔 자기 전 간식 대신 따뜻한 손길로 아이 무릎이랑 종아리를 5분만 토닥여주자고요. 엄마 손길이 세상 최고의 성장호르몬 스위치니까요 ♥
 
 💡 질병관리청 성장도표 기준 우리 아이 정확한 키 백분위랑 부모 유전키(MPH) 대비 최대 잠재키는 제가 참고한 무료 리포트에서 회원가입 없이 1분 만에 계산해 보실 수 있어요!
-👉 https://kidsfit.co.kr""",
+👉 {THREADS_BRIDGE_URL}""",
     },
     {
         "ep_num": 4,
@@ -1077,10 +1199,10 @@ WEBTOON_EPISODES = [
 저도 억지로라도 한 입 먹여야 키가 클 것 같아서 매일 식탁 전쟁을 치렀는데, 소아 임상영양학 논문을 보고 머리를 한 대 맞은 기분이었습니다. 아이가 밥을 거부하는 건 투정이 아니라, 혀의 미각 세포를 재생시키는 [아연(Zinc)]이 부족해서 쓴맛과 낯선 식감에 예민해진 상태래요!
 
 억지로 떠먹이는 걸 멈추고 아연을 챙겨주면서 주말에 두부·다진고기·파프리카를 '공룡 모양 쿠키틀'로 같이 찍어봤더니, 세상에… 자기가 만든 공룡이라며 한 입에 앙 베어 무는데 눈물 날 뻔했습니다🥹""",
-        "threads_reply_2": """오늘 저녁도 밥그릇 들고 아이 뒤쫓아 다니느라 고생하신 모든 엄빠들, "한 입만 더!" 대신 아이 손에 귀여운 모양틀 하나 쥐여주며 즐거운 식탁부터 만들어보자고요 ♥
+        "threads_reply_2": f"""오늘 저녁도 밥그릇 들고 아이 뒤쫓아 다니느라 고생하신 모든 엄빠들, "한 입만 더!" 대신 아이 손에 귀여운 모양틀 하나 쥐여주며 즐거운 식탁부터 만들어보자고요 ♥
 
 💡 우리 아이 정확한 키·체중 백분위랑 현재 몸무게(kg)에 딱 맞는 일일 칼슘·아연·비타민D3 권장량은 제가 참고한 무료 리포트에서 회원가입 없이 1분 만에 확인하실 수 있어요!
-👉 https://kidsfit.co.kr""",
+👉 {THREADS_BRIDGE_URL}""",
     },
     {
         "ep_num": 5,
@@ -1213,10 +1335,10 @@ WEBTOON_EPISODES = [
 저도 애가 습관이 나쁜 줄만 알았는데, 척추 생체역학 데이터를 보고 완전히 반성했습니다. 평평한 책상 위 책을 보려고 고개를 30도만 숙여도 목뼈에 18kg 하중이 실리면서 척추가 눌려 [숨은 키 2cm]가 사라지고 뇌 산소 공급까지 줄어든대요!
 
 잔소리 대신 책상에 '각도조절 원목 독서대' 하나 세워주고 쉬는 시간마다 문틀 철봉에 10초씩 매달리게 해줬더니, 세상에… 구부정하던 어깨가 반듯하게 펴지면서 숨은 키가 2cm나 훌쩍 커 보이더라고요🥹""",
-        "threads_reply_2": """오늘도 아이 등 두드리며 "어깨 펴야 키 큰다~" 외치신 모든 엄빠들, 잔소리 대신 책 각도만 35도 세워줘도 아이 목이랑 허리가 거짓말처럼 편안해지니 오늘 저녁 바로 세워주자고요 ♥
+        "threads_reply_2": f"""오늘도 아이 등 두드리며 "어깨 펴야 키 큰다~" 외치신 모든 엄빠들, 잔소리 대신 책 각도만 35도 세워줘도 아이 목이랑 허리가 거짓말처럼 편안해지니 오늘 저녁 바로 세워주자고요 ♥
 
 💡 우리 아이 자세·수면·영양 습관에 따른 3단 예상키랑 두뇌 학습 집중력 점수는 제가 참고한 무료 리포트에서 회원가입 없이 1분 만에 확인하실 수 있어요!
-👉 https://kidsfit.co.kr""",
+👉 {THREADS_BRIDGE_URL}""",
     },
 ]
 
@@ -1311,10 +1433,10 @@ CARDNEWS_SERIES = [
                 ],
             },
         ],
-        "caption": """📌 [저장 필수 카드뉴스 #1] "내가 혼자 할 거야!" 만 3세 고집의 진짜 이유 6장 요약!
+        "caption": f"""📌 [저장 필수 카드뉴스 #1] "내가 혼자 할 거야!" 만 3세 고집의 진짜 이유 6장 요약!
 손가락은 대뇌 운동피질의 30%와 연결된 '제2의 뇌'입니다.
 비싼 교구를 사기 전에 오늘 저녁 주방 나무 집게와 안전가위로 아이의 손끝 자존감을 키워주세요 🌱
-👉 우리 아이 개월 수별 정밀 발달 & 키 백분위 1분 무료 진단: https://truthofmarket.com""",
+👉 우리 아이 개월 수별 정밀 발달 & 키 백분위 1분 무료 진단: {INSTAGRAM_BRIDGE_URL}""",
     },
     {
         "series_num": 2,
@@ -1381,9 +1503,9 @@ CARDNEWS_SERIES = [
                 ],
             },
         ],
-        "caption": """📌 [저장 필수 카드뉴스 #2] 연산은 100점인데 문장제 수학만 별표 치는 아이 3단계 해결법!
+        "caption": f"""📌 [저장 필수 카드뉴스 #2] 연산은 100점인데 문장제 수학만 별표 치는 아이 3단계 해결법!
 머릿속 암산을 멈추고 종이 여백에 '막대 그림'을 그리는 순간 전두엽 작업기억의 부담이 절반으로 줄어듭니다 🧠
-👉 우리 아이 5대 학습 역량 지수(LQ) & 맞춤 공부법 1분 무료 진단: https://truthofmarket.com""",
+👉 우리 아이 5대 학습 역량 지수(LQ) & 맞춤 공부법 1분 무료 진단: {INSTAGRAM_BRIDGE_URL}""",
     },
     {
         "series_num": 3,
@@ -1450,9 +1572,9 @@ CARDNEWS_SERIES = [
                 ],
             },
         ],
-        "caption": """📌 [저장 필수 카드뉴스 #3] 부모 유전키 넘어 숨은 키 +7cm 깨우는 밤 10시 골든타임 루틴!
+        "caption": f"""📌 [저장 필수 카드뉴스 #3] 부모 유전키 넘어 숨은 키 +7cm 깨우는 밤 10시 골든타임 루틴!
 취침 2시간 전 공복 유지 + 밤 9시 40분 하체 성장판 5분 스트레칭 + 밤 10시 정각 암막 소등으로 성장호르몬을 깨워주세요 📏
-👉 우리 아이 키 백분위 & 3단 예상키 1분 무료 진단: https://truthofmarket.com""",
+👉 우리 아이 키 백분위 & 3단 예상키 1분 무료 진단: {INSTAGRAM_BRIDGE_URL}""",
     },
 ]
 
@@ -1505,6 +1627,7 @@ def generate_all_webtoons_and_cardnews():
                     step_badge=cut_cfg["step"],
                     bubbles=cut_cfg["bubbles"],
                     accent_color=ep["accent"],
+                    is_cut_4=(idx == 4),
                 )
                 c_img.save(f_dir / f"0{idx}_{idx}컷.png", "PNG")
                 rendered_cuts.append(c_img)
@@ -1587,6 +1710,7 @@ def generate_all_webtoons_and_cardnews():
                     floating_tag=sl["tag"],
                     points_3=sl["pts"],
                     theme_palette=sr["palette"],
+                    is_slide_6=(idx == len(sr["slides"])),
                 )
                 s_img.save(f_dir / f"0{idx}_카드뉴스_{idx}장.png", "PNG")
                 if sr_num == 1 and base_dir == CARDNEWS_SAMPLE_DIR:

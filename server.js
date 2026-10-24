@@ -162,6 +162,11 @@ function createEmptyDayBucket(dateStr) {
     },
     diagnoses: { total: 0, growth: 0, learning: 0 },
     affiliateClicks: 0,
+    productClicks: {
+      growth: 0,
+      learning: 0,
+      byReferrer: {}
+    },
     bots: 0
   };
 }
@@ -173,6 +178,11 @@ let visitorStats = {
     pv: 0,
     diagnoses: { total: 0, growth: 0, learning: 0 },
     affiliateClicks: 0,
+    productClicks: {
+      growth: 0,
+      learning: 0,
+      byReferrer: {}
+    },
     bots: 0
   },
   daily: {}
@@ -198,6 +208,25 @@ function mergeDayBucket(target, src) {
     target.diagnoses.growth = Math.max(target.diagnoses.growth || 0, src.diagnoses.growth || 0);
     target.diagnoses.learning = Math.max(target.diagnoses.learning || 0, src.diagnoses.learning || 0);
   }
+  if (src.productClicks && typeof src.productClicks === 'object') {
+    if (!target.productClicks) target.productClicks = { growth: 0, learning: 0, byReferrer: {} };
+    target.productClicks.growth = Math.max(target.productClicks.growth || 0, src.productClicks.growth || 0);
+    target.productClicks.learning = Math.max(target.productClicks.learning || 0, src.productClicks.learning || 0);
+    if (src.productClicks.byReferrer && typeof src.productClicks.byReferrer === 'object') {
+      if (!target.productClicks.byReferrer) target.productClicks.byReferrer = {};
+      Object.keys(src.productClicks.byReferrer).forEach((r) => {
+        if (!target.productClicks.byReferrer[r]) target.productClicks.byReferrer[r] = { growth: 0, learning: 0 };
+        target.productClicks.byReferrer[r].growth = Math.max(
+          target.productClicks.byReferrer[r].growth || 0,
+          src.productClicks.byReferrer[r].growth || 0
+        );
+        target.productClicks.byReferrer[r].learning = Math.max(
+          target.productClicks.byReferrer[r].learning || 0,
+          src.productClicks.byReferrer[r].learning || 0
+        );
+      });
+    }
+  }
   return target;
 }
 
@@ -220,19 +249,32 @@ function mergeDayBucket(target, src) {
             visitorStats.total.diagnoses.growth = Math.max(visitorStats.total.diagnoses.growth || 0, loaded.total.diagnoses.growth || 0);
             visitorStats.total.diagnoses.learning = Math.max(visitorStats.total.diagnoses.learning || 0, loaded.total.diagnoses.learning || 0);
           }
+          if (loaded.total.productClicks) {
+            if (!visitorStats.total.productClicks) visitorStats.total.productClicks = { growth: 0, learning: 0, byReferrer: {} };
+            visitorStats.total.productClicks.growth = Math.max(visitorStats.total.productClicks.growth || 0, loaded.total.productClicks.growth || 0);
+            visitorStats.total.productClicks.learning = Math.max(visitorStats.total.productClicks.learning || 0, loaded.total.productClicks.learning || 0);
+          }
         }
         // Ensure total.diagnoses is at least the sum of daily.diagnoses
         let sumDiagTotal = 0, sumDiagGrowth = 0, sumDiagLearning = 0;
+        let sumProdGrowth = 0, sumProdLearning = 0;
         Object.values(visitorStats.daily).forEach((dBucket) => {
           if (dBucket && dBucket.diagnoses) {
             sumDiagTotal += (dBucket.diagnoses.total || 0);
             sumDiagGrowth += (dBucket.diagnoses.growth || 0);
             sumDiagLearning += (dBucket.diagnoses.learning || 0);
           }
+          if (dBucket && dBucket.productClicks) {
+            sumProdGrowth += (dBucket.productClicks.growth || 0);
+            sumProdLearning += (dBucket.productClicks.learning || 0);
+          }
         });
         visitorStats.total.diagnoses.total = Math.max(visitorStats.total.diagnoses.total || 0, sumDiagTotal);
         visitorStats.total.diagnoses.growth = Math.max(visitorStats.total.diagnoses.growth || 0, sumDiagGrowth);
         visitorStats.total.diagnoses.learning = Math.max(visitorStats.total.diagnoses.learning || 0, sumDiagLearning);
+        if (!visitorStats.total.productClicks) visitorStats.total.productClicks = { growth: 0, learning: 0, byReferrer: {} };
+        visitorStats.total.productClicks.growth = Math.max(visitorStats.total.productClicks.growth || 0, sumProdGrowth);
+        visitorStats.total.productClicks.learning = Math.max(visitorStats.total.productClicks.learning || 0, sumProdLearning);
       }
     }
   } catch (_) {}
@@ -332,10 +374,14 @@ function recordDiagnosisEvent(mode) {
   try {
     const todayStr = getKstDateString(0);
     const day = ensureDayBucket(todayStr);
-    const isLearning = mode === 'learning';
     day.diagnoses.total += 1;
     visitorStats.total.diagnoses.total += 1;
-    if (isLearning) {
+    if (mode === 'both') {
+      day.diagnoses.growth += 1;
+      day.diagnoses.learning += 1;
+      visitorStats.total.diagnoses.growth += 1;
+      visitorStats.total.diagnoses.learning += 1;
+    } else if (mode === 'learning') {
       day.diagnoses.learning += 1;
       visitorStats.total.diagnoses.learning += 1;
     } else {
@@ -346,12 +392,34 @@ function recordDiagnosisEvent(mode) {
   } catch (_) {}
 }
 
-function recordAffiliateClickEvent() {
+function recordAffiliateClickEvent(category, utmSource) {
   try {
     const todayStr = getKstDateString(0);
     const day = ensureDayBucket(todayStr);
     day.affiliateClicks = (day.affiliateClicks || 0) + 1;
     visitorStats.total.affiliateClicks = (visitorStats.total.affiliateClicks || 0) + 1;
+
+    const catKey = category === 'learning' ? 'learning' : 'growth';
+    const refKey = utmSource || 'direct';
+
+    if (!day.productClicks) day.productClicks = { growth: 0, learning: 0, byReferrer: {} };
+    if (typeof day.productClicks.growth !== 'number') day.productClicks.growth = 0;
+    if (typeof day.productClicks.learning !== 'number') day.productClicks.learning = 0;
+    if (!day.productClicks.byReferrer || typeof day.productClicks.byReferrer !== 'object') day.productClicks.byReferrer = {};
+
+    day.productClicks[catKey] += 1;
+    if (!day.productClicks.byReferrer[refKey]) day.productClicks.byReferrer[refKey] = { growth: 0, learning: 0 };
+    day.productClicks.byReferrer[refKey][catKey] = (day.productClicks.byReferrer[refKey][catKey] || 0) + 1;
+
+    if (!visitorStats.total.productClicks) visitorStats.total.productClicks = { growth: 0, learning: 0, byReferrer: {} };
+    if (typeof visitorStats.total.productClicks.growth !== 'number') visitorStats.total.productClicks.growth = 0;
+    if (typeof visitorStats.total.productClicks.learning !== 'number') visitorStats.total.productClicks.learning = 0;
+    if (!visitorStats.total.productClicks.byReferrer || typeof visitorStats.total.productClicks.byReferrer !== 'object') visitorStats.total.productClicks.byReferrer = {};
+
+    visitorStats.total.productClicks[catKey] += 1;
+    if (!visitorStats.total.productClicks.byReferrer[refKey]) visitorStats.total.productClicks.byReferrer[refKey] = { growth: 0, learning: 0 };
+    visitorStats.total.productClicks.byReferrer[refKey][catKey] = (visitorStats.total.productClicks.byReferrer[refKey][catKey] || 0) + 1;
+
     saveVisitorStats();
   } catch (_) {}
 }
@@ -395,6 +463,7 @@ const server = http.createServer((req, res) => {
         referrers: b.referrers || {},
         diagnoses: b.diagnoses || { total: 0, growth: 0, learning: 0 },
         affiliateClicks: b.affiliateClicks || 0,
+        productClicks: b.productClicks || { growth: 0, learning: 0, byReferrer: {} },
         bots: b.bots || 0
       });
 
@@ -432,8 +501,10 @@ const server = http.createServer((req, res) => {
             const ev = String(data.event || 'pageview');
             if (ev === 'diagnosis') {
               recordDiagnosisEvent(data.mode || 'growth');
-            } else if (ev === 'affiliate_click') {
-              recordAffiliateClickEvent();
+            } else if (ev === 'affiliate_click' || ev === 'growth_product_click' || ev === 'learning_product_click') {
+              const category = data.category || (ev === 'learning_product_click' ? 'learning' : 'growth');
+              const utmSource = data.utm_source || 'direct';
+              recordAffiliateClickEvent(category, utmSource);
             } else {
               recordVisitorPageview(req, data.referrer || '');
             }
@@ -692,7 +763,9 @@ const server = http.createServer((req, res) => {
 
     // 1-B. Coupang Partners Redirect & Search Proxy Route
     if (pathname === '/api/coupang') {
-      recordAffiliateClickEvent();
+      const cat = parsedUrl.searchParams.get('cat') || parsedUrl.searchParams.get('category') || 'growth';
+      const utm = parsedUrl.searchParams.get('utm_source') || 'direct';
+      recordAffiliateClickEvent(cat, utm);
       const q = parsedUrl.searchParams.get('q') || 
                 parsedUrl.searchParams.get('kw') || 
                 parsedUrl.searchParams.get('keyword') || '';
@@ -837,7 +910,9 @@ const server = http.createServer((req, res) => {
 
     // 1-F. Adpick Campaign & Shopping JSON API Proxy with 60-Second Cache (/api/adpick/offers & /api/adpick/go)
     if (pathname === '/api/adpick/go') {
-      recordAffiliateClickEvent();
+      const cat = parsedUrl.searchParams.get('cat') || parsedUrl.searchParams.get('category') || 'learning';
+      const utm = parsedUrl.searchParams.get('utm_source') || 'direct';
+      recordAffiliateClickEvent(cat, utm);
       const affid = parsedUrl.searchParams.get('affid') || process.env.ADPICK_AFFID || '4d31d3';
       const mall = (parsedUrl.searchParams.get('mall') || '11st').toLowerCase();
       const q = parsedUrl.searchParams.get('q') || '';
@@ -907,81 +982,6 @@ const server = http.createServer((req, res) => {
       return;
     }
 
-    // 1-G. Lemon Squeezy Store #296100 Public Config & Webhook Endpoints (/api/lemonsqueezy-config & /api/lemonsqueezy-webhook)
-    if (pathname === '/api/lemonsqueezy-config') {
-      res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8', ...NO_CACHE_HEADERS });
-      res.end(JSON.stringify({
-        ok: true,
-        storeId: Number(process.env.LEMONSQUEEZY_STORE_ID || 296100),
-        storeName: 'KIDS-FIT Global Studio',
-        accountHolder: process.env.LEMONSQUEEZY_ACCOUNT_HOLDER || '이윤주 (Yoonju Lee)',
-        storeUrl: 'https://truthofmarket.lemonsqueezy.com',
-        currency: 'USD',
-        products: {
-          singlePass: {
-            productId: Number(process.env.LEMONSQUEEZY_SINGLE_PRODUCT_ID || 1468224),
-            priceUsd: 8.99,
-            checkoutUrl: process.env.LEMONSQUEEZY_SINGLE_PASS_URL || 'https://truthofmarket.lemonsqueezy.com/checkout/buy/c1cd7f12-3479-49e8-ab71-59c98135d599'
-          },
-          trackerPass: {
-            productId: Number(process.env.LEMONSQUEEZY_TRACKER_PRODUCT_ID || 1468243),
-            priceUsd: 19.99,
-            checkoutUrl: process.env.LEMONSQUEEZY_TRACKER_PASS_URL || 'https://truthofmarket.lemonsqueezy.com/checkout/buy/c562946d-ef68-4c2f-a802-df9da0179895'
-          }
-        },
-        webhookId: Number(process.env.LEMONSQUEEZY_WEBHOOK_ID || 145796)
-      }));
-      return;
-    }
-
-    if (pathname === '/api/lemonsqueezy-webhook') {
-      if (req.method === 'POST') {
-        let rawBody = '';
-        req.on('data', (chunk) => {
-          if (rawBody.length < 131072) rawBody += chunk.toString('utf8');
-        });
-        req.on('end', () => {
-          try {
-            const crypto = require('crypto');
-            const secret = process.env.LEMONSQUEEZY_WEBHOOK_SECRET || 'kf_ls_whsec_2026_truthofmarket';
-            const signature = String(req.headers['x-signature'] || '');
-            const expectedSig = crypto.createHmac('sha256', secret).update(rawBody).digest('hex');
-            const sigValid = !signature || signature === expectedSig;
-
-            const payload = JSON.parse(rawBody || '{}');
-            const eventName = (payload.meta && payload.meta.event_name) || String(req.headers['x-event-name'] || 'unknown');
-            const orderLogPath = path.join(ROOT_DIR, 'logs', 'lemonsqueezy_orders.jsonl');
-            const entry = {
-              timestamp: new Date().toISOString(),
-              eventName,
-              signatureValid: sigValid,
-              orderId: payload.data && payload.data.id ? payload.data.id : null,
-              email: payload.data && payload.data.attributes ? payload.data.attributes.user_email : null,
-              totalUsd: payload.data && payload.data.attributes ? payload.data.attributes.total_formatted : null,
-              status: payload.data && payload.data.attributes ? payload.data.attributes.status : null
-            };
-            try {
-              fs.mkdirSync(path.dirname(orderLogPath), { recursive: true });
-              fs.appendFileSync(orderLogPath, JSON.stringify(entry) + '\n', 'utf8');
-            } catch (_) {}
-
-            if (eventName === 'order_created' || eventName === 'subscription_payment_success') {
-              recordAffiliateClickEvent();
-            }
-
-            res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8', ...NO_CACHE_HEADERS });
-            res.end(JSON.stringify({ ok: true, received: true, eventName, signatureValid: sigValid }));
-          } catch (err) {
-            res.writeHead(400, { 'Content-Type': 'application/json; charset=utf-8' });
-            res.end(JSON.stringify({ ok: false, error: 'Invalid webhook payload' }));
-          }
-        });
-        return;
-      }
-      res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8', ...NO_CACHE_HEADERS });
-      res.end(JSON.stringify({ ok: true, endpoint: '/api/lemonsqueezy-webhook', storeId: 296100 }));
-      return;
-    }
 
     // 2. Official KIDS-FIT PWA Service Worker & App Download Endpoints
     if (pathname === '/sw.js' || pathname === '/service-worker.js') {

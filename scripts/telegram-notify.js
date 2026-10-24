@@ -43,7 +43,7 @@ function getTelegramConfig() {
     dotEnv.ANTIGRAVITY_CONVERSATION_ID ||
     'efdd0412-2586-40cf-bb28-0fa8976613df'
   ).trim();
-  const siteUrl = 'https://truthofmarket.com';
+  const siteUrl = 'https://kidsfit.co.kr';
   const isConfigured = Boolean(
     botToken &&
     botToken !== 'YOUR_TELEGRAM_BOT_TOKEN' &&
@@ -189,7 +189,7 @@ function loadResearchStatus() {
 
 function buildCompletionMessageHtml(metrics = {}) {
   const cfg = getTelegramConfig();
-  const siteUrl = metrics.siteUrl || cfg.siteUrl || 'https://truthofmarket.com';
+  const siteUrl = metrics.siteUrl || cfg.siteUrl || 'https://kidsfit.co.kr';
   const now = new Date();
   const timestamp = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')} ${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
   const research = loadResearchStatus();

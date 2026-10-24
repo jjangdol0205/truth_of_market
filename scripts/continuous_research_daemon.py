@@ -585,13 +585,14 @@ def run_incremental_cycle(cycle_index: int = 0) -> Dict[str, Any]:
                 stdout=subprocess.DEVNULL,
                 stderr=subprocess.DEVNULL,
             )
-            subprocess.run(
-                ["git", "push", "origin", "main"],
-                cwd=root_cwd,
-                check=False,
-                stdout=subprocess.DEVNULL,
-                stderr=subprocess.DEVNULL,
-            )
+            # Remote push disabled per Requirement R5
+            # subprocess.run(
+            #     ["git", "push", "origin", "main"],
+            #     cwd=root_cwd,
+            #     check=False,
+            #     stdout=subprocess.DEVNULL,
+            #     stderr=subprocess.DEVNULL,
+            # )
             tg_msg = (
                 f"📚 [Cycle #{cycle_index} 학술 논문 자가학습 & 홈페이지 실시간 반영 완료]\n"
                 f"• 신규 추가: +{newly_added}편 → 홈페이지 누적 {len(existing_papers):,}편 자동 업데이트!\n"

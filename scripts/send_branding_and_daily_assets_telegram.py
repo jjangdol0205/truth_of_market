@@ -55,6 +55,9 @@ LOGS_DIR.mkdir(parents=True, exist_ok=True)
 REPORT_FILE = LOGS_DIR / "telegram_dispatch_report.json"
 ENV_FILE = ROOT_DIR / ".env"
 
+PRODUCTION_DOMAIN = "truthofmarket.com"
+INSTAGRAM_BIO_URL = f"https://{PRODUCTION_DOMAIN}/?utm_source=instagram_bio&utm_medium=social_bio&utm_campaign=kidsfit_diagnosis"
+
 BRANDING_DIR = ROOT_DIR / "인스타_쓰레드_프로필_모음"
 WEBTOON_DIR = ROOT_DIR / "웹툰_모음" / "1화_만3세소근육민감기_웹툰"
 CARDNEWS_DIR = ROOT_DIR / "카드뉴스_모음" / "1탄_만3세고집과소근육발달_카드뉴스"
@@ -238,7 +241,7 @@ def dispatch_branding_kit(dispatcher: TelegramDispatcher):
         "🧠 5대 두뇌학습역량(LQ) & 펜필드 뇌과학 공부법\n"
         "📚 소아내분비·인지신경학 논문 800편+ 기반 양육\n"
         "👇 1:1 맞춤 무료 정밀 진단 리포트\n"
-        "https://kidsfit.co.kr\n\n"
+        f"{INSTAGRAM_BIO_URL}&utm_content=type_a\n\n"
         "■ 타입 B (워킹맘 공감형):\n"
         "키즈핏(KidsFit) | 3040 부모를 위한 성장·학습 나침반 🌿\n"
         "\"엄마, 내가 혼자 할래!\" 고집이 아닌 손끝 뇌 발달 신호\n"
@@ -246,7 +249,7 @@ def dispatch_branding_kit(dispatcher: TelegramDispatcher):
         "📏 또래 대비 키 백분위 & 성장판 골든타임 체크\n"
         "🧩 연령별 실패 없는 교구·책육아 & 주말 박물관 코스\n"
         "🎁 월령별 0원 홈케어 워크지 PDF 무료 나눔 👇\n"
-        "https://kidsfit.co.kr\n\n"
+        f"{INSTAGRAM_BIO_URL}&utm_content=type_b\n\n"
         "■ 타입 C (듀얼 솔루션형):\n"
         "키즈핏(KidsFit) | 키 성장 × 두뇌 학습 듀얼 솔루션 ⚖️\n"
         "아이의 몸과 뇌는 함께 자랍니다.\n"
@@ -254,7 +257,7 @@ def dispatch_branding_kit(dispatcher: TelegramDispatcher):
         "🧠 Learning: 문해력·작업기억·메타인지 5대 학습지수(LQ)\n"
         "🚫 불필요한 영양제·교구 중복 지출 방지 가이드\n"
         "📊 질병관리청 기준 우리아이 1분 종합 진단서 발급 👇\n"
-        "https://kidsfit.co.kr"
+        f"{INSTAGRAM_BIO_URL}&utm_content=type_c"
     )
     events.append(dispatcher.send_message(bio_text))
 

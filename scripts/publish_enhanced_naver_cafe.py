@@ -38,7 +38,22 @@ import urllib.request
 from datetime import datetime
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
+import qrcode
 from playwright.sync_api import sync_playwright
+
+# Production Domain & Diagnostic Bridge URLs
+PRODUCTION_DOMAIN = "truthofmarket.com"
+CAFE_DIAGNOSTIC_BRIDGE_URL = f"https://{PRODUCTION_DOMAIN}/?utm_source=naver_cafe&utm_medium=organic_social&utm_campaign=kidsfit_diagnosis"
+CAFE_DIAGNOSTIC_BRIDGE_QR_URL = f"https://{PRODUCTION_DOMAIN}/?utm_source=naver_cafe_qr&utm_medium=qr_code&utm_campaign=kidsfit_diagnosis"
+
+CAFE_DIAGNOSTIC_BRIDGE_TEXT = (
+    "\n\n──────────────────────────────\n"
+    "💡 우리 아이 또래 대비 키 백분위 & 월령별 두뇌·학습 골든타임이 궁금하시다면?\n"
+    "질병관리청 소아성장도표 & K-DST 기준 1분 맞춤 진단서로 즉시 확인해 보실 수 있어요 🌱\n"
+    f"👉 {CAFE_DIAGNOSTIC_BRIDGE_URL}\n"
+    "──────────────────────────────\n"
+)
+
 
 # Safe console output for Windows UTF-8
 if sys.platform == "win32":
@@ -199,6 +214,7 @@ def generate_cafe_card_png(
 ) -> str:
     """
     Generates high-resolution 1080x1080 PNG summary and checklist card for Naver Cafe community posts.
+    Includes visual diagnostic callout banner and 120x120 QR code pointing to truthofmarket.com.
     """
     out_path.parent.mkdir(parents=True, exist_ok=True)
     W, H = 1080, 1080
@@ -209,61 +225,87 @@ def generate_cafe_card_png(
     draw.rounded_rectangle([48, 54, W - 48, H - 54], radius=32, fill=PALETTE["card_white"], outline=PALETTE["border"], width=3)
 
     # Board badge pill
-    f_badge = get_korean_font(26, bold=True)
+    f_badge = get_korean_font(25, bold=True)
     b_box = draw.textbbox((0, 0), board_badge, font=f_badge)
     pill_w = max(380, (b_box[2] - b_box[0]) + 60)
-    draw.rounded_rectangle([96, 96, 96 + pill_w, 156], radius=28, fill=(236, 253, 245))
-    draw.text((126, 110), board_badge, font=f_badge, fill=accent_rgb)
+    draw.rounded_rectangle([96, 88, 96 + pill_w, 144], radius=26, fill=(236, 253, 245))
+    draw.text((126, 100), board_badge, font=f_badge, fill=accent_rgb)
 
     # Title
     max_title_w = W - 192
-    title_font_size = 42
+    title_font_size = 38
     f_title = get_korean_font(title_font_size, bold=True)
     wrapped_title = wrap_text_by_pixel_width(draw, title, f_title, max_title_w)
-    if len(wrapped_title) > 3:
-        title_font_size = 35
+    if len(wrapped_title) > 2:
+        title_font_size = 32
         f_title = get_korean_font(title_font_size, bold=True)
         wrapped_title = wrap_text_by_pixel_width(draw, title, f_title, max_title_w)
 
-    y = 184
-    line_step = title_font_size + 18
+    y = 162
+    line_step = title_font_size + 14
     for line in wrapped_title:
         draw.text((96, y), line, font=f_title, fill=PALETTE["text_dark"])
         y += line_step
 
-    divider_y = max(400, y + 16)
+    divider_y = max(266, y + 14)
     draw.line([96, divider_y, W - 96, divider_y], fill=PALETTE["border"], width=2)
 
-    # 3 Takeaway Points
-    py = divider_y + 30
-    f_num = get_korean_font(27, bold=True)
+    # 3 Takeaway Points (compact box_h = 104)
+    py = divider_y + 20
+    f_num = get_korean_font(24, bold=True)
     for idx, pt in enumerate(points[:3]):
         clean_pt = re.sub(r"^[①②③④⑤1-9\.\s]+", "", pt.strip())
-        box_h = 126
-        draw.rounded_rectangle([96, py, W - 96, py + box_h], radius=20, fill=(248, 250, 252), outline=PALETTE["border"], width=2)
+        box_h = 104
+        draw.rounded_rectangle([96, py, W - 96, py + box_h], radius=18, fill=(248, 250, 252), outline=PALETTE["border"], width=2)
 
-        cx, cy = 152, py + box_h // 2
-        draw.ellipse([cx - 24, cy - 24, cx + 24, cy + 24], fill=accent_rgb)
+        cx, cy = 146, py + box_h // 2
+        draw.ellipse([cx - 22, cy - 22, cx + 22, cy + 22], fill=accent_rgb)
         num_str = str(idx + 1)
         nb = draw.textbbox((0, 0), num_str, font=f_num)
         draw.text((cx - (nb[2] - nb[0]) // 2, cy - (nb[3] - nb[1]) // 2 - 3), num_str, font=f_num, fill=(255, 255, 255))
 
-        avail_w = (W - 120) - 200
-        pt_size = 30
+        avail_w = (W - 120) - 190
+        pt_size = 26
         f_pt = get_korean_font(pt_size, bold=True)
         pt_lines = wrap_text_by_pixel_width(draw, clean_pt, f_pt, avail_w)
         if len(pt_lines) == 1:
-            draw.text((200, py + (box_h - pt_size) // 2 - 3), pt_lines[0], font=f_pt, fill=(30, 41, 59))
+            draw.text((190, py + (box_h - pt_size) // 2 - 3), pt_lines[0], font=f_pt, fill=(30, 41, 59))
         else:
-            draw.text((200, py + 24), pt_lines[0], font=f_pt, fill=(30, 41, 59))
-            draw.text((200, py + 66), " ".join(pt_lines[1:]), font=f_pt, fill=(30, 41, 59))
+            draw.text((190, py + 18), pt_lines[0], font=f_pt, fill=(30, 41, 59))
+            draw.text((190, py + 54), " ".join(pt_lines[1:]), font=f_pt, fill=(30, 41, 59))
 
-        py += box_h + 20
+        py += box_h + 14
+
+    # Diagnostic Bridge Callout Banner with 120x120 QR Code
+    y_bridge = py + 8
+    bridge_h = 150
+    draw.rounded_rectangle([96, y_bridge, W - 96, y_bridge + bridge_h], radius=20, fill=(236, 253, 245), outline=PALETTE["accent_mint"], width=3)
+
+    # Callout text on left
+    f_c_title = get_korean_font(25, bold=True)
+    f_c_sub = get_korean_font(19, bold=False)
+    f_c_link = get_korean_font(23, bold=True)
+
+    draw.text((122, y_bridge + 20), "내 아이 예상키 + 두뇌·학습 골든타임 1분 무료 진단", font=f_c_title, fill=(6, 78, 59))
+    draw.text((122, y_bridge + 62), "질병관리청 소아성장도표 & K-DST 기준 1분 맞춤 처방전 발급", font=f_c_sub, fill=(4, 120, 87))
+    draw.text((122, y_bridge + 102), "👉 truthofmarket.com ↗ (회원가입 0초 즉시 확인)", font=f_c_link, fill=(5, 150, 105))
+
+    # 120x120 QR Code on right
+    qr = qrcode.QRCode(version=1, box_size=3, border=1)
+    qr.add_data(CAFE_DIAGNOSTIC_BRIDGE_QR_URL)
+    qr.make(fit=True)
+    qr_img = qr.make_image(fill_color="black", back_color="white").convert("RGB")
+    qr_img = qr_img.resize((120, 120), Image.Resampling.LANCZOS)
+
+    qr_box_x = W - 96 - 140
+    qr_box_y = y_bridge + 15
+    draw.rounded_rectangle([qr_box_x - 3, qr_box_y - 3, qr_box_x + 123, qr_box_y + 123], radius=10, fill=(255, 255, 255), outline=PALETTE["border"], width=1)
+    img.paste(qr_img, (qr_box_x, qr_box_y))
 
     # Clinic branding footer
-    draw.rounded_rectangle([96, 912, W - 96, 986], radius=18, fill=accent_rgb)
-    f_foot = get_korean_font(26, bold=True)
-    draw.text((130, 933), "키즈핏 공식 네이버 카페 · 우리 아이 성장 나눔 커뮤니티", font=f_foot, fill=(255, 255, 255))
+    draw.rounded_rectangle([96, 924, W - 96, 990], radius=16, fill=accent_rgb)
+    f_foot = get_korean_font(25, bold=True)
+    draw.text((130, 942), "키즈핏 공식 네이버 카페 · 우리 아이 성장 나눔 커뮤니티", font=f_foot, fill=(255, 255, 255))
 
     img.save(str(out_path), "PNG")
     return str(out_path)
@@ -551,6 +593,8 @@ def publish_cafe_post_cdp(
                         print(f"⚠️ 카페 이미지 첨부 예외: {e}", flush=True)
 
             # 4. Type Body Text line by line
+            if "truthofmarket.com" not in body:
+                body = body.strip() + CAFE_DIAGNOSTIC_BRIDGE_TEXT
             clean_body = re.sub(r"^[#]+\s*", "", body, flags=re.MULTILINE)
             clean_body = re.sub(r"\*\*([^*]+)\*\*", r"\1", clean_body)
             for line in clean_body.splitlines():
@@ -697,7 +741,10 @@ def main():
     print(f"🎨 고해상도 요약 카드 생성 완료: {img_out.name} ({os.path.getsize(img_out) / 1024:.1f} KB)")
 
     # Validate tone and non-promotional constraints
-    clean_body = re.sub(r"^[#]+\s*", "", topic["body"], flags=re.MULTILINE)
+    body_raw = topic["body"]
+    if "truthofmarket.com" not in body_raw:
+        body_raw = body_raw.strip() + CAFE_DIAGNOSTIC_BRIDGE_TEXT
+    clean_body = re.sub(r"^[#]+\s*", "", body_raw, flags=re.MULTILINE)
     clean_body = re.sub(r"\*\*([^*]+)\*\*", r"\1", clean_body)
 
     forbidden_tokens = ["AF" + "7865143", "A100" + "708867", "4d3" + "1d3", "lptag" + "=", "linkprice" + ".com", "adpick" + ".co"]
@@ -705,6 +752,10 @@ def main():
         if tok.lower() in clean_body.lower():
             print(f"❌ Commercial affiliate token detected: {tok}", flush=True)
             sys.exit(1)
+
+    if "truthofmarket.com" not in clean_body or "utm_source=naver_cafe" not in clean_body:
+        print("❌ Missing required truthofmarket.com diagnostic bridge in cafe post!", flush=True)
+        sys.exit(1)
 
     print(f"📊 본문 검증: 총 {len(clean_body)}자 · 100% 비영리 공감 커뮤니티 톤앤매너 검증 완료 ✅")
 

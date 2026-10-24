@@ -47,7 +47,25 @@ import urllib.request
 from datetime import datetime
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
+import qrcode
 from playwright.sync_api import sync_playwright
+
+# Production Domain & Diagnostic Bridge URLs
+PRODUCTION_DOMAIN = "truthofmarket.com"
+BLOG_DIAGNOSTIC_BRIDGE_URL = f"https://{PRODUCTION_DOMAIN}/?utm_source=naver_blog&utm_medium=organic_social&utm_campaign=kidsfit_diagnosis"
+BLOG_DIAGNOSTIC_BRIDGE_QR_URL = f"https://{PRODUCTION_DOMAIN}/?utm_source=naver_blog_qr&utm_medium=qr_code&utm_campaign=kidsfit_diagnosis"
+
+BLOG_DIAGNOSTIC_BRIDGE_TEXT = (
+    "\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
+    "[우리 아이 성장·두뇌 1분 무료 진단 안내]\n"
+    "질병관리청(KDCA) 소아청소년 성장도표와 보건복지부 K-DST 기준,\n"
+    "우리 아이 현재 키 백분위와 성인 예상키(MPH),\n"
+    "그리고 두뇌·소근육 발달 골든타임을 1분 만에 무료로 진단받아 보세요.\n\n"
+    "▶ 우리 아이 1분 무료 성장·두뇌 진단하기:\n"
+    f"{BLOG_DIAGNOSTIC_BRIDGE_URL}\n"
+    "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
+)
+
 
 # Safe console output for Windows UTF-8
 if sys.platform == "win32":
@@ -353,7 +371,8 @@ def generate_blog_checklist_infographic(
 ) -> str:
     """
     Image 3: Inline 1080x1080 PNG Practical Checklist & 3-Step Homecare Infographic.
-    Provides clear, actionable guidance with numbered steps and practical checklists.
+    Provides clear, actionable guidance with numbered steps and practical checklists,
+    plus high-contrast diagnostic bridge banner with 135x135 QR code to truthofmarket.com.
     """
     out_path.parent.mkdir(parents=True, exist_ok=True)
     W, H = 1080, 1080
@@ -366,54 +385,80 @@ def generate_blog_checklist_infographic(
     # Header badge
     f_badge = get_korean_font(24, bold=True)
     badge_label = "오늘 저녁 실천하는 3단계 홈케어 체크리스트"
-    draw.rounded_rectangle([96, 92, 96 + 480, 150], radius=26, fill=(255, 241, 242))
-    draw.text((120, 106), badge_label, font=f_badge, fill=accent_rgb)
+    draw.rounded_rectangle([96, 88, 96 + 480, 142], radius=24, fill=(255, 241, 242))
+    draw.text((120, 100), badge_label, font=f_badge, fill=accent_rgb)
 
     # Title
-    f_title = get_korean_font(38, bold=True)
-    draw.text((96, 172), checklist_title, font=f_title, fill=PALETTE["text_dark"])
-    draw.line([96, 236, W - 96, 236], fill=PALETTE["border"], width=2)
+    f_title = get_korean_font(36, bold=True)
+    draw.text((96, 160), checklist_title, font=f_title, fill=PALETTE["text_dark"])
+    draw.line([96, 218, W - 96, 218], fill=PALETTE["border"], width=2)
 
     # 3 Steps
-    y = 262
-    f_s_num = get_korean_font(26, bold=True)
-    f_s_title = get_korean_font(27, bold=True)
-    f_bullet = get_korean_font(23, bold=False)
+    y = 236
+    f_s_num = get_korean_font(24, bold=True)
+    f_s_title = get_korean_font(25, bold=True)
+    f_bullet = get_korean_font(21, bold=False)
 
     for st in steps[:3]:
         s_num = st.get("step_num", 1)
         s_title = st.get("title", "")
         bullets = st.get("bullets", [])
 
-        box_h = 160
-        draw.rounded_rectangle([96, y, W - 96, y + box_h], radius=20, fill=(254, 252, 251), outline=(254, 215, 170), width=2)
+        box_h = 124
+        draw.rounded_rectangle([96, y, W - 96, y + box_h], radius=18, fill=(254, 252, 251), outline=(254, 215, 170), width=2)
 
         # Step badge
-        draw.rounded_rectangle([118, y + 20, 118 + 92, y + 62], radius=12, fill=accent_rgb)
-        draw.text((130, y + 26), f"STEP {s_num}", font=f_s_num, fill=(255, 255, 255))
+        draw.rounded_rectangle([118, y + 16, 118 + 84, y + 54], radius=10, fill=accent_rgb)
+        draw.text((128, y + 21), f"STEP {s_num}", font=f_s_num, fill=(255, 255, 255))
 
         # Step title
-        draw.text((226, y + 24), s_title, font=f_s_title, fill=PALETTE["text_dark"])
+        draw.text((216, y + 20), s_title, font=f_s_title, fill=PALETTE["text_dark"])
 
         # Bullets
-        by = y + 74
+        by = y + 64
         for b in bullets[:2]:
-            draw.text((130, by), f"✓ {b}", font=f_bullet, fill=(51, 65, 85))
-            by += 36
+            draw.text((126, by), f"✓ {b}", font=f_bullet, fill=(51, 65, 85))
+            by += 28
 
-        y += box_h + 20
+        y += box_h + 14
 
     # Summary Reassurance Box
-    draw.rounded_rectangle([96, y + 8, W - 96, y + 120], radius=18, fill=(255, 251, 235), outline=(253, 230, 138), width=2)
-    f_tip = get_korean_font(23, bold=True)
-    f_tip_body = get_korean_font(21, bold=False)
-    draw.text((124, y + 24), "💡 소아청소년과 전문의 양육 요약 코칭", font=f_tip, fill=(180, 83, 9))
-    draw.text((124, y + 62), summary_tip[:58], font=f_tip_body, fill=(120, 53, 15))
+    draw.rounded_rectangle([96, y, W - 96, y + 74], radius=16, fill=(255, 251, 235), outline=(253, 230, 138), width=2)
+    f_tip = get_korean_font(21, bold=True)
+    f_tip_body = get_korean_font(19, bold=False)
+    draw.text((118, y + 12), "💡 소아청소년과 전문의 양육 요약 코칭", font=f_tip, fill=(180, 83, 9))
+    draw.text((118, y + 42), summary_tip[:58], font=f_tip_body, fill=(120, 53, 15))
+    y += 88
+
+    # Diagnostic Bridge Callout Banner with 135x135 QR Code
+    bridge_h = 165
+    draw.rounded_rectangle([96, y, W - 96, y + bridge_h], radius=20, fill=PALETTE["badge_bg_violet"], outline=PALETTE["accent_violet"], width=3)
+
+    # Callout Text
+    f_b_title = get_korean_font(26, bold=True)
+    f_b_sub = get_korean_font(20, bold=False)
+    f_b_link = get_korean_font(24, bold=True)
+
+    draw.text((122, y + 22), "내 아이 예상키 + 두뇌·학습 골든타임 1분 무료 진단", font=f_b_title, fill=(30, 27, 75))
+    draw.text((122, y + 68), "질병관리청 소아성장도표 & K-DST 기준 1분 맞춤 처방전 발급", font=f_b_sub, fill=(67, 56, 202))
+    draw.text((122, y + 110), "👉 truthofmarket.com ↗", font=f_b_link, fill=PALETTE["accent_violet"])
+
+    # 135x135 QR Code
+    qr = qrcode.QRCode(version=1, box_size=4, border=1)
+    qr.add_data(BLOG_DIAGNOSTIC_BRIDGE_QR_URL)
+    qr.make(fit=True)
+    qr_img = qr.make_image(fill_color="black", back_color="white").convert("RGB")
+    qr_img = qr_img.resize((135, 135), Image.Resampling.LANCZOS)
+
+    qr_box_x = W - 96 - 150
+    qr_box_y = y + 15
+    draw.rounded_rectangle([qr_box_x - 3, qr_box_y - 3, qr_box_x + 138, qr_box_y + 138], radius=10, fill=(255, 255, 255), outline=PALETTE["border"], width=1)
+    img.paste(qr_img, (qr_box_x, qr_box_y))
 
     # Footer
-    draw.rounded_rectangle([96, 912, W - 96, 986], radius=18, fill=accent_rgb)
-    f_foot = get_korean_font(26, bold=True)
-    draw.text((130, 933), "키즈핏 데일리 양육 실천 가이드 · 가족과 함께하는 성장", font=f_foot, fill=(255, 255, 255))
+    draw.rounded_rectangle([96, 924, W - 96, 990], radius=16, fill=accent_rgb)
+    f_foot = get_korean_font(25, bold=True)
+    draw.text((130, 942), "키즈핏 데일리 양육 실천 가이드 · 가족과 함께하는 성장", font=f_foot, fill=(255, 255, 255))
 
     img.save(str(out_path), "PNG")
     return str(out_path)
@@ -826,6 +871,10 @@ def validate_blog_content(title: str, body: str, image_paths: list[str], categor
     if category not in KIDSFIT_CATEGORIES:
         issues.append(f"Category '{category}' is not one of the 4 official KidsFit categories: {KIDSFIT_CATEGORIES}")
 
+    # 6. Enforce truthofmarket.com diagnostic bridge with utm_source=naver_blog
+    if "truthofmarket.com" not in body or "utm_source=naver_blog" not in body:
+        issues.append("Missing required diagnostic bridge URL (https://truthofmarket.com/?utm_source=naver_blog...)")
+
     return len(issues) == 0, issues
 
 
@@ -1070,7 +1119,10 @@ def main():
         print(f"  {idx + 1}. {Path(p).name} ({size_kb:.1f} KB) -> 1080x1080 PNG")
 
     # 2. Sanitize and validate body
-    clean_body = sanitize_se_one_body(topic["body"])
+    body_raw = topic["body"]
+    if "truthofmarket.com" not in body_raw:
+        body_raw = body_raw.strip() + BLOG_DIAGNOSTIC_BRIDGE_TEXT
+    clean_body = sanitize_se_one_body(body_raw)
     is_valid, issues = validate_blog_content(
         title=topic["title"],
         body=clean_body,
