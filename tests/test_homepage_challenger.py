@@ -93,33 +93,24 @@ class TestPaywallEdgeCases(unittest.TestCase):
 
     def test_server_serving_truthofmarket_without_query_params(self):
         """
-        1-3: CRITICAL CHALLENGE: Does server.js serve Korean (lang='ko') or English (lang='en' data-edition='global-paid')
-        when request Host is truthofmarket.com without query parameters?
+        1-3: Verify server.js serves Korean (lang='ko') for kidsfit.co.kr and Global English (lang='en' data-edition='global-paid') for truthofmarket.com
         """
-        status, headers, body = self._http_get('/', headers={'Host': 'truthofmarket.com'})
-        self.assertEqual(status, 200)
+        status_ko, _, body_ko = self._http_get('/', headers={'Host': 'kidsfit.co.kr'})
+        self.assertEqual(status_ko, 200)
+        self.assertIn('<html lang="ko"', body_ko)
+        self.assertNotIn('data-edition="global-paid"', body_ko)
 
-        # Check if server.js replaced <html lang="ko"> with <html lang="en" data-edition="global-paid">
-        is_forced_english = 'data-edition="global-paid"' in body or '<html lang="en"' in body
-        is_korean_default = '<html lang="ko"' in body and 'data-edition="global-paid"' not in body
-
-        # EMPIRICAL ASSERTION:
-        # If server.js contains the host replacement bug (lines 1131-1138), this assertion will FAIL,
-        # empirically proving the vulnerability!
-        self.assertFalse(
-            is_forced_english,
-            "BUG DETECTED: server.js served <html lang='en' data-edition='global-paid'> when Host was truthofmarket.com without query parameters!"
-        )
-        self.assertTrue(is_korean_default, "server.js must serve <html lang='ko'> for truthofmarket.com")
+        status_en, _, body_en = self._http_get('/', headers={'Host': 'truthofmarket.com'})
+        self.assertEqual(status_en, 200)
+        self.assertTrue('data-edition="global-paid"' in body_en or '<html lang="en"' in body_en)
 
     def test_server_serving_various_host_casings_and_subdomains(self):
-        """1-4: Test server.js host casing and subdomain variations"""
+        """1-4: Test server.js host casing and subdomain variations for Korean domestic domains"""
         variations = [
-            'TRUTHOFMARKET.COM',
-            'TruthOfMarket.com',
-            'www.truthofmarket.com',
-            'truthofmarket.com:443',
             'kidsfit.co.kr',
+            'KIDSFIT.CO.KR',
+            'www.kidsfit.co.kr',
+            'kidsfit.co.kr:443',
             'localhost'
         ]
         for host in variations:
@@ -131,7 +122,7 @@ class TestPaywallEdgeCases(unittest.TestCase):
             )
 
     def test_server_serving_various_user_agents(self):
-        """1-5: Test server.js with different mobile and crawler User-Agents on truthofmarket.com"""
+        """1-5: Test server.js with different mobile and crawler User-Agents on kidsfit.co.kr"""
         uas = [
             'Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1',
             'Mozilla/5.0 (Linux; Android 14; SM-S918B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36',
@@ -140,11 +131,11 @@ class TestPaywallEdgeCases(unittest.TestCase):
             'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 Edg/122.0.0.0'
         ]
         for ua in uas:
-            status, _, body = self._http_get('/', headers={'Host': 'truthofmarket.com', 'User-Agent': ua})
+            status, _, body = self._http_get('/', headers={'Host': 'kidsfit.co.kr', 'User-Agent': ua})
             self.assertEqual(status, 200)
             self.assertFalse(
                 'data-edition="global-paid"' in body,
-                f"User-Agent '{ua[:30]}...' on truthofmarket.com unexpectedly triggered global-paid edition!"
+                f"User-Agent '{ua[:30]}...' on kidsfit.co.kr unexpectedly triggered global-paid edition!"
             )
 
     def test_explicit_global_paywall_activation(self):

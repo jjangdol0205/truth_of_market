@@ -141,6 +141,24 @@ function build() {
     }
   });
 
+  // Sync Global English edition from sibling workspace (d:\키즈핏 영문\dist -> dist-global/) if present
+  try {
+    const siblingGlobalDist = path.resolve(ROOT_DIR, '..', '키즈핏 영문', 'dist');
+    const targetGlobalDir = path.join(ROOT_DIR, 'dist-global');
+    if (fs.existsSync(siblingGlobalDist)) {
+      fs.mkdirSync(targetGlobalDir, { recursive: true });
+      ['index.html', 'CNAME', 'robots.txt', 'sitemap.xml', 'rss.xml', 'feed.json', 'llms.txt', 'llms-full.txt', 'manifest.json', 'sw.js'].forEach((f) => {
+        const srcF = path.join(siblingGlobalDist, f);
+        if (fs.existsSync(srcF)) fs.copyFileSync(srcF, path.join(targetGlobalDir, f));
+      });
+      ['src/css', 'src/js', 'qna'].forEach((subDir) => {
+        const srcSub = path.join(siblingGlobalDist, subDir);
+        if (fs.existsSync(srcSub)) copyRecursiveSync(srcSub, path.join(targetGlobalDir, subDir));
+      });
+      console.log('Synced Global English assets from d:\\키즈핏 영문\\dist -> dist-global/');
+    }
+  } catch (_) {}
+
   const duration = Date.now() - startTime;
   console.log(`Build complete in ${duration}ms! Target: ${DIST_DIR}`);
 }

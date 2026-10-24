@@ -16,6 +16,7 @@ const PORT = Number(process.env.PORT || 3000);
 const HOST = '0.0.0.0';
 const ROOT_DIR = __dirname;
 const DIST_DIR = path.join(ROOT_DIR, 'dist');
+const DIST_GLOBAL_DIR = path.join(ROOT_DIR, 'dist-global');
 
 // Load .env variables into process.env if present
 try {
@@ -985,7 +986,6 @@ const server = http.createServer((req, res) => {
       return;
     }
 
-
     // 2. Official KIDS-FIT PWA Service Worker & App Download Endpoints
     if (pathname === '/sw.js' || pathname === '/service-worker.js') {
       const swFile = resolveSafeFile(DIST_DIR, 'sw.js') || resolveSafeFile(ROOT_DIR, 'sw.js');
@@ -1066,9 +1066,14 @@ const server = http.createServer((req, res) => {
     }
 
     const relPath = pathname.replace(/^\/+/, '');
+    const reqHost = String(req.headers['x-forwarded-host'] || req.headers.host || '').toLowerCase();
+    const isGlobalHost =
+      parsedUrl.searchParams.get('edition') !== 'ko' &&
+      (reqHost.includes('truthofmarket.com') || parsedUrl.searchParams.get('edition') === 'global' || parsedUrl.searchParams.get('paywall') === '1');
 
-    // Look up file in DIST_DIR first, then ROOT_DIR
+    // Look up file in DIST_GLOBAL_DIR first when serving Global English edition (truthofmarket.com), then DIST_DIR, then ROOT_DIR
     let filePath =
+      (isGlobalHost && (resolveSafeFile(DIST_GLOBAL_DIR, relPath) || resolveSafeFile(DIST_GLOBAL_DIR, path.join(relPath, 'index.html')))) ||
       resolveSafeFile(DIST_DIR, relPath) ||
       resolveSafeFile(ROOT_DIR, relPath) ||
       resolveSafeFile(DIST_DIR, path.join(relPath, 'index.html')) ||
@@ -1077,7 +1082,10 @@ const server = http.createServer((req, res) => {
     // Fallback to index.html for legacy HTML routes so old MoneyFit links land cleanly on KidsFit
     const ext = path.extname(filePath || pathname).toLowerCase();
     if (!filePath && (ext === '' || ext === '.html')) {
-      filePath = resolveSafeFile(DIST_DIR, 'index.html') || resolveSafeFile(ROOT_DIR, 'index.html');
+      filePath =
+        (isGlobalHost && resolveSafeFile(DIST_GLOBAL_DIR, 'index.html')) ||
+        resolveSafeFile(DIST_DIR, 'index.html') ||
+        resolveSafeFile(ROOT_DIR, 'index.html');
     }
 
     if (!filePath) {
@@ -1126,11 +1134,6 @@ const server = http.createServer((req, res) => {
     } else {
       headers['Cache-Control'] = 'public, max-age=3600';
     }
-
-    const reqHost = String(req.headers['x-forwarded-host'] || req.headers.host || '').toLowerCase();
-    const isGlobalHost =
-      parsedUrl.searchParams.get('edition') !== 'ko' &&
-      (parsedUrl.searchParams.get('edition') === 'global' || parsedUrl.searchParams.get('paywall') === '1');
 
     if (finalExt === '.html' && path.basename(filePath) === 'index.html' && isGlobalHost) {
       let htmlBody = fs.readFileSync(filePath, 'utf8');

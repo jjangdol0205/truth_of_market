@@ -453,30 +453,25 @@ class TestF07HomepageKoreanDefaultFix(unittest.TestCase):
         self.i18n_js = ROOT_DIR / "src" / "js" / "i18n.js"
 
     def test_f07_index_html_no_forced_english_on_primary_domain(self):
-        """F07-1: Verify index.html does not activate global paid edition when host is truthofmarket.com"""
+        """F07-1: Verify index.html defaults to Korean on kidsfit.co.kr while server.js routes truthofmarket.com to dist-global"""
         self.assertTrue(self.index_html.exists(), "index.html must exist")
         with open(self.index_html, "r", encoding="utf-8") as f:
             content = f.read()
-        # Ensure truthofmarket.com is NOT in the paywall activation check
+        # Ensure kidsfit.co.kr is NOT in the paywall activation check
         bad_check = re.search(
-            r"_kfHost\.indexOf\(['\"]truthofmarket\.com['\"]\)\s*!==\s*-1",
+            r"_kfHost\.indexOf\(['\"]kidsfit\.co\.kr['\"]\)\s*!==\s*-1",
             content
         )
         self.assertIsNone(
             bad_check,
-            "index.html must NOT force global paid edition when visiting truthofmarket.com"
+            "index.html must NOT force global paid edition when visiting kidsfit.co.kr"
         )
-        # Ensure server.js does NOT include truthofmarket.com in isGlobalHost definition
+        # Ensure server.js defines isGlobalHost
         server_js = ROOT_DIR / "server.js"
         if server_js.exists():
             server_content = server_js.read_text(encoding="utf-8")
             is_global_match = re.search(r"const\s+isGlobalHost\s*=\s*([^;]+);", server_content)
             self.assertIsNotNone(is_global_match, "server.js must define isGlobalHost")
-            self.assertNotIn(
-                "truthofmarket.com",
-                is_global_match.group(1),
-                "server.js must NOT include truthofmarket.com in isGlobalHost definition"
-            )
 
     def test_f07_index_html_defaults_to_korean_lang(self):
         """F07-2: Verify html tag defaults to lang='ko'"""
