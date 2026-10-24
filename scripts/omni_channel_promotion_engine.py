@@ -29,7 +29,7 @@ DOC_PATH = ROOT / "docs" / "탈네이버_전채널_홍보_마스터플랜_다음
 STATUS_PATH = ROOT / "logs" / "omni_channel_promotion_status.json"
 CURSOR_PATH = ROOT / "logs" / "omni_channel_5x_daily_cursor.json"
 ENV_PATH = ROOT / ".env"
-SITE_URL = "https://truthofmarket.com"
+SITE_URL = "https://kidsfit.co.kr"
 INDEXNOW_KEY = "bb7865143f912a88c04d31d3921a0988"
 
 sys.path.insert(0, str(ROOT / "scripts"))
