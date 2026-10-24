@@ -2503,7 +2503,7 @@
           </button>
         </div>
 
-        <div id="growth-curated-products-drawer" class="curated-product-recommendation-section" style="display: block; margin-top: 1.1rem; padding: 1.15rem; background: #FFFFFF; border: 2px solid #BFDBFE; border-radius: 20px;">
+        <div id="growth-curated-products-drawer" class="curated-product-recommendation-section" data-product-category="growth" style="display: block !important; margin-top: 1.1rem; padding: 1.15rem; background: #FFFFFF; border: 2px solid #BFDBFE; border-radius: 20px;">
           <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.85rem; padding-bottom: 0.65rem; border-bottom: 1px dashed #BFDBFE;">
             <span style="font-size: 0.98rem; font-weight: 900; color: #1D4ED8;">
               우리 아이 맞춤 성장 &amp; 두뇌·학습 처방 솔루션 (Paper-Matched Product Prescription) · 신체 성장
@@ -3580,7 +3580,7 @@
           </div>
 
           <!-- ==================== STEP 8: 분석 기반 간결 추천 상품 카드 (즉시 노출) ==================== -->
-          <div id="learning-curated-products-drawer" class="curated-product-recommendation-section" style="display: block; margin-top: 1rem;">
+          <div id="learning-curated-products-drawer" class="curated-product-recommendation-section" data-product-category="learning" style="display: block !important; margin-top: 1rem;">
             <div id="learning-step-8-links" style="background: #F8FAFC; border: 2px solid #93C5FD; border-radius: 20px; padding: 1.1rem 1.2rem; margin-bottom: 1.15rem; text-align: left;">
               <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.75rem; padding-bottom: 0.6rem; border-bottom: 1px dashed #BFDBFE;">
                 <span style="background: #1D4ED8; color: #FFFFFF; font-size: 0.82rem; font-weight: 900; padding: 0.25rem 0.85rem; border-radius: 9999px;">
@@ -4270,17 +4270,21 @@
     const box = document.getElementById(boxId);
     const ftc = document.getElementById('affiliate-ftc-disclosure');
     if (!box) return;
-    const isHidden = (box.style.display === 'none' || !box.style.display);
-    box.style.display = isHidden ? 'block' : 'none';
+    const isHidden = (box.style.display === 'none' || (typeof window !== 'undefined' && window.getComputedStyle && window.getComputedStyle(box).display === 'none'));
+    if (isHidden) {
+      box.style.setProperty('display', 'block', 'important');
+    } else {
+      box.style.setProperty('display', 'none', 'important');
+    }
     if (ftc && isHidden) ftc.style.display = 'block';
     if (btn) {
       if (isLearning) {
         btn.innerHTML = isHidden
-          ? '맞춤형 두뇌·학습 추천 상품 접기 ▲'
+          ? '맞춤형 두뇌·학습 추천 상품 접기 (교구 · 도서 · 주말 체험) ▲'
           : '분석 기반 맞춤형 두뇌·학습 추천 상품 보기 (교구 · 도서 · 주말 체험) ▼';
       } else {
         btn.innerHTML = isHidden
-          ? '맞춤형 신체 성장 추천 상품 접기 ▲'
+          ? '맞춤형 신체 성장 추천 상품 접기 (영양제 · 철봉 · 트램폴린) ▲'
           : '분석 기반 맞춤형 신체 성장 추천 상품 보기 (영양제 · 철봉 · 트램폴린) ▼';
       }
     }

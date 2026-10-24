@@ -24,6 +24,46 @@
       "sitemap_mismatch_urls": 32
     }
   },
+  "baseline_metrics": {
+    "total_uv": 11,
+    "total_pv": 16,
+    "diagnoses": {
+      "growth": 29,
+      "learning": 0
+    }
+  },
+  "bottleneck_root_causes": {
+    "inflow": [
+      "네이버 블로그/카페 본문에 홈페이지 링크 및 UTM 태그 전무",
+      "인스타그램/스레드 프로필 Bio 및 캡션 링크가 구도메인(kidsfit.co.kr)으로 하드코딩",
+      "모바일 인앱 브라우저의 HTTP Referer 헤더 삭제 및 쿼리 파라미터 누락"
+    ],
+    "diagnosis_split": [
+      "index.html 호스트네임 분기 오류로 truthofmarket.com 접속 시 영문 USD 페이월 강제 잠금",
+      "온보딩 위저드가 신체 성장만 단독 진행 후 학습 진단 미체이닝",
+      "클라이언트 진단 완료 시 /api/visit 비콘 미전송 (과거 29건은 테스트 잔재)"
+    ],
+    "conversion": [
+      "추천 상품 드로어가 display:none 상태로 은폐",
+      "단순 검색 결과 리다이렉트 위주로 학술 논문(PMID) 근거 처방전 부재",
+      "카테고리별(growth vs learning) 및 utm_source별 클릭 세부 로깅 부재"
+    ],
+    "domain_canonical": [
+      "GitHub Pages 배포는 truthofmarket.com이나 정적 메타데이터/사이트맵이 구도메인 kidsfit.co.kr로 하드코딩",
+      "외부 고권위 백링크(Telegra.ph 6편)가 kidsfit.co.kr로 연결되어 링크 에퀴티 분산"
+    ]
+  },
+  "target_kpis": {
+    "learning_diagnosis_ratio": 0.5,
+    "affiliate_cvr_target": 0.025,
+    "daily_uv": 300,
+    "external_inflow_share": 0.8,
+    "learning_diagnosis_completion_rate": 0.75,
+    "both_diagnosis_completion_rate": 0.85,
+    "prescription_display_rate": 1.0,
+    "affiliate_ctr": 0.12,
+    "domain_alignment_rate": 1.0
+  },
   "bottlenecks": [
     {
       "stage": "1단계: 외부 유입 (Inflow)",

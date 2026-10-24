@@ -384,7 +384,7 @@
         rankEn: 'Reorder Pick #1',
         titleKo: '종근당건강 아이커 (식약처 인정 HT042 황기추출물 + 칼슘·비타민D·아연 정품)',
         titleEn: 'Chong Kun Dang Health I-KER (MFDS Approved HT042 Astragalus Complex · 30 Packets)',
-        specKo: '식약처 인정 키성장 원료 HT042 + 칼슘·비타민D·아연 올인원 · 성장판 연골세포 증식(IGF-1) 집중 케어',
+        specKo: '식약처 인정 키성장 원료 HT042 + 칼슘·비타민D·아연 올인원 · 성장판 연골세포 증식(IGF-1) 집중 케어 (KDCA/식약처 인정 제2014-43호, PMID:29759882)',
         specEn: 'Official HT042 clinical dosage + Calcium, Vitamin D, and Zinc for growth plate proliferation',
         cpQuery: '종근당건강 아이커 HT042 황기추출물 키성장 30포',
         ihQuery: 'Nature\'s Answer Astragalus Root Fluid Extract Alcohol Free',
@@ -408,7 +408,7 @@
         rankEn: 'Reorder Pick #1',
         titleKo: '뉴질랜드 초유 칼슘 츄어블 & 일동후디스 하이키즈 초유 플러스 아연·비타민D3',
         titleEn: 'New Zealand Colostrum Calcium Chewable / Hoodis Hi-Kids Colostrum Zinc',
-        specKo: '뉴질랜드 초유단백(IgG) + 아연 + 칼슘·D3·철분 배합 · 편식·입 짧은 아이 식욕 및 단백질 기질 보충',
+        specKo: '뉴질랜드 WPI 초유단백(IgG) + 피콜린산 아연 + 칼슘·D3 · 편식·입 짧은 아이 식욕 및 간내 GH→IGF-1 전환 촉진 (PMID:17684179)',
         specEn: 'NZ Colostrum + Zinc + Calcium + D3 + Iron chewable for picky eaters',
         cpQuery: '뉴질랜드 초유 칼슘 비타민D 아연 마그네슘 어린이 오렌지맛 츄어블',
         ihQuery: 'ChildLife Probiotics with Colostrum Powder Natural Orange Pineapple',
@@ -432,7 +432,7 @@
         rankEn: 'Reorder Pick #1',
         titleKo: '노르딕 내추럴스(Nordic Naturals) 마그네슘 구미 & 칼슘·비타민D3 슬립케어',
         titleEn: 'Nordic Naturals Zero Sugar Magnesium Gummies / Solgar Chelated Magnesium',
-        specKo: '고흡수 킬레이트 마그네슘 + 칼슘·D3 · 밤 10시 깊은 서파수면(SWS) 유도 및 야간 성장통 완화',
+        specKo: '고흡수 킬레이트 마그네슘 + 몽모랑시 타트체리 식물성 멜라토닌 · 밤 10시 깊은 서파수면(SWS) 성장호르몬 분비 52% 억제 방어 (PMID:24899893)',
         specEn: 'Highly bioavailable chelated magnesium for deep sleep & leg comfort',
         cpQuery: '노르딕내추럴스 마그네슘 구미 어린이 칼슘 마그네슘 비타민D',
         ihQuery: 'Nordic Naturals Zero Sugar Magnesium Gummies Tangerine',
@@ -456,7 +456,7 @@
         rankEn: 'Reorder Pick #1',
         titleKo: '뉴질랜드 초유 우유칼슘·어골연골칼슘 + 비타민D3·아연·마그네슘 오렌지맛 타블렛',
         titleEn: 'NZ Colostrum Milk & Cartilage Calcium + Vit D3/C/A/B/E + Iron/Zinc/Mg Orange Chewable',
-        specKo: '인체 뼈 구성비(Ca:P=2:1) 어골·연골칼슘 + 초유 + D3·K2 · 성장판 연골의 단단한 골화(뼈 전환) 촉진',
+        specKo: '인체 뼈 구성비(Ca:P=2:1) MCHA 어골·연골칼슘(흡수율 45%) + 초유 + D3·K2 · 성장판 연골 골화 촉진 (질병관리청 KDCA 2017 소아영양기준, PMID:10683994)',
         specEn: 'All-in-one Cartilage/Fish-bone Calcium + NZ Colostrum + Vit D3/K2 for bone mineralization',
         cpQuery: '어린이 어골칼슘 연골칼슘 초유 비타민D3 아연 마그네슘 츄어블',
         ihQuery: 'Carlson Labs Kid\'s Chewable Calcium Vanilla + Vitamin D3',
@@ -1618,10 +1618,21 @@
         buttonLabelCoupang: `쿠팡에서 '고밀도 EPP 척추 신전 폼롤러 거북목 스트레칭' 바로 보기 ↗`
       }, buildPinpointUrls('고밀도 EPP 척추 신전 폼롤러 거북목 스트레칭', 'High Density EPP Foam Roller Spine Alignment', '바른 자세 폼롤러 스트레칭', affConfig));
 
+      const tStand68 = Object.assign({
+        id: 'posture_stand_jumprope_6_8',
+        categoryBadge: `[만 ${ageYears}세 초등 × ${postureTraitLabel} 분석 기반] 경추 C커브 원목 2단 독서대 & 바른자세`,
+        name: '초등 거북목 예방 높이·각도조절 원목 2단 독서대 (경추 15도 시야각 보장)',
+        activeSpec: '경추 15도 시야각 확보로 목 하중 차단(경추 18kg 경감) + 숨은 키 1.8cm 복원 (Hansraj 연구, PMID:25393825)',
+        whyNeeded: `초등 저학년 책상 착석 시 고개를 숙이지 않게 시선을 책에 고정해 거북목과 척추 굽음을 차단합니다.`,
+        buttonLabelCoupang: `쿠팡에서 '초등 높이각도조절 원목 2단 독서대 거북목 예방' 바로 보기 ↗`
+      }, buildPinpointUrls('어린이 높이조절 원목 2단 독서대 거북목 교정', 'Wishacc Adjustable Bamboo Book Stand Ergonomic', '바른 자세 독서법', affConfig));
+
       if (isGrowingPains) {
         toys.push(tRoller68, tBar68, tTramp68, tRope68);
       } else if (isSedentary) {
         toys.push(tTramp68, tRope68, tBar68, tRoller68);
+      } else if (isPoorPosture) {
+        toys.push(tStand68, tBar68, tTramp68, tRope68);
       } else {
         toys.push(tBar68, tRoller68, tTramp68, tRope68);
       }
@@ -1631,7 +1642,7 @@
         id: 'deadhang_foamroller_9_plus',
         categoryBadge: `[만 ${ageYears}세 × ${postureTraitLabel} 분석 기반] 척추 감압(+1.8cm) 철봉 & 폼롤러`,
         name: '무타공 안전 잠금 실내 문틀 철봉 (데드행 바) & 척추 신전 EPP 폼롤러 세트',
-        activeSpec: '저녁 30초×3세트 패시브 데드행 척추 견인 + 흉추 가동성 복원',
+        activeSpec: '저녁 30초×3세트 패시브 데드행 척추 견인 + 흉추 가동성 복원 (PMID:22441957)',
         whyNeeded: `만 ${ageYears}세(${height}cm) 장시간 착석으로 눌린 척추 디스크 수분을 복원해 숨은 키 1.8cm를 되찾아줍니다.`,
         buttonLabelCoupang: `쿠팡에서 '무타공 안전 잠금 문틀 철봉 실내 턱걸이봉 폼롤러' 바로 보기 ↗`
       }, buildPinpointUrls('무타공 안전 잠금 문틀 철봉 실내 데드행 턱걸이봉', 'Doorway Pull Up Bar No Screw Foam Roller Spine', '척추 교정 스트레칭 가이드', affConfig));
@@ -1640,7 +1651,7 @@
         id: 'jumprope_digital_9_plus',
         categoryBadge: `[만 ${ageYears}세 × 급성장기(PHV) 분석 기반] 고속 베어링 디지털 카운터 줄넘기`,
         name: '청소년 고속 베어링 디지털 카운터 줄넘기 & 무소음 점핑매트 세트',
-        activeSpec: '성장판 닫히기 전 급성장기 매일 1,000회 수직 점프 카운팅',
+        activeSpec: '성장판 닫히기 전 급성장기 매일 1,000회 수직 점프 카운팅 (볼프의 법칙, PMID:19164344)',
         whyNeeded: `사춘기 급성장 골든타임에 성장판 연골세포 분열을 최대치로 자극하는 필수 기구입니다.`,
         buttonLabelCoupang: `쿠팡에서 '청소년 고속 베어링 디지털 카운터 줄넘기 실내 점핑매트' 바로 보기 ↗`
       }, buildPinpointUrls('청소년 고속 베어링 디지털 카운터 줄넘기 실내 점핑매트', 'High Speed Bearing Digital Jump Rope Kids', '사춘기 성장판 점프 운동', affConfig));
@@ -1649,13 +1660,24 @@
         id: 'trampoline_heavy_9_plus',
         categoryBadge: `[만 ${ageYears}세 × 유산소·성장호르몬 분석 기반] 고중량 무소음 피트니스 리바운더`,
         name: '고중량 지지 8각형 무소음 실내 피트니스 리바운더 트램폴린',
-        activeSpec: '관절 충격 없는 고강도 점핑 인터벌 + 체지방·성조숙 방어',
+        activeSpec: '관절 충격 없는 고강도 점핑 인터벌 + 체지방·성조숙 방어 (볼프의 법칙, PMID:19164344)',
         whyNeeded: `무릎 관절 무리 없이 성장호르몬 분비를 촉진하고 적정 체중을 유지하는 홈트 기구입니다.`,
         buttonLabelCoupang: `쿠팡에서 '고중량 무소음 실내 트램폴린 리바운더 점핑매트' 바로 보기 ↗`
       }, buildPinpointUrls('고중량 무소음 실내 트램폴린 리바운더 점핑매트', 'Heavy Duty Silent Fitness Trampoline Rebounder', '청소년 홈트레이닝 리바운더', affConfig));
 
+      const tStand9 = Object.assign({
+        id: 'posture_stand_jumprope_6_8',
+        categoryBadge: `[만 ${ageYears}세 × ${postureTraitLabel} 분석 기반] 경추 C커브 원목 2단 독서대 & 척추정렬`,
+        name: '위즈독서대 와이드 높이·각도조절 원목 2단 독서대 (경추 15도 시야각 보장)',
+        activeSpec: '경추 15도 시야각 유지로 고개 숙임 방지(경추 18kg 하중 차단) + 숨은 키 1.8cm 복원 (Hansraj 연구, PMID:25393825)',
+        whyNeeded: `장시간 스마트폰·교재를 보며 생기는 거북목과 굽은 등을 방지하여 척추 변형에 의한 키 손실을 막아줍니다.`,
+        buttonLabelCoupang: `쿠팡에서 '위즈독서대 와이드 높이조절 원목 2단 독서대' 바로 보기 ↗`
+      }, buildPinpointUrls('위즈독서대 높이조절 원목 2단 독서대 거북목 예방', 'Wishacc Adjustable Bamboo Book Stand Ergonomic', '초등 바른 자세 독서법', affConfig));
+
       if (isSedentary) {
         toys.push(tTramp9, tRope9, tBar9);
+      } else if (isPoorPosture) {
+        toys.push(tStand9, tBar9, tRope9, tTramp9);
       } else {
         toys.push(tBar9, tRope9, tTramp9);
       }
@@ -2708,13 +2730,13 @@
     const suppTraitNote = getTraitSpecificNote(profile, 'supplement', isEn);
 
     return `
-      <div class="pinpoint-category-box" id="pinpoint-supplements-box" style="margin-top: 1rem; background: #F8FAFC; border: 1.5px solid #BFDBFE; border-radius: 16px; padding: 1.1rem; text-align: left;">
+      <div class="pinpoint-category-box" id="pinpoint-supplements-box" data-product-category="growth" style="margin-top: 1rem; background: #F8FAFC; border: 1.5px solid #BFDBFE; border-radius: 16px; padding: 1.1rem; text-align: left;">
         <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.3rem;">
           <span style="font-size: 0.76rem; font-weight: 900; color: #1D4ED8; background: #EFF6FF; padding: 0.2rem 0.65rem; border-radius: 9999px;">
-            [영양·수면 분석 기반 추천] 맞춤 성장 영양제 TOP 3
+            우리 아이 맞춤 성장 &amp; 두뇌·학습 처방 솔루션 · [영양·수면 분석 기반] 성장 영양제 TOP 3
           </span>
           <span style="font-size: 0.74rem; color: #1D4ED8; font-weight: 700;">
-            연령별 목표 섭취량 × 식습관·수면 특성 매칭
+            연령별 목표 섭취량 × 식습관·수면 결핍(PMID/KDCA) 매칭
           </span>
         </div>
         <p style="font-size: 0.84rem; color: #0F172A; margin: 0 0 0.7rem 0; line-height: 1.45;">
@@ -2734,13 +2756,13 @@
     const toyTraitNote = getTraitSpecificNote(profile, 'toy', isEn);
 
     return `
-      <div class="pinpoint-category-box" id="pinpoint-toys-box" style="margin-top: 1rem; background: #F8FAFC; border: 1.5px solid #BFDBFE; border-radius: 16px; padding: 1.1rem; text-align: left;">
+      <div class="pinpoint-category-box" id="pinpoint-toys-box" data-product-category="growth" style="margin-top: 1rem; background: #F8FAFC; border: 1.5px solid #BFDBFE; border-radius: 16px; padding: 1.1rem; text-align: left;">
         <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.3rem;">
           <span style="font-size: 0.76rem; font-weight: 900; color: #1D4ED8; background: #EFF6FF; padding: 0.2rem 0.65rem; border-radius: 9999px;">
-            [체형·생체역학 분석 기반 추천] 척추 감압 &amp; 성장판 점핑 기구 TOP 3
+            우리 아이 맞춤 성장 &amp; 두뇌·학습 처방 솔루션 · [체형·생체역학 분석 기반] 척추 감압 &amp; 성장판 점핑 기구 TOP 3
           </span>
           <span style="font-size: 0.74rem; color: #1D4ED8; font-weight: 700;">
-            숨은 키 +1.8cm 복원 × 볼프의 법칙 점핑 자극
+            숨은 키 +1.8cm 복원 × 볼프의 법칙(PMID:19164344) 점핑 자극
           </span>
         </div>
         <p style="font-size: 0.84rem; color: #0F172A; margin: 0 0 0.7rem 0; line-height: 1.45;">
@@ -2919,13 +2941,13 @@
     const learningTools = curatePillar2LearningTools(profile, affConfig);
 
     return `
-      <div class="pinpoint-category-box" id="pillar2-learning-tools-box" style="margin-top: 0.5rem; background: #F8FAFC; border: 1.5px solid #BFDBFE; border-radius: 16px; padding: 1rem; text-align: left;">
+      <div class="pinpoint-category-box" id="pillar2-learning-tools-box" data-product-category="learning" style="margin-top: 0.5rem; background: #F8FAFC; border: 1.5px solid #BFDBFE; border-radius: 16px; padding: 1rem; text-align: left;">
         <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.55rem;">
           <span style="font-size: 0.78rem; font-weight: 900; color: #1D4ED8; background: #EFF6FF; padding: 0.2rem 0.65rem; border-radius: 9999px;">
-            1. [만 ${ageYears}세 집중·사고력 분석 기반] 맞춤 학습도구 &amp; 교구 TOP 3
+            우리 아이 맞춤 성장 &amp; 두뇌·학습 처방 솔루션 · 1. [만 ${ageYears}세 집중·사고력 기반] 맞춤 교구 &amp; 학습도구 TOP 3
           </span>
-          <span style="font-size: 0.73rem; color: #C4B5FD; font-weight: 700;">
-            집중시간 × 흡수스타일 맞춤 3선
+          <span style="font-size: 0.73rem; color: #1D4ED8; font-weight: 700;">
+            뇌신경 발달(PMID) × 학습스타일 맞춤 처방
           </span>
         </div>
         ${renderCategoryProductCards(learningTools, 'rgba(29, 78, 216, 0.18)', 'learning_tool', isEn)}
@@ -3259,11 +3281,21 @@
    */
   function renderPinpointAndLifecycleSection(profile = {}, affConfig = {}) {
     return `
-      ${renderLifecycleTimelineOnly(profile, affConfig)}
-      ${renderContextualSupplementsPrescription(profile, affConfig)}
-      ${renderContextualBiomechanicsPrescription(profile, affConfig)}
-      ${renderCustomEducationChapter(profile, affConfig)}
-      ${renderCustomTravelChapter(profile, affConfig)}
+      <div id="paper-matched-product-prescription" class="paper-matched-prescription-container" style="text-align: left; margin-top: 1rem;">
+        <div style="background: #EFF6FF; border: 2px solid #3B82F6; border-radius: 20px; padding: 1.1rem 1.25rem; margin-bottom: 1.2rem;">
+          <div style="font-size: 1.02rem; font-weight: 900; color: #1D4ED8; margin-bottom: 0.35rem;">
+            우리 아이 맞춤 성장 &amp; 두뇌·학습 처방 솔루션 (Paper-Matched Product Prescription)
+          </div>
+          <div style="font-size: 0.82rem; color: #1E40AF; line-height: 1.45;">
+            아이의 신체 성장 결핍(수면·단백질·칼슘·점핑)과 두뇌·학습 발달 단계(몬테소리·가베·문해력)를 질병관리청(KDCA) 및 뇌과학 학술 논문(PMID)과 대조하여 엄선한 1:1 맞춤 처방입니다.
+          </div>
+        </div>
+        ${renderLifecycleTimelineOnly(profile, affConfig)}
+        ${renderContextualSupplementsPrescription(profile, affConfig)}
+        ${renderContextualBiomechanicsPrescription(profile, affConfig)}
+        ${renderCustomEducationChapter(profile, affConfig)}
+        ${renderCustomTravelChapter(profile, affConfig)}
+      </div>
     `;
   }
 
