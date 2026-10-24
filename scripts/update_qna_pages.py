@@ -14,8 +14,8 @@ from pathlib import Path
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 QNA_DIR = ROOT_DIR / "qna"
-PRODUCTION_DOMAIN = "truthofmarket.com"
-LEGACY_DOMAIN = "kidsfit.co.kr"
+PRODUCTION_DOMAIN = "kidsfit.co.kr"
+LEGACY_DOMAIN = "truthofmarket.com"
 
 def process_file(html_file: Path):
     content = html_file.read_text(encoding="utf-8")

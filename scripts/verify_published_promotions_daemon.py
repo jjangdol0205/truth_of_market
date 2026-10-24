@@ -31,7 +31,7 @@ OMNI_CURSOR_PATH = ROOT / "logs" / "omni_channel_5x_daily_cursor.json"
 QA_REPORT_JSON = ROOT / "logs" / "promotion_qa_audit_report.json"
 QA_REPORT_MD = ROOT / "docs" / "홍보물_발행품질_및_라이브배포_자동점검_리포트.md"
 ENV_PATH = ROOT / ".env"
-SITE_URL = "https://truthofmarket.com"
+SITE_URL = "https://kidsfit.co.kr"
 
 
 def load_env():

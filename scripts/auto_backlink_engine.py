@@ -31,7 +31,7 @@ BACKLINK_LOG_PATH = ROOT / "logs" / "auto_backlink_status.json"
 EXT_BACKLINK_REGISTRY_PATH = ROOT / "logs" / "external_backlinks_registry.json"
 TELEGRAPH_TOKEN_PATH = ROOT / "logs" / "telegraph_account.json"
 
-SITE_URL = "https://truthofmarket.com"
+SITE_URL = "https://kidsfit.co.kr"
 ALT_SITE_URL = "https://truthofmarket.com"
 BLOG_URL = "https://blog.naver.com/expertise333"
 CAFE_URL = "https://cafe.naver.com/moneyfitlab"
@@ -383,7 +383,7 @@ def ping_websub_and_indexnow(extra_external_url: str = ""):
     ] + [f"{SITE_URL}/qna/{t['slug']}.html" for t in QNA_TOPICS] + seq_urls
 
     payload = json.dumps({
-        "host": "kidsfit.co.kr",
+        "host": urllib.parse.urlparse(SITE_URL).netloc or "kidsfit.co.kr",
         "key": INDEXNOW_KEY,
         "keyLocation": f"{SITE_URL}/{INDEXNOW_KEY}.txt",
         "urlList": url_list
