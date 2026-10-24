@@ -145,7 +145,7 @@ def ensure_clean_cdp_browser(p):
 
     if cdp_ok:
         try:
-            browser = p.chromium.connect_over_cdp("http://127.0.0.1:9222", timeout=8000)
+            browser = p.chromium.connect_over_cdp("http://127.0.0.1:9222", timeout=25000)
             return browser, browser.contexts[0], False
         except Exception:
             cdp_ok = False
@@ -160,7 +160,7 @@ def ensure_clean_cdp_browser(p):
                     break
         except Exception:
             time.sleep(1)
-    browser = p.chromium.connect_over_cdp("http://127.0.0.1:9222", timeout=10000)
+    browser = p.chromium.connect_over_cdp("http://127.0.0.1:9222", timeout=25000)
     return browser, browser.contexts[0], False
 
 

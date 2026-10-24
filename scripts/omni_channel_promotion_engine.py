@@ -29,7 +29,7 @@ DOC_PATH = ROOT / "docs" / "탈네이버_전채널_홍보_마스터플랜_다음
 STATUS_PATH = ROOT / "logs" / "omni_channel_promotion_status.json"
 CURSOR_PATH = ROOT / "logs" / "omni_channel_5x_daily_cursor.json"
 ENV_PATH = ROOT / ".env"
-SITE_URL = "https://kidsfit.co.kr"
+SITE_URL = "https://truthofmarket.com"
 INDEXNOW_KEY = "bb7865143f912a88c04d31d3921a0988"
 
 sys.path.insert(0, str(ROOT / "scripts"))
@@ -198,11 +198,22 @@ def publish_next_sequence_article(seq: int, paper_cnt: int) -> dict:
       <a href="/" style="font-weight:900;font-size:1.05rem;color:#1D4ED8;text-decoration:none;">KIDS-FIT 키즈핏 그로스 스튜디오</a>
       <a href="/qna/index.html" style="font-size:0.84rem;font-weight:800;color:#475569;text-decoration:none;">전체 Q&amp;A 백과사전 →</a>
     </div>
-    <div style="background:linear-gradient(135deg,#EEF2FF 0%,#F0FDF4 100%);border:1.5px solid #A5B4FC;border-radius:16px;padding:0.9rem 1rem;margin-bottom:1.1rem;">
-      <div style="font-size:0.82rem;font-weight:900;color:#3730A3;margin-bottom:0.45rem;">⚡ [상단 3초 바로가기] 내 아이 생년월일·키·몸무게 넣고 10초 무료 진단</div>
-      <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
-        <a href="/?preset={preset_id}&amp;utm_source={slug}" style="background:#1D4ED8;color:#FFFFFF;border-radius:999px;padding:0.35rem 0.85rem;font-size:0.8rem;font-weight:800;text-decoration:none;">🚀 맞춤 프리셋 1초 실행 →</a>
-        <a href="/?utm_source={slug}" style="background:#FFFFFF;border:1px solid #93C5FD;color:#1E293B;border-radius:999px;padding:0.35rem 0.85rem;font-size:0.8rem;font-weight:800;text-decoration:none;">📏 직접 수치 입력하기 →</a>
+    <!-- TOP 1-CLICK DIAGNOSTIC BRIDGE WIDGET -->
+    <div class="diagnostic-bridge-top-widget" style="background:linear-gradient(135deg,#EEF2FF 0%,#F0FDF4 100%);border:2px solid #6366F1;border-radius:16px;padding:0.9rem 1.1rem;margin-bottom:1.1rem;box-shadow:0 4px 14px rgba(99,102,241,0.12);">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.6rem;">
+        <div>
+          <div style="font-size:0.8rem;font-weight:900;color:#4338CA;margin-bottom:0.2rem;">⚡ 회원가입 0초 · 질병관리청 &amp; K-DST 기준 1분 맞춤 리포트 발급</div>
+          <div style="font-size:1.02rem;font-weight:900;color:#0F172A;">내 아이 예상키 + 두뇌·학습 골든타임 1분 무료 진단</div>
+        </div>
+        <a href="{SITE_URL}/?utm_source=qna_top&amp;utm_medium=organic_search&amp;utm_campaign=kidsfit_diagnosis&amp;utm_content={slug}" style="background:#4F46E5;color:#FFFFFF;text-decoration:none;font-weight:900;font-size:0.88rem;padding:0.55rem 1.1rem;border-radius:12px;box-shadow:0 4px 12px rgba(79,70,229,0.25);white-space:nowrap;">1-Click 무료 진단 시작 →</a>
+      </div>
+      <div style="margin-top:0.55rem;padding-top:0.55rem;border-top:1px dashed #C7D2FE;display:flex;flex-wrap:wrap;gap:0.35rem;align-items:center;">
+        <span style="font-size:0.75rem;font-weight:800;color:#4B5563;">연령별 빠른 진단:</span>
+        <a href="{SITE_URL}/?preset=infant_1&amp;utm_source=qna_top&amp;utm_medium=organic_search&amp;utm_campaign=kidsfit_diagnosis&amp;utm_content={slug}" style="background:#FFFFFF;border:1px solid #C7D2FE;border-radius:999px;padding:0.2rem 0.6rem;font-size:0.75rem;font-weight:800;color:#1E293B;text-decoration:none;">🍼 만 1세</a>
+        <a href="{SITE_URL}/?preset=toddler_2_3&amp;utm_source=qna_top&amp;utm_medium=organic_search&amp;utm_campaign=kidsfit_diagnosis&amp;utm_content={slug}" style="background:#FFFFFF;border:1px solid #C7D2FE;border-radius:999px;padding:0.2rem 0.6rem;font-size:0.75rem;font-weight:800;color:#1E293B;text-decoration:none;">👶 만 2~3세</a>
+        <a href="{SITE_URL}/?preset=child_4_5&amp;utm_source=qna_top&amp;utm_medium=organic_search&amp;utm_campaign=kidsfit_diagnosis&amp;utm_content={slug}" style="background:#FFFFFF;border:1px solid #C7D2FE;border-radius:999px;padding:0.2rem 0.6rem;font-size:0.75rem;font-weight:800;color:#1E293B;text-decoration:none;">🧒 만 4~5세</a>
+        <a href="{SITE_URL}/?preset=elem_low&amp;utm_source=qna_top&amp;utm_medium=organic_search&amp;utm_campaign=kidsfit_diagnosis&amp;utm_content={slug}" style="background:#FFFFFF;border:1px solid #C7D2FE;border-radius:999px;padding:0.2rem 0.6rem;font-size:0.75rem;font-weight:800;color:#1E293B;text-decoration:none;">👧 초등 저학년</a>
+        <a href="{SITE_URL}/?preset=elem_high&amp;utm_source=qna_top&amp;utm_medium=organic_search&amp;utm_campaign=kidsfit_diagnosis&amp;utm_content={slug}" style="background:#FFFFFF;border:1px solid #C7D2FE;border-radius:999px;padding:0.2rem 0.6rem;font-size:0.75rem;font-weight:800;color:#1E293B;text-decoration:none;">👦 초등 고학년</a>
       </div>
     </div>
     <article class="card">
@@ -225,8 +236,25 @@ def publish_next_sequence_article(seq: int, paper_cnt: int) -> dict:
       <div style="font-size:0.8rem;color:#475569;font-weight:700;padding-top:0.5rem;border-top:1px dashed #CBD5E1;">
         학술·공공 근거: {base_topic['citation']}
       </div>
-      <a href="/?preset={preset_id}&amp;utm_source={slug}" class="cta-btn">📏🧠 우리 아이 예상키·두뇌 밸런스 1분 무료 진단 시작하기 →</a>
+      <a href="{SITE_URL}/?preset={preset_id}&amp;utm_source=qna_bottom&amp;utm_medium=organic_search&amp;utm_campaign=kidsfit_diagnosis&amp;utm_content={slug}" class="cta-btn">📏🧠 우리 아이 예상키·두뇌 밸런스 1분 무료 진단 시작하기 →</a>
     </article>
+    <!-- BOTTOM 1-CLICK DIAGNOSTIC BRIDGE WIDGET -->
+    <div class="diagnostic-bridge-bottom-widget" style="background:#FFFFFF;border:2px solid #4F46E5;border-radius:20px;padding:1.4rem 1.3rem;box-shadow:0 8px 24px rgba(79,70,229,0.12);margin-top:1.2rem;margin-bottom:1.2rem;">
+      <span style="display:inline-block;background:#EEF2FF;color:#4F46E5;font-size:0.78rem;font-weight:900;padding:0.24rem 0.75rem;border-radius:9999px;margin-bottom:0.5rem;">🔬 질병관리청(KDCA) 2017 성장도표 &amp; 보건복지부 K-DST 기준</span>
+      <h3 style="font-size:1.15rem;font-weight:900;color:#0F172A;margin:0 0 0.4rem;line-height:1.4;">우리 아이 잠재 성장키 + 두뇌 학습 5대 역량 1분 무료 정밀 진단</h3>
+      <p style="font-size:0.88rem;color:#475569;margin:0 0 0.9rem;line-height:1.55;">질병관리청 소아청소년 백분위 성장도표 및 펜필드 뇌지도 기준 1:1 맞춤 정밀 리포트를 회원가입 없이 즉시 확인하세요.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0.6rem;margin-bottom:1rem;">
+        <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:10px;padding:0.75rem;">
+          <div style="font-size:0.8rem;font-weight:900;color:#1D4ED8;">📏 신체 성장 3단 진단</div>
+          <div style="font-size:0.75rem;color:#64748B;margin-top:0.2rem;">현재 키 백분위 · 예상키 · 성장판 골든타임</div>
+        </div>
+        <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:10px;padding:0.75rem;">
+          <div style="font-size:0.8rem;font-weight:900;color:#059669;">🧠 5대 두뇌 역량(LQ)</div>
+          <div style="font-size:0.75rem;color:#64748B;margin-top:0.2rem;">작업기억 · 어휘력 · 메타인지 · 수면 루틴</div>
+        </div>
+      </div>
+      <a href="{SITE_URL}/?utm_source=qna_bottom&amp;utm_medium=organic_search&amp;utm_campaign=kidsfit_diagnosis&amp;utm_content={slug}" style="display:block;text-align:center;background:#1D4ED8;color:#FFFFFF;text-decoration:none;font-weight:900;font-size:0.98rem;padding:0.9rem 1.2rem;border-radius:14px;box-shadow:0 6px 18px rgba(29,78,216,0.22);">👉 내 아이 1분 무료 정밀 진단 리포트 발급받기 →</a>
+    </div>
   </div>
 </body>
 </html>
@@ -255,7 +283,7 @@ def generate_llms_txt(paper_cnt: int, seq_history: list):
         [f"- [{h['title']}]({h['url']}) ({h['publishedAt']})" for h in reversed(seq_history[-15:])]
     )
 
-    llms_txt = f"""# 키즈핏 그로스 스튜디오 (KidsFit Growth Studio) — https://kidsfit.co.kr
+    llms_txt = f"""# 키즈핏 그로스 스튜디오 (KidsFit Growth Studio) — https://truthofmarket.com
 
 > 대한민국 질병관리청(KDCA) 2017 소아청소년 성장도표(LMS 수식), 보건복지부 영유아 발달선별검사(K-DST), 한국인 영양소 섭취기준(KDRIs), 그리고 {paper_cnt:,}편의 PubMed·SCI급 소아내분비·뇌인지과학 논문을 결합한 **무료 소아·청소년 신체 성장(예상키·백분위) & 두뇌·학습(5각 LQ·메타인지) 종합 진단 플랫폼**입니다. (최종 업데이트: {now_str})
 
@@ -361,6 +389,24 @@ def render_omni_channel_web_hub(latest_post: dict, seq_history: list):
       <a href="/" style="font-weight:900;color:#4F46E5;text-decoration:none;">← 키즈핏 메인 진단 스튜디오</a>
       <a href="/qna/index.html" style="font-size:0.85rem;font-weight:800;color:#475569;text-decoration:none;">Q&amp;A 25선 백과사전 →</a>
     </div>
+    <!-- TOP 1-CLICK DIAGNOSTIC BRIDGE WIDGET -->
+    <div class="diagnostic-bridge-top-widget" style="background:linear-gradient(135deg,#EEF2FF 0%,#F0FDF4 100%);border:2px solid #6366F1;border-radius:16px;padding:0.9rem 1.1rem;margin-bottom:1.1rem;box-shadow:0 4px 14px rgba(99,102,241,0.12);">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.6rem;">
+        <div>
+          <div style="font-size:0.8rem;font-weight:900;color:#4338CA;margin-bottom:0.2rem;">⚡ 회원가입 0초 · 질병관리청 &amp; K-DST 기준 1분 맞춤 리포트 발급</div>
+          <div style="font-size:1.02rem;font-weight:900;color:#0F172A;">내 아이 예상키 + 두뇌·학습 골든타임 1분 무료 진단</div>
+        </div>
+        <a href="{SITE_URL}/?utm_source=qna_top&amp;utm_medium=organic_search&amp;utm_campaign=kidsfit_diagnosis&amp;utm_content=omni-channel-kit" style="background:#4F46E5;color:#FFFFFF;text-decoration:none;font-weight:900;font-size:0.88rem;padding:0.55rem 1.1rem;border-radius:12px;box-shadow:0 4px 12px rgba(79,70,229,0.25);white-space:nowrap;">1-Click 무료 진단 시작 →</a>
+      </div>
+      <div style="margin-top:0.55rem;padding-top:0.55rem;border-top:1px dashed #C7D2FE;display:flex;flex-wrap:wrap;gap:0.35rem;align-items:center;">
+        <span style="font-size:0.75rem;font-weight:800;color:#4B5563;">연령별 빠른 진단:</span>
+        <a href="{SITE_URL}/?preset=infant_1&amp;utm_source=qna_top&amp;utm_medium=organic_search&amp;utm_campaign=kidsfit_diagnosis&amp;utm_content=omni-channel-kit" style="background:#FFFFFF;border:1px solid #C7D2FE;border-radius:999px;padding:0.2rem 0.6rem;font-size:0.75rem;font-weight:800;color:#1E293B;text-decoration:none;">🍼 만 1세</a>
+        <a href="{SITE_URL}/?preset=toddler_2_3&amp;utm_source=qna_top&amp;utm_medium=organic_search&amp;utm_campaign=kidsfit_diagnosis&amp;utm_content=omni-channel-kit" style="background:#FFFFFF;border:1px solid #C7D2FE;border-radius:999px;padding:0.2rem 0.6rem;font-size:0.75rem;font-weight:800;color:#1E293B;text-decoration:none;">👶 만 2~3세</a>
+        <a href="{SITE_URL}/?preset=child_4_5&amp;utm_source=qna_top&amp;utm_medium=organic_search&amp;utm_campaign=kidsfit_diagnosis&amp;utm_content=omni-channel-kit" style="background:#FFFFFF;border:1px solid #C7D2FE;border-radius:999px;padding:0.2rem 0.6rem;font-size:0.75rem;font-weight:800;color:#1E293B;text-decoration:none;">🧒 만 4~5세</a>
+        <a href="{SITE_URL}/?preset=elem_low&amp;utm_source=qna_top&amp;utm_medium=organic_search&amp;utm_campaign=kidsfit_diagnosis&amp;utm_content=omni-channel-kit" style="background:#FFFFFF;border:1px solid #C7D2FE;border-radius:999px;padding:0.2rem 0.6rem;font-size:0.75rem;font-weight:800;color:#1E293B;text-decoration:none;">👧 초등 저학년</a>
+        <a href="{SITE_URL}/?preset=elem_high&amp;utm_source=qna_top&amp;utm_medium=organic_search&amp;utm_campaign=kidsfit_diagnosis&amp;utm_content=omni-channel-kit" style="background:#FFFFFF;border:1px solid #C7D2FE;border-radius:999px;padding:0.2rem 0.6rem;font-size:0.75rem;font-weight:800;color:#1E293B;text-decoration:none;">👦 초등 고학년</a>
+      </div>
+    </div>
     <h1>🌐 탈(脫)네이버 6대 외부 채널 일 5회 자동 발행 허브</h1>
     <p style="font-size:0.9rem;color:#475569;margin-bottom:1.2rem;">네이버 일 5회 발행과 동일하게 매일 5회(06:30 / 09:30 / 12:30 / 16:30 / 20:30) <strong>다음(Daum)·구글·빙·AI검색(llms.txt)·당근 동네생활·블라인드·카톡 단톡방</strong>용 신규 랜딩 아티클을 자동 생성·핑 배포합니다.</p>
 
@@ -397,6 +443,23 @@ def render_omni_channel_web_hub(latest_post: dict, seq_history: list):
       <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.45rem;font-size:0.88rem;">
         {seq_links_html}
       </ul>
+    </div>
+    <!-- BOTTOM 1-CLICK DIAGNOSTIC BRIDGE WIDGET -->
+    <div class="diagnostic-bridge-bottom-widget" style="background:#FFFFFF;border:2px solid #4F46E5;border-radius:20px;padding:1.4rem 1.3rem;box-shadow:0 8px 24px rgba(79,70,229,0.12);margin-top:1.2rem;margin-bottom:1.2rem;">
+      <span style="display:inline-block;background:#EEF2FF;color:#4F46E5;font-size:0.78rem;font-weight:900;padding:0.24rem 0.75rem;border-radius:9999px;margin-bottom:0.5rem;">🔬 질병관리청(KDCA) 2017 성장도표 &amp; 보건복지부 K-DST 기준</span>
+      <h3 style="font-size:1.15rem;font-weight:900;color:#0F172A;margin:0 0 0.4rem;line-height:1.4;">우리 아이 잠재 성장키 + 두뇌 학습 5대 역량 1분 무료 정밀 진단</h3>
+      <p style="font-size:0.88rem;color:#475569;margin:0 0 0.9rem;line-height:1.55;">질병관리청 소아청소년 백분위 성장도표 및 펜필드 뇌지도 기준 1:1 맞춤 정밀 리포트를 회원가입 없이 즉시 확인하세요.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0.6rem;margin-bottom:1rem;">
+        <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:10px;padding:0.75rem;">
+          <div style="font-size:0.8rem;font-weight:900;color:#1D4ED8;">📏 신체 성장 3단 진단</div>
+          <div style="font-size:0.75rem;color:#64748B;margin-top:0.2rem;">현재 키 백분위 · 예상키 · 성장판 골든타임</div>
+        </div>
+        <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:10px;padding:0.75rem;">
+          <div style="font-size:0.8rem;font-weight:900;color:#059669;">🧠 5대 두뇌 역량(LQ)</div>
+          <div style="font-size:0.75rem;color:#64748B;margin-top:0.2rem;">작업기억 · 어휘력 · 메타인지 · 수면 루틴</div>
+        </div>
+      </div>
+      <a href="{SITE_URL}/?utm_source=qna_bottom&amp;utm_medium=organic_search&amp;utm_campaign=kidsfit_diagnosis&amp;utm_content=omni-channel-kit" style="display:block;text-align:center;background:#1D4ED8;color:#FFFFFF;text-decoration:none;font-weight:900;font-size:0.98rem;padding:0.9rem 1.2rem;border-radius:14px;box-shadow:0 6px 18px rgba(29,78,216,0.22);">👉 내 아이 1분 무료 정밀 진단 리포트 발급받기 →</a>
     </div>
   </div>
 </body>
