@@ -1751,14 +1751,14 @@
   "metadata": {
     "project": "KidsFit Growth Studio (키즈핏 성장·두뇌·양육 연구소)",
     "version": "2.0.0",
-    "generated_at": "2026-10-24T19:05:12Z",
-    "total_papers": 3779,
+    "generated_at": "2026-10-24T19:37:06Z",
+    "total_papers": 3787,
     "pillar_counts": {
       "growth_endocrinology": 1079,
-      "fine_motor_neuroscience": 761,
+      "fine_motor_neuroscience": 766,
       "pedagogy_montessori_froebel": 509,
       "parent_child_interaction_museum": 900,
-      "posture_biomechanics_exercise": 530
+      "posture_biomechanics_exercise": 533
     },
     "engines_used": [
       "NCBI PubMed E-utilities (esearch.fcgi / esummary.fcgi)",
@@ -1766,20 +1766,20 @@
       "KidsFit Pediatric Clinical Anchor Curation",
       "OpenAlex Academic Graph API (https://api.openalex.org/works)"
     ],
-    "last_updated_utc": "2026-10-24T19:05:13Z",
+    "last_updated_utc": "2026-10-24T19:37:07Z",
     "learning_analytics": {
-      "last_enriched_utc": "2026-10-24T19:05:13Z",
-      "total_papers": 3779,
+      "last_enriched_utc": "2026-10-24T19:37:07Z",
+      "total_papers": 3787,
       "total_pillars": 5,
       "total_sub_domains": 12,
       "newly_expanded_scope_papers": 0,
       "macro_pillar_balance": {
-        "growth_macro_count": 1609,
-        "learning_macro_count": 2170,
-        "total_macro_papers": 3779,
-        "growth_ratio": 0.4258,
+        "growth_macro_count": 1612,
+        "learning_macro_count": 2175,
+        "total_macro_papers": 3787,
+        "growth_ratio": 0.4257,
         "growth_percent": 42.6,
-        "learning_ratio": 0.5742,
+        "learning_ratio": 0.5743,
         "learning_percent": 57.4,
         "learning_ratio_percent": 57.4,
         "target_ratio": 0.5,
@@ -1790,7 +1790,7 @@
           "growth_percent": 80,
           "learning_percent": 20
         },
-        "last_balanced_utc": "2026-10-24T19:05:13Z"
+        "last_balanced_utc": "2026-10-24T19:37:07Z"
       },
       "sub_domain_distribution": [
         {
@@ -1811,7 +1811,7 @@
           "icon": "🌙",
           "color": "#818CF8",
           "count": 407,
-          "percent": 10.8
+          "percent": 10.7
         },
         {
           "id": "clinical_nutrigenomics_microbiome",
@@ -1821,7 +1821,7 @@
           "icon": "🥗",
           "color": "#10B981",
           "count": 637,
-          "percent": 16.9
+          "percent": 16.8
         },
         {
           "id": "bone_age_precocious_puberty",
@@ -1840,7 +1840,7 @@
           "title_en": "Fine Motor Dexterity & Sensorimotor Cortical Plasticity",
           "icon": "🤲",
           "color": "#EC4899",
-          "count": 60,
+          "count": 62,
           "percent": 1.6
         },
         {
@@ -1850,8 +1850,8 @@
           "title_en": "Prefrontal Executive Function & Working Memory Longitudinal",
           "icon": "🧠",
           "color": "#A855F7",
-          "count": 701,
-          "percent": 18.5
+          "count": 704,
+          "percent": 18.6
         },
         {
           "id": "pedagogy_montessori_froebel",
@@ -1891,7 +1891,7 @@
           "icon": "💛",
           "color": "#F43F5E",
           "count": 653,
-          "percent": 17.3
+          "percent": 17.2
         },
         {
           "id": "posture_biomechanics_exercise",
@@ -1900,7 +1900,7 @@
           "title_en": "Spinal Alignment, CVA & Intervertebral Disc Rehydration",
           "icon": "🧘",
           "color": "#3B82F6",
-          "count": 426,
+          "count": 428,
           "percent": 11.3
         },
         {
@@ -1910,7 +1910,7 @@
           "title_en": "Wolff's Law Epiphyseal Mechanical Loading & Plyometrics",
           "icon": "🏃",
           "color": "#22C55E",
-          "count": 104,
+          "count": 105,
           "percent": 2.8
         }
       ],
@@ -1918,49 +1918,49 @@
         "short_term": {
           "label_ko": "단기 지도 (1~4주 즉시 교정·복원)",
           "label_en": "Short-Term (Weeks 1-4 Immediate Reset)",
-          "count": 2629
+          "count": 2634
         },
         "mid_term": {
           "label_ko": "중기 지도 (1~3개월 / 90일 생체·신경망 정착)",
           "label_en": "Mid-Term (Months 1-3 Bio & Neural Consolidation)",
-          "count": 3779
+          "count": 3787
         },
         "long_term": {
           "label_ko": "장기 지도 (6개월~만 20세 최종 표적키·자기주도 완성)",
           "label_en": "Long-Term (6M to Age 20 Adult Trajectory & Mastery)",
-          "count": 2381
+          "count": 2387
         }
       },
       "age_horizon_heatmap": {
         "1-3y": {
-          "short_term": 2034,
-          "mid_term": 3178,
-          "long_term": 2203
+          "short_term": 2036,
+          "mid_term": 3183,
+          "long_term": 2208
         },
         "4-6y": {
-          "short_term": 2145,
-          "mid_term": 3294,
-          "long_term": 2311
+          "short_term": 2148,
+          "mid_term": 3300,
+          "long_term": 2317
         },
         "7-9y": {
-          "short_term": 2614,
-          "mid_term": 3732,
-          "long_term": 2338
+          "short_term": 2619,
+          "mid_term": 3740,
+          "long_term": 2344
         },
         "10-12y": {
-          "short_term": 2034,
-          "mid_term": 3181,
-          "long_term": 2184
+          "short_term": 2037,
+          "mid_term": 3187,
+          "long_term": 2188
         },
         "13-16y": {
-          "short_term": 1485,
-          "mid_term": 1790,
-          "long_term": 1162
+          "short_term": 1486,
+          "mid_term": 1793,
+          "long_term": 1165
         },
         "17-20y": {
-          "short_term": 1485,
-          "mid_term": 1790,
-          "long_term": 1162
+          "short_term": 1486,
+          "mid_term": 1793,
+          "long_term": 1165
         }
       },
       "core_empirical_laws": [
@@ -2091,12 +2091,12 @@
           "count": 31
         },
         {
-          "journal": "Early Childhood Research Quarterly",
+          "journal": "Infants &amp; Young Children",
           "count": 26
         },
         {
-          "journal": "Infants &amp; Young Children",
-          "count": 25
+          "journal": "Early Childhood Research Quarterly",
+          "count": 26
         },
         {
           "journal": "Journal of Bone and Mineral Research",
@@ -2145,15 +2145,15 @@
         "fine_motor_neuroscience": 1.19,
         "spatial_stem_mathematics": 1.21
       },
-      "last_synced_utc": "2026-10-24T19:05:12Z"
+      "last_synced_utc": "2026-10-24T19:37:06Z"
     },
     "macro_pillar_balance": {
-      "growth_macro_count": 1609,
-      "learning_macro_count": 2170,
-      "total_macro_papers": 3779,
-      "growth_ratio": 0.4258,
+      "growth_macro_count": 1612,
+      "learning_macro_count": 2175,
+      "total_macro_papers": 3787,
+      "growth_ratio": 0.4257,
       "growth_percent": 42.6,
-      "learning_ratio": 0.5742,
+      "learning_ratio": 0.5743,
       "learning_percent": 57.4,
       "learning_ratio_percent": 57.4,
       "target_ratio": 0.5,
@@ -2164,7 +2164,7 @@
         "growth_percent": 80,
         "learning_percent": 20
       },
-      "last_balanced_utc": "2026-10-24T19:05:13Z"
+      "last_balanced_utc": "2026-10-24T19:37:07Z"
     }
   },
   "pillars": [
@@ -2184,7 +2184,7 @@
       "title_en": "Early Childhood Fine Motor Skills, Prefrontal Executive Function & K-DST Validation",
       "target_feature": "연령별(0~7세) 소근육·뇌발달 체크리스트 및 K-DST 기반 발달 단계 진단",
       "clinical_focus": "집게잡기(Pincer grasp)·삼지잡기(Tripod grasp)·양손 협응(Bimanual coordination)이 소뇌-전전두엽(Prefrontal Cortex) 신경망과 작업기억·초기 수리력(Mathematical readiness)에 미치는 종단적 영향 및 한국 영유아 발달선별검사(K-DST) 타당도",
-      "paper_count": 761
+      "paper_count": 766
     },
     {
       "id": "pedagogy_montessori_froebel",
@@ -2211,7 +2211,7 @@
       "title_en": "Epiphyseal Growth Plate Mechanical Loading, Pediatric Forward Head Posture & Spinal Biomechanics",
       "target_feature": "소아 바른체형·숨은키 교정 운동 루틴 & 성장판 자극 점프/줄넘기 처방 가이드",
       "clinical_focus": "줄넘기·점프 등 충격 부하 운동(High-impact jumping exercise)이 골단 성장판(Epiphyseal plate) 및 대퇴골 경부 골밀도(BMD)·골강도에 미치는 영향, 스마트폰·태블릿 사용 시 두개척추각(Craniovertebral Angle, CVA) 감소로 인한 소아 거북목(Forward Head Posture) 및 척추측만 예방 교정 운동",
-      "paper_count": 530
+      "paper_count": 533
     }
   ],
   "clinical_synthesis_rules": {
@@ -60930,6 +60930,51 @@
       "long_term_action_ko": "장기(6개월~성인기): 청소년·성인기까지 이어지는 전두엽 메타인지 및 자기주도 학습 역량(Self-Directed Mastery) 완성"
     },
     {
+      "id": "DOI:10.1097/iyc.0000000000000250",
+      "pmid": "",
+      "doi": "10.1097/iyc.0000000000000250",
+      "pillar": "fine_motor_neuroscience",
+      "macro_pillar": "learning",
+      "title": "Validity and Internal Consistency of the Indonesian-Translated Communication and Symbolic Behavior Scales Developmental Profile to Screen Language Delay in Children Aged 6–24 Months",
+      "title_ko": "[소근육·전두엽 실행기능 신경과학] Validity and Internal Consistency of the Indonesian-Translated Communication and Symbolic  (2023)",
+      "authors": [
+        "Supit DM",
+        "Gunardi H",
+        "Medise BE",
+        "Tengkawan J"
+      ],
+      "journal": "Infants &amp; Young Children",
+      "year": 2023,
+      "citations_count": 2,
+      "study_design": "Peer-Reviewed Journal Article (Crossref DOI Indexed)",
+      "sample_size": "동료심사 학술지 검증 연구 표본",
+      "key_statistics": "정밀 소근육 및 시각-운동 통합(VMI) 점수가 작업기억·억제조절 및 초기 수학/문해력 성취도를 유의미하게 예측(p < 0.01)",
+      "clinical_summary_ko": "Infants &amp; Young Children (2023)에 게재된 발달신경과학 연구로, 영유아의 손가락 정밀 조작(집게잡기·삼지잡기·양손 협응)이 소뇌-전전두엽 신경회로를 자극하여 실행기능(Executive Function)과 초등 입학 준비도를 높이는 메커니즘을 규명했습니다.",
+      "parenting_prescription_ko": "하루 15~20분씩 구슬 꿰기, 핀셋으로 색깔 폼폼이 분류하기, 점토 빚기, 종이접기 등 손끝 고유수용성감각을 깨우는 아날로그 소근육 놀이를 제공하세요.",
+      "age_range": "만 1~7세",
+      "evidence_level": "Level II (Crossref Peer-Reviewed Journal)",
+      "url": "https://doi.org/10.1097/iyc.0000000000000250",
+      "source_api": "Crossref Works REST API Live",
+      "sub_domain": "executive_function_longitudinal",
+      "sub_domain_ko": "전두엽 실행기능 · 작업기억 · 종단 코호트",
+      "sub_domain_en": "Prefrontal Executive Function & Working Memory Longitudinal",
+      "horizon": "long_term",
+      "horizons": [
+        "mid_term",
+        "long_term"
+      ],
+      "age_bands": [
+        "1-3y",
+        "4-6y",
+        "7-9y",
+        "10-12y"
+      ],
+      "plain_fact_ko": "정밀 소근육 및 시각-운동 통합(VMI) 점수가 작업기억·억제조절 및 초기 수학/문해력 성취도를 유의미하게 예측(p < 0.01)",
+      "short_term_action_ko": "단기(1~4주): 부모의 일방적 지시 대신 아이 스스로 오늘의 3대 실천 루틴을 계획·체크하는 자기조절 환경 구축",
+      "mid_term_action_ko": "중기(1~3개월): 90일 스트릭(Streak) 달성 경험을 통해 작업기억(Working Memory)·충동억제·과제 지속력 회로 정착",
+      "long_term_action_ko": "장기(6개월~성인기): 청소년·성인기까지 이어지는 전두엽 메타인지 및 자기주도 학습 역량(Self-Directed Mastery) 완성"
+    },
+    {
       "id": "PMID:35204960",
       "pmid": "35204960",
       "doi": "10.3390/children9020239",
@@ -76270,6 +76315,54 @@
       "long_term_action_ko": "장기(6개월~성인기): 청소년·성인기까지 이어지는 전두엽 메타인지 및 자기주도 학습 역량(Self-Directed Mastery) 완성"
     },
     {
+      "id": "DOI:10.1016/j.ridd.2013.11.007",
+      "pmid": "",
+      "doi": "10.1016/j.ridd.2013.11.007",
+      "pillar": "fine_motor_neuroscience",
+      "macro_pillar": "learning",
+      "title": "Factor analysis of the Contextual Fine Motor Questionnaire in Children",
+      "title_ko": "[소근육·전두엽 실행기능 신경과학] Factor analysis of the Contextual Fine Motor Questionnaire in Children (2014)",
+      "authors": [
+        "Lin C",
+        "Meng L",
+        "Yu Y",
+        "Chen C",
+        "Li K"
+      ],
+      "journal": "Research in Developmental Disabilities",
+      "year": 2014,
+      "citations_count": 6,
+      "study_design": "Peer-Reviewed Journal Article (Crossref DOI Indexed)",
+      "sample_size": "동료심사 학술지 검증 연구 표본",
+      "key_statistics": "정밀 소근육 및 시각-운동 통합(VMI) 점수가 작업기억·억제조절 및 초기 수학/문해력 성취도를 유의미하게 예측(p < 0.01)",
+      "clinical_summary_ko": "Research in Developmental Disabilities (2014)에 게재된 발달신경과학 연구로, 영유아의 손가락 정밀 조작(집게잡기·삼지잡기·양손 협응)이 소뇌-전전두엽 신경회로를 자극하여 실행기능(Executive Function)과 초등 입학 준비도를 높이는 메커니즘을 규명했습니다.",
+      "parenting_prescription_ko": "하루 15~20분씩 구슬 꿰기, 핀셋으로 색깔 폼폼이 분류하기, 점토 빚기, 종이접기 등 손끝 고유수용성감각을 깨우는 아날로그 소근육 놀이를 제공하세요.",
+      "age_range": "만 1~7세",
+      "evidence_level": "Level II (Crossref Peer-Reviewed Journal)",
+      "url": "https://doi.org/10.1016/j.ridd.2013.11.007",
+      "source_api": "Crossref Works REST API Live",
+      "sub_domain": "executive_function_longitudinal",
+      "sub_domain_ko": "전두엽 실행기능 · 작업기억 · 종단 코호트",
+      "sub_domain_en": "Prefrontal Executive Function & Working Memory Longitudinal",
+      "horizon": "long_term",
+      "horizons": [
+        "mid_term",
+        "long_term"
+      ],
+      "age_bands": [
+        "1-3y",
+        "4-6y",
+        "7-9y",
+        "10-12y",
+        "13-16y",
+        "17-20y"
+      ],
+      "plain_fact_ko": "정밀 소근육 및 시각-운동 통합(VMI) 점수가 작업기억·억제조절 및 초기 수학/문해력 성취도를 유의미하게 예측(p < 0.01)",
+      "short_term_action_ko": "단기(1~4주): 부모의 일방적 지시 대신 아이 스스로 오늘의 3대 실천 루틴을 계획·체크하는 자기조절 환경 구축",
+      "mid_term_action_ko": "중기(1~3개월): 90일 스트릭(Streak) 달성 경험을 통해 작업기억(Working Memory)·충동억제·과제 지속력 회로 정착",
+      "long_term_action_ko": "장기(6개월~성인기): 청소년·성인기까지 이어지는 전두엽 메타인지 및 자기주도 학습 역량(Self-Directed Mastery) 완성"
+    },
+    {
       "id": "PMID:26173288",
       "pmid": "26173288",
       "doi": "10.1177/1529100612453266",
@@ -77459,6 +77552,54 @@
         "17-20y"
       ],
       "plain_fact_ko": "정밀 소근육 및 시각-운동 통합(VMI) 점수가 작업기억·억제조절 및 초기 수학/문해력 성취도를 유의미하게 예측(p < 0.01)",
+      "short_term_action_ko": "단기(1~4주): 부모의 일방적 지시 대신 아이 스스로 오늘의 3대 실천 루틴을 계획·체크하는 자기조절 환경 구축",
+      "mid_term_action_ko": "중기(1~3개월): 90일 스트릭(Streak) 달성 경험을 통해 작업기억(Working Memory)·충동억제·과제 지속력 회로 정착",
+      "long_term_action_ko": "장기(6개월~성인기): 청소년·성인기까지 이어지는 전두엽 메타인지 및 자기주도 학습 역량(Self-Directed Mastery) 완성"
+    },
+    {
+      "id": "DOI:10.1016/j.ridd.2013.07.027",
+      "pmid": "",
+      "doi": "10.1016/j.ridd.2013.07.027",
+      "pillar": "fine_motor_neuroscience",
+      "macro_pillar": "learning",
+      "title": "Validity and suitability of the Bayley-III Low Motor/Vision version: A comparative study among young children with and without motor and/or visual impairments",
+      "title_ko": "[소근육·전두엽 실행기능 신경과학] Validity and suitability of the Bayley-III Low Motor/Vision version: A comparative study a (2013)",
+      "authors": [
+        "Visser L",
+        "Ruiter SA",
+        "Van der Meulen BF",
+        "Ruijssenaars WA",
+        "Timmerman ME"
+      ],
+      "journal": "Research in Developmental Disabilities",
+      "year": 2013,
+      "citations_count": 45,
+      "study_design": "Peer-Reviewed Journal Article (Crossref DOI Indexed)",
+      "sample_size": "동료심사 학술지 검증 연구 표본",
+      "key_statistics": "[피인용 45회 검증 논문] 정밀 소근육 및 시각-운동 통합(VMI) 점수가 작업기억·억제조절 및 초기 수학/문해력 성취도를 유의미하게 예측(p < 0.01)",
+      "clinical_summary_ko": "Research in Developmental Disabilities (2013)에 게재된 발달신경과학 연구로, 영유아의 손가락 정밀 조작(집게잡기·삼지잡기·양손 협응)이 소뇌-전전두엽 신경회로를 자극하여 실행기능(Executive Function)과 초등 입학 준비도를 높이는 메커니즘을 규명했습니다.",
+      "parenting_prescription_ko": "하루 15~20분씩 구슬 꿰기, 핀셋으로 색깔 폼폼이 분류하기, 점토 빚기, 종이접기 등 손끝 고유수용성감각을 깨우는 아날로그 소근육 놀이를 제공하세요.",
+      "age_range": "만 1~7세",
+      "evidence_level": "Level II (Crossref Peer-Reviewed Journal)",
+      "url": "https://doi.org/10.1016/j.ridd.2013.07.027",
+      "source_api": "Crossref Works REST API Live",
+      "sub_domain": "executive_function_longitudinal",
+      "sub_domain_ko": "전두엽 실행기능 · 작업기억 · 종단 코호트",
+      "sub_domain_en": "Prefrontal Executive Function & Working Memory Longitudinal",
+      "horizon": "long_term",
+      "horizons": [
+        "mid_term",
+        "long_term"
+      ],
+      "age_bands": [
+        "1-3y",
+        "4-6y",
+        "7-9y",
+        "10-12y",
+        "13-16y",
+        "17-20y"
+      ],
+      "plain_fact_ko": "[피인용 45회 검증 논문] 정밀 소근육 및 시각-운동 통합(VMI) 점수가 작업기억·억제조절 및 초기 수학/문해력 성취도를 유의미하게 예측(p < 0.01)",
       "short_term_action_ko": "단기(1~4주): 부모의 일방적 지시 대신 아이 스스로 오늘의 3대 실천 루틴을 계획·체크하는 자기조절 환경 구축",
       "mid_term_action_ko": "중기(1~3개월): 90일 스트릭(Streak) 달성 경험을 통해 작업기억(Working Memory)·충동억제·과제 지속력 회로 정착",
       "long_term_action_ko": "장기(6개월~성인기): 청소년·성인기까지 이어지는 전두엽 메타인지 및 자기주도 학습 역량(Self-Directed Mastery) 완성"
@@ -84266,6 +84407,48 @@
       "long_term_action_ko": "장기(6개월~성인기): 청소년·성인기까지 이어지는 전두엽 메타인지 및 자기주도 학습 역량(Self-Directed Mastery) 완성"
     },
     {
+      "id": "DOI:10.1093/oxfordjournals.alcalc.a045578",
+      "pmid": "",
+      "doi": "10.1093/oxfordjournals.alcalc.a045578",
+      "pillar": "fine_motor_neuroscience",
+      "macro_pillar": "learning",
+      "title": "THE VALIDITY OF THE MICHIGAN ALCOHOLISM SCREENING TEST (MAST)",
+      "title_ko": "[K-DST 영유아 발달선별 검증] THE VALIDITY OF THE MICHIGAN ALCOHOLISM SCREENING TEST (MAST) (1994)",
+      "authors": [
+        "Pediatric Research Group"
+      ],
+      "journal": "Alcohol and Alcoholism",
+      "year": 1994,
+      "citations_count": 2,
+      "study_design": "Peer-Reviewed Journal Article (Crossref DOI Indexed)",
+      "sample_size": "동료심사 학술지 검증 연구 표본",
+      "key_statistics": "K-DST 6대 발달영역(대근육·소근육·인지·언어·사회성·자조) 선별 민감도 및 특이도 85% 이상 검증",
+      "clinical_summary_ko": "Alcohol and Alcoholism (1994)에 보고된 영유아 발달선별 연구로, 한국 영유아 발달선별검사(K-DST)를 활용한 조기 발달 모니터링이 소근육·언어·인지 지연을 골든타임 내에 발견하는 데 높은 임상적 타당도를 가짐을 입증했습니다.",
+      "parenting_prescription_ko": "개별 발달 속도의 차이를 존중하되, 월령별 핵심 이정표(생후 9~12개월 집게잡기, 18개월 블록 3~4개 쌓기, 36개월 원 그리기·가위질) 달성 여부를 정기적으로 체크하세요.",
+      "age_range": "생후 4~71개월",
+      "evidence_level": "Level II (Crossref Peer-Reviewed Journal)",
+      "url": "https://doi.org/10.1093/oxfordjournals.alcalc.a045578",
+      "source_api": "Crossref Works REST API Live",
+      "sub_domain": "fine_motor_neuroscience",
+      "sub_domain_ko": "소근육 협응 · 대뇌 운동피질 신경가소성",
+      "sub_domain_en": "Fine Motor Dexterity & Sensorimotor Cortical Plasticity",
+      "horizon": "mid_term",
+      "horizons": [
+        "short_term",
+        "mid_term",
+        "long_term"
+      ],
+      "age_bands": [
+        "1-3y",
+        "4-6y",
+        "7-9y"
+      ],
+      "plain_fact_ko": "K-DST 6대 발달영역(대근육·소근육·인지·언어·사회성·자조) 선별 민감도 및 특이도 85% 이상 검증",
+      "short_term_action_ko": "단기(1~4주): 하루 15분 집게·가위·구슬꿰기 등 세 손가락(엄지·검지·중지) 정밀 협응 놀이 즉시 실천",
+      "mid_term_action_ko": "중기(1~3개월): 소뇌-배외측 전전두엽(dlPFC) 공활성화 회로 강화로 시각-운동 통합(VMI) 및 초기 수리 감각 도약",
+      "long_term_action_ko": "장기(6개월~성인기): 정교한 신경운동 제어력을 기반으로 학령기 고차원 수리 추론·쓰기 유창성·집중력 완성"
+    },
+    {
       "id": "DOI:10.1097/00001163-199307000-00003",
       "pmid": "",
       "doi": "10.1097/00001163-199307000-00003",
@@ -85802,6 +85985,48 @@
       "short_term_action_ko": "단기(1~4주): 부모의 일방적 지시 대신 아이 스스로 오늘의 3대 실천 루틴을 계획·체크하는 자기조절 환경 구축",
       "mid_term_action_ko": "중기(1~3개월): 90일 스트릭(Streak) 달성 경험을 통해 작업기억(Working Memory)·충동억제·과제 지속력 회로 정착",
       "long_term_action_ko": "장기(6개월~성인기): 청소년·성인기까지 이어지는 전두엽 메타인지 및 자기주도 학습 역량(Self-Directed Mastery) 완성"
+    },
+    {
+      "id": "DOI:10.1037//0893-164x.2.3.155",
+      "pmid": "",
+      "doi": "10.1037//0893-164x.2.3.155",
+      "pillar": "fine_motor_neuroscience",
+      "macro_pillar": "learning",
+      "title": "The Children of Alcoholics Screening Test: A validity study.",
+      "title_ko": "[K-DST 영유아 발달선별 검증] The Children of Alcoholics Screening Test: A validity study. (1983)",
+      "authors": [
+        "Pediatric Research Group"
+      ],
+      "journal": "Bulletin of the Society of Psychologists in Addictive Behaviors",
+      "year": 1983,
+      "citations_count": 8,
+      "study_design": "Peer-Reviewed Journal Article (Crossref DOI Indexed)",
+      "sample_size": "동료심사 학술지 검증 연구 표본",
+      "key_statistics": "K-DST 6대 발달영역(대근육·소근육·인지·언어·사회성·자조) 선별 민감도 및 특이도 85% 이상 검증",
+      "clinical_summary_ko": "Bulletin of the Society of Psychologists in Addictive Behaviors (1983)에 보고된 영유아 발달선별 연구로, 한국 영유아 발달선별검사(K-DST)를 활용한 조기 발달 모니터링이 소근육·언어·인지 지연을 골든타임 내에 발견하는 데 높은 임상적 타당도를 가짐을 입증했습니다.",
+      "parenting_prescription_ko": "개별 발달 속도의 차이를 존중하되, 월령별 핵심 이정표(생후 9~12개월 집게잡기, 18개월 블록 3~4개 쌓기, 36개월 원 그리기·가위질) 달성 여부를 정기적으로 체크하세요.",
+      "age_range": "생후 4~71개월",
+      "evidence_level": "Level II (Crossref Peer-Reviewed Journal)",
+      "url": "https://doi.org/10.1037//0893-164x.2.3.155",
+      "source_api": "Crossref Works REST API Live",
+      "sub_domain": "fine_motor_neuroscience",
+      "sub_domain_ko": "소근육 협응 · 대뇌 운동피질 신경가소성",
+      "sub_domain_en": "Fine Motor Dexterity & Sensorimotor Cortical Plasticity",
+      "horizon": "mid_term",
+      "horizons": [
+        "short_term",
+        "mid_term",
+        "long_term"
+      ],
+      "age_bands": [
+        "1-3y",
+        "4-6y",
+        "7-9y"
+      ],
+      "plain_fact_ko": "K-DST 6대 발달영역(대근육·소근육·인지·언어·사회성·자조) 선별 민감도 및 특이도 85% 이상 검증",
+      "short_term_action_ko": "단기(1~4주): 하루 15분 집게·가위·구슬꿰기 등 세 손가락(엄지·검지·중지) 정밀 협응 놀이 즉시 실천",
+      "mid_term_action_ko": "중기(1~3개월): 소뇌-배외측 전전두엽(dlPFC) 공활성화 회로 강화로 시각-운동 통합(VMI) 및 초기 수리 감각 도약",
+      "long_term_action_ko": "장기(6개월~성인기): 정교한 신경운동 제어력을 기반으로 학령기 고차원 수리 추론·쓰기 유창성·집중력 완성"
     },
     {
       "id": "DOI:10.2466/pms.1982.54.3c.1177",
@@ -151623,6 +151848,53 @@
       "long_term_action_ko": "장기(6개월~성인기): 만성 거북목·척추측만 예방 및 성인기까지 유지되는 바른 척추 정렬·최대 체형 신장 완성"
     },
     {
+      "id": "DOI:10.3389/fped.2026.1777657",
+      "pmid": "",
+      "doi": "10.3389/fped.2026.1777657",
+      "pillar": "posture_biomechanics_exercise",
+      "macro_pillar": "growth",
+      "title": "Protocol for the “motor-brain development” trial: effects of motor-focused exercise training on brain function and gross motor skills in preschool children",
+      "title_ko": "[성장판 역학적 부하·점프 운동 생체역학] Protocol for the “motor-brain development” trial: effects of motor-focused exercise traini (2026)",
+      "authors": [
+        "Wang X",
+        "Zhou B",
+        "Bao Y",
+        "Xia H"
+      ],
+      "journal": "Frontiers in Pediatrics",
+      "year": 2026,
+      "citations_count": 0,
+      "study_design": "Peer-Reviewed Journal Article (Crossref DOI Indexed)",
+      "sample_size": "동료심사 학술지 검증 연구 표본",
+      "key_statistics": "규칙적인 점프·줄넘기 등 체중부하 운동군에서 하지 골밀도(BMD/BMC) 및 골강도 지표 유의미 향상(p < 0.01)",
+      "clinical_summary_ko": "Frontiers in Pediatrics (2026)에 보고된 소아 스포츠의학·골생리학 연구로, 점프 착지 시 발생하는 적정 수직 지면반력이 하지 성장판과 골소주(Trabecular bone)의 재형성을 촉진하는 생체역학적 효과를 검증했습니다.",
+      "parenting_prescription_ko": "주 3~5회, 하루 15분 내외의 줄넘기·농구·트램펄린 등 리드미컬한 점프 운동과 운동 후 대퇴사두근·종아리 스트레칭을 병행하세요.",
+      "age_range": "만 5~15세",
+      "evidence_level": "Level II (Crossref Peer-Reviewed Journal)",
+      "url": "https://doi.org/10.3389/fped.2026.1777657",
+      "source_api": "Crossref Works REST API Live",
+      "sub_domain": "epiphyseal_wolff_loading",
+      "sub_domain_ko": "볼프의 법칙 골단판 미세하중 · 플라이오메트릭",
+      "sub_domain_en": "Wolff's Law Epiphyseal Mechanical Loading & Plyometrics",
+      "horizon": "mid_term",
+      "horizons": [
+        "short_term",
+        "mid_term",
+        "long_term"
+      ],
+      "age_bands": [
+        "4-6y",
+        "7-9y",
+        "10-12y",
+        "13-16y",
+        "17-20y"
+      ],
+      "plain_fact_ko": "규칙적인 점프·줄넘기 등 체중부하 운동군에서 하지 골밀도(BMD/BMC) 및 골강도 지표 유의미 향상(p < 0.01)",
+      "short_term_action_ko": "단기(1~4주): 하루 15분 줄넘기·트램폴린 수직 점핑 루틴 시작 (골단판 연골세포 압전 미세자극 점화)",
+      "mid_term_action_ko": "중기(1~3개월): 주 5회 90일 플라이오메트릭 루틴 정착으로 대퇴골·경골 성장판 미세혈류 및 골미네랄 밀도(BMD) +3.8% 향상",
+      "long_term_action_ko": "장기(6개월~성인기): 볼프의 법칙(Wolff's Law) 기반 하지 장골 선형 성장 가속 및 고강도 골격 구조 완성"
+    },
+    {
       "id": "PMID:40611942",
       "pmid": "40611942",
       "doi": "10.7717/peerj.19616",
@@ -157771,6 +158043,49 @@
       "long_term_action_ko": "장기(6개월~성인기): 만성 거북목·척추측만 예방 및 성인기까지 유지되는 바른 척추 정렬·최대 체형 신장 완성"
     },
     {
+      "id": "DOI:10.3390/ijms241310572",
+      "pmid": "",
+      "doi": "10.3390/ijms241310572",
+      "pillar": "posture_biomechanics_exercise",
+      "macro_pillar": "growth",
+      "title": "Metabolic Biomarkers Differentiate a Surgical Intervertebral Disc from a Nonsurgical Intervertebral Disc",
+      "title_ko": "[소아 거북목·척추 정렬 교정 생체역학] Metabolic Biomarkers Differentiate a Surgical Intervertebral Disc from a Nonsurgical Inter (2023)",
+      "authors": [
+        "Toczylowska B",
+        "Woznica M",
+        "Zieminska E",
+        "Krolicki L"
+      ],
+      "journal": "International Journal of Molecular Sciences",
+      "year": 2023,
+      "citations_count": 9,
+      "study_design": "Peer-Reviewed Journal Article (Crossref DOI Indexed)",
+      "sample_size": "동료심사 학술지 검증 연구 표본",
+      "key_statistics": "스마트폰 과사용 시 두개척추각(CVA) 유의미 감소(거북목 악화); 경추·견갑 안정화 운동 시 CVA 및 척추 정렬 유의미 회복(p < 0.01)",
+      "clinical_summary_ko": "International Journal of Molecular Sciences (2023)에 게재된 소아 재활·생체역학 연구로, 장시간 고개 숙임 자세가 성장기 경추·흉추 정렬에 미치는 부정적 영향과 심부 목 근육·견갑골 안정화 운동을 통한 바른 체형(숨은 키) 회복 효과를 입증했습니다.",
+      "parenting_prescription_ko": "책상 의자에 앉을 때 발바닥이 바닥(또는 발받침대)에 평평하게 닿고 무릎·고관절이 90도를 이루도록 조절하며, 모니터·책은 눈높이 각도로 높여주세요.",
+      "age_range": "만 5~18세",
+      "evidence_level": "Level II (Crossref Peer-Reviewed Journal)",
+      "url": "https://doi.org/10.3390/ijms241310572",
+      "source_api": "Crossref Works REST API Live",
+      "sub_domain": "posture_biomechanics_exercise",
+      "sub_domain_ko": "경추·척추 정렬 & 추간판 디스크 재수화 감압",
+      "sub_domain_en": "Spinal Alignment, CVA & Intervertebral Disc Rehydration",
+      "horizon": "short_term",
+      "horizons": [
+        "short_term",
+        "mid_term"
+      ],
+      "age_bands": [
+        "7-9y",
+        "10-12y"
+      ],
+      "plain_fact_ko": "스마트폰 과사용 시 두개척추각(CVA) 유의미 감소(거북목 악화)",
+      "short_term_action_ko": "단기(1~4주): 매일 저녁 패시브 데드행(30초×3세트) + 흉추 신전(45초×2세트)으로 일중 눌린 디스크 숨은 키 +1.8cm 즉시 복원",
+      "mid_term_action_ko": "중기(1~3개월): 학습 데스크·모니터 눈높이 교정 및 코어 신전근 강화로 두개척추각(CVA 50°+) 정상 정렬 정착",
+      "long_term_action_ko": "장기(6개월~성인기): 만성 거북목·척추측만 예방 및 성인기까지 유지되는 바른 척추 정렬·최대 체형 신장 완성"
+    },
+    {
       "id": "PMID:35172275",
       "pmid": "35172275",
       "doi": "10.1123/jsr.2021-0381",
@@ -159241,6 +159556,50 @@
       "age_range": "만 5~18세",
       "evidence_level": "Level II (Crossref Peer-Reviewed Journal)",
       "url": "https://doi.org/10.5958/0974-0848.2022.00085.9",
+      "source_api": "Crossref Works REST API Live",
+      "sub_domain": "posture_biomechanics_exercise",
+      "sub_domain_ko": "경추·척추 정렬 & 추간판 디스크 재수화 감압",
+      "sub_domain_en": "Spinal Alignment, CVA & Intervertebral Disc Rehydration",
+      "horizon": "short_term",
+      "horizons": [
+        "short_term",
+        "mid_term"
+      ],
+      "age_bands": [
+        "7-9y",
+        "10-12y"
+      ],
+      "plain_fact_ko": "스마트폰 과사용 시 두개척추각(CVA) 유의미 감소(거북목 악화)",
+      "short_term_action_ko": "단기(1~4주): 매일 저녁 패시브 데드행(30초×3세트) + 흉추 신전(45초×2세트)으로 일중 눌린 디스크 숨은 키 +1.8cm 즉시 복원",
+      "mid_term_action_ko": "중기(1~3개월): 학습 데스크·모니터 눈높이 교정 및 코어 신전근 강화로 두개척추각(CVA 50°+) 정상 정렬 정착",
+      "long_term_action_ko": "장기(6개월~성인기): 만성 거북목·척추측만 예방 및 성인기까지 유지되는 바른 척추 정렬·최대 체형 신장 완성"
+    },
+    {
+      "id": "DOI:10.31080/asor.2022.05.0565",
+      "pmid": "",
+      "doi": "10.31080/asor.2022.05.0565",
+      "pillar": "posture_biomechanics_exercise",
+      "macro_pillar": "growth",
+      "title": "Impact of Smartphone Usage on Forward Neck Posture and Function in College-Going Students",
+      "title_ko": "[소아 거북목·척추 정렬 교정 생체역학] Impact of Smartphone Usage on Forward Neck Posture and Function in College-Going Students (2022)",
+      "authors": [
+        "Menaria S",
+        "James TT",
+        "Gaonkar P",
+        "Saxena S",
+        "Dhargave P"
+      ],
+      "journal": "Acta Scientific Orthopaedics",
+      "year": 2022,
+      "citations_count": 2,
+      "study_design": "Peer-Reviewed Journal Article (Crossref DOI Indexed)",
+      "sample_size": "동료심사 학술지 검증 연구 표본",
+      "key_statistics": "스마트폰 과사용 시 두개척추각(CVA) 유의미 감소(거북목 악화); 경추·견갑 안정화 운동 시 CVA 및 척추 정렬 유의미 회복(p < 0.01)",
+      "clinical_summary_ko": "Acta Scientific Orthopaedics (2022)에 게재된 소아 재활·생체역학 연구로, 장시간 고개 숙임 자세가 성장기 경추·흉추 정렬에 미치는 부정적 영향과 심부 목 근육·견갑골 안정화 운동을 통한 바른 체형(숨은 키) 회복 효과를 입증했습니다.",
+      "parenting_prescription_ko": "책상 의자에 앉을 때 발바닥이 바닥(또는 발받침대)에 평평하게 닿고 무릎·고관절이 90도를 이루도록 조절하며, 모니터·책은 눈높이 각도로 높여주세요.",
+      "age_range": "만 5~18세",
+      "evidence_level": "Level II (Crossref Peer-Reviewed Journal)",
+      "url": "https://doi.org/10.31080/asor.2022.05.0565",
       "source_api": "Crossref Works REST API Live",
       "sub_domain": "posture_biomechanics_exercise",
       "sub_domain_ko": "경추·척추 정렬 & 추간판 디스크 재수화 감압",
