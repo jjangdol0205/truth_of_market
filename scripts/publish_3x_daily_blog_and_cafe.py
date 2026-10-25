@@ -574,7 +574,7 @@ def ensure_naver_session_cookies(context):
     backup_file = PROFILE_DIR / "naver_cookies_backup.json"
     try:
         current_names = {ck["name"] for ck in context.cookies("https://www.naver.com")}
-        if "NID_AUT" not in current_names and backup_file.exists():
+        if not ({"NID_AUT", "NID_SES"} <= current_names) and backup_file.exists():
             saved = json.loads(backup_file.read_text(encoding="utf-8"))
             exp_365 = int(time.time()) + 365 * 86400
             for ck in saved:
@@ -582,7 +582,7 @@ def ensure_naver_session_cookies(context):
                     ck["expires"] = exp_365
             context.add_cookies(saved)
             print("  🔒 [세션 복원] 저장된 네이버 영구 로그인 쿠키(NID_AUT/NID_SES)를 복원했습니다.", flush=True)
-        elif "NID_AUT" in current_names:
+        elif {"NID_AUT", "NID_SES"} <= current_names:
             all_ck = [ck for ck in context.cookies() if "naver.com" in ck.get("domain", "")]
             exp_365 = int(time.time()) + 365 * 86400
             for ck in all_ck:
@@ -605,6 +605,7 @@ def publish_blog_post(context, title: str, body: str, tags: list[str], img_path:
         page.goto("https://blog.naver.com/PostWriteForm.naver?blogId=expertise333", wait_until="domcontentloaded", timeout=30000)
         time.sleep(5.5)
 
+        if "nidlogin.login" in page.url: raise RuntimeError("네이버 로그인 세션(NID_SES) 만료: 브라우저 창에서 로그인을 완료해 주세요.")
         target = page
         for f in page.frames:
             if "PostWriteForm" in f.url or f.name == "mainFrame":
@@ -719,6 +720,7 @@ def publish_cafe_post(context, board_name: str, title: str, body: str, tags: lis
         write_url = f"https://cafe.naver.com/ca-fe/cafes/31805224/menus/{menu_id}/articles/write?boardType=L"
         page.goto(write_url, wait_until="commit", timeout=30000)
         time.sleep(4.8)
+        if "nidlogin.login" in page.url or "NAVER 로그인" in page.title(): raise RuntimeError("네이버 로그인 세션(NID_SES) 만료: 브라우저 창에서 로그인을 완료해 주세요.")
 
         for f in page.frames:
             try:

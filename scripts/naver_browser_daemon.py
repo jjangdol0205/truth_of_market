@@ -2,22 +2,26 @@
 """
 Naver Browser Daemon (scripts/naver_browser_daemon.py)
 Spawns Chrome directly on the interactive user desktop (WinSta0\\Default) with remote debugging port 9222,
-and stays alive as a daemon so the Windows Job Object never terminates Chrome prematurely.
+pre-checks '로그인 상태 유지' (#keep / nvlong=on) on nid.naver.com, backs up NID_AUT + NID_SES cookies,
+and triggers immediate catch-up publishing when a fresh login is detected.
 """
 
 import ctypes
 from ctypes import wintypes
+import json
+import subprocess
 import sys
 import time
 import urllib.request
-import json
 from pathlib import Path
+from playwright.sync_api import sync_playwright
 
 sys.stdout.reconfigure(encoding="utf-8")
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(r"d:\키즈핏")
 PROFILE_DIR = ROOT / ".naver-browser-profile"
 PROFILE_DIR.mkdir(parents=True, exist_ok=True)
+BACKUP_COOKIES_FILE = PROFILE_DIR / "naver_cookies_backup.json"
 
 
 class STARTUPINFOW(ctypes.Structure):
@@ -106,8 +110,59 @@ def main():
         except Exception:
             time.sleep(1)
 
+    was_logged_in = False
     while True:
-        time.sleep(5)
+        try:
+            with sync_playwright() as p:
+                browser = p.chromium.connect_over_cdp("http://127.0.0.1:9222", timeout=10000)
+                ctx = browser.contexts[0]
+                if not ctx.pages:
+                    launch_chrome_on_default_desktop()
+                    time.sleep(3)
+                    continue
+
+                # Pre-fill expertise333 & keep-logged-in on any login tab
+                for pg in ctx.pages:
+                    if "nidlogin.login" in pg.url:
+                        try:
+                            pg.evaluate("""() => {
+                                const idInput = document.getElementById('id');
+                                if (idInput && !idInput.value) {
+                                    idInput.value = 'expertise333';
+                                    idInput.dispatchEvent(new Event('input', { bubbles: true }));
+                                }
+                                const keep = document.getElementById('keep');
+                                if (keep && keep.getAttribute('aria-checked') !== 'true' && !keep.checked) {
+                                    keep.click();
+                                }
+                                const nvlong = document.getElementById('nvlong');
+                                if (nvlong) nvlong.value = 'on';
+                            }""")
+                        except Exception:
+                            pass
+
+                cks = ctx.cookies("https://www.naver.com")
+                names = {c["name"] for c in cks}
+                if {"NID_AUT", "NID_SES"} <= names:
+                    all_ck = [ck for ck in ctx.cookies() if "naver.com" in ck.get("domain", "")]
+                    exp_365 = int(time.time()) + 365 * 86400
+                    for ck in all_ck:
+                        if ck.get("expires", -1) <= 0:
+                            ck["expires"] = exp_365
+                    ctx.add_cookies(all_ck)
+                    BACKUP_COOKIES_FILE.write_text(json.dumps(all_ck, ensure_ascii=False, indent=2), encoding="utf-8")
+                    if not was_logged_in:
+                        was_logged_in = True
+                        print("🎉 [Naver Login Detected] NID_AUT + NID_SES saved! Triggering immediate Blog & Cafe publish...", flush=True)
+                        subprocess.Popen(
+                            [sys.executable, str(ROOT / "scripts" / "publish_3x_daily_blog_and_cafe.py")],
+                            cwd=str(ROOT),
+                        )
+                else:
+                    was_logged_in = False
+        except Exception as e:
+            print(f"⚠️ Daemon loop warn: {e}", flush=True)
+        time.sleep(6)
 
 
 if __name__ == "__main__":
