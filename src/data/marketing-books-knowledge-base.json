@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25 12:06:24 KST",
+  "updated_at": "2026-10-25 12:45:58 KST",
   "total_books_mastered": 8,
   "supplementary_research_count": 6,
   "books": [
@@ -127,7 +127,7 @@
       "journal": "Advances in Marketing, Customer Relationship Management, and E-Services"
     }
   ],
-  "cycle": 18,
+  "cycle": 19,
   "total_learned_insights": 21,
   "learned_insights": [
     {
@@ -321,9 +321,9 @@
     }
   ],
   "latest_system_audit": {
-    "audited_at": "2026-10-25 12:06:25 KST",
-    "total_qna_and_seq_pages": 30,
-    "pages_auto_patched_with_cro_bar": 30,
+    "audited_at": "2026-10-25 12:45:58 KST",
+    "total_qna_and_seq_pages": 31,
+    "pages_auto_patched_with_cro_bar": 1,
     "live_paper_authority_count": 3829,
     "scores": {
       "hook_clarity_3sec_score": 98,

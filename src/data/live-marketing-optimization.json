@@ -1,7 +1,7 @@
 {
-  "audited_at": "2026-10-25 12:06:25 KST",
-  "total_qna_and_seq_pages": 30,
-  "pages_auto_patched_with_cro_bar": 30,
+  "audited_at": "2026-10-25 12:45:58 KST",
+  "total_qna_and_seq_pages": 31,
+  "pages_auto_patched_with_cro_bar": 1,
   "live_paper_authority_count": 3829,
   "scores": {
     "hook_clarity_3sec_score": 98,
