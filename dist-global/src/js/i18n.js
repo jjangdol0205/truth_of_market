@@ -617,8 +617,11 @@
     if (isGlobalPaidEditionLock()) {
       lang = 'en';
     }
+    const langChanged = currentLang !== lang;
     currentLang = lang;
-    currentUnitSystem = lang === 'en' ? 'imperial' : 'metric';
+    if (langChanged) {
+      currentUnitSystem = lang === 'en' ? 'imperial' : 'metric';
+    }
 
     if (typeof window !== 'undefined' && window.localStorage) {
       try {
@@ -628,7 +631,9 @@
     }
 
     updateDocumentLang();
-    updateDOM();
+    if (langChanged) {
+      updateDOM();
+    }
   }
 
   function toggleLanguage() {

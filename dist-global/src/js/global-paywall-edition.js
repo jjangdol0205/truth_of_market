@@ -140,6 +140,12 @@
     if (typeof document === 'undefined') return;
     const btn = document.getElementById('btn-header-auth');
     if (!btn) return;
+    btn.onclick = function (e) {
+      if (e && typeof e.preventDefault === 'function') e.preventDefault();
+      if (typeof global.openKidsFitAuthModal === 'function') {
+        global.openKidsFitAuthModal('login');
+      }
+    };
     const user = getLoggedInUser();
     if (user && user.email) {
       btn.textContent = `👤 ${user.name || user.email.split('@')[0]}${user.unlockedPass ? ' (PRO)' : ''}`;

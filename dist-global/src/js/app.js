@@ -914,9 +914,6 @@
 
       if (svgContainer) {
         svgContainer.innerHTML = EndocrinologyEngine.renderHormoneSvg(bMin, mMin);
-        if (isEnH && global.TallerI18n && typeof global.TallerI18n.setLanguage === 'function') {
-          try { global.TallerI18n.setLanguage('en'); } catch (_) {}
-        }
       }
 
       if (adviceText) {

@@ -581,6 +581,22 @@ https://truthofmarket.com/?utm_source=quora&utm_medium=answer_citation&utm_campa
           </span>
         </div>
 
+        <!-- Direct Launcher for 5 TikTok/Instagram Reels MP4 Videos (Google Flow) & 5 Reddit Native Posts -->
+        <div style="background: linear-gradient(135deg, #0F172A 0%, #1D4ED8 100%); color: #FFFFFF; border-radius: 14px; padding: 1.05rem 1.2rem; margin-bottom: 1rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem;">
+          <div>
+            <div style="font-size: 0.94rem; font-weight: 900; margin-bottom: 0.2rem;">🎬 TikTok &amp; Instagram Reels (9:16 MP4 5편 + Google Flow) &amp; Reddit 전용 스튜디오</div>
+            <div style="font-size: 0.78rem; color: #DBEAFE;">영문 성우 내레이션·자막·2.5D 모션이 합성된 9:16 세로형 MP4 영상 5편 다운로드 + Google Flow(Veo) 프롬프트 + 서브레딧별 Reddit 원고 5편</div>
+          </div>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <a href="/tiktok_insta_reddit_studio.html" target="_blank" rel="noopener" style="background: #10B981; color: #FFFFFF; font-size: 0.8rem; font-weight: 800; padding: 0.55rem 0.95rem; border-radius: 999px; text-decoration: none;">
+              🚀 영상 5편 재생 &amp; Reddit 스튜디오 열기 →
+            </a>
+            <a href="/tiktok_insta_videos/KIDS-FIT_Global_TikTok_Instagram_Reels_5Videos_Pack.zip" download style="background: #FFFFFF; color: #1D4ED8; font-size: 0.8rem; font-weight: 800; padding: 0.55rem 0.95rem; border-radius: 999px; text-decoration: none;">
+              ⬇ 틱톡·릴스 영상 5편 전체 ZIP 다운로드
+            </a>
+          </div>
+        </div>
+
         <!-- Global Channel A: Reddit GTM Post -->
         <div class="osmu-channel-card" style="background: #F8FAFC; border: 1.5px solid #BFDBFE; border-radius: 12px; padding: 1rem; margin-bottom: 0.85rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.45rem;">
