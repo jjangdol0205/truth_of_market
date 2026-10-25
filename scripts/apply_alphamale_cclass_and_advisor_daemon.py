@@ -210,7 +210,7 @@ def apply_alphamale_and_cclass_to_qna_pages() -> int:
         if "<!-- ALPHAMALE_CCLASS_CRO_START -->" in html:
             html = re.sub(
                 r"<!-- ALPHAMALE_CCLASS_CRO_START -->.*?<!-- ALPHAMALE_CCLASS_CRO_END -->",
-                block_html,
+                lambda _: block_html,
                 html,
                 flags=re.DOTALL,
             )
