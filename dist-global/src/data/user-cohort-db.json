@@ -2,10 +2,10 @@
   "metadata": {
     "db_name": "Taller Bio Labs — User Input Cohort & Autonomous Self-Improvement DB",
     "db_version": "2.4.0",
-    "last_updated_utc": "2026-10-23T11:41:44.028Z",
-    "total_records": 157,
+    "last_updated_utc": "2026-10-25T09:38:51.895Z",
+    "total_records": 158,
     "subject_mode_counts": {
-      "child": 118,
+      "child": 119,
       "self": 39
     },
     "gender_counts": {
@@ -15,7 +15,7 @@
     "age_band_distribution": {
       "1-3y": 22,
       "4-6y": 26,
-      "7-9y": 29,
+      "7-9y": 30,
       "10-12y": 47,
       "13-16y": 27,
       "17-20y": 6
@@ -23,7 +23,7 @@
     "bottleneck_habit_frequencies": {
       "late_sleep": 113,
       "picky_eater": 61,
-      "poor_posture": 58,
+      "poor_posture": 59,
       "sedentary": 49,
       "night_carbs": 50
     },
@@ -122,6 +122,35 @@
     }
   },
   "records": [
+    {
+      "id": "USR-MVNMY75A",
+      "timestamp": "2026-10-25T09:38:51.895Z",
+      "targetSubject": "child",
+      "gender": "girl",
+      "birthDateStr": "2019-10-15",
+      "exactMonths": 84.3,
+      "ageYears": 7,
+      "currentHeight": 120.8,
+      "currentWeight": 23.6,
+      "recentGrowth6m": 2.8,
+      "fatherHeight": 176,
+      "motherHeight": 163,
+      "tannerPhase": "phase_1",
+      "habits": [
+        "poor_posture"
+      ],
+      "cognitiveAxes": [
+        "math_logic"
+      ],
+      "region": "Canada",
+      "kdcaPercentile": 50,
+      "zScore": 0,
+      "mph": 160.5,
+      "unmanagedHeight": 171.2,
+      "optimizedHeight": 180.5,
+      "potentialGainCm": 7.2,
+      "parentFreeNote": ""
+    },
     {
       "id": "USR-MVKWGIC7",
       "timestamp": "2026-10-23T11:41:44.028Z",

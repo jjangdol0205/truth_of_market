@@ -426,6 +426,20 @@
     const regionSelect = document.getElementById('user-region');
     if (regionSelect) state.profile.region = regionSelect.value;
 
+    const ethnicitySelect = document.getElementById('child-ethnicity');
+    if (ethnicitySelect && ethnicitySelect.value) {
+      state.profile.ethnicity = ethnicitySelect.value;
+    }
+
+    const formEl = document.getElementById('diagnosis-form');
+    if (formEl && formEl.className && formEl.className.includes('wizard-mode-learning')) {
+      state.profile.preferredReportMode = 'learning';
+    } else if (typeof window !== 'undefined' && (window.__KIDSFIT_PREFERRED_REPORT_MODE === 'learning' || window.__KIDSFIT_PREFERRED_REPORT_MODE === 'growth')) {
+      state.profile.preferredReportMode = window.__KIDSFIT_PREFERRED_REPORT_MODE;
+    } else if (!state.profile.preferredReportMode) {
+      state.profile.preferredReportMode = 'growth';
+    }
+
     // Step 2: Tanner Phase
     const tannerChecked = document.querySelector('input[name="tanner-phase"]:checked') || document.querySelector('input[name="puberty-stage"]:checked');
     if (tannerChecked) {
@@ -501,8 +515,13 @@
     const preset = PRESETS[presetId];
     if (!preset) return false;
 
+    const preservedMode = (typeof window !== 'undefined' && window.__KIDSFIT_PREFERRED_REPORT_MODE) ||
+      (state.profile && state.profile.preferredReportMode) ||
+      'growth';
     state.activePresetId = presetId;
-    state.profile = JSON.parse(JSON.stringify(preset));
+    state.profile = Object.assign({}, JSON.parse(JSON.stringify(preset)), {
+      preferredReportMode: preservedMode
+    });
 
     if (typeof document !== 'undefined') {
       // Highlight preset card

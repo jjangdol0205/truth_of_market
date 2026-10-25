@@ -706,7 +706,7 @@
                 </tr>
                 <tr style="border-bottom: 1px solid #CBD5E1;">
                   <th style="padding: 5px 8px; border-right: 1px solid #CBD5E1; background: #F8FAFC; color: #1D4ED8;">Mid-Term (Months 1–3)</th>
-                  <td style="padding: 5px 8px;">Calcium Citrate (45% absorption)+D3+K2(MK-7)+Protein (${Math.round(weight * 1.3 * 10) / 10}g) · 5x/wk 15-min plyometrics · Biweekly STEM museum Socratic inquiry</td>
+                  <td style="padding: 5px 8px;">iHerb USP/NSF Calcium Citrate (45% absorption)+D3+K2(MK-7)+Protein (${Math.round(weight * 1.3 * 10) / 10}g) · 5x/wk 15-min plyometrics · Daily Feynman active recall</td>
                 </tr>
                 <tr>
                   <th style="padding: 5px 8px; border-right: 1px solid #CBD5E1; background: #F8FAFC; color: #1D4ED8;">Long-Term (6M–Adult)</th>

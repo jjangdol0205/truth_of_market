@@ -3082,6 +3082,14 @@ body[data-theme="light"] {
   box-shadow: 0 4px 12px rgba(29, 78, 216, 0.2) !important;
 }
 
+.preset-chip:hover *,
+.preset-card:hover *,
+.preset-chip.active *,
+.preset-card.active * {
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+}
+
 /* Onboarding Survey Card & Form Controls */
 .quiz-card,
 .bento-card,
@@ -3335,6 +3343,21 @@ body[data-theme="light"] {
   color: #0F172A !important;
   border: 1.5px solid #DBEAFE !important;
   box-shadow: 0 6px 20px rgba(15, 23, 42, 0.05) !important;
+}
+
+#results-dashboard .briefing-header {
+  background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%) !important;
+  color: #0F172A !important;
+  border: 2px solid #93C5FD !important;
+  box-shadow: 0 10px 28px rgba(29, 78, 216, 0.08) !important;
+}
+
+#results-dashboard #global-report-child-conditions-box,
+#results-dashboard #global-report-child-conditions-footer {
+  background: #FFFFFF !important;
+  color: #0F172A !important;
+  border: 2px solid #93C5FD !important;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05) !important;
 }
 
 #results-dashboard h1,

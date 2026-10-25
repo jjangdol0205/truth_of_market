@@ -8,7 +8,8 @@ scripts/apply_alphamale_cclass_and_advisor_daemon.py
    - 챌린지클래스 (Challenge Class):
      * Zero-Penalty Bridge Funnel (네이버 블로그·지식iN 저품질 0% 우회 브릿지: 네이버 -> kidsfit.co.kr/qna -> 쿠팡 AF7865143).
      * 1-Second Spec Comparison Table + Rocket Delivery Urgency CTA (일반 제품 vs 논문 권장 스펙 비교표 + 로켓배송 24시간 장바구니 쿠키 락인 버튼).
-2. Executes the Periodic Real-Time Promotion Bottleneck Analyzer & Improvement Advisor (정기 실시간 홍보 현황 분석 · 문제점 진단 · 개선안 제안 데몬).
+2. Injects real-time purchase/affiliate button click telemetry (/api/visit with keepalive:true) across all qna/*.html pages so Telegram gets an instant push notification whenever any Q&A visitor clicks a purchase button.
+3. Executes the Periodic Real-Time Promotion Bottleneck Analyzer & Improvement Advisor (정기 실시간 홍보 현황 분석 · 문제점 진단 · 개선안 제안 데몬).
 """
 
 import json
@@ -89,6 +90,7 @@ def apply_alphamale_and_cclass_to_qna_pages() -> int:
     Injects:
     1. Challenge Class (챌린지클래스) 1-Second Spec Comparison Table + Rocket Delivery 24h Cookie CTA (AF7865143)
     2. AlphaNam (알파남) Contextual Spiderweb Internal Link Cluster (거미줄 내부링크 클러스터 3선)
+    3. Real-time Purchase/Affiliate Click Beacon (/api/visit with keepalive:true)
     into all qna/*.html pages.
     """
     if not QNA_DIR.exists():
@@ -107,7 +109,6 @@ def apply_alphamale_and_cclass_to_qna_pages() -> int:
         html = p.read_text(encoding="utf-8", errors="ignore")
         spec = match_cclass_spec(html[:2500])
 
-        # Pick 3 related pages in a circular spiderweb (AlphaNam Topic Cluster)
         rel_pages = [
             all_pages[(idx + 1) % len(all_pages)].name,
             all_pages[(idx + 3) % len(all_pages)].name,
@@ -116,6 +117,7 @@ def apply_alphamale_and_cclass_to_qna_pages() -> int:
 
         url_a = make_coupang_affiliate_url(spec["item_a_coupang_q"])
         url_b = make_coupang_affiliate_url(spec["item_b_coupang_q"])
+        cat_val = "learning" if "두뇌" in spec["badge"] or "교구" in spec["badge"] else "growth"
 
         block_html = f"""<!-- ALPHAMALE_CCLASS_CRO_START -->
 <section style="margin:28px 0;padding:24px;border-radius:22px;background:#FFFFFF;border:2px solid #E0E7FF;box-shadow:0 10px 28px rgba(79,70,229,0.07);">
@@ -149,10 +151,10 @@ def apply_alphamale_and_cclass_to_qna_pages() -> int:
     </table>
   </div>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin-bottom:10px;">
-    <a href="{url_a}" target="_blank" rel="noopener sponsored" style="display:flex;align-items:center;justify-content:center;padding:13px 16px;border-radius:14px;background:linear-gradient(135deg,#2563EB,#4F46E5);color:#FFFFFF;font-weight:800;font-size:14px;text-decoration:none;">
+    <a href="{url_a}" data-product-category="{cat_val}" data-product-name="{spec['item_a_name']}" target="_blank" rel="noopener sponsored" style="display:flex;align-items:center;justify-content:center;padding:13px 16px;border-radius:14px;background:linear-gradient(135deg,#2563EB,#4F46E5);color:#FFFFFF;font-weight:800;font-size:14px;text-decoration:none;">
       🚀 [로켓배송] {spec['item_a_name'][:18]} 최저가·후기 확인 →
     </a>
-    <a href="{url_b}" target="_blank" rel="noopener sponsored" style="display:flex;align-items:center;justify-content:center;padding:13px 16px;border-radius:14px;background:linear-gradient(135deg,#059669,#10B981);color:#FFFFFF;font-weight:800;font-size:14px;text-decoration:none;">
+    <a href="{url_b}" data-product-category="{cat_val}" data-product-name="{spec['item_b_name']}" target="_blank" rel="noopener sponsored" style="display:flex;align-items:center;justify-content:center;padding:13px 16px;border-radius:14px;background:linear-gradient(135deg,#059669,#10B981);color:#FFFFFF;font-weight:800;font-size:14px;text-decoration:none;">
       🚀 [로켓배송] {spec['item_b_name'][:18]} 내일 바로 받기 →
     </a>
   </div>
@@ -171,6 +173,38 @@ def apply_alphamale_and_cclass_to_qna_pages() -> int:
     <li><a href="https://kidsfit.co.kr/qna/{rel_pages[2]}" style="color:#1E40AF;text-decoration:underline;">{page_titles.get(rel_pages[2], rel_pages[2])} →</a></li>
   </ul>
 </section>
+<script>
+(function(){{
+  if (window.__kfQnaClickBound) return;
+  window.__kfQnaClickBound = true;
+  document.addEventListener('click', function(e) {{
+    try {{
+      var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+      if (!a) return;
+      var h = String(a.getAttribute('href') || '');
+      if (/coupang\\.com|linkprice\\.com|yes24\\.com|11st\\.co\\.kr|myrealtrip\\.com|klook\\.com|kkday\\.com|adpick\\.co\\.kr|iherb\\.com|amazon\\.com|lemonsqueezy\\.com|naver\\.me|iryan\\.kr|\\/(api)\\/(coupang|klook|adpick)/.test(h)) {{
+        var cat = a.getAttribute('data-product-category') || '{cat_val}';
+        var pName = a.getAttribute('data-product-name') || (a.innerText ? a.innerText.trim() : 'Q&A 추천 상품');
+        if (typeof window.fetch === 'function') {{
+          window.fetch('/api/visit', {{
+            method: 'POST',
+            keepalive: true,
+            headers: {{ 'Content-Type': 'application/json' }},
+            body: JSON.stringify({{
+              event: cat === 'learning' ? 'learning_product_click' : 'growth_product_click',
+              category: cat,
+              product_name: String(pName).replace(/\\s+/g, ' ').slice(0, 90),
+              href: h.slice(0, 240),
+              domain: window.location.hostname || 'kidsfit.co.kr',
+              utm_source: 'qna_page'
+            }})
+          }}).catch(function(){{}});
+        }}
+      }}
+    }} catch (_) {{}}
+  }});
+}})();
+</script>
 <!-- ALPHAMALE_CCLASS_CRO_END -->"""
 
         if "<!-- ALPHAMALE_CCLASS_CRO_START -->" in html:
@@ -228,36 +262,33 @@ def diagnose_bottlenecks_and_propose(m: dict) -> list[dict]:
     """
     proposals = []
 
-    # 1. Traffic Volume & Search Indexing Lag Diagnosis
     proposals.append({
         "title": "병목 1: 신규 블로그·카페 검색 색인 시차(24~72시간)로 인한 초기 자연검색 유입 부족",
-        "current_metric": f"현재 홈페이지 오늘 UV {m['uv']}명 / PV {m['pv']}회 / 검색로봇 수집 {m['bots']}회 (네이버 블로그 일 방문 9명)",
-        "problem": "네이버 블로그·카페 개설 초기라 발행된 칼럼(블로그 8편·카페 12편)이 통합검색 상단에 안착하기까지 2~3일의 색인 대기 시간이 발생함.",
-        "proposal": "기다리는 동안 즉시 트래픽을 당겨오는 【외부 육아블로그 공감·댓글 투어(하루 6회) + 지식iN 실시간 질문 답변 + 무등업 커뮤니티(82쿡·당근 동네생활) 스텔스 캡처 역질문】 비중을 최우선으로 유지하고, 금요일~토요일에는 지역 맘카페 '주말 박물관 나들이' 키워드를 집중 타격할 것을 제안합니다."
+        "current_metric": f"현재 홈페이지 오늘 UV {m['uv']}명 / PV {m['pv']}회 / 검색로봇 수집 {m['bots']}회",
+        "problem": "네이버 블로그·카페 개설 초기라 발행된 칼럼이 통합검색 상단에 안착하기까지 2~3일의 색인 대기 시간이 발생함.",
+        "proposal": "기다리는 동안 즉시 트래픽을 당겨오는 【외부 육아블로그 공감·댓글·서로이웃 투어(하루 10회·일 50곳) + 지식iN 실시간 다중 답변(일 20건)】 비중을 최우선으로 유지합니다."
     })
 
-    # 2. Pageview-per-Visitor & Dwell Time Diagnosis (AlphaNam metric)
     pv_per_uv = round(m["pv"] / max(1, m["uv"]), 2)
     proposals.append({
         "title": f"병목 2: 방문자 1인당 페이지뷰({pv_per_uv} PV/UV) 및 체류시간 확대 필요",
         "current_metric": f"1인당 평균 열람 페이지 수 {pv_per_uv}장",
         "problem": "외부에서 Q&A 페이지나 메인 페이지로 들어온 방문자가 첫 페이지만 보고 이탈하면 구글·네이버 SEO 체류시간 점수와 진단 전환율이 떨어짐.",
-        "proposal": "【알파남 노하우 즉시 적용 완료】: 전체 27개 Q&A·시퀀스 랜딩페이지 하단에 '🕸️ 함께 읽으면 효과 2배 연관 논문 팩트체크 3선(거미줄 내부링크 클러스터)'을 삽입하여 방문자가 최소 2~3개 페이지를 연쇄 열람하도록 자동 패치했습니다."
+        "proposal": "【알파남 노하우 즉시 적용 완료】: 전체 33개 Q&A·시퀀스 랜딩페이지 하단에 '🕸️ 함께 읽으면 효과 2배 연관 논문 팩트체크 3선(거미줄 내부링크 클러스터)'을 삽입하여 방문자가 최소 2~3개 페이지를 연쇄 열람하도록 자동 패치했습니다."
     })
 
-    # 3. Affiliate Click Conversion Diagnosis (Challenge Class metric)
     proposals.append({
         "title": f"병목 3: 정보 열람 방문자의 쿠팡파트너스(AF7865143) 실구매 클릭 전환(현재 {m['affiliateClicks']}건) 가속 필요",
         "current_metric": f"오늘 제휴 클릭 {m['affiliateClicks']}건",
         "problem": "네이버 블로그에 쿠팡 링크를 직접 걸면 저품질 위험이 있고, 반대로 홈페이지에 설명만 길면 방문자가 정보만 얻고 쿠팡 클릭 없이 이탈함.",
-        "proposal": "【챌린지클래스 노하우 즉시 적용 완료】: 네이버에서는 안전하게 우리 브릿지 페이지(kidsfit.co.kr/qna)로 유입시키고, 브릿지 페이지 안에 '💡 일반 제품 vs 논문 권장 스펙 1초 비교표 + 🚀 로켓배송 최저가 직링크(AF7865143)'를 전면 배치하여 저품질 위험 0%로 24시간 쿠팡 장바구니 쿠키를 락인하도록 적용했습니다."
+        "proposal": "【챌린지클래스 노하우 즉시 적용 완료】: 네이버에서는 안전하게 우리 브릿지 페이지(kidsfit.co.kr/qna)로 유입시키고, 브릿지 페이지 안에 '💡 일반 제품 vs 논문 권장 스펙 1초 비교표 + 🚀 로켓배송 최저가 직링크(AF7865143)' 및 실시간 클릭 텔레그램 알리미를 전면 배치했습니다."
     })
 
     return proposals
 
 
 def main():
-    notify_tg = "--notify" in sys.argv or True
+    notify_tg = "--notify" in sys.argv
     patched_pages = apply_alphamale_and_cclass_to_qna_pages()
     metrics = fetch_live_system_metrics()
     proposals = diagnose_bottlenecks_and_propose(metrics)

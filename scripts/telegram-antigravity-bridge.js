@@ -33,8 +33,8 @@ const LANGUAGE_SERVER_EXE = 'C:\\Users\\jjang\\AppData\\Local\\Programs\\Antigra
 const CONTROL_PANEL_KEYBOARD = {
   inline_keyboard: [
     [
-      { text: '📚 논문 크롤링·학습 현황', callback_data: '/status' },
-      { text: '⚡ 지금 논문 추가 학습 실행', callback_data: '/research' }
+      { text: '🛒 구매·제휴 버튼 클릭 현황', callback_data: '/clicks' },
+      { text: '📚 논문 크롤링·학습 현황', callback_data: '/status' }
     ],
     [
       { text: '🌅 오늘의 인스타·쓰레드 세트 받기', callback_data: '/daily' },
@@ -42,6 +42,91 @@ const CONTROL_PANEL_KEYBOARD = {
     ]
   ]
 };
+
+function fetchLiveStatsJson() {
+  return new Promise(resolve => {
+    https
+      .get('https://kidsfit.co.kr/api/stats', res => {
+        let raw = '';
+        res.on('data', c => { raw += c.toString('utf8'); });
+        res.on('end', () => {
+          try {
+            resolve(JSON.parse(raw));
+          } catch (_) {
+            resolve(null);
+          }
+        });
+      })
+      .on('error', () => resolve(null));
+  });
+}
+
+async function checkAndNotifyLiveAffiliateClicks(botToken, ownerChatId, state) {
+  if (!ownerChatId) return;
+  try {
+    const data = await fetchLiveStatsJson();
+    if (!data || !data.analytics) return;
+    const today = data.analytics.today || {};
+    const total = data.analytics.total || {};
+    const recentClicks = Array.isArray(today.recentClicks) ? today.recentClicks : [];
+
+    if (!Array.isArray(state.notifiedClickIds)) state.notifiedClickIds = [];
+
+    if (recentClicks.length > 0) {
+      const unnotified = recentClicks
+        .filter(c => c && c.id && !c.notifiedByServer && !state.notifiedClickIds.includes(c.id))
+        .reverse();
+
+      for (const clk of unnotified) {
+        state.notifiedClickIds.push(clk.id);
+        if (state.notifiedClickIds.length > 200) {
+          state.notifiedClickIds = state.notifiedClickIds.slice(-200);
+        }
+        saveBridgeState(state);
+
+        const catLabel =
+          clk.category === 'learning'
+            ? '🧠 두뇌·학습·교구·나들이'
+            : clk.category === 'global_paywall'
+            ? '🌎 영문판 유료 리포트 결제창'
+            : '📏 신체 성장·영양·바른자세';
+
+        const msg = [
+          `🛒 <b>[실시간 구매·제휴상품 버튼 클릭 발생!]</b>`,
+          `━━━━━━━━━━━━━━━━━━`,
+          `⏰ <b>클릭 시각</b>: <code>${telegramNotifier.escapeHtml(clk.timestampKst || '')}</code>`,
+          `🌐 <b>도메인</b>: <code>${telegramNotifier.escapeHtml(clk.domain || 'kidsfit.co.kr')}</code>`,
+          `📂 <b>영역</b>: <b>${catLabel}</b>`,
+          `🏷 <b>클릭한 상품/버튼</b>: <b>${telegramNotifier.escapeHtml(clk.productName || '추천 제휴 상품 버튼')}</b>`,
+          `🛍 <b>연결 제휴사</b>: <code>${telegramNotifier.escapeHtml(clk.platform || '제휴 큐레이션')}</code>`,
+          `📱 <b>접속 기기 / 유입경로</b>: ${clk.device === 'mobile' ? '📱 모바일' : '💻 PC'} / <code>${telegramNotifier.escapeHtml(clk.utmSource || 'direct')}</code>`,
+          `━━━━━━━━━━━━━━━━━━`,
+          `📊 <b>오늘 누적 구매버튼 클릭</b>: <b>${today.affiliateClicks || 1}건</b> (신체성장 ${(today.productClicks && today.productClicks.growth) || 0}건 / 두뇌학습 ${(today.productClicks && today.productClicks.learning) || 0}건)`,
+          `📈 <b>전체 누적 구매버튼 클릭</b>: <b>${total.affiliateClicks || 1}건</b> (오늘 방문자 UV ${today.uv || 0}명 · 진단완료 ${(today.diagnoses && today.diagnoses.total) || 0}건)`
+        ].join('\n');
+
+        await sendChatMessage(botToken, ownerChatId, msg, true);
+      }
+    } else if (typeof total.affiliateClicks === 'number') {
+      if (typeof state.lastKnownTotalAffiliateClicks === 'number' && total.affiliateClicks > state.lastKnownTotalAffiliateClicks) {
+        const diff = total.affiliateClicks - state.lastKnownTotalAffiliateClicks;
+        state.lastKnownTotalAffiliateClicks = total.affiliateClicks;
+        saveBridgeState(state);
+        const msg = [
+          `🛒 <b>[실시간 구매·제휴상품 버튼 클릭 +${diff}건 발생!]</b>`,
+          `━━━━━━━━━━━━━━━━━━`,
+          `• <b>오늘 누적 구매버튼 클릭</b>: <b>${today.affiliateClicks || 0}건</b> (신체성장 ${(today.productClicks && today.productClicks.growth) || 0}건 / 두뇌학습 ${(today.productClicks && today.productClicks.learning) || 0}건)`,
+          `• <b>전체 누적 구매버튼 클릭</b>: <b>${total.affiliateClicks || 0}건</b>`,
+          `• <b>오늘 방문자(UV/PV)</b>: <b>${today.uv || 0}명</b> / <b>${today.pv || 0}회</b> (진단완료 ${(today.diagnoses && today.diagnoses.total) || 0}건)`
+        ].join('\n');
+        await sendChatMessage(botToken, ownerChatId, msg, true);
+      } else {
+        state.lastKnownTotalAffiliateClicks = total.affiliateClicks;
+        saveBridgeState(state);
+      }
+    }
+  } catch (_) {}
+}
 
 function loadBridgeState() {
   try {
@@ -172,6 +257,43 @@ async function handleIncomingCommand(rawText, options = {}) {
       ``,
       `🧠 <b>2. 안티그래비티(Antigravity) AI 직접 작업 지시</b>`,
       `별도 명령어 없이 <b>그냥 한국말로 원하는 작업을 채팅창에 입력</b>하시면 PC의 안티그래비티가 즉시 깨어나 작업을 수행하고 결과를 보고합니다!`
+    ].join('\n');
+    return reply(msg, true);
+  }
+
+  // 1.5. /clicks
+  if (
+    text === '/clicks' ||
+    text === '구매클릭' ||
+    text === '클릭' ||
+    text === '구매현황' ||
+    text.includes('구매상품 버튼 클릭')
+  ) {
+    const statsData = await fetchLiveStatsJson();
+    const today = (statsData && statsData.analytics && statsData.analytics.today) || {};
+    const total = (statsData && statsData.analytics && statsData.analytics.total) || {};
+    const recent = Array.isArray(today.recentClicks) ? today.recentClicks.slice(0, 8) : [];
+    const recentLines = recent.length
+      ? recent.map(
+          (c, i) =>
+            `  ${i + 1}. [${c.timestampKst || ''}] <b>${telegramNotifier.escapeHtml(c.productName || '추천 상품')}</b> (${telegramNotifier.escapeHtml(c.platform || '')}, ${c.device === 'mobile' ? '모바일' : 'PC'})`
+        )
+      : [`  • 아직 오늘 발생한 구매상품 버튼 클릭이 없습니다 (클릭 발생 시 실시간 푸시 알림이 즉시 발송됩니다!)`];
+
+    const msg = [
+      `🛒 <b>[키즈핏 구매·제휴상품 버튼 클릭 실시간 현황 & 즉시 알림 가동]</b>`,
+      `━━━━━━━━━━━━━━━━━━`,
+      `✅ <b>실시간 클릭 감시 알리미</b>: <b>ON (24시간 실시간 푸시)</b>`,
+      `  └ 방문자가 쿠팡 파트너스(<code>AF7865143</code>), 링크프라이스·YES24(<code>A100708867</code>), 아이허브(<code>IPZ1547</code>), 마이리얼트립(<code>6226316</code>), 클룩(<code>140161</code>), 애드픽(<code>4d31d3</code>), 아마존(<code>kidfit-20</code>), 영문판 Lemon Squeezy(<code>$8.99/$19.99</code>) 구매 버튼을 누르는 즉시 이 텔레그램 방으로 <b>[클릭 시각 · 상품명 · 제휴사 · 기기 · 유입경로]</b>가 실시간 알림됩니다!`,
+      `━━━━━━━━━━━━━━━━━━`,
+      `📊 <b>오늘(${today.date || '오늘'}) 퍼널 & 구매버튼 클릭 지표</b>`,
+      `• <b>오늘 순방문자(UV) / 페이지뷰(PV)</b>: <b>${today.uv || 0}명</b> / <b>${today.pv || 0}회</b> (모바일 ${(today.devices && today.devices.mobile) || 0} / PC ${(today.devices && today.devices.desktop) || 0})`,
+      `• <b>오늘 무료 진단 리포트 생성</b>: <b>${(today.diagnoses && today.diagnoses.total) || 0}건</b> (신체성장 ${(today.diagnoses && today.diagnoses.growth) || 0}건 / 두뇌학습 ${(today.diagnoses && today.diagnoses.learning) || 0}건)`,
+      `• <b>오늘 구매·제휴상품 버튼 클릭</b>: <b>${today.affiliateClicks || 0}건</b> (신체성장 ${(today.productClicks && today.productClicks.growth) || 0}건 / 두뇌학습 ${(today.productClicks && today.productClicks.learning) || 0}건)`,
+      `• <b>누적 전체 구매·제휴 버튼 클릭</b>: <b>${total.affiliateClicks || 0}건</b> (누적 방문자 ${total.uv || 0}명)`,
+      `━━━━━━━━━━━━━━━━━━`,
+      `🕒 <b>최근 구매·제휴 버튼 클릭 상세 로그</b>`,
+      ...recentLines
     ].join('\n');
     return reply(msg, true);
   }
@@ -363,8 +485,8 @@ async function startPollingDaemon() {
   console.log(`   Antigravity Session: ${cfg.conversationId || DEFAULT_CONVERSATION_ID}`);
   console.log('===============================================================');
 
-  // Send immediate reconnection confirmation with interactive buttons to the user's Telegram!
-  if (ownerChatId) {
+  // Only send welcome notice if explicitly requested via --welcome flag
+  if (ownerChatId && process.argv.includes('--welcome')) {
     try {
       const research = telegramNotifier.loadResearchStatus();
       await sendChatMessage(
@@ -407,6 +529,9 @@ async function startPollingDaemon() {
           });
         }
       }
+
+      // Check real-time affiliate / purchase button clicks on live server & push instant Telegram alert
+      await checkAndNotifyLiveAffiliateClicks(botToken, ownerChatId, state);
 
       const updates = await telegramNotifier.telegramApiRequest(
         botToken,
@@ -453,6 +578,13 @@ async function startPollingDaemon() {
     }
   }
 }
+
+process.on('uncaughtException', err => {
+  console.warn('  [Telegram Bridge] Uncaught exception (auto-recovering):', err && err.message ? err.message : err);
+});
+process.on('unhandledRejection', reason => {
+  console.warn('  [Telegram Bridge] Unhandled rejection (auto-recovering):', reason);
+});
 
 if (require.main === module) {
   (async () => {

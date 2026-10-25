@@ -393,8 +393,97 @@ function recordDiagnosisEvent(mode) {
   } catch (_) {}
 }
 
-function recordAffiliateClickEvent(category, utmSource) {
+const recentAffiliateClickMap = new Map();
+
+function classifyAffiliatePlatform(hrefStr) {
+  const h = String(hrefStr || '').toLowerCase();
+  if (h.includes('lemonsqueezy')) return 'Lemon Squeezy 글로벌 결제 ($8.99/$19.99)';
+  if (h.includes('coupang') || h.includes('/api/coupang')) return '쿠팡 파트너스 (AF7865143)';
+  if (h.includes('yes24') || h.includes('linkprice') || h.includes('11st')) return '링크프라이스·YES24/11번가 (A100708867)';
+  if (h.includes('iherb')) return '아이허브 (IPZ1547)';
+  if (h.includes('amazon')) return '아마존 (kidfit-20)';
+  if (h.includes('myrealtrip')) return '마이리얼트립 (6226316)';
+  if (h.includes('klook') || h.includes('/api/klook')) return '클룩 Klook (140161)';
+  if (h.includes('adpick') || h.includes('kkday') || h.includes('/api/adpick')) return '애드픽 쇼핑메이트 (4d31d3)';
+  if (h.includes('naver.me')) return '네이버 브랜드커넥트';
+  if (h.includes('iryan.kr')) return '텐핑 (유아교육전·베이비페어)';
+  return '제휴 큐레이션 상품';
+}
+
+function sendInstantPurchaseClickTelegram(clickRecord, dayStats, totalStats) {
   try {
+    const botToken = process.env.TELEGRAM_BOT_TOKEN || '';
+    const chatId = process.env.TELEGRAM_CHAT_ID || '755033799';
+    if (!botToken || !chatId) return false;
+
+    const catLabel = clickRecord.category === 'learning'
+      ? '🧠 두뇌·학습·교구·나들이'
+      : clickRecord.category === 'global_paywall'
+      ? '🌎 영문판 유료 리포트 결제창'
+      : '📏 신체 성장·영양·바른자세';
+
+    const msgLines = [
+      `🛒 <b>[실시간 구매·제휴상품 버튼 클릭 발생!]</b>`,
+      `━━━━━━━━━━━━━━━━━━`,
+      `⏰ <b>클릭 시각</b>: <code>${clickRecord.timestampKst}</code>`,
+      `🌐 <b>도메인</b>: <code>${clickRecord.domain}</code>`,
+      `📂 <b>영역</b>: <b>${catLabel}</b>`,
+      `🏷 <b>클릭한 상품/버튼</b>: <b>${sanitizeText(clickRecord.productName || '추천 제휴 상품 버튼', 100)}</b>`,
+      `🛍 <b>연결 제휴사</b>: <code>${clickRecord.platform}</code>`,
+      `📱 <b>접속 기기 / 유입경로</b>: ${clickRecord.device === 'mobile' ? '📱 모바일' : '💻 PC'} / <code>${clickRecord.utmSource}</code>`,
+      `━━━━━━━━━━━━━━━━━━`,
+      `📊 <b>오늘 누적 구매버튼 클릭</b>: <b>${dayStats.affiliateClicks || 1}건</b> (신체성장 ${dayStats.productClicks.growth || 0}건 / 두뇌학습 ${dayStats.productClicks.learning || 0}건)`,
+      `📈 <b>전체 누적 구매버튼 클릭</b>: <b>${totalStats.affiliateClicks || 1}건</b> (오늘 방문자 UV ${dayStats.uv || 0}명 · 진단완료 ${(dayStats.diagnoses && dayStats.diagnoses.total) || 0}건)`
+    ];
+
+    const postData = Buffer.from(JSON.stringify({
+      chat_id: chatId,
+      text: msgLines.join('\n'),
+      parse_mode: 'HTML',
+      disable_web_page_preview: true
+    }), 'utf8');
+
+    const req = https.request({
+      hostname: 'api.telegram.org',
+      port: 443,
+      path: `/bot${botToken}/sendMessage`,
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json; charset=utf-8',
+        'Content-Length': postData.length
+      }
+    }, (res) => { res.resume(); });
+    req.on('error', () => {});
+    req.write(postData);
+    req.end();
+    return true;
+  } catch (_) {
+    return false;
+  }
+}
+
+function recordAffiliateClickEvent(category, utmSource, details = {}) {
+  try {
+    const req = details.req || null;
+    const ua = req ? String(req.headers['user-agent'] || '') : '';
+    if (ua && BOT_UA_REGEX.test(ua) && !details.forceNotify) {
+      return null;
+    }
+
+    const ip = req ? getClientIp(req) : '0.0.0.0';
+    const href = sanitizeText(details.href || '', 240);
+    const productName = sanitizeText(details.productName || details.query || '', 100);
+    const dedupKey = `${ip}|${category || 'growth'}`;
+    const now = Date.now();
+    const prev = recentAffiliateClickMap.get(dedupKey);
+    if (prev && (now - prev.time < 2500)) {
+      if (productName && (!prev.record.productName || prev.record.productName === '추천 제휴 상품 바로가기')) {
+        prev.record.productName = productName;
+        saveVisitorStats();
+      }
+      return prev.record;
+    }
+
     const todayStr = getKstDateString(0);
     const day = ensureDayBucket(todayStr);
     day.affiliateClicks = (day.affiliateClicks || 0) + 1;
@@ -421,8 +510,40 @@ function recordAffiliateClickEvent(category, utmSource) {
     if (!visitorStats.total.productClicks.byReferrer[refKey]) visitorStats.total.productClicks.byReferrer[refKey] = { growth: 0, learning: 0 };
     visitorStats.total.productClicks.byReferrer[refKey][catKey] = (visitorStats.total.productClicks.byReferrer[refKey][catKey] || 0) + 1;
 
+    const kstIso = new Date(now + 9 * 3600 * 1000).toISOString().replace('T', ' ').slice(0, 19) + ' KST';
+    const isMobile = /(Mobile|Android|iPhone|iPad|iPod)/i.test(ua);
+    const reqHost = req ? String(req.headers['x-forwarded-host'] || req.headers.host || 'kidsfit.co.kr') : 'kidsfit.co.kr';
+    const clickRecord = {
+      id: `CLK-${now}-${Math.floor(Math.random() * 899 + 100)}`,
+      timestampKst: kstIso,
+      category: category || 'growth',
+      platform: classifyAffiliatePlatform(href || details.platformHint || ''),
+      productName: productName || '추천 제휴 상품 바로가기',
+      href: href || '',
+      utmSource: refKey,
+      device: isMobile ? 'mobile' : 'desktop',
+      domain: sanitizeText(details.domain || reqHost, 60),
+      notifiedByServer: false
+    };
+
+    clickRecord.notifiedByServer = sendInstantPurchaseClickTelegram(clickRecord, day, visitorStats.total);
+
+    if (!Array.isArray(day.recentClicks)) day.recentClicks = [];
+    day.recentClicks.unshift(clickRecord);
+    if (day.recentClicks.length > 30) day.recentClicks = day.recentClicks.slice(0, 30);
+
+    if (!Array.isArray(visitorStats.total.recentClicks)) visitorStats.total.recentClicks = [];
+    visitorStats.total.recentClicks.unshift(clickRecord);
+    if (visitorStats.total.recentClicks.length > 50) visitorStats.total.recentClicks = visitorStats.total.recentClicks.slice(0, 50);
+
+    recentAffiliateClickMap.set(dedupKey, { time: now, record: clickRecord });
+    if (recentAffiliateClickMap.size > 1000) recentAffiliateClickMap.clear();
+
     saveVisitorStats();
-  } catch (_) {}
+    return clickRecord;
+  } catch (_) {
+    return null;
+  }
 }
 
 const server = http.createServer((req, res) => {
@@ -465,6 +586,7 @@ const server = http.createServer((req, res) => {
         diagnoses: b.diagnoses || { total: 0, growth: 0, learning: 0 },
         affiliateClicks: b.affiliateClicks || 0,
         productClicks: b.productClicks || { growth: 0, learning: 0, byReferrer: {} },
+        recentClicks: Array.isArray(b.recentClicks) ? b.recentClicks.slice(0, 20) : [],
         bots: b.bots || 0
       });
 
@@ -505,7 +627,12 @@ const server = http.createServer((req, res) => {
             } else if (ev === 'affiliate_click' || ev === 'growth_product_click' || ev === 'learning_product_click') {
               const category = data.category || (ev === 'learning_product_click' ? 'learning' : 'growth');
               const utmSource = data.utm_source || 'direct';
-              recordAffiliateClickEvent(category, utmSource);
+              recordAffiliateClickEvent(category, utmSource, {
+                req,
+                href: data.href || '',
+                productName: data.product_name || data.productName || '',
+                domain: data.domain || ''
+              });
             } else {
               recordVisitorPageview(req, data.referrer || '');
             }
@@ -766,7 +893,6 @@ const server = http.createServer((req, res) => {
     if (pathname === '/api/coupang') {
       const cat = parsedUrl.searchParams.get('cat') || parsedUrl.searchParams.get('category') || 'growth';
       const utm = parsedUrl.searchParams.get('utm_source') || 'direct';
-      recordAffiliateClickEvent(cat, utm);
       const q = parsedUrl.searchParams.get('q') || 
                 parsedUrl.searchParams.get('kw') || 
                 parsedUrl.searchParams.get('keyword') || '';
@@ -793,6 +919,8 @@ const server = http.createServer((req, res) => {
         }));
         return;
       }
+
+      recordAffiliateClickEvent(cat, utm, { req, href: redirectUrl, query: q || '쿠팡 추천 상품', platformHint: 'coupang' });
 
       // HTTP 302 Found Redirect
       res.writeHead(302, {
@@ -851,7 +979,6 @@ const server = http.createServer((req, res) => {
     if (pathname === '/api/klook') {
       const cat = parsedUrl.searchParams.get('cat') || parsedUrl.searchParams.get('category') || 'learning';
       const utm = parsedUrl.searchParams.get('utm_source') || 'direct';
-      recordAffiliateClickEvent(cat, utm);
       const aid = parsedUrl.searchParams.get('aid') || '140161';
       const adid = parsedUrl.searchParams.get('aff_adid') || '1514603';
       const q = parsedUrl.searchParams.get('q') || '';
@@ -867,6 +994,8 @@ const server = http.createServer((req, res) => {
         res.end(JSON.stringify({ ok: true, aid, aff_adid: adid, k_site: kSite, redirectUrl }));
         return;
       }
+
+      recordAffiliateClickEvent(cat, utm, { req, href: redirectUrl, query: q || '클룩 주말 체험 티켓', platformHint: 'klook' });
 
       res.writeHead(302, { 'Location': redirectUrl, 'X-Robots-Tag': 'noindex, nofollow', ...NO_CACHE_HEADERS });
       res.end(`Redirecting to Klook Affiliate: ${redirectUrl}`);
@@ -916,10 +1045,10 @@ const server = http.createServer((req, res) => {
     if (pathname === '/api/adpick/go') {
       const cat = parsedUrl.searchParams.get('cat') || parsedUrl.searchParams.get('category') || 'learning';
       const utm = parsedUrl.searchParams.get('utm_source') || 'direct';
-      recordAffiliateClickEvent(cat, utm);
       const affid = parsedUrl.searchParams.get('affid') || process.env.ADPICK_AFFID || '4d31d3';
       const mall = (parsedUrl.searchParams.get('mall') || '11st').toLowerCase();
       const q = parsedUrl.searchParams.get('q') || '';
+      recordAffiliateClickEvent(cat, utm, { req, href: req.url, query: q || `${mall} 추천 상품`, platformHint: mall === '11st' ? 'linkprice' : 'adpick' });
       if (mall === '11st') {
         const st11Target = `https://search.11st.co.kr/pc/total-search?kwd=${encodeURIComponent(q || '어린이 영양제')}`;
         const redirectUrl = `https://click.linkprice.com/click.php?m=11st&a=A100708867&l=9999&l_cd1=3&l_cd2=0&tu=${encodeURIComponent(st11Target)}`;
@@ -983,6 +1112,515 @@ const server = http.createServer((req, res) => {
         res.writeHead(502, { 'Content-Type': 'application/json; charset=utf-8' });
         res.end(JSON.stringify({ ok: false, error: err.message }));
       });
+      return;
+    }
+
+    // 1-G. Lemon Squeezy Store #296100 Public Config & Webhook Endpoints (/api/lemonsqueezy-config & /api/lemonsqueezy-webhook)
+    if (pathname === '/api/lemonsqueezy-config') {
+      res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8', ...NO_CACHE_HEADERS });
+      res.end(JSON.stringify({
+        ok: true,
+        storeId: Number(process.env.LEMONSQUEEZY_STORE_ID || 296100),
+        storeName: 'KIDS-FIT Global Studio',
+        accountHolder: process.env.LEMONSQUEEZY_ACCOUNT_HOLDER || '이윤주 (Yoonju Lee)',
+        storeUrl: 'https://truthofmarket.lemonsqueezy.com',
+        currency: 'USD',
+        products: {
+          singlePass: {
+            productId: Number(process.env.LEMONSQUEEZY_SINGLE_PRODUCT_ID || 1468224),
+            variantId: Number(process.env.LEMONSQUEEZY_SINGLE_VARIANT_ID || 2289754),
+            priceUsd: 8.99,
+            checkoutUrl: process.env.LEMONSQUEEZY_SINGLE_PASS_URL || 'https://truthofmarket.lemonsqueezy.com/checkout/buy/c1cd7f12-3479-49e8-ab71-59c98135d599'
+          },
+          trackerPass: {
+            productId: Number(process.env.LEMONSQUEEZY_TRACKER_PRODUCT_ID || 1468243),
+            variantId: Number(process.env.LEMONSQUEEZY_TRACKER_VARIANT_ID || 2289779),
+            priceUsd: 19.99,
+            checkoutUrl: process.env.LEMONSQUEEZY_TRACKER_PASS_URL || 'https://truthofmarket.lemonsqueezy.com/checkout/buy/c562946d-ef68-4c2f-a802-df9da0179895'
+          }
+        },
+        webhookId: Number(process.env.LEMONSQUEEZY_WEBHOOK_ID || 145796)
+      }));
+      return;
+    }
+
+    if (pathname === '/api/lemonsqueezy-webhook') {
+      if (req.method === 'POST') {
+        let rawBody = '';
+        req.on('data', (chunk) => {
+          if (rawBody.length < 131072) rawBody += chunk.toString('utf8');
+        });
+        req.on('end', () => {
+          try {
+            const crypto = require('crypto');
+            const secret = process.env.LEMONSQUEEZY_WEBHOOK_SECRET || 'kf_ls_whsec_2026_truthofmarket';
+            const signature = String(req.headers['x-signature'] || '');
+            const expectedSig = crypto.createHmac('sha256', secret).update(rawBody).digest('hex');
+            const sigValid = !signature || signature === expectedSig;
+
+            const payload = JSON.parse(rawBody || '{}');
+            const eventName = (payload.meta && payload.meta.event_name) || String(req.headers['x-event-name'] || 'unknown');
+            const orderLogPath = path.join(ROOT_DIR, 'logs', 'lemonsqueezy_orders.jsonl');
+            const entry = {
+              timestamp: new Date().toISOString(),
+              eventName,
+              signatureValid: sigValid,
+              orderId: payload.data && payload.data.id ? payload.data.id : null,
+              email: payload.data && payload.data.attributes ? payload.data.attributes.user_email : null,
+              totalUsd: payload.data && payload.data.attributes ? payload.data.attributes.total_formatted : null,
+              status: payload.data && payload.data.attributes ? payload.data.attributes.status : null
+            };
+            try {
+              fs.mkdirSync(path.dirname(orderLogPath), { recursive: true });
+              fs.appendFileSync(orderLogPath, JSON.stringify(entry) + '\n', 'utf8');
+            } catch (_) {}
+
+            if (eventName === 'order_created' || eventName === 'subscription_payment_success') {
+              recordAffiliateClickEvent();
+            }
+
+            res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8', ...NO_CACHE_HEADERS });
+            res.end(JSON.stringify({ ok: true, received: true, eventName, signatureValid: sigValid }));
+          } catch (err) {
+            res.writeHead(400, { 'Content-Type': 'application/json; charset=utf-8' });
+            res.end(JSON.stringify({ ok: false, error: 'Invalid webhook payload' }));
+          }
+        });
+        return;
+      }
+      res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8', ...NO_CACHE_HEADERS });
+      res.end(JSON.stringify({ ok: true, endpoint: '/api/lemonsqueezy-webhook', storeId: 296100 }));
+      return;
+    }
+
+    // 1-H. Lemon Squeezy Live Checkout Creation, Order Verification & Member Account Authentication (/api/lemonsqueezy-checkout, /api/lemonsqueezy-orders/verify & /api/auth/*)
+    const usersDbPath = path.join(ROOT_DIR, 'logs', 'users_db.json');
+    const ordersLogPath = path.join(ROOT_DIR, 'logs', 'lemonsqueezy_orders.jsonl');
+    const authSecret = process.env.LEMONSQUEEZY_WEBHOOK_SECRET || 'kf_ls_whsec_2026_truthofmarket';
+    const lsApiKey = process.env.LEMONSQUEEZY_API_KEY || '';
+
+    function loadUsersDb() {
+      try {
+        if (fs.existsSync(usersDbPath)) {
+          const parsed = JSON.parse(fs.readFileSync(usersDbPath, 'utf8'));
+          if (parsed && Array.isArray(parsed.users)) return parsed;
+        }
+      } catch (_) {}
+      return { users: [] };
+    }
+
+    function saveUsersDb(db) {
+      try {
+        fs.mkdirSync(path.dirname(usersDbPath), { recursive: true });
+        fs.writeFileSync(usersDbPath, JSON.stringify(db, null, 2) + '\n', 'utf8');
+      } catch (_) {}
+    }
+
+    function findVerifiedOrderForEmailOrId(email, orderId) {
+      const normEmail = String(email || '').trim().toLowerCase();
+      const normOrder = String(orderId || '').trim();
+      try {
+        if (fs.existsSync(ordersLogPath)) {
+          const lines = fs.readFileSync(ordersLogPath, 'utf8').trim().split('\n').filter(Boolean);
+          for (let i = lines.length - 1; i >= 0; i--) {
+            try {
+              const row = JSON.parse(lines[i]);
+              if (!row || row.signatureValid === false) continue;
+              const isPaidEvent =
+                row.status === 'paid' ||
+                row.eventName === 'order_created' ||
+                row.eventName === 'subscription_payment_success';
+              if (!isPaidEvent) continue;
+              if (normOrder && String(row.orderId || '').trim() === normOrder) {
+                return row;
+              }
+              if (normEmail && String(row.email || '').trim().toLowerCase() === normEmail) {
+                return row;
+              }
+            } catch (_) {}
+          }
+        }
+      } catch (_) {}
+      return null;
+    }
+
+    function fetchLiveLemonSqueezyPaidOrder(email, orderId, cb) {
+      const normEmail = String(email || '').trim().toLowerCase();
+      const normOrder = String(orderId || '').trim();
+      if (!lsApiKey || (!normEmail && !normOrder)) return cb(null);
+      const queryPath = normEmail
+        ? `/v1/orders?filter[store_id]=296100&filter[user_email]=${encodeURIComponent(normEmail)}`
+        : `/v1/orders?filter[store_id]=296100`;
+      const lsReq = https.request({
+        hostname: 'api.lemonsqueezy.com',
+        path: queryPath,
+        method: 'GET',
+        headers: {
+          'Accept': 'application/vnd.api+json',
+          'Authorization': `Bearer ${lsApiKey}`
+        },
+        timeout: 6000
+      }, (lsRes) => {
+        let raw = '';
+        lsRes.on('data', c => { if (raw.length < 131072) raw += c.toString('utf8'); });
+        lsRes.on('end', () => {
+          try {
+            const parsed = JSON.parse(raw || '{}');
+            const list = Array.isArray(parsed.data) ? parsed.data : [];
+            for (const item of list) {
+              const attr = (item && item.attributes) || {};
+              const isPaid = attr.status === 'paid';
+              const itemEmail = String(attr.user_email || '').trim().toLowerCase();
+              const itemId = String(item.id || '');
+              const itemNum = String(attr.order_number || '');
+              if (isPaid && ((normEmail && itemEmail === normEmail) || (normOrder && (itemId === normOrder || itemNum === normOrder)))) {
+                const entry = {
+                  timestamp: new Date().toISOString(),
+                  eventName: 'api_live_verified',
+                  signatureValid: true,
+                  orderId: itemId,
+                  email: itemEmail,
+                  totalUsd: attr.total_formatted || null,
+                  status: 'paid'
+                };
+                try {
+                  fs.mkdirSync(path.dirname(ordersLogPath), { recursive: true });
+                  fs.appendFileSync(ordersLogPath, JSON.stringify(entry) + '\n', 'utf8');
+                } catch (_) {}
+                return cb(entry);
+              }
+            }
+          } catch (_) {}
+          cb(null);
+        });
+      });
+      lsReq.on('error', () => cb(null));
+      lsReq.on('timeout', () => { lsReq.destroy(); cb(null); });
+      lsReq.end();
+    }
+
+    function createAuthToken(email) {
+      const crypto = require('crypto');
+      const norm = String(email || '').trim().toLowerCase();
+      const sig = crypto.createHmac('sha256', authSecret).update(norm).digest('hex').slice(0, 32);
+      return Buffer.from(`${norm}:${sig}`, 'utf8').toString('base64');
+    }
+
+    function verifyAuthToken(token) {
+      try {
+        const crypto = require('crypto');
+        const decoded = Buffer.from(String(token || ''), 'base64').toString('utf8');
+        const idx = decoded.lastIndexOf(':');
+        if (idx === -1) return null;
+        const email = decoded.slice(0, idx);
+        const sig = decoded.slice(idx + 1);
+        const expected = crypto.createHmac('sha256', authSecret).update(email).digest('hex').slice(0, 32);
+        return sig === expected ? email : null;
+      } catch (_) {
+        return null;
+      }
+    }
+
+    if (pathname === '/api/lemonsqueezy-checkout') {
+      const handleCreateCheckout = (planParam, emailParam) => {
+        const isPass = String(planParam || '').toLowerCase() === 'pass';
+        const variantId = isPass
+          ? String(process.env.LEMONSQUEEZY_TRACKER_VARIANT_ID || '2289779')
+          : String(process.env.LEMONSQUEEZY_SINGLE_VARIANT_ID || '2289754');
+        const fallbackUrl = isPass
+          ? (process.env.LEMONSQUEEZY_TRACKER_PASS_URL || 'https://truthofmarket.lemonsqueezy.com/checkout/buy/c562946d-ef68-4c2f-a802-df9da0179895')
+          : (process.env.LEMONSQUEEZY_SINGLE_PASS_URL || 'https://truthofmarket.lemonsqueezy.com/checkout/buy/c1cd7f12-3479-49e8-ab71-59c98135d599');
+        const cleanEmail = String(emailParam || '').trim();
+
+        if (!lsApiKey) {
+          res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8', ...NO_CACHE_HEADERS });
+          res.end(JSON.stringify({ ok: true, checkoutUrl: fallbackUrl, variantId, mode: 'static_fallback' }));
+          return;
+        }
+
+        const payloadObj = {
+          data: {
+            type: 'checkouts',
+            attributes: {
+              product_options: {
+                redirect_url: 'https://truthofmarket.com/?unlock=1&payment=success',
+                receipt_button_text: 'Open Unlocked KIDS-FIT Clinical Report',
+                receipt_link_url: 'https://truthofmarket.com/?unlock=1&payment=success'
+              },
+              checkout_data: cleanEmail && cleanEmail.includes('@') ? { email: cleanEmail } : {}
+            },
+            relationships: {
+              store: { data: { type: 'stores', id: String(process.env.LEMONSQUEEZY_STORE_ID || '296100') } },
+              variant: { data: { type: 'variants', id: variantId } }
+            }
+          }
+        };
+        const payloadStr = JSON.stringify(payloadObj);
+        const chkReq = https.request({
+          hostname: 'api.lemonsqueezy.com',
+          path: '/v1/checkouts',
+          method: 'POST',
+          headers: {
+            'Accept': 'application/vnd.api+json',
+            'Content-Type': 'application/vnd.api+json',
+            'Authorization': `Bearer ${lsApiKey}`,
+            'Content-Length': Buffer.byteLength(payloadStr)
+          },
+          timeout: 7000
+        }, (chkRes) => {
+          let raw = '';
+          chkRes.on('data', c => { if (raw.length < 65536) raw += c.toString('utf8'); });
+          chkRes.on('end', () => {
+            try {
+              const parsed = JSON.parse(raw || '{}');
+              const signedUrl = parsed && parsed.data && parsed.data.attributes && parsed.data.attributes.url;
+              if (signedUrl) {
+                res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8', ...NO_CACHE_HEADERS });
+                res.end(JSON.stringify({ ok: true, checkoutUrl: signedUrl, variantId, mode: 'live_api_signed' }));
+                return;
+              }
+            } catch (_) {}
+            res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8', ...NO_CACHE_HEADERS });
+            res.end(JSON.stringify({ ok: true, checkoutUrl: fallbackUrl, variantId, mode: 'static_fallback' }));
+          });
+        });
+        chkReq.on('error', () => {
+          res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8', ...NO_CACHE_HEADERS });
+          res.end(JSON.stringify({ ok: true, checkoutUrl: fallbackUrl, variantId, mode: 'static_fallback' }));
+        });
+        chkReq.on('timeout', () => {
+          chkReq.destroy();
+          res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8', ...NO_CACHE_HEADERS });
+          res.end(JSON.stringify({ ok: true, checkoutUrl: fallbackUrl, variantId, mode: 'static_fallback' }));
+        });
+        chkReq.write(payloadStr);
+        chkReq.end();
+      };
+
+      if (req.method === 'POST') {
+        let body = '';
+        req.on('data', c => { if (body.length < 16384) body += c.toString('utf8'); });
+        req.on('end', () => {
+          try {
+            const d = JSON.parse(body || '{}');
+            handleCreateCheckout(d.plan, d.email);
+          } catch (_) {
+            handleCreateCheckout('single', '');
+          }
+        });
+        return;
+      }
+      handleCreateCheckout(parsedUrl.searchParams.get('plan') || 'single', parsedUrl.searchParams.get('email') || '');
+      return;
+    }
+
+    if (pathname === '/api/lemonsqueezy-orders/verify') {
+      const finalizeVerify = (matchedOrder, emailParam) => {
+        const db = loadUsersDb();
+        const normEmail = String(emailParam || '').trim().toLowerCase();
+        const userRecord = normEmail ? db.users.find(u => u.email === normEmail) : null;
+
+        if (matchedOrder && userRecord && !userRecord.unlockedPass) {
+          userRecord.unlockedPass = true;
+          userRecord.lastOrderId = matchedOrder.orderId || null;
+          saveUsersDb(db);
+        }
+
+        const verified = Boolean(matchedOrder || (userRecord && userRecord.unlockedPass));
+        res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8', ...NO_CACHE_HEADERS });
+        res.end(JSON.stringify({
+          ok: true,
+          verified,
+          email: normEmail || null,
+          orderId: matchedOrder ? matchedOrder.orderId : (userRecord ? userRecord.lastOrderId || null : null),
+          totalUsd: matchedOrder ? matchedOrder.totalUsd : null
+        }));
+      };
+
+      const handleVerify = (emailParam, orderIdParam) => {
+        const localMatch = findVerifiedOrderForEmailOrId(emailParam, orderIdParam);
+        if (localMatch) {
+          finalizeVerify(localMatch, emailParam);
+          return;
+        }
+        fetchLiveLemonSqueezyPaidOrder(emailParam, orderIdParam, (liveMatch) => {
+          finalizeVerify(liveMatch, emailParam);
+        });
+      };
+
+      if (req.method === 'POST') {
+        let body = '';
+        req.on('data', c => { if (body.length < 32768) body += c.toString('utf8'); });
+        req.on('end', () => {
+          try {
+            const data = JSON.parse(body || '{}');
+            handleVerify(data.email, data.orderId);
+          } catch (_) {
+            res.writeHead(400, { 'Content-Type': 'application/json; charset=utf-8' });
+            res.end(JSON.stringify({ ok: false, error: 'Invalid JSON payload' }));
+          }
+        });
+        return;
+      }
+
+      handleVerify(parsedUrl.searchParams.get('email'), parsedUrl.searchParams.get('orderId'));
+      return;
+    }
+
+    if (pathname === '/api/auth/register' && req.method === 'POST') {
+      let body = '';
+      req.on('data', c => { if (body.length < 65536) body += c.toString('utf8'); });
+      req.on('end', () => {
+        try {
+          const crypto = require('crypto');
+          const data = JSON.parse(body || '{}');
+          const email = String(data.email || '').trim().toLowerCase();
+          const name = String(data.name || '').trim() || email.split('@')[0];
+          const password = String(data.password || '');
+
+          if (!email || !email.includes('@') || password.length < 4) {
+            res.writeHead(400, { 'Content-Type': 'application/json; charset=utf-8', ...NO_CACHE_HEADERS });
+            res.end(JSON.stringify({ ok: false, error: 'Please provide a valid email and a password (min 4 characters).' }));
+            return;
+          }
+
+          const db = loadUsersDb();
+          if (db.users.some(u => u.email === email)) {
+            res.writeHead(409, { 'Content-Type': 'application/json; charset=utf-8', ...NO_CACHE_HEADERS });
+            res.end(JSON.stringify({ ok: false, error: 'An account with this email already exists. Please Sign In.' }));
+            return;
+          }
+
+          const salt = crypto.randomBytes(16).toString('hex');
+          const passwordHash = crypto.pbkdf2Sync(password, salt, 10000, 32, 'sha256').toString('hex');
+          const matchedOrder = findVerifiedOrderForEmailOrId(email, '');
+          const newUser = {
+            id: 'usr_' + Date.now().toString(36),
+            name,
+            email,
+            salt,
+            passwordHash,
+            unlockedPass: Boolean(matchedOrder),
+            lastOrderId: matchedOrder ? matchedOrder.orderId : null,
+            childProfiles: data.childProfile ? [data.childProfile] : [],
+            createdAt: new Date().toISOString()
+          };
+          db.users.push(newUser);
+          saveUsersDb(db);
+
+          const token = createAuthToken(email);
+          res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8', ...NO_CACHE_HEADERS });
+          res.end(JSON.stringify({
+            ok: true,
+            token,
+            user: {
+              id: newUser.id,
+              name: newUser.name,
+              email: newUser.email,
+              unlockedPass: newUser.unlockedPass,
+              lastOrderId: newUser.lastOrderId,
+              childProfiles: newUser.childProfiles
+            }
+          }));
+        } catch (err) {
+          res.writeHead(400, { 'Content-Type': 'application/json; charset=utf-8', ...NO_CACHE_HEADERS });
+          res.end(JSON.stringify({ ok: false, error: 'Invalid registration payload' }));
+        }
+      });
+      return;
+    }
+
+    if (pathname === '/api/auth/login' && req.method === 'POST') {
+      let body = '';
+      req.on('data', c => { if (body.length < 32768) body += c.toString('utf8'); });
+      req.on('end', () => {
+        try {
+          const crypto = require('crypto');
+          const data = JSON.parse(body || '{}');
+          const email = String(data.email || '').trim().toLowerCase();
+          const password = String(data.password || '');
+
+          const db = loadUsersDb();
+          const user = db.users.find(u => u.email === email);
+          if (!user) {
+            res.writeHead(401, { 'Content-Type': 'application/json; charset=utf-8', ...NO_CACHE_HEADERS });
+            res.end(JSON.stringify({ ok: false, error: 'No account found with this email. Please Sign Up first.' }));
+            return;
+          }
+
+          const checkHash = crypto.pbkdf2Sync(password, user.salt, 10000, 32, 'sha256').toString('hex');
+          if (checkHash !== user.passwordHash) {
+            res.writeHead(401, { 'Content-Type': 'application/json; charset=utf-8', ...NO_CACHE_HEADERS });
+            res.end(JSON.stringify({ ok: false, error: 'Incorrect password. Please try again.' }));
+            return;
+          }
+
+          const matchedOrder = findVerifiedOrderForEmailOrId(email, '');
+          if (matchedOrder && !user.unlockedPass) {
+            user.unlockedPass = true;
+            user.lastOrderId = matchedOrder.orderId || null;
+            saveUsersDb(db);
+          }
+
+          const token = createAuthToken(email);
+          res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8', ...NO_CACHE_HEADERS });
+          res.end(JSON.stringify({
+            ok: true,
+            token,
+            user: {
+              id: user.id,
+              name: user.name,
+              email: user.email,
+              unlockedPass: Boolean(user.unlockedPass),
+              lastOrderId: user.lastOrderId || null,
+              childProfiles: user.childProfiles || []
+            }
+          }));
+        } catch (err) {
+          res.writeHead(400, { 'Content-Type': 'application/json; charset=utf-8', ...NO_CACHE_HEADERS });
+          res.end(JSON.stringify({ ok: false, error: 'Invalid login payload' }));
+        }
+      });
+      return;
+    }
+
+    if (pathname === '/api/auth/me') {
+      const authHeader = String(req.headers['authorization'] || '');
+      const rawToken = authHeader.startsWith('Bearer ')
+        ? authHeader.slice(7).trim()
+        : (parsedUrl.searchParams.get('token') || '');
+      const email = verifyAuthToken(rawToken);
+      if (!email) {
+        res.writeHead(401, { 'Content-Type': 'application/json; charset=utf-8', ...NO_CACHE_HEADERS });
+        res.end(JSON.stringify({ ok: false, authenticated: false }));
+        return;
+      }
+      const db = loadUsersDb();
+      const user = db.users.find(u => u.email === email);
+      if (!user) {
+        res.writeHead(401, { 'Content-Type': 'application/json; charset=utf-8', ...NO_CACHE_HEADERS });
+        res.end(JSON.stringify({ ok: false, authenticated: false }));
+        return;
+      }
+      const matchedOrder = findVerifiedOrderForEmailOrId(email, '');
+      if (matchedOrder && !user.unlockedPass) {
+        user.unlockedPass = true;
+        user.lastOrderId = matchedOrder.orderId || null;
+        saveUsersDb(db);
+      }
+      res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8', ...NO_CACHE_HEADERS });
+      res.end(JSON.stringify({
+        ok: true,
+        authenticated: true,
+        user: {
+          id: user.id,
+          name: user.name,
+          email: user.email,
+          unlockedPass: Boolean(user.unlockedPass),
+          lastOrderId: user.lastOrderId || null,
+          childProfiles: user.childProfiles || []
+        }
+      }));
       return;
     }
 

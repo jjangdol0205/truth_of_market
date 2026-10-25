@@ -3074,6 +3074,14 @@ body[data-theme="light"] {
   box-shadow: 0 4px 12px rgba(29, 78, 216, 0.2) !important;
 }
 
+.preset-chip:hover *,
+.preset-card:hover *,
+.preset-chip.active *,
+.preset-card.active * {
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+}
+
 /* Onboarding Survey Card & Form Controls */
 .quiz-card,
 .bento-card,

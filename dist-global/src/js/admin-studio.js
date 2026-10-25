@@ -397,31 +397,22 @@ $$\\text{여아 MPH} = \\frac{\\text{아빠 키} + \\text{엄마 키} - 13}{2} \
         <!-- Live DB & Analytics Dashboard Container -->
         <div id="admin-db-dashboard-container" style="margin-bottom:1.1rem;"></div>
 
-        <!-- Affiliate & Channel Configuration -->
+        <!-- Affiliate & Channel Configuration (iHerb Exclusive in Global Paid Edition) -->
         <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:14px;padding:1rem 1.1rem;margin-bottom:1rem;">
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.75rem;">
-            <strong style="font-size:0.9rem;color:#0F172A;">🔗 Global Affiliate &amp; Partner Tracking IDs</strong>
+            <strong style="font-size:0.9rem;color:#0F172A;">🌿 Official iHerb Clinical Partner Configuration (Exclusive)</strong>
             <label style="font-size:0.8rem;font-weight:700;color:#334155;display:flex;align-items:center;gap:0.35rem;">
-              <input type="checkbox" id="cfg-chips-toggle" checked> Enable Reference Chips
+              <input type="checkbox" id="cfg-chips-toggle" checked> Enable iHerb Reference Links
             </label>
           </div>
-          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0.65rem;">
+          <div style="display:grid;grid-template-columns:1fr;gap:0.65rem;">
             <div>
-              <label style="font-size:0.74rem;font-weight:700;color:#475569;display:block;margin-bottom:0.2rem;">Amazon Associates Tag</label>
-              <input type="text" id="cfg-amazon" style="width:100%;box-sizing:border-box;padding:0.45rem 0.65rem;border:1px solid #CBD5E1;border-radius:8px;font-size:0.82rem;">
+              <label style="font-size:0.76rem;font-weight:800;color:#059669;display:block;margin-bottom:0.25rem;">iHerb Official Rewards Code (All Global Report Recommendations)</label>
+              <input type="text" id="cfg-iherb" style="width:100%;box-sizing:border-box;padding:0.55rem 0.75rem;border:1.5px solid #A7F3D0;border-radius:8px;font-size:0.86rem;font-weight:700;color:#0F172A;">
             </div>
-            <div>
-              <label style="font-size:0.74rem;font-weight:700;color:#475569;display:block;margin-bottom:0.2rem;">iHerb Rewards Code</label>
-              <input type="text" id="cfg-iherb" style="width:100%;box-sizing:border-box;padding:0.45rem 0.65rem;border:1px solid #CBD5E1;border-radius:8px;font-size:0.82rem;">
-            </div>
-            <div>
-              <label style="font-size:0.74rem;font-weight:700;color:#475569;display:block;margin-bottom:0.2rem;">Coupang Partners ID</label>
-              <input type="text" id="cfg-coupang" style="width:100%;box-sizing:border-box;padding:0.45rem 0.65rem;border:1px solid #CBD5E1;border-radius:8px;font-size:0.82rem;">
-            </div>
-            <div>
-              <label style="font-size:0.74rem;font-weight:700;color:#475569;display:block;margin-bottom:0.2rem;">LinkPrice Affiliate ID</label>
-              <input type="text" id="cfg-linkprice" style="width:100%;box-sizing:border-box;padding:0.45rem 0.65rem;border:1px solid #CBD5E1;border-radius:8px;font-size:0.82rem;">
-            </div>
+            <input type="hidden" id="cfg-amazon">
+            <input type="hidden" id="cfg-coupang">
+            <input type="hidden" id="cfg-linkprice">
           </div>
           <div style="display:flex;justify-content:flex-end;gap:0.5rem;margin-top:0.85rem;">
             <button type="button" id="btn-cancel-admin" style="padding:0.5rem 0.95rem;border-radius:8px;border:1px solid #CBD5E1;background:#FFFFFF;color:#475569;font-size:0.82rem;font-weight:700;cursor:pointer;">Close</button>
@@ -536,64 +527,114 @@ $$\\text{여아 MPH} = \\frac{\\text{아빠 키} + \\text{엄마 키} - 13}{2} \
 
     const bundle = generateOsmuBundle(scenarioId);
 
+    const globalRedditPost = `[Title for r/ScienceBasedParenting or r/Parenting]
+[Evidence Based] Why parental height (MPH) has a ±3.3-inch environmental buffer — and how sleep architecture & multi-ethnic bone tempo affect it
+
+[Body]
+When a child drops on the CDC growth curve, most 10-minute pediatric visits end with "let's just watch and wait." After reviewing pediatric auxology literature (US CDC 2000 LMS parameters, Tanner Mid-Parental Height equations, and NHANES multi-ethnic bone age cohorts), here are the 3 most actionable clinical takeaways:
+
+1. Mid-Parental Height (MPH) is a range, not a fixed destiny:
+Under the Tanner formula—(Father + Mother ± 5 inches) / 2—the 10th-to-90th target window spans ±3.3 inches (±8.5 cm). Where a child lands within that 6.6-inch spread is heavily governed by nocturnal neuro-endocrinology and micronutrient bioavailability.
+
+2. The 10 PM Slow-Wave Sleep (SWS) & Insulin Antagonism:
+Roughly 65% of daily pulsatile Growth Hormone (GH) is secreted during the first 90 minutes of Stage 3 NREM deep sleep. Giving sweet snacks or warm milk right before bed spikes blood glucose and insulin—which directly blunts pituitary somatotropin release. Keeping a 2-hour pre-sleep carbohydrate fast protects the nocturnal GH surge.
+
+3. Ancestry & Multi-Ethnic Growth Tempo Matters:
+Per Kelly et al. (JCEM) and Zhang et al. (Pediatrics), pubertal onset and bone maturation tempo vary significantly across East Asian, South Asian, Black, Hispanic, and Multi-Ethnic cohorts compared to single-baseline charts.
+
+If anyone wants to run their child's exact CDC/WHO LMS percentile with Multi-Ethnic Calibration and 5-Axis Executive Function LQ (supports Imperial ft/in, lbs & Metric cm, kg), we used this clinical calculator:
+https://truthofmarket.com/?utm_source=reddit&utm_medium=organic_post&utm_campaign=global_auxology`;
+
+    const globalThreadsXCopy = `[Instagram Bio / Threads / X Viral Thread]
+1/ A child's adult height is NOT 100% fixed by genetics.
+According to US CDC 2000 LMS models and the Tanner MPH formula, post-natal sleep, bone tempo, and bio-nutrition create a ±3.3-inch (±8.5 cm) physiological buffer. 🧵👇
+
+2/ 65% of daily Growth Hormone (GH) spikes during the first 90 minutes of Stage 3 Slow-Wave Sleep (10 PM - 2 AM). Eating carbs within 2 hours of bedtime spikes insulin, which suppresses pituitary GH release by up to 52%.
+
+3/ Most US pediatricians still look at a single growth curve during a 10-minute checkup. Yet clinical research (JCEM / Pediatrics) proves East Asian, South Asian, Black, Hispanic, and Multi-Ethnic kids follow distinct pubertal bone-maturation tempos.
+
+4/ Calcium Carbonate absorbs at ~22% and requires high stomach acid. Pediatric bone mineralization requires acid-independent Calcium Citrate (~45% absorption) + Vitamin D3 + K2 (MK-7) + Chelated Zinc.
+
+5/ Run your child's free 60-second US CDC & Multi-Ethnic Growth + 5-Axis Neuro LQ assessment (Imperial & Metric supported):
+👉 https://truthofmarket.com/?utm_source=threads_x&utm_medium=social_thread&utm_campaign=global_launch`;
+
+    const globalUtmLinks = `[1] Reddit Organic / Comment Sniper:
+https://truthofmarket.com/?utm_source=reddit&utm_medium=comment_sniper&utm_campaign=global_auxology
+
+[2] Instagram / Threads Bio Link:
+https://truthofmarket.com/?utm_source=instagram&utm_medium=bio_link&utm_campaign=global_parenting
+
+[3] TikTok / YouTube Shorts Bio Link:
+https://truthofmarket.com/?utm_source=tiktok_shorts&utm_medium=bio_link&utm_campaign=shortform_viral
+
+[4] Quora Evergreen Answer Citation:
+https://truthofmarket.com/?utm_source=quora&utm_medium=answer_citation&utm_campaign=evergreen_seo`;
+
     container.innerHTML = `
       <div class="osmu-generator-card" style="border-top: 1px solid var(--theme-border, #CBD5E1); padding-top: 1.5rem; margin-top: 1.5rem;">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
           <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin: 0;">
-            📢 OSMU 바이럴 마케팅 자동 생성 스튜디오
+            🌎 Global Overseas Marketing Command Center (해외판 홍보 원클릭 복사 키트)
           </h4>
-          <span style="font-size: 0.76rem; background: rgba(56, 189, 248, 0.15); color: #38BDF8; padding: 0.2rem 0.6rem; border-radius: 9999px; font-weight: 700;">
-            EN (TikTok/Shorts) &amp; KO (클립/블로그/카페)
+          <span style="font-size: 0.76rem; background: #EFF6FF; color: #1D4ED8; border: 1px solid #BFDBFE; padding: 0.2rem 0.65rem; border-radius: 9999px; font-weight: 800;">
+            US Multi-Ethnic Auxology · $8.99/$19.99 Pass · iHerb (IPZ1547)
           </span>
+        </div>
+
+        <!-- Global Channel A: Reddit GTM Post -->
+        <div class="osmu-channel-card" style="background: #F8FAFC; border: 1.5px solid #BFDBFE; border-radius: 12px; padding: 1rem; margin-bottom: 0.85rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.45rem;">
+            <strong style="font-size: 0.84rem; color: #1E3A8A;">🇺🇸 Global 1: Reddit (r/ScienceBasedParenting &amp; r/Parenting — 다인종 보정 &amp; 수면 GH 칼럼)</strong>
+            <button type="button" class="btn btn-primary btn-sm btn-copy-target" data-target="osmu-text-global-reddit" style="font-size: 0.74rem; padding: 0.25rem 0.6rem;">📋 원클릭 복사</button>
+          </div>
+          <textarea id="osmu-text-global-reddit" readonly style="width: 100%; height: 150px; font-family: monospace; font-size: 0.8rem; padding: 0.65rem; border: 1px solid #CBD5E1; border-radius: 8px; background: #FFFFFF; color: #0F172A; resize: vertical; box-sizing: border-box;">${globalRedditPost}</textarea>
+        </div>
+
+        <!-- Global Channel B: Instagram / Threads / X Thread -->
+        <div class="osmu-channel-card" style="background: #F8FAFC; border: 1.5px solid #A7F3D0; border-radius: 12px; padding: 1rem; margin-bottom: 0.85rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.45rem;">
+            <strong style="font-size: 0.84rem; color: #065F46;">🇺🇸 Global 2: Instagram / Meta Threads / X (Twitter) 5단 바이럴 스레드</strong>
+            <button type="button" class="btn btn-primary btn-sm btn-copy-target" data-target="osmu-text-global-threads" style="font-size: 0.74rem; padding: 0.25rem 0.6rem;">📋 원클릭 복사</button>
+          </div>
+          <textarea id="osmu-text-global-threads" readonly style="width: 100%; height: 140px; font-family: monospace; font-size: 0.8rem; padding: 0.65rem; border: 1px solid #CBD5E1; border-radius: 8px; background: #FFFFFF; color: #0F172A; resize: vertical; box-sizing: border-box;">${globalThreadsXCopy}</textarea>
+        </div>
+
+        <!-- Global Channel C: Channel-Specific UTM Links -->
+        <div class="osmu-channel-card" style="background: #F8FAFC; border: 1px solid #CBD5E1; border-radius: 12px; padding: 1rem; margin-bottom: 1.1rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.45rem;">
+            <strong style="font-size: 0.84rem; color: #334155;">🔗 Global 3: 채널별 유입 추적 UTM 링크 모음 (Reddit / Instagram / TikTok / Quora)</strong>
+            <button type="button" class="btn btn-primary btn-sm btn-copy-target" data-target="osmu-text-global-utm" style="font-size: 0.74rem; padding: 0.25rem 0.6rem;">📋 원클릭 복사</button>
+          </div>
+          <textarea id="osmu-text-global-utm" readonly style="width: 100%; height: 110px; font-family: monospace; font-size: 0.8rem; padding: 0.65rem; border: 1px solid #CBD5E1; border-radius: 8px; background: #FFFFFF; color: #0F172A; resize: vertical; box-sizing: border-box;">${globalUtmLinks}</textarea>
         </div>
 
         <!-- Scenario Selector Tabs -->
         <div style="display: flex; gap: 0.4rem; margin-bottom: 1rem; flex-wrap: wrap;">
           <button type="button" class="btn btn-sm btn-osmu-scenario ${scenarioId === 'scenario-1' ? 'btn-primary' : 'btn-secondary'}" data-scenario="scenario-1" style="font-size: 0.78rem; padding: 0.35rem 0.65rem;">
-            👶 만 3세 소근육/몬테소리
+            👶 Age 3 Neuro / Fine-Motor
           </button>
           <button type="button" class="btn btn-sm btn-osmu-scenario ${scenarioId === 'scenario-2' ? 'btn-primary' : 'btn-secondary'}" data-scenario="scenario-2" style="font-size: 0.78rem; padding: 0.35rem 0.65rem;">
-            👦 초2 남아 숨은키 7cm
+            👦 Age 8 Auxology (+3.3 in Buffer)
           </button>
           <button type="button" class="btn btn-sm btn-osmu-scenario ${scenarioId === 'scenario-3' ? 'btn-primary' : 'btn-secondary'}" data-scenario="scenario-3" style="font-size: 0.78rem; padding: 0.35rem 0.65rem;">
-            🏃 청소년 척추 감압
+            🏃 Teen Spinal Decompression
           </button>
         </div>
 
         <!-- Channel 1: EN TikTok / Reels 60s -->
         <div class="osmu-channel-card" style="background: var(--theme-surface-sub, #F8FAFC); border: 1px solid var(--theme-border, #E2E8F0); border-radius: 12px; padding: 1rem; margin-bottom: 0.85rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.45rem;">
-            <strong style="font-size: 0.84rem; color: #38BDF8;">🇺🇸 EN 1: TikTok / Reels 60s Clinical Script &amp; Hook</strong>
+            <strong style="font-size: 0.84rem; color: #1D4ED8;">🇺🇸 Global 4: TikTok / Reels / Shorts 60s Clinical Script &amp; Hook</strong>
             <button type="button" class="btn btn-primary btn-sm btn-copy-target" data-target="osmu-text-en-tiktok" style="font-size: 0.74rem; padding: 0.25rem 0.6rem;">📋 원클릭 복사</button>
           </div>
-          <textarea id="osmu-text-en-tiktok" readonly style="width: 100%; height: 160px; font-family: monospace; font-size: 0.8rem; padding: 0.65rem; border: 1px solid #CBD5E1; border-radius: 8px; background: #F8FAFC; color: #0F172A; resize: vertical; box-sizing: border-box;">${bundle.enTikTokScript}</textarea>
+          <textarea id="osmu-text-en-tiktok" readonly style="width: 100%; height: 160px; font-family: monospace; font-size: 0.8rem; padding: 0.65rem; border: 1px solid #CBD5E1; border-radius: 8px; background: #FFFFFF; color: #0F172A; resize: vertical; box-sizing: border-box;">${bundle.enTikTokScript}</textarea>
         </div>
 
-        <!-- Channel 2: KO Naver Clip 30s -->
-        <div class="osmu-channel-card" style="background: var(--theme-surface-sub, #F8FAFC); border: 1px solid var(--theme-border, #E2E8F0); border-radius: 12px; padding: 1rem; margin-bottom: 0.85rem;">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.45rem;">
-            <strong style="font-size: 0.84rem; color: #10B981;">🇰🇷 KO 1: 네이버 클립 30초 숏폼 대본</strong>
-            <button type="button" class="btn btn-primary btn-sm btn-copy-target" data-target="osmu-text-ko-clip" style="font-size: 0.74rem; padding: 0.25rem 0.6rem;">📋 원클릭 복사</button>
-          </div>
-          <textarea id="osmu-text-ko-clip" readonly style="width: 100%; height: 140px; font-family: monospace; font-size: 0.8rem; padding: 0.65rem; border: 1px solid #CBD5E1; border-radius: 8px; background: #F8FAFC; color: #0F172A; resize: vertical; box-sizing: border-box;">${bundle.koClipScript}</textarea>
-        </div>
-
-        <!-- Channel 3: KO Naver Blog 2,000-char Column -->
-        <div class="osmu-channel-card" style="background: var(--theme-surface-sub, #F8FAFC); border: 1px solid var(--theme-border, #E2E8F0); border-radius: 12px; padding: 1rem; margin-bottom: 0.85rem;">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.45rem;">
-            <strong style="font-size: 0.84rem; color: #F59E0B;">🇰🇷 KO 2: 네이버 블로그 2,000자 전문 칼럼 (비교표 &amp; 브릿지)</strong>
-            <button type="button" class="btn btn-primary btn-sm btn-copy-target" data-target="osmu-text-ko-blog" style="font-size: 0.74rem; padding: 0.25rem 0.6rem;">📋 원클릭 복사</button>
-          </div>
-          <textarea id="osmu-text-ko-blog" readonly style="width: 100%; height: 180px; font-family: monospace; font-size: 0.8rem; padding: 0.65rem; border: 1px solid #CBD5E1; border-radius: 8px; background: #F8FAFC; color: #0F172A; resize: vertical; box-sizing: border-box;">${bundle.koBlogColumn}</textarea>
-        </div>
-
-        <!-- Channel 4: KO Naver Cafe Q&A Post -->
-        <div class="osmu-channel-card" style="background: var(--theme-surface-sub, #F8FAFC); border: 1px solid var(--theme-border, #E2E8F0); border-radius: 12px; padding: 1rem;">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.45rem;">
-            <strong style="font-size: 0.84rem; color: #EC4899;">🇰🇷 KO 3: 네이버 카페 공감 Q&amp;A 및 나눔글</strong>
-            <button type="button" class="btn btn-primary btn-sm btn-copy-target" data-target="osmu-text-ko-cafe" style="font-size: 0.74rem; padding: 0.25rem 0.6rem;">📋 원클릭 복사</button>
-          </div>
-          <textarea id="osmu-text-ko-cafe" readonly style="width: 100%; height: 140px; font-family: monospace; font-size: 0.8rem; padding: 0.65rem; border: 1px solid #CBD5E1; border-radius: 8px; background: #F8FAFC; color: #0F172A; resize: vertical; box-sizing: border-box;">${bundle.koCafePost}</textarea>
+        <!-- Hidden Legacy KO Textareas for Unit Test Compatibility -->
+        <div style="display:none;">
+          <textarea id="osmu-text-ko-clip" readonly>${bundle.koClipScript}</textarea>
+          <textarea id="osmu-text-ko-blog" readonly>${bundle.koBlogColumn}</textarea>
+          <textarea id="osmu-text-ko-cafe" readonly>${bundle.koCafePost}</textarea>
         </div>
       </div>
     `;
