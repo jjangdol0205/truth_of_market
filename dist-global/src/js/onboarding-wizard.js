@@ -1350,12 +1350,14 @@
     const recentInput = document.getElementById('child-recent-gain');
     const fatherInput = document.getElementById('father-height');
     const motherInput = document.getElementById('mother-height');
+    const targetHeightInput = document.getElementById('target-height');
 
     let currentHeight = heightInput ? parseFloat(heightInput.value) || 137.0 : 137.0;
     let currentWeight = weightInput ? parseFloat(weightInput.value) || 35.5 : 35.5;
     let recentGrowth6m = recentInput ? parseFloat(recentInput.value) || 3.0 : 3.0;
     let fatherHeight = fatherInput ? parseFloat(fatherInput.value) || 173.5 : 173.5;
     let motherHeight = motherInput ? parseFloat(motherInput.value) || 160.5 : 160.5;
+    let targetHeight = targetHeightInput ? parseFloat(targetHeightInput.value) || 180.0 : 180.0;
 
     const isImperial = typeof document !== 'undefined' && document.documentElement.lang === 'en' && typeof global.TallerI18n !== 'undefined' && global.TallerI18n.getUnitSystem() === 'imperial';
     if (isImperial) {
@@ -1364,6 +1366,9 @@
       recentGrowth6m = Math.round(recentGrowth6m * 2.54 * 10) / 10;
       fatherHeight = Math.round(fatherHeight * 2.54 * 10) / 10;
       motherHeight = Math.round(motherHeight * 2.54 * 10) / 10;
+      if (targetHeight < 110) {
+        targetHeight = Math.round(targetHeight * 2.54 * 10) / 10;
+      }
     }
 
     // Tanner Phase
@@ -1470,6 +1475,7 @@
       recentGrowth6m,
       fatherHeight,
       motherHeight,
+      targetHeight,
       tannerPhase,
       habits,
       cognitiveAxes,
@@ -1789,6 +1795,31 @@
           }
         }
       }
+
+      // Target / Dream Height: ft/in <-> #target-height
+      const thFt = document.getElementById('target-height-ft');
+      const thIn = document.getElementById('target-height-in');
+      const thH = document.getElementById('target-height');
+      if (thH && (thFt || thIn)) {
+        if (direction === 'from-companion' && (sourceId === 'target-height-ft' || sourceId === 'target-height-in')) {
+          const ft = parseFloat(thFt && thFt.value) || 0;
+          const inch = parseFloat(thIn && thIn.value) || 0;
+          const totIn = Math.round((ft * 12 + inch) * 10) / 10;
+          thH.value = isImperial
+            ? (totIn > 0 ? totIn.toFixed(1) : '')
+            : (totIn > 0 ? (Math.round(totIn * 2.54 * 10) / 10).toFixed(1) : '');
+        } else if (sourceId === 'target-height' || !sourceId) {
+          const v = parseFloat(thH.value) || 0;
+          if (v > 0) {
+            const totIn = (isImperial && v < 110) ? v : Math.round((v / 2.54) * 10) / 10;
+            let ft = Math.floor(totIn / 12);
+            let inch = Math.round((totIn - ft * 12) * 10) / 10;
+            if (inch >= 12) { ft += 1; inch = 0; }
+            if (thFt) thFt.value = String(ft);
+            if (thIn) thIn.value = inch.toFixed(1);
+          }
+        }
+      }
     } finally {
       _isSyncingUnits = false;
     }
@@ -1830,6 +1861,7 @@
         const childR = document.getElementById('child-recent-gain');
         const fatH = document.getElementById('father-height');
         const motH = document.getElementById('mother-height');
+        const tarH = document.getElementById('target-height');
 
         if (isImperial) {
           if (childH && childH.value) {
@@ -1857,6 +1889,11 @@
             if (!isNaN(v) && v > 0) motH.value = (Math.round((v / 2.54) * 10) / 10).toFixed(1);
             motH.min = '40'; motH.max = '95'; motH.placeholder = '63.2';
           }
+          if (tarH && tarH.value) {
+            const v = parseFloat(tarH.value);
+            if (!isNaN(v) && v >= 110) tarH.value = (Math.round((v / 2.54) * 10) / 10).toFixed(1);
+            tarH.min = '45'; tarH.max = '95'; tarH.placeholder = '70.9';
+          }
         } else {
           if (childH && childH.value) {
             const v = parseFloat(childH.value);
@@ -1882,6 +1919,11 @@
             const v = parseFloat(motH.value);
             if (!isNaN(v) && v > 0) motH.value = (Math.round(v * 2.54 * 10) / 10).toFixed(1);
             motH.min = '100'; motH.max = '240'; motH.placeholder = '160.5';
+          }
+          if (tarH && tarH.value) {
+            const v = parseFloat(tarH.value);
+            if (!isNaN(v) && v > 0 && v < 110) tarH.value = (Math.round(v * 2.54 * 10) / 10).toFixed(1);
+            tarH.min = '120'; tarH.max = '230'; tarH.placeholder = '180.0';
           }
         }
       }
@@ -1925,8 +1967,13 @@
       syncCompanionInputs();
       updateMphPreview();
 
-      if (typeof global.KidsFitGlobalPaywall !== 'undefined' && typeof global.KidsFitGlobalPaywall.transformGlobalReportAndApplyPaywall === 'function') {
-        global.KidsFitGlobalPaywall.transformGlobalReportAndApplyPaywall();
+      if (typeof global.KidsFitGlobalPaywall !== 'undefined') {
+        if (typeof global.KidsFitGlobalPaywall.applyGlobalHomepageEnglishDOM === 'function') {
+          global.KidsFitGlobalPaywall.applyGlobalHomepageEnglishDOM();
+        }
+        if (typeof global.KidsFitGlobalPaywall.transformGlobalReportAndApplyPaywall === 'function') {
+          global.KidsFitGlobalPaywall.transformGlobalReportAndApplyPaywall();
+        }
       }
     } finally {
       _isSwitchingUnits = false;
@@ -2029,6 +2076,22 @@
     if (mhH && !mhH._hasSyncListener) {
       mhH._hasSyncListener = true;
       mhH.addEventListener('input', () => syncCompanionInputs('to-companion', 'mother-height'));
+    }
+
+    const thFt = document.getElementById('target-height-ft');
+    const thIn = document.getElementById('target-height-in');
+    const thH = document.getElementById('target-height');
+    if (thFt && !thFt._hasSyncListener) {
+      thFt._hasSyncListener = true;
+      thFt.addEventListener('input', () => syncCompanionInputs('from-companion', 'target-height-ft'));
+    }
+    if (thIn && !thIn._hasSyncListener) {
+      thIn._hasSyncListener = true;
+      thIn.addEventListener('input', () => syncCompanionInputs('from-companion', 'target-height-in'));
+    }
+    if (thH && !thH._hasSyncListener) {
+      thH._hasSyncListener = true;
+      thH.addEventListener('input', () => syncCompanionInputs('to-companion', 'target-height'));
     }
 
     // Initial sync

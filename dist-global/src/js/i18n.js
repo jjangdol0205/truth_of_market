@@ -257,7 +257,7 @@
       // Header & Brand
       'brand.title': 'KIDS-FIT',
       'brand.tagline': 'Height · Physical · Mental Growth & Personalized Learning Platform',
-      'trust.badge': 'Built on Official Standards: US CDC 2000, WHO & KDCA Pediatric Auxology',
+      'trust.badge': 'Built on Official Standards: US CDC 2000, WHO & AAP Pediatric Auxology',
       'nav.auxology': 'Physical Growth & Auxology',
       'nav.endocrinology': 'Endocrinology & Bio-Nutrition',
       'nav.biomechanics': 'Biomechanics & Posture',
@@ -268,7 +268,7 @@
       'lang.toggle': '🇰🇷 한국어',
 
       // Hero
-      'hero.badge': '🌱 Powered by KDCA Growth Standards & 3,714 Clinical Papers · K-GROWTH AI™',
+      'hero.badge': '🌱 Powered by US CDC 2000, WHO Growth Standards & 3,714 Clinical Papers · KIDS-FIT AI™',
       'hero.headline': 'How Tall Will Your Child Grow?\n<span class="hero-headline-highlight" style="background: linear-gradient(90deg, #38BDF8 0%, #34D399 60%, #A7F3D0 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Separate Physical Growth Report & Brain Learning Report in 1 Min</span>',
       'hero.subtitle': '1-Min Input → Independent [Physical Growth Report] & [Brain Learning Report]',
       'nav.forWhom': 'Who It\'s For',
@@ -304,7 +304,7 @@
       'services.s2.desc': 'Auto-detects growth stage and maps out 4 years of brain & self-directed study focus.',
       'services.s3.title': 'Pinpoint Supplements · Toys · Books · Edu Travel',
       'services.s3.desc': 'Matches verified specific products directly to your child\'s appetite, sleep & temperament.',
-      'services.basis': 'Clinical Basis: KDCA Growth Charts · US CDC 2000 · K-DST Milestones · 3,714-Paper DB',
+      'services.basis': 'Clinical Basis: US CDC 2000 · WHO Growth Standards · ASQ-3 / AAP Milestones · 3,714-Paper DB',
 
       // Studio & Quiz Extra Keys
       'studio.bar.title': '✦ KIDS-FIT AI · 1:1 Personalized Growth & Learning Diagnosis',
@@ -335,11 +335,11 @@
       'results.tab2.desc': 'Slow-wave sleep (SWS) GH suppression simulation (-52% max) and weight-proportional nutrient bioavailability gauges.',
       'results.tab3.title': 'Spinal Decompression & Epiphyseal Biomechanics Studio',
       'results.tab3.desc': 'Intervertebral disc rehydration (+1.8 cm) and Wolff\'s Law mechanical loading routines with interactive countdown timers.',
-      'results.tab4.title': 'Neuro-Cognitive Matrix & Weekend Havruta Inquiry Roadmap',
+      'results.tab4.title': 'Neuro-Cognitive Matrix & Weekend Socratic Inquiry Roadmap',
       'results.tab4.desc': '5-axis neuro-cognitive balance radar chart, age-specific cortical development guide, and 3-step inquiry dialogue prompts.',
       'results.tab5.title': '90-Day Growth Tracker & Hospital-Style A4 Clinical Report',
       'results.tab5.desc': 'Continuous height/weight streak tracker and 1-click printable 2-page A4 clinical report.',
-      'footer.disclaimer': 'Powered by proprietary K-GROWTH AI™ algorithms and official US CDC 2000, WHO Growth Standards, KDCA 2017 Growth Charts, and K-DST developmental milestones (3,714 papers). This guidebook is for educational and wellness guidance and does not replace medical diagnosis. Product recommendation links on this service are part of Coupang Partners and affiliate marketing programs, through which we may receive a commission.',
+      'footer.disclaimer': 'Powered by proprietary KIDS-FIT AI™ algorithms and official US CDC 2000, WHO Growth Standards, AAP, PES, and ASQ-3 developmental milestones (3,714 papers). This guidebook is for educational and wellness guidance and does not replace medical diagnosis. Product recommendation links on this service are part of Amazon Associates and global affiliate programs, through which we may receive a commission.',
 
       // Presets
       'presets.badge': 'Clinical Demo Presets',
@@ -364,7 +364,7 @@
       // Wizard Steps
       'wizard.step': 'Step',
       'wizard.step1.title': 'Child Basic Info (Sex · Date of Birth)',
-      'wizard.step1.sub': 'Calculates exact days since birth for KDCA/CDC LMS percentile comparison.',
+      'wizard.step1.sub': 'Calculates exact days since birth for US CDC 2000 & WHO LMS percentile comparison.',
       'wizard.step2.title': 'Current Height · Weight · 6-Month Growth Gain',
       'wizard.step2.sub': 'Evaluates current stature and annual growth velocity (cm/yr).',
       'wizard.step3.title': 'Parents\' Height & Region Selection',
@@ -422,7 +422,7 @@
 
       // Results
       'rx.retest': '🔄 Re-enter Information',
-      'rx.standard.kdca': 'K-GROWTH AI™ · KDCA 2017 & US CDC 2000 Precision Analysis Complete',
+      'rx.standard.kdca': 'KIDS-FIT AI™ · US CDC 2000, WHO & AAP Precision Analysis Complete',
       'rx.standard.cdc': 'US CDC 2000 & WHO Clinical Growth Standards Applied',
 
       // Deep Child Trait Questions (Multi-Select Expanded)
@@ -479,7 +479,7 @@
       'quiz.trait.learning.opt7': 'Knows concepts but makes careless calculation or reading mistakes on tests',
       'quiz.trait.learning.opt8': 'Struggles to plan daily study volume and schedule independently',
       'quiz.trait.studystyle.label': '🎯 Preferred Learning & Study Absorption Style',
-      'quiz.trait.studystyle.opt1': '🗣️ Dialogue & Inquiry — Understands best when asking and explaining aloud (Havruta)',
+      'quiz.trait.studystyle.opt1': '🗣️ Dialogue & Inquiry — Understands best when asking and explaining aloud (Socratic / Feynman)',
       'quiz.trait.studystyle.opt2': '🧩 Hands-On Manipulative — Thrives when touching blocks, 3D shapes & experiment kits',
       'quiz.trait.studystyle.opt3': '🎨 Visual & Mind-Map — Remembers longer with diagrams, charts & visual stories',
       'quiz.trait.studystyle.opt4': '🏆 Daily Mission & Goal — Focuses best with 15-min timer missions & daily checklists',

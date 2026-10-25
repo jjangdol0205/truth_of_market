@@ -545,7 +545,24 @@
       overlay.style.display = 'flex';
       overlay.setAttribute('aria-hidden', 'false');
 
-      const messages = [
+      const isEnMsg = typeof document !== 'undefined' && document.documentElement && (document.documentElement.lang === 'en' || (typeof document.documentElement.getAttribute === 'function' && document.documentElement.getAttribute('data-edition') === 'global-paid'));
+      const messages = isEnMsg ? [
+        {
+          pct: 28,
+          title: 'Cross-Referencing US CDC 2000 & WHO Growth Percentiles...',
+          desc: `Computing exact LMS Z-scores for ${state.profile.ageMonths} mos (${state.profile.gender === 'boy' ? 'Male' : 'Female'}).`
+        },
+        {
+          pct: 68,
+          title: 'Analyzing ASQ-3 / 5-Axis Neuro-Cognitive & Auxology Matrix...',
+          desc: 'Synthesizing personalized growth-plate and cognitive development protocols.'
+        },
+        {
+          pct: 100,
+          title: 'Your Child\'s Personalized Clinical Report is Ready!',
+          desc: '3-Tier Adult Height Trajectory, Bio-Nutrition & Daily Action Plan prepared.'
+        }
+      ] : [
         {
           pct: 28,
           title: '소아성장도표(KDCA 2017) 표준 백분위 대조 중...',
@@ -848,10 +865,11 @@
 
       const sim = EndocrinologyEngine.simulateHormoneCurve(bMin, mMin);
 
+      const isEnH = typeof document !== 'undefined' && document.documentElement && (document.documentElement.lang === 'en' || (typeof document.documentElement.getAttribute === 'function' && document.documentElement.getAttribute('data-edition') === 'global-paid'));
       if (bedtimeDisplay) bedtimeDisplay.textContent = sim.bedtimeStr;
       if (mealDisplay) mealDisplay.textContent = sim.mealStr;
       if (gapDisplay) {
-        gapDisplay.textContent = `${sim.gapHours}시간`;
+        gapDisplay.textContent = isEnH ? `${sim.gapHours}h` : `${sim.gapHours}시간`;
         gapDisplay.style.color = '#1D4ED8';
       }
       if (delayPenaltyEl) delayPenaltyEl.textContent = `-${sim.delayPenalty}%`;
@@ -862,7 +880,12 @@
         const badgeBg = '#EFF6FF';
         lossBadge.style.border = `1.5px solid ${badgeColor}`;
         lossBadge.style.background = badgeBg;
-        lossBadge.innerHTML = `
+        lossBadge.innerHTML = isEnH ? `
+          <span style="font-size: 0.75rem; font-weight: 700; color: #334155; display: block;">GH Secretion Loss Rate</span>
+          <span style="font-size: 1.25rem; font-weight: 800; color: ${badgeColor};">
+            -${sim.ghLossPercent}% <span style="font-size: 0.75rem; font-weight: 600;">(Max -52% suppression)</span>
+          </span>
+        ` : `
           <span style="font-size: 0.75rem; font-weight: 700; color: #334155; display: block;">성장호르몬 분비 손실률</span>
           <span style="font-size: 1.25rem; font-weight: 800; color: ${badgeColor};">
             -${sim.ghLossPercent}% <span style="font-size: 0.75rem; font-weight: 600;">(최대 -52% 억제)</span>
@@ -872,10 +895,19 @@
 
       if (svgContainer) {
         svgContainer.innerHTML = EndocrinologyEngine.renderHormoneSvg(bMin, mMin);
+        if (isEnH && global.TallerI18n && typeof global.TallerI18n.setLanguage === 'function') {
+          try { global.TallerI18n.setLanguage('en'); } catch (_) {}
+        }
       }
 
       if (adviceText) {
-        adviceText.innerHTML = sim.clinicalAdvice;
+        adviceText.innerHTML = isEnH
+          ? (sim.ghLossPercent >= 40.0
+              ? `Urgent Alert (-${sim.ghLossPercent}% loss): Finish dinner before 19:00 and start dark-room sleep before 22:00.`
+              : (sim.ghLossPercent > 0.0
+                  ? `Partial Suppression (-${sim.ghLossPercent}%): Reducing bedtime delay (-${sim.delayPenalty}%) and late-night carbs (-${sim.carbPenalty}%) restores peak GH pulses.`
+                  : 'Optimal 100% GH Pulsatile State: Bedtime before 22:00 & 3-hour pre-sleep fasting achieved.'))
+          : sim.clinicalAdvice;
       }
       if (adviceCard) {
         adviceCard.style.borderLeft = '4px solid #1D4ED8';
@@ -904,12 +936,15 @@
     const pred = GrowthEngine ? GrowthEngine.calculateHeightPrediction(mph, state.profile.habits, state.profile.pubertyStage) : { potentialHeight: 178 };
     const outing = WeekendCurator ? WeekendCurator.getWeekendOuting(state.profile.region, state.profile.interest) : { destination: '어린이박물관' };
 
-    const childGender = state.profile.gender === 'boy' ? '남아' : '여아';
-    const text = `💌 여보! 방금 우리 아이(만 ${state.profile.ageMonths}개월 ${childGender}) 질병관리청 성장도표 진단해봤는데, 또래 상위 ${kdca.topPercent}%래!\n골든타임 관리하면 최대 ${pred.potentialHeight}cm까지 클 수 있대!\n이번 주말엔 [${outing.destination}] 같이 가보자 👉 https://kidsfit.co.kr`;
+    const isEnShare = typeof document !== 'undefined' && document.documentElement && (document.documentElement.lang === 'en' || (typeof document.documentElement.getAttribute === 'function' && document.documentElement.getAttribute('data-edition') === 'global-paid'));
+    const childGender = state.profile.gender === 'boy' ? (isEnShare ? 'Boy' : '남아') : (isEnShare ? 'Girl' : '여아');
+    const text = isEnShare
+      ? `✨ KidsFit Clinical Growth Report (${state.profile.ageMonths} mos ${childGender}): Top ${kdca.topPercent}% on US CDC Growth Charts! With clinical optimization, projected adult height reaches ${pred.potentialHeight} cm (${Math.floor((pred.potentialHeight / 2.54) / 12)}'${Math.round((pred.potentialHeight / 2.54) % 12)}")! 👉 https://truthofmarket.com`
+      : `💌 여보! 방금 우리 아이(만 ${state.profile.ageMonths}개월 ${childGender}) 질병관리청 성장도표 진단해봤는데, 또래 상위 ${kdca.topPercent}%래!\n골든타임 관리하면 최대 ${pred.potentialHeight}cm까지 클 수 있대!\n이번 주말엔 [${outing.destination}] 같이 가보자 👉 https://kidsfit.co.kr`;
 
     if (typeof navigator !== 'undefined' && navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(text).then(() => {
-        alert('카톡 공유용 맞춤 처방전 메시지가 클립보드에 복사되었습니다!\n카카오톡 대화창에 붙여넣기(Ctrl+V) 해주세요.');
+        alert(isEnShare ? 'Your child\'s clinical report summary link has been copied to the clipboard!' : '카톡 공유용 맞춤 처방전 메시지가 클립보드에 복사되었습니다!\n카카오톡 대화창에 붙여넣기(Ctrl+V) 해주세요.');
       }).catch(() => {
         alert(text);
       });

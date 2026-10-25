@@ -187,11 +187,33 @@
   function isGlobalEnMode() {
     try {
       if (typeof document !== 'undefined' && document.documentElement) {
-        if (document.documentElement.lang === 'en' || document.documentElement.getAttribute('data-edition') === 'global-paid') return true;
+        if (document.documentElement.lang === 'en' || (typeof document.documentElement.getAttribute === 'function' && document.documentElement.getAttribute('data-edition') === 'global-paid')) return true;
       }
       if (typeof window !== 'undefined' && window.__KIDSFIT_GLOBAL_PAID_EDITION === true) return true;
     } catch (_) {}
     return false;
+  }
+
+  function formatHeightUnit(cmVal) {
+    const cm = Number(cmVal) || 137.0;
+    const isImp = typeof window !== 'undefined' && (window.__KIDSFIT_UNIT_SYSTEM__ === 'imperial' || (window.TallerI18n && typeof window.TallerI18n.getUnitSystem === 'function' && window.TallerI18n.getUnitSystem() === 'imperial'));
+    if (isImp) {
+      const totalIn = cm / 2.54;
+      const ft = Math.floor(totalIn / 12);
+      const inch = Math.round((totalIn - ft * 12) * 10) / 10;
+      return `${ft}'${inch}" (${cm.toFixed(1)} cm)`;
+    }
+    return `${cm.toFixed(1)} cm`;
+  }
+
+  function formatWeightUnit(kgVal) {
+    const kg = Number(kgVal) || 35.5;
+    const isImp = typeof window !== 'undefined' && (window.__KIDSFIT_UNIT_SYSTEM__ === 'imperial' || (window.TallerI18n && typeof window.TallerI18n.getUnitSystem === 'function' && window.TallerI18n.getUnitSystem() === 'imperial'));
+    if (isImp) {
+      const lbs = Math.round(kg * 2.20462262 * 10) / 10;
+      return `${lbs} lbs (${kg.toFixed(1)} kg)`;
+    }
+    return `${kg.toFixed(1)} kg`;
   }
 
   function buildChildWaitingCards(profile = {}) {
@@ -209,6 +231,9 @@
       const mph = Math.round(((fatherH + motherH + (profile.gender === 'girl' ? -13 : 13)) / 2) * 10) / 10;
       const closureAge = profile.gender === 'girl' ? 15 : 17;
       const remYearsMax = Math.max(2, closureAge - ageYears);
+      const hDisp = formatHeightUnit(height);
+      const wDisp = formatWeightUnit(weight);
+      const mphDisp = formatHeightUnit(mph);
       if (isLearning) {
         return [
           {
@@ -252,9 +277,9 @@
       return [
         {
           badge: `Auxology Briefing 1/6 · Day-Exact CDC/WHO LMS Percentile Scan`,
-          title: `Cross-Analyzing ${height} cm / ${weight} kg at ${exactMonths} Months (${genderEn})`,
+          title: `Cross-Analyzing ${hDisp} / ${wDisp} at ${exactMonths} Months (${genderEn})`,
           body: `Even within the same birth year, January vs. December births differ by up to <strong>1.9 in (4.8 cm)</strong>. Computing day-exact US CDC 2000 & WHO LMS Z-scores.`,
-          highlight: `Tanner Mid-Parental Height (MPH): ${mph} cm (±8.5 cm epigenetic window = 17 cm total range)`
+          highlight: `Tanner Mid-Parental Height (MPH): ${mphDisp} (±3.3 in / ±8.5 cm epigenetic window = 6.7 in / 17 cm total range)`
         },
         {
           badge: `Auxology Briefing 2/6 · Weight-for-Height & Leptin Bone-Age Check`,
@@ -270,7 +295,7 @@
         },
         {
           badge: `Auxology Briefing 4/6 · Bioavailable Calcium, Vit D3/K2 & Zinc Targets`,
-          title: `Computing Exact Daily mg/IU Targets for ${weight} kg Body Weight`,
+          title: `Computing Exact Daily mg/IU Targets for ${wDisp} Body Weight`,
           body: `Citrate/MCHA Calcium offers <strong>45% bioavailability</strong> (2.05x higher than carbonate) when paired with Vitamin D3 and MK-7 Vitamin K2.`,
           highlight: `Applying peer-reviewed pediatric endocrinology & nutrition standards...`
         },
@@ -464,7 +489,7 @@
       step: 1,
       rangeSec: [0, 10],
       titleKo: 'Step 1/6 · 생년월일 일수 단위 정밀 월령 산출 및 질병관리청(KDCA) 키·몸무게 백분위 대조 중...',
-      titleEn: 'Step 1/6 · Computing Exact Chronological Age & KDCA/CDC Height/Weight Percentiles...'
+      titleEn: 'Step 1/6 · Computing Exact Chronological Age & US CDC 2000 / WHO LMS Height/Weight Percentiles...'
     },
     {
       step: 2,
@@ -729,10 +754,10 @@
         theatreDiv.innerHTML = `
           <div style="display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; margin-bottom: 0.65rem; flex-wrap: wrap;">
             <span id="analysis-countdown-badge" style="font-size: 0.8rem; font-weight: 800; color: #1D4ED8; background: #EFF6FF; border: 1px solid #BFDBFE; padding: 0.22rem 0.65rem; border-radius: 9999px;">
-              정밀 맞춤 연산 중 · 약 4초 남음
+              ${isEn ? 'Pediatric Auxology Scan · ~4s remaining' : '정밀 맞춤 연산 중 · 약 4초 남음'}
             </span>
             <button type="button" id="btn-haptic-toggle" style="font-size: 0.75rem; font-weight: 700; color: #1D4ED8; background: #EFF6FF; border: 1px solid #BFDBFE; padding: 0.2rem 0.6rem; border-radius: 9999px; cursor: pointer;">
-              햅틱·진동 ON
+              ${isEn ? 'Haptic ON' : '햅틱·진동 ON'}
             </button>
           </div>
           <div id="theatre-stage-pills" style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 0.3rem; margin-bottom: 0.85rem;">
@@ -783,8 +808,8 @@
     }
     if (descEl) {
       descEl.textContent = isLearning
-        ? `${profile.birthDateStr || ''} (생후 ${profile.exactMonths || profile.ageMonths}개월) ${profile.gender === 'girl' ? '여아' : '남아'}의 두뇌 민감기·전두엽 작업기억·문해/수리 데이터를 3,714편 인지뇌과학 학술 DB와 1:1 정밀 매칭하고 있습니다.`
-        : `${profile.birthDateStr || ''} (생후 ${profile.exactMonths || profile.ageMonths}개월) ${profile.gender === 'girl' ? '여아' : '남아'}의 키·체중·성장판 데이터를 3,714편 소아내분비 학술 DB 및 국가 표준 성장도표와 1:1 정밀 매칭하고 있습니다.`;
+        ? (isEn ? `Cross-referencing ${profile.birthDateStr || ''} (${profile.exactMonths || profile.ageMonths} mos, ${profile.gender === 'girl' ? 'Female' : 'Male'}) prefrontal executive & cognitive metrics against 3,714 peer-reviewed neuroscience papers.` : `${profile.birthDateStr || ''} (생후 ${profile.exactMonths || profile.ageMonths}개월) ${profile.gender === 'girl' ? '여아' : '남아'}의 두뇌 민감기·전두엽 작업기억·문해/수리 데이터를 3,714편 인지뇌과학 학술 DB와 1:1 정밀 매칭하고 있습니다.`)
+        : (isEn ? `Cross-referencing ${profile.birthDateStr || ''} (${profile.exactMonths || profile.ageMonths} mos, ${profile.gender === 'girl' ? 'Female' : 'Male'}) height, weight & epiphyseal plate data against US CDC 2000, WHO & 3,714 pediatric endocrine papers.` : `${profile.birthDateStr || ''} (생후 ${profile.exactMonths || profile.ageMonths}개월) ${profile.gender === 'girl' ? '여아' : '남아'}의 키·체중·성장판 데이터를 3,714편 소아내분비 학술 DB 및 국가 표준 성장도표와 1:1 정밀 매칭하고 있습니다.`);
     }
     currentStageIdx = 0;
 
