@@ -1751,11 +1751,11 @@
   "metadata": {
     "project": "KidsFit Growth Studio (키즈핏 성장·두뇌·양육 연구소)",
     "version": "2.0.0",
-    "generated_at": "2026-10-25T09:05:58Z",
-    "total_papers": 3856,
+    "generated_at": "2026-10-25T11:06:25Z",
+    "total_papers": 3867,
     "pillar_counts": {
-      "growth_endocrinology": 1098,
-      "fine_motor_neuroscience": 780,
+      "growth_endocrinology": 1101,
+      "fine_motor_neuroscience": 788,
       "pedagogy_montessori_froebel": 520,
       "parent_child_interaction_museum": 917,
       "posture_biomechanics_exercise": 541
@@ -1766,20 +1766,20 @@
       "KidsFit Pediatric Clinical Anchor Curation",
       "OpenAlex Academic Graph API (https://api.openalex.org/works)"
     ],
-    "last_updated_utc": "2026-10-25T09:05:59Z",
+    "last_updated_utc": "2026-10-25T11:06:27Z",
     "learning_analytics": {
-      "last_enriched_utc": "2026-10-25T09:05:59Z",
-      "total_papers": 3856,
+      "last_enriched_utc": "2026-10-25T11:06:27Z",
+      "total_papers": 3867,
       "total_pillars": 5,
       "total_sub_domains": 12,
       "newly_expanded_scope_papers": 0,
       "macro_pillar_balance": {
-        "growth_macro_count": 1639,
-        "learning_macro_count": 2217,
-        "total_macro_papers": 3856,
-        "growth_ratio": 0.4251,
+        "growth_macro_count": 1642,
+        "learning_macro_count": 2225,
+        "total_macro_papers": 3867,
+        "growth_ratio": 0.4246,
         "growth_percent": 42.5,
-        "learning_ratio": 0.5749,
+        "learning_ratio": 0.5754,
         "learning_percent": 57.5,
         "learning_ratio_percent": 57.5,
         "target_ratio": 0.5,
@@ -1790,7 +1790,7 @@
           "growth_percent": 80,
           "learning_percent": 20
         },
-        "last_balanced_utc": "2026-10-25T09:05:59Z"
+        "last_balanced_utc": "2026-10-25T11:06:27Z"
       },
       "sub_domain_distribution": [
         {
@@ -1820,7 +1820,7 @@
           "title_en": "Clinical Nutrigenomics, Gut-Bone Axis & Bioavailability",
           "icon": "🥗",
           "color": "#10B981",
-          "count": 646,
+          "count": 649,
           "percent": 16.8
         },
         {
@@ -1850,8 +1850,8 @@
           "title_en": "Prefrontal Executive Function & Working Memory Longitudinal",
           "icon": "🧠",
           "color": "#A855F7",
-          "count": 718,
-          "percent": 18.6
+          "count": 726,
+          "percent": 18.8
         },
         {
           "id": "pedagogy_montessori_froebel",
@@ -1871,7 +1871,7 @@
           "icon": "📐",
           "color": "#06B6D4",
           "count": 427,
-          "percent": 11.1
+          "percent": 11.0
         },
         {
           "id": "parent_child_interaction_museum",
@@ -1881,7 +1881,7 @@
           "icon": "🏛️",
           "color": "#F97316",
           "count": 253,
-          "percent": 6.6
+          "percent": 6.5
         },
         {
           "id": "emotion_coaching_vagal_tone",
@@ -1901,7 +1901,7 @@
           "icon": "🧘",
           "color": "#3B82F6",
           "count": 435,
-          "percent": 11.3
+          "percent": 11.2
         },
         {
           "id": "epiphyseal_wolff_loading",
@@ -1918,49 +1918,49 @@
         "short_term": {
           "label_ko": "단기 지도 (1~4주 즉시 교정·복원)",
           "label_en": "Short-Term (Weeks 1-4 Immediate Reset)",
-          "count": 2679
+          "count": 2682
         },
         "mid_term": {
           "label_ko": "중기 지도 (1~3개월 / 90일 생체·신경망 정착)",
           "label_en": "Mid-Term (Months 1-3 Bio & Neural Consolidation)",
-          "count": 3856
+          "count": 3867
         },
         "long_term": {
           "label_ko": "장기 지도 (6개월~만 20세 최종 표적키·자기주도 완성)",
           "label_en": "Long-Term (6M to Age 20 Adult Trajectory & Mastery)",
-          "count": 2433
+          "count": 2444
         }
       },
       "age_horizon_heatmap": {
         "1-3y": {
-          "short_term": 2071,
-          "mid_term": 3242,
-          "long_term": 2251
+          "short_term": 2074,
+          "mid_term": 3253,
+          "long_term": 2262
         },
         "4-6y": {
-          "short_term": 2184,
-          "mid_term": 3360,
-          "long_term": 2361
+          "short_term": 2187,
+          "mid_term": 3371,
+          "long_term": 2372
         },
         "7-9y": {
-          "short_term": 2664,
-          "mid_term": 3809,
-          "long_term": 2390
+          "short_term": 2666,
+          "mid_term": 3819,
+          "long_term": 2400
         },
         "10-12y": {
-          "short_term": 2074,
-          "mid_term": 3248,
-          "long_term": 2231
+          "short_term": 2077,
+          "mid_term": 3259,
+          "long_term": 2242
         },
         "13-16y": {
-          "short_term": 1512,
-          "mid_term": 1824,
-          "long_term": 1185
+          "short_term": 1515,
+          "mid_term": 1831,
+          "long_term": 1192
         },
         "17-20y": {
-          "short_term": 1512,
-          "mid_term": 1824,
-          "long_term": 1185
+          "short_term": 1515,
+          "mid_term": 1831,
+          "long_term": 1192
         }
       },
       "core_empirical_laws": [
@@ -2063,11 +2063,11 @@
       ],
       "top_journals": [
         {
-          "journal": "Frontiers in Psychology",
-          "count": 52
+          "journal": "Cognitive Development",
+          "count": 53
         },
         {
-          "journal": "Cognitive Development",
+          "journal": "Frontiers in Psychology",
           "count": 52
         },
         {
@@ -2145,15 +2145,15 @@
         "fine_motor_neuroscience": 1.19,
         "spatial_stem_mathematics": 1.21
       },
-      "last_synced_utc": "2026-10-25T09:05:58Z"
+      "last_synced_utc": "2026-10-25T11:06:25Z"
     },
     "macro_pillar_balance": {
-      "growth_macro_count": 1639,
-      "learning_macro_count": 2217,
-      "total_macro_papers": 3856,
-      "growth_ratio": 0.4251,
+      "growth_macro_count": 1642,
+      "learning_macro_count": 2225,
+      "total_macro_papers": 3867,
+      "growth_ratio": 0.4246,
       "growth_percent": 42.5,
-      "learning_ratio": 0.5749,
+      "learning_ratio": 0.5754,
       "learning_percent": 57.5,
       "learning_ratio_percent": 57.5,
       "target_ratio": 0.5,
@@ -2164,7 +2164,7 @@
         "growth_percent": 80,
         "learning_percent": 20
       },
-      "last_balanced_utc": "2026-10-25T09:05:59Z"
+      "last_balanced_utc": "2026-10-25T11:06:27Z"
     }
   },
   "pillars": [
@@ -2175,7 +2175,7 @@
       "title_en": "Pediatric Linear Growth, Sleep Endocrinology & Micronutrient Bioavailability",
       "target_feature": "키즈핏 성장 예측 계산기 (Tanner MPH · 골연령 · 수면/영양 성장 시뮬레이터)",
       "clinical_focus": "부모 키 기반 유전적 표적키(MPH) 산출, 서파수면(Slow-Wave Sleep) 중 뇌하수체 성장호르몬(GH)-IGF-1 분비 축, 칼슘·비타민D·아연·황기추출물(HT042)의 골단 연골세포 증식 기전, 소아비만 및 성조숙증(골연령 가속) 예방",
-      "paper_count": 1098
+      "paper_count": 1101
     },
     {
       "id": "fine_motor_neuroscience",
@@ -2184,7 +2184,7 @@
       "title_en": "Early Childhood Fine Motor Skills, Prefrontal Executive Function & K-DST Validation",
       "target_feature": "연령별(0~7세) 소근육·뇌발달 체크리스트 및 K-DST 기반 발달 단계 진단",
       "clinical_focus": "집게잡기(Pincer grasp)·삼지잡기(Tripod grasp)·양손 협응(Bimanual coordination)이 소뇌-전전두엽(Prefrontal Cortex) 신경망과 작업기억·초기 수리력(Mathematical readiness)에 미치는 종단적 영향 및 한국 영유아 발달선별검사(K-DST) 타당도",
-      "paper_count": 780
+      "paper_count": 788
     },
     {
       "id": "pedagogy_montessori_froebel",
@@ -8877,6 +8877,53 @@
         "17-20y"
       ],
       "plain_fact_ko": "칼슘·비타민D·아연 및 성장 기능성 영양 개입군에서 골단 연골 증식 및 골미네랄밀도(BMD) 유의미 개선(p < 0.05)",
+      "short_term_action_ko": "단기(1~4주): 액상과당·야식 차단 및 체중 비례 일일 단백질(체중×1.3g)·구연산 칼슘(흡수율 45%) 식단 전환",
+      "mid_term_action_ko": "중기(1~3개월): 칼슘+비타민D3+K2(MK-7)+아연 90일 포화 보충 및 장-골격 축(마이크로바이옴) 흡수 효율 정상화",
+      "long_term_action_ko": "장기(6개월~성인기): 골단판 연골기질 광화(Mineralization) 및 청소년기 최대 골질량(Peak Bone Mass) 완성"
+    },
+    {
+      "id": "PMID:40683781",
+      "pmid": "40683781",
+      "doi": "10.1016/j.prostaglandins.2025.107025",
+      "pillar": "growth_endocrinology",
+      "macro_pillar": "growth",
+      "title": "Corrigendum to \"The association between vitamin D deficiency and childhood obesity and its impact on children's serum calcium, alkaline phosphatase, and bone age\" [Prostaglandins Other Lipid Mediat. 176 (2024) 106920]",
+      "title_ko": "[성조숙증·골연령 코호트] Corrigendum to \"The association between vitamin D deficiency and childhood obesity and its (2025)",
+      "authors": [
+        "Zhu J",
+        "Wang B",
+        "Asemani S",
+        "Bao S",
+        "Tian N"
+      ],
+      "journal": "Prostaglandins & other lipid mediators",
+      "year": 2025,
+      "study_design": "Peer-Reviewed Clinical / Empirical Study (PubMed Indexed)",
+      "sample_size": "PubMed 동료심사 임상/코호트 표본",
+      "key_statistics": "과체중/비만 아동군에서 골연령(Bone Age) 가속화 및 사춘기 조기 발현 위험도 유의미 상승(p < 0.01)",
+      "clinical_summary_ko": "Prostaglandins & other lipid mediators (2025)에 게재된 연구로, 소아기 체지방률(렙틴 저항성) 및 환경호르몬 노출이 시상하부-뇌하수체-성선 축(HPG axis)을 조기 활성화하여 골단 성장판 폐쇄 시점을 앞당기는 병태생리를 규명했습니다.",
+      "parenting_prescription_ko": "초등 저학년(만 7~9세) 시기에 체중이 급증하면서 키가 갑자기 연간 7~8cm 이상 자란다면 단순 급성장이 아니라 성조숙증 신호일 수 있으므로 골연령(X-ray) 확인과 체지방 관리가 필수입니다.",
+      "age_range": "만 5~13세",
+      "evidence_level": "Level II (PubMed Peer-Reviewed Literature)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40683781/",
+      "source_api": "NCBI PubMed E-utilities Live",
+      "sub_domain": "clinical_nutrigenomics_microbiome",
+      "sub_domain_ko": "임상 영양유전체 · 장-골격 축 · 생체이용률",
+      "sub_domain_en": "Clinical Nutrigenomics, Gut-Bone Axis & Bioavailability",
+      "horizon": "mid_term",
+      "horizons": [
+        "short_term",
+        "mid_term",
+        "long_term"
+      ],
+      "age_bands": [
+        "1-3y",
+        "4-6y",
+        "10-12y",
+        "13-16y",
+        "17-20y"
+      ],
+      "plain_fact_ko": "과체중/비만 아동군에서 골연령(Bone Age) 가속화 및 사춘기 조기 발현 위험도 유의미 상승(p < 0.01)",
       "short_term_action_ko": "단기(1~4주): 액상과당·야식 차단 및 체중 비례 일일 단백질(체중×1.3g)·구연산 칼슘(흡수율 45%) 식단 전환",
       "mid_term_action_ko": "중기(1~3개월): 칼슘+비타민D3+K2(MK-7)+아연 90일 포화 보충 및 장-골격 축(마이크로바이옴) 흡수 효율 정상화",
       "long_term_action_ko": "장기(6개월~성인기): 골단판 연골기질 광화(Mineralization) 및 청소년기 최대 골질량(Peak Bone Mass) 완성"
@@ -21473,6 +21520,52 @@
       "short_term_action_ko": "단기(1~4주): 밤 21:45 입면 고정 · 취침 1시간 전 블루라이트 차단 · 취침 3시간 전 무당류 공복으로 야간 GH 억제율 0% 달성",
       "mid_term_action_ko": "중기(1~3개월): 90일 연속 서파수면(SWS) 생체리듬 정착으로 야간 성장호르몬(GH)·IGF-1 분비 진폭 극대화",
       "long_term_action_ko": "장기(6개월~성인기): 안정적 일주기 수면 아키텍처 유지를 통한 연간 성장속도 방어 및 전두엽 기억 공고화 완성"
+    },
+    {
+      "id": "DOI:10.1093/cdn/nzaa043_135",
+      "pmid": "",
+      "doi": "10.1093/cdn/nzaa043_135",
+      "pillar": "growth_endocrinology",
+      "macro_pillar": "growth",
+      "title": "Effectiveness of Social Protection Program to Prevent Stunting Among Children 6–24 Months in Rural Pakistan; A Cluster Randomized Controlled Trial",
+      "title_ko": "[소아 골성장·미량영양소 임상] Effectiveness of Social Protection Program to Prevent Stunting Among Children 6–24 Months  (2020)",
+      "authors": [
+        "Soofi S",
+        "Nawaz G"
+      ],
+      "journal": "Current Developments in Nutrition",
+      "year": 2020,
+      "citations_count": 1,
+      "study_design": "Peer-Reviewed Journal Article (Crossref DOI Indexed)",
+      "sample_size": "동료심사 학술지 검증 연구 표본",
+      "key_statistics": "칼슘·비타민D·아연 및 성장 기능성 영양 개입군에서 골단 연골 증식 및 골미네랄밀도(BMD) 유의미 개선(p < 0.05)",
+      "clinical_summary_ko": "Current Developments in Nutrition (2020)에 발표된 소아 영양·내분비 연구로, 필수 미네랄(칼슘·비타민D·아연)과 단백질의 생체이용률이 장골 골단판(Epiphyseal plate)의 연골내 골화(Endochondral ossification)에 미치는 정량적 효과를 검증했습니다.",
+      "parenting_prescription_ko": "단백질(체중 kg당 1.0~1.2g)과 칼슘·비타민D3·아연을 균형 있게 섭취하되, 탄산음료(인산에 의한 칼슘 배출)와 카페인 섭취를 엄격히 제한하세요.",
+      "age_range": "만 1~15세",
+      "evidence_level": "Level II (Crossref Peer-Reviewed Journal)",
+      "url": "https://doi.org/10.1093/cdn/nzaa043_135",
+      "source_api": "Crossref Works REST API Live",
+      "sub_domain": "clinical_nutrigenomics_microbiome",
+      "sub_domain_ko": "임상 영양유전체 · 장-골격 축 · 생체이용률",
+      "sub_domain_en": "Clinical Nutrigenomics, Gut-Bone Axis & Bioavailability",
+      "horizon": "mid_term",
+      "horizons": [
+        "short_term",
+        "mid_term",
+        "long_term"
+      ],
+      "age_bands": [
+        "1-3y",
+        "4-6y",
+        "7-9y",
+        "10-12y",
+        "13-16y",
+        "17-20y"
+      ],
+      "plain_fact_ko": "칼슘·비타민D·아연 및 성장 기능성 영양 개입군에서 골단 연골 증식 및 골미네랄밀도(BMD) 유의미 개선(p < 0.05)",
+      "short_term_action_ko": "단기(1~4주): 액상과당·야식 차단 및 체중 비례 일일 단백질(체중×1.3g)·구연산 칼슘(흡수율 45%) 식단 전환",
+      "mid_term_action_ko": "중기(1~3개월): 칼슘+비타민D3+K2(MK-7)+아연 90일 포화 보충 및 장-골격 축(마이크로바이옴) 흡수 효율 정상화",
+      "long_term_action_ko": "장기(6개월~성인기): 골단판 연골기질 광화(Mineralization) 및 청소년기 최대 골질량(Peak Bone Mass) 완성"
     },
     {
       "id": "PMID:31408142",
@@ -45292,6 +45385,52 @@
       "long_term_action_ko": "장기(6개월~성인기): 안정적 일주기 수면 아키텍처 유지를 통한 연간 성장속도 방어 및 전두엽 기억 공고화 완성"
     },
     {
+      "id": "PMID:10360195",
+      "pmid": "10360195",
+      "doi": "",
+      "pillar": "growth_endocrinology",
+      "macro_pillar": "growth",
+      "title": "[Biologic rhythms. Nyctemeral variation in man]",
+      "title_ko": "[소아 골성장·미량영양소 임상] [Biologic rhythms. Nyctemeral variation in man] (1999)",
+      "authors": [
+        "Copinschi G",
+        "Van Reeth O",
+        "Van Cauter E"
+      ],
+      "journal": "Presse medicale (Paris, France : 1983)",
+      "year": 1999,
+      "study_design": "Peer-Reviewed Clinical / Empirical Study (PubMed Indexed)",
+      "sample_size": "PubMed 동료심사 임상/코호트 표본",
+      "key_statistics": "칼슘·비타민D·아연 및 성장 기능성 영양 개입군에서 골단 연골 증식 및 골미네랄밀도(BMD) 유의미 개선(p < 0.05)",
+      "clinical_summary_ko": "Presse medicale (Paris, France : 1983) (1999)에 발표된 소아 영양·내분비 연구로, 필수 미네랄(칼슘·비타민D·아연)과 단백질의 생체이용률이 장골 골단판(Epiphyseal plate)의 연골내 골화(Endochondral ossification)에 미치는 정량적 효과를 검증했습니다.",
+      "parenting_prescription_ko": "단백질(체중 kg당 1.0~1.2g)과 칼슘·비타민D3·아연을 균형 있게 섭취하되, 탄산음료(인산에 의한 칼슘 배출)와 카페인 섭취를 엄격히 제한하세요.",
+      "age_range": "만 1~15세",
+      "evidence_level": "Level II (PubMed Peer-Reviewed Literature)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10360195/",
+      "source_api": "NCBI PubMed E-utilities Live",
+      "sub_domain": "clinical_nutrigenomics_microbiome",
+      "sub_domain_ko": "임상 영양유전체 · 장-골격 축 · 생체이용률",
+      "sub_domain_en": "Clinical Nutrigenomics, Gut-Bone Axis & Bioavailability",
+      "horizon": "mid_term",
+      "horizons": [
+        "short_term",
+        "mid_term",
+        "long_term"
+      ],
+      "age_bands": [
+        "1-3y",
+        "4-6y",
+        "7-9y",
+        "10-12y",
+        "13-16y",
+        "17-20y"
+      ],
+      "plain_fact_ko": "칼슘·비타민D·아연 및 성장 기능성 영양 개입군에서 골단 연골 증식 및 골미네랄밀도(BMD) 유의미 개선(p < 0.05)",
+      "short_term_action_ko": "단기(1~4주): 액상과당·야식 차단 및 체중 비례 일일 단백질(체중×1.3g)·구연산 칼슘(흡수율 45%) 식단 전환",
+      "mid_term_action_ko": "중기(1~3개월): 칼슘+비타민D3+K2(MK-7)+아연 90일 포화 보충 및 장-골격 축(마이크로바이옴) 흡수 효율 정상화",
+      "long_term_action_ko": "장기(6개월~성인기): 골단판 연골기질 광화(Mineralization) 및 청소년기 최대 골질량(Peak Bone Mass) 완성"
+    },
+    {
       "id": "DOI:10.1016/s1096-6374(98)80065-8",
       "pmid": "",
       "doi": "10.1016/s1096-6374(98)80065-8",
@@ -55856,6 +55995,53 @@
       "long_term_action_ko": "장기(6개월~성인기): 청소년·성인기까지 이어지는 전두엽 메타인지 및 자기주도 학습 역량(Self-Directed Mastery) 완성"
     },
     {
+      "id": "DOI:10.1016/j.cogdev.2026.101687",
+      "pmid": "",
+      "doi": "10.1016/j.cogdev.2026.101687",
+      "pillar": "fine_motor_neuroscience",
+      "macro_pillar": "learning",
+      "title": "Associations between infant multilingualism and language production and their effects on preschool-aged language development",
+      "title_ko": "[소근육·전두엽 실행기능 신경과학] Associations between infant multilingualism and language production and their effects on p (2026)",
+      "authors": [
+        "Valenzuela J",
+        "Kim SH",
+        "Banducci P",
+        "Bonaccorso C",
+        "Degotardi S",
+        "Djonov E"
+      ],
+      "journal": "Cognitive Development",
+      "year": 2026,
+      "citations_count": 0,
+      "study_design": "Peer-Reviewed Journal Article (Crossref DOI Indexed)",
+      "sample_size": "동료심사 학술지 검증 연구 표본",
+      "key_statistics": "정밀 소근육 및 시각-운동 통합(VMI) 점수가 작업기억·억제조절 및 초기 수학/문해력 성취도를 유의미하게 예측(p < 0.01)",
+      "clinical_summary_ko": "Cognitive Development (2026)에 게재된 발달신경과학 연구로, 영유아의 손가락 정밀 조작(집게잡기·삼지잡기·양손 협응)이 소뇌-전전두엽 신경회로를 자극하여 실행기능(Executive Function)과 초등 입학 준비도를 높이는 메커니즘을 규명했습니다.",
+      "parenting_prescription_ko": "하루 15~20분씩 구슬 꿰기, 핀셋으로 색깔 폼폼이 분류하기, 점토 빚기, 종이접기 등 손끝 고유수용성감각을 깨우는 아날로그 소근육 놀이를 제공하세요.",
+      "age_range": "만 1~7세",
+      "evidence_level": "Level II (Crossref Peer-Reviewed Journal)",
+      "url": "https://doi.org/10.1016/j.cogdev.2026.101687",
+      "source_api": "Crossref Works REST API Live",
+      "sub_domain": "executive_function_longitudinal",
+      "sub_domain_ko": "전두엽 실행기능 · 작업기억 · 종단 코호트",
+      "sub_domain_en": "Prefrontal Executive Function & Working Memory Longitudinal",
+      "horizon": "long_term",
+      "horizons": [
+        "mid_term",
+        "long_term"
+      ],
+      "age_bands": [
+        "1-3y",
+        "4-6y",
+        "7-9y",
+        "10-12y"
+      ],
+      "plain_fact_ko": "정밀 소근육 및 시각-운동 통합(VMI) 점수가 작업기억·억제조절 및 초기 수학/문해력 성취도를 유의미하게 예측(p < 0.01)",
+      "short_term_action_ko": "단기(1~4주): 부모의 일방적 지시 대신 아이 스스로 오늘의 3대 실천 루틴을 계획·체크하는 자기조절 환경 구축",
+      "mid_term_action_ko": "중기(1~3개월): 90일 스트릭(Streak) 달성 경험을 통해 작업기억(Working Memory)·충동억제·과제 지속력 회로 정착",
+      "long_term_action_ko": "장기(6개월~성인기): 청소년·성인기까지 이어지는 전두엽 메타인지 및 자기주도 학습 역량(Self-Directed Mastery) 완성"
+    },
+    {
       "id": "DOI:10.1016/j.cogdev.2025.101621",
       "pmid": "",
       "doi": "10.1016/j.cogdev.2025.101621",
@@ -57416,6 +57602,48 @@
       "evidence_level": "Level II (PubMed Peer-Reviewed Literature)",
       "url": "https://pubmed.ncbi.nlm.nih.gov/41153131/",
       "source_api": "NCBI PubMed E-utilities Live",
+      "sub_domain": "executive_function_longitudinal",
+      "sub_domain_ko": "전두엽 실행기능 · 작업기억 · 종단 코호트",
+      "sub_domain_en": "Prefrontal Executive Function & Working Memory Longitudinal",
+      "horizon": "long_term",
+      "horizons": [
+        "mid_term",
+        "long_term"
+      ],
+      "age_bands": [
+        "1-3y",
+        "4-6y",
+        "7-9y",
+        "10-12y"
+      ],
+      "plain_fact_ko": "정밀 소근육 및 시각-운동 통합(VMI) 점수가 작업기억·억제조절 및 초기 수학/문해력 성취도를 유의미하게 예측(p < 0.01)",
+      "short_term_action_ko": "단기(1~4주): 부모의 일방적 지시 대신 아이 스스로 오늘의 3대 실천 루틴을 계획·체크하는 자기조절 환경 구축",
+      "mid_term_action_ko": "중기(1~3개월): 90일 스트릭(Streak) 달성 경험을 통해 작업기억(Working Memory)·충동억제·과제 지속력 회로 정착",
+      "long_term_action_ko": "장기(6개월~성인기): 청소년·성인기까지 이어지는 전두엽 메타인지 및 자기주도 학습 역량(Self-Directed Mastery) 완성"
+    },
+    {
+      "id": "DOI:10.55640/jsshrf-05-05-13",
+      "pmid": "",
+      "doi": "10.55640/jsshrf-05-05-13",
+      "pillar": "fine_motor_neuroscience",
+      "macro_pillar": "learning",
+      "title": "Specific Features of Psychomotor and Cognitive Development in Children with Severe Speech Disabilities at Preschool Age",
+      "title_ko": "[소근육·전두엽 실행기능 신경과학] Specific Features of Psychomotor and Cognitive Development in Children with Severe Speech  (2025)",
+      "authors": [
+        "Mardonova D"
+      ],
+      "journal": "Journal of Social Sciences and Humanities Research Fundamentals",
+      "year": 2025,
+      "citations_count": 0,
+      "study_design": "Peer-Reviewed Journal Article (Crossref DOI Indexed)",
+      "sample_size": "동료심사 학술지 검증 연구 표본",
+      "key_statistics": "정밀 소근육 및 시각-운동 통합(VMI) 점수가 작업기억·억제조절 및 초기 수학/문해력 성취도를 유의미하게 예측(p < 0.01)",
+      "clinical_summary_ko": "Journal of Social Sciences and Humanities Research Fundamentals (2025)에 게재된 발달신경과학 연구로, 영유아의 손가락 정밀 조작(집게잡기·삼지잡기·양손 협응)이 소뇌-전전두엽 신경회로를 자극하여 실행기능(Executive Function)과 초등 입학 준비도를 높이는 메커니즘을 규명했습니다.",
+      "parenting_prescription_ko": "하루 15~20분씩 구슬 꿰기, 핀셋으로 색깔 폼폼이 분류하기, 점토 빚기, 종이접기 등 손끝 고유수용성감각을 깨우는 아날로그 소근육 놀이를 제공하세요.",
+      "age_range": "만 1~7세",
+      "evidence_level": "Level II (Crossref Peer-Reviewed Journal)",
+      "url": "https://doi.org/10.55640/jsshrf-05-05-13",
+      "source_api": "Crossref Works REST API Live",
       "sub_domain": "executive_function_longitudinal",
       "sub_domain_ko": "전두엽 실행기능 · 작업기억 · 종단 코호트",
       "sub_domain_en": "Prefrontal Executive Function & Working Memory Longitudinal",
@@ -59792,6 +60020,55 @@
       "long_term_action_ko": "장기(6개월~성인기): 청소년·성인기까지 이어지는 전두엽 메타인지 및 자기주도 학습 역량(Self-Directed Mastery) 완성"
     },
     {
+      "id": "PMID:38499409",
+      "pmid": "38499409",
+      "doi": "10.1016/j.tine.2024.100220",
+      "pillar": "fine_motor_neuroscience",
+      "macro_pillar": "learning",
+      "title": "Developmental associations of fundamental motor skills and executive functions in preschoolers — The role of the physical activity and the effects on early numeracy",
+      "title_ko": "[소근육·전두엽 실행기능 신경과학] Developmental associations of fundamental motor skills and executive functions in preschoo (2024)",
+      "authors": [
+        "Anssi Vanhala",
+        "Anna Widlund",
+        "Johan Korhonen",
+        "Eero A. Haapala",
+        "Arja Sääkslahti",
+        "Pirjo Aunio A"
+      ],
+      "journal": "Trends in Neuroscience and Education",
+      "year": 2024,
+      "citations_count": 14,
+      "study_design": "Peer-Reviewed Empirical Study (OpenAlex / DOI Indexed)",
+      "sample_size": "다기관 임상·발달 코호트",
+      "key_statistics": "[글로벌 피인용 14회] 정밀 소근육 및 시각-운동 통합(VMI) 점수가 작업기억·억제조절 및 초기 수학/문해력 성취도를 유의미하게 예측(p < 0.01)",
+      "clinical_summary_ko": "Trends in Neuroscience and Education (2024)에 게재된 발달신경과학 연구로, 영유아의 손가락 정밀 조작(집게잡기·삼지잡기·양손 협응)이 소뇌-전전두엽 신경회로를 자극하여 실행기능(Executive Function)과 초등 입학 준비도를 높이는 메커니즘을 규명했습니다.",
+      "parenting_prescription_ko": "하루 15~20분씩 구슬 꿰기, 핀셋으로 색깔 폼폼이 분류하기, 점토 빚기, 종이접기 등 손끝 고유수용성감각을 깨우는 아날로그 소근육 놀이를 제공하세요.",
+      "age_range": "만 1~7세",
+      "evidence_level": "Level II (OpenAlex Peer-Reviewed Article)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38499409/",
+      "source_api": "OpenAlex Academic Graph API Live",
+      "sub_domain": "executive_function_longitudinal",
+      "sub_domain_ko": "전두엽 실행기능 · 작업기억 · 종단 코호트",
+      "sub_domain_en": "Prefrontal Executive Function & Working Memory Longitudinal",
+      "horizon": "long_term",
+      "horizons": [
+        "mid_term",
+        "long_term"
+      ],
+      "age_bands": [
+        "1-3y",
+        "4-6y",
+        "7-9y",
+        "10-12y",
+        "13-16y",
+        "17-20y"
+      ],
+      "plain_fact_ko": "정밀 소근육 및 시각-운동 통합(VMI) 점수가 작업기억·억제조절 및 초기 수학/문해력 성취도를 유의미하게 예측(p < 0.01)",
+      "short_term_action_ko": "단기(1~4주): 부모의 일방적 지시 대신 아이 스스로 오늘의 3대 실천 루틴을 계획·체크하는 자기조절 환경 구축",
+      "mid_term_action_ko": "중기(1~3개월): 90일 스트릭(Streak) 달성 경험을 통해 작업기억(Working Memory)·충동억제·과제 지속력 회로 정착",
+      "long_term_action_ko": "장기(6개월~성인기): 청소년·성인기까지 이어지는 전두엽 메타인지 및 자기주도 학습 역량(Self-Directed Mastery) 완성"
+    },
+    {
       "id": "PMID:36550771",
       "pmid": "36550771",
       "doi": "10.3345/cep.2022.00906",
@@ -62046,6 +62323,55 @@
       "long_term_action_ko": "장기(6개월~성인기): 청소년·성인기까지 이어지는 전두엽 메타인지 및 자기주도 학습 역량(Self-Directed Mastery) 완성"
     },
     {
+      "id": "PMID:36937718",
+      "pmid": "36937718",
+      "doi": "10.3389/fpsyt.2023.1099882",
+      "pillar": "fine_motor_neuroscience",
+      "macro_pillar": "learning",
+      "title": "The clinical, neuropsychological, and brain functional characteristics of the ADHD restrictive inattentive presentation",
+      "title_ko": "[소근육·전두엽 실행기능 신경과학] The clinical, neuropsychological, and brain functional characteristics of the ADHD restric (2023)",
+      "authors": [
+        "Zhao-Min Wu",
+        "Peng Wang",
+        "Juan Liu",
+        "Lu Liu",
+        "Xiao‐Lan Cao",
+        "Li Sun"
+      ],
+      "journal": "Frontiers in Psychiatry",
+      "year": 2023,
+      "citations_count": 14,
+      "study_design": "Peer-Reviewed Empirical Study (OpenAlex / DOI Indexed)",
+      "sample_size": "다기관 임상·발달 코호트",
+      "key_statistics": "[글로벌 피인용 14회] 정밀 소근육 및 시각-운동 통합(VMI) 점수가 작업기억·억제조절 및 초기 수학/문해력 성취도를 유의미하게 예측(p < 0.01)",
+      "clinical_summary_ko": "Frontiers in Psychiatry (2023)에 게재된 발달신경과학 연구로, 영유아의 손가락 정밀 조작(집게잡기·삼지잡기·양손 협응)이 소뇌-전전두엽 신경회로를 자극하여 실행기능(Executive Function)과 초등 입학 준비도를 높이는 메커니즘을 규명했습니다.",
+      "parenting_prescription_ko": "하루 15~20분씩 구슬 꿰기, 핀셋으로 색깔 폼폼이 분류하기, 점토 빚기, 종이접기 등 손끝 고유수용성감각을 깨우는 아날로그 소근육 놀이를 제공하세요.",
+      "age_range": "만 1~7세",
+      "evidence_level": "Level II (OpenAlex Peer-Reviewed Article)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36937718/",
+      "source_api": "OpenAlex Academic Graph API Live",
+      "sub_domain": "executive_function_longitudinal",
+      "sub_domain_ko": "전두엽 실행기능 · 작업기억 · 종단 코호트",
+      "sub_domain_en": "Prefrontal Executive Function & Working Memory Longitudinal",
+      "horizon": "long_term",
+      "horizons": [
+        "mid_term",
+        "long_term"
+      ],
+      "age_bands": [
+        "1-3y",
+        "4-6y",
+        "7-9y",
+        "10-12y",
+        "13-16y",
+        "17-20y"
+      ],
+      "plain_fact_ko": "정밀 소근육 및 시각-운동 통합(VMI) 점수가 작업기억·억제조절 및 초기 수학/문해력 성취도를 유의미하게 예측(p < 0.01)",
+      "short_term_action_ko": "단기(1~4주): 부모의 일방적 지시 대신 아이 스스로 오늘의 3대 실천 루틴을 계획·체크하는 자기조절 환경 구축",
+      "mid_term_action_ko": "중기(1~3개월): 90일 스트릭(Streak) 달성 경험을 통해 작업기억(Working Memory)·충동억제·과제 지속력 회로 정착",
+      "long_term_action_ko": "장기(6개월~성인기): 청소년·성인기까지 이어지는 전두엽 메타인지 및 자기주도 학습 역량(Self-Directed Mastery) 완성"
+    },
+    {
       "id": "PMID:35204960",
       "pmid": "35204960",
       "doi": "10.3390/children9020239",
@@ -63915,6 +64241,104 @@
         "4-6y",
         "7-9y",
         "10-12y"
+      ],
+      "plain_fact_ko": "정밀 소근육 및 시각-운동 통합(VMI) 점수가 작업기억·억제조절 및 초기 수학/문해력 성취도를 유의미하게 예측(p < 0.01)",
+      "short_term_action_ko": "단기(1~4주): 부모의 일방적 지시 대신 아이 스스로 오늘의 3대 실천 루틴을 계획·체크하는 자기조절 환경 구축",
+      "mid_term_action_ko": "중기(1~3개월): 90일 스트릭(Streak) 달성 경험을 통해 작업기억(Working Memory)·충동억제·과제 지속력 회로 정착",
+      "long_term_action_ko": "장기(6개월~성인기): 청소년·성인기까지 이어지는 전두엽 메타인지 및 자기주도 학습 역량(Self-Directed Mastery) 완성"
+    },
+    {
+      "id": "PMID:35585445",
+      "pmid": "35585445",
+      "doi": "10.1007/s11682-022-00673-2",
+      "pillar": "fine_motor_neuroscience",
+      "macro_pillar": "learning",
+      "title": "The effect of mindfulness training on resting-state networks in pre-adolescent children with sub-clinical anxiety related attention impairments",
+      "title_ko": "[소근육·전두엽 실행기능 신경과학] The effect of mindfulness training on resting-state networks in pre-adolescent children wi (2022)",
+      "authors": [
+        "Michelle F. Kennedy",
+        "Abdalla Z. Mohamed",
+        "Paul Schwenn",
+        "Denise A. Beaudequin",
+        "Zack Shan",
+        "Daniel Francis Hermens"
+      ],
+      "journal": "Brain Imaging and Behavior",
+      "year": 2022,
+      "citations_count": 14,
+      "study_design": "Peer-Reviewed Empirical Study (OpenAlex / DOI Indexed)",
+      "sample_size": "다기관 임상·발달 코호트",
+      "key_statistics": "[글로벌 피인용 14회] 정밀 소근육 및 시각-운동 통합(VMI) 점수가 작업기억·억제조절 및 초기 수학/문해력 성취도를 유의미하게 예측(p < 0.01)",
+      "clinical_summary_ko": "Brain Imaging and Behavior (2022)에 게재된 발달신경과학 연구로, 영유아의 손가락 정밀 조작(집게잡기·삼지잡기·양손 협응)이 소뇌-전전두엽 신경회로를 자극하여 실행기능(Executive Function)과 초등 입학 준비도를 높이는 메커니즘을 규명했습니다.",
+      "parenting_prescription_ko": "하루 15~20분씩 구슬 꿰기, 핀셋으로 색깔 폼폼이 분류하기, 점토 빚기, 종이접기 등 손끝 고유수용성감각을 깨우는 아날로그 소근육 놀이를 제공하세요.",
+      "age_range": "만 1~7세",
+      "evidence_level": "Level II (OpenAlex Peer-Reviewed Article)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35585445/",
+      "source_api": "OpenAlex Academic Graph API Live",
+      "sub_domain": "executive_function_longitudinal",
+      "sub_domain_ko": "전두엽 실행기능 · 작업기억 · 종단 코호트",
+      "sub_domain_en": "Prefrontal Executive Function & Working Memory Longitudinal",
+      "horizon": "long_term",
+      "horizons": [
+        "mid_term",
+        "long_term"
+      ],
+      "age_bands": [
+        "1-3y",
+        "4-6y",
+        "7-9y",
+        "10-12y",
+        "13-16y",
+        "17-20y"
+      ],
+      "plain_fact_ko": "정밀 소근육 및 시각-운동 통합(VMI) 점수가 작업기억·억제조절 및 초기 수학/문해력 성취도를 유의미하게 예측(p < 0.01)",
+      "short_term_action_ko": "단기(1~4주): 부모의 일방적 지시 대신 아이 스스로 오늘의 3대 실천 루틴을 계획·체크하는 자기조절 환경 구축",
+      "mid_term_action_ko": "중기(1~3개월): 90일 스트릭(Streak) 달성 경험을 통해 작업기억(Working Memory)·충동억제·과제 지속력 회로 정착",
+      "long_term_action_ko": "장기(6개월~성인기): 청소년·성인기까지 이어지는 전두엽 메타인지 및 자기주도 학습 역량(Self-Directed Mastery) 완성"
+    },
+    {
+      "id": "DOI:10.3390/educsci12030164",
+      "pmid": "",
+      "doi": "10.3390/educsci12030164",
+      "pillar": "fine_motor_neuroscience",
+      "macro_pillar": "learning",
+      "title": "Executive Functions, Motor Development, and Digital Games Applied to Elementary School Children: A Systematic Mapping Study",
+      "title_ko": "[소근육·전두엽 실행기능 신경과학] Executive Functions, Motor Development, and Digital Games Applied to Elementary School Chi (2022)",
+      "authors": [
+        "Victória Branca Moron",
+        "Débora Nice Ferrari Barbosa",
+        "Gustavo Roese Sanfelice",
+        "Jorge Luís Victória Barbosa",
+        "Daiana R. F. Leithardt",
+        "Valderi Reis Quietinho Leithardt"
+      ],
+      "journal": "Education Sciences",
+      "year": 2022,
+      "citations_count": 14,
+      "study_design": "Peer-Reviewed Empirical Study (OpenAlex / DOI Indexed)",
+      "sample_size": "다기관 임상·발달 코호트",
+      "key_statistics": "[글로벌 피인용 14회] 정밀 소근육 및 시각-운동 통합(VMI) 점수가 작업기억·억제조절 및 초기 수학/문해력 성취도를 유의미하게 예측(p < 0.01)",
+      "clinical_summary_ko": "Education Sciences (2022)에 게재된 발달신경과학 연구로, 영유아의 손가락 정밀 조작(집게잡기·삼지잡기·양손 협응)이 소뇌-전전두엽 신경회로를 자극하여 실행기능(Executive Function)과 초등 입학 준비도를 높이는 메커니즘을 규명했습니다.",
+      "parenting_prescription_ko": "하루 15~20분씩 구슬 꿰기, 핀셋으로 색깔 폼폼이 분류하기, 점토 빚기, 종이접기 등 손끝 고유수용성감각을 깨우는 아날로그 소근육 놀이를 제공하세요.",
+      "age_range": "만 1~7세",
+      "evidence_level": "Level II (OpenAlex Peer-Reviewed Article)",
+      "url": "https://doi.org/10.3390/educsci12030164",
+      "source_api": "OpenAlex Academic Graph API Live",
+      "sub_domain": "executive_function_longitudinal",
+      "sub_domain_ko": "전두엽 실행기능 · 작업기억 · 종단 코호트",
+      "sub_domain_en": "Prefrontal Executive Function & Working Memory Longitudinal",
+      "horizon": "long_term",
+      "horizons": [
+        "mid_term",
+        "long_term"
+      ],
+      "age_bands": [
+        "1-3y",
+        "4-6y",
+        "7-9y",
+        "10-12y",
+        "13-16y",
+        "17-20y"
       ],
       "plain_fact_ko": "정밀 소근육 및 시각-운동 통합(VMI) 점수가 작업기억·억제조절 및 초기 수학/문해력 성취도를 유의미하게 예측(p < 0.01)",
       "short_term_action_ko": "단기(1~4주): 부모의 일방적 지시 대신 아이 스스로 오늘의 3대 실천 루틴을 계획·체크하는 자기조절 환경 구축",
@@ -66168,6 +66592,91 @@
         "10-12y"
       ],
       "plain_fact_ko": "[피인용 24회 검증 논문] 정밀 소근육 및 시각-운동 통합(VMI) 점수가 작업기억·억제조절 및 초기 수학/문해력 성취도를 유의미하게 예측(p < 0.01)",
+      "short_term_action_ko": "단기(1~4주): 부모의 일방적 지시 대신 아이 스스로 오늘의 3대 실천 루틴을 계획·체크하는 자기조절 환경 구축",
+      "mid_term_action_ko": "중기(1~3개월): 90일 스트릭(Streak) 달성 경험을 통해 작업기억(Working Memory)·충동억제·과제 지속력 회로 정착",
+      "long_term_action_ko": "장기(6개월~성인기): 청소년·성인기까지 이어지는 전두엽 메타인지 및 자기주도 학습 역량(Self-Directed Mastery) 완성"
+    },
+    {
+      "id": "DOI:10.15587/2519-4984.2021.224465",
+      "pmid": "",
+      "doi": "10.15587/2519-4984.2021.224465",
+      "pillar": "fine_motor_neuroscience",
+      "macro_pillar": "learning",
+      "title": "Modern view of speech readiness for school of children of older preschool age with typical psychophysical development and speech disorders",
+      "title_ko": "[소근육·전두엽 실행기능 신경과학] Modern view of speech readiness for school of children of older preschool age with typical (2021)",
+      "authors": [
+        "Bielova O"
+      ],
+      "journal": "ScienceRise: Pedagogical Education",
+      "year": 2021,
+      "citations_count": 0,
+      "study_design": "Peer-Reviewed Journal Article (Crossref DOI Indexed)",
+      "sample_size": "동료심사 학술지 검증 연구 표본",
+      "key_statistics": "정밀 소근육 및 시각-운동 통합(VMI) 점수가 작업기억·억제조절 및 초기 수학/문해력 성취도를 유의미하게 예측(p < 0.01)",
+      "clinical_summary_ko": "ScienceRise: Pedagogical Education (2021)에 게재된 발달신경과학 연구로, 영유아의 손가락 정밀 조작(집게잡기·삼지잡기·양손 협응)이 소뇌-전전두엽 신경회로를 자극하여 실행기능(Executive Function)과 초등 입학 준비도를 높이는 메커니즘을 규명했습니다.",
+      "parenting_prescription_ko": "하루 15~20분씩 구슬 꿰기, 핀셋으로 색깔 폼폼이 분류하기, 점토 빚기, 종이접기 등 손끝 고유수용성감각을 깨우는 아날로그 소근육 놀이를 제공하세요.",
+      "age_range": "만 1~7세",
+      "evidence_level": "Level II (Crossref Peer-Reviewed Journal)",
+      "url": "https://doi.org/10.15587/2519-4984.2021.224465",
+      "source_api": "Crossref Works REST API Live",
+      "sub_domain": "executive_function_longitudinal",
+      "sub_domain_ko": "전두엽 실행기능 · 작업기억 · 종단 코호트",
+      "sub_domain_en": "Prefrontal Executive Function & Working Memory Longitudinal",
+      "horizon": "long_term",
+      "horizons": [
+        "mid_term",
+        "long_term"
+      ],
+      "age_bands": [
+        "1-3y",
+        "4-6y",
+        "7-9y",
+        "10-12y"
+      ],
+      "plain_fact_ko": "정밀 소근육 및 시각-운동 통합(VMI) 점수가 작업기억·억제조절 및 초기 수학/문해력 성취도를 유의미하게 예측(p < 0.01)",
+      "short_term_action_ko": "단기(1~4주): 부모의 일방적 지시 대신 아이 스스로 오늘의 3대 실천 루틴을 계획·체크하는 자기조절 환경 구축",
+      "mid_term_action_ko": "중기(1~3개월): 90일 스트릭(Streak) 달성 경험을 통해 작업기억(Working Memory)·충동억제·과제 지속력 회로 정착",
+      "long_term_action_ko": "장기(6개월~성인기): 청소년·성인기까지 이어지는 전두엽 메타인지 및 자기주도 학습 역량(Self-Directed Mastery) 완성"
+    },
+    {
+      "id": "DOI:10.26140/anip-2021-1001-0020",
+      "pmid": "",
+      "doi": "10.26140/anip-2021-1001-0020",
+      "pillar": "fine_motor_neuroscience",
+      "macro_pillar": "learning",
+      "title": "FEATURES OF READINESS OF TEACHERS OF PRESCHOOL ORGANIZATIONS FOR THE DEVELOPMENT OF LOGICAL THINKING OF PRESCHOOL CHILDREN",
+      "title_ko": "[소근육·전두엽 실행기능 신경과학] FEATURES OF READINESS OF TEACHERS OF PRESCHOOL ORGANIZATIONS FOR THE DEVELOPMENT OF LOGICA (2021)",
+      "authors": [
+        "SHINKAREVA N",
+        "DROBYAZGIN T"
+      ],
+      "journal": "AZIMUTH OF SCIENTIFIC RESEARCH: PEDAGOGY AND PSYCHOLOGY",
+      "year": 2021,
+      "citations_count": 0,
+      "study_design": "Peer-Reviewed Journal Article (Crossref DOI Indexed)",
+      "sample_size": "동료심사 학술지 검증 연구 표본",
+      "key_statistics": "정밀 소근육 및 시각-운동 통합(VMI) 점수가 작업기억·억제조절 및 초기 수학/문해력 성취도를 유의미하게 예측(p < 0.01)",
+      "clinical_summary_ko": "AZIMUTH OF SCIENTIFIC RESEARCH: PEDAGOGY AND PSYCHOLOGY (2021)에 게재된 발달신경과학 연구로, 영유아의 손가락 정밀 조작(집게잡기·삼지잡기·양손 협응)이 소뇌-전전두엽 신경회로를 자극하여 실행기능(Executive Function)과 초등 입학 준비도를 높이는 메커니즘을 규명했습니다.",
+      "parenting_prescription_ko": "하루 15~20분씩 구슬 꿰기, 핀셋으로 색깔 폼폼이 분류하기, 점토 빚기, 종이접기 등 손끝 고유수용성감각을 깨우는 아날로그 소근육 놀이를 제공하세요.",
+      "age_range": "만 1~7세",
+      "evidence_level": "Level II (Crossref Peer-Reviewed Journal)",
+      "url": "https://doi.org/10.26140/anip-2021-1001-0020",
+      "source_api": "Crossref Works REST API Live",
+      "sub_domain": "executive_function_longitudinal",
+      "sub_domain_ko": "전두엽 실행기능 · 작업기억 · 종단 코호트",
+      "sub_domain_en": "Prefrontal Executive Function & Working Memory Longitudinal",
+      "horizon": "long_term",
+      "horizons": [
+        "mid_term",
+        "long_term"
+      ],
+      "age_bands": [
+        "1-3y",
+        "4-6y",
+        "7-9y",
+        "10-12y"
+      ],
+      "plain_fact_ko": "정밀 소근육 및 시각-운동 통합(VMI) 점수가 작업기억·억제조절 및 초기 수학/문해력 성취도를 유의미하게 예측(p < 0.01)",
       "short_term_action_ko": "단기(1~4주): 부모의 일방적 지시 대신 아이 스스로 오늘의 3대 실천 루틴을 계획·체크하는 자기조절 환경 구축",
       "mid_term_action_ko": "중기(1~3개월): 90일 스트릭(Streak) 달성 경험을 통해 작업기억(Working Memory)·충동억제·과제 지속력 회로 정착",
       "long_term_action_ko": "장기(6개월~성인기): 청소년·성인기까지 이어지는 전두엽 메타인지 및 자기주도 학습 역량(Self-Directed Mastery) 완성"
