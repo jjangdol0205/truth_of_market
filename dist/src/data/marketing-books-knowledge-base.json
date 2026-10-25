@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25 14:07:04 KST",
+  "updated_at": "2026-10-25 16:06:05 KST",
   "total_books_mastered": 8,
   "supplementary_research_count": 6,
   "books": [
@@ -127,7 +127,7 @@
       "journal": "Advances in Marketing, Customer Relationship Management, and E-Services"
     }
   ],
-  "cycle": 20,
+  "cycle": 21,
   "total_learned_insights": 21,
   "learned_insights": [
     {
@@ -321,10 +321,10 @@
     }
   ],
   "latest_system_audit": {
-    "audited_at": "2026-10-25 14:07:05 KST",
+    "audited_at": "2026-10-25 16:06:07 KST",
     "total_qna_and_seq_pages": 31,
     "pages_auto_patched_with_cro_bar": 31,
-    "live_paper_authority_count": 3844,
+    "live_paper_authority_count": 3850,
     "scores": {
       "hook_clarity_3sec_score": 98,
       "cialdini_authority_social_proof_score": 99,
@@ -334,7 +334,7 @@
     },
     "active_optimizations": [
       "Value Ladder Step 1: 전 채널 상단 3초 무료 진단 직링크 박스 가동 중",
-      "Authority Badge: 질병관리청(KDCA) + 보건복지부(K-DST) + 논문 3,844편 실시간 배지 동기화",
+      "Authority Badge: 질병관리청(KDCA) + 보건복지부(K-DST) + 논문 3,850편 실시간 배지 동기화",
       "Choice Architecture: 6종 연령·상황별 1초 프리셋 캡슐 바 전 페이지 상단 고정",
       "STEPPS Viral Loop: 카톡·당근 동네생활·블라인드·다음카페 원클릭 공유 바 전 페이지 장착 완료"
     ]
