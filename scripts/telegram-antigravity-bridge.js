@@ -517,16 +517,21 @@ async function startPollingDaemon() {
       const kstDateStr = nowKst.toISOString().slice(0, 10);
       const kstHour = nowKst.getUTCHours();
       if (kstHour === 6 && state.lastDailyInstaSentDate !== kstDateStr) {
-        state.lastDailyInstaSentDate = kstDateStr;
-        saveBridgeState(state);
-        console.log(`\n🌅 [Daily 06:00 AM KST Trigger] Sending today's @kids_fit1 Instagram & Threads pack (${kstDateStr})...`);
+        console.log(`\n🌅 [Daily 06:00 AM KST Trigger] Sending today's @kids_fit1 Instagram, Threads & Naver Clip pack (${kstDateStr})...`);
         const dailyScript = path.join(PROJECT_ROOT, 'scripts', 'send_daily_6am_insta_threads.js');
         if (fs.existsSync(dailyScript)) {
-          spawnSync(process.execPath, [dailyScript, '--advance'], {
+          const res = spawnSync(process.execPath, [dailyScript, '--advance'], {
             cwd: PROJECT_ROOT,
             encoding: 'utf8',
-            timeout: 180000
+            timeout: 240000
           });
+          if (res.status === 0) {
+            state.lastDailyInstaSentDate = kstDateStr;
+            saveBridgeState(state);
+            console.log(`  ✓ [Daily 06:00 AM KST Trigger] Successfully delivered Episode pack (${kstDateStr}).`);
+          } else {
+            console.warn(`  [Daily 06:00 AM KST Trigger] Delivery exited with ${res.status}, will retry next tick:`, res.stderr || res.stdout);
+          }
         }
       }
 

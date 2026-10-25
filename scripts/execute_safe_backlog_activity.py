@@ -220,6 +220,31 @@ SAFE_BACKLOG_ITEMS = [
 ]
 
 
+def prune_excess_cdp_tabs():
+    """Closes excess/stale tabs via HTTP CDP /json/list before Playwright connect_over_cdp so it never times out."""
+    try:
+        with urllib.request.urlopen("http://127.0.0.1:9222/json/list", timeout=3) as resp:
+            targets = json.loads(resp.read().decode("utf-8", errors="replace"))
+        page_targets = [t for t in targets if t.get("type") == "page"]
+        if len(page_targets) > 2:
+            # Keep the first naver.com tab (or the very first tab) and close the rest
+            kept = False
+            for t in page_targets:
+                tid = t.get("id")
+                url = t.get("url", "")
+                if not kept and ("naver.com" in url or url.startswith("http")):
+                    kept = True
+                    continue
+                if tid:
+                    try:
+                        urllib.request.urlopen(f"http://127.0.0.1:9222/json/close/{tid}", timeout=2).read()
+                    except Exception:
+                        pass
+            time.sleep(0.8)
+    except Exception:
+        pass
+
+
 def ensure_clean_cdp_browser(p):
     """Connects to CDP 9222 or launches the persistent Chrome profile on WinSta0\\Default."""
     cdp_ok = False
@@ -232,8 +257,9 @@ def ensure_clean_cdp_browser(p):
         cdp_ok = False
 
     if cdp_ok:
+        prune_excess_cdp_tabs()
         try:
-            browser = p.chromium.connect_over_cdp("http://127.0.0.1:9222", timeout=25000)
+            browser = p.chromium.connect_over_cdp("http://127.0.0.1:9222", timeout=35000)
             return browser, browser.contexts[0], False
         except Exception:
             cdp_ok = False
@@ -248,7 +274,8 @@ def ensure_clean_cdp_browser(p):
                     break
         except Exception:
             time.sleep(1)
-    browser = p.chromium.connect_over_cdp("http://127.0.0.1:9222", timeout=25000)
+    prune_excess_cdp_tabs()
+    browser = p.chromium.connect_over_cdp("http://127.0.0.1:9222", timeout=35000)
     return browser, browser.contexts[0], False
 
 

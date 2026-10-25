@@ -74,27 +74,37 @@ const EPISODE_CATALOG = [
   {
     ep: 1,
     folder: '1화_만3세소근육민감기_웹툰',
-    title: '1화: 만 3세 "내가 혼자 할 거야!" 고집의 진짜 이유 (손끝 소근육 민감기)'
+    title: '1화: 만 3세 "내가 혼자 할 거야!" 고집의 진짜 이유 (손끝 소근육 민감기)',
+    clipTitle: "[육아웹툰 1화] 만 3세 '내가 혼자 할 거야!' 고집의 진짜 이유 (손끝 소근육 민감기)",
+    clipBody: '우리 아이 1분 무료 성장·두뇌 진단 👉 https://kidsfit.co.kr  #네이버클립 #육아웹툰 #인스타툰 #만3세발달 #소근육발달 #몬테소리 #가베 #육아소통 #워킹맘 #키즈핏'
   },
   {
     ep: 2,
     folder: '2화_초등문장제수학작업기억_웹툰',
-    title: '2화: 연산은 100점인데 문장제 수학만 별표 치는 아이 (전두엽 작업기억의 비밀)'
+    title: '2화: 연산은 100점인데 문장제 수학만 별표 치는 아이 (전두엽 작업기억의 비밀)',
+    clipTitle: '[교육웹툰 2화] 연산은 100점인데 문장제 수학만 별표 치는 진짜 이유 (작업기억 도해법)',
+    clipBody: '우리 아이 1분 무료 성장·두뇌 진단 👉 https://kidsfit.co.kr  #네이버클립 #교육웹툰 #초등수학 #문장제수학 #서술형수학 #작업기억 #메타인지 #백지복습 #초등맘 #키즈핏'
   },
   {
     ep: 3,
     folder: '3화_밤10시숙면숨은키7cm_웹툰',
-    title: '3화: 밤마다 우유 먹였는데 키가 안 큰다고요? (밤 10시 성장호르몬 & 하체 스트레칭)'
+    title: '3화: 밤마다 우유 먹였는데 키가 안 큰다고요? (밤 10시 성장호르몬 & 하체 스트레칭)',
+    clipTitle: '[성장웹툰 3화] 밤마다 우유 먹였는데 키가 안 큰다고요? (밤 10시 성장호르몬 & 스트레칭)',
+    clipBody: '우리 아이 1분 무료 성장·두뇌 진단 👉 https://kidsfit.co.kr  #네이버클립 #성장웹툰 #아이키성장 #어린이키성장 #키크는습관 #밤10시수면 #성장판스트레칭 #어린이칼슘 #키즈핏'
   },
   {
     ep: 4,
     folder: '4화_편식아이미각민감기아연_웹툰',
-    title: '4화: 고기·채소 입에도 안 대는 편식 아이 (미각 세포 아연 부족 & 푸드브릿지)'
+    title: '4화: 고기·채소 입에도 안 대는 편식 아이 (미각 세포 아연 부족 & 푸드브릿지)',
+    clipTitle: '[영양웹툰 4화] 고기·채소 입에도 안 대는 편식 아이 (미각 세포 아연 부족 & 푸드브릿지)',
+    clipBody: '우리 아이 1분 무료 성장·두뇌 진단 👉 https://kidsfit.co.kr  #네이버클립 #육아웹툰 #아이편식 #어린이아연 #푸드브릿지 #밥안먹는아이 #어린이영양제 #키즈핏'
   },
   {
     ep: 5,
     folder: '5화_거북목자세교정숨은키2cm_웹툰',
-    title: '5화: 구부정한 거북목·말린 어깨 펴고 숨은 키 2cm & 집중력 동시에 찾은 비결'
+    title: '5화: 구부정한 거북목·말린 어깨 펴고 숨은 키 2cm & 집중력 동시에 찾은 비결',
+    clipTitle: '[자세웹툰 5화] 구부정한 거북목·말린 어깨 펴고 숨은 키 2cm & 집중력 동시에 찾은 비결',
+    clipBody: '우리 아이 1분 무료 성장·두뇌 진단 👉 https://kidsfit.co.kr  #네이버클립 #육아웹툰 #어린이거북목 #자세교정 #숨은키찾기 #각도조절독서대 #초등책상 #키즈핏'
   }
 ];
 
@@ -223,7 +233,7 @@ async function sendEpisodePack(epMeta, cfg) {
     disable_web_page_preview: true
   });
 
-  // Also send the 16-second page-flipping BGM video if available for this episode!
+  // Also send the Naver Clip & Instagram Reels video + 1-tap copy-ready Title, Description/Tags, and Info Sticker Link!
   const clipMap = {
     1: '01_네이버클립_웹툰1화_만3세소근육민감기.mp4',
     2: '02_네이버클립_웹툰2화_초등문장제수학작업기억.mp4',
@@ -235,12 +245,44 @@ async function sendEpisodePack(epMeta, cfg) {
   if (clipFile) {
     const clipPath = path.join(ROOT_DIR, '네이버클립_웹툰영상_모음', clipFile);
     if (fs.existsSync(clipPath)) {
+      await telegramApiRequest(cfg.botToken, 'sendMessage', {
+        chat_id: cfg.chatId,
+        text: [
+          `🎬 <b>[3단계: 네이버 클립(Naver Clip) &amp; 인스타 릴스 원터치 업로드용 — 제${epMeta.ep}화]</b>`,
+          `━━━━━━━━━━━━━━━━━━`,
+          `① 바로 아래 <b>제${epMeta.ep}화 MP4 세로 영상</b>을 저장해 네이버 클립 / 인스타 릴스에 첨부하세요.`,
+          `② 이어서 오는 <b>[네이버 클립 제목]</b>, <b>[설명 &amp; 해시태그]</b>, <b>[정보 스티커 링크(https://kidsfit.co.kr)]</b> 말풍선을 각각 길게 눌러 <b>[복사]</b>해 붙여넣으시면 끝!`
+        ].join('\n'),
+        parse_mode: 'HTML',
+        disable_web_page_preview: true
+      });
+
       await sendTelegramVideoFile(
         cfg.botToken,
         cfg.chatId,
         clipPath,
-        `🎬 [제${epMeta.ep}화 인스타 릴스·네이버클립용 16초 책넘김(Page-Flip) 피아노 BGM 영상]`
+        `🎬 [제${epMeta.ep}화 네이버 클립 & 인스타 릴스용 세로 웹툰 영상]`
       );
+
+      if (epMeta.clipTitle) {
+        await telegramApiRequest(cfg.botToken, 'sendMessage', {
+          chat_id: cfg.chatId,
+          text: epMeta.clipTitle,
+          disable_web_page_preview: true
+        });
+      }
+      if (epMeta.clipBody) {
+        await telegramApiRequest(cfg.botToken, 'sendMessage', {
+          chat_id: cfg.chatId,
+          text: epMeta.clipBody,
+          disable_web_page_preview: true
+        });
+      }
+      await telegramApiRequest(cfg.botToken, 'sendMessage', {
+        chat_id: cfg.chatId,
+        text: 'https://kidsfit.co.kr',
+        disable_web_page_preview: true
+      });
     }
   }
 

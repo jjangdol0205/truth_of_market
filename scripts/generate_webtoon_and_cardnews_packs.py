@@ -31,7 +31,7 @@ if sys.platform == "win32":
         pass
 
 # Production Domain & Diagnostic Bridge URLs
-PRODUCTION_DOMAIN = "truthofmarket.com"
+PRODUCTION_DOMAIN = "kidsfit.co.kr"
 WEBTOON_QR_URL = f"https://{PRODUCTION_DOMAIN}/?utm_source=instagram_webtoon_qr&utm_medium=qr_code&utm_campaign=kidsfit_diagnosis"
 CARDNEWS_QR_URL = f"https://{PRODUCTION_DOMAIN}/?utm_source=cardnews_qr&utm_medium=qr_code&utm_campaign=kidsfit_diagnosis"
 THREADS_BRIDGE_URL = f"https://{PRODUCTION_DOMAIN}/?utm_source=threads&utm_medium=organic_social&utm_campaign=kidsfit_diagnosis"
@@ -291,7 +291,7 @@ def render_webtoon_cut(
     Renders a pure, natural 1080x1080 Instatoon cut (@gangjidol style):
     - NO artificial UI header pills or speaker tags
     - Natural oval/capsule hand-drawn speech bubbles placed right next to the characters
-    - If is_cut_4: renders high-contrast bottom diagnostic banner with QR code to truthofmarket.com
+    - If is_cut_4: renders high-contrast bottom diagnostic banner with QR code to kidsfit.co.kr
     """
     canvas = load_square_art(raw_path, 1080)
 
@@ -321,7 +321,7 @@ def render_webtoon_cut(
         f_b1 = get_font(25, bold=True)
         f_b2 = get_font(19, bold=True)
         draw.text((44, banner_y1 + 18), "★ 우리 아이 예상키 + 두뇌·학습 1분 무료 진단", font=f_b1, fill=(253, 224, 71))  # Yellow
-        draw.text((44, banner_y1 + 68), "질병관리청 성장도표 & 논문 기반 맞춤 리포트 ▶ truthofmarket.com", font=f_b2, fill=(255, 255, 255))
+        draw.text((44, banner_y1 + 68), "질병관리청 성장도표 & 논문 기반 맞춤 리포트 ▶ kidsfit.co.kr", font=f_b2, fill=(255, 255, 255))
 
         # 110x110 QR Code
         qr = qrcode.QRCode(version=1, box_size=3, border=1)
@@ -469,7 +469,7 @@ def render_sensuous_cardnews_slide(
 
         draw.text((44, box_y1 + 22), "내 아이 예상키 + 두뇌·학습 골든타임 1분 무료 진단", font=f_cta_title, fill=(30, 27, 75))
         draw.text((44, box_y1 + 72), "회원가입 0초 · 질병관리청 & 논문 기반 맞춤 리포트 발급", font=f_cta_sub, fill=(5, 150, 105))
-        draw.text((44, box_y1 + 118), "👉 truthofmarket.com ↗", font=f_cta_url, fill=(234, 88, 12))
+        draw.text((44, box_y1 + 118), "👉 kidsfit.co.kr ↗", font=f_cta_url, fill=(234, 88, 12))
 
         # 150x150 QR Code
         qr = qrcode.QRCode(version=1, box_size=4, border=1)
@@ -648,7 +648,7 @@ def render_insta_5th_summary_card(ep: dict) -> Image.Image:
     )
     draw.text(
         (76, 968),
-        "질병관리청 성장도표 & 논문 2,723편 기반 우리 아이 맞춤 리포트 ▶ truthofmarket.com",
+        "질병관리청 성장도표 & 논문 3,867편 기반 우리 아이 맞춤 리포트 ▶ kidsfit.co.kr",
         font=f_cta2,
         fill=(79, 70, 229),
     )
@@ -778,7 +778,7 @@ WEBTOON_EPISODES = [
 또래 대비 신체 성장 백분위와 두뇌·인지 발달 밸런스는 어떤지 궁금하시다면?
 
 📌 지금 프로필 상단 링크(@kids_fit1)에서
-질병관리청 성장도표 & 발달 기준 논문 2,723편 기반
+질병관리청 성장도표 & 발달 기준 논문 3,867편 기반
 [우리 아이 1:1 성장·두뇌 발달 정밀 리포트]를 1분 만에 무료로 확인해 보세요! 💌
 
 (오늘 저녁 아이와 함께 해보실 분들은 오른쪽 아래 [저장 🔖] 꾹 눌러두세요! ♥)
@@ -915,7 +915,7 @@ WEBTOON_EPISODES = [
 우리 아이의 전두엽 작업기억·수리추론·문해력·메타인지 5대 학습 역량(LQ)은 지금 몇 점인지 궁금하시다면?
 
 📌 지금 프로필 상단 링크(@kids_fit1)에서
-질병관리청 성장도표 & 두뇌·학습 논문 2,723편 기반
+질병관리청 성장도표 & 두뇌·학습 논문 3,867편 기반
 [우리 아이 1:1 신체 성장 × 두뇌 학습 마스터 리포트]를 1분 만에 무료로 확인해 보세요! 💌
 
 (오늘 저녁 아이 수학 봐주실 분들은 오른쪽 아래 [저장 🔖] 꾹 눌러두세요! ♥)
@@ -1051,7 +1051,7 @@ WEBTOON_EPISODES = [
 부모 유전 예상키(MPH) 대비 '숨은 키 +7cm 최대 잠재키'가 몇 cm인지 궁금하시다면?
 
 📌 지금 프로필 상단 링크(@kids_fit1)에서
-질병관리청 성장도표 & 소아성장 논문 2,723편 기반
+질병관리청 성장도표 & 소아성장 논문 3,867편 기반
 [우리 아이 1:1 신체 성장 × 두뇌 발달 정밀 리포트]를 1분 만에 무료로 확인해 보세요! 💌
 
 (오늘 밤 9시 40분 아이 다리 주물러주실 분들은 오른쪽 아래 [저장 🔖] 꾹 눌러두세요! ♥)
@@ -1188,7 +1188,7 @@ WEBTOON_EPISODES = [
 현재 체중(kg)에 딱 맞는 일일 칼슘·아연·비타민D3 섭취량은 얼마인지 궁금하시다면?
 
 📌 지금 프로필 상단 링크(@kids_fit1)에서
-질병관리청 성장도표 & 소아영양 논문 2,723편 기반
+질병관리청 성장도표 & 소아영양 논문 3,867편 기반
 [우리 아이 1:1 신체 성장 × 맞춤 영양 처방 리포트]를 1분 만에 무료로 확인해 보세요! 💌
 
 (이번 주말 아이와 공룡 쿠키틀 요리 해보실 분들은 오른쪽 아래 [저장 🔖] 꾹 눌러두세요! ♥)
@@ -1324,7 +1324,7 @@ WEBTOON_EPISODES = [
 신체 성장 백분위와 학습 집중력 솔루션을 한 번에 확인하고 싶으시다면?
 
 📌 지금 프로필 상단 링크(@kids_fit1)에서
-질병관리청 성장도표 & 생체역학·두뇌 논문 2,723편 기반
+질병관리청 성장도표 & 생체역학·두뇌 논문 3,867편 기반
 [우리 아이 1:1 신체 성장 × 두뇌 학습 마스터 리포트]를 1분 만에 무료로 확인해 보세요! 💌
 
 (오늘 저녁 아이 책상 자세 점검해 주실 분들은 오른쪽 아래 [저장 🔖] 꾹 눌러두세요! ♥)
