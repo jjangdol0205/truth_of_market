@@ -49,7 +49,7 @@ def main():
         new_nick = "키즈핏연구소장"
         new_intro = (
             "[육아·교육] 질병관리청 성장도표 & 보건복지부 K-DST 기반 우리 아이 숨은 키 +7cm·소근육·연령별 공부법·주말 박물관 하브루타 연구소\n"
-            "▶ 1분 무료 진단: truthofmarket.com\n"
+            "▶ 1분 무료 진단: kidsfit.co.kr\n"
             "▶ 공식 카페: cafe.naver.com/moneyfitlab"
         )
 

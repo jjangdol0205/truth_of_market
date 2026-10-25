@@ -97,7 +97,7 @@ function sendMultipart(endpoint, fieldName, filePath, contentType, caption) {
     {
       file: path.join(PROF_DIR, '04_인스타_쓰레드_프로필소개글_링크_세팅가이드.txt'),
       endpoint: 'sendDocument', field: 'document', mime: 'text/plain',
-      caption: '📋 인스타그램 & 쓰레드 프로필 이름 · 소개글(Bio) · 링크(truthofmarket.com) 복사 가이드'
+      caption: '📋 인스타그램 & 쓰레드 프로필 이름 · 소개글(Bio) · 링크(kidsfit.co.kr) 복사 가이드'
     }
   ];
 

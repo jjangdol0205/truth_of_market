@@ -30,7 +30,7 @@ async function main() {
     `• <b>3화 폴더</b>: <code>웹툰_모음\\3화_밤10시숙면숨은키7cm_웹툰\\</code>`,
     `<i>(각 폴더 안에 ① 4컷 바둑판 합본, ② 4컷 세로 스크롤 합본, ③ 1~4컷 개별 원본 PNG, ④ 인스타·쓰레드 본문 TXT가 모두 들어 있습니다!)</i>`,
     ``,
-    `🌐 <b>웹에서도 화별 원클릭 다운로드</b>: <a href="https://truthofmarket.com/samples/8_insta_threads_webtoon_pack/">https://truthofmarket.com/samples/8_insta_threads_webtoon_pack/</a>`,
+    `🌐 <b>웹에서도 화별 원클릭 다운로드</b>: <a href="https://kidsfit.co.kr/samples/8_insta_threads_webtoon_pack/">https://kidsfit.co.kr/samples/8_insta_threads_webtoon_pack/</a>`,
     `👇 스마트폰에서도 바로 화별로 저장하실 수 있도록 <b>[1화] · [2화] · [3화] 화별 원본 ZIP + 세로합본 + 본문 파일</b>을 순서대로 보내드립니다!`
   ].join('\n');
 

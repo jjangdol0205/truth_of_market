@@ -3,7 +3,7 @@
 1. Fixes all 3 Naver Cafe posts (Welcome Notice, Free Worksheet 3-Pack, Monthly Challenge)
    by inserting body text line-by-line (so SmartEditor ONE never truncates on \n) + attaching banners/worksheets.
 2. Checks and fixes Naver Blog Day 1 post if truncated.
-3. Updates Naver Cafe Profile Icon, Top Title Banner, and Front Gate (대문) to match KidsFit homepage (truthofmarket.com).
+3. Updates Naver Cafe Profile Icon, Top Title Banner, and Front Gate (대문) to match KidsFit homepage (kidsfit.co.kr).
 4. Updates Naver Blog Profile Image, Mobile Cover Image, and PC Title Skin to match KidsFit homepage.
 """
 
@@ -218,8 +218,8 @@ def update_cafe_skins_and_profile(page, context):
       </div>
     </div>
     <div style="text-align:center;padding-top:8px;">
-      <a href="https://truthofmarket.com" target="_blank" style="display:inline-block;background:#4F46E5;color:#FFFFFF;font-weight:800;font-size:17px;padding:14px 28px;border-radius:999px;text-decoration:none;">
-        🚀 우리 아이 1분 무료 성장·두뇌 진단 바로가기 (truthofmarket.com)
+      <a href="https://kidsfit.co.kr" target="_blank" style="display:inline-block;background:#4F46E5;color:#FFFFFF;font-weight:800;font-size:17px;padding:14px 28px;border-radius:999px;text-decoration:none;">
+        🚀 우리 아이 1분 무료 성장·두뇌 진단 바로가기 (kidsfit.co.kr)
       </a>
     </div>
   </div>

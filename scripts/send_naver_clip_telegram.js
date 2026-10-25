@@ -73,7 +73,7 @@ function sendMultipart(endpoint, fieldName, filePath, contentType, caption) {
   const files = [
     {
       file: path.join(CLIP_DIR, '00_네이버클립_웹툰_1~3화_통합묶음_합본영상.mp4'),
-      caption: '🎬 [네이버 클립용 웹툰 1~3화 통합 묶음 합본 영상 (1080x1920 세로형, 전체 12컷 연속)]\n• 1화(만 3세 소근육 민감기) + 2화(초등 문장제 수학 작업기억) + 3화(밤 10시 숙면 숨은 키 7cm) 전체 묶음 영상입니다!\n• 정보 스티커 링크: https://truthofmarket.com'
+      caption: '🎬 [네이버 클립용 웹툰 1~3화 통합 묶음 합본 영상 (1080x1920 세로형, 전체 12컷 연속)]\n• 1화(만 3세 소근육 민감기) + 2화(초등 문장제 수학 작업기억) + 3화(밤 10시 숙면 숨은 키 7cm) 전체 묶음 영상입니다!\n• 정보 스티커 링크: https://kidsfit.co.kr'
     },
     {
       file: path.join(CLIP_DIR, '01_네이버클립_웹툰1화_만3세소근육민감기.mp4'),

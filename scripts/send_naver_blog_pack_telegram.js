@@ -87,7 +87,7 @@ async function main() {
     `매일 하나씩 바로 복사해서 올리실 수 있도록 <b>상업적 키워드를 100% 뺀 순수 고품질 정보 칼럼 7편(DAY 1 ~ DAY 7, 각 2,000자 이상)</b>과 <b>각 글에 넣을 전용 대표 인포그래픽 이미지 7장</b>을 모두 제작했습니다!`,
     ``,
     `🌐 <b>스마트폰·PC 1초 복사 &amp; 이미지 다운로드 웹 센터</b>:`,
-    `<a href="https://truthofmarket.com/samples/7_naver_blog_daily_pack/">https://truthofmarket.com/samples/7_naver_blog_daily_pack/</a>`,
+    `<a href="https://kidsfit.co.kr/samples/7_naver_blog_daily_pack/">https://kidsfit.co.kr/samples/7_naver_blog_daily_pack/</a>`,
     ``,
     `━━━━━━━━━━━━━━━━━━`,
     `📅 <b>7일 연속 1일 1포스팅 발행 스케줄 (성장 50 : 학습 50)</b>`,

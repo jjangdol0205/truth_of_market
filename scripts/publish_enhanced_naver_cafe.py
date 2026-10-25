@@ -42,7 +42,7 @@ import qrcode
 from playwright.sync_api import sync_playwright
 
 # Production Domain & Diagnostic Bridge URLs
-PRODUCTION_DOMAIN = "truthofmarket.com"
+PRODUCTION_DOMAIN = "kidsfit.co.kr"
 CAFE_DIAGNOSTIC_BRIDGE_URL = f"https://{PRODUCTION_DOMAIN}/?utm_source=naver_cafe&utm_medium=organic_social&utm_campaign=kidsfit_diagnosis"
 CAFE_DIAGNOSTIC_BRIDGE_QR_URL = f"https://{PRODUCTION_DOMAIN}/?utm_source=naver_cafe_qr&utm_medium=qr_code&utm_campaign=kidsfit_diagnosis"
 

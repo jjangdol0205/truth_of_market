@@ -53,7 +53,7 @@ async function main() {
     `  └ 📁 <code>3탄_밤10시숙면과숨은키7cm_카드뉴스</code> (4장)`,
     ``,
     `🌐 <b>웹툰 &amp; 카드뉴스 전체 보기 센터</b>:`,
-    `<a href="https://truthofmarket.com/samples/8_insta_threads_webtoon_pack/">https://truthofmarket.com/samples/8_insta_threads_webtoon_pack/</a>`,
+    `<a href="https://kidsfit.co.kr/samples/8_insta_threads_webtoon_pack/">https://kidsfit.co.kr/samples/8_insta_threads_webtoon_pack/</a>`,
     `━━━━━━━━━━━━━━━━━━`,
     `👇 아래로 방금 완성된 <b>감각적인 4컷 웹툰(1~3화)과 여백 없는 카드뉴스(1~3탄) 이미지 및 인스타·쓰레드 복붙용 본문</b>을 바로 전송해 드립니다!`
   ].join('\n');

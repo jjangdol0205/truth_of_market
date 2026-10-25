@@ -208,7 +208,7 @@ EPISODES_CLIP_SPEC = [
             {
                 "img": "04_4컷.png",
                 "tts": "부모 유전키를 넘어 숨은 키 7센티미터 도약! 키즈핏에서 1분 무료 진단을 확인하세요.",
-                "sub": "질병관리청 성장도표 기준 우리 아이 키 백분위 &\n3단 예상키 무료 진단 👉 truthofmarket.com",
+                "sub": "질병관리청 성장도표 기준 우리 아이 키 백분위 &\n3단 예상키 무료 진단 👉 kidsfit.co.kr",
             },
         ],
         "clip_title": "[성장웹툰 3화] 밤마다 우유 먹였는데 키가 안 큰다고요? (밤 10시 성장호르몬 & 스트레칭)",
@@ -425,7 +425,7 @@ def render_clip_video_from_cuts(
             # Naver Clip Info Sticker CTA Bar at y=1635..1735
             cta_y1, cta_y2 = 1635, 1735
             draw.rounded_rectangle((40, cta_y1, VW - 40, cta_y2), radius=22, fill=bg_top, outline=acc, width=2)
-            cta_txt = "📌 우리 아이 키 백분위 & 두뇌 역량 1분 무료 진단 👉 truthofmarket.com"
+            cta_txt = "📌 우리 아이 키 백분위 & 두뇌 역량 1분 무료 진단 👉 kidsfit.co.kr"
             bb_c = draw.textbbox((0, 0), cta_txt, font=f_cta)
             cw = bb_c[2] - bb_c[0]
             draw.text(((VW - cw) // 2, cta_y1 + 34 - bb_c[1]), cta_txt, font=f_cta, fill=(30, 41, 59))
@@ -467,7 +467,7 @@ def main():
         "  • 04_네이버클립_카드뉴스_핵심요약_영상.mp4 (카드뉴스 6컷 영상, 약 15초)",
         "",
         "2. 네이버 클립 업로드 시 【정보 스티커(링크 스티커)】 연결 주소:",
-        "  • 공식 진단 홈페이지: https://truthofmarket.com",
+        "  • 공식 진단 홈페이지: https://kidsfit.co.kr",
         "  • 공식 네이버 블로그: https://blog.naver.com/expertise333",
         "  • 공식 네이버 카페: https://cafe.naver.com/moneyfitlab",
         "",
@@ -503,7 +503,7 @@ def main():
             "----------------------------------------------------------------------",
             f"📌 [{ep['filename']}] 업로드용 제목 & 해시태그",
             f"• 제목: {ep['clip_title']}",
-            f"• 설명/태그: 우리 아이 1분 무료 성장·두뇌 진단 👉 https://truthofmarket.com  {ep['clip_tags']}",
+            f"• 설명/태그: 우리 아이 1분 무료 성장·두뇌 진단 👉 https://kidsfit.co.kr  {ep['clip_tags']}",
             "",
         ])
 

@@ -69,7 +69,7 @@ KB_PATH = ROOT_DIR / "docs" / "hourly_benchmark_paper_kb.json"
 RESEARCH_DB_PATH = ROOT_DIR / "src" / "data" / "research-knowledge-base.json"
 
 # Targets & Constants from authoritative specifications
-PRODUCTION_DOMAIN = "truthofmarket.com"
+PRODUCTION_DOMAIN = "kidsfit.co.kr"
 LEGACY_DOMAIN = "kidsfit.co.kr"
 
 TARGET_EMAIL = "beable9489@gmail.com"
@@ -480,7 +480,7 @@ def audit_promotional_and_affiliate_content(text: str) -> tuple[str, list[str]]:
         unique_tokens = list(set(detected_tokens))
         issues.append(f"Rejected commercial affiliate tokens/links: {', '.join(unique_tokens)}. Content sanitized for 100% academic non-promotional compliance.")
 
-    # Strict rejection of legacy domain kidsfit.co.kr in favor of production domain truthofmarket.com
+    # Strict rejection of legacy domain kidsfit.co.kr in favor of production domain kidsfit.co.kr
     if LEGACY_DOMAIN.lower() in clean.lower():
         issues.append(f"Rejected legacy domain {LEGACY_DOMAIN}: All links must use {PRODUCTION_DOMAIN} with UTM attribution.")
         clean = re.sub(rf"https?://{re.escape(LEGACY_DOMAIN)}", f"https://{PRODUCTION_DOMAIN}", clean, flags=re.IGNORECASE)
@@ -647,7 +647,7 @@ def audit_pre_publish(content_dict: dict) -> tuple[bool, dict, list[str]]:
     issues.extend(title_promo_issues)
     issues.extend(body_promo_issues)
 
-    # 3.1 Validate presence of contextual diagnostic bridge link (truthofmarket.com with utm_source)
+    # 3.1 Validate presence of contextual diagnostic bridge link (kidsfit.co.kr with utm_source)
     has_diagnostic_bridge = PRODUCTION_DOMAIN in clean_body and "utm_source" in clean_body
     if not has_diagnostic_bridge and content_type in ["blog", "cafe", "webtoon", "card_news"]:
         issues.append(f"Missing required diagnostic bridge link to {PRODUCTION_DOMAIN} with utm_source attribution.")
@@ -883,8 +883,8 @@ def audit_post_publish(
                     }
                 }
 
-                // Diagnostic bridge check (truthofmarket.com with utm_source)
-                const hasBridge = links.some(l => l.includes('truthofmarket.com') && l.includes('utm_source'));
+                // Diagnostic bridge check (kidsfit.co.kr with utm_source)
+                const hasBridge = links.some(l => l.includes('kidsfit.co.kr') && l.includes('utm_source'));
                 const hasLegacyDomain = text.includes('kidsfit.co.kr') || links.some(l => l.includes('kidsfit.co.kr'));
 
                 return {

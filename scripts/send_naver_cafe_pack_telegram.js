@@ -87,7 +87,7 @@ async function main() {
     `요청하신 네이버 카페 운영용 <b>① 연령별 무료 프린트 워크지 PDF 3종</b>과 <b>② 카페에 그대로 복사해 붙여넣는 공지글·게시글·메뉴 세팅 4종</b>을 모두 제작하여 지금 바로 텔레그램 파일과 메시지로 보내드립니다!`,
     ``,
     `🌐 <b>웹에서 1초 복사 &amp; PDF 다운로드 센터</b>:`,
-    `<a href="https://truthofmarket.com/samples/6_naver_cafe_pack/">https://truthofmarket.com/samples/6_naver_cafe_pack/</a>`,
+    `<a href="https://kidsfit.co.kr/samples/6_naver_cafe_pack/">https://kidsfit.co.kr/samples/6_naver_cafe_pack/</a>`,
     ``,
     `━━━━━━━━━━━━━━━━━━`,
     `🛠️ <b>[5분 완성] 네이버 카페 게시판(메뉴) 세팅 구조</b>`,
