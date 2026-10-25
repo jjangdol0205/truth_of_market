@@ -345,7 +345,7 @@
       progressFillEl.style.width = `${percent}%`;
     }
 
-    // Update Taller.xyz 6-Segment Glowing Progress Bar
+    // Update 6-Segment Glowing Progress Bar
     const segBar = document.getElementById('quiz-segmented-bar');
     if (segBar && typeof segBar.querySelectorAll === 'function') {
       const pills = segBar.querySelectorAll('.taller-seg-pill');
@@ -1387,9 +1387,11 @@
     cogCheckboxes.forEach((cb) => cognitiveAxes.push(cb.value));
     if (cognitiveAxes.length === 0) cognitiveAxes.push('science_nature');
 
-    // Region
+    // Region & Ethnicity
     const regionSelect = document.getElementById('user-region');
     const region = regionSelect ? regionSelect.value : '서울 강남·서초·송파';
+    const ethnicitySelect = document.getElementById('child-ethnicity');
+    const ethnicity = (ethnicitySelect && ethnicitySelect.value) ? ethnicitySelect.value : 'us_general';
 
     // Child-Specific Deep Traits (Multi-Select Checkboxes + Fallback Select)
     const readMultiTrait = (name, idFallback, defaultVal) => {
@@ -1480,6 +1482,7 @@
       habits,
       cognitiveAxes,
       region,
+      ethnicity,
       traitSleep,
       traitSleepList,
       traitDiet,

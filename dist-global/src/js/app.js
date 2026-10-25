@@ -1112,7 +1112,11 @@
 
   function openAdminModal() {
     if (typeof document === 'undefined') return;
-    const modal = document.getElementById('admin-modal');
+    let modal = document.getElementById('admin-modal');
+    if (!modal && AdminStudio && typeof AdminStudio.openAdminModal === 'function' && document.body && typeof document.createElement === 'function') {
+      AdminStudio.openAdminModal();
+      modal = document.getElementById('admin-modal');
+    }
     if (modal) {
       modal.style.display = 'flex';
       modal.setAttribute('aria-hidden', 'false');

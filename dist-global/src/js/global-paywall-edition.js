@@ -126,438 +126,211 @@
   }
 
 
-  const WESTERN_CLINICAL_PAPERS = [
-    {
-      id: 'cdc-2000',
-      category: 'auxology',
-      badge: 'US CDC / NCHS Standard',
-      title: '2000 CDC Growth Charts for the United States: Methods and Development',
-      authors: 'Kuczmarski RJ, Ogden CL, Guo SS, et al. (National Center for Health Statistics)',
-      journal: 'Vital and Health Statistics, Series 11, No. 246 (2002) · PMID: 12043359',
-      impact: 'Establishes day-exact Box-Cox LMS parameters (Lambda, Mu, Sigma) for pediatric stature-for-age and BMI-for-age across ages 2–20 years.'
-    },
-    {
-      id: 'who-mgrs',
-      category: 'auxology',
-      badge: 'WHO Global Standard',
-      title: 'WHO Child Growth Standards Based on Length/Height, Weight and Age',
-      authors: 'WHO Multicentre Growth Reference Study Group (de Onis M, Garza C, Victora CG, et al.)',
-      journal: 'Acta Paediatrica Suppl. 450: 76–85 (2006) · PMID: 16817681',
-      impact: 'Defines optimal physiological human linear growth velocity across multi-ethnic pediatric cohorts in North America, Europe, and globally.'
-    },
-    {
-      id: 'khamis-roche',
-      category: 'auxology',
-      badge: '98.5% Stature Prediction',
-      title: 'Predicting Adult Stature Without Using Skeletal Age: The Khamis-Roche Method',
-      authors: 'Khamis HJ, Roche AF (Wright State University School of Medicine)',
-      journal: 'Pediatrics 94(4): 504–507 (1994) · PMID: 7936860',
-      impact: 'Gold-standard non-radiographic adult height prediction model combining current stature, weight, and mid-parental height with 98.5% clinical accuracy.'
-    },
-    {
-      id: 'tanner-tw3',
-      category: 'auxology',
-      badge: 'Bone-Age & PHV Standard',
-      title: 'Assessment of Skeletal Maturity and Prediction of Adult Height (TW3 Method)',
-      authors: 'Tanner JM, Healy MJR, Goldstein H, Cameron N (Institute of Child Health, University of London)',
-      journal: 'WB Saunders / Archives of Disease in Childhood (2001)',
-      impact: 'Quantifies epiphyseal ossification stages (Tanner Stages I–V) and Peak Height Velocity (PHV) windows prior to growth plate closure.'
-    },
-    {
-      id: 'pes-rhgh',
-      category: 'endocrine',
-      badge: 'PES / AAP Guideline',
-      title: 'Guidelines for Growth Hormone and Insulin-Like Growth Factor-I Treatment in Children and Adolescents',
-      authors: 'Grimberg A, DiVall SA, Polychronakos C, et al. (Pediatric Endocrine Society)',
-      journal: 'Hormone Research in Paediatrics 86(6): 361–397 (2016) · PMID: 27884013',
-      impact: 'Evidence-based clinical stratification distinguishing true GH deficiency from Idiopathic Short Stature (ISS), evaluating $15,000–$40,000/yr rhGH ROI.'
-    },
-    {
-      id: 'sws-gh-pulse',
-      category: 'endocrine',
-      badge: 'Endocrine Classic',
-      title: 'Growth Hormone Secretion During Sleep & Slow-Wave N3 Amplitude Coupling',
-      authors: 'Takahashi Y, Kipnis DM, Daughaday WH; Van Cauter E, et al. (Washington Univ. / Univ. of Chicago)',
-      journal: 'Journal of Clinical Investigation 47(9): 2079–2090 · J Clin Endocrinol Metab (2000)',
-      impact: 'Demonstrates that 70%+ of daily human growth hormone (HGH) is secreted in pulsatile bursts tightly locked to deep N3 Slow-Wave Sleep.'
-    },
-    {
-      id: 'hyperglycemia-gh',
-      category: 'endocrine',
-      badge: 'Glycemic GH Suppression',
-      title: 'Suppression of Growth Hormone Secretion by Post-Prandial Hyperglycemia & Insulin',
-      authors: 'Roth J, Glick SM, Yalow RS, Berson SA; Heller SR, et al.',
-      journal: 'Science / Journal of Clinical Pharmacology · NIH Clinical Center',
-      impact: 'Late-night carbohydrate intake elevates insulin and hypothalamic somatostatin, blunting nocturnal HGH secretion peaks by up to 62%.'
-    },
-    {
-      id: 'spinal-decompression',
-      category: 'biomechanics',
-      badge: 'Spinal Biomechanics',
-      title: 'Circadian Variation in Human Stature and Osmotic Rehydration of Intervertebral Discs',
-      authors: 'Tyrrell AR, Reilly T, Troup JD (Liverpool Polytechnic / Royal Liverpool Hospital)',
-      journal: 'Spine 10(2): 161–164 (1985) · PMID: 4002039',
-      impact: 'Axial unloading and passive bar traction recover +0.6 to +0.8 in (+1.5 to +2.0 cm) of diurnal intervertebral disc compression.'
-    },
-    {
-      id: 'feynman-recall',
-      category: 'neuro',
-      badge: 'Cognitive Neuroscience',
-      title: 'Test-Enhanced Learning: Taking Memory Tests Improves Long-Term Retention',
-      authors: 'Roediger HL, Karpicke JD (Washington University in St. Louis)',
-      journal: 'Psychological Science 17(3): 249–255 (2006) · PMID: 16507066',
-      impact: 'Active blank-page retrieval practice (Feynman Recall) increases 30-day neocortical retention by +150% compared to passive re-reading.'
-    },
-    {
-      id: 'diamond-ef',
-      category: 'neuro',
-      badge: 'Prefrontal Executive Function',
-      title: 'Executive Functions: Inhibitory Control, Working Memory, and Cognitive Flexibility',
-      authors: 'Diamond A (University of British Columbia / Harvard Medical School)',
-      journal: 'Annual Review of Psychology 64: 135–168 (2013) · PMID: 23020641',
-      impact: 'Establishes how visual schema bar-modeling and aerobic exercise expand dorsolateral prefrontal cortex (dlPFC) working-memory bandwidth.'
-    }
-  ];
-
-  function renderTallerXyzEcosystemShowcase() {
-    if (typeof document === 'undefined' || !isGlobalPaidEdition()) return;
-    const dualShowcase = document.getElementById('dual-pillar-intro-showcase');
-    if (!dualShowcase || !dualShowcase.parentNode) return;
-
-    const isImperial = (global.TallerI18n && typeof global.TallerI18n.getUnitSystem === 'function')
-      ? global.TallerI18n.getUnitSystem() === 'imperial'
-      : true;
-
-    const fmtH = function (cm) {
-      const ftIn = cmToFtInStr(cm);
-      return isImperial ? (ftIn + ' (' + cm.toFixed(1) + ' cm)') : (cm.toFixed(1) + ' cm (' + ftIn + ')');
-    };
-    const fmtGain = function (cm) {
-      const inc = (cm / 2.54).toFixed(1);
-      return isImperial ? ('+' + inc + ' in (+' + cm.toFixed(1) + ' cm)') : ('+' + cm.toFixed(1) + ' cm (+' + inc + ' in)');
-    };
-    const fmtW = function (kg) {
-      const lbs = (kg * 2.20462262).toFixed(1);
-      return isImperial ? (lbs + ' lbs (' + kg.toFixed(1) + ' kg)') : (kg.toFixed(1) + ' kg (' + lbs + ' lbs)');
-    };
-
-    let eco = document.getElementById('taller-xyz-ecosystem-showcase');
-    if (!eco) {
-      eco = document.createElement('section');
-      eco.id = 'taller-xyz-ecosystem-showcase';
-      eco.style.cssText = 'margin: 1.5rem 0 2rem 0;';
-      if (dualShowcase.nextSibling) {
-        dualShowcase.parentNode.insertBefore(eco, dualShowcase.nextSibling);
-      } else {
-        dualShowcase.parentNode.appendChild(eco);
+  function getLoggedInUser() {
+    try {
+      if (typeof window !== 'undefined' && window.localStorage) {
+        const raw = window.localStorage.getItem('kidsfit_global_auth_user_v1');
+        if (raw) return JSON.parse(raw);
       }
-    }
-
-    eco.innerHTML = `
-      <!-- TALLER AI COMPLETE 6-PILLAR INTERACTIVE SUITE & WESTERN ACADEMIC HUB -->
-      <div style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:24px;padding:1.6rem 1.45rem;box-shadow:0 20px 50px -15px rgba(15,23,42,0.06);">
-        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.6rem;margin-bottom:1rem;">
-          <div style="display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap;">
-            <span style="background:linear-gradient(135deg,#0F172A 0%,#2563EB 100%);color:#FFFFFF;font-size:0.72rem;font-weight:800;padding:0.26rem 0.8rem;border-radius:9999px;letter-spacing:0.04em;">
-              US HEALTHTECH 6-PILLAR BENTO SUITE · DUAL-UNIT
-            </span>
-            <span style="background:#F8FAFC;color:#0F172A;border:1px solid #CBD5E1;font-size:0.74rem;font-weight:700;padding:0.22rem 0.75rem;border-radius:9999px;">
-              Active Unit Mode: ${isImperial ? '🇺🇸 Imperial (ft/in · lbs)' : '🌐 Metric (cm · kg)'}
-            </span>
-          </div>
-          <div style="display:flex;gap:0.4rem;">
-            <button type="button" onclick="if(window.TallerOnboardingWizard)window.TallerOnboardingWizard.setUnitSystem('imperial');" style="padding:0.36rem 0.85rem;border-radius:9999px;border:1px solid ${isImperial ? '#0F172A' : '#CBD5E1'};background:${isImperial ? '#0F172A' : '#FFFFFF'};color:${isImperial ? '#FFFFFF' : '#334155'};font-size:0.75rem;font-weight:800;cursor:pointer;">
-              🇺🇸 ft/in · lbs
-            </button>
-            <button type="button" onclick="if(window.TallerOnboardingWizard)window.TallerOnboardingWizard.setUnitSystem('metric');" style="padding:0.36rem 0.85rem;border-radius:9999px;border:1px solid ${!isImperial ? '#0F172A' : '#CBD5E1'};background:${!isImperial ? '#0F172A' : '#FFFFFF'};color:${!isImperial ? '#FFFFFF' : '#334155'};font-size:0.75rem;font-weight:800;cursor:pointer;">
-              🌐 cm · kg
-            </button>
-          </div>
-        </div>
-
-        <h2 style="font-size:clamp(1.22rem,2.8vw,1.52rem);font-weight:800;color:#0F172A;margin:0 0 0.35rem 0;letter-spacing:-0.03em;">
-          Interactive Height Predictor, Daily HGH Score, 24/7 AI Coach &amp; PubMed Research Hub
-        </h2>
-        <p style="font-size:0.88rem;color:#475569;margin:0 0 1.3rem 0;line-height:1.55;">
-          Built for US &amp; global families — combining Khamis-Roche 98.5% adult height modeling, US CDC 2000 percentiles, AAP/PES endocrine standards, and Harvard/WashU cognitive neuroscience.
-        </p>
-
-        <!-- ROW 1: (1) 98.5% Accuracy Dream Height Reachability Card + (2) Interactive Daily Routine & HGH Score Calculator -->
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.15rem;margin-bottom:1.15rem;">
-          <!-- PILLAR 1: 98.5% Prediction Accuracy & Dream Height Reachability -->
-          <div class="us-bento-card" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:20px;padding:1.25rem 1.25rem;display:flex;flex-direction:column;justify-content:space-between;">
-            <div>
-              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem;">
-                <span style="font-size:0.73rem;font-weight:900;color:#1D4ED8;background:#EFF6FF;padding:0.2rem 0.6rem;border-radius:9999px;border:1px solid #BFDBFE;">
-                  PILLAR 01 · DREAM HEIGHT &amp; PLATE OPENNESS
-                </span>
-                <span style="font-size:0.74rem;font-weight:900;color:#059669;">98.5% Khamis-Roche Accuracy</span>
-              </div>
-              <h3 style="font-size:1.05rem;font-weight:900;color:#0F172A;margin:0 0 0.45rem 0;">
-                Dream Height Reachability &amp; Epiphyseal Growth Window
-              </h3>
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.6rem;margin-bottom:0.75rem;">
-                <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:12px;padding:0.65rem 0.75rem;">
-                  <div style="font-size:0.72rem;font-weight:700;color:#64748B;">Predicted Peak Stature</div>
-                  <div style="font-size:1.12rem;font-weight:900;color:#1D4ED8;margin-top:0.15rem;">${fmtH(180.3)}</div>
-                  <div style="font-size:0.71rem;color:#059669;font-weight:800;">${fmtGain(6.8)} vs. Unmanaged</div>
-                </div>
-                <div style="background:#EFF6FF;border:1.5px solid #93C5FD;border-radius:12px;padding:0.65rem 0.75rem;">
-                  <div style="font-size:0.72rem;font-weight:800;color:#1E3A8A;">Dream Goal (${fmtH(182.9)})</div>
-                  <div style="font-size:1.12rem;font-weight:900;color:#059669;margin-top:0.15rem;">89% Reachable</div>
-                  <div style="font-size:0.71rem;color:#1E3A8A;font-weight:700;">With 6-Mo HGH &amp; Posture Plan</div>
-                </div>
-              </div>
-              <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:12px;padding:0.7rem 0.85rem;margin-bottom:0.6rem;">
-                <div style="display:flex;justify-content:space-between;font-size:0.76rem;font-weight:800;color:#0F172A;margin-bottom:0.3rem;">
-                  <span>Epiphyseal Growth Plate Openness (Tanner Stage II)</span>
-                  <span style="color:#1D4ED8;">78% Open · ~5.2 Yrs Left</span>
-                </div>
-                <div style="width:100%;height:9px;background:#E2E8F0;border-radius:9999px;overflow:hidden;">
-                  <div style="width:78%;height:100%;background:linear-gradient(90deg,#1D4ED8 0%,#10B981 100%);border-radius:9999px;"></div>
-                </div>
-                <div style="font-size:0.73rem;color:#475569;margin-top:0.35rem;">
-                  Remaining Linear Growth Potential from Current (${fmtH(137.0)}): <strong style="color:#0F172A;">${fmtGain(43.3)}</strong>
-                </div>
-              </div>
-            </div>
-            <button type="button" onclick="if(window.TallerOnboardingWizard)window.TallerOnboardingWizard.enterStudioMode('child','growth');" style="width:100%;padding:0.65rem 0.9rem;border-radius:10px;border:1px solid #1D4ED8;background:#EFF6FF;color:#1D4ED8;font-size:0.82rem;font-weight:800;cursor:pointer;">
-              Calculate My Child's Dream Height Odds in Step 2 →
-            </button>
-          </div>
-
-          <!-- PILLAR 2: Interactive Optimal Daily Routine & HGH Score Calculator -->
-          <div style="background:#FFFFFF;border:1.5px solid #BFDBFE;border-radius:16px;padding:1.15rem 1.2rem;display:flex;flex-direction:column;justify-content:space-between;">
-            <div>
-              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem;">
-                <span style="font-size:0.73rem;font-weight:900;color:#1D4ED8;background:#EFF6FF;padding:0.2rem 0.6rem;border-radius:9999px;border:1px solid #BFDBFE;">
-                  PILLAR 02 · INTERACTIVE DAILY HGH ROUTINE SCORE
-                </span>
-                <span id="taller-daily-score-val" style="font-size:0.82rem;font-weight:900;color:#FFFFFF;background:#10B981;padding:0.18rem 0.65rem;border-radius:9999px;">
-                  80% Optimized (+54% GH)
-                </span>
-              </div>
-              <h3 style="font-size:1.05rem;font-weight:900;color:#0F172A;margin:0 0 0.35rem 0;">
-                Interactive Daily Growth Factor &amp; Nocturnal HGH Checklist
-              </h3>
-              <div style="width:100%;height:8px;background:#E2E8F0;border-radius:9999px;overflow:hidden;margin-bottom:0.65rem;">
-                <div id="taller-daily-score-bar" style="width:80%;height:100%;background:linear-gradient(90deg,#2563EB 0%,#10B981 100%);transition:width 0.25s ease;"></div>
-              </div>
-              <div style="display:flex;flex-direction:column;gap:0.42rem;font-size:0.8rem;color:#1E293B;">
-                <label style="display:flex;align-items:center;gap:0.5rem;cursor:pointer;background:#F8FAFC;padding:0.42rem 0.65rem;border-radius:8px;border:1px solid #E2E8F0;">
-                  <input type="checkbox" class="taller-routine-cb" checked onchange="window.recalcTallerDailyScore()" style="accent-color:#1D4ED8;width:16px;height:16px;">
-                  <span><strong>10:00 PM Deep N3 Sleep Window</strong> (+68% SWS HGH pulse amplitude)</span>
-                </label>
-                <label style="display:flex;align-items:center;gap:0.5rem;cursor:pointer;background:#F8FAFC;padding:0.42rem 0.65rem;border-radius:8px;border:1px solid #E2E8F0;">
-                  <input type="checkbox" class="taller-routine-cb" checked onchange="window.recalcTallerDailyScore()" style="accent-color:#1D4ED8;width:16px;height:16px;">
-                  <span><strong>3-Hr Pre-Bed Glycemic Fast</strong> (Prevents insulin somatostatin GH block)</span>
-                </label>
-                <label style="display:flex;align-items:center;gap:0.5rem;cursor:pointer;background:#F8FAFC;padding:0.42rem 0.65rem;border-radius:8px;border:1px solid #E2E8F0;">
-                  <input type="checkbox" class="taller-routine-cb" checked onchange="window.recalcTallerDailyScore()" style="accent-color:#1D4ED8;width:16px;height:16px;">
-                  <span><strong>10-Min Bar Dead-Hang &amp; Cobra</strong> (${fmtGain(1.8)} spinal disc decompression)</span>
-                </label>
-                <label style="display:flex;align-items:center;gap:0.5rem;cursor:pointer;background:#F8FAFC;padding:0.42rem 0.65rem;border-radius:8px;border:1px solid #E2E8F0;">
-                  <input type="checkbox" class="taller-routine-cb" checked onchange="window.recalcTallerDailyScore()" style="accent-color:#1D4ED8;width:16px;height:16px;">
-                  <span><strong>300 Vertical Piezoelectric Jumps</strong> (Tibial/femoral chondrocyte stimulus)</span>
-                </label>
-                <label style="display:flex;align-items:center;gap:0.5rem;cursor:pointer;background:#F8FAFC;padding:0.42rem 0.65rem;border-radius:8px;border:1px solid #E2E8F0;">
-                  <input type="checkbox" class="taller-routine-cb" onchange="window.recalcTallerDailyScore()" style="accent-color:#1D4ED8;width:16px;height:16px;">
-                  <span><strong>Bio-Nutrition Target (${fmtW(35.5)})</strong>: 920mg Ca · 2,000 IU D3 · 78mcg K2</span>
-                </label>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- ROW 2: (3) Biomechanical Stretches & Fitness Blueprint + (4) Interactive 24/7 AI Growth & Brain Coach -->
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.1rem;margin-bottom:1.15rem;">
-          <!-- PILLAR 3: Personalized Biomechanical Stretches, Fitness & Bio-Nutrition -->
-          <div style="background:#FFFFFF;border:1.5px solid #BFDBFE;border-radius:16px;padding:1.15rem 1.2rem;">
-            <span style="display:inline-block;font-size:0.73rem;font-weight:900;color:#1D4ED8;background:#EFF6FF;padding:0.2rem 0.6rem;border-radius:9999px;border:1px solid #BFDBFE;margin-bottom:0.45rem;">
-              PILLAR 03 · TALLER BIOMECHANICS &amp; BIO-NUTRITION
-            </span>
-            <h3 style="font-size:1.05rem;font-weight:900;color:#0F172A;margin:0 0 0.55rem 0;">
-              Spinal Decompression Stretches &amp; Weight-Calibrated Nutrition
-            </h3>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.55rem;font-size:0.78rem;">
-              <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:10px;padding:0.6rem 0.7rem;">
-                <strong style="color:#1D4ED8;display:block;">1. Passive Bar Dead-Hang</strong>
-                <span style="color:#475569;">3 × 30s morning &amp; night. Rehydrates 23 intervertebral discs (${fmtGain(1.5)}).</span>
-              </div>
-              <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:10px;padding:0.6rem 0.7rem;">
-                <strong style="color:#1D4ED8;display:block;">2. Thoracic Cobra Extension</strong>
-                <span style="color:#475569;">3 × 45s prone extension. Corrects Desk/Screen Cervical Kyphosis.</span>
-              </div>
-              <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:10px;padding:0.6rem 0.7rem;">
-                <strong style="color:#1D4ED8;display:block;">3. Pelvic Tilt &amp; Psoas Unload</strong>
-                <span style="color:#475569;">Eliminates anterior pelvic tilt hiding ${isImperial ? '0.4–0.7 in' : '1.0–1.8 cm'} of standing height.</span>
-              </div>
-              <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:10px;padding:0.6rem 0.7rem;">
-                <strong style="color:#1D4ED8;display:block;">4. Masai Piezoelectric Jumps</strong>
-                <span style="color:#475569;">15-min dynamic vertical micro-strain for osteoblast mineralization.</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- PILLAR 4: Interactive 24/7 AI Growth & Brain Coach (Ask KidsFit / Taller AI) -->
-          <div id="taller-ai-coach-widget" style="background:#FFFFFF;border:1.5px solid #BFDBFE;border-radius:16px;padding:1.15rem 1.2rem;display:flex;flex-direction:column;justify-content:space-between;">
-            <div>
-              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.45rem;">
-                <span style="font-size:0.73rem;font-weight:900;color:#FFFFFF;background:linear-gradient(90deg,#1D4ED8,#2563EB);padding:0.2rem 0.65rem;border-radius:9999px;">
-                  PILLAR 04 · 24/7 AI AUXOLOGY &amp; BRAIN COACH
-                </span>
-                <span style="font-size:0.72rem;font-weight:800;color:#059669;">● Online · PubMed Cited</span>
-              </div>
-              <h3 style="font-size:1.05rem;font-weight:900;color:#0F172A;margin:0 0 0.45rem 0;">
-                Ask KidsFit / Taller AI Clinical Coach (Instant Evidence-Based Answer)
-              </h3>
-              <div style="display:flex;flex-wrap:wrap;gap:0.35rem;margin-bottom:0.6rem;">
-                <button type="button" onclick="window.askKidsFitTallerAI('gain')" style="background:#EFF6FF;color:#1D4ED8;border:1px solid #BFDBFE;border-radius:9999px;padding:0.26rem 0.6rem;font-size:0.73rem;font-weight:800;cursor:pointer;">
-                  +2.5 in (+6.4 cm) Protocol?
-                </button>
-                <button type="button" onclick="window.askKidsFitTallerAI('rhgh')" style="background:#EFF6FF;color:#1D4ED8;border:1px solid #BFDBFE;border-radius:9999px;padding:0.26rem 0.6rem;font-size:0.73rem;font-weight:800;cursor:pointer;">
-                  rhGH Injections ROI ($20k/yr)?
-                </button>
-                <button type="button" onclick="window.askKidsFitTallerAI('sleep')" style="background:#EFF6FF;color:#1D4ED8;border:1px solid #BFDBFE;border-radius:9999px;padding:0.26rem 0.6rem;font-size:0.73rem;font-weight:800;cursor:pointer;">
-                  Best HGH Bedtime &amp; Fasting?
-                </button>
-                <button type="button" onclick="window.askKidsFitTallerAI('brain')" style="background:#EFF6FF;color:#1D4ED8;border:1px solid #BFDBFE;border-radius:9999px;padding:0.26rem 0.6rem;font-size:0.73rem;font-weight:800;cursor:pointer;">
-                  Fix Math &amp; Recall Bottleneck?
-                </button>
-              </div>
-              <div id="taller-ai-coach-response" style="background:#F8FAFC;border:1px solid #CBD5E1;border-radius:10px;padding:0.65rem 0.8rem;font-size:0.79rem;color:#1E293B;line-height:1.48;margin-bottom:0.55rem;">
-                <strong>🤖 KidsFit / Taller AI Coach:</strong> Select a clinical topic above or ask any question below. All answers are calibrated in <strong>${isImperial ? 'ft/in · lbs' : 'cm · kg'}</strong> using US CDC 2000, PES, and PubMed peer-reviewed literature.
-              </div>
-            </div>
-            <div style="display:flex;gap:0.4rem;">
-              <input type="text" id="taller-ai-question-input" placeholder="Ask about height potential, bone age, sleep, or study focus..." style="flex:1;padding:0.5rem 0.7rem;border:1px solid #CBD5E1;border-radius:8px;font-size:0.8rem;color:#0F172A;">
-              <button type="button" onclick="window.askKidsFitTallerAI('custom')" style="padding:0.5rem 0.85rem;background:#1D4ED8;color:#FFFFFF;border:none;border-radius:8px;font-size:0.79rem;font-weight:800;cursor:pointer;white-space:nowrap;">
-                Ask AI →
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- ROW 3: (5) Western Peer-Reviewed Clinical Research Explorer (CDC, WHO, AAP, PES, NIH, Harvard/Stanford) -->
-        <div style="background:#FFFFFF;border:1.5px solid #BFDBFE;border-radius:16px;padding:1.15rem 1.2rem;margin-bottom:1.15rem;">
-          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.65rem;">
-            <div>
-              <span style="font-size:0.73rem;font-weight:900;color:#1D4ED8;background:#EFF6FF;padding:0.2rem 0.65rem;border-radius:9999px;border:1px solid #BFDBFE;">
-                PILLAR 05 · WESTERN PEER-REVIEWED CLINICAL KNOWLEDGE BASE (3,681 PUBMED PAPERS)
-              </span>
-              <h3 style="font-size:1.08rem;font-weight:900;color:#0F172A;margin:0.35rem 0 0 0;">
-                US CDC 2000, WHO MGRS, AAP, Pediatric Endocrine Society (PES) &amp; Cognitive Neuroscience Studies
-              </h3>
-            </div>
-            <div style="display:flex;flex-wrap:wrap;gap:0.35rem;">
-              <button type="button" onclick="window.filterWesternPapers('all')" class="western-paper-tab" data-cat="all" style="padding:0.3rem 0.7rem;border-radius:9999px;border:1px solid #1D4ED8;background:#1D4ED8;color:#FFFFFF;font-size:0.74rem;font-weight:800;cursor:pointer;">All (10 Core Landmarks)</button>
-              <button type="button" onclick="window.filterWesternPapers('auxology')" class="western-paper-tab" data-cat="auxology" style="padding:0.3rem 0.7rem;border-radius:9999px;border:1px solid #CBD5E1;background:#F8FAFC;color:#334155;font-size:0.74rem;font-weight:800;cursor:pointer;">US CDC / WHO / Khamis-Roche</button>
-              <button type="button" onclick="window.filterWesternPapers('endocrine')" class="western-paper-tab" data-cat="endocrine" style="padding:0.3rem 0.7rem;border-radius:9999px;border:1px solid #CBD5E1;background:#F8FAFC;color:#334155;font-size:0.74rem;font-weight:800;cursor:pointer;">PES / rhGH / SWS HGH</button>
-              <button type="button" onclick="window.filterWesternPapers('biomechanics')" class="western-paper-tab" data-cat="biomechanics" style="padding:0.3rem 0.7rem;border-radius:9999px;border:1px solid #CBD5E1;background:#F8FAFC;color:#334155;font-size:0.74rem;font-weight:800;cursor:pointer;">Spinal Biomechanics</button>
-              <button type="button" onclick="window.filterWesternPapers('neuro')" class="western-paper-tab" data-cat="neuro" style="padding:0.3rem 0.7rem;border-radius:9999px;border:1px solid #CBD5E1;background:#F8FAFC;color:#334155;font-size:0.74rem;font-weight:800;cursor:pointer;">Harvard / WashU Neuroscience</button>
-            </div>
-          </div>
-          <div id="western-papers-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(275px,1fr));gap:0.7rem;">
-            ${WESTERN_CLINICAL_PAPERS.map(function (paper) {
-              return '<div class="western-paper-card" data-category="' + paper.category + '" style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:12px;padding:0.75rem 0.85rem;">' +
-                '<div style="font-size:0.7rem;font-weight:900;color:#1D4ED8;margin-bottom:0.2rem;">' + paper.badge + '</div>' +
-                '<div style="font-size:0.82rem;font-weight:900;color:#0F172A;line-height:1.35;margin-bottom:0.2rem;">' + paper.title + '</div>' +
-                '<div style="font-size:0.72rem;color:#64748B;font-weight:700;margin-bottom:0.3rem;">' + paper.authors + ' · <em>' + paper.journal + '</em></div>' +
-                '<div style="font-size:0.75rem;color:#334155;line-height:1.4;">' + paper.impact + '</div>' +
-              '</div>';
-            }).join('')}
-          </div>
-        </div>
-
-        <!-- ROW 4: (6) Global Growth Community & Verified Parent/Teen Milestones -->
-        <div style="background:#FFFFFF;border:1.5px solid #BFDBFE;border-radius:16px;padding:1.1rem 1.2rem;">
-          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.65rem;">
-            <span style="font-size:0.73rem;font-weight:900;color:#1D4ED8;background:#EFF6FF;padding:0.2rem 0.65rem;border-radius:9999px;border:1px solid #BFDBFE;">
-              PILLAR 06 · GLOBAL COMMUNITY MILESTONES (500,000+ SCANS · 4.8★ RATING)
-            </span>
-            <span style="font-size:0.76rem;font-weight:800;color:#059669;">Verified North America · UK · Australia Families</span>
-          </div>
-          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:0.75rem;font-size:0.79rem;">
-            <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:12px;padding:0.75rem 0.85rem;">
-              <div style="font-weight:900;color:#0F172A;margin-bottom:0.2rem;">★★★★★ "Saved us from $24k/yr rhGH guesswork" — Boston, MA</div>
-              <div style="color:#475569;line-height:1.42;">"Our 11yo son jumped from ${fmtH(141.0)} (34th%) to ${fmtH(146.8)} (52nd%) in 6 months after fixing his 10 PM SWS sleep window, 3-hr carb fast, and daily bar hangs."</div>
-            </div>
-            <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:12px;padding:0.75rem 0.85rem;">
-              <div style="font-weight:900;color:#0F172A;margin-bottom:0.2rem;">★★★★★ "Both ft/in &amp; cm + Khamis-Roche accuracy" — Austin, TX</div>
-              <div style="color:#475569;line-height:1.42;">"We loved how Taller.xyz's dream height tracker and the 5-Axis Brain LQ scan showed exactly why our daughter struggled with multi-step math word problems."</div>
-            </div>
-            <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:12px;padding:0.75rem 0.85rem;">
-              <div style="font-weight:900;color:#0F172A;margin-bottom:0.2rem;">★★★★★ "Hospital-grade PDF for our pediatrician" — London, UK</div>
-              <div style="color:#475569;line-height:1.42;">"Brought the 2-page US CDC / WHO clinical print report to our endocrinologist. Weight-calibrated D3+K2 and Zinc targets were spot on."</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    `;
+    } catch (_) {}
+    return null;
   }
 
-  global.recalcTallerDailyScore = function () {
+  function syncAuthHeaderButton() {
     if (typeof document === 'undefined') return;
-    const boxes = document.querySelectorAll('.taller-routine-cb');
-    if (!boxes || boxes.length === 0) return;
-    let checked = 0;
-    boxes.forEach(function (b) { if (b.checked) checked += 1; });
-    const pct = Math.round((checked / boxes.length) * 100);
-    const ghBoost = Math.round(pct * 0.68);
-    const badge = document.getElementById('taller-daily-score-val');
-    const bar = document.getElementById('taller-daily-score-bar');
-    if (badge) {
-      badge.textContent = pct + '% Optimized (+' + ghBoost + '% GH)';
-      badge.style.background = pct >= 80 ? '#10B981' : (pct >= 50 ? '#2563EB' : '#F59E0B');
-    }
-    if (bar) {
-      bar.style.width = pct + '%';
-    }
-  };
-
-  global.askKidsFitTallerAI = function (topic) {
-    if (typeof document === 'undefined') return;
-    const out = document.getElementById('taller-ai-coach-response');
-    const inp = document.getElementById('taller-ai-question-input');
-    if (!out) return;
-    const isImperial = (global.TallerI18n && typeof global.TallerI18n.getUnitSystem === 'function')
-      ? global.TallerI18n.getUnitSystem() === 'imperial'
-      : true;
-    const gainStr = isImperial ? '+1.8 to +2.6 in (+4.5 to +6.7 cm)' : '+4.5 to +6.7 cm (+1.8 to +2.6 in)';
-    const spineStr = isImperial ? '+0.6 to +0.8 in (+1.5 to +2.0 cm)' : '+1.5 to +2.0 cm (+0.6 to +0.8 in)';
-    const rhghGain = isImperial ? '+1.5 to +2.3 in (+4.0 to +6.0 cm)' : '+4.0 to +6.0 cm (+1.5 to +2.3 in)';
-    const q = inp && inp.value ? inp.value.trim() : '';
-
-    let reply = '';
-    if (topic === 'gain') {
-      reply = '<strong>🤖 Clinical Protocol (Gain ' + gainStr + '):</strong> Combining (1) N3 Slow-Wave Sleep onset before 10:00 PM (+68% endogenous GH amplitude, <em>Takahashi et al., JCI</em>), (2) 10-min morning/night Bar Dead-Hang + Cobra decompression (' + spineStr + ' disc recovery, <em>Tyrrell et al., Spine</em>), and (3) daily D3 (2,000 IU) + K2 (MK-7) + Chelated Zinc unlocks ' + gainStr + ' prior to Tanner Stage IV epiphyseal fusion.';
-    } else if (topic === 'rhgh') {
-      reply = '<strong>🤖 PES / Cochrane rhGH Verdict:</strong> According to Pediatric Endocrine Society (<em>Grimberg et al., 2016</em>) and Cochrane systematic reviews, daily rhGH injections in non-GH-deficient children cost <strong>$15,000–$40,000/yr</strong> and yield ' + rhghGain + ' over 3–5 years. Optimizing nocturnal SWS sleep, glycemic fasting, and BMI leptin control should always precede or accompany exogenous therapy.';
-    } else if (topic === 'sleep') {
-      reply = '<strong>🤖 Nocturnal HGH &amp; Glycemic Fasting Rule:</strong> 70%+ of daily HGH is secreted during the first two N3 Slow-Wave Sleep cycles (10:30 PM – 1:30 AM). Eating carbohydrates or sugary snacks within 3 hours of bedtime triggers insulin and hypothalamic somatostatin, suppressing nocturnal HGH surges by up to <strong>62%</strong> (<em>Heller et al., J Clin Pharmacol</em>).';
-    } else if (topic === 'brain') {
-      reply = '<strong>🤖 5-Axis Neuro-Cognitive Fix:</strong> Multi-step math and reading bottlenecks stem from dorsolateral Prefrontal Cortex (dlPFC) working-memory saturation (<em>Diamond, Annu Rev Psychol 2013</em>). Pair <strong>Visual Bar-Modeling</strong> (externalizing variables onto paper) with <strong>Feynman 3-Line Blank-Page Recall</strong> right after 25-min study blocks (+150% 30-day retention, <em>Roediger &amp; Karpicke 2006</em>).';
+    const btn = document.getElementById('btn-header-auth');
+    if (!btn) return;
+    const user = getLoggedInUser();
+    if (user && user.email) {
+      btn.textContent = `👤 ${user.name || user.email.split('@')[0]}${user.unlockedPass ? ' (PRO)' : ''}`;
+      btn.style.background = user.unlockedPass ? '#ECFDF5' : '#EFF6FF';
+      btn.style.color = user.unlockedPass ? '#059669' : '#1D4ED8';
+      btn.style.borderColor = user.unlockedPass ? '#A7F3D0' : '#BFDBFE';
     } else {
-      const userQ = q ? ('"' + q.replace(/[<>&]/g, '') + '" — ') : '';
-      reply = '<strong>🤖 KidsFit / Taller AI Analysis:</strong> ' + userQ + 'Based on US CDC 2000 LMS models and Khamis-Roche auxology, maximizing adult stature (' + gainStr + ' window) requires syncing deep N3 sleep (by 10:00 PM), axial spinal decompression (' + spineStr + '), and weight-calibrated Calcium/D3/K2/Zinc intake. Complete the 6-step scan below for your child&apos;s exact day-matched percentile and Dream Height odds!';
+      btn.textContent = '👤 Sign In / Sign Up';
+      btn.style.background = '#EFF6FF';
+      btn.style.color = '#1D4ED8';
+      btn.style.borderColor = '#BFDBFE';
     }
-    out.innerHTML = reply;
+  }
+
+  global.openKidsFitAuthModal = function (initialTab) {
+    if (typeof document === 'undefined') return;
+    let modal = document.getElementById('kidsfit-auth-modal');
+    if (modal) modal.remove();
+
+    const activeTab = initialTab === 'signup' ? 'signup' : 'login';
+    const user = getLoggedInUser();
+
+    modal = document.createElement('div');
+    modal.id = 'kidsfit-auth-modal';
+    modal.style.cssText = 'position:fixed;inset:0;z-index:99999;background:rgba(15,23,42,0.72);display:flex;align-items:center;justify-content:center;padding:1rem;backdrop-filter:blur(4px);';
+
+    if (user && user.email) {
+      modal.innerHTML = `
+        <div style="background:#FFFFFF;border:1.5px solid #BFDBFE;border-radius:22px;max-width:440px;width:100%;padding:1.5rem 1.4rem;box-shadow:0 25px 60px rgba(15,23,42,0.28);color:#0F172A;text-align:left;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.85rem;padding-bottom:0.65rem;border-bottom:1px solid #E2E8F0;">
+            <div>
+              <span style="font-size:0.72rem;font-weight:800;color:#1D4ED8;background:#EFF6FF;padding:0.18rem 0.55rem;border-radius:9999px;">KIDS-FIT MEMBER ACCOUNT</span>
+              <h3 style="margin:0.3rem 0 0;font-size:1.15rem;font-weight:800;color:#0F172A;">${user.name || 'Parent Member'}</h3>
+            </div>
+            <button type="button" onclick="var m=document.getElementById('kidsfit-auth-modal');if(m)m.remove();" style="background:#F1F5F9;border:1px solid #CBD5E1;border-radius:9999px;width:32px;height:32px;font-weight:800;cursor:pointer;">✕</button>
+          </div>
+          <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:12px;padding:0.85rem 1rem;margin-bottom:0.9rem;font-size:0.86rem;">
+            <div style="margin-bottom:0.35rem;"><strong>Email:</strong> ${user.email}</div>
+            <div><strong>Report Access Status:</strong> ${isReportUnlocked() || user.unlockedPass ? '<span style="color:#059669;font-weight:800;">✓ PRO PASS UNLOCKED</span>' : '<span style="color:#64748B;font-weight:700;">Standard Account (Paywall Locked)</span>'}</div>
+          </div>
+          <button type="button" onclick="window.verifyKidsFitMemberOrder('${user.email}')" style="width:100%;padding:0.78rem 1rem;border-radius:12px;border:1px solid #1D4ED8;background:#EFF6FF;color:#1D4ED8;font-size:0.88rem;font-weight:800;cursor:pointer;margin-bottom:0.55rem;">
+            🔄 Sync / Verify Lemon Squeezy Purchase Status
+          </button>
+          <button type="button" onclick="window.signOutKidsFitAccount()" style="width:100%;padding:0.72rem 1rem;border-radius:12px;border:1px solid #CBD5E1;background:#FFFFFF;color:#475569;font-size:0.85rem;font-weight:700;cursor:pointer;">
+            Sign Out
+          </button>
+        </div>
+      `;
+      document.body.appendChild(modal);
+      return;
+    }
+
+    modal.innerHTML = `
+      <div style="background:#FFFFFF;border:1.5px solid #BFDBFE;border-radius:22px;max-width:440px;width:100%;padding:1.5rem 1.4rem;box-shadow:0 25px 60px rgba(15,23,42,0.28);color:#0F172A;text-align:left;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.85rem;padding-bottom:0.65rem;border-bottom:1px solid #E2E8F0;">
+          <div>
+            <span style="font-size:0.72rem;font-weight:800;color:#1D4ED8;background:#EFF6FF;padding:0.18rem 0.55rem;border-radius:9999px;">KIDS-FIT BIO LABS · MEMBER PORTAL</span>
+            <h3 style="margin:0.3rem 0 0;font-size:1.15rem;font-weight:800;color:#0F172A;">Sign In or Create Parent Account</h3>
+          </div>
+          <button type="button" onclick="var m=document.getElementById('kidsfit-auth-modal');if(m)m.remove();" style="background:#F1F5F9;border:1px solid #CBD5E1;border-radius:9999px;width:32px;height:32px;font-weight:800;cursor:pointer;">✕</button>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.45rem;margin-bottom:1rem;background:#F1F5F9;padding:0.3rem;border-radius:12px;">
+          <button type="button" id="auth-tab-btn-login" onclick="window.openKidsFitAuthModal('login')" style="padding:0.5rem;border-radius:9px;border:none;font-size:0.84rem;font-weight:800;cursor:pointer;background:${activeTab === 'login' ? '#FFFFFF' : 'transparent'};color:${activeTab === 'login' ? '#0F172A' : '#64748B'};box-shadow:${activeTab === 'login' ? '0 2px 6px rgba(15,23,42,0.08)' : 'none'};">
+            Sign In
+          </button>
+          <button type="button" id="auth-tab-btn-signup" onclick="window.openKidsFitAuthModal('signup')" style="padding:0.5rem;border-radius:9px;border:none;font-size:0.84rem;font-weight:800;cursor:pointer;background:${activeTab === 'signup' ? '#FFFFFF' : 'transparent'};color:${activeTab === 'signup' ? '#0F172A' : '#64748B'};box-shadow:${activeTab === 'signup' ? '0 2px 6px rgba(15,23,42,0.08)' : 'none'};">
+            Create Account
+          </button>
+        </div>
+
+        <div id="auth-name-group" style="display:${activeTab === 'signup' ? 'block' : 'none'};margin-bottom:0.75rem;">
+          <label style="display:block;font-size:0.78rem;font-weight:800;color:#334155;margin-bottom:0.25rem;">Parent / Guardian Name</label>
+          <input type="text" id="auth-input-name" placeholder="Sarah Jenkins" style="width:100%;box-sizing:border-box;padding:0.65rem 0.8rem;border:1.5px solid #CBD5E1;border-radius:10px;font-size:0.9rem;color:#0F172A;">
+        </div>
+
+        <div style="margin-bottom:0.75rem;">
+          <label style="display:block;font-size:0.78rem;font-weight:800;color:#334155;margin-bottom:0.25rem;">Email Address (Used for Report &amp; Lemon Squeezy Order Sync)</label>
+          <input type="email" id="auth-input-email" placeholder="parent@example.com" style="width:100%;box-sizing:border-box;padding:0.65rem 0.8rem;border:1.5px solid #CBD5E1;border-radius:10px;font-size:0.9rem;color:#0F172A;">
+        </div>
+
+        <div style="margin-bottom:0.85rem;">
+          <label style="display:block;font-size:0.78rem;font-weight:800;color:#334155;margin-bottom:0.25rem;">Password (Min 4 characters)</label>
+          <input type="password" id="auth-input-password" placeholder="••••••••" style="width:100%;box-sizing:border-box;padding:0.65rem 0.8rem;border:1.5px solid #CBD5E1;border-radius:10px;font-size:0.9rem;color:#0F172A;">
+        </div>
+
+        <div id="auth-feedback-msg" style="display:none;font-size:0.8rem;font-weight:700;padding:0.55rem 0.75rem;border-radius:8px;margin-bottom:0.75rem;"></div>
+
+        <button type="button" onclick="window.submitKidsFitAuth('${activeTab}')" style="width:100%;padding:0.88rem 1rem;border-radius:12px;border:none;background:linear-gradient(135deg,#0F172A 0%,#1D4ED8 100%);color:#FFFFFF;font-size:0.94rem;font-weight:800;cursor:pointer;box-shadow:0 8px 20px rgba(29,78,216,0.22);">
+          ${activeTab === 'signup' ? 'Create Parent Account & Sync Reports →' : 'Sign In to My Account →'}
+        </button>
+      </div>
+    `;
+    document.body.appendChild(modal);
   };
 
-  global.filterWesternPapers = function (cat) {
-    if (typeof document === 'undefined') return;
-    const cards = document.querySelectorAll('.western-paper-card');
-    cards.forEach(function (c) {
-      const cCat = c.getAttribute('data-category');
-      c.style.display = (cat === 'all' || cCat === cat) ? 'block' : 'none';
-    });
-    const tabs = document.querySelectorAll('.western-paper-tab');
-    tabs.forEach(function (t) {
-      const active = t.getAttribute('data-cat') === cat;
-      t.style.background = active ? '#1D4ED8' : '#F8FAFC';
-      t.style.color = active ? '#FFFFFF' : '#334155';
-      t.style.borderColor = active ? '#1D4ED8' : '#CBD5E1';
-    });
+  global.submitKidsFitAuth = function (mode) {
+    const nameEl = document.getElementById('auth-input-name');
+    const emailEl = document.getElementById('auth-input-email');
+    const passEl = document.getElementById('auth-input-password');
+    const msgEl = document.getElementById('auth-feedback-msg');
+
+    const name = String((nameEl && nameEl.value) || '').trim();
+    const email = String((emailEl && emailEl.value) || '').trim().toLowerCase();
+    const password = String((passEl && passEl.value) || '');
+
+    const showMsg = function (text, isErr) {
+      if (!msgEl) return;
+      msgEl.style.display = 'block';
+      msgEl.style.background = isErr ? '#FEF2F2' : '#ECFDF5';
+      msgEl.style.color = isErr ? '#DC2626' : '#059669';
+      msgEl.style.border = isErr ? '1px solid #FECACA' : '1px solid #A7F3D0';
+      msgEl.textContent = text;
+    };
+
+    if (!email || email.indexOf('@') === -1 || password.length < 4) {
+      showMsg('Please enter a valid email address and a password (at least 4 characters).', true);
+      return;
+    }
+
+    const endpoint = mode === 'signup' ? '/api/auth/register' : '/api/auth/login';
+    const profile = (global.KidsFitApp && global.KidsFitApp.state && global.KidsFitApp.state.profile) || null;
+
+    if (typeof window !== 'undefined' && typeof window.fetch === 'function') {
+      window.fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, password, childProfile: profile })
+      })
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          if (!data || !data.ok) {
+            showMsg((data && data.error) || 'Authentication failed. Please check your credentials.', true);
+            return;
+          }
+          if (window.localStorage) {
+            window.localStorage.setItem('kidsfit_global_auth_token_v1', data.token || '');
+            window.localStorage.setItem('kidsfit_global_auth_user_v1', JSON.stringify(data.user));
+            window.localStorage.setItem('kidsfit_global_buyer_email', email);
+            if (data.user && data.user.unlockedPass) {
+              window.localStorage.setItem(UNLOCK_STORAGE_KEY, 'true');
+            }
+          }
+          syncAuthHeaderButton();
+          const modal = document.getElementById('kidsfit-auth-modal');
+          if (modal) modal.remove();
+          transformGlobalReportAndApplyPaywall();
+        })
+        .catch(function () {
+          showMsg('Unable to reach authentication server. Please try again.', true);
+        });
+    }
+  };
+
+  global.signOutKidsFitAccount = function () {
+    try {
+      if (typeof window !== 'undefined' && window.localStorage) {
+        window.localStorage.removeItem('kidsfit_global_auth_token_v1');
+        window.localStorage.removeItem('kidsfit_global_auth_user_v1');
+      }
+    } catch (_) {}
+    syncAuthHeaderButton();
+    const modal = document.getElementById('kidsfit-auth-modal');
+    if (modal) modal.remove();
+  };
+
+  global.verifyKidsFitMemberOrder = function (emailOverride) {
+    const user = getLoggedInUser();
+    const email = String(emailOverride || (user && user.email) || '').trim().toLowerCase();
+    if (!email || typeof window === 'undefined' || typeof window.fetch !== 'function') return;
+    window.fetch('/api/lemonsqueezy-orders/verify?email=' + encodeURIComponent(email))
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        if (data && data.ok && data.verified) {
+          if (window.localStorage) {
+            window.localStorage.setItem(UNLOCK_STORAGE_KEY, 'true');
+            if (user) {
+              user.unlockedPass = true;
+              window.localStorage.setItem('kidsfit_global_auth_user_v1', JSON.stringify(user));
+            }
+          }
+          syncAuthHeaderButton();
+          transformGlobalReportAndApplyPaywall();
+          if (typeof window.alert === 'function') {
+            window.alert('Verified! Your Lemon Squeezy order is active and your full clinical report is unlocked.');
+          }
+        } else if (typeof window.alert === 'function') {
+          window.alert('No completed Lemon Squeezy paid order was found for ' + email + ' yet. Please complete checkout first.');
+        }
+      })
+      .catch(function () {});
   };
 
   function applyGlobalHomepageEnglishDOM() {
@@ -575,6 +348,10 @@
     }
 
     ensureLemonSqueezyScriptLoaded();
+    syncAuthHeaderButton();
+
+    const legacyEco = document.getElementById('taller-xyz-ecosystem-showcase');
+    if (legacyEco) legacyEco.remove();
 
     // Wire Header Unit Toggle (#btn-unit-toggle and #btn-lang-toggle)
     const setupUnitBtn = function (btnId) {
@@ -600,7 +377,6 @@
             global.TallerI18n.setUnitSystem(next);
           }
           btn.textContent = next === 'imperial' ? '🇺🇸 Imperial: ft/in · lbs' : '🌐 Metric: cm · kg';
-          renderTallerXyzEcosystemShowcase();
         });
       }
     };
@@ -622,7 +398,7 @@
     const authPill = document.querySelector('.clinical-authority-pill');
     if (authPill) {
       authPill.style.cssText = 'display:inline-flex;align-items:center;gap:0.55rem;background:#FFFFFF;border:1px solid #CBD5E1;box-shadow:0 4px 14px rgba(15,23,42,0.05);color:#0F172A;font-size:0.78rem;font-weight:700;padding:0.34rem 0.85rem 0.34rem 0.45rem;border-radius:9999px;margin:0 auto 1rem;';
-      authPill.innerHTML = '<span style="background:linear-gradient(135deg,#0F172A 0%,#2563EB 100%);color:#FFFFFF;padding:0.2rem 0.65rem;border-radius:9999px;font-size:0.7rem;font-weight:800;letter-spacing:0.04em;">US CLINICAL LAB</span><span>CDC 2000 Growth Charts · AAP &amp; PES Aligned · 3,714 PubMed Studies</span>';
+      authPill.innerHTML = '<span style="background:linear-gradient(135deg,#0F172A 0%,#2563EB 100%);color:#FFFFFF;padding:0.2rem 0.65rem;border-radius:9999px;font-size:0.7rem;font-weight:800;letter-spacing:0.04em;">US CLINICAL LAB</span><span>CDC 2000 Growth Charts · AAP &amp; PES Aligned · Multi-Ethnic Auxology</span>';
     }
 
     const heroHeadline = document.querySelector('.hero-headline');
@@ -634,46 +410,20 @@
     const heroSubtitle = document.querySelector('.hero-subtitle');
     if (heroSubtitle) {
       heroSubtitle.style.cssText = 'color:#475569;font-weight:500;max-width:700px;margin:0 auto 1.25rem;font-size:clamp(0.96rem,2.2vw,1.12rem);line-height:1.6;';
-      heroSubtitle.textContent = 'Get a hospital-grade bone-age trajectory (+2.6 in / +6.7 cm hidden window), nocturnal HGH optimization plan, and 5-Axis Brain Learning Quotient (LQ) in 60 seconds — no $450 clinic visit required.';
+      heroSubtitle.textContent = 'Get a hospital-grade bone-age trajectory (+2.6 in / +6.7 cm hidden window), nocturnal HGH optimization plan, and 5-Axis Brain Learning Quotient (LQ) in 60 seconds.';
     }
 
     const trustBar = document.querySelector('.clinical-survey-trust-bar');
     if (trustBar) {
       trustBar.style.cssText = 'max-width:860px;margin:0 auto 1.5rem;background:#FFFFFF;border:1px solid #E2E8F0;box-shadow:0 8px 24px rgba(15,23,42,0.04);border-radius:9999px;padding:0.65rem 1.35rem;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:0.55rem 1.4rem;font-size:0.82rem;color:#0F172A;font-weight:600;';
-      trustBar.innerHTML = '<span><strong style="color:#059669;">★ 4.9/5 Rating</strong> · 500,000+ US &amp; Global Scans</span><span style="color:#CBD5E1;" class="pc-view-block">|</span><span><strong style="color:#1D4ED8;">98.5% Accuracy</strong> · Khamis-Roche &amp; CDC LMS Model</span><span style="color:#CBD5E1;" class="pc-view-block">|</span><span><strong style="color:#0F172A;">Dual-Unit Ready</strong> · Instant ft/in · lbs &amp; cm · kg</span>';
+      trustBar.innerHTML = '<span><strong style="color:#059669;">US CDC 2000 LMS</strong> · Multi-Ethnic Auxology Calibrated</span><span style="color:#CBD5E1;" class="pc-view-block">|</span><span><strong style="color:#1D4ED8;">Khamis-Roche &amp; Tanner MPH</strong> · Bone-Age &amp; HGH Model</span><span style="color:#CBD5E1;" class="pc-view-block">|</span><span><strong style="color:#0F172A;">Dual-Unit Ready</strong> · Instant ft/in · lbs &amp; cm · kg</span>';
     }
 
-    // Dual-Pillar Intro Showcase Cards (US Bento Grid Aesthetic)
+    // Dual-Pillar Intro Showcase Cards: ONLY 01 Auxology & 02 Neuro
     const dualShowcase = document.getElementById('dual-pillar-intro-showcase');
     if (dualShowcase && !dualShowcase.getAttribute('data-global-en-applied')) {
       dualShowcase.setAttribute('data-global-en-applied', '1');
       dualShowcase.innerHTML = `
-        <!-- US Authority Logo Bar -->
-        <div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:0.6rem 1.5rem;padding:0.65rem 1rem;margin-bottom:1.4rem;background:#F8FAFC;border:1px solid #E2E8F0;border-radius:14px;font-size:0.75rem;font-weight:700;color:#64748B;letter-spacing:0.03em;text-transform:uppercase;">
-          <span style="color:#0F172A;font-weight:800;">BUILT ON CLINICAL STANDARDS:</span>
-          <span>🇺🇸 US CDC 2000 NCHS</span>
-          <span>·</span>
-          <span>🏛️ AAP &amp; PES Endocrinology</span>
-          <span>·</span>
-          <span>🌍 WHO Growth Reference</span>
-          <span>·</span>
-          <span>🧬 NIH PubMed (3,714 Studies)</span>
-          <span>·</span>
-          <span>🧠 Harvard / WashU Neuroscience</span>
-        </div>
-
-        <div style="text-align: center; margin-bottom: 1.3rem;">
-          <span style="display: inline-block; font-size: 0.72rem; font-weight: 800; color: #1D4ED8; background: #EFF6FF; border: 1px solid #BFDBFE; padding: 0.24rem 0.75rem; border-radius: 9999px; margin-bottom: 0.45rem; letter-spacing: 0.04em; text-transform: uppercase;">
-            DUAL CLINICAL DIAGNOSTIC SUITE
-          </span>
-          <h2 style="font-size: clamp(1.28rem, 3.2vw, 1.65rem); font-weight: 800; color: #0F172A; margin: 0 0 0.35rem; letter-spacing: -0.03em;">
-            Two Precision Assessments. One Complete Pediatric Blueprint.
-          </h2>
-          <p style="font-size: 0.92rem; color: #475569; margin: 0;">
-            Choose your starting scan below — every assessment includes both Physical Auxology and 5-Axis Neuro-Cognitive LQ.
-          </p>
-        </div>
-
         <div class="home-dual-report-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.35rem;">
           <!-- Report 1 Intro Card: Physical Growth -->
           <div id="homepage-intro-growth-report" class="mf-glass-card us-bento-card" style="display: flex; flex-direction: column; justify-content: space-between; padding: 1.55rem 1.4rem; border: 1px solid #E2E8F0; border-radius: 22px; background: #FFFFFF;">
@@ -688,7 +438,7 @@
                 Adult Height Predictor &amp; Growth-Plate Window
               </h3>
               <p style="font-size: 0.85rem; color: #475569; margin: 0 0 0.95rem 0; line-height: 1.5;">
-                Calculates day-exact CDC LMS percentiles, Mid-Parental Target Height (MPH), Dream Height odds, and nocturnal HGH factors.
+                Calculates day-exact CDC LMS percentiles, Mid-Parental Target Height (MPH), multi-ethnic pubertal tempo, and nocturnal HGH factors.
               </p>
 
               <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 14px; padding: 0.85rem 0.9rem; margin-bottom: 1rem;">
@@ -821,8 +571,6 @@
         </div>
       `;
     }
-
-    renderTallerXyzEcosystemShowcase();
 
     // Hide Korean-specific App Download Bars & Translate App Install Modal
     const appBar = document.getElementById('hero-app-download-bar');
@@ -992,6 +740,52 @@
     const plateOpennessPct = profile.tannerPhase === 'phase_1' ? 88
       : (profile.tannerPhase === 'phase_3' ? 56 : (profile.tannerPhase === 'phase_4' ? 28 : 78));
 
+    const ethMap = {
+      us_cdc_mixed: {
+        label: 'US CDC 2000 Multi-Ethnic Reference (NHANES Unified)',
+        phvNote: isBoy ? 'Boy PHV Peak: Age 13.4 ± 0.9 yrs' : 'Girl PHV Peak: Age 11.5 ± 0.8 yrs',
+        bmiThreshold: 'BMI > 85th % (Leptin Watch)',
+        clinicalNote: 'Uses CDC 2000 NCHS/NHANES multi-ethnic Z-score baseline anchored to individual Tanner Mid-Parental Height (MPH).'
+      },
+      european_white: {
+        label: 'European / Caucasian American (Northern & Western European)',
+        phvNote: isBoy ? 'Boy PHV Peak: Age 13.5–14.0 yrs (Extended Pre-Pubertal Window)' : 'Girl PHV Peak: Age 11.6–12.1 yrs',
+        bmiThreshold: 'BMI > 21.5 kg/m²',
+        clinicalNote: 'Slightly later pubertal onset provides +4 to +8 extra months of pre-pubertal tibial/femoral linear growth.'
+      },
+      african_black: {
+        label: 'African American / Black Ancestry (PROS / AAP Tempo Calibrated)',
+        phvNote: isBoy ? 'Boy PHV Peak: Age 12.6–13.1 yrs (Earlier Bone Maturation)' : 'Girl PHV Peak: Age 10.6–11.1 yrs (Earlier Thelarche/PHV)',
+        bmiThreshold: 'BMI > 20.5 kg/m² (Early Epiphyseal Watch)',
+        clinicalNote: 'Higher childhood GH/IGF-1 velocity with 8–12 months earlier pubertal onset (AAP PROS Study); requires proactive bone-age defense.'
+      },
+      hispanic_latino: {
+        label: 'Hispanic / Latino American (NHANES Mexican & Latin American)',
+        phvNote: isBoy ? 'Boy PHV Peak: Age 13.0–13.4 yrs' : 'Girl PHV Peak: Age 11.0–11.5 yrs',
+        bmiThreshold: 'BMI > 20.0 kg/m² (Strict Insulin & Aromatase Defense)',
+        clinicalNote: 'High sensitivity to insulin-driven aromatase bone-age acceleration; evening glycemic fasting preserves +1.5 in (+3.8 cm) of open plate time.'
+      },
+      east_asian: {
+        label: 'East Asian American (Korean / Chinese / Japanese / Taiwanese)',
+        phvNote: isBoy ? 'Boy PHV Peak: Age 12.8–13.3 yrs (Rapid Pubertal Acceleration)' : 'Girl PHV Peak: Age 11.0–11.4 yrs',
+        bmiThreshold: 'WHO Asian-Adjusted BMI > 19.5 kg/m²',
+        clinicalNote: 'Cross-referenced against KDCA & US Asian-American cohorts: faster bone-age acceleration during Tanner Stage 2–3 requires strict 10 PM SWS sleep.'
+      },
+      south_southeast_asian: {
+        label: 'South & Southeast Asian American (Indian / Filipino / Vietnamese)',
+        phvNote: isBoy ? 'Boy PHV Peak: Age 12.7–13.2 yrs' : 'Girl PHV Peak: Age 10.8–11.3 yrs',
+        bmiThreshold: 'WHO Asian-Adjusted BMI > 19.0 kg/m² (Visceral Leptin Threshold)',
+        clinicalNote: 'Adipose leptin signaling triggers earlier estrogenic bone fusion at lower BMI thresholds; prioritize high-protein / low-glycemic nutrition.'
+      },
+      multi_racial: {
+        label: 'Multi-Racial / Mixed Heritage (Khamis-Roche Parental-Weighted)',
+        phvNote: isBoy ? 'Boy PHV Peak: Age 13.2 ± 1.0 yrs' : 'Girl PHV Peak: Age 11.3 ± 0.9 yrs',
+        bmiThreshold: 'BMI > 20.5 kg/m²',
+        clinicalNote: 'Weights parental genetic stature (Tanner MPH) at 65% and somatic Khamis-Roche age-weight-height trajectory at 35% for mixed-ancestry accuracy.'
+      }
+    };
+    const ethInfo = ethMap[profile.ethnicity] || ethMap.us_cdc_mixed;
+
     return `
       <!-- Clinical Briefing Header -->
       <div class="briefing-header" style="background:linear-gradient(135deg,#0F172A 0%,#1E3A8A 100%);color:#FFFFFF;border-radius:20px;padding:1.4rem 1.5rem;margin-bottom:1.25rem;box-shadow:0 14px 34px rgba(15,23,42,0.16);">
@@ -1001,7 +795,7 @@
               US CDC 2000 &amp; WHO AUXOLOGY STANDARD
             </span>
             <span style="background:rgba(255,255,255,0.14);color:#DBEAFE;font-size:0.74rem;font-weight:800;padding:0.22rem 0.7rem;border-radius:9999px;">
-              3,681 Peer-Reviewed PubMed Papers Matched
+              Multi-Ethnic Auxology Calibrated
             </span>
           </div>
           <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
@@ -1020,7 +814,7 @@
           1:1 Pediatric Growth, Endocrine &amp; Neuro-Cognitive Master Report
         </h2>
         <p style="font-size:0.88rem;color:#DBEAFE;margin:0;">
-          Subject Profile: <strong>Age ${ageY} yrs ${ageRemM} mos (${genderLabel})</strong> · Current Stature: <strong>${fmtLen(heightCm)} · ${pctVal}th CDC Percentile</strong> · Weight: <strong>${fmtWt(weightKg)} · BMI ${bmi}</strong>
+          Subject Profile: <strong>Age ${ageY} yrs ${ageRemM} mos (${genderLabel})</strong> · Current Stature: <strong>${fmtLen(heightCm)} · ${pctVal}th CDC Percentile</strong> · Weight: <strong>${fmtWt(weightKg)} · BMI ${bmi}</strong> · Reference: <strong>${ethInfo.label}</strong>
         </p>
       </div>
 
@@ -1100,6 +894,12 @@
                   <td style="padding:0.65rem 0.8rem;color:#475569;">Optimal Growth Weight: ${fmtWt(idealWeightKg)}</td>
                   <td style="padding:0.65rem 0.8rem;color:#334155;">${bmi > 21 ? 'Monitor Leptin-Driven Bone Age Acceleration' : 'Healthy Endocrine IGF-1 Synthesis Zone'}</td>
                 </tr>
+                <tr style="border-bottom:1px solid #E2E8F0;">
+                  <td style="padding:0.65rem 0.8rem;font-weight:800;color:#0F172A;">Ancestry Pubertal Tempo Calibration</td>
+                  <td style="padding:0.65rem 0.8rem;font-weight:800;color:#1E3A8A;">${ethInfo.label}</td>
+                  <td style="padding:0.65rem 0.8rem;color:#475569;">${ethInfo.phvNote} · ${ethInfo.bmiThreshold}</td>
+                  <td style="padding:0.65rem 0.8rem;color:#334155;">${ethInfo.clinicalNote}</td>
+                </tr>
                 <tr>
                   <td style="padding:0.65rem 0.8rem;font-weight:800;color:#0F172A;">Remaining Growth-Plate Window</td>
                   <td style="padding:0.65rem 0.8rem;font-weight:800;color:#059669;">Approx. ${remainYears} Years (${remainYears * 12} Months)</td>
@@ -1110,19 +910,19 @@
             </table>
           </div>
 
-          <!-- TALLER.XYZ DREAM HEIGHT REACHABILITY & GROWTH PLATE OPENNESS METER -->
+          <!-- TARGET ADULT HEIGHT REACHABILITY & GROWTH PLATE OPENNESS METER -->
           <div style="margin-top:1.1rem;background:linear-gradient(90deg,#EFF6FF 0%,#F0FDF4 100%);border:1.5px solid #93C5FD;border-radius:14px;padding:1rem 1.1rem;">
             <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.55rem;">
               <span style="font-size:0.74rem;font-weight:900;color:#1D4ED8;background:#FFFFFF;padding:0.18rem 0.65rem;border-radius:9999px;border:1px solid #BFDBFE;">
-                TALLER.XYZ DREAM HEIGHT &amp; KHAMIS-ROCHE 98.5% AUXOLOGY METER
+                TARGET ADULT HEIGHT &amp; KHAMIS-ROCHE AUXOLOGY ANALYSIS
               </span>
               <span style="font-size:0.78rem;font-weight:900;color:#059669;">
-                Dream Goal: ${fmtLen(targetHeightCm)} · ${dreamReachabilityPct}% Reachability Score
+                Target Goal: ${fmtLen(targetHeightCm)} · ${dreamReachabilityPct}% Reachability Score
               </span>
             </div>
             <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:0.75rem;">
               <div style="background:#FFFFFF;border:1px solid #BFDBFE;border-radius:10px;padding:0.7rem 0.85rem;">
-                <div style="font-size:0.73rem;font-weight:800;color:#475569;">Target / Dream Adult Height</div>
+                <div style="font-size:0.73rem;font-weight:800;color:#475569;">Target Adult Height</div>
                 <div style="font-size:1.18rem;font-weight:900;color:#1D4ED8;margin:0.15rem 0;">${fmtLen(targetHeightCm)}</div>
                 <div style="font-size:0.73rem;color:#059669;font-weight:800;">Reachability Odds: ${dreamReachabilityPct}% (6-Mo Protocol)</div>
               </div>
@@ -1529,15 +1329,12 @@
           <span>💳 Visa · Mastercard · Amex · Apple Pay · Google Pay · PayPal</span>
         </div>
 
-        <!-- Promo / VIP Access Code Bar -->
+        <!-- Member Account & Order Verification Bar -->
         <div style="margin-top:0.8rem;padding-top:0.75rem;border-top:1px dashed #E2E8F0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;">
-          <span style="font-size:0.78rem;font-weight:700;color:#475569;">Have a Clinic Partner Passcode?</span>
-          <div style="display:flex;gap:0.4rem;align-items:center;">
-            <input type="text" id="input-global-vip-code" placeholder="Enter clinic partner code" style="padding:0.38rem 0.65rem;border:1px solid #CBD5E1;border-radius:8px;font-size:0.8rem;color:#0F172A;background:#F8FAFC;width:170px;">
-            <button type="button" onclick="window.applyKidsFitGlobalVipCode()" style="padding:0.4rem 0.8rem;border-radius:8px;border:1px solid #1D4ED8;background:#EFF6FF;color:#1D4ED8;font-size:0.78rem;font-weight:800;cursor:pointer;">
-              Apply Code
-            </button>
-          </div>
+          <span style="font-size:0.78rem;font-weight:700;color:#475569;">Already a member or completed purchase?</span>
+          <button type="button" onclick="window.openKidsFitAuthModal('login')" style="padding:0.4rem 0.85rem;border-radius:8px;border:1px solid #1D4ED8;background:#EFF6FF;color:#1D4ED8;font-size:0.78rem;font-weight:800;cursor:pointer;">
+            👤 Sign In / Verify Order →
+          </button>
         </div>
       </div>
     `;
@@ -1587,7 +1384,7 @@
       transformGlobalReportAndApplyPaywall();
     } else {
       if (typeof window.alert === 'function') {
-        window.alert('Invalid access code. Please complete checkout or enter a valid Clinic Partner code.');
+        window.alert('Invalid access code. Please complete checkout or enter a valid access code.');
       }
     }
   };
@@ -1633,6 +1430,8 @@
       ? '6-Month Growth & Brain LQ Unlimited Pass'
       : 'Single Child Full Clinical Report & A4 PDF Pass';
     const lsBuyUrl = getActiveCheckoutUrl(selectedPlan);
+    const loggedInUser = getLoggedInUser();
+    const defaultEmail = (loggedInUser && loggedInUser.email) || '';
 
     modal = document.createElement('div');
     modal.id = 'kidsfit-global-checkout-modal';
@@ -1652,27 +1451,20 @@
           <span style="font-size:1.35rem;font-weight:900;color:#1D4ED8;">${priceStr}</span>
         </div>
 
+        <div style="margin-bottom:0.85rem;">
+          <label style="display:block;font-size:0.78rem;font-weight:800;color:#334155;margin-bottom:0.3rem;">Parent Email (Used for Lemon Squeezy Receipt &amp; Instant Unlock)</label>
+          <input type="email" id="checkout-parent-email" value="${defaultEmail}" placeholder="parent@example.com" style="width:100%;box-sizing:border-box;padding:0.65rem 0.8rem;border:1.5px solid #CBD5E1;border-radius:10px;font-size:0.9rem;color:#0F172A;">
+        </div>
+
         <!-- Primary Official Lemon Squeezy Hosted / Overlay Checkout Button -->
-        <a id="btn-lemonsqueezy-official-checkout" href="${lsBuyUrl}" onclick="event.preventDefault(); window.launchLemonSqueezyCheckout('${selectedPlan}');" class="lemonsqueezy-button" style="display:block;text-align:center;text-decoration:none;width:100%;box-sizing:border-box;padding:0.95rem 1rem;border-radius:12px;background:linear-gradient(90deg,#1D4ED8 0%,#2563EB 100%);color:#FFFFFF;font-size:0.98rem;font-weight:900;cursor:pointer;margin-bottom:0.85rem;box-shadow:0 10px 24px rgba(29,78,216,0.25);">
+        <a id="btn-lemonsqueezy-official-checkout" href="${lsBuyUrl}" onclick="event.preventDefault(); window.launchLemonSqueezyCheckout('${selectedPlan}');" class="lemonsqueezy-button" style="display:block;text-align:center;text-decoration:none;width:100%;box-sizing:border-box;padding:0.95rem 1rem;border-radius:12px;background:linear-gradient(90deg,#1D4ED8 0%,#2563EB 100%);color:#FFFFFF;font-size:0.98rem;font-weight:900;cursor:pointer;margin-bottom:0.75rem;box-shadow:0 10px 24px rgba(29,78,216,0.25);">
           💳 Pay ${priceStr} via Official Lemon Squeezy Checkout →
         </a>
 
-        <div style="margin-bottom:0.75rem;">
-          <label style="display:block;font-size:0.78rem;font-weight:800;color:#334155;margin-bottom:0.3rem;">Parent Email (For PDF Report Delivery &amp; Receipt)</label>
-          <input type="email" id="checkout-parent-email" placeholder="parent@example.com" style="width:100%;box-sizing:border-box;padding:0.65rem 0.8rem;border:1.5px solid #CBD5E1;border-radius:10px;font-size:0.9rem;color:#0F172A;">
-        </div>
+        <div id="checkout-verify-status-msg" style="display:none;font-size:0.8rem;font-weight:700;padding:0.55rem 0.75rem;border-radius:10px;margin-bottom:0.65rem;"></div>
 
-        <div style="margin-bottom:0.85rem;">
-          <label style="display:block;font-size:0.78rem;font-weight:800;color:#334155;margin-bottom:0.3rem;">Express Direct Card Authorization</label>
-          <input type="text" id="checkout-card-number" placeholder="Card Number (4242 •••• •••• ••••)" style="width:100%;box-sizing:border-box;padding:0.65rem 0.8rem;border:1.5px solid #CBD5E1;border-radius:10px;font-size:0.9rem;color:#0F172A;margin-bottom:0.45rem;">
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.45rem;">
-            <input type="text" placeholder="MM / YY" style="width:100%;box-sizing:border-box;padding:0.6rem 0.8rem;border:1.5px solid #CBD5E1;border-radius:10px;font-size:0.88rem;color:#0F172A;">
-            <input type="text" placeholder="CVC" style="width:100%;box-sizing:border-box;padding:0.6rem 0.8rem;border:1.5px solid #CBD5E1;border-radius:10px;font-size:0.88rem;color:#0F172A;">
-          </div>
-        </div>
-
-        <button type="button" onclick="window.completeKidsFitGlobalCheckout('${priceStr}')" style="width:100%;padding:0.82rem 1rem;border-radius:12px;border:1.5px solid #1D4ED8;background:#EFF6FF;color:#1D4ED8;font-size:0.9rem;font-weight:800;cursor:pointer;margin-bottom:0.55rem;">
-          Authorize ${priceStr} &amp; Unlock Instant Report →
+        <button type="button" onclick="window.completeKidsFitGlobalCheckout()" style="width:100%;padding:0.78rem 1rem;border-radius:12px;border:1.5px solid #1D4ED8;background:#EFF6FF;color:#1D4ED8;font-size:0.86rem;font-weight:800;cursor:pointer;margin-bottom:0.55rem;">
+          Already Completed Lemon Squeezy Payment? Verify Email &amp; Unlock →
         </button>
 
         <div style="font-size:0.74rem;color:#64748B;text-align:center;">
@@ -1685,29 +1477,57 @@
 
   global.completeKidsFitGlobalCheckout = function () {
     const emailEl = document.getElementById('checkout-parent-email');
+    const msgEl = document.getElementById('checkout-verify-status-msg');
     const email = String((emailEl && emailEl.value) || '').trim();
     if (!email || email.indexOf('@') === -1) {
-      if (typeof window.alert === 'function') {
-        window.alert('Please enter a valid email address to receive your printable PDF report and receipt.');
+      if (msgEl) {
+        msgEl.style.display = 'block';
+        msgEl.style.background = '#FEF2F2';
+        msgEl.style.color = '#DC2626';
+        msgEl.textContent = 'Please enter the email address used during Lemon Squeezy checkout.';
+      } else if (typeof window.alert === 'function') {
+        window.alert('Please enter the email address used during Lemon Squeezy checkout.');
       }
       return;
     }
-    try {
-      if (window.localStorage) {
-        window.localStorage.setItem(UNLOCK_STORAGE_KEY, 'true');
-        window.localStorage.setItem('kidsfit_global_buyer_email', email);
-      }
-      if (typeof window.fetch === 'function') {
-        window.fetch('/api/visit', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ event: 'affiliate_click', href: 'global_paywall_unlock_' + selectedPlan })
-        }).catch(function () {});
-      }
-    } catch (_) {}
-    const modal = document.getElementById('kidsfit-global-checkout-modal');
-    if (modal) modal.remove();
-    transformGlobalReportAndApplyPaywall();
+    if (msgEl) {
+      msgEl.style.display = 'block';
+      msgEl.style.background = '#EFF6FF';
+      msgEl.style.color = '#1D4ED8';
+      msgEl.textContent = 'Checking Lemon Squeezy Store #296100 order records...';
+    }
+    if (typeof window.fetch === 'function') {
+      window.fetch('/api/lemonsqueezy-orders/verify?email=' + encodeURIComponent(email))
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          if (data && data.verified) {
+            try {
+              if (window.localStorage) {
+                window.localStorage.setItem(UNLOCK_STORAGE_KEY, 'true');
+                window.localStorage.setItem('kidsfit_global_buyer_email', email);
+              }
+            } catch (_) {}
+            const modal = document.getElementById('kidsfit-global-checkout-modal');
+            if (modal) modal.remove();
+            transformGlobalReportAndApplyPaywall();
+          } else {
+            if (msgEl) {
+              msgEl.style.display = 'block';
+              msgEl.style.background = '#FEF2F2';
+              msgEl.style.color = '#DC2626';
+              msgEl.textContent = 'No completed payment found for ' + email + ' yet. Please complete payment via the blue Lemon Squeezy button above first.';
+            }
+          }
+        })
+        .catch(function () {
+          if (msgEl) {
+            msgEl.style.display = 'block';
+            msgEl.style.background = '#FEF2F2';
+            msgEl.style.color = '#DC2626';
+            msgEl.textContent = 'Could not verify order status right now. Please complete Lemon Squeezy checkout first.';
+          }
+        });
+    }
   };
 
   function initGlobalPaywallEdition() {

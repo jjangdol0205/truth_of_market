@@ -354,9 +354,118 @@ $$\\text{여아 MPH} = \\frac{\\text{아빠 키} + \\text{엄마 키} - 13}{2} \
   let adminClicks = 0;
   let adminTimer = null;
 
+  function ensureAdminModalMounted() {
+    if (typeof document === 'undefined' || !document.body || typeof document.createElement !== 'function') {
+      return null;
+    }
+    let modal = document.getElementById('admin-modal');
+    if (modal) return modal;
+
+    modal = document.createElement('div');
+    modal.id = 'admin-modal';
+    modal.setAttribute('aria-hidden', 'true');
+    modal.style.cssText = 'display:none;position:fixed;inset:0;z-index:99999;background:rgba(15,23,42,0.75);align-items:center;justify-content:center;padding:1rem;backdrop-filter:blur(5px);overflow-y:auto;';
+    modal.innerHTML = `
+      <div style="background:#FFFFFF;border:2px solid #1D4ED8;border-radius:22px;max-width:860px;width:100%;max-height:90vh;overflow-y:auto;padding:1.5rem 1.4rem;box-shadow:0 25px 60px rgba(0,0,0,0.4);color:#0F172A;text-align:left;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;padding-bottom:0.75rem;border-bottom:1px solid #E2E8F0;">
+          <div>
+            <span style="font-size:0.72rem;font-weight:900;color:#1D4ED8;background:#EFF6FF;padding:0.18rem 0.55rem;border-radius:9999px;">KIDS-FIT BIO LABS · ADMIN STUDIO</span>
+            <h3 style="margin:0.3rem 0 0;font-size:1.22rem;font-weight:900;color:#0F172A;">Global Paywall, Member DB &amp; Affiliate Control Center</h3>
+          </div>
+          <button type="button" id="btn-close-admin" style="background:#F1F5F9;border:1px solid #CBD5E1;border-radius:9999px;width:34px;height:34px;font-weight:900;cursor:pointer;">✕</button>
+        </div>
+
+        <!-- Global Paywall & Store #296100 Admin Controls -->
+        <div style="background:#EFF6FF;border:1.5px solid #93C5FD;border-radius:14px;padding:1rem 1.1rem;margin-bottom:1.1rem;">
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.65rem;">
+            <strong style="font-size:0.9rem;color:#1E3A8A;">💳 Lemon Squeezy Store #296100 &amp; Paywall Master Controls</strong>
+            <span style="font-size:0.75rem;font-weight:800;color:#059669;background:#ECFDF5;border:1px solid #A7F3D0;padding:0.18rem 0.6rem;border-radius:9999px;">Webhook #145796 Active</span>
+          </div>
+          <div style="display:flex;gap:0.6rem;flex-wrap:wrap;">
+            <button type="button" onclick="try{localStorage.setItem('kidsfit_global_report_unlocked_v1','true');}catch(e){} if(window.KidsFitGlobalPaywall)window.KidsFitGlobalPaywall.transformGlobalReportAndApplyPaywall(); alert('Admin Unlock Activated: Full clinical report is now unlocked in this browser.');" style="padding:0.55rem 0.95rem;border-radius:10px;border:none;background:#059669;color:#FFFFFF;font-size:0.82rem;font-weight:800;cursor:pointer;">
+              🔓 Unlock Full Report (Admin Bypass)
+            </button>
+            <button type="button" onclick="try{localStorage.removeItem('kidsfit_global_report_unlocked_v1');}catch(e){} if(window.KidsFitGlobalPaywall)window.KidsFitGlobalPaywall.transformGlobalReportAndApplyPaywall(); alert('Paywall Re-Locked: Report is now in locked teaser state.');" style="padding:0.55rem 0.95rem;border-radius:10px;border:1px solid #DC2626;background:#FEF2F2;color:#DC2626;font-size:0.82rem;font-weight:800;cursor:pointer;">
+              🔒 Re-Lock Paywall (Test Locked State)
+            </button>
+            <button type="button" onclick="window.open('/api/lemonsqueezy-config','_blank');" style="padding:0.55rem 0.95rem;border-radius:10px;border:1px solid #1D4ED8;background:#FFFFFF;color:#1D4ED8;font-size:0.82rem;font-weight:800;cursor:pointer;">
+              🔍 View Store #296100 JSON Config
+            </button>
+          </div>
+        </div>
+
+        <!-- Live DB & Analytics Dashboard Container -->
+        <div id="admin-db-dashboard-container" style="margin-bottom:1.1rem;"></div>
+
+        <!-- Affiliate & Channel Configuration -->
+        <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:14px;padding:1rem 1.1rem;margin-bottom:1rem;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.75rem;">
+            <strong style="font-size:0.9rem;color:#0F172A;">🔗 Global Affiliate &amp; Partner Tracking IDs</strong>
+            <label style="font-size:0.8rem;font-weight:700;color:#334155;display:flex;align-items:center;gap:0.35rem;">
+              <input type="checkbox" id="cfg-chips-toggle" checked> Enable Reference Chips
+            </label>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0.65rem;">
+            <div>
+              <label style="font-size:0.74rem;font-weight:700;color:#475569;display:block;margin-bottom:0.2rem;">Amazon Associates Tag</label>
+              <input type="text" id="cfg-amazon" style="width:100%;box-sizing:border-box;padding:0.45rem 0.65rem;border:1px solid #CBD5E1;border-radius:8px;font-size:0.82rem;">
+            </div>
+            <div>
+              <label style="font-size:0.74rem;font-weight:700;color:#475569;display:block;margin-bottom:0.2rem;">iHerb Rewards Code</label>
+              <input type="text" id="cfg-iherb" style="width:100%;box-sizing:border-box;padding:0.45rem 0.65rem;border:1px solid #CBD5E1;border-radius:8px;font-size:0.82rem;">
+            </div>
+            <div>
+              <label style="font-size:0.74rem;font-weight:700;color:#475569;display:block;margin-bottom:0.2rem;">Coupang Partners ID</label>
+              <input type="text" id="cfg-coupang" style="width:100%;box-sizing:border-box;padding:0.45rem 0.65rem;border:1px solid #CBD5E1;border-radius:8px;font-size:0.82rem;">
+            </div>
+            <div>
+              <label style="font-size:0.74rem;font-weight:700;color:#475569;display:block;margin-bottom:0.2rem;">LinkPrice Affiliate ID</label>
+              <input type="text" id="cfg-linkprice" style="width:100%;box-sizing:border-box;padding:0.45rem 0.65rem;border:1px solid #CBD5E1;border-radius:8px;font-size:0.82rem;">
+            </div>
+          </div>
+          <div style="display:flex;justify-content:flex-end;gap:0.5rem;margin-top:0.85rem;">
+            <button type="button" id="btn-cancel-admin" style="padding:0.5rem 0.95rem;border-radius:8px;border:1px solid #CBD5E1;background:#FFFFFF;color:#475569;font-size:0.82rem;font-weight:700;cursor:pointer;">Close</button>
+            <button type="button" id="btn-save-admin" style="padding:0.5rem 1.1rem;border-radius:8px;border:none;background:#1D4ED8;color:#FFFFFF;font-size:0.82rem;font-weight:800;cursor:pointer;">Save Settings</button>
+          </div>
+        </div>
+
+        <!-- OSMU Marketing Generator Container -->
+        <div id="admin-osmu-container"></div>
+      </div>
+    `;
+    document.body.appendChild(modal);
+
+    const closeBtn = document.getElementById('btn-close-admin');
+    if (closeBtn) closeBtn.addEventListener('click', closeAdminModal);
+    const cancelBtn = document.getElementById('btn-cancel-admin');
+    if (cancelBtn) cancelBtn.addEventListener('click', closeAdminModal);
+    const saveBtn = document.getElementById('btn-save-admin');
+    if (saveBtn) {
+      saveBtn.onclick = function () {
+        const chipsToggle = document.getElementById('cfg-chips-toggle');
+        const coupangEl = document.getElementById('cfg-coupang');
+        const linkpriceEl = document.getElementById('cfg-linkprice');
+        const iherbEl = document.getElementById('cfg-iherb');
+        const amazonEl = document.getElementById('cfg-amazon');
+        const newCfg = Object.assign({}, getAffiliateConfig(), {
+          chipsEnabled: chipsToggle ? chipsToggle.checked : true,
+          coupang: coupangEl && coupangEl.value ? coupangEl.value.trim() : DEFAULT_AFFILIATE_CONFIG.coupang,
+          linkprice: linkpriceEl && linkpriceEl.value ? linkpriceEl.value.trim() : DEFAULT_AFFILIATE_CONFIG.linkprice,
+          iherb: iherbEl && iherbEl.value ? iherbEl.value.trim() : DEFAULT_AFFILIATE_CONFIG.iherb,
+          amazon: amazonEl && amazonEl.value ? amazonEl.value.trim() : DEFAULT_AFFILIATE_CONFIG.amazon
+        });
+        saveAffiliateConfig(newCfg);
+        if (typeof window.alert === 'function') window.alert('Admin settings saved and synchronized.');
+        closeAdminModal();
+      };
+    }
+
+    return modal;
+  }
+
   function openAdminModal() {
     if (typeof document === 'undefined') return;
-    const modal = document.getElementById('admin-modal');
+    const modal = document.getElementById('admin-modal') || ensureAdminModalMounted();
     if (modal) {
       modal.style.display = 'flex';
       modal.setAttribute('aria-hidden', 'false');
@@ -539,11 +648,18 @@ $$\\text{여아 MPH} = \\frac{\\text{아빠 키} + \\text{엄마 키} - 13}{2} \
   function initAdminStudio() {
     if (typeof document === 'undefined') return;
 
-    // 1. Footer click trigger (Removed unauthenticated ?admin=1 auto-open from client HTML)
+    // 1. Footer click trigger (5 consecutive clicks on #footer-copyright)
     const footer = document.getElementById('footer-copyright');
     if (footer) {
       footer.removeEventListener('click', handleFooterClick);
       footer.addEventListener('click', handleFooterClick);
+    }
+
+    // 2. Direct URL Query Parameter Trigger (?admin=1)
+    if (typeof window !== 'undefined' && window.location && typeof window.location.search === 'string') {
+      if (/(?:^\?|&)admin=1(?:&|$)/.test(window.location.search)) {
+        openAdminModal();
+      }
     }
 
     // 3. Modal close and save actions
