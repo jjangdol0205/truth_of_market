@@ -59,7 +59,7 @@ EMAIL_BATCHES = [
     },
 ]
 
-RECIPIENTS = ["jjangdol0205@naver.com", "better_life333@naver.com"]
+RECIPIENTS = [os.environ.get("NAVER_MAIL_TO", "beable9489@gmail.com")]
 
 report = {"batches": []}
 

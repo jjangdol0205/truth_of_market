@@ -1,7 +1,7 @@
 {
   "resetExecutedAt": "2026-10-22T21:21:00+09:00",
   "status": "COMPLETED_LIVE_NAVER_BLOG_AND_CAFE_KIDSFIT_SETUP",
-  "naverAccount": "better_life333",
+  "naverAccount": "[STORED_IN_ENV]",
   "liveBlog": {
     "blogId": "expertise333",
     "blogNo": 168792969,

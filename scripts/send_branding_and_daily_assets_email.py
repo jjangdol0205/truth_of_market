@@ -7,7 +7,7 @@ KidsFit Growth & Learning Studio — Automated Branding Kit & Daily Assets Email
 Authoritative Specifications:
 - Recipient: beable9489@gmail.com
 - CDP port: 9222 (http://127.0.0.1:9222)
-- Account: better_life333@naver.com (https://mail.naver.com/v2/new)
+- Account: configured via .env NAVER_LOGIN_ID (https://mail.naver.com/v2/new)
 - Attachments:
   1. Instagram & Threads Profile Branding Kit (Avatars, Highlight cover icons, Bio copy guide, ZIP)
   2. Day-1 4-Cut Webtoon Pack (PNG cuts, combined preview, IG/Threads copy, ZIP)

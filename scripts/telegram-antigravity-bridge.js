@@ -288,13 +288,14 @@ async function handleIncomingCommand(rawText, options = {}) {
 
   try {
     const inboxLogPath = path.join(PROJECT_ROOT, 'logs', 'telegram_inbox.jsonl');
+    const redactedForLog = cleanInstruction.replace(/(비밀번호|비번|패스워드|password|pw)[^\s]*/gi, '$1:[REDACTED]');
     fs.appendFileSync(
       inboxLogPath,
       JSON.stringify({
         receivedAt: new Date().toISOString(),
         chatId,
         targetConversationId: convId,
-        message: cleanInstruction
+        message: redactedForLog
       }) + '\n',
       'utf8'
     );

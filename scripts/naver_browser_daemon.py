@@ -9,6 +9,7 @@ and triggers immediate catch-up publishing when a fresh login is detected.
 import ctypes
 from ctypes import wintypes
 import json
+import os
 import subprocess
 import sys
 import time
@@ -22,6 +23,22 @@ ROOT = Path(r"d:\키즈핏")
 PROFILE_DIR = ROOT / ".naver-browser-profile"
 PROFILE_DIR.mkdir(parents=True, exist_ok=True)
 BACKUP_COOKIES_FILE = PROFILE_DIR / "naver_cookies_backup.json"
+
+
+def load_env_secret(key: str) -> str:
+    val = os.environ.get(key, "").strip()
+    if val:
+        return val
+    env_file = ROOT / ".env"
+    if env_file.exists():
+        for line in env_file.read_text(encoding="utf-8", errors="ignore").splitlines():
+            line = line.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            k, v = line.split("=", 1)
+            if k.strip() == key:
+                return v.strip().strip('"').strip("'")
+    return ""
 
 
 class STARTUPINFOW(ctypes.Structure):
@@ -121,23 +138,37 @@ def main():
                     time.sleep(3)
                     continue
 
-                # Pre-fill expertise333 & keep-logged-in on any login tab
+                # Pre-fill or auto-login using credentials from gitignored .env
+                naver_id = load_env_secret("NAVER_LOGIN_ID")
+                naver_pw = load_env_secret("NAVER_LOGIN_PW")
                 for pg in ctx.pages:
                     if "nidlogin.login" in pg.url:
                         try:
-                            pg.evaluate("""() => {
-                                const idInput = document.getElementById('id');
-                                if (idInput && !idInput.value) {
-                                    idInput.value = 'expertise333';
-                                    idInput.dispatchEvent(new Event('input', { bubbles: true }));
-                                }
+                            pg.evaluate("""(uid) => {
                                 const keep = document.getElementById('keep');
                                 if (keep && keep.getAttribute('aria-checked') !== 'true' && !keep.checked) {
                                     keep.click();
                                 }
                                 const nvlong = document.getElementById('nvlong');
                                 if (nvlong) nvlong.value = 'on';
-                            }""")
+                                const idInput = document.getElementById('id');
+                                if (idInput && !idInput.value && uid) {
+                                    idInput.value = uid;
+                                    idInput.dispatchEvent(new Event('input', { bubbles: true }));
+                                }
+                            }""", naver_id)
+                            if naver_id and naver_pw:
+                                id_box = pg.locator("#id")
+                                pw_box = pg.locator("#pw")
+                                if id_box.count() > 0 and pw_box.count() > 0:
+                                    id_box.click()
+                                    pg.keyboard.press("Control+A")
+                                    pg.keyboard.type(naver_id, delay=50)
+                                    pw_box.click()
+                                    pg.keyboard.press("Control+A")
+                                    pg.keyboard.type(naver_pw, delay=50)
+                                    pg.keyboard.press("Enter")
+                                    time.sleep(3)
                         except Exception:
                             pass
 
