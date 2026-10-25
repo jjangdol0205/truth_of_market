@@ -115,6 +115,23 @@ def generate_soothing_lullaby_piano_wav(wav_path: Path, duration_sec: float, sam
             # Soft octave celesta shimmer
             add_piano_note(b_start + m_offset, m_freq * 2.0, amp=0.045, decay_rate=3.2, dur=0.9)
 
+    # Subtle paper page-turn rustle sound at each 4.0s transition (3.35s, 7.35s, 11.35s, ...)
+    rng = np.random.default_rng(42)
+    num_flips = max(0, int(round(duration_sec / 4.0)) - 1)
+    for f_i in range(1, num_flips + 1):
+        flip_start = f_i * 4.0 - 0.65
+        s_idx = int(flip_start * sample_rate)
+        r_len = int(0.45 * sample_rate)
+        if 0 <= s_idx and s_idx + r_len <= total_samples:
+            rt = np.linspace(0.0, 1.0, r_len)
+            # Smooth band-limited paper swish envelope
+            r_env = np.sin(np.pi * rt) ** 1.8
+            noise = rng.normal(0.0, 1.0, r_len)
+            # Moving-average soft filter to mimic warm paper friction (not harsh static)
+            kernel = np.ones(18, dtype=np.float64) / 18.0
+            paper_swish = np.convolve(noise, kernel, mode="same")
+            audio[s_idx : s_idx + r_len] += 0.085 * r_env * paper_swish
+
     # Smooth fade-in (0.4s) and fade-out (0.9s)
     fade_in_n = min(total_samples, int(0.4 * sample_rate))
     if fade_in_n > 0:
@@ -286,7 +303,61 @@ EPISODES_SPEC = [
             },
             {
                 "img": "04_4컷.png",
-                "sub": "질병관리청 성장도표 기준 우리 아이 키 백분위 &\n3단 예상키 무료 진단 ▶ truthofmarket.com",
+                "sub": "질병관리청 성장도표 기준 우리 아이 키 백분위 &\n3단 예상키 무료 진단 ▶ kidsfit.co.kr",
+            },
+        ],
+    },
+    {
+        "ep_id": "ep04",
+        "filename": "04_네이버클립_웹툰4화_편식아이미각민감기아연.mp4",
+        "badge": "키즈핏 영양웹툰 4화 · 편식 & 아연 처방",
+        "header_title": "고기·채소 입에도 안 대는 아이,\n미각 세포 아연 부족 때문이라고?",
+        "accent": (16, 185, 129),
+        "bg_top": (236, 253, 245),
+        "folder": WEBTOON_ROOT_KO / "4화_편식아이미각민감기아연_웹툰",
+        "cuts": [
+            {
+                "img": "01_1컷.png",
+                "sub": "고기·채소만 보면 입부터 막는 아이,\n단순 투정이 아니라 미각 세포 신호입니다!",
+            },
+            {
+                "img": "02_2컷.png",
+                "sub": "미각 세포 재생 필수 미네랄 아연(Zinc) 부족 시\n낯선 식감과 채소 향에 거부감 급증!",
+            },
+            {
+                "img": "03_3컷.png",
+                "sub": "글루콘산 아연 보충 + 공룡 쿠키틀 푸드브릿지로\n스스로 집어 먹는 식습관 완성!",
+            },
+            {
+                "img": "04_4컷.png",
+                "sub": "질병관리청 성장도표 기준 우리 아이 영양·성장\n1분 무료 진단 ▶ kidsfit.co.kr",
+            },
+        ],
+    },
+    {
+        "ep_id": "ep05",
+        "filename": "05_네이버클립_웹툰5화_거북목자세교정숨은키2cm.mp4",
+        "badge": "키즈핏 자세웹툰 5화 · 숨은 키 2cm 복원",
+        "header_title": "구부정한 거북목·말린 어깨 펴고\n숨은 키 2cm & 집중력 찾은 비결",
+        "accent": (79, 70, 229),
+        "bg_top": (238, 242, 255),
+        "folder": WEBTOON_ROOT_KO / "5화_거북목자세교정숨은키2cm_웹툰",
+        "cuts": [
+            {
+                "img": "01_1컷.png",
+                "sub": "책상에 앉으면 10분 만에 구부정해지는 등,\n잔소리만으로는 절대 고쳐지지 않습니다!",
+            },
+            {
+                "img": "02_2컷.png",
+                "sub": "고개 30도 숙일 때 경추 하중 18kg!\n척추 압박으로 숨은 키 2cm 손실 & 뇌 산소 감소",
+            },
+            {
+                "img": "03_3컷.png",
+                "sub": "15도 각도조절 독서대 + 쉬는 시간 10초 철봉으로\n경추 정렬과 척추 감압 루틴 실천!",
+            },
+            {
+                "img": "04_4컷.png",
+                "sub": "질병관리청 성장도표 기준 우리 아이 체형·성장\n1분 무료 진단 ▶ kidsfit.co.kr",
             },
         ],
     },
@@ -422,7 +493,7 @@ def render_pageflip_video(cuts_spec: list, out_mp4: Path, cut_dur: float = 4.0, 
             # Naver Clip Info Sticker CTA Bar at y=1635..1735
             cta_y1, cta_y2 = 1635, 1735
             draw.rounded_rectangle((40, cta_y1, VW - 40, cta_y2), radius=22, fill=bg_top, outline=acc, width=2)
-            cta_txt = "★ 우리 아이 키 백분위 & 두뇌 역량 1분 무료 진단 ▶ truthofmarket.com"
+            cta_txt = "★ 우리 아이 키 백분위 & 두뇌 역량 1분 무료 진단 ▶ kidsfit.co.kr"
             bb_c = draw.textbbox((0, 0), cta_txt, font=f_cta)
             cw = bb_c[2] - bb_c[0]
             draw.text(((VW - cw) // 2, cta_y1 + 34 - bb_c[1]), cta_txt, font=f_cta, fill=(30, 41, 59))
