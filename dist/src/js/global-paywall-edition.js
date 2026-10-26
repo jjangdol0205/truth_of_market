@@ -37,7 +37,7 @@
         const search = String(window.location.search || '').toLowerCase();
         if (search.indexOf('edition=ko') !== -1) return false;
         if (search.indexOf('edition=global') !== -1 || search.indexOf('paywall=1') !== -1) return true;
-        if (host.indexOf('kisfitglobal.com') !== -1 || host.indexOf('kidsfitglobal.com') !== -1 || host.indexOf('kisfitglobal.com') !== -1) return true;
+        if (host.indexOf('kisfitglobal.com') !== -1 || host.indexOf('kidsfitglobal.com') !== -1) return true;
       }
       return true;
     } catch (_) {}
