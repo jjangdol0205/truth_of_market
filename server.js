@@ -592,9 +592,9 @@ const server = http.createServer((req, res) => {
 
       const payload = JSON.stringify({
         ok: true,
-        service: 'KidsFit Growth Studio (kidsfit.co.kr / kidsfit.co.kr)',
+        service: 'KidsFit Growth Studio (kidsfit.co.kr / kisfitglobal.com)',
         primaryDomain: 'https://kidsfit.co.kr',
-        domains: ['kidsfit.co.kr', 'www.kidsfit.co.kr', 'kidsfit.co.kr', 'kidsfit.co.kr'],
+        domains: ['kidsfit.co.kr', 'www.kidsfit.co.kr', 'kidsfit.kr', 'kisfitglobal.com'],
         version: '2.5.0',
         timestamp: new Date().toISOString(),
         analytics: {
@@ -1743,7 +1743,7 @@ const server = http.createServer((req, res) => {
       parsedUrl.searchParams.get('edition') !== 'ko' &&
       (reqHost.includes('kisfitglobal.com') || reqHost.includes('kidsfitglobal.com') || parsedUrl.searchParams.get('edition') === 'global' || parsedUrl.searchParams.get('paywall') === '1');
 
-    // Look up file in DIST_GLOBAL_DIR first when serving Global English edition (kidsfit.co.kr), then DIST_DIR, then ROOT_DIR
+    // Look up file in DIST_GLOBAL_DIR first when serving Global English edition (kisfitglobal.com), then DIST_DIR, then ROOT_DIR
     let filePath =
       (isGlobalHost && (resolveSafeFile(DIST_GLOBAL_DIR, relPath) || resolveSafeFile(DIST_GLOBAL_DIR, path.join(relPath, 'index.html')))) ||
       resolveSafeFile(DIST_DIR, relPath) ||

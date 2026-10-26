@@ -34,7 +34,6 @@ User-agent: ClaudeBot
 Allow: /
 
 Sitemap: https://kisfitglobal.com/sitemap.xml
-Sitemap: https://kisfitglobal.com/sitemap.xml
 # Syndication & AI Grounding Feeds:
 # RSS 2.0: https://kisfitglobal.com/rss.xml
 # JSON Feed: https://kisfitglobal.com/feed.json
