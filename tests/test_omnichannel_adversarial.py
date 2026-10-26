@@ -23,7 +23,7 @@ ROOT_DIR = Path(__file__).resolve().parent.parent
 if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
-PRODUCTION_DOMAIN = "truthofmarket.com"
+PRODUCTION_DOMAIN = "kidsfit.co.kr"
 LEGACY_DOMAIN = "kidsfit.co.kr"
 
 
@@ -73,7 +73,7 @@ class TestLegacyDomainLeaks(unittest.TestCase):
     """
 
     def test_cname_files_do_not_contain_legacy_domain(self):
-        """Verify CNAME and dist/CNAME point strictly to truthofmarket.com, not kidsfit.co.kr"""
+        """Verify CNAME and dist/CNAME point strictly to kidsfit.co.kr, not kidsfit.co.kr"""
         cname_paths = [ROOT_DIR / "CNAME", ROOT_DIR / "dist" / "CNAME"]
         for cp in cname_paths:
             if cp.exists():
@@ -327,7 +327,7 @@ class TestBridgeURLAndUTMParameters(unittest.TestCase):
         }
 
     def test_all_bridge_urls_target_production_domain(self):
-        """Verify all bridge URLs strictly target https://truthofmarket.com/"""
+        """Verify all bridge URLs strictly target https://kidsfit.co.kr/"""
         for name, url_str in self.url_map.items():
             parsed = urllib.parse.urlparse(url_str)
             self.assertEqual(parsed.scheme, "https", f"{name} must use HTTPS scheme")
@@ -362,12 +362,12 @@ class TestBridgeURLAndUTMParameters(unittest.TestCase):
 
 class TestQRCodeDecodabilityEmpirical(unittest.TestCase):
     """
-    Challenge 4: Do the generated QR codes actually encode valid truthofmarket.com URLs with UTM tags?
+    Challenge 4: Do the generated QR codes actually encode valid kidsfit.co.kr URLs with UTM tags?
     Empirically decoded using OpenCV cv2.QRCodeDetector!
     """
 
     def test_blog_checklist_qr_code_decodes_correctly(self):
-        """Verify Blog Image 3 (checklist infographic) QR code decodes to truthofmarket.com with UTM"""
+        """Verify Blog Image 3 (checklist infographic) QR code decodes to kidsfit.co.kr with UTM"""
         from scripts.publish_enhanced_naver_blog import DEEP_PARENTING_TOPICS, generate_all_blog_images
 
         # Generate fresh blog images
@@ -387,7 +387,7 @@ class TestQRCodeDecodabilityEmpirical(unittest.TestCase):
         self.assertIn("utm_medium=qr_code", decoded_val)
 
     def test_cafe_card_qr_code_decodes_correctly(self):
-        """Verify Cafe summary card QR code decodes to truthofmarket.com with UTM"""
+        """Verify Cafe summary card QR code decodes to kidsfit.co.kr with UTM"""
         from scripts.publish_enhanced_naver_cafe import generate_cafe_card_png
 
         test_card = ROOT_DIR / "samples" / "enhanced_blog_images" / "test_adv_cafe_qr.png"
@@ -408,7 +408,7 @@ class TestQRCodeDecodabilityEmpirical(unittest.TestCase):
         self.assertIn("utm_medium=qr_code", decoded_val)
 
     def test_webtoon_cut_4_qr_code_decodes_correctly(self):
-        """Verify Webtoon Cut 4 QR code decodes to truthofmarket.com with UTM"""
+        """Verify Webtoon Cut 4 QR code decodes to kidsfit.co.kr with UTM"""
         cut4_path = ROOT_DIR / "웹툰_모음" / "1화_만3세소근육민감기_웹툰" / "04_4컷.png"
         if not cut4_path.exists():
             self.skipTest(f"{cut4_path} not found")
@@ -419,7 +419,7 @@ class TestQRCodeDecodabilityEmpirical(unittest.TestCase):
         self.assertIn("utm_source=instagram_webtoon_qr", decoded_val)
 
     def test_cardnews_slide_6_qr_code_decodes_correctly(self):
-        """Verify Card News Slide 6 QR code decodes to truthofmarket.com with UTM"""
+        """Verify Card News Slide 6 QR code decodes to kidsfit.co.kr with UTM"""
         slide6_path = ROOT_DIR / "카드뉴스_모음" / "1탄_만3세고집과소근육발달_카드뉴스" / "06_카드뉴스_6장.png"
         if not slide6_path.exists():
             self.skipTest(f"{slide6_path} not found")

@@ -32,7 +32,7 @@ EXT_BACKLINK_REGISTRY_PATH = ROOT / "logs" / "external_backlinks_registry.json"
 TELEGRAPH_TOKEN_PATH = ROOT / "logs" / "telegraph_account.json"
 
 SITE_URL = "https://kidsfit.co.kr"
-ALT_SITE_URL = "https://truthofmarket.com"
+ALT_SITE_URL = "https://kidsfit.co.kr"
 BLOG_URL = "https://blog.naver.com/expertise333"
 CAFE_URL = "https://cafe.naver.com/moneyfitlab"
 INSTA_URL = "https://www.instagram.com/kids_fit1"
@@ -177,7 +177,7 @@ def update_github_readme_backlink_hub(total_papers: int, g_cnt: int, l_cnt: int,
     readme_content = f"""# 📏🧠 키즈핏 그로스 스튜디오 (KidsFit Growth Studio)
 
 > **대한민국 소아·청소년 신체 성장(예상키·백분위) × 두뇌·학습 역량(5각 LQ·메타인지) 학술 데이터 기반 무료 진단 플랫폼**
-> - 🌐 **공식 웹사이트 (1분 무료 진단)**: **[https://kidsfit.co.kr]({SITE_URL}/)** (미러: [https://truthofmarket.com]({ALT_SITE_URL}/))
+> - 🌐 **공식 웹사이트 (1분 무료 진단)**: **[https://kidsfit.co.kr]({SITE_URL}/)** (미러: [https://kidsfit.co.kr]({ALT_SITE_URL}/))
 > - 📚 **학부모 다빈도 Q&A 학술 백과사전**: **[https://kidsfit.co.kr/qna/]({SITE_URL}/qna/)**
 > - 📡 **표준 RSS / JSON 피드**: **[RSS 2.0 피드]({SITE_URL}/rss.xml)** · **[JSON Feed 1.1]({SITE_URL}/feed.json)** · **[XML 사이트맵]({SITE_URL}/sitemap.xml)**
 > - 📝 **공식 네이버 블로그**: **[키즈핏 소아성장·두뇌발달 양육 연구소 (blog.naver.com/expertise333)]({BLOG_URL})**

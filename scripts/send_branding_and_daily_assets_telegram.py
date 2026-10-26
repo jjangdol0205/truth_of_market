@@ -55,7 +55,7 @@ LOGS_DIR.mkdir(parents=True, exist_ok=True)
 REPORT_FILE = LOGS_DIR / "telegram_dispatch_report.json"
 ENV_FILE = ROOT_DIR / ".env"
 
-PRODUCTION_DOMAIN = "truthofmarket.com"
+PRODUCTION_DOMAIN = "kidsfit.co.kr"
 INSTAGRAM_BIO_URL = f"https://{PRODUCTION_DOMAIN}/?utm_source=instagram_bio&utm_medium=social_bio&utm_campaign=kidsfit_diagnosis"
 
 BRANDING_DIR = ROOT_DIR / "인스타_쓰레드_프로필_모음"
@@ -368,14 +368,14 @@ def dispatch_diagnosis_summary(dispatcher: TelegramDispatcher):
         "📊 [키즈핏(KidsFit) 풀퍼널 홍보 & 전환 병목 진단 보고서 총괄 요약]\n\n"
         "1️⃣ 외부 유입 (Inflow):\n"
         "• 기존: 누적 16PV 중 Direct 100%, 외부 마케팅 유입 0건\n"
-        "• 개선: 네이버 블로그/카페/웹툰/카드뉴스에 truthofmarket.com 비상업적 진단 브릿지 & QR 코드 전면 탑재\n\n"
+        "• 개선: 네이버 블로그/카페/웹툰/카드뉴스에 kidsfit.co.kr 비상업적 진단 브릿지 & QR 코드 전면 탑재\n\n"
         "2️⃣ 진단 완주 (Diagnosis Split):\n"
         "• 기존: 신체 성장 29건(100%) vs 두뇌·학습 0건(0%), 영문 USD 페이월 강제 잠금 버그\n"
-        "• 개선: truthofmarket.com 한국어 기본 복원 + 60초 1-Stop 통합(성장+학습) 정밀 진단 스튜디오 탑재\n\n"
+        "• 개선: kidsfit.co.kr 한국어 기본 복원 + 60초 1-Stop 통합(성장+학습) 정밀 진단 스튜디오 탑재\n\n"
         "3️⃣ 제휴 구매 전환 (Conversion):\n"
         "• 기존: 제휴 클릭 수치 왜곡, 상품 추천 드로어 display:none 은폐, 학술 처방전 부재\n"
         "• 개선: KDCA/PMID 논문 기반 1:1 결핍 맞춤 처방전 상시 노출 및 카테고리/UTM 정밀 클릭 트래킹\n\n"
-        "🌐 프로덕션 도메인: https://truthofmarket.com"
+        "🌐 프로덕션 도메인: https://kidsfit.co.kr"
     )
     return [dispatcher.send_message(summary_text)]
 

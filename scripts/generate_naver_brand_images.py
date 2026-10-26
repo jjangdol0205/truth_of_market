@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Generates KidsFit Growth Studio official brand assets matching truthofmarket.com:
+Generates KidsFit Growth Studio official brand assets matching kidsfit.co.kr:
 1. kidsfit_profile_500.png (500x500) - Blog & Cafe Profile Image
 2. kidsfit_cafe_title_1080x220.png (1080x220) - Cafe Top Title Banner
 3. kidsfit_cafe_gate_1080x520.png (1080x520) - Cafe Front Gate Image

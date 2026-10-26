@@ -7,7 +7,7 @@
  * 1. Listens 24/7 to the user's Telegram Bot via Long Polling (`getUpdates`) + Inline Button Callbacks
  * 2. Instant Built-in Commands & 1-Tap Smartphone Buttons:
  *    - `/help` (`도움말`/`시작`) : Show interactive KidsFit control panel with 1-tap buttons
- *    - `/status` (`상태`/`점검`) : Check live `https://truthofmarket.com` server & Paper Learning status
+ *    - `/status` (`상태`/`점검`) : Check live `https://kidsfit.co.kr` server & Paper Learning status
  *    - `/research` (`논문`/`학습`): Run an immediate incremental paper crawl cycle & report new papers
  *    - `/samples` (`샘플`/`웹툰`): Send the 6-cut conversational webtoon & 1-line cardnews sample photos
  *    - `/deploy` (`배포`)        : Rebuild `dist/`, run 33/33 verification checks, and push to `origin/main`
@@ -189,7 +189,7 @@ function dispatchToAntigravity(userCommandText, conversationId) {
     ``,
     `지침:`,
     `1. 작업 디렉토리(d:\\사업아이템)에서 사용자의 요청을 즉시 수행하세요.`,
-    `2. 코드나 데이터가 변경되었다면 node scripts/build.js 실행 후 git add/commit/push 하여 https://truthofmarket.com 실서버에 반영하세요.`,
+    `2. 코드나 데이터가 변경되었다면 node scripts/build.js 실행 후 git add/commit/push 하여 https://kidsfit.co.kr 실서버에 반영하세요.`,
     `3. 작업이 완료되면 반드시 다음 명령어를 실행하여 사용자 텔레그램으로 완료 결과를 답장하세요:`,
     `   node scripts/telegram-notify.js --message "<수행한 작업 요약 및 결과>"`
   ].join('\n');
@@ -262,7 +262,7 @@ async function handleIncomingCommand(rawText, options = {}) {
     const research = telegramNotifier.loadResearchStatus();
     const msg = [
       `🌱 <b>[키즈핏 그로스 스튜디오 × Antigravity 원격 제어 센터]</b>`,
-      `스마트폰 텔레그램과 PC의 <b>Google Antigravity AI 에이전트</b> 및 <b>truthofmarket.com</b> 실서버가 실시간 양방향 연결되어 있습니다!`,
+      `스마트폰 텔레그램과 PC의 <b>Google Antigravity AI 에이전트</b> 및 <b>kidsfit.co.kr</b> 실서버가 실시간 양방향 연결되어 있습니다!`,
       ``,
       `📊 <b>현재 학술 논문 학습 누적</b>: <b>총 ${research.total_papers || 663}편</b> (Cycle #${research.cycle_index || 34})`,
       ``,
@@ -323,7 +323,7 @@ async function handleIncomingCommand(rawText, options = {}) {
     const lines = [
       `📊 <b>[키즈핏 실서버 & 학술 논문 학습 실시간 상태]</b>`,
       `━━━━━━━━━━━━━━━━━━`,
-      `🌐 <b>1. 실서버(truthofmarket.com) 엔드포인트</b>`
+      `🌐 <b>1. 실서버(kidsfit.co.kr) 엔드포인트</b>`
     ];
     checks.forEach(c => {
       const icon = c.status === 200 ? '✅' : '⚠️';
@@ -401,7 +401,7 @@ async function handleIncomingCommand(rawText, options = {}) {
 
   // 5. /deploy
   if (text === '/deploy' || text === '배포') {
-    await reply(`⚙️ <b>[전체 빌드 & 실서버 배포 시작]</b> dist/ 빌드, 33개 무결성 검증 및 GitHub(truthofmarket.com) 푸시를 진행합니다...`);
+    await reply(`⚙️ <b>[전체 빌드 & 실서버 배포 시작]</b> dist/ 빌드, 33개 무결성 검증 및 GitHub(kidsfit.co.kr) 푸시를 진행합니다...`);
     const buildRes = spawnSync(process.execPath, [path.join(PROJECT_ROOT, 'scripts', 'build.js')], {
       cwd: PROJECT_ROOT,
       encoding: 'utf8'
@@ -416,7 +416,7 @@ async function handleIncomingCommand(rawText, options = {}) {
 
     const ok = buildRes.status === 0 && verifyRes.status === 0;
     const msg = ok
-      ? `✅ <b>[재빌드 & truthofmarket.com 실서버 배포 완료!]</b>\n• 33/33 전체 검증 항목 통과\n• GitHub(origin/main) 푸시 및 실서버 반영 완료!`
+      ? `✅ <b>[재빌드 & kidsfit.co.kr 실서버 배포 완료!]</b>\n• 33/33 전체 검증 항목 통과\n• GitHub(origin/main) 푸시 및 실서버 반영 완료!`
       : `⚠️ <b>[빌드/검증 로그 확인]</b>\n<pre>${telegramNotifier.escapeHtml((verifyRes.stdout || '').slice(-500))}</pre>`;
     return reply(msg, true);
   }
@@ -471,7 +471,7 @@ async function startPollingDaemon() {
     await telegramNotifier.telegramApiRequest(botToken, 'setMyCommands', {
       commands: [
         { command: 'help', description: '키즈핏 원격 제어 리모컨 버튼 보기' },
-        { command: 'status', description: 'truthofmarket.com 실서버 & 논문 학습 현황' },
+        { command: 'status', description: 'kidsfit.co.kr 실서버 & 논문 학습 현황' },
         { command: 'research', description: '지금 즉시 학술 논문 추가 크롤링·학습 실행' },
         { command: 'samples', description: '웹툰·카드뉴스 샘플 이미지 받기' },
         { command: 'deploy', description: '전체 빌드 & 실서버 배포' }

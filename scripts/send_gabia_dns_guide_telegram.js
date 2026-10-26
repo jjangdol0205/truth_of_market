@@ -41,7 +41,7 @@ async function main() {
   const guideHtml = [
     `🎉 <b>[kidsfit.co.kr 도메인 홈페이지·서버·마케팅 링크 100% 적용 완료!]</b>`,
     ``,
-    `대표님! 홈페이지(<code>CNAME</code>, <code>server.js</code>, 카카오톡 오픈그래프 미리보기, 사이트맵, 그리고 매일 새벽 6시 발송되는 인스타/쓰레드/블로그/카페 링크 전체)를 새 도메인 <b>https://kidsfit.co.kr</b> 기준으로 모두 세팅하여 배포 완료했습니다! <i>(기존 truthofmarket.com 주소로 들어오는 방문자도 끊김 없이 100% 정상 작동합니다.)</i>`,
+    `대표님! 홈페이지(<code>CNAME</code>, <code>server.js</code>, 카카오톡 오픈그래프 미리보기, 사이트맵, 그리고 매일 새벽 6시 발송되는 인스타/쓰레드/블로그/카페 링크 전체)를 새 도메인 <b>https://kidsfit.co.kr</b> 기준으로 모두 세팅하여 배포 완료했습니다! <i>(기존 kidsfit.co.kr 주소로 들어오는 방문자도 끊김 없이 100% 정상 작동합니다.)</i>`,
     ``,
     `━━━━━━━━━━━━━━━━━━`,
     `📌 <b>[STEP 1] 가비아 DNS 설정 방법 (딱 2줄만 입력!)</b>`,

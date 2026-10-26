@@ -1,6 +1,6 @@
 /**
  * server.js
- * Production HTTP Server for KidsFit Growth Studio (https://truthofmarket.com)
+ * Production HTTP Server for KidsFit Growth Studio (https://kidsfit.co.kr)
  * Zero external dependencies. Designed for Render / cloud Node.js web service deployment.
  */
 
@@ -592,9 +592,9 @@ const server = http.createServer((req, res) => {
 
       const payload = JSON.stringify({
         ok: true,
-        service: 'KidsFit Growth Studio (kidsfit.co.kr / truthofmarket.com)',
+        service: 'KidsFit Growth Studio (kidsfit.co.kr / kidsfit.co.kr)',
         primaryDomain: 'https://kidsfit.co.kr',
-        domains: ['kidsfit.co.kr', 'www.kidsfit.co.kr', 'truthofmarket.com', 'www.truthofmarket.com'],
+        domains: ['kidsfit.co.kr', 'www.kidsfit.co.kr', 'kidsfit.co.kr', 'kidsfit.co.kr'],
         version: '2.5.0',
         timestamp: new Date().toISOString(),
         analytics: {
@@ -1743,7 +1743,7 @@ const server = http.createServer((req, res) => {
       parsedUrl.searchParams.get('edition') !== 'ko' &&
       (reqHost.includes('kisfitglobal.com') || reqHost.includes('kidsfitglobal.com') || parsedUrl.searchParams.get('edition') === 'global' || parsedUrl.searchParams.get('paywall') === '1');
 
-    // Look up file in DIST_GLOBAL_DIR first when serving Global English edition (truthofmarket.com), then DIST_DIR, then ROOT_DIR
+    // Look up file in DIST_GLOBAL_DIR first when serving Global English edition (kidsfit.co.kr), then DIST_DIR, then ROOT_DIR
     let filePath =
       (isGlobalHost && (resolveSafeFile(DIST_GLOBAL_DIR, relPath) || resolveSafeFile(DIST_GLOBAL_DIR, path.join(relPath, 'index.html')))) ||
       resolveSafeFile(DIST_DIR, relPath) ||

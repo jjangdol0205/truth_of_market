@@ -46,11 +46,11 @@ function verifyMilestone1() {
     }
   });
 
-  check('CNAME exists at root and contains truthofmarket.com', () => {
+  check('CNAME exists at root and contains kidsfit.co.kr', () => {
     const cnamePath = path.join(ROOT_DIR, 'CNAME');
     if (!fs.existsSync(cnamePath)) throw new Error('CNAME missing');
     const content = fs.readFileSync(cnamePath, 'utf8').trim();
-    if (!['kidsfit.co.kr', 'truthofmarket.com'].includes(content)) {
+    if (!['kidsfit.co.kr', 'kidsfit.co.kr'].includes(content)) {
       throw new Error(`CNAME contains unexpected content: "${content}"`);
     }
   });
@@ -137,7 +137,7 @@ function verifyMilestone1() {
     const distCname = path.join(distDir, 'CNAME');
     if (!fs.existsSync(distCname)) throw new Error('dist/CNAME is missing');
     const distCnameContent = fs.readFileSync(distCname, 'utf8').trim();
-    if (!['kidsfit.co.kr', 'truthofmarket.com'].includes(distCnameContent)) {
+    if (!['kidsfit.co.kr', 'kidsfit.co.kr'].includes(distCnameContent)) {
       throw new Error(`dist/CNAME has invalid domain: ${distCnameContent}`);
     }
   });

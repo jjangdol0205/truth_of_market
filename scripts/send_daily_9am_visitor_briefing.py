@@ -38,7 +38,7 @@ def main():
     msg = (
         f"📊 <b>[키즈핏 09:00 AM 일일 방문자 & 퍼널 브리핑]</b>\n"
         f"• 기준일: {tdate} 09:00 KST\n\n"
-        f"<b>1️⃣ 실시간 홈페이지 유입 현황 (kidsfit.co.kr / truthofmarket.com)</b>\n"
+        f"<b>1️⃣ 실시간 홈페이지 유입 현황 (kidsfit.co.kr / kidsfit.co.kr)</b>\n"
         f"• 오늘 순방문자(UV): <b>{uv_td}명</b> / 페이지뷰(PV): <b>{pv_td}회</b> (실유입: {hm_td}회)\n"
         f"• 누적 순방문자(UV): <b>{uv_tot}명</b> / 누적 페이지뷰(PV): <b>{pv_tot}회</b>\n"
         f"• 누적 진단 완료: <b>{diag_tot}건</b> / 제휴·결제 클릭: <b>{aff_tot}건</b>\n\n"

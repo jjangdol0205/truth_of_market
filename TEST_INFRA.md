@@ -13,7 +13,7 @@
 
 The KidsFit platform is a full-funnel parental healthcare and learning guidance system consisting of four tightly integrated operational layers:
 1. **Omnichannel Inflow Layer**: Naver Blog (`expertise333`), Naver Cafe (`moneyfitlab`), Instagram/Threads Webtoons (4-cut) and Card News (6-slide), and 31 SEO Q&A Landing Pages (`qna/*.html`).
-2. **On-Site Diagnosis & Onboarding Funnel Layer (`https://truthofmarket.com`)**: Primary domain defaulting to Korean (`ko`) Free Studio, unified 60-second Growth + Learning quiz, and dual telemetry (`diagnoses.growth` and `diagnoses.learning`).
+2. **On-Site Diagnosis & Onboarding Funnel Layer (`https://kidsfit.co.kr`)**: Primary domain defaulting to Korean (`ko`) Free Studio, unified 60-second Growth + Learning quiz, and dual telemetry (`diagnoses.growth` and `diagnoses.learning`).
 3. **Product Prescription & Conversion Monetization Layer**: Post-diagnosis personalized recommendations dynamically mapped to diagnosed deficits with academic paper citations (PMID/KDCA) and affiliate tracking (Coupang Partners `AF7865143`, LinkPrice `A100708867`).
 4. **Verification & Live Execution Layer**: Automated test harness, Chrome CDP (port 9222) publishing verification, and Telegram notification delivery (`755033799`).
 
@@ -33,9 +33,9 @@ The testing mission is to implement a rock-solid, deterministic, self-contained 
 | **F02** | Naver Blog Contextual Diagnostic Bridge & QR Infographic | High-CTR UTM diagnostic bridge in blog columns + 135x135 QR code and callout banner in 3rd checklist infographic image | ORIGINAL_REQUEST R2, PROJECT.md F02 | `TestF02BlogDiagnosticBridge` |
 | **F03** | Naver Cafe Diagnostic Bridge & Card Upgrade | Contextual diagnostic bridge text in 7 cafe boards + 120x120 QR code in cafe card image | ORIGINAL_REQUEST R2, PROJECT.md F03 | `TestF03CafeDiagnosticBridge` |
 | **F04** | Webtoon Cut 4 & Card News Slide 6 QR Bridge | Visual end-card QR code and callout banner in Webtoon cut 4 and Card News slide 6 + UTM-tagged copy text | ORIGINAL_REQUEST R2, PROJECT.md F04 | `TestF04WebtoonCardNewsQRBridge` |
-| **F05** | 31 SEO Q&A Landing Pages Bridge Widgets & Sitemap Unification | Top & bottom 1-click diagnostic bridge widgets in all `qna/*.html`, canonical & sitemap unification to `truthofmarket.com` | ORIGINAL_REQUEST R2, PROJECT.md F05 | `TestF05QnAPagesBridgeSitemap` |
-| **F06** | QA Fact-Check Agent Rule Alignment | Stage 1 & 2 QA rules requiring `truthofmarket.com` UTM bridge links while strictly prohibiting commercial affiliate links on external channels | ORIGINAL_REQUEST R2, PROJECT.md F06 | `TestF06QAFactCheckAgentAlignment` |
-| **F07** | Primary Domain Korean Default Fix | Remove forced English paywall on `truthofmarket.com`, default to `lang="ko"` free studio, allow global paid mode only via `?edition=global` | ORIGINAL_REQUEST R3, PROJECT.md F07 | `TestF07HomepageKoreanDefaultFix` |
+| **F05** | 31 SEO Q&A Landing Pages Bridge Widgets & Sitemap Unification | Top & bottom 1-click diagnostic bridge widgets in all `qna/*.html`, canonical & sitemap unification to `kidsfit.co.kr` | ORIGINAL_REQUEST R2, PROJECT.md F05 | `TestF05QnAPagesBridgeSitemap` |
+| **F06** | QA Fact-Check Agent Rule Alignment | Stage 1 & 2 QA rules requiring `kidsfit.co.kr` UTM bridge links while strictly prohibiting commercial affiliate links on external channels | ORIGINAL_REQUEST R2, PROJECT.md F06 | `TestF06QAFactCheckAgentAlignment` |
+| **F07** | Primary Domain Korean Default Fix | Remove forced English paywall on `kidsfit.co.kr`, default to `lang="ko"` free studio, allow global paid mode only via `?edition=global` | ORIGINAL_REQUEST R3, PROJECT.md F07 | `TestF07HomepageKoreanDefaultFix` |
 | **F08** | 1-Stop Unified Growth + Learning Diagnosis Flow | Combine physical growth and cognitive learning survey into single <60s flow, removing CSS mutual exclusion | ORIGINAL_REQUEST R3, PROJECT.md F08 | `TestF08UnifiedDiagnosisFunnel` |
 | **F09** | Dual Diagnosis Telemetry Recording | Record both `diagnoses.growth` and `diagnoses.learning` events in `visitor_analytics.json` and server upon diagnosis completion | ORIGINAL_REQUEST R3, PROJECT.md F09 | `TestF09DualDiagnosisTelemetry` |
 | **F10** | Personalized Growth & Learning Prescription Engine | Render paper-backed product cards directly matched to child's diagnosed deficits with PMID citations and clean CTAs | ORIGINAL_REQUEST R4, PROJECT.md F10 | `TestF10PersonalizedProductPrescription` |
@@ -75,10 +75,10 @@ Integration assertions verifying end-to-end dataflow contracts:
 
 ### Tier 4: Real-World Workload Scenarios
 Five comprehensive end-to-end multi-step simulations:
-- **Scenario 1 (Naver Blog Parent Journey)**: Reads deep sleep column -> scans 3rd image QR / clicks UTM bridge -> lands on `truthofmarket.com` in Korean -> completes 1-stop quiz in 52s -> receives HT042 & Magnesium prescription -> clicks Coupang link -> telemetry logs `growth_product_click` with `utm_source=naver_blog`.
+- **Scenario 1 (Naver Blog Parent Journey)**: Reads deep sleep column -> scans 3rd image QR / clicks UTM bridge -> lands on `kidsfit.co.kr` in Korean -> completes 1-stop quiz in 52s -> receives HT042 & Magnesium prescription -> clicks Coupang link -> telemetry logs `growth_product_click` with `utm_source=naver_blog`.
 - **Scenario 2 (Naver Cafe Parent Journey)**: Browses Board 4 (소근육·두뇌발달) -> clicks cafe bridge link -> runs unified assessment with literacy bottleneck -> receives Froebel Gabe & YES24 workbook prescription -> clicks LinkPrice CTA -> telemetry logs `learning_product_click` with `utm_source=naver_cafe`.
-- **Scenario 3 (Instagram / Threads Parent Journey)**: Reads Webtoon Cut 4 / Card News Slide 6 -> scans visual QR -> enters `truthofmarket.com` -> verifies zero English paywall -> completes unified survey -> views executive function timer & jump gear -> telemetry records dual diagnosis.
-- **Scenario 4 (Organic SEO Q&A Parent Journey)**: Google search lands on `qna/topic-03.html` (성조숙증 신호) -> clicks top 1-click bridge widget -> arrives at `truthofmarket.com/?utm_source=qna_top` -> completes assessment -> logs `qna_top` referrer.
+- **Scenario 3 (Instagram / Threads Parent Journey)**: Reads Webtoon Cut 4 / Card News Slide 6 -> scans visual QR -> enters `kidsfit.co.kr` -> verifies zero English paywall -> completes unified survey -> views executive function timer & jump gear -> telemetry records dual diagnosis.
+- **Scenario 4 (Organic SEO Q&A Parent Journey)**: Google search lands on `qna/topic-03.html` (성조숙증 신호) -> clicks top 1-click bridge widget -> arrives at `kidsfit.co.kr/?utm_source=qna_top` -> completes assessment -> logs `qna_top` referrer.
 - **Scenario 5 (Live Omnichannel Execution & Telegram Delivery Cycle)**: Scheduled publisher runs -> audits zero affiliate links and verified UTM bridge -> publishes live blog and cafe posts -> dispatches diagnosis report and assets to Telegram `755033799` with HTTP 200 `ok: true`.
 
 ---
@@ -133,21 +133,21 @@ Five comprehensive end-to-end multi-step simulations:
 
 ### 4.2 External Bridge ↔ Homepage UTM Contracts
 
-All external promotion channels must route visitors to `https://truthofmarket.com` using strictly defined UTM parameter contracts:
+All external promotion channels must route visitors to `https://kidsfit.co.kr` using strictly defined UTM parameter contracts:
 
 | Channel | Placement | Target Bridge URL |
 |---|---|---|
-| **Naver Blog** | End of post text | `https://truthofmarket.com/?utm_source=naver_blog&utm_medium=organic_social&utm_campaign=kidsfit_diagnosis` |
-| **Naver Blog** | 3rd Image QR code | `https://truthofmarket.com/?utm_source=naver_blog_qr&utm_medium=qr_code&utm_campaign=kidsfit_diagnosis` |
-| **Naver Cafe** | Bottom of article & comment | `https://truthofmarket.com/?utm_source=naver_cafe&utm_medium=organic_social&utm_campaign=kidsfit_diagnosis` |
-| **Naver Cafe** | Card Image QR code | `https://truthofmarket.com/?utm_source=naver_cafe_qr&utm_medium=qr_code&utm_campaign=kidsfit_diagnosis` |
-| **Instagram** | Bio Link | `https://truthofmarket.com/?utm_source=instagram_bio&utm_medium=social_bio&utm_campaign=kidsfit_diagnosis` |
-| **Instagram** | Post Captions | `https://truthofmarket.com/?utm_source=instagram&utm_medium=organic_social&utm_campaign=kidsfit_diagnosis` |
-| **Threads** | Post & First Comment | `https://truthofmarket.com/?utm_source=threads&utm_medium=organic_social&utm_campaign=kidsfit_diagnosis` |
-| **Webtoon** | Cut 04 QR code | `https://truthofmarket.com/?utm_source=instagram_webtoon_qr&utm_medium=qr_code&utm_campaign=kidsfit_diagnosis` |
-| **Card News** | Slide 06 QR code | `https://truthofmarket.com/?utm_source=cardnews_qr&utm_medium=qr_code&utm_campaign=kidsfit_diagnosis` |
-| **SEO Q&A** | Top Bridge Widget | `https://truthofmarket.com/?utm_source=qna_top&utm_medium=organic_search&utm_campaign=kidsfit_diagnosis&utm_content={slug}` |
-| **SEO Q&A** | Bottom Bridge Widget | `https://truthofmarket.com/?utm_source=qna_bottom&utm_medium=organic_search&utm_campaign=kidsfit_diagnosis&utm_content={slug}` |
+| **Naver Blog** | End of post text | `https://kidsfit.co.kr/?utm_source=naver_blog&utm_medium=organic_social&utm_campaign=kidsfit_diagnosis` |
+| **Naver Blog** | 3rd Image QR code | `https://kidsfit.co.kr/?utm_source=naver_blog_qr&utm_medium=qr_code&utm_campaign=kidsfit_diagnosis` |
+| **Naver Cafe** | Bottom of article & comment | `https://kidsfit.co.kr/?utm_source=naver_cafe&utm_medium=organic_social&utm_campaign=kidsfit_diagnosis` |
+| **Naver Cafe** | Card Image QR code | `https://kidsfit.co.kr/?utm_source=naver_cafe_qr&utm_medium=qr_code&utm_campaign=kidsfit_diagnosis` |
+| **Instagram** | Bio Link | `https://kidsfit.co.kr/?utm_source=instagram_bio&utm_medium=social_bio&utm_campaign=kidsfit_diagnosis` |
+| **Instagram** | Post Captions | `https://kidsfit.co.kr/?utm_source=instagram&utm_medium=organic_social&utm_campaign=kidsfit_diagnosis` |
+| **Threads** | Post & First Comment | `https://kidsfit.co.kr/?utm_source=threads&utm_medium=organic_social&utm_campaign=kidsfit_diagnosis` |
+| **Webtoon** | Cut 04 QR code | `https://kidsfit.co.kr/?utm_source=instagram_webtoon_qr&utm_medium=qr_code&utm_campaign=kidsfit_diagnosis` |
+| **Card News** | Slide 06 QR code | `https://kidsfit.co.kr/?utm_source=cardnews_qr&utm_medium=qr_code&utm_campaign=kidsfit_diagnosis` |
+| **SEO Q&A** | Top Bridge Widget | `https://kidsfit.co.kr/?utm_source=qna_top&utm_medium=organic_search&utm_campaign=kidsfit_diagnosis&utm_content={slug}` |
+| **SEO Q&A** | Bottom Bridge Widget | `https://kidsfit.co.kr/?utm_source=qna_bottom&utm_medium=organic_search&utm_campaign=kidsfit_diagnosis&utm_content={slug}` |
 
 ---
 

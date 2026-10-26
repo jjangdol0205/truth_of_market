@@ -7,12 +7,12 @@
     "timestamp_utc": "2026-10-24T14:15:00Z",
     "author": "worker_m1_report",
     "milestone": "M1 (R1)",
-    "production_domain": "https://truthofmarket.com",
+    "production_domain": "https://kidsfit.co.kr",
     "legacy_mismatched_domain": "https://kidsfit.co.kr",
     "status": "FINAL_AUDITED"
   },
   "executive_summary": {
-    "summary_text": "전 채널 홍보(네이버 블로그, 카페, 인스타그램, 스레드, Q&A)와 온사이트 진단 및 전환 시스템(truthofmarket.com) 전수 감사 결과, 4대 풀퍼널 병목(외부 유입 단절, 진단 완주 불균형 및 영문 페이월 차단, 제휴 클릭 왜곡 및 실구매 전환 부재, 도메인 불일치)을 규명하고 R2~R5 해결 아키텍처를 수립함.",
+    "summary_text": "전 채널 홍보(네이버 블로그, 카페, 인스타그램, 스레드, Q&A)와 온사이트 진단 및 전환 시스템(kidsfit.co.kr) 전수 감사 결과, 4대 풀퍼널 병목(외부 유입 단절, 진단 완주 불균형 및 영문 페이월 차단, 제휴 클릭 왜곡 및 실구매 전환 부재, 도메인 불일치)을 규명하고 R2~R5 해결 아키텍처를 수립함.",
     "core_metrics": {
       "total_uv": 11,
       "total_pv": 16,
@@ -39,7 +39,7 @@
       "모바일 인앱 브라우저의 HTTP Referer 헤더 삭제 및 쿼리 파라미터 누락"
     ],
     "diagnosis_split": [
-      "index.html 호스트네임 분기 오류로 truthofmarket.com 접속 시 영문 USD 페이월 강제 잠금",
+      "index.html 호스트네임 분기 오류로 kidsfit.co.kr 접속 시 영문 USD 페이월 강제 잠금",
       "온보딩 위저드가 신체 성장만 단독 진행 후 학습 진단 미체이닝",
       "클라이언트 진단 완료 시 /api/visit 비콘 미전송 (과거 29건은 테스트 잔재)"
     ],
@@ -49,7 +49,7 @@
       "카테고리별(growth vs learning) 및 utm_source별 클릭 세부 로깅 부재"
     ],
     "domain_canonical": [
-      "GitHub Pages 배포는 truthofmarket.com이나 정적 메타데이터/사이트맵이 구도메인 kidsfit.co.kr로 하드코딩",
+      "GitHub Pages 배포는 kidsfit.co.kr이나 정적 메타데이터/사이트맵이 구도메인 kidsfit.co.kr로 하드코딩",
       "외부 고권위 백링크(Telegra.ph 6편)가 kidsfit.co.kr로 연결되어 링크 에퀴티 분산"
     ]
   },
@@ -82,7 +82,7 @@
       "metric": "총 29건 중 신체 성장 29건 (100%), 두뇌·학습 0건 (0%)",
       "symptom": "두뇌·학습 진단 건수 0건, 한국인 접속 시 사이트 진입 즉시 이탈",
       "root_causes": [
-        "index.html 호스트네임 분기 오류로 truthofmarket.com 접속 시 영문 USD 페이월 강제 잠금",
+        "index.html 호스트네임 분기 오류로 kidsfit.co.kr 접속 시 영문 USD 페이월 강제 잠금",
         "온보딩 위저드가 신체 성장만 단독 진행 후 학습 진단 미체이닝",
         "클라이언트 진단 완료 시 /api/visit 비콘 미전송 (과거 29건은 테스트 잔재)"
       ],
@@ -105,9 +105,9 @@
     {
       "stage": "인프라: 도메인 정합성 (Domain Alignment)",
       "metric": "sitemap.xml 32개 URL, CNAME, index.html, qna/*.html 28개 전체 kidsfit.co.kr 기재",
-      "symptom": "프로덕션 배포 도메인(truthofmarket.com)과 검색엔진 색인 도메인 불일치",
+      "symptom": "프로덕션 배포 도메인(kidsfit.co.kr)과 검색엔진 색인 도메인 불일치",
       "root_causes": [
-        "GitHub Pages 배포는 truthofmarket.com이나 정적 메타데이터/사이트맵이 구도메인 kidsfit.co.kr로 하드코딩",
+        "GitHub Pages 배포는 kidsfit.co.kr이나 정적 메타데이터/사이트맵이 구도메인 kidsfit.co.kr로 하드코딩",
         "외부 고권위 백링크(Telegra.ph 6편)가 kidsfit.co.kr로 연결되어 링크 에퀴티 분산"
       ],
       "severity": "HIGH",
@@ -185,7 +185,7 @@
         "samples/enhanced_blog_images/blog_001_2_data_chart.png",
         "samples/enhanced_blog_images/blog_001_3_checklist.png"
       ],
-      "identified_defect": "본문 및 3번째 체크리스트 인포그래픽에 truthofmarket.com 진단 브릿지 및 QR 코드 전무 (유입 경로 0건)"
+      "identified_defect": "본문 및 3번째 체크리스트 인포그래픽에 kidsfit.co.kr 진단 브릿지 및 QR 코드 전무 (유입 경로 0건)"
     },
     "naver_cafe": {
       "cafe_url": "https://cafe.naver.com/moneyfitlab",
@@ -197,7 +197,7 @@
       "board": "키성장·성조숙증 코칭",
       "char_count": 673,
       "images_count": 1,
-      "identified_defect": "본문 및 첫 댓글에 truthofmarket.com 진단 브릿지 링크 누락, 유입 추적 불가"
+      "identified_defect": "본문 및 첫 댓글에 kidsfit.co.kr 진단 브릿지 링크 누락, 유입 추적 불가"
     },
     "instagram_threads": {
       "distribution_channel": "Telegram Bot (TELEGRAM_CHAT_ID: 755033799)",
@@ -216,7 +216,7 @@
     "external_backlinks": {
       "platform": "telegra.ph (DA 88)",
       "total_published_articles": 6,
-      "identified_defect": "6편 기사 전체의 내부 타깃 백링크가 kidsfit.co.kr을 향하고 있어 truthofmarket.com 가치 축적 전무"
+      "identified_defect": "6편 기사 전체의 내부 타깃 백링크가 kidsfit.co.kr을 향하고 있어 kidsfit.co.kr 가치 축적 전무"
     },
     "unified_scheduler": {
       "daemon_status": "ONLINE",
@@ -301,7 +301,7 @@
         "네이버 블로그 템플릿에 UTM 진단 브릿지 텍스트 삽입 및 3번째 이미지에 135x135 QR 코드 합성",
         "네이버 카페 템플릿에 UTM 진단 브릿지 텍스트 삽입 및 대표 카드에 120x120 QR 코드 합성",
         "인스타그램/스레드 웹툰 cut 4 및 카드뉴스 slide 6에 QR 브릿지 삽입 및 캡션 UTM URL 교체",
-        "sitemap.xml, CNAME, robots.txt, qna/*.html 전체 도메인을 https://truthofmarket.com으로 단일화",
+        "sitemap.xml, CNAME, robots.txt, qna/*.html 전체 도메인을 https://kidsfit.co.kr으로 단일화",
         "QA Fact-Check Agent Stage 1 & 2에 UTM 브릿지 검증 규칙 추가 및 외부 제휴 링크 0개 유지 검증"
       ]
     },
@@ -310,7 +310,7 @@
       "requirement": "R3",
       "name": "Homepage Korean Default Fix & 1-Stop Unified Dual Diagnosis",
       "actions": [
-        "index.html 호스트네임 조건 수정하여 truthofmarket.com 기본값을 한국어 무료 진단 스튜디오로 복원",
+        "index.html 호스트네임 조건 수정하여 kidsfit.co.kr 기본값을 한국어 무료 진단 스튜디오로 복원",
         "onboarding-wizard.js를 60초 내 신체 성장 + 두뇌 학습을 순차 완주하는 1-Stop 통합 위저드로 개편",
         "진단 완료 시 /api/visit으로 mode: 'growth' 및 mode: 'learning' 텔레메트리 동시 발송 연동"
       ]
@@ -361,7 +361,7 @@
       "file_path": "logs/blog_publishing_audit.json",
       "line_numbers": "L3~25",
       "code_snippet": "logNo: 224452294820, has_affiliate_links: false, 브릿지 URL 부재",
-      "description": "실 배포된 네이버 블로그 최신 글에 truthofmarket.com 브릿지 URL이 존재하지 않음 확인",
+      "description": "실 배포된 네이버 블로그 최신 글에 kidsfit.co.kr 브릿지 URL이 존재하지 않음 확인",
       "severity": "HIGH"
     },
     {
@@ -379,7 +379,7 @@
       "file_path": "logs/cafe_publishing_audit.json",
       "line_numbers": "L23~40",
       "code_snippet": "articleId: 38, 진단 브릿지 URL 부재",
-      "description": "실 배포된 카페 38번 글에 truthofmarket.com 진단 브릿지가 없어 외부 유입 발생 불가",
+      "description": "실 배포된 카페 38번 글에 kidsfit.co.kr 진단 브릿지가 없어 외부 유입 발생 불가",
       "severity": "HIGH"
     },
     {
@@ -415,7 +415,7 @@
       "file_path": "CNAME",
       "line_numbers": "L1",
       "code_snippet": "kidsfit.co.kr",
-      "description": "실제 배포 도메인 truthofmarket.com과 불일치하는 구도메인 CNAME 바인딩",
+      "description": "실제 배포 도메인 kidsfit.co.kr과 불일치하는 구도메인 CNAME 바인딩",
       "severity": "HIGH"
     },
     {
@@ -432,7 +432,7 @@
       "category": "Client Paywall Gate",
       "file_path": "index.html",
       "line_numbers": "L41~50",
-      "code_snippet": "truthofmarket.com 접속 시 __KIDSFIT_GLOBAL_PAID_EDITION = true 강제 활성화",
+      "code_snippet": "kidsfit.co.kr 접속 시 __KIDSFIT_GLOBAL_PAID_EDITION = true 강제 활성화",
       "description": "일반 한국인 유입자에게 영문 USD 페이월을 강제 잠금하여 이탈률 99% 유발",
       "severity": "CRITICAL"
     },
@@ -460,7 +460,7 @@
       "file_path": "logs/external_backlinks_registry.json",
       "line_numbers": "L10~16, L24~30",
       "code_snippet": "Telegra.ph 6편 전체 kidsfit.co.kr 로 링크",
-      "description": "고권위 백링크 기사 6편이 truthofmarket.com이 아닌 구도메인으로 연결됨 확인",
+      "description": "고권위 백링크 기사 6편이 kidsfit.co.kr이 아닌 구도메인으로 연결됨 확인",
       "severity": "MEDIUM"
     },
     {

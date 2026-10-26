@@ -32,7 +32,7 @@ def get_free_port():
 class TestPaywallEdgeCases(unittest.TestCase):
     """
     Challenge 1: Does index.html or server.js ever trigger English paywall when loaded
-    on truthofmarket.com without query parameters? Test edge cases.
+    on kidsfit.co.kr without query parameters? Test edge cases.
     """
 
     @classmethod
@@ -70,37 +70,37 @@ class TestPaywallEdgeCases(unittest.TestCase):
         return res.status, res.getheaders(), body
 
     def test_client_index_html_no_paywall_without_query(self):
-        """1-1: Verify client index.html has no forced English paywall on truthofmarket.com without query"""
+        """1-1: Verify client index.html has no forced English paywall on kidsfit.co.kr without query"""
         index_file = ROOT_DIR / "index.html"
         self.assertTrue(index_file.exists())
         with open(index_file, "r", encoding="utf-8") as f:
             content = f.read()
 
-        # The paywall script must NOT check hostname for truthofmarket.com
+        # The paywall script must NOT check hostname for kidsfit.co.kr
         bad_check = re.search(r"_kfHost\.indexOf\(['\"]truthofmarket\.com['\"]\)\s*!==\s*-1", content)
-        self.assertIsNone(bad_check, "index.html must not force global paid on truthofmarket.com")
+        self.assertIsNone(bad_check, "index.html must not force global paid on kidsfit.co.kr")
 
         # HTML root tag must default to lang="ko"
         self.assertIn('<html lang="ko"', content, "index.html root must be lang='ko'")
 
     def test_global_paywall_js_script_pure_logic(self):
-        """1-2: Verify global-paywall-edition.js returns false for truthofmarket.com without edition query"""
+        """1-2: Verify global-paywall-edition.js returns false for kidsfit.co.kr without edition query"""
         script_file = ROOT_DIR / "src" / "js" / "global-paywall-edition.js"
         with open(script_file, "r", encoding="utf-8") as f:
             content = f.read()
         bad_check = re.search(r"host\.indexOf\(['\"]truthofmarket\.com['\"]\)\s*!==\s*-1", content)
-        self.assertIsNone(bad_check, "global-paywall-edition.js must not contain truthofmarket.com lock")
+        self.assertIsNone(bad_check, "global-paywall-edition.js must not contain kidsfit.co.kr lock")
 
     def test_server_serving_truthofmarket_without_query_params(self):
         """
-        1-3: Verify server.js serves Korean (lang='ko') for kidsfit.co.kr and Global English (lang='en' data-edition='global-paid') for truthofmarket.com
+        1-3: Verify server.js serves Korean (lang='ko') for kidsfit.co.kr and Global English (lang='en' data-edition='global-paid') for kidsfit.co.kr
         """
         status_ko, _, body_ko = self._http_get('/', headers={'Host': 'kidsfit.co.kr'})
         self.assertEqual(status_ko, 200)
         self.assertIn('<html lang="ko"', body_ko)
         self.assertNotIn('data-edition="global-paid"', body_ko)
 
-        status_en, _, body_en = self._http_get('/', headers={'Host': 'truthofmarket.com'})
+        status_en, _, body_en = self._http_get('/', headers={'Host': 'kidsfit.co.kr'})
         self.assertEqual(status_en, 200)
         self.assertTrue('data-edition="global-paid"' in body_en or '<html lang="en"' in body_en)
 
@@ -140,7 +140,7 @@ class TestPaywallEdgeCases(unittest.TestCase):
 
     def test_explicit_global_paywall_activation(self):
         """1-6: Verify global paid edition activates ONLY when explicitly requested via ?edition=global or ?paywall=1"""
-        status, _, body = self._http_get('/?edition=global', headers={'Host': 'truthofmarket.com'})
+        status, _, body = self._http_get('/?edition=global', headers={'Host': 'kidsfit.co.kr'})
         self.assertEqual(status, 200)
         self.assertTrue('data-edition="global-paid"' in body or 'lang="en"' in body)
 

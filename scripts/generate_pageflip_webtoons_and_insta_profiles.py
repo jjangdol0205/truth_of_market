@@ -584,7 +584,7 @@ def build_insta_threads_profiles():
     d1.text((730 - (bb_p2[2] - bb_p2[0]) // 2, 737 - bb_p2[1]), p2_txt, font=f_pill, fill=(255, 255, 255))
 
     # Bottom Domain Badge
-    dom_txt = "truthofmarket.com"
+    dom_txt = "kidsfit.co.kr"
     bb_d = d1.textbbox((0, 0), dom_txt, font=f_tag)
     dw = bb_d[2] - bb_d[0]
     d1.rounded_rectangle((540 - dw // 2 - 34, 835, 540 + dw // 2 + 34, 898), radius=31, fill=(49, 46, 129), outline=(165, 180, 252), width=3)
@@ -727,12 +727,12 @@ def build_insta_threads_profiles():
    🎁 아래 링크에서 1분 무료 진단 & 월령별 워크지 PDF 받기 👇
 
 3. 프로필 웹사이트 링크 (Link):
-   https://truthofmarket.com
+   https://kidsfit.co.kr
 
 4. 쓰레드(Threads) 소개글 (그대로 복사해서 붙여넣으세요):
    소아내분비·뇌인지 학술 논문 2,690+편 기반으로 우리 아이 숨은 키 +7cm 골든타임과 5대 두뇌 학습역량(LQ)을 연구합니다 🌱
    👇 우리 아이 키 백분위 & 두뇌 역량 1분 무료 진단 리포트
-   https://truthofmarket.com
+   https://kidsfit.co.kr
 """
     bio_path = PROFILE_OUT_KO / "04_인스타_쓰레드_프로필소개글_링크_세팅가이드.txt"
     bio_path.write_text(bio_guide, encoding="utf-8")

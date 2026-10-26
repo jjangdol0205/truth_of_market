@@ -1,6 +1,6 @@
 /**
  * scripts/build.js
- * Production build script for KidsFit Growth Studio (truthofmarket.com)
+ * Production build script for KidsFit Growth Studio (kidsfit.co.kr)
  * Deterministic, zero-external-dependencies, cross-platform.
  */
 

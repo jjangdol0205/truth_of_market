@@ -955,7 +955,7 @@
     const isEnShare = typeof document !== 'undefined' && document.documentElement && (document.documentElement.lang === 'en' || (typeof document.documentElement.getAttribute === 'function' && document.documentElement.getAttribute('data-edition') === 'global-paid'));
     const childGender = state.profile.gender === 'boy' ? (isEnShare ? 'Boy' : '남아') : (isEnShare ? 'Girl' : '여아');
     const text = isEnShare
-      ? `✨ KidsFit Clinical Growth Report (${state.profile.ageMonths} mos ${childGender}): Top ${kdca.topPercent}% on US CDC Growth Charts! With clinical optimization, projected adult height reaches ${pred.potentialHeight} cm (${Math.floor((pred.potentialHeight / 2.54) / 12)}'${Math.round((pred.potentialHeight / 2.54) % 12)}")! 👉 https://truthofmarket.com`
+      ? `✨ KidsFit Clinical Growth Report (${state.profile.ageMonths} mos ${childGender}): Top ${kdca.topPercent}% on US CDC Growth Charts! With clinical optimization, projected adult height reaches ${pred.potentialHeight} cm (${Math.floor((pred.potentialHeight / 2.54) / 12)}'${Math.round((pred.potentialHeight / 2.54) % 12)}")! 👉 https://kidsfit.co.kr`
       : `💌 여보! 방금 우리 아이(만 ${state.profile.ageMonths}개월 ${childGender}) 질병관리청 성장도표 진단해봤는데, 또래 상위 ${kdca.topPercent}%래!\n골든타임 관리하면 최대 ${pred.potentialHeight}cm까지 클 수 있대!\n이번 주말엔 [${outing.destination}] 같이 가보자 👉 https://kidsfit.co.kr`;
 
     if (typeof navigator !== 'undefined' && navigator.clipboard && navigator.clipboard.writeText) {

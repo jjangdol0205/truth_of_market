@@ -159,9 +159,9 @@ Audio/Voiceover: "Fix this with 3 clinical rules: 1) Last meal 3 hours before sl
 On-Screen Text: "1) 3hr Meal Gap  2) Passive Dead Hang (+1.8cm)  3) Calcium Citrate (~45% Absorption)"
 
 [0:46 - 1:00 | Call To Action]
-Visual: Clean obsidian glassmorphism UI of Taller Bio Labs (truthofmarket.com) running the 3-second LMS Z-score scan.
-Audio/Voiceover: "Calculate your child's exact CDC Z-score and 3-trajectory adult height in 3 seconds at truthofmarket.com. Link in bio!"
-On-Screen Text: "Calculate CDC 2000 LMS Z-Score & 3-Trajectory Height ↗ truthofmarket.com (Tag: ${amazonTag})"`;
+Visual: Clean obsidian glassmorphism UI of Taller Bio Labs (kidsfit.co.kr) running the 3-second LMS Z-score scan.
+Audio/Voiceover: "Calculate your child's exact CDC Z-score and 3-trajectory adult height in 3 seconds at kidsfit.co.kr. Link in bio!"
+On-Screen Text: "Calculate CDC 2000 LMS Z-Score & 3-Trajectory Height ↗ kidsfit.co.kr (Tag: ${amazonTag})"`;
 
     const enShortsScript = `[YouTube Shorts 60s Scientific Breakdown Script]
 Title: Why Most Kids Lose Up to 5.0cm of Adult Height (And How Wolff's Law Fixes It)
@@ -171,7 +171,7 @@ Hashtags: #PediatricEndocrinology #GrowthPlate #TallerBioLabs #Biomechanics
 00:00 - 00:10: Hook: "Your child's genetic target height is Mid-Parental Height ± 8.5cm. But here is why unmanaged habits can steal up to 5cm of that range."
 00:11 - 00:25: Science: "Wolff's Law proves that epiphyseal chondrocytes multiply under cyclic vertical micro-impacts of 1.5 to 2.5 times body weight. Plyometric jumping directly stimulates Runx2 and Type II collagen."
 00:26 - 00:45: Formula: "Combine micro-impact jumping with 15-minute axial dead hangs to reverse diurnal disc compression. In our clinical modeling, posture alignment recovers an instant 1.5cm to 2.2cm."
-00:46 - 01:00: Action: "Access our university hospital-grade 90-day trajectory tracker and 2-page clinical PDF report free at truthofmarket.com."`;
+00:46 - 01:00: Action: "Access our university hospital-grade 90-day trajectory tracker and 2-page clinical PDF report free at kidsfit.co.kr."`;
 
     // -------------------------------------------------------------
     // KO Formats: Naver Clip, Naver Blog 2000-char, Naver Cafe
@@ -199,7 +199,7 @@ BGM: 경쾌한 클리닉 템포
 
 [19~30초: 즉시 진단 유도]
 - 화면: 질병관리청 LMS 백분위 3초 바이오 스캔 화면
-- 자막/나레이션: "우리 아이 질병관리청 성장도표 정밀 백분위, 프로필 링크 truthofmarket.com에서 3초 만에 무료 확인!"`;
+- 자막/나레이션: "우리 아이 질병관리청 성장도표 정밀 백분위, 프로필 링크 kidsfit.co.kr에서 3초 만에 무료 확인!"`;
 
       koBlogColumn = `# 초등 저학년 성장판 닫히기 전 골든타임! 부모 유전키 극복하고 숨은 키 7cm 찾는 임상 3대 원칙
 
@@ -244,20 +244,20 @@ $$\\text{여아 MPH} = \\frac{\\text{아빠 키} + \\text{엄마 키} - 13}{2} \
 
 지금 우리 아이의 질병관리청(KDCA 2017) 표준 Z-Score와 3단 성인 예측키를 확인하고 싶다면, 순수 임상 분석 플랫폼인 **Taller Bio Labs (키즈핏 바이오 랩)**에서 3초 만에 무료로 진단해 보세요!
 
-👉 **[우리 아이 질병관리청 성장 궤적 무료 진단하기: https://truthofmarket.com]** (제휴 식별자: ${coupangId} / ${linkpriceId})`;
+👉 **[우리 아이 질병관리청 성장 궤적 무료 진단하기: https://kidsfit.co.kr]** (제휴 식별자: ${coupangId} / ${linkpriceId})`;
 
       koCafePost = `[네이버 카페 육아 Q&A & 공감 나눔 게시글]
 제목: 초2 남아(124cm) 엄마 158 아빠 171인데 유전키 극복하고 178cm 궤적 찾은 후기 공유해요!
 
 안녕하세요 맘님들! 
 저희 아이가 초2인데 반에서 2번째로 작아서 매일 밤마다 부모 키 작아서 그런가 죄책감 들었거든요.
-성장클리닉 가기 전에 질병관리청 소아성장도표 기반 바이오 랩 사이트(truthofmarket.com)에서 정밀 진단을 돌려봤어요.
+성장클리닉 가기 전에 질병관리청 소아성장도표 기반 바이오 랩 사이트(kidsfit.co.kr)에서 정밀 진단을 돌려봤어요.
 
 유전키 공식(MPH) 돌리니 171.5cm 나오는데, 
 밤 10시 이후 취침이랑 자기 전 우유/간식 먹는 게 성장호르몬을 최대 -52%나 억제하고 있었다네요 ㅠㅠ
 지금 취침 3시간 전 간식 끊고, 매일 문틀 철봉 30초씩 매달리기 시켰더니 자세도 펴지고 6개월 만에 4cm 훌쩍 컸어요!
 
-아이 질병관리청 표준 백분위랑 성인 예측키 3단 그래프 궁금하신 분들은 truthofmarket.com에서 한번 진단해보세요. 
+아이 질병관리청 표준 백분위랑 성인 예측키 3단 그래프 궁금하신 분들은 kidsfit.co.kr에서 한번 진단해보세요. 
 광고나 유료 결제 없이 2페이지 A4 대학병원 스타일 결과지까지 무료로 출력되네요!`;
 
     } else if (scId === 'scenario-3') {
@@ -269,7 +269,7 @@ $$\\text{여아 MPH} = \\frac{\\text{아빠 키} + \\text{엄마 키} - 13}{2} \
       koBlogColumn = `# 청소년 척추 디스크 감압과 성장판 폐쇄 전 마지막 2.5cm 복원 프로토콜
 변성기 이후 성장판이 닫혀가는 감속기·체형 완성기 청소년에게 가장 시급한 것은 척추 수직 정렬입니다.
 볼프의 법칙(Wolff's Law)과 추간판 재수화 원리를 통해 숨은 키를 복원하는 3대 임상 생체역학 운동을 정리합니다.
-자세한 24시간 호르몬 및 90일 스트릭 트래커는 truthofmarket.com (Coupang: ${coupangId})에서 확인 가능합니다.`;
+자세한 24시간 호르몬 및 90일 스트릭 트래커는 kidsfit.co.kr (Coupang: ${coupangId})에서 확인 가능합니다.`;
 
       koCafePost = `[네이버 카페: 중고등 자녀 숨은 키 2cm 복원 후기]
 중3 아들 거북목이랑 척추 교정 의자 + 데드행 매달리기 3개월 시키고 1.8cm 더 컸습니다. Taller Bio Labs 추천드려요!`;
@@ -279,7 +279,7 @@ $$\\text{여아 MPH} = \\frac{\\text{아빠 키} + \\text{엄마 키} - 13}{2} \
       koClipScript = `[네이버 클립 30초: 만 3세 소근육 & 몬테소리 골든타임]
 - 0~5초: "가위질 서툰 36개월 아이, 은물·가베 일찍 사면 왜 돈 낭비일까요?"
 - 6~18초: 만 2~4세는 몬테소리 감각 apparatus 골든타임! 전두엽 시냅스 연결 원리 설명.
-- 19~30초: "K-DST 영유아 발달검사 기준 우리 아이 5각 인지 밸런스, truthofmarket.com에서 확인하세요!"`;
+- 19~30초: "K-DST 영유아 발달검사 기준 우리 아이 5각 인지 밸런스, kidsfit.co.kr에서 확인하세요!"`;
 
       koBlogColumn = `# 만 3세(36개월) 소근육·두뇌 발달 골든타임! 몬테소리 vs 가베 중복 지출 막는 뇌과학적 선택
 
@@ -291,10 +291,10 @@ $$\\text{여아 MPH} = \\frac{\\text{아빠 키} + \\text{엄마 키} - 13}{2} \
 | **만 2~3세 (24~47mo)** | 일상 감각 & 소근육 협응 | 몬테소리 핑크타워, 원목 꼭지원기둥 | 추상적 수학 가베 중복지출 주의 |
 | **만 4~5세 (48~71mo)** | 3차원 공간 토폴로지 | 프뢰벨 은물, 가베, 입체 블록 | 주입식 교육 지양 |
 
-자세한 5각 신경인지 레이더 차트 분석은 truthofmarket.com (LinkPrice: ${linkpriceId}, Coupang: ${coupangId})에서 무료로 제공됩니다.`;
+자세한 5각 신경인지 레이더 차트 분석은 kidsfit.co.kr (LinkPrice: ${linkpriceId}, Coupang: ${coupangId})에서 무료로 제공됩니다.`;
 
       koCafePost = `[네이버 카페: 36개월 소근육 가위질 고민 해결 후기]
-몬테소리 감각 교구와 하브루타 대화법으로 소근육 협응 상위 10% 도달한 후기 공유합니다! truthofmarket.com 추천드려요.`;
+몬테소리 감각 교구와 하브루타 대화법으로 소근육 협응 상위 10% 도달한 후기 공유합니다! kidsfit.co.kr 추천드려요.`;
     }
 
     // Webtoon Storyboard (6 Cuts)
@@ -329,7 +329,7 @@ $$\\text{여아 MPH} = \\frac{\\text{아빠 키} + \\text{엄마 키} - 13}{2} \
 [컷 6]
 - AI 이미지 프롬프트: Clean clinic banner with Taller Bio Labs logo, button saying '무료 임상 처방전 받기'.
 - 말풍선: "성장판 닫히기 전 우리 아이 숨은 잠재키, 지금 프로필 링크에서 3초 만에 확인하세요!"
-- 30초 TTS: "성장판 닫히기 전 마지막 골든타임, 프로필 링크 truthofmarket.com에서 무료로 확인하세요!"`;
+- 30초 TTS: "성장판 닫히기 전 마지막 골든타임, 프로필 링크 kidsfit.co.kr에서 무료로 확인하세요!"`;
 
     return {
       scenarioId: scId,
@@ -543,7 +543,7 @@ Roughly 65% of daily pulsatile Growth Hormone (GH) is secreted during the first 
 Per Kelly et al. (JCEM) and Zhang et al. (Pediatrics), pubertal onset and bone maturation tempo vary significantly across East Asian, South Asian, Black, Hispanic, and Multi-Ethnic cohorts compared to single-baseline charts.
 
 If anyone wants to run their child's exact CDC/WHO LMS percentile with Multi-Ethnic Calibration and 5-Axis Executive Function LQ (supports Imperial ft/in, lbs & Metric cm, kg), we used this clinical calculator:
-https://truthofmarket.com/?utm_source=reddit&utm_medium=organic_post&utm_campaign=global_auxology`;
+https://kidsfit.co.kr/?utm_source=reddit&utm_medium=organic_post&utm_campaign=global_auxology`;
 
     const globalThreadsXCopy = `[Instagram Bio / Threads / X Viral Thread]
 1/ A child's adult height is NOT 100% fixed by genetics.
@@ -556,19 +556,19 @@ According to US CDC 2000 LMS models and the Tanner MPH formula, post-natal sleep
 4/ Calcium Carbonate absorbs at ~22% and requires high stomach acid. Pediatric bone mineralization requires acid-independent Calcium Citrate (~45% absorption) + Vitamin D3 + K2 (MK-7) + Chelated Zinc.
 
 5/ Run your child's free 60-second US CDC & Multi-Ethnic Growth + 5-Axis Neuro LQ assessment (Imperial & Metric supported):
-👉 https://truthofmarket.com/?utm_source=threads_x&utm_medium=social_thread&utm_campaign=global_launch`;
+👉 https://kidsfit.co.kr/?utm_source=threads_x&utm_medium=social_thread&utm_campaign=global_launch`;
 
     const globalUtmLinks = `[1] Reddit Organic / Comment Sniper:
-https://truthofmarket.com/?utm_source=reddit&utm_medium=comment_sniper&utm_campaign=global_auxology
+https://kidsfit.co.kr/?utm_source=reddit&utm_medium=comment_sniper&utm_campaign=global_auxology
 
 [2] Instagram / Threads Bio Link:
-https://truthofmarket.com/?utm_source=instagram&utm_medium=bio_link&utm_campaign=global_parenting
+https://kidsfit.co.kr/?utm_source=instagram&utm_medium=bio_link&utm_campaign=global_parenting
 
 [3] TikTok / YouTube Shorts Bio Link:
-https://truthofmarket.com/?utm_source=tiktok_shorts&utm_medium=bio_link&utm_campaign=shortform_viral
+https://kidsfit.co.kr/?utm_source=tiktok_shorts&utm_medium=bio_link&utm_campaign=shortform_viral
 
 [4] Quora Evergreen Answer Citation:
-https://truthofmarket.com/?utm_source=quora&utm_medium=answer_citation&utm_campaign=evergreen_seo`;
+https://kidsfit.co.kr/?utm_source=quora&utm_medium=answer_citation&utm_campaign=evergreen_seo`;
 
     container.innerHTML = `
       <div class="osmu-generator-card" style="border-top: 1px solid var(--theme-border, #CBD5E1); padding-top: 1.5rem; margin-top: 1.5rem;">

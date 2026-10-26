@@ -91,7 +91,7 @@ def main():
             const txt = el ? el.innerText.trim() : document.body.innerText;
             return {
                 len: txt.length,
-                hasTruth: txt.includes('truthofmarket.com'),
+                hasTruth: txt.includes('kidsfit.co.kr'),
                 hasKidsfit: txt.includes('kidsfit.co.kr')
             };
         }""")

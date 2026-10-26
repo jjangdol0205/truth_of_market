@@ -3,7 +3,7 @@
 """
 scripts/update_qna_pages.py
 Updates all 31 SEO Q&A landing pages in qna/:
-1. Replaces legacy domain kidsfit.co.kr with truthofmarket.com across all tags (canonical, og:url, og:image, links)
+1. Replaces legacy domain kidsfit.co.kr with kidsfit.co.kr across all tags (canonical, og:url, og:image, links)
 2. Injects / updates Top 1-Click Diagnostic Bridge Widget (utm_source=qna_top)
 3. Injects / updates Bottom 1-Click Diagnostic Bridge Widget (utm_source=qna_bottom)
 """
@@ -14,8 +14,8 @@ from pathlib import Path
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 QNA_DIR = ROOT_DIR / "qna"
-PRODUCTION_DOMAIN = "truthofmarket.com"
-LEGACY_DOMAIN = "truthofmarket.com"
+PRODUCTION_DOMAIN = "kidsfit.co.kr"
+LEGACY_DOMAIN = "kidsfit.co.kr"
 
 def process_file(html_file: Path):
     content = html_file.read_text(encoding="utf-8")

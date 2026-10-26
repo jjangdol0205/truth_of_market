@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Generates a high-CTR 1200x630 OpenGraph / KakaoTalk / Social Share Thumbnail
-at `samples/og-k-growth-ai-v2.png` for https://truthofmarket.com
+at `samples/og-k-growth-ai-v2.png` for https://kidsfit.co.kr
 Designed to maximize curiosity & click-through rate (CTR) in KakaoTalk, Telegram, and Naver shares.
 """
 import os

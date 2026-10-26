@@ -201,7 +201,7 @@ def main():
             papermain.locator("#frmIntroduce").fill(
                 "질병관리청 성장도표·영유아 건강검진(K-DST) 공식 기준에 기반해\n"
                 "우리 아이 숨은 키·성조숙증·월령별 두뇌발달·가베/몬테소리 교구·주말 나들이 가이드를 연구합니다.\n"
-                "공식 웹앱: https://truthofmarket.com"
+                "공식 웹앱: https://kidsfit.co.kr"
             )
             papermain.evaluate("""() => {
                 const r = document.querySelector('#label-subject11');

@@ -252,10 +252,10 @@ function createFunnelEnvironment() {
     },
     location: {
       protocol: 'https:',
-      hostname: 'truthofmarket.com',
+      hostname: 'kidsfit.co.kr',
       pathname: '/',
       search: '',
-      href: 'https://truthofmarket.com/'
+      href: 'https://kidsfit.co.kr/'
     },
     alert: (msg) => { alertLog.push(msg); },
     addEventListener: (evt, fn) => {

@@ -280,7 +280,7 @@ def crawl_openalex_live(
     url = (
         f"https://api.openalex.org/works?search={encoded_q}"
         f"&filter=has_doi:true,type:article&per-page={per_page}&page={page}&sort=cited_by_count:desc"
-        f"&mailto=research@truthofmarket.com"
+        f"&mailto=research@kidsfit.co.kr"
     )
     data = http_get_json(url, timeout=15)
     if not data or "results" not in data:
@@ -554,7 +554,7 @@ def run_incremental_cycle(cycle_index: int = 0) -> Dict[str, Any]:
     with open(LOG_OUT, "w", encoding="utf-8") as f:
         json.dump(status_payload, f, ensure_ascii=False, indent=2)
 
-    # Auto-rebuild dist/, push to live homepage (truthofmarket.com), and notify Telegram when new papers are learned
+    # Auto-rebuild dist/, push to live homepage (kidsfit.co.kr), and notify Telegram when new papers are learned
     if newly_added > 0:
         try:
             import subprocess

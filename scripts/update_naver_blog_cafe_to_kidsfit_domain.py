@@ -163,7 +163,7 @@ def main():
         # =====================================================================
         # STEP 1: Delete Old Cafe Articles & Publish 3 Updated Posts (kidsfit.co.kr)
         # =====================================================================
-        print("🗑️ [1/3] 기존 카페 게시글(truthofmarket.com 포함본) 삭제 후 kidsfit.co.kr 본문으로 재발행 중...", flush=True)
+        print("🗑️ [1/3] 기존 카페 게시글(kidsfit.co.kr 포함본) 삭제 후 kidsfit.co.kr 본문으로 재발행 중...", flush=True)
         safe_goto(page, "https://cafe.naver.com/moneyfitlab", sleep_sec=2.5)
         old_cafe_ids = page.evaluate("""async () => {
             const r = await fetch('https://apis.naver.com/cafe-web/cafe2/ArticleListV2dot1.json?search.clubid=31805224&search.queryType=lastArticle&search.page=1&search.perPage=30', { credentials: 'include' });

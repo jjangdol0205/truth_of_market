@@ -125,7 +125,7 @@ def main():
         if desc_ta.count() > 0:
             desc_ta.click()
             desc_ta.fill(
-                "질병관리청 성장도표 및 보건복지부 K-DST 기반 우리 아이 숨은 키 +7cm, 소근육 발달, 나이별 맞춤 교구·공부법, 주말 박물관 하브루타 연구소 및 무료 워크지 PDF 나눔 카페입니다. (무료 진단: truthofmarket.com)"
+                "질병관리청 성장도표 및 보건복지부 K-DST 기반 우리 아이 숨은 키 +7cm, 소근육 발달, 나이별 맞춤 교구·공부법, 주말 박물관 하브루타 연구소 및 무료 워크지 PDF 나눔 카페입니다. (무료 진단: kidsfit.co.kr)"
             )
             time.sleep(0.5)
 

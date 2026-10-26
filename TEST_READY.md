@@ -92,11 +92,11 @@ FAILED (Baseline Pending): 29 tests
    - Fulfills `TestF01-2` to `TestF01-5` by creating `docs/promotion_funnel_diagnosis_report.md` and `.json`.
    - Resolves 4 failing tests -> Baseline advances to **58 Pass**.
 2. **Milestone M2 (R2 Omnichannel Bridges & QA Rule Alignment)**:
-   - Upgrades Blog, Cafe, Webtoon, Card News, 31 Q&A pages, and QA agent with `truthofmarket.com` UTM bridges and QR callouts.
+   - Upgrades Blog, Cafe, Webtoon, Card News, 31 Q&A pages, and QA agent with `kidsfit.co.kr` UTM bridges and QR callouts.
    - Fulfills `TestF02-2,4`, `TestF03-2,4`, `TestF04-4,5`, `TestF05-2,4,5`, `TestF06-2,4,5`, and `TestTier4-4`.
    - Resolves 12 failing tests -> Baseline advances to **70 Pass**.
 3. **Milestone M3 (R3 Homepage Korean Default & 1-Stop Dual Diagnosis)**:
-   - Removes forced English paywall on `truthofmarket.com`, unites quiz into 1-stop 60s flow, records `both` telemetry.
+   - Removes forced English paywall on `kidsfit.co.kr`, unites quiz into 1-stop 60s flow, records `both` telemetry.
    - Fulfills `TestF07-1,3,4`, `TestF08-1,5`, `TestF09-2`, and `TestTier4-1`.
    - Resolves 7 failing tests -> Baseline advances to **77 Pass**.
 4. **Milestone M4 (R4 Personalized Prescriptions & Click Conversion Tracking)**:

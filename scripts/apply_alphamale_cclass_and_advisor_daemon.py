@@ -168,9 +168,9 @@ def apply_alphamale_and_cclass_to_qna_pages() -> int:
     🕸️ [함께 읽으면 우리 아이 숨은 키·두뇌가 달라지는 연관 논문 팩트체크 3선]
   </div>
   <ul style="margin:0;padding-left:18px;line-height:1.9;font-size:14.5px;font-weight:700;">
-    <li><a href="https://truthofmarket.com/qna/{rel_pages[0]}" style="color:#1E40AF;text-decoration:underline;">{page_titles.get(rel_pages[0], rel_pages[0])} →</a></li>
-    <li><a href="https://truthofmarket.com/qna/{rel_pages[1]}" style="color:#1E40AF;text-decoration:underline;">{page_titles.get(rel_pages[1], rel_pages[1])} →</a></li>
-    <li><a href="https://truthofmarket.com/qna/{rel_pages[2]}" style="color:#1E40AF;text-decoration:underline;">{page_titles.get(rel_pages[2], rel_pages[2])} →</a></li>
+    <li><a href="https://kidsfit.co.kr/qna/{rel_pages[0]}" style="color:#1E40AF;text-decoration:underline;">{page_titles.get(rel_pages[0], rel_pages[0])} →</a></li>
+    <li><a href="https://kidsfit.co.kr/qna/{rel_pages[1]}" style="color:#1E40AF;text-decoration:underline;">{page_titles.get(rel_pages[1], rel_pages[1])} →</a></li>
+    <li><a href="https://kidsfit.co.kr/qna/{rel_pages[2]}" style="color:#1E40AF;text-decoration:underline;">{page_titles.get(rel_pages[2], rel_pages[2])} →</a></li>
   </ul>
 </section>
 <script>
@@ -195,7 +195,7 @@ def apply_alphamale_and_cclass_to_qna_pages() -> int:
               category: cat,
               product_name: String(pName).replace(/\\s+/g, ' ').slice(0, 90),
               href: h.slice(0, 240),
-              domain: window.location.hostname || 'truthofmarket.com',
+              domain: window.location.hostname || 'kidsfit.co.kr',
               utm_source: 'qna_page'
             }})
           }}).catch(function(){{}});
@@ -241,7 +241,7 @@ def fetch_live_system_metrics() -> dict:
         "externalBlogComments": 6,
     }
     try:
-        req = urllib.request.Request("https://truthofmarket.com/api/stats", headers={"User-Agent": "KidsFitAdvisor/1.0"})
+        req = urllib.request.Request("https://kidsfit.co.kr/api/stats", headers={"User-Agent": "KidsFitAdvisor/1.0"})
         with urllib.request.urlopen(req, timeout=8) as r:
             data = json.loads(r.read().decode("utf-8")).get("analytics", {})
             today = data.get("today", {})

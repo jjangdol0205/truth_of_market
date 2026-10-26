@@ -38,7 +38,7 @@ if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
 # Expected constants from specifications
-PRODUCTION_DOMAIN = "truthofmarket.com"
+PRODUCTION_DOMAIN = "kidsfit.co.kr"
 PRIMARY_URL = f"https://{PRODUCTION_DOMAIN}"
 LEGACY_DOMAIN = "kidsfit.co.kr"
 EXPECTED_TELEGRAM_CHAT_ID = "755033799"
@@ -222,7 +222,7 @@ class TestF02BlogDiagnosticBridge(unittest.TestCase):
         self.assertTrue(self.script_path.exists(), f"Missing blog script: {self.script_path}")
 
     def test_f02_diagnostic_bridge_utm_url(self):
-        """F02-2: Verify blog script embeds truthofmarket.com bridge with utm_source=naver_blog"""
+        """F02-2: Verify blog script embeds kidsfit.co.kr bridge with utm_source=naver_blog"""
         self.assertTrue(self.script_path.exists())
         with open(self.script_path, "r", encoding="utf-8") as f:
             content = f.read()
@@ -246,7 +246,7 @@ class TestF02BlogDiagnosticBridge(unittest.TestCase):
             content = f.read()
         has_qr = "qrcode" in content.lower() or "qr" in content.lower()
         self.assertTrue(has_qr, "Blog script must contain QR code generation logic for infographic")
-        has_callout = any(term in content for term in ["무료 진단", "1분", "truthofmarket.com", "골든타임"])
+        has_callout = any(term in content for term in ["무료 진단", "1분", "kidsfit.co.kr", "골든타임"])
         self.assertTrue(has_callout, "Blog script must render visual callout in infographic")
 
     def test_f02_kidsfit_category_coverage(self):
@@ -269,7 +269,7 @@ class TestF03CafeDiagnosticBridge(unittest.TestCase):
         self.assertTrue(self.script_path.exists(), f"Missing cafe script: {self.script_path}")
 
     def test_f03_diagnostic_bridge_utm_url(self):
-        """F03-2: Verify cafe script embeds truthofmarket.com bridge with utm_source=naver_cafe"""
+        """F03-2: Verify cafe script embeds kidsfit.co.kr bridge with utm_source=naver_cafe"""
         self.assertTrue(self.script_path.exists())
         with open(self.script_path, "r", encoding="utf-8") as f:
             content = f.read()
@@ -319,7 +319,7 @@ class TestF04WebtoonCardNewsQRBridge(unittest.TestCase):
         self.assertTrue(self.pack_gen.exists())
         with open(self.pack_gen, "r", encoding="utf-8") as f:
             content = f.read()
-        has_cut4_bridge = "cut" in content.lower() and ("qr" in content.lower() or "truthofmarket.com" in content)
+        has_cut4_bridge = "cut" in content.lower() and ("qr" in content.lower() or "kidsfit.co.kr" in content)
         self.assertTrue(has_cut4_bridge, "Webtoon Cut 4 must embed QR code / diagnostic bridge")
 
     def test_f04_cardnews_slide6_visual_qr_and_callout(self):
@@ -327,11 +327,11 @@ class TestF04WebtoonCardNewsQRBridge(unittest.TestCase):
         self.assertTrue(self.pack_gen.exists())
         with open(self.pack_gen, "r", encoding="utf-8") as f:
             content = f.read()
-        has_slide6_bridge = "slide" in content.lower() and ("qr" in content.lower() or "truthofmarket.com" in content)
+        has_slide6_bridge = "slide" in content.lower() and ("qr" in content.lower() or "kidsfit.co.kr" in content)
         self.assertTrue(has_slide6_bridge, "Card News Slide 6 must embed QR code / diagnostic bridge")
 
     def test_f04_no_legacy_domain_in_copy_dispatch(self):
-        """F04-4: Verify telegram sender replaces kidsfit.co.kr with truthofmarket.com in copy"""
+        """F04-4: Verify telegram sender replaces kidsfit.co.kr with kidsfit.co.kr in copy"""
         self.assertTrue(self.telegram_sender.exists())
         with open(self.telegram_sender, "r", encoding="utf-8") as f:
             content = f.read()
@@ -362,7 +362,7 @@ class TestF05QnAPagesBridgeSitemap(unittest.TestCase):
         self.assertGreaterEqual(len(html_files), 25, f"Expected >= 25 Q&A pages, found {len(html_files)}")
 
     def test_f05_canonical_urls_use_truthofmarket(self):
-        """F05-2: Verify Q&A pages have canonical URLs pointing to truthofmarket.com"""
+        """F05-2: Verify Q&A pages have canonical URLs pointing to kidsfit.co.kr"""
         topic_01 = self.qna_dir / "topic-01.html"
         self.assertTrue(topic_01.exists(), "topic-01.html must exist")
         with open(topic_01, "r", encoding="utf-8") as f:
@@ -389,7 +389,7 @@ class TestF05QnAPagesBridgeSitemap(unittest.TestCase):
             self.assertTrue(has_bottom_bridge, f"Q&A page {hf.name} must include bottom diagnostic bridge with utm_source=qna_bottom")
 
     def test_f05_sitemap_urls_unified_to_truthofmarket(self):
-        """F05-5: Verify sitemap.xml uses truthofmarket.com for all entries and CNAME is truthofmarket.com"""
+        """F05-5: Verify sitemap.xml uses kidsfit.co.kr for all entries and CNAME is kidsfit.co.kr"""
         self.assertTrue(self.sitemap_file.exists(), f"Missing sitemap: {self.sitemap_file}")
         with open(self.sitemap_file, "r", encoding="utf-8") as f:
             content = f.read()
@@ -412,11 +412,11 @@ class TestF06QAFactCheckAgentAlignment(unittest.TestCase):
         self.assertTrue(self.agent_path.exists(), f"Missing QA agent: {self.agent_path}")
 
     def test_f06_stage1_requires_diagnostic_bridge(self):
-        """F06-2: Verify Stage 1 QA enforces presence of truthofmarket.com UTM bridge links"""
+        """F06-2: Verify Stage 1 QA enforces presence of kidsfit.co.kr UTM bridge links"""
         self.assertTrue(self.agent_path.exists())
         with open(self.agent_path, "r", encoding="utf-8") as f:
             content = f.read()
-        self.assertIn(PRODUCTION_DOMAIN, content, "QA Agent must enforce truthofmarket.com bridge validation")
+        self.assertIn(PRODUCTION_DOMAIN, content, "QA Agent must enforce kidsfit.co.kr bridge validation")
         self.assertIn("utm_source", content, "QA Agent must validate UTM parameters")
 
     def test_f06_stage1_bans_commercial_affiliate_links(self):
@@ -432,7 +432,7 @@ class TestF06QAFactCheckAgentAlignment(unittest.TestCase):
         self.assertTrue(self.agent_path.exists())
         with open(self.agent_path, "r", encoding="utf-8") as f:
             content = f.read()
-        has_dom_bridge = "truthofmarket.com" in content and ("has_bridge" in content or "bridge" in content.lower())
+        has_dom_bridge = "kidsfit.co.kr" in content and ("has_bridge" in content or "bridge" in content.lower())
         self.assertTrue(has_dom_bridge, "Stage 2 QA must audit DOM for diagnostic bridge link")
 
     def test_f06_rejects_legacy_kidsfit_domain(self):
@@ -453,7 +453,7 @@ class TestF07HomepageKoreanDefaultFix(unittest.TestCase):
         self.i18n_js = ROOT_DIR / "src" / "js" / "i18n.js"
 
     def test_f07_index_html_no_forced_english_on_primary_domain(self):
-        """F07-1: Verify index.html defaults to Korean on kidsfit.co.kr while server.js routes truthofmarket.com to dist-global"""
+        """F07-1: Verify index.html defaults to Korean on kidsfit.co.kr while server.js routes kidsfit.co.kr to dist-global"""
         self.assertTrue(self.index_html.exists(), "index.html must exist")
         with open(self.index_html, "r", encoding="utf-8") as f:
             content = f.read()
@@ -481,7 +481,7 @@ class TestF07HomepageKoreanDefaultFix(unittest.TestCase):
         self.assertIn('<html lang="ko"', content, "index.html root element must have lang='ko'")
 
     def test_f07_global_paywall_script_respects_korean_default(self):
-        """F07-3: Verify global-paywall-edition.js does not treat truthofmarket.com as global paid"""
+        """F07-3: Verify global-paywall-edition.js does not treat kidsfit.co.kr as global paid"""
         self.assertTrue(self.paywall_js.exists(), "global-paywall-edition.js must exist")
         with open(self.paywall_js, "r", encoding="utf-8") as f:
             content = f.read()
@@ -491,11 +491,11 @@ class TestF07HomepageKoreanDefaultFix(unittest.TestCase):
         )
         self.assertIsNone(
             bad_host_check,
-            "global-paywall-edition.js must NOT lock truthofmarket.com"
+            "global-paywall-edition.js must NOT lock kidsfit.co.kr"
         )
 
     def test_f07_i18n_script_defaults_to_korean(self):
-        """F07-4: Verify i18n.js does not force 'en' for truthofmarket.com"""
+        """F07-4: Verify i18n.js does not force 'en' for kidsfit.co.kr"""
         self.assertTrue(self.i18n_js.exists(), "i18n.js must exist")
         with open(self.i18n_js, "r", encoding="utf-8") as f:
             content = f.read()
@@ -505,7 +505,7 @@ class TestF07HomepageKoreanDefaultFix(unittest.TestCase):
         )
         self.assertIsNone(
             bad_i18n_check,
-            "i18n.js must NOT force language 'en' for truthofmarket.com"
+            "i18n.js must NOT force language 'en' for kidsfit.co.kr"
         )
 
     def test_f07_global_paid_accessible_via_explicit_query(self):
@@ -977,9 +977,9 @@ class TestTier4RealWorldWorkloadScenarios(unittest.TestCase):
         with open(index_path, "r", encoding="utf-8") as f:
             index_content = f.read()
         self.assertNotIn(
-            "_kfHost.indexOf('truthofmarket.com') !== -1",
+            "_kfHost.indexOf('kidsfit.co.kr') !== -1",
             index_content.replace('"', "'"),
-            "truthofmarket.com must not be locked by paywall"
+            "kidsfit.co.kr must not be locked by paywall"
         )
 
         # Step 3: Dual diagnosis completion
@@ -1018,7 +1018,7 @@ class TestTier4RealWorldWorkloadScenarios(unittest.TestCase):
         self.assertEqual(stats["daily"]["today"]["productClicks"]["byReferrer"]["naver_cafe"]["learning"], 1)
 
     def test_t4_03_instagram_threads_parent_journey(self):
-        """Scenario 3: Instagram / Threads parent scans slide 6 QR code -> visits truthofmarket.com -> views Korean UI -> completes assessment"""
+        """Scenario 3: Instagram / Threads parent scans slide 6 QR code -> visits kidsfit.co.kr -> views Korean UI -> completes assessment"""
         # Step 1: Scan Card News Slide 06 QR code
         qr_url = f"https://{PRODUCTION_DOMAIN}/?utm_source=cardnews_qr&utm_medium=qr_code&utm_campaign=kidsfit_diagnosis"
         ref_source = classify_referrer_reference("", qr_url)

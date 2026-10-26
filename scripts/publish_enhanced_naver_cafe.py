@@ -42,7 +42,7 @@ import qrcode
 from playwright.sync_api import sync_playwright
 
 # Production Domain & Diagnostic Bridge URLs
-PRODUCTION_DOMAIN = "truthofmarket.com"
+PRODUCTION_DOMAIN = "kidsfit.co.kr"
 CAFE_DIAGNOSTIC_BRIDGE_URL = f"https://{PRODUCTION_DOMAIN}/?utm_source=naver_cafe&utm_medium=organic_social&utm_campaign=kidsfit_diagnosis"
 CAFE_DIAGNOSTIC_BRIDGE_QR_URL = f"https://{PRODUCTION_DOMAIN}/?utm_source=naver_cafe_qr&utm_medium=qr_code&utm_campaign=kidsfit_diagnosis"
 
@@ -214,7 +214,7 @@ def generate_cafe_card_png(
 ) -> str:
     """
     Generates high-resolution 1080x1080 PNG summary and checklist card for Naver Cafe community posts.
-    Includes visual diagnostic callout banner and 120x120 QR code pointing to truthofmarket.com.
+    Includes visual diagnostic callout banner and 120x120 QR code pointing to kidsfit.co.kr.
     """
     out_path.parent.mkdir(parents=True, exist_ok=True)
     W, H = 1080, 1080
@@ -288,7 +288,7 @@ def generate_cafe_card_png(
 
     draw.text((122, y_bridge + 20), "내 아이 예상키 + 두뇌·학습 골든타임 1분 무료 진단", font=f_c_title, fill=(6, 78, 59))
     draw.text((122, y_bridge + 62), "질병관리청 소아성장도표 & K-DST 기준 1분 맞춤 처방전 발급", font=f_c_sub, fill=(4, 120, 87))
-    draw.text((122, y_bridge + 102), "👉 truthofmarket.com ↗ (회원가입 0초 즉시 확인)", font=f_c_link, fill=(5, 150, 105))
+    draw.text((122, y_bridge + 102), "👉 kidsfit.co.kr ↗ (회원가입 0초 즉시 확인)", font=f_c_link, fill=(5, 150, 105))
 
     # 120x120 QR Code on right
     qr = qrcode.QRCode(version=1, box_size=3, border=1)
@@ -593,7 +593,7 @@ def publish_cafe_post_cdp(
                         print(f"⚠️ 카페 이미지 첨부 예외: {e}", flush=True)
 
             # 4. Type Body Text line by line
-            if "truthofmarket.com" not in body:
+            if "kidsfit.co.kr" not in body:
                 body = body.strip() + CAFE_DIAGNOSTIC_BRIDGE_TEXT
             clean_body = re.sub(r"^[#]+\s*", "", body, flags=re.MULTILINE)
             clean_body = re.sub(r"\*\*([^*]+)\*\*", r"\1", clean_body)
@@ -676,7 +676,7 @@ def publish_cafe_post_cdp(
                         const imgs = Array.from(doc.querySelectorAll("img.se-image-resource, img.article_img, .se-component-content img"));
                         const links = Array.from(doc.querySelectorAll("a")).map(a => a.href || '');
                         const hasAffiliate = links.some(h => h.includes("coupang") || h.includes("linkprice"));
-                        const hasBridge = links.some(h => h.includes("truthofmarket.com")) || text.includes("truthofmarket.com");
+                        const hasBridge = links.some(h => h.includes("kidsfit.co.kr")) || text.includes("kidsfit.co.kr");
                         return {
                             charCount: text.length,
                             imageCount: imgs.length,
@@ -779,7 +779,7 @@ def main():
 
     # Validate tone and non-promotional constraints
     body_raw = topic["body"]
-    if "truthofmarket.com" not in body_raw:
+    if "kidsfit.co.kr" not in body_raw:
         body_raw = body_raw.strip() + CAFE_DIAGNOSTIC_BRIDGE_TEXT
     clean_body = re.sub(r"^[#]+\s*", "", body_raw, flags=re.MULTILINE)
     clean_body = re.sub(r"\*\*([^*]+)\*\*", r"\1", clean_body)
@@ -790,8 +790,8 @@ def main():
             print(f"❌ Commercial affiliate token detected: {tok}", flush=True)
             sys.exit(1)
 
-    if "truthofmarket.com" not in clean_body or "utm_source=naver_cafe" not in clean_body:
-        print("❌ Missing required truthofmarket.com diagnostic bridge in cafe post!", flush=True)
+    if "kidsfit.co.kr" not in clean_body or "utm_source=naver_cafe" not in clean_body:
+        print("❌ Missing required kidsfit.co.kr diagnostic bridge in cafe post!", flush=True)
         sys.exit(1)
 
     print(f"📊 본문 검증: 총 {len(clean_body)}자 · 100% 비영리 공감 커뮤니티 톤앤매너 검증 완료 ✅")

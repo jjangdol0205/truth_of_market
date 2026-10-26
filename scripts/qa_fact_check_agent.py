@@ -69,7 +69,7 @@ KB_PATH = ROOT_DIR / "docs" / "hourly_benchmark_paper_kb.json"
 RESEARCH_DB_PATH = ROOT_DIR / "src" / "data" / "research-knowledge-base.json"
 
 # Targets & Constants from authoritative specifications
-PRODUCTION_DOMAIN = "truthofmarket.com"
+PRODUCTION_DOMAIN = "kidsfit.co.kr"
 LEGACY_DOMAIN = "kidsfit.co.kr"
 
 TARGET_EMAIL = "beable9489@gmail.com"
@@ -884,7 +884,7 @@ def audit_post_publish(
                 }
 
                 // Diagnostic bridge check (kidsfit.co.kr with utm_source)
-                const hasBridge = links.some(l => l.includes('truthofmarket.com') && l.includes('utm_source'));
+                const hasBridge = links.some(l => l.includes('kidsfit.co.kr') && l.includes('utm_source'));
                 const hasLegacyDomain = text.includes('kidsfit.co.kr') || links.some(l => l.includes('kidsfit.co.kr'));
 
                 return {

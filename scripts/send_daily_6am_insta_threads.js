@@ -4,7 +4,7 @@
  * Daily 06:00 AM KST (@kids_fit1) Instagram Carousel + Threads 4-Cut Grid Auto-Sender for Telegram.
  *
  * Designed around the user's exact live workflow on:
- * - Threads: https://www.threads.com/@kids_fit1 (1 Square 2x2 4-Cut Grid image + Post #1 <430 chars + Self-Reply #2 with truthofmarket.com link)
+ * - Threads: https://www.threads.com/@kids_fit1 (1 Square 2x2 4-Cut Grid image + Post #1 <430 chars + Self-Reply #2 with kidsfit.co.kr link)
  * - Instagram: https://www.instagram.com/kids_fit1 (5-Slide Square Carousel: Cuts 1~4 + 5th Summary Card + Rich Storytelling Caption with @kids_fit1 pre-filled)
  *
  * Usage:

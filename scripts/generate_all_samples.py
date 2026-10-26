@@ -1151,7 +1151,7 @@ def generate_blog_sample():
 아이마다 자라나는 속도와 기질은 세상에 단 하나뿐인 지문처럼 다릅니다.
 옆집 아이의 교구나 영양제를 따라 사기보다, 먼저 **공신력 있는 국가 표준 데이터에 우리 아이의 현재 키·몸무게와 개월 수를 대입해 객관적인 방향**을 확인해 보시는 건 어떨까요?
 
-👉 **[키즈핏 그로스 스튜디오 — 우리 아이 무료 성장·발달 처방전 확인하기](https://truthofmarket.com)**
+👉 **[키즈핏 그로스 스튜디오 — 우리 아이 무료 성장·발달 처방전 확인하기](https://kidsfit.co.kr)**
 """
     (BLOG_DIR / "blog_post_sample.md").write_text(md_content, encoding="utf-8")
 

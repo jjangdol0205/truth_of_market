@@ -51,7 +51,7 @@ import qrcode
 from playwright.sync_api import sync_playwright
 
 # Production Domain & Diagnostic Bridge URLs
-PRODUCTION_DOMAIN = "truthofmarket.com"
+PRODUCTION_DOMAIN = "kidsfit.co.kr"
 BLOG_DIAGNOSTIC_BRIDGE_URL = f"https://{PRODUCTION_DOMAIN}/?utm_source=naver_blog&utm_medium=organic_social&utm_campaign=kidsfit_diagnosis"
 BLOG_DIAGNOSTIC_BRIDGE_QR_URL = f"https://{PRODUCTION_DOMAIN}/?utm_source=naver_blog_qr&utm_medium=qr_code&utm_campaign=kidsfit_diagnosis"
 
@@ -372,7 +372,7 @@ def generate_blog_checklist_infographic(
     """
     Image 3: Inline 1080x1080 PNG Practical Checklist & 3-Step Homecare Infographic.
     Provides clear, actionable guidance with numbered steps and practical checklists,
-    plus high-contrast diagnostic bridge banner with 135x135 QR code to truthofmarket.com.
+    plus high-contrast diagnostic bridge banner with 135x135 QR code to kidsfit.co.kr.
     """
     out_path.parent.mkdir(parents=True, exist_ok=True)
     W, H = 1080, 1080
@@ -441,7 +441,7 @@ def generate_blog_checklist_infographic(
 
     draw.text((122, y + 22), "내 아이 예상키 + 두뇌·학습 골든타임 1분 무료 진단", font=f_b_title, fill=(30, 27, 75))
     draw.text((122, y + 68), "질병관리청 소아성장도표 & K-DST 기준 1분 맞춤 처방전 발급", font=f_b_sub, fill=(67, 56, 202))
-    draw.text((122, y + 110), "👉 truthofmarket.com ↗", font=f_b_link, fill=PALETTE["accent_violet"])
+    draw.text((122, y + 110), "👉 kidsfit.co.kr ↗", font=f_b_link, fill=PALETTE["accent_violet"])
 
     # 135x135 QR Code
     qr = qrcode.QRCode(version=1, box_size=4, border=1)
@@ -871,9 +871,9 @@ def validate_blog_content(title: str, body: str, image_paths: list[str], categor
     if category not in KIDSFIT_CATEGORIES:
         issues.append(f"Category '{category}' is not one of the 4 official KidsFit categories: {KIDSFIT_CATEGORIES}")
 
-    # 6. Enforce truthofmarket.com diagnostic bridge with utm_source=naver_blog
-    if "truthofmarket.com" not in body or "utm_source=naver_blog" not in body:
-        issues.append("Missing required diagnostic bridge URL (https://truthofmarket.com/?utm_source=naver_blog...)")
+    # 6. Enforce kidsfit.co.kr diagnostic bridge with utm_source=naver_blog
+    if "kidsfit.co.kr" not in body or "utm_source=naver_blog" not in body:
+        issues.append("Missing required diagnostic bridge URL (https://kidsfit.co.kr/?utm_source=naver_blog...)")
 
     return len(issues) == 0, issues
 
@@ -1068,7 +1068,7 @@ def publish_blog_post_cdp(
                         const imgs = Array.from(doc.querySelectorAll(".se-image-resource, img.se-image-resource, .se-component-content img"));
                         const links = Array.from(doc.querySelectorAll("a")).map(a => a.href || '');
                         const hasAffiliate = links.some(h => h.includes("coupang") || h.includes("linkprice"));
-                        const hasBridge = links.some(h => h.includes("truthofmarket.com")) || text.includes("truthofmarket.com");
+                        const hasBridge = links.some(h => h.includes("kidsfit.co.kr")) || text.includes("kidsfit.co.kr");
                         return {
                             charCount: text.length,
                             imageCount: imgs.length,
@@ -1160,7 +1160,7 @@ def main():
 
     # 2. Sanitize and validate body
     body_raw = topic["body"]
-    if "truthofmarket.com" not in body_raw:
+    if "kidsfit.co.kr" not in body_raw:
         body_raw = body_raw.strip() + BLOG_DIAGNOSTIC_BRIDGE_TEXT
     clean_body = sanitize_se_one_body(body_raw)
     is_valid, issues = validate_blog_content(
