@@ -3875,6 +3875,13 @@ html[data-edition="global-paid"] select.form-input:focus {
 /* ==========================================================================
    29. PAYWALL PRINT GUARD (@media print protection for unpaid reports)
    ========================================================================== */
+@media screen {
+  #clinic-print-report-container,
+  .locked-print-notice {
+    display: none !important;
+  }
+}
+
 @media print {
   html[data-edition="global-paid"][data-paywall-state="locked"] #results-dashboard,
   html[data-edition="global-paid"][data-paywall-state="locked"] #master-briefing-card,
@@ -3884,7 +3891,7 @@ html[data-edition="global-paid"] select.form-input:focus {
     visibility: hidden !important;
   }
   html[data-edition="global-paid"][data-paywall-state="locked"] #clinic-print-report-container {
-    display: block !important;
-    visibility: visible !important;
+    display: none !important;
+    visibility: hidden !important;
   }
 }

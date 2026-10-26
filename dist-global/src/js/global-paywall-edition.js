@@ -75,7 +75,8 @@
     if (isGlobalPaidEdition() && !isReportUnlocked()) {
       const printContainer = typeof document !== 'undefined' ? document.getElementById('clinic-print-report-container') : null;
       if (printContainer) {
-        printContainer.innerHTML = '<div class="locked-print-notice" style="padding:48px 24px;text-align:center;font-family:sans-serif;font-size:18pt;font-weight:800;color:#0F172A;">Locked Clinical Report — Please unlock at kisfitglobal.com</div>';
+        printContainer.innerHTML = '';
+        printContainer.style.display = 'none';
       }
       if (typeof global.openKidsFitGlobalCheckoutModal === 'function') {
         global.openKidsFitGlobalCheckoutModal();
@@ -1795,7 +1796,8 @@
     // Locked State: Clear/Lock #clinic-print-report-container so @media print cannot leak paid report
     const printContainer = document.getElementById('clinic-print-report-container');
     if (printContainer) {
-      printContainer.innerHTML = '<div class="locked-print-notice" style="padding:48px 24px;text-align:center;font-family:sans-serif;font-size:18pt;font-weight:800;color:#0F172A;">Locked Clinical Report — Please unlock at kisfitglobal.com</div>';
+      printContainer.innerHTML = '';
+      printContainer.style.display = 'none';
     }
 
     // Blur Pillar 1 & Pillar 2 behind the Taller-Style Paywall Gate

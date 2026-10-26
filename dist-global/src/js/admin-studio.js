@@ -350,9 +350,76 @@ $$\\text{여아 MPH} = \\frac{\\text{아빠 키} + \\text{엄마 키} - 13}{2} \
     };
   }
 
-  // 5. Admin Modal & UI Event Handlers
+  // 5. Admin Modal & UI Event Handlers (Zero-Plaintext Cryptographic Digest Auth)
   let adminClicks = 0;
   let adminTimer = null;
+  const ADMIN_SESSION_KEY = 'kisfit_admin_auth_token_v1';
+  const ADMIN_AUTH_DIGEST = 'a86cfdc57a9f8d167c0546a365722330';
+
+  function computeAdminCredentialDigest(id, pw) {
+    const cleanId = String(id || '').trim();
+    const cleanPw = String(pw || '');
+    const payload = 'KISFIT_ADMIN_SALT_2026_V2|' + cleanId + '|' + cleanPw + '|BIO_ATELIER_99';
+    let h1 = 0x811c9dc5, h2 = 0x9e3779b9, h3 = 0x85ebca6b, h4 = 0xc2b2ae35;
+    for (let round = 0; round < 4096; round++) {
+      for (let i = 0; i < payload.length; i++) {
+        const c = payload.charCodeAt(i) ^ (round & 0xff);
+        h1 = Math.imul(h1 ^ c, 0x01000193);
+        h2 = Math.imul(h2 ^ ((h1 >>> 13) + c), 0x85ebca6b);
+        h3 = Math.imul(h3 ^ ((h2 >>> 16) + i), 0xc2b2ae35);
+        h4 = Math.imul(h4 ^ ((h3 >>> 11) + round), 0x27d4eb2f);
+      }
+    }
+    return [h1, h2, h3, h4].map(x => (x >>> 0).toString(16).padStart(8, '0')).join('');
+  }
+
+  function verifyAdminCredentials(id, pw) {
+    return computeAdminCredentialDigest(id, pw) === ADMIN_AUTH_DIGEST;
+  }
+
+  function isAdminAuthenticated() {
+    try {
+      if (typeof window !== 'undefined' && window.sessionStorage) {
+        return window.sessionStorage.getItem(ADMIN_SESSION_KEY) === ADMIN_AUTH_DIGEST;
+      }
+    } catch (_) {}
+    return false;
+  }
+
+  function syncAdminAuthView() {
+    if (typeof document === 'undefined') return;
+    const gateView = document.getElementById('admin-login-gate-view');
+    const dashView = document.getElementById('admin-dashboard-content-view');
+    const logoutBtn = document.getElementById('btn-logout-admin');
+    const authed = isAdminAuthenticated();
+    if (gateView) gateView.style.display = authed ? 'none' : 'block';
+    if (dashView) dashView.style.display = authed ? 'block' : 'none';
+    if (logoutBtn) logoutBtn.style.display = authed ? 'inline-flex' : 'none';
+    if (authed) {
+      if (global.TallerAdminDbDashboard && typeof global.TallerAdminDbDashboard.mountAdminDbDashboard === 'function') {
+        global.TallerAdminDbDashboard.mountAdminDbDashboard('admin-db-dashboard-container');
+      }
+      renderOsmuContainer();
+    } else {
+      const idInput = document.getElementById('admin-login-id');
+      if (idInput && typeof idInput.focus === 'function') {
+        setTimeout(() => { try { idInput.focus(); } catch (_) {} }, 50);
+      }
+    }
+  }
+
+  function logoutAdmin() {
+    try {
+      if (typeof window !== 'undefined' && window.sessionStorage) {
+        window.sessionStorage.removeItem(ADMIN_SESSION_KEY);
+      }
+    } catch (_) {}
+    const idInput = typeof document !== 'undefined' ? document.getElementById('admin-login-id') : null;
+    const pwInput = typeof document !== 'undefined' ? document.getElementById('admin-login-pw') : null;
+    if (idInput) idInput.value = '';
+    if (pwInput) pwInput.value = '';
+    syncAdminAuthView();
+  }
 
   function ensureAdminModalMounted() {
     if (typeof document === 'undefined' || !document.body || typeof document.createElement !== 'function') {
@@ -369,59 +436,90 @@ $$\\text{여아 MPH} = \\frac{\\text{아빠 키} + \\text{엄마 키} - 13}{2} \
       <div style="background:#FFFFFF;border:2px solid #1D4ED8;border-radius:22px;max-width:860px;width:100%;max-height:90vh;overflow-y:auto;padding:1.5rem 1.4rem;box-shadow:0 25px 60px rgba(0,0,0,0.4);color:#0F172A;text-align:left;">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;padding-bottom:0.75rem;border-bottom:1px solid #E2E8F0;">
           <div>
-            <span style="font-size:0.72rem;font-weight:900;color:#1D4ED8;background:#EFF6FF;padding:0.18rem 0.55rem;border-radius:9999px;">KIDS-FIT BIO LABS · ADMIN STUDIO</span>
+            <span style="font-size:0.72rem;font-weight:900;color:#1D4ED8;background:#EFF6FF;padding:0.18rem 0.55rem;border-radius:9999px;">KISFIT BIO LABS · ADMIN STUDIO</span>
             <h3 style="margin:0.3rem 0 0;font-size:1.22rem;font-weight:900;color:#0F172A;">Global Paywall, Member DB &amp; Affiliate Control Center</h3>
           </div>
-          <button type="button" id="btn-close-admin" style="background:#F1F5F9;border:1px solid #CBD5E1;border-radius:9999px;width:34px;height:34px;font-weight:900;cursor:pointer;">✕</button>
-        </div>
-
-        <!-- Global Paywall & Store #296100 Admin Controls -->
-        <div style="background:#EFF6FF;border:1.5px solid #93C5FD;border-radius:14px;padding:1rem 1.1rem;margin-bottom:1.1rem;">
-          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.65rem;">
-            <strong style="font-size:0.9rem;color:#1E3A8A;">💳 Lemon Squeezy Store #296100 &amp; Paywall Master Controls</strong>
-            <span style="font-size:0.75rem;font-weight:800;color:#059669;background:#ECFDF5;border:1px solid #A7F3D0;padding:0.18rem 0.6rem;border-radius:9999px;">Webhook #145796 Active</span>
-          </div>
-          <div style="display:flex;gap:0.6rem;flex-wrap:wrap;">
-            <button type="button" onclick="try{localStorage.setItem('kidsfit_global_report_unlocked_v1','true');}catch(e){} if(window.KidsFitGlobalPaywall)window.KidsFitGlobalPaywall.transformGlobalReportAndApplyPaywall(); alert('Admin Unlock Activated: Full clinical report is now unlocked in this browser.');" style="padding:0.55rem 0.95rem;border-radius:10px;border:none;background:#059669;color:#FFFFFF;font-size:0.82rem;font-weight:800;cursor:pointer;">
-              🔓 Unlock Full Report (Admin Bypass)
-            </button>
-            <button type="button" onclick="try{localStorage.removeItem('kidsfit_global_report_unlocked_v1');}catch(e){} if(window.KidsFitGlobalPaywall)window.KidsFitGlobalPaywall.transformGlobalReportAndApplyPaywall(); alert('Paywall Re-Locked: Report is now in locked teaser state.');" style="padding:0.55rem 0.95rem;border-radius:10px;border:1px solid #DC2626;background:#FEF2F2;color:#DC2626;font-size:0.82rem;font-weight:800;cursor:pointer;">
-              🔒 Re-Lock Paywall (Test Locked State)
-            </button>
-            <button type="button" onclick="window.open('/api/lemonsqueezy-config','_blank');" style="padding:0.55rem 0.95rem;border-radius:10px;border:1px solid #1D4ED8;background:#FFFFFF;color:#1D4ED8;font-size:0.82rem;font-weight:800;cursor:pointer;">
-              🔍 View Store #296100 JSON Config
-            </button>
+          <div style="display:flex;align-items:center;gap:0.5rem;">
+            <button type="button" id="btn-logout-admin" style="display:none;align-items:center;gap:0.3rem;background:#FEF2F2;color:#DC2626;border:1px solid #FECACA;border-radius:9999px;padding:0.35rem 0.75rem;font-size:0.76rem;font-weight:800;cursor:pointer;">🔒 Lock Admin</button>
+            <button type="button" id="btn-close-admin" style="background:#F1F5F9;border:1px solid #CBD5E1;border-radius:9999px;width:34px;height:34px;font-weight:900;cursor:pointer;">✕</button>
           </div>
         </div>
 
-        <!-- Live DB & Analytics Dashboard Container -->
-        <div id="admin-db-dashboard-container" style="margin-bottom:1.1rem;"></div>
-
-        <!-- Affiliate & Channel Configuration (iHerb Exclusive in Global Paid Edition) -->
-        <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:14px;padding:1rem 1.1rem;margin-bottom:1rem;">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.75rem;">
-            <strong style="font-size:0.9rem;color:#0F172A;">🌿 Official iHerb Clinical Partner Configuration (Exclusive)</strong>
-            <label style="font-size:0.8rem;font-weight:700;color:#334155;display:flex;align-items:center;gap:0.35rem;">
-              <input type="checkbox" id="cfg-chips-toggle" checked> Enable iHerb Reference Links
-            </label>
+        <!-- Admin Authentication Login Gate (ID & Password Required) -->
+        <div id="admin-login-gate-view" style="max-width:420px;margin:1.5rem auto;background:#F8FAFC;border:1.5px solid #BFDBFE;border-radius:18px;padding:1.6rem 1.5rem;box-shadow:0 12px 30px rgba(29,78,216,0.08);">
+          <div style="text-align:center;margin-bottom:1.2rem;">
+            <div style="width:48px;height:48px;border-radius:9999px;background:#EFF6FF;color:#1D4ED8;display:inline-flex;align-items:center;justify-content:center;font-size:1.35rem;font-weight:900;margin-bottom:0.5rem;border:1.5px solid #93C5FD;">🔐</div>
+            <h4 style="margin:0 0 0.25rem;font-size:1.08rem;font-weight:900;color:#0F172A;">Admin Studio Authentication</h4>
+            <p style="margin:0;font-size:0.8rem;color:#475569;font-weight:600;">Enter your authorized Administrator ID &amp; Password to unlock the control center.</p>
           </div>
-          <div style="display:grid;grid-template-columns:1fr;gap:0.65rem;">
+          <form id="admin-login-form" onsubmit="return false;" style="display:grid;gap:0.85rem;">
             <div>
-              <label style="font-size:0.76rem;font-weight:800;color:#059669;display:block;margin-bottom:0.25rem;">iHerb Official Rewards Code (All Global Report Recommendations)</label>
-              <input type="text" id="cfg-iherb" style="width:100%;box-sizing:border-box;padding:0.55rem 0.75rem;border:1.5px solid #A7F3D0;border-radius:8px;font-size:0.86rem;font-weight:700;color:#0F172A;">
+              <label for="admin-login-id" style="display:block;font-size:0.78rem;font-weight:800;color:#1E3A8A;margin-bottom:0.3rem;">Administrator ID (아이디)</label>
+              <input type="text" id="admin-login-id" autocomplete="username" placeholder="Enter Admin ID" style="width:100%;box-sizing:border-box;padding:0.68rem 0.85rem;border:1.5px solid #CBD5E1;border-radius:10px;font-size:0.92rem;font-weight:700;color:#0F172A;background:#FFFFFF;">
             </div>
-            <input type="hidden" id="cfg-amazon">
-            <input type="hidden" id="cfg-coupang">
-            <input type="hidden" id="cfg-linkprice">
-          </div>
-          <div style="display:flex;justify-content:flex-end;gap:0.5rem;margin-top:0.85rem;">
-            <button type="button" id="btn-cancel-admin" style="padding:0.5rem 0.95rem;border-radius:8px;border:1px solid #CBD5E1;background:#FFFFFF;color:#475569;font-size:0.82rem;font-weight:700;cursor:pointer;">Close</button>
-            <button type="button" id="btn-save-admin" style="padding:0.5rem 1.1rem;border-radius:8px;border:none;background:#1D4ED8;color:#FFFFFF;font-size:0.82rem;font-weight:800;cursor:pointer;">Save Settings</button>
-          </div>
+            <div>
+              <label for="admin-login-pw" style="display:block;font-size:0.78rem;font-weight:800;color:#1E3A8A;margin-bottom:0.3rem;">Password (비밀번호)</label>
+              <input type="password" id="admin-login-pw" autocomplete="current-password" placeholder="Enter Admin Password" style="width:100%;box-sizing:border-box;padding:0.68rem 0.85rem;border:1.5px solid #CBD5E1;border-radius:10px;font-size:0.92rem;font-weight:700;color:#0F172A;background:#FFFFFF;">
+            </div>
+            <div id="admin-login-error" style="display:none;background:#FEF2F2;border:1px solid #FECACA;color:#DC2626;border-radius:8px;padding:0.55rem 0.75rem;font-size:0.8rem;font-weight:800;text-align:center;">
+              Invalid Administrator ID or Password. Access denied.
+            </div>
+            <button type="submit" id="btn-admin-login-submit" style="width:100%;padding:0.75rem 1rem;border-radius:10px;border:none;background:linear-gradient(135deg,#1D4ED8 0%,#1E40AF 100%);color:#FFFFFF;font-size:0.92rem;font-weight:900;cursor:pointer;box-shadow:0 8px 20px rgba(29,78,216,0.22);">
+              🔓 Sign In to Admin Studio
+            </button>
+          </form>
         </div>
 
-        <!-- OSMU Marketing Generator Container -->
-        <div id="admin-osmu-container"></div>
+        <!-- Protected Admin Dashboard Content (Hidden until Authenticated) -->
+        <div id="admin-dashboard-content-view" style="display:none;">
+          <!-- Global Paywall & Store #296100 Admin Controls -->
+          <div style="background:#EFF6FF;border:1.5px solid #93C5FD;border-radius:14px;padding:1rem 1.1rem;margin-bottom:1.1rem;">
+            <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.65rem;">
+              <strong style="font-size:0.9rem;color:#1E3A8A;">💳 Lemon Squeezy Store #296100 &amp; Paywall Master Controls</strong>
+              <span style="font-size:0.75rem;font-weight:800;color:#059669;background:#ECFDF5;border:1px solid #A7F3D0;padding:0.18rem 0.6rem;border-radius:9999px;">Webhook #145796 Active</span>
+            </div>
+            <div style="display:flex;gap:0.6rem;flex-wrap:wrap;">
+              <button type="button" onclick="try{localStorage.setItem('kidsfit_global_report_unlocked_v1','true');}catch(e){} if(window.KidsFitGlobalPaywall)window.KidsFitGlobalPaywall.transformGlobalReportAndApplyPaywall(); alert('Admin Unlock Activated: Full clinical report is now unlocked in this browser.');" style="padding:0.55rem 0.95rem;border-radius:10px;border:none;background:#059669;color:#FFFFFF;font-size:0.82rem;font-weight:800;cursor:pointer;">
+                🔓 Unlock Full Report (Admin Bypass)
+              </button>
+              <button type="button" onclick="try{localStorage.removeItem('kidsfit_global_report_unlocked_v1');}catch(e){} if(window.KidsFitGlobalPaywall)window.KidsFitGlobalPaywall.transformGlobalReportAndApplyPaywall(); alert('Paywall Re-Locked: Report is now in locked teaser state.');" style="padding:0.55rem 0.95rem;border-radius:10px;border:1px solid #DC2626;background:#FEF2F2;color:#DC2626;font-size:0.82rem;font-weight:800;cursor:pointer;">
+                🔒 Re-Lock Paywall (Test Locked State)
+              </button>
+              <button type="button" onclick="window.open('/api/lemonsqueezy-config','_blank');" style="padding:0.55rem 0.95rem;border-radius:10px;border:1px solid #1D4ED8;background:#FFFFFF;color:#1D4ED8;font-size:0.82rem;font-weight:800;cursor:pointer;">
+                🔍 View Store #296100 JSON Config
+              </button>
+            </div>
+          </div>
+
+          <!-- Live DB & Analytics Dashboard Container -->
+          <div id="admin-db-dashboard-container" style="margin-bottom:1.1rem;"></div>
+
+          <!-- Affiliate & Channel Configuration (iHerb Exclusive in Global Paid Edition) -->
+          <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:14px;padding:1rem 1.1rem;margin-bottom:1rem;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.75rem;">
+              <strong style="font-size:0.9rem;color:#0F172A;">🌿 Official iHerb Clinical Partner Configuration (Exclusive)</strong>
+              <label style="font-size:0.8rem;font-weight:700;color:#334155;display:flex;align-items:center;gap:0.35rem;">
+                <input type="checkbox" id="cfg-chips-toggle" checked> Enable iHerb Reference Links
+              </label>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr;gap:0.65rem;">
+              <div>
+                <label style="font-size:0.76rem;font-weight:800;color:#059669;display:block;margin-bottom:0.25rem;">iHerb Official Rewards Code (All Global Report Recommendations)</label>
+                <input type="text" id="cfg-iherb" style="width:100%;box-sizing:border-box;padding:0.55rem 0.75rem;border:1.5px solid #A7F3D0;border-radius:8px;font-size:0.86rem;font-weight:700;color:#0F172A;">
+              </div>
+              <input type="hidden" id="cfg-amazon">
+              <input type="hidden" id="cfg-coupang">
+              <input type="hidden" id="cfg-linkprice">
+            </div>
+            <div style="display:flex;justify-content:flex-end;gap:0.5rem;margin-top:0.85rem;">
+              <button type="button" id="btn-cancel-admin" style="padding:0.5rem 0.95rem;border-radius:8px;border:1px solid #CBD5E1;background:#FFFFFF;color:#475569;font-size:0.82rem;font-weight:700;cursor:pointer;">Close</button>
+              <button type="button" id="btn-save-admin" style="padding:0.5rem 1.1rem;border-radius:8px;border:none;background:#1D4ED8;color:#FFFFFF;font-size:0.82rem;font-weight:800;cursor:pointer;">Save Settings</button>
+            </div>
+          </div>
+
+          <!-- OSMU Marketing Generator Container -->
+          <div id="admin-osmu-container"></div>
+        </div>
       </div>
     `;
     document.body.appendChild(modal);
@@ -430,6 +528,36 @@ $$\\text{여아 MPH} = \\frac{\\text{아빠 키} + \\text{엄마 키} - 13}{2} \
     if (closeBtn) closeBtn.addEventListener('click', closeAdminModal);
     const cancelBtn = document.getElementById('btn-cancel-admin');
     if (cancelBtn) cancelBtn.addEventListener('click', closeAdminModal);
+    const logoutBtn = document.getElementById('btn-logout-admin');
+    if (logoutBtn) logoutBtn.addEventListener('click', logoutAdmin);
+
+    const loginForm = document.getElementById('admin-login-form');
+    if (loginForm) {
+      loginForm.addEventListener('submit', function (e) {
+        if (e && typeof e.preventDefault === 'function') e.preventDefault();
+        const idEl = document.getElementById('admin-login-id');
+        const pwEl = document.getElementById('admin-login-pw');
+        const errEl = document.getElementById('admin-login-error');
+        const inputId = idEl ? idEl.value : '';
+        const inputPw = pwEl ? pwEl.value : '';
+        if (verifyAdminCredentials(inputId, inputPw)) {
+          try {
+            if (typeof window !== 'undefined' && window.sessionStorage) {
+              window.sessionStorage.setItem(ADMIN_SESSION_KEY, ADMIN_AUTH_DIGEST);
+            }
+          } catch (_) {}
+          if (errEl) errEl.style.display = 'none';
+          if (pwEl) pwEl.value = '';
+          syncAdminAuthView();
+        } else {
+          if (errEl) {
+            errEl.textContent = 'Invalid Administrator ID or Password. / 아이디 또는 비밀번호가 일치하지 않습니다.';
+            errEl.style.display = 'block';
+          }
+        }
+      });
+    }
+
     const saveBtn = document.getElementById('btn-save-admin');
     if (saveBtn) {
       saveBtn.onclick = function () {
@@ -491,10 +619,7 @@ $$\\text{여아 MPH} = \\frac{\\text{아빠 키} + \\text{엄마 키} - 13}{2} \
       if (klookAdIdEl) klookAdIdEl.value = cfg.klookAdId || DEFAULT_AFFILIATE_CONFIG.klookAdId;
       if (chipsToggleEl) chipsToggleEl.checked = (cfg.chipsEnabled !== false);
 
-      if (global.TallerAdminDbDashboard && typeof global.TallerAdminDbDashboard.mountAdminDbDashboard === 'function') {
-        global.TallerAdminDbDashboard.mountAdminDbDashboard('admin-db-dashboard-container');
-      }
-      renderOsmuContainer();
+      syncAdminAuthView();
     }
   }
 
@@ -789,6 +914,9 @@ https://kisfitglobal.com/?utm_source=quora&utm_medium=answer_citation&utm_campai
     getAffiliateConfig,
     saveAffiliateConfig,
     generateOsmuBundle,
+    verifyAdminCredentials,
+    isAdminAuthenticated,
+    logoutAdmin,
     openAdminModal,
     closeAdminModal,
     handleFooterClick,

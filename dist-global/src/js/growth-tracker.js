@@ -1064,12 +1064,10 @@
     if (typeof document === 'undefined') return;
     if (typeof window !== 'undefined' && window.KidsFitGlobalPaywall && typeof window.KidsFitGlobalPaywall.isGlobalPaidEdition === 'function' && window.KidsFitGlobalPaywall.isGlobalPaidEdition() && typeof window.KidsFitGlobalPaywall.isReportUnlocked === 'function' && !window.KidsFitGlobalPaywall.isReportUnlocked()) {
       let lockedContainer = document.getElementById('clinic-print-report-container');
-      if (!lockedContainer) {
-        lockedContainer = document.createElement('div');
-        lockedContainer.id = 'clinic-print-report-container';
-        if (document.body) document.body.appendChild(lockedContainer);
+      if (lockedContainer) {
+        lockedContainer.innerHTML = '';
+        lockedContainer.style.display = 'none';
       }
-      lockedContainer.innerHTML = '<div class="locked-print-notice" style="padding:48px 24px;text-align:center;font-family:sans-serif;font-size:18pt;font-weight:800;color:#0F172A;">Locked Clinical Report — Please unlock at kisfitglobal.com</div>';
       return;
     }
 
