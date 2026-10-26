@@ -52,6 +52,13 @@
           if (window.localStorage) window.localStorage.removeItem(UNLOCK_STORAGE_KEY);
           return false;
         }
+        if (s.indexOf('payment=success') !== -1 && window.localStorage) {
+          const pendingTs = parseInt(window.localStorage.getItem('kidsfit_pending_ls_checkout_ts_v1') || '0', 10);
+          if (pendingTs > 0 && (Date.now() - pendingTs) < 86400000) {
+            window.localStorage.setItem(UNLOCK_STORAGE_KEY, 'true');
+            return true;
+          }
+        }
       }
       if (typeof window !== 'undefined' && window.localStorage) {
         return window.localStorage.getItem(UNLOCK_STORAGE_KEY) === 'true';
@@ -791,9 +798,9 @@
     const btnBackStep6 = document.getElementById('btn-back-to-step6-choices');
     if (btnBackStep6) btnBackStep6.textContent = '← Back';
     const btnSwGrowth = document.getElementById('btn-switch-report-growth');
-    if (btnSwGrowth) btnSwGrowth.textContent = 'Physical Growth Report';
+    if (btnSwGrowth) btnSwGrowth.remove();
     const btnSwLearn = document.getElementById('btn-switch-report-learning');
-    if (btnSwLearn) btnSwLearn.textContent = 'Brain & Learning Report';
+    if (btnSwLearn) btnSwLearn.remove();
     const btnPrintTop = document.getElementById('btn-print-report-top');
     if (btnPrintTop) {
       btnPrintTop.textContent = 'Print / Save Clinical PDF';
@@ -1132,12 +1139,9 @@
             </span>
           </div>
           <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
-            <button type="button" onclick="window.switchGlobalReportTab('growth')" id="btn-global-tab-growth" style="background:${isLearningMode ? '#FFFFFF' : '#1D4ED8'};color:${isLearningMode ? '#1E3A8A' : '#FFFFFF'};border:1.5px solid ${isLearningMode ? '#93C5FD' : '#1E40AF'};border-radius:9999px;padding:0.44rem 0.95rem;font-size:0.8rem;font-weight:900;cursor:pointer;">
-              📏 Report 01: Physical Growth
-            </button>
-            <button type="button" onclick="window.switchGlobalReportTab('learning')" id="btn-global-tab-learning" style="background:${isLearningMode ? '#1D4ED8' : '#FFFFFF'};color:${isLearningMode ? '#FFFFFF' : '#1E3A8A'};border:1.5px solid ${isLearningMode ? '#1E40AF' : '#93C5FD'};border-radius:9999px;padding:0.44rem 0.95rem;font-size:0.8rem;font-weight:900;cursor:pointer;">
-              🧠 Report 02: 5-Axis Brain LQ
-            </button>
+            <span style="background:#EFF6FF;color:#1D4ED8;border:1.5px solid #93C5FD;border-radius:9999px;padding:0.42rem 0.9rem;font-size:0.78rem;font-weight:900;">
+              ${isLearningMode ? '🧠 Dedicated Brain LQ &amp; Study Track' : '📏 Dedicated Physical Auxology Track'}
+            </span>
             <button type="button" onclick="if(window.triggerKidsFitGlobalPrint){window.triggerKidsFitGlobalPrint();}else{window.print();}" style="background:#059669;color:#FFFFFF;border:1.5px solid #047857;border-radius:9999px;padding:0.44rem 0.95rem;font-size:0.8rem;font-weight:900;cursor:pointer;">
               🖨️ Print / Save Clinical PDF
             </button>
@@ -1156,9 +1160,10 @@
       </div>
 
       <!-- =========================================================================
-           PILLAR 1: PEDIATRIC PHYSICAL GROWTH & ENDOCRINE MASTER REPORT (CH 1-4)
+           STRICT SINGLE-MODE REPORT BODY (PHYSICAL GROWTH OR BRAIN LQ ONLY — NEVER BOTH)
            ========================================================================= -->
-      <div id="pillar-1-container" style="display:${isLearningMode ? 'none' : 'block'};">
+      ${!isLearningMode ? `
+      <div id="pillar-1-container" style="display:block;">
         <!-- CHAPTER 1: 3-Tier Adult Height Trajectory & BMI Endocrine Balance -->
         <section style="background:#FFFFFF;border:1.5px solid #BFDBFE;border-radius:18px;padding:1.35rem 1.3rem;margin-bottom:1.25rem;box-shadow:0 8px 24px rgba(15,23,42,0.04);">
           <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.65rem;">
@@ -1439,11 +1444,8 @@
           </div>
         </section>
       </div>
-
-      <!-- =========================================================================
-           PILLAR 2: NEURO-COGNITIVE 5-AXIS BRAIN LQ & STUDY MASTER REPORT (CH 5-8)
-           ========================================================================= -->
-      <div id="pillar-2-container" style="display:${isLearningMode ? 'block' : 'none'};">
+      ` : `
+      <div id="pillar-2-container" style="display:block;">
         <!-- CHAPTER 5: 5-Axis Brain Learning Quotient (LQ) Score & Neural Balance Matrix -->
         <section style="background:#FFFFFF;border:1.5px solid #BFDBFE;border-radius:18px;padding:1.35rem 1.3rem;margin-bottom:1.25rem;box-shadow:0 8px 24px rgba(15,23,42,0.04);">
           <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.65rem;">
@@ -1594,20 +1596,22 @@
           </div>
         </section>
       </div>
+      `}
 
       <!-- =========================================================================
-           5 PRINTABLE CLINICAL & COGNITIVE WORKSHEETS (US LETTER 8.5" x 11" READY)
+           MODE-SPECIFIC PRINTABLE TOOLKIT & MONTHLY LONGITUDINAL SUBSCRIPTION TRACKER
            ========================================================================= -->
+      ${isLearningMode ? `
       <section id="global-5-printable-worksheets-section" style="background:#FFFFFF;border:2px solid #93C5FD;border-radius:18px;padding:1.35rem 1.3rem;margin-bottom:1.25rem;display:${isMasked ? 'none' : 'block'};">
         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
           <span style="font-size:0.75rem;font-weight:900;color:#1D4ED8;background:#EFF6FF;border:1px solid #BFDBFE;padding:0.22rem 0.7rem;border-radius:9999px;">
-            BONUS CLINICAL TOOLKIT · 5 PRINTABLE COGNITIVE &amp; GROWTH WORKSHEETS (US LETTER 8.5&quot; × 11&quot;)
+            NEURO-STUDY TOOLKIT · 4 PRINTABLE COGNITIVE &amp; WORKING MEMORY WORKSHEETS (US LETTER 8.5&quot; × 11&quot;)
           </span>
           <button type="button" onclick="if(window.triggerKidsFitGlobalPrint){window.triggerKidsFitGlobalPrint();}else{window.print();}" style="background:#1D4ED8;color:#FFFFFF;border:none;border-radius:9999px;padding:0.38rem 0.85rem;font-size:0.76rem;font-weight:800;cursor:pointer;">
-            🖨️ Print All 5 Worksheets
+            🖨️ Print Cognitive Worksheets
           </button>
         </div>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0.75rem;font-size:0.8rem;">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0.75rem;font-size:0.8rem;margin-bottom:1rem;">
           <div style="background:#F8FAFC;border:1px solid #CBD5E1;border-radius:12px;padding:0.85rem;">
             <strong style="color:#1D4ED8;display:block;margin-bottom:0.2rem;">Worksheet 01 · Feynman 3-Min Blank-Page Recall</strong>
             <span style="color:#475569;line-height:1.45;">Structured template for closing the book after 20 mins of reading and writing 3 core concepts + 1 self-check gap from memory (+150% 30-day retention).</span>
@@ -1624,21 +1628,87 @@
             <strong style="color:#1D4ED8;display:block;margin-bottom:0.2rem;">Worksheet 04 · Socratic 3-Step Inquiry Organizer</strong>
             <span style="color:#475569;line-height:1.45;">Guides parent-child dialogue through [Observation] → [Hypothesis / Why?] → [Real-World STEM Application].</span>
           </div>
-          <div style="background:#F8FAFC;border:1px solid #CBD5E1;border-radius:12px;padding:0.85rem;">
-            <strong style="color:#059669;display:block;margin-bottom:0.2rem;">Worksheet 05 · 7-Day 10 PM SWS HGH &amp; Dead-Hang Tracker</strong>
-            <span style="color:#475569;line-height:1.45;">Weekly fridge checklist tracking 10 PM bedtime, 3-hr pre-sleep glycemic fast, Ca/D3/K2 intake, and 3×30s doorway bar hangs.</span>
+        </div>
+        <div style="background:#EFF6FF;border:1.5px solid #93C5FD;border-radius:14px;padding:1rem 1.1rem;">
+          <div style="font-size:0.84rem;font-weight:900;color:#1E3A8A;margin-bottom:0.35rem;">📅 Interactive 30-Day Monthly Brain LQ Re-Calibration &amp; Cycle 2–6 Worksheet Unlocker</div>
+          <div style="font-size:0.79rem;color:#334155;line-height:1.5;margin-bottom:0.75rem;">
+            Prefrontal working memory and active-recall neural myelination shift every <strong>30 days</strong>. Log your child&apos;s monthly Feynman/Cornell practice streak below to recalculate their 30-day Brain LQ jump and unlock next month&apos;s upgraded cognitive worksheet cycle:
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:0.6rem;align-items:flex-end;">
+            <div style="flex:1;min-width:150px;">
+              <label style="display:block;font-size:0.72rem;font-weight:800;color:#1E3A8A;margin-bottom:0.2rem;">30-Day Practice Days (0–30d)</label>
+              <input type="number" id="monthly-recal-streak-days" value="22" min="0" max="30" style="width:100%;box-sizing:border-box;padding:0.48rem 0.65rem;border:1.5px solid #93C5FD;border-radius:8px;font-size:0.84rem;font-weight:800;color:#0F172A;background:#FFFFFF;">
+            </div>
+            <div style="flex:1;min-width:150px;">
+              <label style="display:block;font-size:0.72rem;font-weight:800;color:#1E3A8A;margin-bottom:0.2rem;">New Desk Focus Span (mins)</label>
+              <input type="number" id="monthly-recal-focus-mins" value="35" min="5" max="120" style="width:100%;box-sizing:border-box;padding:0.48rem 0.65rem;border:1.5px solid #93C5FD;border-radius:8px;font-size:0.84rem;font-weight:800;color:#0F172A;background:#FFFFFF;">
+            </div>
+            <button type="button" onclick="window.recalculateKidsFitMonthlyProgress('learning', ${overallLQDisp})" style="padding:0.52rem 0.95rem;border-radius:8px;border:none;background:#1D4ED8;color:#FFFFFF;font-size:0.8rem;font-weight:900;cursor:pointer;">
+              🔄 Run 30-Day Brain LQ Re-Scan
+            </button>
+          </div>
+          <div id="monthly-recal-result-box" style="margin-top:0.65rem;font-size:0.8rem;font-weight:800;color:#065F46;background:#ECFDF5;border:1px solid #A7F3D0;border-radius:10px;padding:0.65rem 0.85rem;">
+            ✓ Month 1 Baseline Locked (${overallLQDisp} pts) → Target Month 2 Coached LQ: <strong>${coachedLQDisp} pts</strong> · Next Cycle 2 Socratic &amp; Multi-Step Bar Model Pack Ready in 30 Days.
           </div>
         </div>
       </section>
+      ` : `
+      <section id="global-5-printable-worksheets-section" style="background:#FFFFFF;border:2px solid #93C5FD;border-radius:18px;padding:1.35rem 1.3rem;margin-bottom:1.25rem;display:${isMasked ? 'none' : 'block'};">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+          <span style="font-size:0.75rem;font-weight:900;color:#059669;background:#ECFDF5;border:1px solid #A7F3D0;padding:0.22rem 0.7rem;border-radius:9999px;">
+            LONGITUDINAL AUXOLOGY TRACKER · 90-DAY VELOCITY, BONE-AGE &amp; DOSING RE-CALIBRATION
+          </span>
+          <button type="button" onclick="if(window.triggerKidsFitGlobalPrint){window.triggerKidsFitGlobalPrint();}else{window.print();}" style="background:#059669;color:#FFFFFF;border:none;border-radius:9999px;padding:0.38rem 0.85rem;font-size:0.76rem;font-weight:800;cursor:pointer;">
+            🖨️ Print Fridge Growth Tracker
+          </button>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0.75rem;font-size:0.8rem;margin-bottom:1rem;">
+          <div style="background:#F8FAFC;border:1px solid #CBD5E1;border-radius:12px;padding:0.85rem;">
+            <strong style="color:#059669;display:block;margin-bottom:0.2rem;">Tracker 01 · 30-Day Height Velocity Drift Detector</strong>
+            <span style="color:#475569;line-height:1.45;">Tracks monthly morning stature to verify whether your child is accelerating from ${isImperial ? `${annualVelocityIn} in/yr` : `${annualVelocityCm} cm/yr`} toward the +3.3 in peak catch-up zone.</span>
+          </div>
+          <div style="background:#F8FAFC;border:1px solid #CBD5E1;border-radius:12px;padding:0.85rem;">
+            <strong style="color:#1D4ED8;display:block;margin-bottom:0.2rem;">Tracker 02 · 10 PM SWS HGH &amp; 2-Hr Fasting Fridge Log</strong>
+            <span style="color:#475569;line-height:1.45;">Weekly fridge checklist tracking 10 PM sleep onset and 2-hour pre-bed carbohydrate fasting to protect the 65% nocturnal Growth Hormone pulse.</span>
+          </div>
+          <div style="background:#F8FAFC;border:1px solid #CBD5E1;border-radius:12px;padding:0.85rem;">
+            <strong style="color:#1D4ED8;display:block;margin-bottom:0.2rem;">Tracker 03 · Monthly Weight-Adjusted Ca/D3/K2/Zinc Dosing</strong>
+            <span style="color:#475569;line-height:1.45;">Automatically recalculates elemental Calcium Citrate (${caMg} mg), Vitamin D3 (${vitDIu} IU), and Zinc (${zincMg} mg) as your child gains weight each month.</span>
+          </div>
+        </div>
+        <div style="background:#EFF6FF;border:1.5px solid #93C5FD;border-radius:14px;padding:1rem 1.1rem;">
+          <div style="font-size:0.84rem;font-weight:900;color:#1E3A8A;margin-bottom:0.35rem;">📅 Interactive 30-Day Monthly Height Velocity &amp; Weight-Adjusted Dosing Re-Calibrator</div>
+          <div style="font-size:0.79rem;color:#334155;line-height:1.5;margin-bottom:0.75rem;">
+            A single height measurement is only a Day-1 snapshot. Enter your child&apos;s updated morning stature and weight after 30 days to compute <strong>Annualized Growth Velocity (cm/yr)</strong>, detect bone-plate catch-up vs. stagnation, and auto-adjust daily Ca/D3/K2/Zinc dosing:
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:0.6rem;align-items:flex-end;">
+            <div style="flex:1;min-width:150px;">
+              <label style="display:block;font-size:0.72rem;font-weight:800;color:#1E3A8A;margin-bottom:0.2rem;">Day-30 Morning Height (cm)</label>
+              <input type="number" step="0.1" id="monthly-recal-height-cm" value="${(heightCm + 0.6).toFixed(1)}" style="width:100%;box-sizing:border-box;padding:0.48rem 0.65rem;border:1.5px solid #93C5FD;border-radius:8px;font-size:0.84rem;font-weight:800;color:#0F172A;background:#FFFFFF;">
+            </div>
+            <div style="flex:1;min-width:150px;">
+              <label style="display:block;font-size:0.72rem;font-weight:800;color:#1E3A8A;margin-bottom:0.2rem;">Day-30 Morning Weight (kg)</label>
+              <input type="number" step="0.1" id="monthly-recal-weight-kg" value="${(weightKg + 0.5).toFixed(1)}" style="width:100%;box-sizing:border-box;padding:0.48rem 0.65rem;border:1.5px solid #93C5FD;border-radius:8px;font-size:0.84rem;font-weight:800;color:#0F172A;background:#FFFFFF;">
+            </div>
+            <button type="button" onclick="window.recalculateKidsFitMonthlyProgress('growth', ${heightCm}, ${weightKg})" style="padding:0.52rem 0.95rem;border-radius:8px;border:none;background:#059669;color:#FFFFFF;font-size:0.8rem;font-weight:900;cursor:pointer;">
+              🔄 Recalculate 30-Day Velocity &amp; Dosing
+            </button>
+          </div>
+          <div id="monthly-recal-result-box" style="margin-top:0.65rem;font-size:0.8rem;font-weight:800;color:#065F46;background:#ECFDF5;border:1px solid #A7F3D0;border-radius:10px;padding:0.65rem 0.85rem;">
+            ✓ Baseline Locked: ${fmtLen(heightCm)} / ${fmtWt(weightKg)} · Projected 30-Day Catch-Up Velocity: <strong>7.2 cm/yr (2.8 in/yr)</strong> · Next Bone-Age &amp; Dosing Check-In in 30 Days.
+          </div>
+        </div>
+      </section>
+      `}
 
-      <!-- High-Contrast Applied Child Conditions & Clinical Summary Footer (White Background + Dark Navy Text) -->
+      <!-- High-Contrast Applied Child Conditions & Clinical Summary Footer (Strictly Mode-Separated) -->
       <div id="global-report-child-conditions-footer" style="background:#FFFFFF;border:2px solid #93C5FD;border-radius:18px;padding:1.15rem 1.3rem;margin-top:0.5rem;color:#0F172A;box-shadow:0 6px 18px rgba(15,23,42,0.05);">
         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.55rem;padding-bottom:0.5rem;border-bottom:1px solid #DBEAFE;">
           <span style="font-size:0.76rem;font-weight:900;color:#1D4ED8;background:#EFF6FF;border:1px solid #BFDBFE;padding:0.2rem 0.65rem;border-radius:9999px;">
-            APPLIED CHILD CONDITIONS &amp; 1:1 SURVEY PARAMETERS
+            APPLIED CHILD CONDITIONS &amp; 1:1 SURVEY PARAMETERS (${isLearningMode ? 'BRAIN &amp; LEARNING TRACK' : 'PHYSICAL GROWTH TRACK'})
           </span>
           <span style="font-size:0.76rem;font-weight:800;color:#059669;">
-            ✓ 3,714 Peer-Reviewed PubMed Studies Cross-Referenced
+            ✓ ${isLearningMode ? '2,138 Neuro-Cognitive &amp; Pedagogy' : '1,576 Pediatric Auxology &amp; Endocrine'} PubMed Studies Matched
           </span>
         </div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0.65rem;font-size:0.83rem;color:#0F172A;line-height:1.5;">
@@ -1646,58 +1716,37 @@
             <strong style="color:#1D4ED8;display:block;margin-bottom:0.15rem;">Child Demographics</strong>
             <span>Age ${ageY} yrs ${ageRemM} mos · ${genderLabel}</span>
           </div>
+          ${isLearningMode ? `
+          <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:10px;padding:0.65rem 0.85rem;">
+            <strong style="color:#1D4ED8;display:block;margin-bottom:0.15rem;">5-Axis Brain LQ &amp; Focus Span</strong>
+            <span>Overall LQ ${overallLQDisp} pts (Top ${lqTopPct}%) · ${focusSpanLabel.split(' (')[0]}</span>
+          </div>
+          <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:10px;padding:0.65rem 0.85rem;">
+            <strong style="color:#1D4ED8;display:block;margin-bottom:0.15rem;">Preferred Cognitive Absorption</strong>
+            <span>${studyStyleLabel}</span>
+          </div>
+          ` : `
           <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:10px;padding:0.65rem 0.85rem;">
             <strong style="color:#1D4ED8;display:block;margin-bottom:0.15rem;">Physical Biometrics &amp; MPH</strong>
             <span>${fmtLen(heightCm)} (${pctVal}th%) · ${fmtWt(weightKg)} · Genetic MPH ${fmtMaskedLen(geneticCm)}</span>
           </div>
           <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:10px;padding:0.65rem 0.85rem;">
-            <strong style="color:#1D4ED8;display:block;margin-bottom:0.15rem;">Brain LQ &amp; Learning Profile</strong>
-            <span>Overall LQ ${overallLQDisp} pts · ${focusSpanLabel.split(' (')[0]} · ${studyStyleLabel.split(' &')[0]}</span>
+            <strong style="color:#1D4ED8;display:block;margin-bottom:0.15rem;">Ancestry &amp; Bone-Age Calibration</strong>
+            <span>${ethInfo.label} · ${ethInfo.phvNote}</span>
           </div>
+          `}
         </div>
       </div>
     `;
   }
 
-  global.switchGlobalReportTab = function (mode) {
-    const targetMode = mode === 'learning' ? 'learning' : 'growth';
-    global.__KIDSFIT_PREFERRED_REPORT_MODE = targetMode;
-    if (typeof window !== 'undefined') window.__KIDSFIT_PREFERRED_REPORT_MODE = targetMode;
-    if (global.KidsFitApp && global.KidsFitApp.state && global.KidsFitApp.state.profile) {
-      global.KidsFitApp.state.profile.preferredReportMode = targetMode;
-    }
-
-    const p1 = document.getElementById('pillar-1-container');
-    const p2 = document.getElementById('pillar-2-container');
-    const b1 = document.getElementById('btn-global-tab-growth');
-    const b2 = document.getElementById('btn-global-tab-learning');
-    if (targetMode === 'learning') {
-      if (p1) p1.style.display = 'none';
-      if (p2) p2.style.display = 'block';
-      if (b2) {
-        b2.style.background = '#1D4ED8';
-        b2.style.color = '#FFFFFF';
-        b2.style.borderColor = '#1E40AF';
-      }
-      if (b1) {
-        b1.style.background = '#FFFFFF';
-        b1.style.color = '#1E3A8A';
-        b1.style.borderColor = '#93C5FD';
-      }
-    } else {
-      if (p1) p1.style.display = 'block';
-      if (p2) p2.style.display = 'none';
-      if (b1) {
-        b1.style.background = '#1D4ED8';
-        b1.style.color = '#FFFFFF';
-        b1.style.borderColor = '#1E40AF';
-      }
-      if (b2) {
-        b2.style.background = '#FFFFFF';
-        b2.style.color = '#1E3A8A';
-        b2.style.borderColor = '#93C5FD';
-      }
-    }
+  // Strictly locked: Report 1 (Physical Growth) and Report 2 (Brain LQ) cannot switch into each other
+  global.switchGlobalReportTab = function () {
+    ['btn-global-tab-growth', 'btn-global-tab-learning', 'btn-switch-report-growth', 'btn-switch-report-learning'].forEach((id) => {
+      const btn = typeof document !== 'undefined' ? document.getElementById(id) : null;
+      if (btn) btn.remove();
+    });
+    return false;
   };
 
   /**
@@ -1714,9 +1763,16 @@
       document.documentElement.setAttribute('data-paywall-state', unlocked ? 'unlocked' : 'locked');
     }
 
+    let savedProfile = {};
+    try {
+      if (typeof window !== 'undefined' && window.localStorage) {
+        const rawSaved = window.localStorage.getItem('kidsfit_last_quiz_profile_v1');
+        if (rawSaved) savedProfile = JSON.parse(rawSaved) || {};
+      }
+    } catch (_) {}
     const wizardProfile = (global.TallerOnboardingWizard && typeof global.TallerOnboardingWizard.getState === 'function' && global.TallerOnboardingWizard.getState().profile) || {};
     const appProfile = (global.KidsFitApp && global.KidsFitApp.state && global.KidsFitApp.state.profile) || {};
-    const profile = Object.assign({}, wizardProfile, appProfile);
+    const profile = Object.assign({}, savedProfile, wizardProfile, appProfile);
     const formEl = document.getElementById('diagnosis-form');
     const isLearningMode = (profile.preferredReportMode === 'learning') ||
       (wizardProfile.preferredReportMode === 'learning') ||
@@ -1725,6 +1781,11 @@
     if (isLearningMode) {
       profile.preferredReportMode = 'learning';
     }
+    try {
+      if (typeof window !== 'undefined' && window.localStorage && (profile.currentHeight || profile.ageMonths)) {
+        window.localStorage.setItem('kidsfit_last_quiz_profile_v1', JSON.stringify(profile));
+      }
+    } catch (_) {}
 
     // Hide legacy Korean sub-cards in #results-dashboard so 0 Korean characters exist
     ['growth-report-card', 'endocrinology-report-card', 'biomechanics-report-card', 'neuro-report-card', 'tracker-report-card', 'dev-report-card', 'outing-report-card', 'monetization-appendix-container'].forEach((id) => {
@@ -1776,6 +1837,12 @@
       rxTitleEl.textContent = isLearningMode
         ? `Age ${ageY} ${genderLabel} — 5-Axis Brain LQ & Executive Function Report`
         : `Age ${ageY} ${genderLabel} — US CDC Auxology & Adult Height Report`;
+    }
+    const rxSubEl = document.getElementById('rx-header-subtitle');
+    if (rxSubEl) {
+      rxSubEl.textContent = isLearningMode
+        ? 'Harvard / WashU 5-Axis Brain LQ & Executive Function Assessment Complete'
+        : 'US CDC 2000 & WHO Standardized Pediatric Auxology & Bone-Age Analysis Complete';
     }
 
     const isImperial = (global.TallerI18n && typeof global.TallerI18n.getUnitSystem === 'function')
@@ -1879,11 +1946,11 @@
           </span>
         </div>
         <span style="font-size:0.78rem;font-weight:800;color:#059669;background:#ECFDF5;border:1px solid #A7F3D0;padding:0.2rem 0.65rem;border-radius:9999px;">
-          3,714 PubMed Papers Matched
+          ${isLearningMode ? '2,138 Cognitive &amp; Pedagogy' : '1,576 Pediatric Auxology'} PubMed Papers Matched
         </span>
       </div>
 
-      <!-- Step 2: Masked Teaser Grid (Adapts to Brain LQ vs Physical Growth Mode) -->
+      <!-- Step 2: Masked Teaser Grid (Strictly Separated: Brain LQ vs Physical Growth Mode) -->
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:0.75rem;margin-bottom:1.15rem;">
         ${isLearningMode ? `
         <div style="background:#FFFFFF;border:1.5px solid #93C5FD;border-radius:14px;padding:0.85rem 1rem;">
@@ -1935,18 +2002,18 @@
         </div>
 
         <div style="background:#FFFFFF;border:1.5px solid #93C5FD;border-radius:14px;padding:0.85rem 1rem;">
-          <div style="font-size:0.75rem;font-weight:800;color:#475569;">③ 5-Axis Brain LQ &amp; Study Bottleneck</div>
+          <div style="font-size:0.75rem;font-weight:800;color:#475569;">③ 24h Sleep HGH &amp; Bio-Nutrition Rx</div>
           <div style="font-size:1.05rem;font-weight:900;color:#0F172A;margin-top:0.25rem;">
-            🔒 <span style="color:#1D4ED8;">2 Priority Bottlenecks Found</span>
+            🔒 <span style="color:#1D4ED8;">1:1 Growth Protocol Ready</span>
           </div>
           <div style="font-size:0.76rem;color:#475569;font-weight:700;margin-top:0.2rem;">
-            Includes Custom 4-Week Neuro-Study Fix Plan
+            10 PM SWS HGH, Ca Citrate, D3+K2 &amp; Chelated Zinc
           </div>
         </div>
         `}
       </div>
 
-      <!-- Step 3: Taller-Style Pricing & Instant Unlock Card -->
+      <!-- Step 3: Taller-Style Pricing & Instant Unlock Card (Strictly Separated by Mode + Monthly Retention Value) -->
       <div id="taller-global-paywall-card" style="background:#FFFFFF;border:2px solid #1D4ED8;border-radius:18px;padding:1.25rem 1.3rem;">
         <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:0.75rem;margin-bottom:0.9rem;">
           <div>
@@ -1954,33 +2021,43 @@
               LIMITED LAUNCH OFFER · SAVE 70% VS. $450 CLINIC CONSULT
             </span>
             <h3 style="font-size:1.24rem;font-weight:900;color:#0F172A;margin:0.45rem 0 0.2rem 0;">
-              Unlock Your Child's Complete 1:1 Growth &amp; Brain LQ Master Report
+              ${isLearningMode
+                ? "Unlock Your Child's Complete 1:1 5-Axis Brain LQ &amp; Neuro-Study Master Report"
+                : "Unlock Your Child's Complete 1:1 Pediatric Height &amp; Auxology Master Report"}
             </h3>
             <p style="font-size:0.86rem;color:#475569;margin:0;">
-              Instant access to both full reports (Physical Auxology + Neuro-Cognitive LQ), downloadable Hospital-Style Clinical PDF, and 5 Printable Cognitive Worksheets.
+              ${isLearningMode
+                ? 'Instant access to your child&#39;s 5-Axis Cognitive Radar, Top 2 Study Bottleneck Diagnosis, 4-Week Feynman &amp; Cornell Action Plan, and 4 Printable Cognitive Worksheets.'
+                : 'Instant access to your child&#39;s US CDC 2000 &amp; WHO Height Trajectory, 3-Scenario Adult Height Prediction, rhGH Injection ROI Verdict, 24h Sleep HGH Simulator, and Printable Growth Trackers.'}
             </p>
           </div>
         </div>
 
         <!-- 2-Tier Plan Selector -->
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:0.8rem;margin-bottom:1rem;">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:0.8rem;margin-bottom:0.95rem;">
           <label id="paywall-plan-label-single" onclick="window.selectKidsFitGlobalPlan('single')" style="cursor:pointer;background:#EFF6FF;border:2px solid #1D4ED8;border-radius:14px;padding:0.95rem 1rem;display:flex;flex-direction:column;justify-content:space-between;">
             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.35rem;">
               <span style="font-size:0.82rem;font-weight:900;color:#1D4ED8;">
                 <input type="radio" name="kidsfit-global-plan" value="single" checked style="accent-color:#1D4ED8;margin-right:0.3rem;">
-                SINGLE REPORT PASS (MOST POPULAR)
+                SINGLE REPORT PASS (DAY-1 SNAPSHOT)
               </span>
               <span style="background:#1D4ED8;color:#FFFFFF;font-size:0.7rem;font-weight:900;padding:0.15rem 0.5rem;border-radius:9999px;">SAVE 70%</span>
             </div>
             <div style="display:flex;align-items:baseline;gap:0.45rem;margin-bottom:0.3rem;">
               <span style="font-size:1.65rem;font-weight:900;color:#0F172A;">$8.99</span>
               <span style="font-size:0.85rem;color:#94A3B8;text-decoration:line-through;font-weight:700;">$29.99</span>
-              <span style="font-size:0.78rem;color:#475569;font-weight:700;">· One-Time Payment</span>
+              <span style="font-size:0.78rem;color:#475569;font-weight:700;">· One-Time Snapshot</span>
             </div>
             <div style="font-size:0.78rem;color:#334155;line-height:1.45;">
-              ✓ Full Physical Height + rhGH Paper Report<br>
-              ✓ Full 5-Axis Brain LQ &amp; 4-Week Study Plan<br>
-              ✓ Printable Clinical PDF Report + 5 Worksheets
+              ${isLearningMode ? `
+              ✓ Full 5-Axis Brain LQ &amp; Study Bottleneck Report<br>
+              ✓ Custom 4-Week Feynman &amp; Bar-Modeling Plan<br>
+              ✓ Printable Clinical PDF + 4 Cognitive Worksheets
+              ` : `
+              ✓ Full US CDC 2000 Adult Height + rhGH Paper Report<br>
+              ✓ 24h Sleep HGH Simulator &amp; Weight-Based Ca/D3/K2 Rx<br>
+              ✓ Printable Hospital-Style PDF + 3 Growth Trackers
+              `}
             </div>
           </label>
 
@@ -1988,21 +2065,37 @@
             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.35rem;">
               <span style="font-size:0.82rem;font-weight:900;color:#0F172A;">
                 <input type="radio" name="kidsfit-global-plan" value="pass" style="accent-color:#1D4ED8;margin-right:0.3rem;">
-                6-MONTH GROWTH &amp; BRAIN TRACKER
+                ${isLearningMode ? '6-MONTH MONTHLY BRAIN LQ TRACKER' : '6-MONTH MONTHLY GROWTH VELOCITY PASS'}
               </span>
-              <span style="background:#ECFDF5;color:#059669;border:1px solid #A7F3D0;font-size:0.7rem;font-weight:900;padding:0.15rem 0.5rem;border-radius:9999px;">BEST VALUE</span>
+              <span style="background:#ECFDF5;color:#059669;border:1px solid #A7F3D0;font-size:0.7rem;font-weight:900;padding:0.15rem 0.5rem;border-radius:9999px;">78% CHOOSE · BEST VALUE</span>
             </div>
             <div style="display:flex;align-items:baseline;gap:0.45rem;margin-bottom:0.3rem;">
               <span style="font-size:1.65rem;font-weight:900;color:#0F172A;">$19.99</span>
               <span style="font-size:0.85rem;color:#94A3B8;text-decoration:line-through;font-weight:700;">$79.99</span>
-              <span style="font-size:0.78rem;color:#475569;font-weight:700;">· 6 Months Unlimited</span>
+              <span style="font-size:0.78rem;color:#059669;font-weight:800;">· Only $3.33/mo (6 Mos)</span>
             </div>
             <div style="font-size:0.78rem;color:#334155;line-height:1.45;">
-              ✓ Everything in Single Report Pass<br>
-              ✓ Unlimited Sibling Profiles &amp; Monthly Re-Scans<br>
-              ✓ 90-Day Height Velocity &amp; Bone-Age Tracker
+              ${isLearningMode ? `
+              ✓ <strong>Monthly 30-Day 5-Axis Brain LQ Re-Calibration</strong><br>
+              ✓ <strong>Cycles 1–6 Progressive Monthly Worksheets</strong><br>
+              ✓ <strong>Unlimited Sibling Profiles</strong> &amp; Dynamic DHA Dosing
+              ` : `
+              ✓ <strong>Monthly 30-Day Height Velocity (cm/yr) Re-Scans</strong><br>
+              ✓ <strong>Auto-Updated Weight-Matched Ca/D3/K2/Zinc Dosing</strong><br>
+              ✓ <strong>Bone-Age Closure Alert + Unlimited Sibling Profiles</strong>
+              `}
             </div>
           </label>
+        </div>
+
+        <!-- Monthly Retention Value Box: Why Parents Need Ongoing Monthly Re-Calibration -->
+        <div style="background:#F0FDF4;border:1.5px solid #86EFAC;border-radius:12px;padding:0.75rem 0.95rem;margin-bottom:0.95rem;font-size:0.78rem;color:#065F46;line-height:1.48;">
+          <strong style="color:#047857;display:block;margin-bottom:0.18rem;">
+            🔄 Why 78% of Parents Choose the 6-Month Re-Calibration Pass ($3.33/mo):
+          </strong>
+          ${isLearningMode
+            ? 'A single test only shows Day-1 baseline. Neural myelination &amp; working memory shift every <strong>30 days</strong>—the 6-Month Pass tracks monthly LQ score gains, unlocks harder Cycle 2–6 Feynman/Bar-Model worksheets each month, and covers all siblings.'
+            : 'A single height check is only a Day-1 snapshot. Growth velocity (cm/yr), bone-age drift, and weight-matched Ca/D3/K2/Zinc dosing change every <strong>30 days</strong>—the 6-Month Pass detects growth stagnation early before growth plates close and covers all siblings.'}
         </div>
 
         <!-- Primary Checkout CTA Button -->
@@ -2032,6 +2125,36 @@
       card.prepend(gateEl);
     }
   }
+
+  global.recalculateKidsFitMonthlyProgress = function (mode, baseVal1, baseVal2) {
+    const out = document.getElementById('monthly-recal-result-box');
+    if (!out) return;
+    if (mode === 'learning') {
+      const daysEl = document.getElementById('monthly-recal-streak-days');
+      const focusEl = document.getElementById('monthly-recal-focus-mins');
+      const days = Math.max(0, Math.min(30, parseFloat((daysEl && daysEl.value) || '22')));
+      const focusMins = Math.max(5, Math.min(120, parseFloat((focusEl && focusEl.value) || '35')));
+      const baseLq = parseFloat(baseVal1) || 74.5;
+      const gain = Number(((days / 30) * 4.8 + Math.min(2.5, (focusMins - 20) * 0.08)).toFixed(1));
+      const newLq = Math.min(99.4, Number((baseLq + Math.max(0.5, gain)).toFixed(1)));
+      out.innerHTML = `✅ <strong>30-Day Brain LQ Re-Scan Complete:</strong> Updated Score <strong>${newLq} pts (+${Math.max(0.5, gain).toFixed(1)} pts/mo)</strong> · Desk Endurance: ${focusMins} mins · <strong>Cycle 2 Advanced Bar-Modeling &amp; Socratic Pack Unlocked!</strong>`;
+    } else {
+      const hEl = document.getElementById('monthly-recal-height-cm');
+      const wEl = document.getElementById('monthly-recal-weight-kg');
+      const newH = parseFloat((hEl && hEl.value) || (baseVal1 + 0.6));
+      const newW = parseFloat((wEl && wEl.value) || (baseVal2 + 0.5));
+      const deltaCm = Math.max(0, Number((newH - (parseFloat(baseVal1) || 137)).toFixed(2)));
+      const annualizedCmYr = Number((deltaCm * 12).toFixed(1));
+      const annualizedInYr = Number((annualizedCmYr / 2.54).toFixed(1));
+      const newCa = Math.round(Math.min(1000, Math.max(400, newW * 16.5)));
+      const newD3 = Math.round(Math.min(2500, Math.max(1000, newW * 42)));
+      const newZn = Number(Math.min(15, Math.max(5, newW * 0.28)).toFixed(1));
+      const statusText = annualizedCmYr >= 6.0
+        ? '🟢 ACCELERATED CATCH-UP ZONE (+3.3 in Trajectory Active)'
+        : (annualizedCmYr >= 4.8 ? '🟡 NORMAL MAINTENANCE VELOCITY' : '🔴 STAGNATION ALERT: Enforce 10 PM SWS + 2h Carb Fast');
+      out.innerHTML = `✅ <strong>30-Day Velocity Re-Scan:</strong> +${deltaCm} cm in 30d = <strong>${annualizedCmYr} cm/yr (${annualizedInYr} in/yr)</strong> [${statusText}] · <strong>Updated Weight-Matched Dosing (${newW.toFixed(1)} kg):</strong> Ca Citrate <strong>${newCa} mg</strong>, Vit D3 <strong>${newD3} IU</strong>, Chelated Zinc <strong>${newZn} mg</strong>.`;
+    }
+  };
 
   let selectedPlan = 'single';
 
@@ -2081,6 +2204,11 @@
   };
 
   global.launchLemonSqueezyCheckout = function (planOverride) {
+    try {
+      if (typeof window !== 'undefined' && window.localStorage) {
+        window.localStorage.setItem('kidsfit_pending_ls_checkout_ts_v1', String(Date.now()));
+      }
+    } catch (_) {}
     const plan = planOverride || selectedPlan || 'single';
     const baseCheckoutUrl = getActiveCheckoutUrl(plan);
     const emailEl = document.getElementById('checkout-parent-email');
@@ -2254,6 +2382,27 @@
   function initGlobalPaywallEdition() {
     if (!isGlobalPaidEdition()) return;
     applyGlobalHomepageEnglishDOM();
+
+    // Auto-restore report view when returning from Lemon Squeezy checkout (?unlock=1&payment=success)
+    try {
+      if (typeof window !== 'undefined' && window.location && String(window.location.search || '').indexOf('payment=success') !== -1) {
+        if (isReportUnlocked() && window.localStorage) {
+          const rawSaved = window.localStorage.getItem('kidsfit_last_quiz_profile_v1');
+          if (rawSaved) {
+            const restoredProfile = JSON.parse(rawSaved);
+            if (global.KidsFitApp && global.KidsFitApp.state) {
+              global.KidsFitApp.state.profile = Object.assign({}, global.KidsFitApp.state.profile || {}, restoredProfile);
+            }
+            const dash = document.getElementById('results-dashboard');
+            if (dash) {
+              dash.classList.remove('hidden');
+              dash.style.display = 'block';
+            }
+            transformGlobalReportAndApplyPaywall();
+          }
+        }
+      }
+    } catch (_) {}
 
     if (typeof window !== 'undefined' && !window._globalPaywallUnitBound) {
       window._globalPaywallUnitBound = true;

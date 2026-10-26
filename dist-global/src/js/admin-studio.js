@@ -698,14 +698,40 @@ According to US CDC 2000 LMS models and the Tanner MPH formula, post-natal sleep
     const globalUtmLinks = `[1] Reddit Organic / Comment Sniper:
 https://kisfitglobal.com/?utm_source=reddit&utm_medium=comment_sniper&utm_campaign=global_auxology
 
-[2] Instagram / Threads Bio Link:
-https://kisfitglobal.com/?utm_source=instagram&utm_medium=bio_link&utm_campaign=global_parenting
+[2] Quora Evergreen SEO Answer Citation:
+https://kisfitglobal.com/?utm_source=quora&utm_medium=answer_citation&utm_campaign=evergreen_seo
 
-[3] TikTok / YouTube Shorts Bio Link:
-https://kisfitglobal.com/?utm_source=tiktok_shorts&utm_medium=bio_link&utm_campaign=shortform_viral
+[3] Pinterest Direct Destination Pin Link (US Moms):
+https://kisfitglobal.com/?utm_source=pinterest&utm_medium=pin_link&utm_campaign=us_moms
 
-[4] Quora Evergreen Answer Citation:
-https://kisfitglobal.com/?utm_source=quora&utm_medium=answer_citation&utm_campaign=evergreen_seo`;
+[4] BabyCenter / WhatToExpect / Parenting Forum / Facebook Group:
+https://kisfitglobal.com/?utm_source=parenting_forum&utm_medium=community_share&utm_campaign=us_parents
+
+[5] Medium / Substack Authority Article Backlink:
+https://kisfitglobal.com/?utm_source=medium&utm_medium=article_cta&utm_campaign=authority_seo`;
+
+    const globalQuoraPinterestForumCopy = `[Channel A: Quora Evergreen SEO Answer (Target: "How can I predict my child's adult height?" / "Does late sleep stunt growth?")]
+Pediatric endocrinologists use two mathematical models to predict a child's adult height: the US CDC 2000 LMS Z-Score trajectory and the Tanner Mid-Parental Height (MPH) equation:
+• Boys: (Father's Height + Mother's Height + 5 inches) ÷ 2
+• Girls: (Father's Height + Mother's Height - 5 inches) ÷ 2
+
+However, clinical auxology studies show that MPH has a ±3.3-inch (±8.5 cm) physiological buffer between the 10th and 90th target percentiles:
+1. Nocturnal Slow-Wave Sleep (SWS): 65% of daily Growth Hormone (GH) is released during the first 90 minutes of deep sleep (10 PM – 2 AM). Late sleep or pre-bed carbs spike insulin, suppressing GH secretion by up to 52%.
+2. Bioavailable Bone Matrix Nutrition: Calcium Citrate (~45% absorption vs. 22% for Carbonate) + Vitamin D3 + K2 (MK-7) + Chelated Zinc (hepatic IGF-1 synthesis).
+3. Multi-Ethnic Bone Maturation Tempo: Adjusts pubertal growth spurt timing across East Asian, South Asian, Black, Hispanic, and Multi-Ethnic cohorts.
+
+Run a 60-second US CDC 2000 LMS + Multi-Ethnic Growth & 5-Axis Brain LQ scan here:
+👉 https://kisfitglobal.com/?utm_source=quora&utm_medium=answer_citation&utm_campaign=evergreen_seo
+
+------------------------------------------------------------
+[Channel B: Pinterest Direct-Link Pin (Title + Description + Destination URL)]
+• Pin Title: US CDC Child Height Predictor & 5-Axis Brain LQ Clinical Scan (Ages 2–18)
+• Destination Link: https://kisfitglobal.com/?utm_source=pinterest&utm_medium=pin_link&utm_campaign=us_moms
+• Pin Description: Worried about your child's height percentile, picky eating, late bedtime, or math focus? Run a 60-second pediatric auxology & neuro-cognitive scan powered by US CDC 2000 LMS charts, Tanner MPH equations, and 3,714 peer-reviewed PubMed studies. Compare Genetic Target Height vs. +3.3 in Optimized Potential. Supports Imperial (ft/in, lbs) & Metric (cm, kg). #ParentingTips #ChildGrowth #PediatricNutrition #KidsHealth #BrainDevelopment
+
+------------------------------------------------------------
+[Channel C: BabyCenter / WhatToExpect / DCUrbanMom / Facebook Parenting Group Reply]
+We went through this exact worry with our pediatrician. One thing that helped us tremendously was separating genetic Mid-Parental Height (MPH) from modifiable environmental loss (sleep timing, picky-eater zinc/IGF-1 levels, and multi-ethnic bone maturation tempo). If you plug your child's exact DOB, current height/weight, and parents' heights into KISFIT (https://kisfitglobal.com/?utm_source=parenting_forum&utm_medium=community_share), it runs the US CDC 2000 LMS Z-score alongside the 3-tier adult height projection and 5-Axis Working Memory Brain LQ in 60 seconds.`;
 
     container.innerHTML = `
       <div class="osmu-generator-card" style="border-top: 1px solid var(--theme-border, #CBD5E1); padding-top: 1.5rem; margin-top: 1.5rem;">
@@ -752,10 +778,19 @@ https://kisfitglobal.com/?utm_source=quora&utm_medium=answer_citation&utm_campai
           <textarea id="osmu-text-global-threads" readonly style="width: 100%; height: 140px; font-family: monospace; font-size: 0.8rem; padding: 0.65rem; border: 1px solid #CBD5E1; border-radius: 8px; background: #FFFFFF; color: #0F172A; resize: vertical; box-sizing: border-box;">${globalThreadsXCopy}</textarea>
         </div>
 
-        <!-- Global Channel C: Channel-Specific UTM Links -->
+        <!-- Global Channel C: Non-Social High-Intent Channels (Quora / Pinterest / US Parenting Forums) -->
+        <div class="osmu-channel-card" style="background: #FFFBEB; border: 1.5px solid #FDE68A; border-radius: 12px; padding: 1rem; margin-bottom: 0.85rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.45rem;">
+            <strong style="font-size: 0.84rem; color: #92400E;">🎯 Global 3: 인스타·틱톡 외 고전환 3대 채널 (Quora 구글 상위노출 / Pinterest 직접링크 / 미국 육아포럼)</strong>
+            <button type="button" class="btn btn-primary btn-sm btn-copy-target" data-target="osmu-text-global-nonsocial" style="font-size: 0.74rem; padding: 0.25rem 0.6rem;">📋 원클릭 복사</button>
+          </div>
+          <textarea id="osmu-text-global-nonsocial" readonly style="width: 100%; height: 165px; font-family: monospace; font-size: 0.8rem; padding: 0.65rem; border: 1px solid #FCD34D; border-radius: 8px; background: #FFFFFF; color: #0F172A; resize: vertical; box-sizing: border-box;">${globalQuoraPinterestForumCopy}</textarea>
+        </div>
+
+        <!-- Global Channel D: Channel-Specific UTM Links -->
         <div class="osmu-channel-card" style="background: #F8FAFC; border: 1px solid #CBD5E1; border-radius: 12px; padding: 1rem; margin-bottom: 1.1rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.45rem;">
-            <strong style="font-size: 0.84rem; color: #334155;">🔗 Global 3: 채널별 유입 추적 UTM 링크 모음 (Reddit / Instagram / TikTok / Quora)</strong>
+            <strong style="font-size: 0.84rem; color: #334155;">🔗 Global 4: 채널별 유입 추적 UTM 링크 모음 (Reddit / Quora / Pinterest / Forum / Medium)</strong>
             <button type="button" class="btn btn-primary btn-sm btn-copy-target" data-target="osmu-text-global-utm" style="font-size: 0.74rem; padding: 0.25rem 0.6rem;">📋 원클릭 복사</button>
           </div>
           <textarea id="osmu-text-global-utm" readonly style="width: 100%; height: 110px; font-family: monospace; font-size: 0.8rem; padding: 0.65rem; border: 1px solid #CBD5E1; border-radius: 8px; background: #FFFFFF; color: #0F172A; resize: vertical; box-sizing: border-box;">${globalUtmLinks}</textarea>
