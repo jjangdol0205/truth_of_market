@@ -655,15 +655,14 @@ def publish_blog_post(context, title: str, body: str, tags: list[str], img_path:
     try:
         print(f"📝 [블로그 발행 중] ({category_name}) {title[:42]}...", flush=True)
         page.goto("https://blog.naver.com/PostWriteForm.naver?blogId=expertise333", wait_until="domcontentloaded", timeout=30000)
-        time.sleep(5.5)
+        try:
+            page.wait_for_selector(".se-title-text .se-text-paragraph, .se-documentTitle .se-text-paragraph", timeout=20000)
+        except Exception:
+            pass
+        time.sleep(3.5)
 
         if "nidlogin.login" in page.url: raise RuntimeError("네이버 로그인 세션(NID_SES) 만료: 브라우저 창에서 로그인을 완료해 주세요.")
         target = page
-        for f in page.frames:
-            if "PostWriteForm" in f.url or f.name == "mainFrame":
-                if f.locator(".se-component.se-text").count() > 0:
-                    target = f
-                    break
 
         target.evaluate("""() => {
             document.querySelectorAll('button.se-popup-button-cancel, button.se-help-panel-close-button').forEach(b => b.click());
