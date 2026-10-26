@@ -249,7 +249,13 @@
       }
     };
     const user = getLoggedInUser();
-    if (user && user.email) {
+    const isAdminAuthed = global.KidsFitAdminStudio && typeof global.KidsFitAdminStudio.isAdminAuthenticated === 'function' && global.KidsFitAdminStudio.isAdminAuthenticated();
+    if (isAdminAuthed || (user && user.isAdmin)) {
+      btn.textContent = '👑 Admin Studio';
+      btn.style.background = '#ECFDF5';
+      btn.style.color = '#059669';
+      btn.style.borderColor = '#A7F3D0';
+    } else if (user && user.email) {
       btn.textContent = `👤 ${user.name || user.email.split('@')[0]}${user.unlockedPass ? ' (PRO)' : ''}`;
       btn.style.background = user.unlockedPass ? '#ECFDF5' : '#EFF6FF';
       btn.style.color = user.unlockedPass ? '#059669' : '#1D4ED8';
@@ -269,28 +275,36 @@
 
     const activeTab = initialTab === 'signup' ? 'signup' : 'login';
     const user = getLoggedInUser();
+    const isAdminAuthed = global.KidsFitAdminStudio && typeof global.KidsFitAdminStudio.isAdminAuthenticated === 'function' && global.KidsFitAdminStudio.isAdminAuthenticated();
 
     modal = document.createElement('div');
     modal.id = 'kidsfit-auth-modal';
     modal.style.cssText = 'position:fixed;inset:0;z-index:99999;background:rgba(15,23,42,0.72);display:flex;align-items:center;justify-content:center;padding:1rem;backdrop-filter:blur(4px);';
 
-    if (user && user.email) {
+    if (isAdminAuthed || (user && user.email)) {
+      const isOwner = Boolean(isAdminAuthed || (user && user.isAdmin));
       modal.innerHTML = `
         <div style="background:#FFFFFF;border:1.5px solid #BFDBFE;border-radius:22px;max-width:440px;width:100%;padding:1.5rem 1.4rem;box-shadow:0 25px 60px rgba(15,23,42,0.28);color:#0F172A;text-align:left;">
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.85rem;padding-bottom:0.65rem;border-bottom:1px solid #E2E8F0;">
             <div>
-              <span style="font-size:0.72rem;font-weight:800;color:#1D4ED8;background:#EFF6FF;padding:0.18rem 0.55rem;border-radius:9999px;">KISFIT MEMBER ACCOUNT</span>
-              <h3 style="margin:0.3rem 0 0;font-size:1.15rem;font-weight:800;color:#0F172A;">${user.name || 'Parent Member'}</h3>
+              <span style="font-size:0.72rem;font-weight:800;color:#1D4ED8;background:#EFF6FF;padding:0.18rem 0.55rem;border-radius:9999px;">${isOwner ? 'KISFIT ADMIN SESSION ACTIVE' : 'KISFIT MEMBER ACCOUNT'}</span>
+              <h3 style="margin:0.3rem 0 0;font-size:1.15rem;font-weight:800;color:#0F172A;">${isOwner ? '👑 Administrator Mode' : ((user && user.name) || 'Parent Member')}</h3>
             </div>
             <button type="button" onclick="var m=document.getElementById('kidsfit-auth-modal');if(m)m.remove();" style="background:#F1F5F9;border:1px solid #CBD5E1;border-radius:9999px;width:32px;height:32px;font-weight:800;cursor:pointer;">✕</button>
           </div>
           <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:12px;padding:0.85rem 1rem;margin-bottom:0.9rem;font-size:0.86rem;">
-            <div style="margin-bottom:0.35rem;"><strong>Email:</strong> ${user.email}</div>
-            <div><strong>Report Access Status:</strong> ${isReportUnlocked() || user.unlockedPass ? '<span style="color:#059669;font-weight:800;">✓ PRO PASS UNLOCKED</span>' : '<span style="color:#64748B;font-weight:700;">Standard Account (Paywall Locked)</span>'}</div>
+            <div style="margin-bottom:0.35rem;"><strong>Account:</strong> ${isOwner ? 'Authorized Administrator' : user.email}</div>
+            <div><strong>Report Access Status:</strong> ${isReportUnlocked() || isOwner || (user && user.unlockedPass) ? '<span style="color:#059669;font-weight:800;">✓ FULL CLINICAL REPORT UNLOCKED</span>' : '<span style="color:#64748B;font-weight:700;">Standard Account (Paywall Locked)</span>'}</div>
           </div>
+          ${isOwner ? `
+          <button type="button" onclick="var m=document.getElementById('kidsfit-auth-modal');if(m)m.remove();if(window.KidsFitAdminStudio)window.KidsFitAdminStudio.openAdminModal();" style="width:100%;padding:0.82rem 1rem;border-radius:12px;border:none;background:linear-gradient(135deg,#1D4ED8 0%,#1E40AF 100%);color:#FFFFFF;font-size:0.9rem;font-weight:900;cursor:pointer;margin-bottom:0.55rem;">
+            🛠️ Open Admin Studio Control Center →
+          </button>
+          ` : `
           <button type="button" onclick="window.verifyKidsFitMemberOrder('${user.email}')" style="width:100%;padding:0.78rem 1rem;border-radius:12px;border:1px solid #1D4ED8;background:#EFF6FF;color:#1D4ED8;font-size:0.88rem;font-weight:800;cursor:pointer;margin-bottom:0.55rem;">
             🔄 Sync / Verify Lemon Squeezy Purchase Status
           </button>
+          `}
           <button type="button" onclick="window.signOutKidsFitAccount()" style="width:100%;padding:0.72rem 1rem;border-radius:12px;border:1px solid #CBD5E1;background:#FFFFFF;color:#475569;font-size:0.85rem;font-weight:700;cursor:pointer;">
             Sign Out
           </button>
@@ -304,15 +318,15 @@
       <div style="background:#FFFFFF;border:1.5px solid #BFDBFE;border-radius:22px;max-width:440px;width:100%;padding:1.5rem 1.4rem;box-shadow:0 25px 60px rgba(15,23,42,0.28);color:#0F172A;text-align:left;">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.85rem;padding-bottom:0.65rem;border-bottom:1px solid #E2E8F0;">
           <div>
-            <span style="font-size:0.72rem;font-weight:800;color:#1D4ED8;background:#EFF6FF;padding:0.18rem 0.55rem;border-radius:9999px;">KISFIT BIO LABS · MEMBER PORTAL</span>
-            <h3 style="margin:0.3rem 0 0;font-size:1.15rem;font-weight:800;color:#0F172A;">Sign In or Create Parent Account</h3>
+            <span style="font-size:0.72rem;font-weight:800;color:#1D4ED8;background:#EFF6FF;padding:0.18rem 0.55rem;border-radius:9999px;">KISFIT BIO LABS · MEMBER &amp; ADMIN PORTAL</span>
+            <h3 style="margin:0.3rem 0 0;font-size:1.15rem;font-weight:800;color:#0F172A;">Sign In or Create Account</h3>
           </div>
           <button type="button" onclick="var m=document.getElementById('kidsfit-auth-modal');if(m)m.remove();" style="background:#F1F5F9;border:1px solid #CBD5E1;border-radius:9999px;width:32px;height:32px;font-weight:800;cursor:pointer;">✕</button>
         </div>
 
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.45rem;margin-bottom:1rem;background:#F1F5F9;padding:0.3rem;border-radius:12px;">
           <button type="button" id="auth-tab-btn-login" onclick="window.openKidsFitAuthModal('login')" style="padding:0.5rem;border-radius:9px;border:none;font-size:0.84rem;font-weight:800;cursor:pointer;background:${activeTab === 'login' ? '#FFFFFF' : 'transparent'};color:${activeTab === 'login' ? '#0F172A' : '#64748B'};box-shadow:${activeTab === 'login' ? '0 2px 6px rgba(15,23,42,0.08)' : 'none'};">
-            Sign In
+            Sign In (Member / Admin)
           </button>
           <button type="button" id="auth-tab-btn-signup" onclick="window.openKidsFitAuthModal('signup')" style="padding:0.5rem;border-radius:9px;border:none;font-size:0.84rem;font-weight:800;cursor:pointer;background:${activeTab === 'signup' ? '#FFFFFF' : 'transparent'};color:${activeTab === 'signup' ? '#0F172A' : '#64748B'};box-shadow:${activeTab === 'signup' ? '0 2px 6px rgba(15,23,42,0.08)' : 'none'};">
             Create Account
@@ -325,19 +339,19 @@
         </div>
 
         <div style="margin-bottom:0.75rem;">
-          <label style="display:block;font-size:0.78rem;font-weight:800;color:#334155;margin-bottom:0.25rem;">Email Address (Used for Report &amp; Lemon Squeezy Order Sync)</label>
-          <input type="email" id="auth-input-email" placeholder="parent@example.com" style="width:100%;box-sizing:border-box;padding:0.65rem 0.8rem;border:1.5px solid #CBD5E1;border-radius:10px;font-size:0.9rem;color:#0F172A;">
+          <label style="display:block;font-size:0.78rem;font-weight:800;color:#334155;margin-bottom:0.25rem;">User ID</label>
+          <input type="text" id="auth-input-email" autocomplete="username" placeholder="Enter your User ID" style="width:100%;box-sizing:border-box;padding:0.65rem 0.8rem;border:1.5px solid #CBD5E1;border-radius:10px;font-size:0.9rem;color:#0F172A;">
         </div>
 
         <div style="margin-bottom:0.85rem;">
-          <label style="display:block;font-size:0.78rem;font-weight:800;color:#334155;margin-bottom:0.25rem;">Password (Min 4 characters)</label>
-          <input type="password" id="auth-input-password" placeholder="••••••••" style="width:100%;box-sizing:border-box;padding:0.65rem 0.8rem;border:1.5px solid #CBD5E1;border-radius:10px;font-size:0.9rem;color:#0F172A;">
+          <label style="display:block;font-size:0.78rem;font-weight:800;color:#334155;margin-bottom:0.25rem;">Password</label>
+          <input type="password" id="auth-input-password" autocomplete="current-password" placeholder="Enter your Password" onkeydown="if(event.key==='Enter'){event.preventDefault();window.submitKidsFitAuth('${activeTab}');}" style="width:100%;box-sizing:border-box;padding:0.65rem 0.8rem;border:1.5px solid #CBD5E1;border-radius:10px;font-size:0.9rem;color:#0F172A;">
         </div>
 
         <div id="auth-feedback-msg" style="display:none;font-size:0.8rem;font-weight:700;padding:0.55rem 0.75rem;border-radius:8px;margin-bottom:0.75rem;"></div>
 
         <button type="button" onclick="window.submitKidsFitAuth('${activeTab}')" style="width:100%;padding:0.88rem 1rem;border-radius:12px;border:none;background:linear-gradient(135deg,#0F172A 0%,#1D4ED8 100%);color:#FFFFFF;font-size:0.94rem;font-weight:800;cursor:pointer;box-shadow:0 8px 20px rgba(29,78,216,0.22);">
-          ${activeTab === 'signup' ? 'Create Parent Account & Sync Reports →' : 'Sign In to My Account →'}
+          ${activeTab === 'signup' ? 'Create Account →' : 'Sign In →'}
         </button>
       </div>
     `;
@@ -351,7 +365,8 @@
     const msgEl = document.getElementById('auth-feedback-msg');
 
     const name = String((nameEl && nameEl.value) || '').trim();
-    const email = String((emailEl && emailEl.value) || '').trim().toLowerCase();
+    const rawIdOrEmail = String((emailEl && emailEl.value) || '').trim();
+    const email = rawIdOrEmail.toLowerCase();
     const password = String((passEl && passEl.value) || '');
 
     const showMsg = function (text, isErr) {
@@ -363,8 +378,36 @@
       msgEl.textContent = text;
     };
 
-    if (!email || email.indexOf('@') === -1 || password.length < 4) {
-      showMsg('Please enter a valid email address and a password (at least 4 characters).', true);
+    // Check if the user entered the Administrator ID & Password (verified via zero-plaintext digest)
+    if (global.KidsFitAdminStudio && typeof global.KidsFitAdminStudio.verifyAdminCredentials === 'function' && global.KidsFitAdminStudio.verifyAdminCredentials(rawIdOrEmail, password)) {
+      try {
+        if (typeof window !== 'undefined' && window.sessionStorage) {
+          window.sessionStorage.setItem('kisfit_admin_auth_token_v1', 'a86cfdc57a9f8d167c0546a365722330');
+        }
+        if (typeof window !== 'undefined' && window.localStorage) {
+          window.localStorage.setItem(UNLOCK_STORAGE_KEY, 'true');
+          window.localStorage.setItem('kidsfit_global_auth_user_v1', JSON.stringify({
+            name: 'Administrator',
+            email: 'admin@kisfitglobal.com',
+            isAdmin: true,
+            unlockedPass: true
+          }));
+        }
+      } catch (_) {}
+      syncAuthHeaderButton();
+      const authModal = document.getElementById('kidsfit-auth-modal');
+      if (authModal) authModal.remove();
+      const checkoutModal = document.getElementById('kidsfit-global-checkout-modal');
+      if (checkoutModal) checkoutModal.remove();
+      transformGlobalReportAndApplyPaywall();
+      if (global.KidsFitAdminStudio && typeof global.KidsFitAdminStudio.openAdminModal === 'function') {
+        global.KidsFitAdminStudio.openAdminModal();
+      }
+      return Promise.resolve({ ok: true, isAdmin: true });
+    }
+
+    if (!email || email.length < 3 || password.length < 4) {
+      showMsg('Please enter a valid User ID (min 3 characters) and Password (min 4 characters).', true);
       return;
     }
 
@@ -410,9 +453,14 @@
       if (typeof window !== 'undefined' && window.localStorage) {
         window.localStorage.removeItem('kidsfit_global_auth_token_v1');
         window.localStorage.removeItem('kidsfit_global_auth_user_v1');
+        window.localStorage.removeItem(UNLOCK_STORAGE_KEY);
+      }
+      if (global.KidsFitAdminStudio && typeof global.KidsFitAdminStudio.logoutAdmin === 'function') {
+        global.KidsFitAdminStudio.logoutAdmin();
       }
     } catch (_) {}
     syncAuthHeaderButton();
+    transformGlobalReportAndApplyPaywall();
     const modal = document.getElementById('kidsfit-auth-modal');
     if (modal) modal.remove();
   };

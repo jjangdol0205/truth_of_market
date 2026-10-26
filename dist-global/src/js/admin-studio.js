@@ -545,6 +545,18 @@ $$\\text{여아 MPH} = \\frac{\\text{아빠 키} + \\text{엄마 키} - 13}{2} \
             if (typeof window !== 'undefined' && window.sessionStorage) {
               window.sessionStorage.setItem(ADMIN_SESSION_KEY, ADMIN_AUTH_DIGEST);
             }
+            if (typeof window !== 'undefined' && window.localStorage) {
+              window.localStorage.setItem('kidsfit_global_report_unlocked_v1', 'true');
+              window.localStorage.setItem('kidsfit_global_auth_user_v1', JSON.stringify({
+                name: 'Administrator',
+                email: 'admin@kisfitglobal.com',
+                isAdmin: true,
+                unlockedPass: true
+              }));
+            }
+            if (global.KidsFitGlobalPaywall && typeof global.KidsFitGlobalPaywall.transformGlobalReportAndApplyPaywall === 'function') {
+              global.KidsFitGlobalPaywall.transformGlobalReportAndApplyPaywall();
+            }
           } catch (_) {}
           if (errEl) errEl.style.display = 'none';
           if (pwEl) pwEl.value = '';
