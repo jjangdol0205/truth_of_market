@@ -1237,7 +1237,20 @@
     let potentialGainCm = Math.round((optimizedHeight - unmanagedHeight) * 10) / 10;
     if (GrowthEngine && typeof GrowthEngine.predictAdultHeightTrajectories === 'function') {
       try {
-        const traj = GrowthEngine.predictAdultHeightTrajectories(mphVal, habits, tanner);
+        const traj = GrowthEngine.predictAdultHeightTrajectories(Object.assign({}, profile, {
+          mph: mphVal,
+          habits,
+          tannerPhase: tanner,
+          exactMonths,
+          ageMonths: exactMonths,
+          ageYears,
+          gender,
+          currentHeight: height,
+          currentWeight: weight,
+          recentGrowth6m: recentGain,
+          fatherHeight: fatherH,
+          motherHeight: motherH
+        }));
         unmanagedHeight = traj.unmanaged.height;
         optimizedHeight = traj.optimized.height;
         potentialGainCm = traj.optimized.gainOverUnmanaged;
@@ -3567,7 +3580,7 @@
               만 ${ageYears}세 · ${activeStyleInfo.badge} | 강점 [${strengthsList[0].title}] 분석 기반
             </div>
             <div style="font-size: 0.96rem; font-weight: 900; color: #0F172A; margin-bottom: 0.7rem; line-height: 1.42;">
-              위 두뇌·학습 진단 결과를 바탕으로 <strong>우리 아이에게 딱 필요한 맞춤 교구·도서·주말 체험</strong>만 간결하게 추렸습니다.
+              위 두뇌·학습 진단 결과를 바탕으로 <strong>우리 아이에게 딱 필요한 맞춤 교구·필독서·사고력 워크북</strong>만 간결하게 추렸습니다.
             </div>
             <button
               type="button"
@@ -3575,7 +3588,7 @@
               onclick="window.MasterBriefingEngine && window.MasterBriefingEngine.toggleProductDrawer(this, 'learning')"
               style="cursor: pointer; width: 100%; max-width: 560px; min-height: 50px; background: #1D4ED8; border: 1.5px solid #1E40AF; color: #FFFFFF; font-weight: 900; font-size: 0.96rem; padding: 0.75rem 1.15rem; border-radius: 14px; box-shadow: 0 6px 16px rgba(29, 78, 216, 0.2);"
             >
-              맞춤형 두뇌·학습 추천 상품 접기 (교구 · 도서 · 주말 체험) ▲
+              맞춤형 두뇌·학습 추천 상품 접기 (맞춤 교구 · 필독서 · 워크북) ▲
             </button>
           </div>
 
@@ -3591,15 +3604,12 @@
                 </span>
               </div>
 
-              <!-- Concise Curated Cards (#pillar2-learning-tools-box, Education Chapter, Travel Chapter) -->
+              <!-- Concise Curated Cards (#pillar2-learning-tools-box, Education Chapter) -->
               ${PinpointCurator && typeof PinpointCurator.renderPillar2LearningToolsPrescription === 'function'
                 ? PinpointCurator.renderPillar2LearningToolsPrescription(profile)
                 : ''}
               ${PinpointCurator && typeof PinpointCurator.renderCustomEducationChapter === 'function'
                 ? PinpointCurator.renderCustomEducationChapter(profile)
-                : ''}
-              ${PinpointCurator && typeof PinpointCurator.renderCustomTravelChapter === 'function'
-                ? PinpointCurator.renderCustomTravelChapter(profile)
                 : ''}
             </div>
           </div>

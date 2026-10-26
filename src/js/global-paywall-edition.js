@@ -37,9 +37,9 @@
         const search = String(window.location.search || '').toLowerCase();
         if (search.indexOf('edition=ko') !== -1) return false;
         if (search.indexOf('edition=global') !== -1 || search.indexOf('paywall=1') !== -1) return true;
-        if (host.indexOf('truthofmarket.com') !== -1) return true;
+        // Primary domain truthofmarket.com defaults to Korean free edition unless ?edition=global is passed
       }
-      return true;
+      return false;
     } catch (_) {}
     return true;
   }

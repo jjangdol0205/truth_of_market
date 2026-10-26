@@ -977,8 +977,8 @@ class CumulativeKnowledgeBaseManager:
         print(f"  - Domain prompts generated: Blog, Cafe, Webtoon, Card News (All 4 domains active)")
         print(f"  - Non-promotional audit: PASSED (0 commercial affiliate links)")
 
-        # 7. Real-time Telegram notification
-        self.send_telegram_notification(current_cycle, active_bp, len(rules), total_papers_cited)
+        # 7. Real-time Telegram notification disabled per user request (existing KB is sufficient)
+        # self.send_telegram_notification(current_cycle, active_bp, len(rules), total_papers_cited)
 
         return kb_payload
 

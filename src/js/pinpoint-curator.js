@@ -331,7 +331,7 @@
     const cpUrl = `https://link.coupang.com/re/AFFSRP?lptag=${cpTag}&subid=kidsfit&pageKey=${enc(coupangQuery)}`;
     const ihUrl = `https://kr.iherb.com/search?kw=${enc(iherbQuery)}&rcode=${ihCode}`;
     const amzUrl = `https://www.amazon.com/s?k=${enc(iherbQuery)}&tag=${amzTag}`;
-    const yesTarget = `https://www.yes24.com/Product/Search?domain=ALL&query=${enc(enc(yes24Query || coupangQuery))}`;
+    const yesTarget = `https://www.yes24.com/Product/Search?domain=ALL&query=${enc(yes24Query || coupangQuery)}`;
     const lpUrl = `https://click.linkprice.com/click.php?m=yes24&a=${lpId}&l=9999&l_cd1=3&l_cd2=0&tu=${enc(yesTarget)}`;
     const naverUrl = `https://search.shopping.naver.com/search/all?query=${enc(coupangQuery)}`;
     const st11Target = `https://search.11st.co.kr/pc/total-search?kwd=${enc(coupangQuery)}`;
@@ -362,6 +362,7 @@
         titleEn: 'ChildLife Essentials Liquid Calcium with Magnesium Orange (474ml)',
         specKo: '구연산칼슘+비타민D3+아연·마그네슘 액상 배합 · 알약 삼키기 힘든 영유아 뼈기질 형성 1순위',
         specEn: 'Liquid Calcium Citrate + Mg + Vit D3 + Zinc for rapid toddler bone matrix absorption',
+        hasExactIherb: true,
         cpQuery: '차일드라이프 액상 칼슘 마그네슘 오렌지맛 474ml',
         ihQuery: 'ChildLife Essentials Liquid Calcium with Magnesium Natural Orange 16 fl oz',
         yesQuery: '유아 영양식단 백과'
@@ -434,7 +435,8 @@
         titleEn: 'Nordic Naturals Zero Sugar Magnesium Gummies / Solgar Chelated Magnesium',
         specKo: '고흡수 킬레이트 마그네슘 + 몽모랑시 타트체리 식물성 멜라토닌 · 밤 10시 깊은 서파수면(SWS) 성장호르몬 분비 52% 억제 방어 (PMID:24899893)',
         specEn: 'Highly bioavailable chelated magnesium for deep sleep & leg comfort',
-        cpQuery: '노르딕내추럴스 마그네슘 구미 어린이 칼슘 마그네슘 비타민D',
+        hasExactIherb: true,
+        cpQuery: '노르딕내추럴스 마그네슘 구미 정품',
         ihQuery: 'Nordic Naturals Zero Sugar Magnesium Gummies Tangerine',
         yesQuery: '수면과 성장호르몬 과학'
       },
@@ -469,6 +471,7 @@
         titleEn: 'NaturesPlus Animal Parade Calcium Children\'s Chewable Natural Vanilla (90 Tabs)',
         specKo: '우유 배앓이·변비 없는 무유당 킬레이트 칼슘·마그네슘 · 유당 민감 아동 맞춤 뼈 영양제',
         specEn: 'Aminoate chelated calcium & magnesium · Lactose-free chewables',
+        hasExactIherb: true,
         cpQuery: '네이처스플러스 애니멀퍼레이드 키즈 칼슘 어린이 츄어블',
         ihQuery: 'NaturesPlus Animal Parade Calcium Children\'s Chewable Supplement Vanilla',
         yesQuery: '어린이 영양제 선택법'
@@ -602,7 +605,7 @@
         titleEn: 'Toddler Low-Mount No-Screw Doorway Pull-Up Bar with Soft Roller',
         specKo: '저녁 20초 매달리기 척추 추간판 감압 + 흉추 C자 정렬 스트레칭',
         specEn: 'Low doorway mount for toddler gentle 20s hangs and thoracic alignment',
-        cpQuery: '무타공 안전 문틀 철봉 실내 턱걸이봉 소프트 폼롤러',
+        cpQuery: '멜킨스포츠 무타공 안전 문틀 철봉 실내 턱걸이봉',
         ihQuery: 'Toddler Low Doorway Pull Up Bar Foam Roller',
         yesQuery: '영유아 척추 스트레칭'
       },
@@ -626,7 +629,7 @@
         titleEn: 'Kids Spine Extension EPP Roller & Shock Absorbing Mat',
         specKo: '취침 전 3분 종아리·대퇴근 근막 마사지로 야간 성장통 완화 및 숙면 유도',
         specEn: 'Nightly 3-min calf/quad fascia massage relieving growing pains',
-        cpQuery: '어린이 척추 신전 폼롤러 성장통 마사지 롤매트',
+        cpQuery: '멜킨스포츠 어린이 척추 신전 EPP 폼롤러',
         ihQuery: 'Kids Soft Foam Roller Growth Massage Mat',
         yesQuery: '성장통 마사지 가이드'
       },
@@ -637,7 +640,7 @@
         titleEn: 'Tratac Kids Soft Roller with Thick TPE Impact Mat',
         specKo: '다리 피로를 풀어주는 소프트 자극 + 쿵쿵 뛰어도 안전한 층간소음 방어 매트',
         specEn: 'Soft muscle relaxation combined with thick soundproofing floor mat',
-        cpQuery: '어린이 소프트 마사지 폼롤러 두꺼운 TPE 매트',
+        cpQuery: '트라택 액티브 소프트 마사지 폼롤러',
         ihQuery: 'Kids Myofascial Release Roller Foam Mat',
         yesQuery: '유아 성장통 완화 마사지'
       }
@@ -650,7 +653,7 @@
         titleEn: 'Magna-Tiles Clear Colors 100-Piece 3D Magnetic Building Set',
         specKo: '만 4~5세 두정엽 3차원 공간지각(Mental Rotation) 및 기하학 도형 감각 완성',
         specEn: 'Develops 3D spatial rotation, geometric symmetry & STEM engineering',
-        cpQuery: '맥포머스 매그나타일즈 투명 자석블록 100피스 입체도형 교구',
+        cpQuery: '매그나타일즈 클리어 컬러 투명 자석블록 100피스',
         ihQuery: 'Magna-Tiles Clear Colors 100 Piece Magnetic Construction Set',
         yesQuery: '가베와 자석블록 활용백과'
       },
@@ -829,7 +832,7 @@
         titleEn: 'Kim Soo-Yeol Digital Counter Kids Jump Rope (Corded & Cordless)',
         specKo: '실내(무소음 에어볼)·야외 겸용 디지털 횟수 카운터로 매일 500회 점프 습관화',
         specEn: 'Dual corded/cordless ropeless balls with digital counter for daily 500 jumps',
-        cpQuery: '김수열줄넘기 디지털 카운터 어린이 줄넘기 실내 줄없는줄넘기',
+        cpQuery: '김수열줄넘기 디지털 카운터 어린이 줄넘기',
         ihQuery: 'Digital Counting Jump Rope Cordless Indoor Kids',
         yesQuery: '어린이 음악줄넘기 교본'
       }
@@ -842,7 +845,7 @@
         titleEn: 'Time Timer MOD Visual Countdown Timer (Silent Prefrontal Focus Tool)',
         specKo: '남은 시간을 빨간 원판으로 시각화해 전두엽 작업기억과 몰입(Deep Work)을 극대화',
         specEn: 'Visualizes remaining time silently to train prefrontal self-regulation',
-        cpQuery: '타임타이머 MOD 무소음 시각 타이머 드레텍 스터디 타이머',
+        cpQuery: '타임타이머 MOD 무소음 시각 타이머 정품',
         ihQuery: 'Time Timer MOD Home Edition Visual Countdown Timer',
         yesQuery: '초등 자기주도 시간관리'
       },
@@ -997,7 +1000,7 @@
         titleEn: 'Himkong Jamiet No-Screw Safety Doorway Pull-Up Bar',
         specKo: '와이드 그립 데드행으로 광배근 이완 및 척추 추간판 압력 -40% 즉시 경감',
         specEn: 'Wide-grip dead hang relieving -40% intervertebral disc pressure',
-        cpQuery: '재미어트 힘콩 무타공 문틀 철봉 세이프락 풀업바',
+        cpQuery: '재미어트 힘콩 무타공 안전 문틀 철봉',
         ihQuery: 'Prospec Safe Doorway Pull Up Bar Chinning Bar',
         yesQuery: '청소년 바른 체형 교정 운동'
       }
@@ -1237,7 +1240,7 @@
         titleEn: 'Usborne Science Encyclopedia & Safari Museum in My Hand Visual Guide',
         specKo: '과학관 전시물(힘·운동·우주·인체)의 핵심 원리를 한눈에 보여주는 시각 대백과',
         specEn: 'Richly illustrated visual science encyclopedia aligned with museum exhibits',
-        cpQuery: '어스본 초등 과학 대백과 내 손안의 박물관 도감',
+        cpQuery: '어스본 코리아 초등 과학 대백과',
         ihQuery: 'Usborne Science Encyclopedia QR Links Illustrated',
         yesQuery: '어스본 초등 과학 대백과'
       }
@@ -1250,7 +1253,7 @@
         titleEn: 'Didimdol Non-Fiction Reading Comprehension & Cornell Metacognition Recall Note',
         specKo: '배외측 전전두엽(DLPFC) 피크기인 만 9세+ 아동의 메타인지(인출 훈련) 완성 교재',
         specEn: 'Trains active recall and non-fiction structural analysis for ages 9–15',
-        cpQuery: '디딤돌 초등 독해력 고학년 비문학 코넬식 백지복습 노트',
+        cpQuery: '디딤돌 초등 독해력 고학년 단계',
         ihQuery: 'Critical Thinking Company Reading Detective Nonfiction',
         yesQuery: '디딤돌 초등 독해력 비문학'
       },
@@ -2479,13 +2482,14 @@
               <div style="font-size: 0.79rem; color: #475569; line-height: 1.35;">
                 ${isEn ? sub.specEn : sub.specKo}
               </div>
-              <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.35rem; margin-top: 0.1rem;">
+              <div style="display: grid; grid-template-columns: ${categoryType === 'book' ? 'repeat(2, minmax(0, 1fr))' : 'minmax(0, 1fr)'}; gap: 0.35rem; margin-top: 0.1rem;">
                 <a href="${sub.coupangUrl}" target="_blank" rel="noopener noreferrer" class="pinpoint-direct-link mobile-touch-btn" data-merchant="coupang" data-product-id="${item.id}" data-product-category="${productCategory}" style="display: flex; min-height: 36px; align-items: center; justify-content: center; background: #EFF6FF; border: 1px solid #BFDBFE; color: #0F172A; font-size: 0.78rem; font-weight: 800; padding: 0.3rem 0.5rem; border-radius: 8px; text-decoration: none; text-align: center;">
                   쿠팡 로켓배송 ↗
                 </a>
+                ${categoryType === 'book' ? `
                 <a href="${sub.yes24Url}" target="_blank" rel="noopener noreferrer" class="pinpoint-direct-link mobile-touch-btn" data-merchant="linkprice" data-product-id="${item.id}" data-product-category="${productCategory}" style="display: flex; min-height: 36px; align-items: center; justify-content: center; background: #EFF6FF; border: 1px solid #BFDBFE; color: #1D4ED8; font-size: 0.78rem; font-weight: 800; padding: 0.3rem 0.5rem; border-radius: 8px; text-decoration: none; text-align: center;">
                   YES24 도서 ↗
-                </a>
+                </a>` : ''}
               </div>
             </div>
           `).join('')}
@@ -2518,10 +2522,9 @@
               <a href="${sub.coupangUrl}" target="_blank" rel="noopener noreferrer" class="pinpoint-direct-link mobile-touch-btn" data-merchant="coupang" data-product-id="${item.id}" data-product-category="${productCategory}" style="display: flex; min-height: 38px; align-items: center; justify-content: center; background: #EFF6FF; border: 1px solid #BFDBFE; color: #0F172A; font-size: 0.8rem; font-weight: 800; padding: 0.38rem 0.6rem; border-radius: 8px; text-decoration: none; text-align: center;">
                 쿠팡 로켓배송 ↗
               </a>
-              ${categoryType === 'supplement'
+              ${categoryType === 'supplement' && sub.hasExactIherb
                 ? `<a href="${sub.iherbUrl}" target="_blank" rel="noopener noreferrer" class="pinpoint-direct-link mobile-touch-btn" data-merchant="iherb" data-product-id="${item.id}" data-product-category="${productCategory}" style="display: flex; min-height: 38px; align-items: center; justify-content: center; background: #EFF6FF; border: 1px solid #BFDBFE; color: #1D4ED8; font-size: 0.8rem; font-weight: 800; padding: 0.38rem 0.6rem; border-radius: 8px; text-decoration: none; text-align: center;">iHerb 직구 ↗</a>`
-                : `<a href="${sub.yes24Url}" target="_blank" rel="noopener noreferrer" class="pinpoint-direct-link mobile-touch-btn" data-merchant="linkprice" data-product-id="${item.id}" data-product-category="${productCategory}" style="display: flex; min-height: 38px; align-items: center; justify-content: center; background: #EFF6FF; border: 1px solid #BFDBFE; color: #1D4ED8; font-size: 0.8rem; font-weight: 800; padding: 0.38rem 0.6rem; border-radius: 8px; text-decoration: none; text-align: center;">YES24 도서 ↗</a>`}
-              <a href="${sub.adpickShoppingUrl || `https://click.linkprice.com/click.php?m=11st&a=A100708867&l=9999&l_cd1=3&l_cd2=0&tu=${encodeURIComponent('https://search.11st.co.kr/pc/total-search?kwd=' + encodeURIComponent(sub.cpQuery || item.coupangQuery || item.name || ''))}`}" target="_blank" rel="noopener noreferrer" class="pinpoint-direct-link" data-merchant="linkprice-11st" data-product-id="${item.id}" data-product-category="${productCategory}" style="display: flex; min-height: 38px; align-items: center; justify-content: center; background: #EFF6FF; border: 1px solid #BFDBFE; color: #1D4ED8; font-size: 0.78rem; font-weight: 800; padding: 0.38rem 0.5rem; border-radius: 8px; text-decoration: none; text-align: center;">11번가 ↗</a>
+                : ''}
             </div>
           </div>
         `).join('')}
@@ -2799,7 +2802,7 @@
         activeSpec: '엄지·검지·중지 삼지집기(Tripod Grasp) & 눈-손 협응 정밀 훈련',
         whyNeeded: `생후 ${ageMonths}개월 소근육 민감기에 손끝 신경과 전두엽 실행기능을 동시에 깨웁니다.`,
         buttonLabelCoupang: `쿠팡에서 '몬테소리 원목 집게 구슬꿰기 유아 안전가위 소근육 교구' 바로 보기 ↗`
-      }, buildPinpointUrls('몬테소리 소근육 교구 원목 집게 구슬꿰기 유아 안전가위 세트', 'Montessori Wooden Pincer Grasp Fine Motor Beads Toy', '몬테소리 소근육 놀이 교구', affConfig));
+      }, buildPinpointUrls('멜리사앤더그 원목 대형 구슬꿰기 유아 소근육 교구', 'Montessori Wooden Pincer Grasp Fine Motor Beads Toy', '몬테소리 소근육 놀이 교구', affConfig));
 
       const mShelf = Object.assign({
         id: 'montessori_cylinder_shelf_1_3',
@@ -2808,7 +2811,7 @@
         activeSpec: '크기·높이·굵기 시각 변별력 + 스스로 꺼내고 정리하는 자율성 훈련',
         whyNeeded: '아이 스스로 교구를 선택하고 제자리에 정리하며 전두엽 질서감을 형성합니다.',
         buttonLabelCoupang: `쿠팡에서 '몬테소리 꼭지원기둥 실린더 원목 전면 교구장' 바로 보기 ↗`
-      }, buildPinpointUrls('몬테소리 꼭지원기둥 실린더 블록 원목 전면 교구장', 'Montessori Cylinder Blocks Wooden Bookshelf Kids', '몬테소리 자율 환경 교구장', affConfig));
+      }, buildPinpointUrls('몬테소리 원목 꼭지원기둥 4종 실린더 블록 교구', 'Montessori Cylinder Blocks Wooden Bookshelf Kids', '몬테소리 자율 환경 교구장', affConfig));
 
       const mBook = Object.assign({
         id: 'sensory_visual_book_1_3',
@@ -2850,7 +2853,7 @@
         activeSpec: '구체물 도형 회전 조작 + 10 이하 가르기·모으기 수감각 체득',
         whyNeeded: '단순 암기 대신 손끝으로 도형과 수를 조작해 수학 자신감을 높여줍니다.',
         buttonLabelCoupang: `쿠팡에서 '원목 칠교놀이 소마큐브 유아 창의사고력 수학' 바로 보기 ↗`
-      }, buildPinpointUrls('원목 칠교놀이 소마큐브 유아 창의사고력 수학 퍼즐', 'Wooden Tangram Soma Cube Geometric Puzzle Kids', '유아 창의사고력 도형 퍼즐', affConfig));
+      }, buildPinpointUrls('매쓰타임 원목 칠교놀이 소마큐브 창의도형 세트', 'Wooden Tangram Soma Cube Geometric Puzzle Kids', '유아 창의사고력 도형 퍼즐', affConfig));
 
       if (needsFocusToolFirst) {
         tools.push(fTimer, fGabe, fSoma);
@@ -2865,7 +2868,7 @@
         activeSpec: '중력·운동에너지 가설 실험 + 3차원 트랙 설계 전두엽 계획 회로 강화',
         whyNeeded: `스마트폰 대신 손끝으로 트랙 높이와 각도를 설계하며 물리적 인과관계를 깨우칩니다.`,
         buttonLabelCoupang: `쿠팡에서 '그래비트랙스 코어 스타터 세트 소마큐브 칠교놀이' 바로 보기 ↗`
-      }, buildPinpointUrls('그래비트랙스 코어 스타터 세트 소마큐브 칠교놀이', 'Ravensburger GraviTrax Marble Run STEM Toy', '초등 과학 탐구 도형 퍼즐', affConfig));
+      }, buildPinpointUrls('라벤스부르거 그래비트랙스 코어 스타터 세트 정품', 'Ravensburger GraviTrax Marble Run STEM Toy', '초등 과학 탐구 도형 퍼즐', affConfig));
 
       const gStand = Object.assign({
         id: 'ergonomic_bookstand_6_8',
@@ -2908,7 +2911,7 @@
         activeSpec: '상단 교재 독서 + 하단 백지복습 필기 2단 구조화 + 25분 뽀모도로',
         whyNeeded: '방대한 교재를 눈높이에 고정해 거북목을 막고 25분 고밀도 딥워크 몰입을 실현합니다.',
         buttonLabelCoupang: `쿠팡에서 '와이드 높이조절 원목 2단 독서대 무소음 타이머' 바로 보기 ↗`
-      }, buildPinpointUrls('무소음 시각 타이머 공부 시계 원목 2단 독서대', 'Adjustable 2-Tier Wooden Book Stand Ergonomic Reading Holder', '자기주도학습 딥워크 독서대', affConfig));
+      }, buildPinpointUrls('위즈독서대 높이각도조절 원목 2단 독서대', 'Adjustable 2-Tier Wooden Book Stand Ergonomic Reading Holder', '자기주도학습 딥워크 독서대', affConfig));
 
       const pCornell = Object.assign({
         id: 'cornell_active_recall_planner_9_plus',
@@ -2917,7 +2920,7 @@
         activeSpec: '단서·핵심개념·1줄 요약 3분할 코넬 노트 + 오답 원인 역추적 (인출 +50%)',
         whyNeeded: '수동적 듣기에서 벗어나 책을 덮고 스스로 인출(Active Recall)하는 메타인지를 완성합니다.',
         buttonLabelCoupang: `쿠팡에서 '코넬식 메타인지 백지복습 노트 100일 스터디플래너' 바로 보기 ↗`
-      }, buildPinpointUrls('코넬노트 백지복습 노트 초등 중등 메타인지 자기주도 스터디플래너', 'Cornell Notes Notebook Study Planner Active Recall Student', '메타인지 공부법 코넬노트 스터디플래너', affConfig));
+      }, buildPinpointUrls('코넬식 백지복습 요약 노트 세트', 'Cornell Notes Notebook Study Planner Active Recall Student', '메타인지 공부법 코넬노트 스터디플래너', affConfig));
 
       if (needsRecallFirst) {
         tools.push(pCornell, pStand, pMicro);
@@ -2991,9 +2994,9 @@
             : '하루 15분 1지문 핵심어 찾기 + 마인드맵 요약으로 국어·수학 문장제 독해력 동시 강화',
           whyKo: '눈으로만 흘려 읽는 습관을 잡고 핵심 인과관계를 구조화합니다.'
         }, buildPinpointUrls(
-          ageYears <= 3 ? '유아 첫 오감 플랩북 말놀이 그림책 세트' : (ageYears <= 6 ? '기적의 유아 독해 한글 어휘 그림책 세트' : (ageYears <= 9 ? '천재교육 하루 한장 독해 기적의 독서 논술 초등 문해력 워크북' : '디딤돌 초등 고학년 중등 비문학 독해력 어휘력 워크북')),
+          ageYears <= 3 ? '어스본 코리아 요리조리 열어보는 플랩북' : (ageYears <= 6 ? '길벗스쿨 기적의 유아 독해' : (ageYears <= 9 ? '천재교육 하루 한장 독해 초등 국어' : '디딤돌 초등 독해력 고학년')),
           'Scholastic Reading Comprehension Graphic Organizers Workbook',
-          ageYears <= 3 ? '유아 오감 말놀이 그림책' : (ageYears <= 6 ? '기적의 유아 독해' : (ageYears <= 9 ? '하루 한장 독해 초등 문해력' : '디딤돌 비문학 독해력')),
+          ageYears <= 3 ? '어스본 요리조리 열어보는 플랩북' : (ageYears <= 6 ? '기적의 유아 독해' : (ageYears <= 9 ? '천재교육 하루 한장 독해' : '디딤돌 초등 독해력')),
           affConfig
         ))
       },
@@ -3017,9 +3020,9 @@
           specKo: '구체물 도형 회전 조작 + 문장제 조건을 그림·식으로 바꾸는 단계별 사고력 훈련',
           whyKo: '기계적 암산에서 벗어나 도형 감각과 응용 문제 해결력을 길러줍니다.'
         }, buildPinpointUrls(
-          ageYears <= 3 ? '몬테소리 원목 도형 맞추기 퍼즐 수감각 블록' : (ageYears <= 6 ? '소마셈 유아 창의사고력 수학 칠교놀이 소마큐브 워크북' : (ageYears <= 9 ? '창의사고력 수학 팩토 플라토 도형 문장제 워크북' : '디딤돌 초등 사고력 수학 문장제 기하 도형 워크북')),
+          ageYears <= 3 ? '멜리사앤더그 원목 도형 맞추기 퍼즐' : (ageYears <= 6 ? '소마셈 K단계 유아 연산 워크북' : (ageYears <= 9 ? '창의사고력 수학 팩토 연산 도형' : '디딤돌 초등 최상위수학 사고력')),
           'Singapore Math Challenging Word Problems Spatial Geometry Workbook',
-          ageYears <= 3 ? '유아 원목 도형 퍼즐' : (ageYears <= 6 ? '소마셈 창의사고력 수학' : (ageYears <= 9 ? '창의사고력 수학 팩토 플라토' : '디딤돌 사고력 수학 문장제')),
+          ageYears <= 3 ? '유아 원목 도형 퍼즐' : (ageYears <= 6 ? '소마셈 K단계' : (ageYears <= 9 ? '창의사고력 수학 팩토' : '디딤돌 최상위수학')),
           affConfig
         ))
       },
@@ -3047,9 +3050,9 @@
             : '단서(Cue)·핵심개념·1줄 요약 3분할 코넬 노트 + 오답 원인 역추적 체크리스트',
           whyKo: '책을 덮고 스스로 떠올려 적으며 해마 단기기억을 장기기억으로 코팅합니다.'
         }, buildPinpointUrls(
-          ageYears <= 3 ? '유아 사물 인지 플래시카드 기억력 플랩북' : (ageYears <= 6 ? '유아 그림일기장 이야기 순서 카드 생각열기 워크북' : '코넬노트 백지복습 노트 초등 중등 메타인지 자기주도 스터디플래너'),
+          ageYears <= 3 ? '어스본 코리아 첫 낱말 플래시카드' : (ageYears <= 6 ? '길벗스쿨 기적의 생각열기 유아 워크북' : '코넬식 백지복습 요약 노트 세트'),
           'Cornell Notes Notebook Study Planner Active Recall Student',
-          ageYears <= 6 ? '유아 생각열기 그림일기 워크북' : '메타인지 공부법 코넬노트 스터디플래너',
+          ageYears <= 6 ? '기적의 생각열기' : 'EBS 메타인지 공부법',
           affConfig
         ))
       },
@@ -3071,7 +3074,7 @@
           specKo: '남은 시간을 보여주는 무소음 원판 타이머 + 연령 맞춤 손끝 입체 미션 클리어',
           whyKo: '디지털 화면 없이도 손끝 조작을 통해 건강한 성취 도파민을 회복시킵니다.'
         }, buildPinpointUrls(
-          ageYears <= 3 ? '유아 원목 자석 낚시 구슬꿰기 타임타이머' : (ageYears <= 6 ? '유아 투명 자석블록 타임타이머 집중력 시계' : '타임타이머 무소음 시각 타이머 스마트게임즈 IQ퍼즐 두뇌보드게임'),
+          ageYears <= 3 ? '멜리사앤더그 원목 자석 낚시놀이 퍼즐' : (ageYears <= 6 ? '매그나타일즈 투명 자석블록 세트' : '스마트게임즈 아이큐 퍼즐 프로 보드게임'),
           'Time Timer MOD Visual Timer SmartGames IQ Puzzler Pro',
           '스마트폰 이기는 독서 공부 습관',
           affConfig
@@ -3119,9 +3122,9 @@
           specKo: `만 ${ageYears}세 발달 맞춤 어휘 확장 워크북 + 식탁·차 안에서 대화 턴을 늘려주는 질문카드`,
           whyKo: '단어 뜻을 정확히 알고 자기 생각을 완성된 문장으로 표현하는 힘을 길러줍니다.'
         }, buildPinpointUrls(
-          ageYears <= 3 ? '유아 낱말 사운드북 어휘 병풍책 말놀이 카드' : (ageYears <= 6 ? '유아 한글 어휘 스티커북 유아 하브루타 질문카드' : '기적의 어휘력 초등 교과서 어휘 한자어 워크북 하브루타 질문카드'),
+          ageYears <= 3 ? '어스본 코리아 유아 첫 낱말 사운드북' : (ageYears <= 6 ? '길벗스쿨 기적의 유아 어휘력' : '길벗스쿨 기적의 어휘력 초등'),
           'Wordly Wise 3000 Vocabulary Workbook Conversation Cards Kids',
-          ageYears <= 6 ? '유아 어휘력 말놀이 그림책' : '기적의 어휘력 초등 어휘 워크북',
+          ageYears <= 6 ? '기적의 유아 어휘력' : '길벗스쿨 기적의 어휘력',
           affConfig
         ))
       }
@@ -3260,14 +3263,7 @@
                 <div style="font-size: 0.79rem; color: #475569; line-height: 1.35;">
                   ${tk.ageSpecificGuide}
                 </div>
-                <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.35rem; margin-top: 0.1rem;">
-                  <a href="${tk.myrealtripUrl}" target="_blank" rel="noopener noreferrer" class="pinpoint-direct-link mobile-touch-btn" data-merchant="myrealtrip" data-product-id="${tk.id}" data-product-category="learning" style="display: flex; min-height: 36px; align-items: center; justify-content: center; background: #EFF6FF; border: 1px solid #BFDBFE; color: #1D4ED8; font-size: 0.78rem; font-weight: 900; padding: 0.3rem 0.5rem; border-radius: 8px; text-decoration: none; text-align: center;">
-                    마이리얼트립 ↗
-                  </a>
-                  <a href="${tk.klookUrl}" target="_blank" rel="noopener noreferrer" class="pinpoint-direct-link" data-merchant="klook" data-product-id="${tk.id}" data-product-category="learning" style="display: flex; min-height: 36px; align-items: center; justify-content: center; background: #FFF7ED; border: 1.5px solid #FB923C; border-radius: 8px; color: #C2410C; font-size: 0.78rem; font-weight: 900; text-decoration: none; text-align: center;">
-                    클룩(Klook) ↗
-                  </a>
-                </div>
+
               </div>
             `).join('')}
           </div>

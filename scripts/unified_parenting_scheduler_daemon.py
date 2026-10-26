@@ -1006,23 +1006,9 @@ def run_scheduler_daemon(poll_interval: int = 15, dry_run: bool = False):
             current_hm = current_kst.strftime("%H:%M")
             current_date_str = current_kst.strftime("%Y-%m-%d")
 
-            # 1. Check 1-hour KB benchmark loop
+            # 1. 1-hour KB benchmark loop disabled per user request (3,672 papers already synthesized in docs/hourly_benchmark_paper_kb.json)
             if current_hour != last_hourly_cycle:
-                print(f"⏰ [Trigger: 1-Hour KB Loop] Current hour: {current_hour}:00 KST")
-                try:
-                    cmd = [sys.executable, str(KB_LEARNING_SCRIPT), "--once"]
-                    subprocess.run(
-                        cmd,
-                        encoding="utf-8",
-                        errors="replace",
-                        timeout=90,
-                        check=False
-                    )
-                    last_hourly_cycle = current_hour
-                    last_executed["KB_LEARNING_LOOP"] = current_kst.isoformat()
-                    send_telegram_alert("KB", f"1시간 주기 지식베이스 학습 실행 ({current_hour}시)", dry_run=dry_run)
-                except Exception as e:
-                    print(f"⚠️ KB loop execution error: {e}")
+                last_hourly_cycle = current_hour
 
             # 2. Check Daily Fixed Schedules (Blog, Cafe, Card News, Webtoon)
             for sched in UNIFIED_SCHEDULE_REGISTRY:
