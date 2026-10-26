@@ -160,73 +160,125 @@ def wrap_text_by_pixel_width(draw, text: str, font, max_width: int) -> list[str]
 
 
 def generate_summary_card_png(out_path: Path, badge_text: str, main_title: str, points: list[str], accent_rgb=(79, 70, 229)):
+    """Generates a 1080x1350 Full-Bleed Illustrated Editorial Cardnews PNG with giant crisp typography."""
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    W, H = 1080, 1080
-    img = Image.new("RGB", (W, H), (250, 248, 245))
+    W, H = 1080, 1350
+
+    # Pick an illustrated background cut based on hash/sequence so each card has a rich warm illustration
+    bg_candidates = sorted((ROOT / "samples" / "9_naver_brand_assets" / "clean_bg_illustrations").glob("*.jpg"))
+    if not bg_candidates:
+        bg_candidates = sorted((ROOT / "samples" / "2_webtoon_sample").glob("webtoon_cut_*.png"))
+
+    img = Image.new("RGBA", (W, H), (15, 23, 42, 255))
+    if bg_candidates:
+        seq_digits = re.findall(r"\d+", badge_text)
+        idx_pick = int(seq_digits[0]) if seq_digits else sum(ord(c) for c in main_title)
+        bg_path = bg_candidates[idx_pick % len(bg_candidates)]
+        try:
+            bg = Image.open(bg_path).convert("RGBA")
+            # Cover-crop to 1080x1350 focusing on upper 65% of illustration
+            bw, bh = bg.size
+            scale = max(W / bw, H / bh)
+            nw, nh = int(bw * scale), int(bh * scale)
+            bg_resized = bg.resize((nw, nh), Image.Resampling.LANCZOS)
+            left = (nw - W) // 2
+            top = max(0, (nh - H) // 3)
+            img = bg_resized.crop((left, top, left + W, top + H))
+        except Exception:
+            pass
+
+    # Multi-stop editorial dark gradient overlay for 100% legibility while showing the illustration at top
+    overlay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    odraw = ImageDraw.Draw(overlay)
+    for y_px in range(H):
+        if y_px < 380:
+            alpha = int(55 + (y_px / 380) * 65)
+        elif y_px < 640:
+            alpha = int(120 + ((y_px - 380) / 260) * 105)
+        else:
+            alpha = int(225 + ((y_px - 640) / (H - 640)) * 22)
+        odraw.line([(0, y_px), (W, y_px)], fill=(12, 19, 36, min(246, alpha)))
+
+    img = Image.alpha_composite(img, overlay)
     draw = ImageDraw.Draw(img)
 
-    draw.rectangle([0, 0, W, 22], fill=accent_rgb)
-    draw.rounded_rectangle([48, 56, W - 48, H - 56], radius=36, fill=(255, 255, 255), outline=(226, 232, 240), width=3)
+    # Top Accent Bar
+    draw.rectangle([0, 0, W, 16], fill=accent_rgb + (255,))
 
-    f_badge = get_korean_font(27, bold=True)
+    # Top Badge Pill
+    f_badge = get_korean_font(32, bold=True)
     b_box = draw.textbbox((0, 0), badge_text, font=f_badge)
-    pill_w = max(360, (b_box[2] - b_box[0]) + 64)
-    draw.rounded_rectangle([96, 98, 96 + pill_w, 160], radius=31, fill=(238, 242, 255))
-    draw.text((128, 112), badge_text, font=f_badge, fill=accent_rgb)
+    pill_w = (b_box[2] - b_box[0]) + 68
+    draw.rounded_rectangle([68, 58, 68 + pill_w, 128], radius=35, fill=accent_rgb + (242,), outline=(255, 255, 255, 190), width=2)
+    draw.text((102, 72), badge_text, font=f_badge, fill=(255, 255, 255, 255))
 
-    max_title_w = W - 192
-    title_font_size = 44
+    # Main Editorial Title (Giant 58px~48px with drop shadow)
+    clean_title = re.sub(r"^\[[^\]]+\]\s*", "", main_title.strip())
+    max_title_w = W - 136
+    title_font_size = 48
     f_title = get_korean_font(title_font_size, bold=True)
-    wrapped_lines = wrap_text_by_pixel_width(draw, main_title, f_title, max_title_w)
+    wrapped_lines = wrap_text_by_pixel_width(draw, clean_title, f_title, max_title_w)
     if len(wrapped_lines) > 3:
-        title_font_size = 36
+        title_font_size = 46
         f_title = get_korean_font(title_font_size, bold=True)
-        wrapped_lines = wrap_text_by_pixel_width(draw, main_title, f_title, max_title_w)
+        wrapped_lines = wrap_text_by_pixel_width(draw, clean_title, f_title, max_title_w)[:3]
 
-    y = 192
-    line_step = title_font_size + 20
+    ty = 435
+    line_step = title_font_size + 22
     for line in wrapped_lines:
-        draw.text((96, y), line, font=f_title, fill=(15, 23, 42))
-        y += line_step
+        draw.text((71, ty + 3), line, font=f_title, fill=(0, 0, 0, 210))
+        draw.text((68, ty), line, font=f_title, fill=(255, 255, 255, 255))
+        ty += line_step
 
-    divider_y = max(415, y + 18)
-    draw.line([96, divider_y, W - 96, divider_y], fill=(226, 232, 240), width=2)
+    # Gold Accent Divider
+    div_y = max(655, ty + 20)
+    draw.rounded_rectangle([68, div_y, 260, div_y + 8], radius=4, fill=(251, 191, 36, 255))
 
-    py = divider_y + 32
-    f_num = get_korean_font(28, bold=True)
+    # 3 High-Contrast Glass Takeaway Cards
+    py = div_y + 34
+    f_num = get_korean_font(34, bold=True)
     for idx, pt in enumerate(points[:3]):
         clean_pt = re.sub(r"^[①②③④⑤1-9\.\s]+", "", pt.strip())
-        box_h = 122
-        draw.rounded_rectangle([96, py, W - 96, py + box_h], radius=22, fill=(248, 250, 252), outline=(226, 232, 240), width=2)
+        box_h = 148
+        draw.rounded_rectangle(
+            [68, py, W - 68, py + box_h],
+            radius=26,
+            fill=(255, 255, 255, 242),
+            outline=accent_rgb + (220,),
+            width=3
+        )
 
-        cx, cy = 152, py + box_h // 2
-        draw.ellipse([cx - 24, cy - 24, cx + 24, cy + 24], fill=accent_rgb)
+        cx, cy = 132, py + box_h // 2
+        draw.ellipse([cx - 30, cy - 30, cx + 30, cy + 30], fill=accent_rgb + (255,))
         num_str = str(idx + 1)
         nb = draw.textbbox((0, 0), num_str, font=f_num)
-        draw.text((cx - (nb[2] - nb[0]) // 2, cy - (nb[3] - nb[1]) // 2 - 3), num_str, font=f_num, fill=(255, 255, 255))
+        draw.text((cx - (nb[2] - nb[0]) // 2, cy - (nb[3] - nb[1]) // 2 - 4), num_str, font=f_num, fill=(255, 255, 255, 255))
 
-        avail_w = (W - 120) - 196
-        pt_size = 31
+        avail_w = (W - 104) - 186
+        pt_size = 33
         f_pt = get_korean_font(pt_size, bold=True)
         pt_lines = wrap_text_by_pixel_width(draw, clean_pt, f_pt, avail_w)
         if len(pt_lines) > 1:
-            pt_size = 27
+            pt_size = 29
             f_pt = get_korean_font(pt_size, bold=True)
             pt_lines = wrap_text_by_pixel_width(draw, clean_pt, f_pt, avail_w)
 
         if len(pt_lines) == 1:
-            draw.text((196, py + (box_h - pt_size) // 2 - 4), pt_lines[0], font=f_pt, fill=(30, 41, 59))
+            draw.text((186, py + (box_h - pt_size) // 2 - 6), pt_lines[0], font=f_pt, fill=(15, 23, 42, 255))
         else:
-            draw.text((196, py + 22), pt_lines[0], font=f_pt, fill=(30, 41, 59))
-            draw.text((196, py + 64), " ".join(pt_lines[1:]), font=f_pt, fill=(30, 41, 59))
+            draw.text((186, py + 26), pt_lines[0], font=f_pt, fill=(15, 23, 42, 255))
+            draw.text((186, py + 76), " ".join(pt_lines[1:]), font=f_pt, fill=(30, 64, 175, 255))
 
         py += box_h + 22
 
-    draw.rounded_rectangle([96, 905, W - 96, 982], radius=20, fill=accent_rgb)
-    f_foot = get_korean_font(28, bold=True)
-    draw.text((136, 926), "키즈핏 그로스 스튜디오 · 공식 진단 https://kidsfit.co.kr", font=f_foot, fill=(255, 255, 255))
+    # Bottom Brand CTA Bar
+    draw.rounded_rectangle([68, 1215, W - 68, 1302], radius=24, fill=accent_rgb + (255,))
+    f_foot = get_korean_font(31, bold=True)
+    foot_text = "키즈핏 그로스 스튜디오 · 10초 무료 진단 kidsfit.co.kr"
+    fb = draw.textbbox((0, 0), foot_text, font=f_foot)
+    draw.text(((W - (fb[2] - fb[0])) // 2, 1238), foot_text, font=f_foot, fill=(255, 255, 255, 255))
 
-    img.save(str(out_path), "PNG")
+    img.convert("RGB").save(str(out_path), "PNG", optimize=True)
     return str(out_path)
 
 
@@ -631,16 +683,22 @@ def publish_blog_post(context, title: str, body: str, tags: list[str], img_path:
             time.sleep(0.3)
 
         if img_path and Path(img_path).exists():
-            img_btn = target.locator("button.se-image-toolbar-button").first
-            if img_btn.count() > 0:
-                try:
-                    with page.expect_file_chooser(timeout=5000) as fc_info:
-                        img_btn.click(force=True)
-                    fc = fc_info.value
-                    fc.set_files(img_path)
-                    time.sleep(4.0)
-                except Exception as e:
-                    print(f"⚠️ 블로그 이미지 첨부 스킵: {e}", flush=True)
+            for attempt in range(2):
+                img_btn = target.locator("button.se-image-toolbar-button, button[data-name='image']").first
+                if img_btn.count() == 0:
+                    img_btn = page.locator("button.se-image-toolbar-button, button[data-name='image']").first
+                if img_btn.count() > 0:
+                    try:
+                        with page.expect_file_chooser(timeout=8000) as fc_info:
+                            img_btn.click(force=True)
+                        fc = fc_info.value
+                        fc.set_files(str(img_path))
+                        time.sleep(5.0)
+                        if target.locator(".se-image-resource, .se-module-image").count() > 0:
+                            print(f"  🖼️ 블로그 대표 카드뉴스 첨부 확인 완료: {Path(img_path).name}", flush=True)
+                            break
+                    except Exception as e:
+                        print(f"⚠️ 블로그 이미지 첨부 재시도({attempt+1}): {e}", flush=True)
 
         body_para_last = target.locator(".se-component.se-text .se-text-paragraph").last
         if body_para_last.count() > 0:
@@ -756,20 +814,29 @@ def publish_cafe_post(context, board_name: str, title: str, body: str, tags: lis
             page.mouse.click(para_rect["x"] + 50, para_rect["y"] + 10)
             time.sleep(0.4)
 
-        type_multiline_into_se_one(page, body)
-        time.sleep(0.8)
-
         if img_path and Path(img_path).exists():
-            img_btn = page.locator("button.se-image-toolbar-button").first
-            if img_btn.count() > 0:
-                try:
-                    with page.expect_file_chooser(timeout=5000) as fc_info:
-                        img_btn.click(force=True)
-                    fc = fc_info.value
-                    fc.set_files([img_path])
-                    time.sleep(3.5)
-                except Exception as e:
-                    print(f"⚠️ 카페 이미지 첨부 스킵: {e}", flush=True)
+            for attempt in range(2):
+                img_btn = page.locator("button.se-image-toolbar-button, button[data-name='image']").first
+                if img_btn.count() > 0:
+                    try:
+                        with page.expect_file_chooser(timeout=8000) as fc_info:
+                            img_btn.click(force=True)
+                        fc = fc_info.value
+                        fc.set_files([str(img_path)])
+                        time.sleep(5.0)
+                        if page.locator(".se-image-resource, .se-module-image").count() > 0:
+                            print(f"  🖼️ 카페 대표 카드뉴스 첨부 확인 완료: {Path(img_path).name}", flush=True)
+                            break
+                    except Exception as e:
+                        print(f"⚠️ 카페 이미지 첨부 재시도({attempt+1}): {e}", flush=True)
+
+        body_para_last = page.locator(".se-component.se-text .se-text-paragraph").last
+        if body_para_last.count() > 0:
+            body_para_last.click(force=True)
+            time.sleep(0.3)
+        page.keyboard.press("Enter")
+        type_multiline_into_se_one(page, body)
+        time.sleep(1.0)
 
         tag_inp = page.locator("input.tag_input").first
         if tag_inp.count() > 0:

@@ -1635,7 +1635,7 @@
       } else if (isSedentary) {
         toys.push(tTramp68, tRope68, tBar68, tRoller68);
       } else if (isPoorPosture) {
-        toys.push(tStand68, tBar68, tTramp68, tRope68);
+        toys.push(tBar68, tRoller68, tTramp68, tRope68);
       } else {
         toys.push(tBar68, tRoller68, tTramp68, tRope68);
       }
@@ -1680,7 +1680,7 @@
       if (isSedentary) {
         toys.push(tTramp9, tRope9, tBar9);
       } else if (isPoorPosture) {
-        toys.push(tStand9, tBar9, tRope9, tTramp9);
+        toys.push(tBar9, tRope9, tTramp9);
       } else {
         toys.push(tBar9, tRope9, tTramp9);
       }
