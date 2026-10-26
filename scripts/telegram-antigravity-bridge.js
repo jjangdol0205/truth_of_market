@@ -26,7 +26,7 @@ const telegramNotifier = require('./telegram-notify.js');
 const PROJECT_ROOT = path.resolve(__dirname, '..');
 const STATE_PATH = path.join(PROJECT_ROOT, 'logs', 'telegram_bridge_state.json');
 
-const DEFAULT_CONVERSATION_ID = 'e6c1bb34-f211-4899-a864-42850c85ae86';
+const DEFAULT_CONVERSATION_ID = 'efdd0412-2586-40cf-bb28-0fa8976613df';
 
 function resolveCliConversationId() {
   const args = process.argv.slice(2);
