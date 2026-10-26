@@ -1121,22 +1121,22 @@ const server = http.createServer((req, res) => {
       res.end(JSON.stringify({
         ok: true,
         storeId: Number(process.env.LEMONSQUEEZY_STORE_ID || 296100),
-        storeName: 'KIDS-FIT Global Studio',
+        storeName: 'KISFIT Bio Labs',
         accountHolder: process.env.LEMONSQUEEZY_ACCOUNT_HOLDER || '이윤주 (Yoonju Lee)',
-        storeUrl: 'https://truthofmarket.lemonsqueezy.com',
+        storeUrl: 'https://app.lemonsqueezy.com',
         currency: 'USD',
         products: {
           singlePass: {
             productId: Number(process.env.LEMONSQUEEZY_SINGLE_PRODUCT_ID || 1468224),
             variantId: Number(process.env.LEMONSQUEEZY_SINGLE_VARIANT_ID || 2289754),
             priceUsd: 8.99,
-            checkoutUrl: process.env.LEMONSQUEEZY_SINGLE_PASS_URL || 'https://truthofmarket.lemonsqueezy.com/checkout/buy/c1cd7f12-3479-49e8-ab71-59c98135d599'
+            checkoutUrl: process.env.LEMONSQUEEZY_SINGLE_PASS_URL || 'https://app.lemonsqueezy.com/checkout/buy/c1cd7f12-3479-49e8-ab71-59c98135d599'
           },
           trackerPass: {
             productId: Number(process.env.LEMONSQUEEZY_TRACKER_PRODUCT_ID || 1468243),
             variantId: Number(process.env.LEMONSQUEEZY_TRACKER_VARIANT_ID || 2289779),
             priceUsd: 19.99,
-            checkoutUrl: process.env.LEMONSQUEEZY_TRACKER_PASS_URL || 'https://truthofmarket.lemonsqueezy.com/checkout/buy/c562946d-ef68-4c2f-a802-df9da0179895'
+            checkoutUrl: process.env.LEMONSQUEEZY_TRACKER_PASS_URL || 'https://app.lemonsqueezy.com/checkout/buy/c562946d-ef68-4c2f-a802-df9da0179895'
           }
         },
         webhookId: Number(process.env.LEMONSQUEEZY_WEBHOOK_ID || 145796)
@@ -1328,8 +1328,8 @@ const server = http.createServer((req, res) => {
           ? String(process.env.LEMONSQUEEZY_TRACKER_VARIANT_ID || '2289779')
           : String(process.env.LEMONSQUEEZY_SINGLE_VARIANT_ID || '2289754');
         const fallbackUrl = isPass
-          ? (process.env.LEMONSQUEEZY_TRACKER_PASS_URL || 'https://truthofmarket.lemonsqueezy.com/checkout/buy/c562946d-ef68-4c2f-a802-df9da0179895')
-          : (process.env.LEMONSQUEEZY_SINGLE_PASS_URL || 'https://truthofmarket.lemonsqueezy.com/checkout/buy/c1cd7f12-3479-49e8-ab71-59c98135d599');
+          ? (process.env.LEMONSQUEEZY_TRACKER_PASS_URL || 'https://app.lemonsqueezy.com/checkout/buy/c562946d-ef68-4c2f-a802-df9da0179895')
+          : (process.env.LEMONSQUEEZY_SINGLE_PASS_URL || 'https://app.lemonsqueezy.com/checkout/buy/c1cd7f12-3479-49e8-ab71-59c98135d599');
         const cleanEmail = String(emailParam || '').trim();
 
         if (!lsApiKey) {
@@ -1343,9 +1343,17 @@ const server = http.createServer((req, res) => {
             type: 'checkouts',
             attributes: {
               product_options: {
+                name: isPass ? 'KISFIT Bio Labs — 6-Month Growth & Brain Monthly Care Pass' : 'KISFIT Bio Labs — Pediatric Growth & Brain Clinical Report (Single Pass)',
+                description: 'Instant 100% Full Unlock on https://kisfitglobal.com (US CDC/WHO Height Predictor, Bone-Age Window & 5-Axis Brain LQ Report)',
                 redirect_url: 'https://kisfitglobal.com/?unlock=1&payment=success',
-                receipt_button_text: 'Open Unlocked KIDS-FIT Clinical Report',
+                receipt_button_text: 'Open Unlocked KISFIT Bio Labs Clinical Report',
                 receipt_link_url: 'https://kisfitglobal.com/?unlock=1&payment=success'
+              },
+              checkout_options: {
+                embed: true,
+                media: true,
+                logo: true,
+                button_color: '#2563EB'
               },
               checkout_data: cleanEmail && cleanEmail.includes('@') ? { email: cleanEmail } : {}
             },

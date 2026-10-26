@@ -5,9 +5,9 @@
  * 1. Enforces 100% English-Only Mode (US CDC 2000 & WHO Growth Standards + 3,714 PubMed Papers).
  * 2. Converts the language button into an Imperial (ft/in, lbs) <-> Metric (cm, kg) Unit Switcher.
  * 3. Translates the Homepage Dual-Pillar Showcase, SVG Chart Previews, Quiz, and Master Clinical Report into 100% native English (ZERO Korean text).
- * 4. Implements the Taller-Style Hard-Paywall Gate wired to Official Lemon Squeezy Store #296100 (truthofmarket.lemonsqueezy.com):
- *    - Single Report Pass ($8.99 USD): https://truthofmarket.lemonsqueezy.com/checkout/buy/c1cd7f12-3479-49e8-ab71-59c98135d599
- *    - 6-Month Growth & Brain Tracker Pass ($19.99 USD): https://truthofmarket.lemonsqueezy.com/checkout/buy/c562946d-ef68-4c2f-a802-df9da0179895
+ * 4. Implements the Taller-Style Hard-Paywall Gate wired to Official Lemon Squeezy Store #296100 (app.lemonsqueezy.com):
+ *    - Single Report Pass ($8.99 USD): https://app.lemonsqueezy.com/checkout/buy/c1cd7f12-3479-49e8-ab71-59c98135d599
+ *    - 6-Month Growth & Brain Tracker Pass ($19.99 USD): https://app.lemonsqueezy.com/checkout/buy/c562946d-ef68-4c2f-a802-df9da0179895
  *    - Supports Lemon.js Overlay Checkout + Direct Checkout Redirect + VIP Owner Passcode ('VIP2026').
  */
 
@@ -17,9 +17,9 @@
   const UNLOCK_STORAGE_KEY = 'kidsfit_global_report_unlocked_v1';
   const CHECKOUT_URLS_KEY = 'kidsfit_global_checkout_urls_v1';
 
-  // Official Live Lemon Squeezy Store #296100 (KISFIT Global Studio / truthofmarket.lemonsqueezy.com)
-  const DEFAULT_SINGLE_CHECKOUT_URL = 'https://truthofmarket.lemonsqueezy.com/checkout/buy/c1cd7f12-3479-49e8-ab71-59c98135d599';
-  const DEFAULT_PASS_CHECKOUT_URL = 'https://truthofmarket.lemonsqueezy.com/checkout/buy/c562946d-ef68-4c2f-a802-df9da0179895';
+  // Official Live Lemon Squeezy Store #296100 (KISFIT Bio Labs / app.lemonsqueezy.com)
+  const DEFAULT_SINGLE_CHECKOUT_URL = 'https://app.lemonsqueezy.com/checkout/buy/c1cd7f12-3479-49e8-ab71-59c98135d599';
+  const DEFAULT_PASS_CHECKOUT_URL = 'https://app.lemonsqueezy.com/checkout/buy/c562946d-ef68-4c2f-a802-df9da0179895';
 
   function isGlobalPaidEdition() {
     try {
@@ -2588,13 +2588,33 @@
       ? `${baseCheckoutUrl}${sep}embed=1&checkout[email]=${encodeURIComponent(email)}`
       : `${baseCheckoutUrl}${sep}embed=1`;
 
-    const openTargetUrl = function (targetUrl) {
-      if (typeof window !== 'undefined' && window.LemonSqueezy && typeof window.LemonSqueezy.Url === 'object' && typeof window.LemonSqueezy.Url.Open === 'function') {
-        window.LemonSqueezy.Url.Open(targetUrl);
-        return;
-      }
-      if (typeof window !== 'undefined' && typeof window.open === 'function') {
-        window.open(targetUrl, '_blank', 'noopener,noreferrer');
+    const openTargetUrl = function (rawUrl) {
+      const hasEmbed = String(rawUrl || '').indexOf('embed=1') !== -1;
+      const targetUrl = hasEmbed ? rawUrl : (rawUrl + (String(rawUrl || '').indexOf('?') === -1 ? '?embed=1' : '&embed=1'));
+      try {
+        if (typeof window !== 'undefined' && typeof window.createLemonSqueezy === 'function') {
+          window.createLemonSqueezy();
+        }
+        if (typeof window !== 'undefined' && window.LemonSqueezy && typeof window.LemonSqueezy.Url === 'object' && typeof window.LemonSqueezy.Url.Open === 'function') {
+          window.LemonSqueezy.Url.Open(targetUrl);
+          return;
+        }
+      } catch (_) {}
+
+      if (typeof document !== 'undefined' && document.body) {
+        let iframeModal = document.getElementById('kidsfit-embedded-ls-iframe-modal');
+        if (iframeModal) iframeModal.remove();
+        iframeModal = document.createElement('div');
+        iframeModal.id = 'kidsfit-embedded-ls-iframe-modal';
+        iframeModal.style.cssText = 'position:fixed;inset:0;z-index:100005;background:rgba(15,23,42,0.82);display:flex;align-items:center;justify-content:center;padding:0.75rem;backdrop-filter:blur(5px);';
+        iframeModal.innerHTML = '<div style="background:#FFFFFF;border:2px solid #1D4ED8;border-radius:20px;max-width:520px;width:100%;height:86vh;max-height:760px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 25px 60px rgba(0,0,0,0.45);">' +
+          '<div style="background:#0F172A;color:#FFFFFF;padding:0.75rem 1.1rem;display:flex;justify-content:space-between;align-items:center;">' +
+          '<span style="font-size:0.82rem;font-weight:900;letter-spacing:0.02em;">🔒 KISFIT BIO LABS · SECURE USD CHECKOUT (kisfitglobal.com)</span>' +
+          '<button type="button" onclick="var m=document.getElementById(\'kidsfit-embedded-ls-iframe-modal\');if(m)m.remove();" style="background:#1E293B;color:#FFFFFF;border:1px solid #475569;border-radius:9999px;width:30px;height:30px;font-weight:900;cursor:pointer;">✕</button>' +
+          '</div>' +
+          '<iframe src="' + targetUrl + '" allow="payment *" style="width:100%;flex:1;border:none;background:#FFFFFF;"></iframe>' +
+          '</div>';
+        document.body.appendChild(iframeModal);
         return;
       }
       if (typeof window !== 'undefined' && window.location) {
@@ -2751,6 +2771,7 @@
 
   function initGlobalPaywallEdition() {
     if (!isGlobalPaidEdition()) return;
+    ensureLemonSqueezyScriptLoaded();
     applyGlobalHomepageEnglishDOM();
 
     // Auto-restore report view when returning from Lemon Squeezy checkout (?unlock=1&payment=success)
