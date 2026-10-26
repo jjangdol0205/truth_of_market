@@ -3742,7 +3742,7 @@ html body .bento-card {
 }
 
 /* ==========================================================================
-   28. US SILICON VALLEY HEALTHTECH & BENTO DESIGN SYSTEM (truthofmarket.com)
+   28. US SILICON VALLEY HEALTHTECH & BENTO DESIGN SYSTEM (kisfitglobal.com)
    Inspired by Function Health, Levels, Hims, Whoop & Taller App
    ========================================================================== */
 
@@ -3871,3 +3871,20 @@ html[data-edition="global-paid"] select.form-input:focus {
 
 
 
+
+/* ==========================================================================
+   29. PAYWALL PRINT GUARD (@media print protection for unpaid reports)
+   ========================================================================== */
+@media print {
+  html[data-edition="global-paid"][data-paywall-state="locked"] #results-dashboard,
+  html[data-edition="global-paid"][data-paywall-state="locked"] #master-briefing-card,
+  html[data-edition="global-paid"][data-paywall-state="locked"] #pillar-1-container,
+  html[data-edition="global-paid"][data-paywall-state="locked"] #pillar-2-container {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  html[data-edition="global-paid"][data-paywall-state="locked"] #clinic-print-report-container {
+    display: block !important;
+    visibility: visible !important;
+  }
+}

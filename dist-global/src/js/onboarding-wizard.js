@@ -231,7 +231,7 @@
       cognitiveAxes: ['science_nature'],
       traitLearningConcerns: ['reading_literacy'],
       traitStudyStyle: 'dialogue_question',
-      region: '서울 강남·서초·송파'
+      region: 'US National (CDC/AAP Standard)'
     }
   };
 
@@ -430,7 +430,13 @@
     const boyRadio = document.getElementById('gender-boy');
     const gender = (boyRadio && boyRadio.checked) ? 'boy' : 'girl';
     const recentInput = document.getElementById('child-recent-gain');
-    const recent6m = recentInput ? parseFloat(recentInput.value) || 3.2 : 3.2;
+    const isImpGain = typeof isCurrentImperial === 'function'
+      ? isCurrentImperial()
+      : (typeof document !== 'undefined' && document.documentElement.lang === 'en' && typeof global.TallerI18n !== 'undefined' && global.TallerI18n.getUnitSystem() === 'imperial');
+    const rawRecent = recentInput ? parseFloat(recentInput.value) : NaN;
+    const recent6m = !isNaN(rawRecent) && rawRecent > 0
+      ? (isImpGain ? Math.round(rawRecent * 2.54 * 10) / 10 : rawRecent)
+      : 3.2;
 
     const dobInfo = PinpointCurator.calculateExactAgeFromDob(yearEl.value, monthEl.value, dayEl.value);
     const autoStage = PinpointCurator.autoDetectGrowthStage(dobInfo.exactMonths, gender, recent6m);
@@ -1389,7 +1395,7 @@
 
     // Region & Ethnicity
     const regionSelect = document.getElementById('user-region');
-    const region = regionSelect ? regionSelect.value : '서울 강남·서초·송파';
+    const region = regionSelect ? regionSelect.value : 'US National (CDC/AAP Standard)';
     const ethnicitySelect = document.getElementById('child-ethnicity');
     const ethnicity = (ethnicitySelect && ethnicitySelect.value) ? ethnicitySelect.value : 'us_general';
 

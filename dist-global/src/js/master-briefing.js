@@ -1936,7 +1936,7 @@
         <div class="briefing-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1rem; border-bottom: 1px solid #BFDBFE; padding-bottom: 0.9rem;">
           <div>
             <span id="master-report-header-badge" class="section-badge-pill" style="display: inline-flex; align-items: center; gap: 0.35rem; background: ${isLearningDefault ? '#EFF6FF' : '#EFF6FF'}; color: ${isLearningDefault ? '#1D4ED8' : '#1D4ED8'}; font-size: 0.82rem; font-weight: 800; padding: 0.25rem 0.75rem; border-radius: 9999px; border: 1px solid ${isLearningDefault ? '#EFF6FF' : '#EFF6FF'}; margin-bottom: 0.35rem;">
-              ${isEn ? 'KIDS-FIT · PRECISION REPORT' : (isLearningDefault ? `KIDS-FIT · 만 ${ageYears}세 맞춤 두뇌·학습 시각 진단서` : guidebookEditionLabel)}
+              ${isEn ? 'KISFIT · PRECISION REPORT' : (isLearningDefault ? `KISFIT · 만 ${ageYears}세 맞춤 두뇌·학습 시각 진단서` : guidebookEditionLabel)}
             </span>
             <h2 id="master-report-header-title" class="briefing-title" style="font-size: 1.38rem; font-weight: 900; color: #0F172A; margin: 0.15rem 0; word-break: keep-all;">
               ${isEn
@@ -3617,7 +3617,7 @@
           </div>
         </div>
         <template id="learning-clinical-archive-metadata" style="display:none" data-age="${ageYears}" data-style="${studyStyleKey}" data-temp="${tempKey}" data-axis="${cogAxisPrimary}">
-          [KIDS-FIT NEURO-COGNITIVE CLINICAL ARCHIVE | 만 ${ageYears}세(${exactMonths.toFixed(1)}개월) × ${activeStyleInfo.badge} × ${tempTraitLabelKo} × ${focusTraitLabelKo}]
+          [KISFIT NEURO-COGNITIVE CLINICAL ARCHIVE | 만 ${ageYears}세(${exactMonths.toFixed(1)}개월) × ${activeStyleInfo.badge} × ${tempTraitLabelKo} × ${focusTraitLabelKo}]
           1. K-DST 및 뇌인지 신경과학 정밀 매트릭스: 문해·어휘(${lqData.scores.literacy_vocab}점), 수리·공간추론(${lqData.scores.math_spatial}점), 전두엽 작업기억·집중(${lqData.scores.working_memory_focus}점), 해마 메타인지·인출(${lqData.scores.metacognition_retrieval}점), 과학 탐구·창의표현(${lqData.scores.inquiry_creative}점) — 종합 LQ ${lqData.overallLQ.toFixed(1)}점(상위 ${lqData.topPercent}%).
           2. 강점 시냅스 회로 분석: ${strengthsList.map(s => s.title + '(' + s.score + '점): ' + s.goodTrait + ' -> ' + s.howToBoost + ' [' + s.helpfulTools + ']').join(' | ')}.
           3. 보완 타겟 회로 분석: ${weaknessesList.map(w => w.title + '(' + w.score + '점): ' + w.weakTrait + ' -> ' + w.howToFix + ' [' + w.helpfulTools + ']').join(' | ')}.
@@ -3888,7 +3888,7 @@
         <div id="official-4channel-community-hub" style="margin-top: 1.2rem; margin-bottom: 1.2rem; background: #F8FAFC; border: 1.5px solid #BFDBFE; border-radius: 20px; padding: 1.2rem 1.3rem; text-align: left;">
           <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.55rem;">
             <span style="background: #EFF6FF; color: #1D4ED8; font-size: 0.78rem; font-weight: 900; padding: 0.22rem 0.7rem; border-radius: 9999px; border: 1px solid #BFDBFE;">
-              KIDS-FIT 공식 4대 채널
+              KISFIT 공식 4대 채널
             </span>
             <span style="font-size: 0.76rem; color: #475569; font-weight: 800;">
               블로그·카페 심층 칼럼 | 인스타·쓰레드 4칸 웹툰
@@ -4405,7 +4405,7 @@
       const height = (btn && btn.getAttribute('data-height')) || '137';
       const opt = (btn && btn.getAttribute('data-opt')) || '177';
       const text = isEn
-        ? `[Periodic Growth Check-in Routine] Child (Age ${age}, Current ${height}cm) Target Potential ${opt}cm Action Plan! 1) 1st of every month: re-measure height. 2) Weekly 10 PM sleep & spine decompression check. 3) Every 3 months: update weight-proportional nutrition. https://truthofmarket.com`
+        ? `[Periodic Growth Check-in Routine] Child (Age ${age}, Current ${height}cm) Target Potential ${opt}cm Action Plan! 1) 1st of every month: re-measure height. 2) Weekly 10 PM sleep & spine decompression check. 3) Every 3 months: update weight-proportional nutrition. https://kisfitglobal.com`
         : `[신체 성장 정기 재점검 알림장] 우리 아이(만 ${age}세, 현재 ${height}cm) 목표 잠재키 ${opt}cm 달성 루틴! ①매월 1일 아침 키 재점검 ②매주 밤10시 수면·철봉 체크 ③3개월마다 체중비례 영양 재조정 https://kidsfit.co.kr`;
       if (typeof navigator !== 'undefined' && navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(text);
@@ -4426,7 +4426,7 @@
       const lq = (btn && btn.getAttribute('data-lq')) || '78';
       const target = (btn && btn.getAttribute('data-target')) || '90';
       const text = isEn
-        ? `[Periodic Brain & Learning Check-in Routine] Child (Age ${age}, ${style}) LQ ${lq} -> Target ${target} Action Plan! 1) Every Friday: review & focus check. 2) 1st of every month: evaluate strengths/weaknesses LQ scores. 3) Every 3 months: upgrade tailored reading & weekend learning courses. https://truthofmarket.com`
+        ? `[Periodic Brain & Learning Check-in Routine] Child (Age ${age}, ${style}) LQ ${lq} -> Target ${target} Action Plan! 1) Every Friday: review & focus check. 2) 1st of every month: evaluate strengths/weaknesses LQ scores. 3) Every 3 months: upgrade tailored reading & weekend learning courses. https://kisfitglobal.com`
         : `[두뇌·학습 정기 재점검 알림장] 우리 아이(만 ${age}세, ${style}) LQ ${lq}점 → 목표 ${target}점 달성 루틴! ①매주 금요일 복습·몰입시간 체크 ②매월 1일 강점·약점 LQ 재진단 ③3개월마다 맞춤 교재·주말체험 업그레이드 https://kidsfit.co.kr`;
       if (typeof navigator !== 'undefined' && navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(text);

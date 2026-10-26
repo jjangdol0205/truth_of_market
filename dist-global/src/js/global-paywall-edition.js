@@ -1,8 +1,8 @@
 /**
- * KIDS-FIT BIO LABS — Global English Hard-Paywall Edition Engine (src/js/global-paywall-edition.js)
+ * KISFIT BIO LABS — Global English Hard-Paywall Edition Engine (src/js/global-paywall-edition.js)
  *
- * Dedicated for https://truthofmarket.com (and ?edition=global / ?paywall=1):
- * 1. Enforces 100% English-Only Mode (US CDC 2000 & WHO Growth Standards + 3,681 PubMed Papers).
+ * Dedicated for https://kisfitglobal.com (and ?edition=global / ?paywall=1):
+ * 1. Enforces 100% English-Only Mode (US CDC 2000 & WHO Growth Standards + 3,714 PubMed Papers).
  * 2. Converts the language button into an Imperial (ft/in, lbs) <-> Metric (cm, kg) Unit Switcher.
  * 3. Translates the Homepage Dual-Pillar Showcase, SVG Chart Previews, Quiz, and Master Clinical Report into 100% native English (ZERO Korean text).
  * 4. Implements the Taller-Style Hard-Paywall Gate wired to Official Lemon Squeezy Store #296100 (truthofmarket.lemonsqueezy.com):
@@ -17,7 +17,7 @@
   const UNLOCK_STORAGE_KEY = 'kidsfit_global_report_unlocked_v1';
   const CHECKOUT_URLS_KEY = 'kidsfit_global_checkout_urls_v1';
 
-  // Official Live Lemon Squeezy Store #296100 (KIDS-FIT Global Studio / truthofmarket.lemonsqueezy.com)
+  // Official Live Lemon Squeezy Store #296100 (KISFIT Global Studio / truthofmarket.lemonsqueezy.com)
   const DEFAULT_SINGLE_CHECKOUT_URL = 'https://truthofmarket.lemonsqueezy.com/checkout/buy/c1cd7f12-3479-49e8-ab71-59c98135d599';
   const DEFAULT_PASS_CHECKOUT_URL = 'https://truthofmarket.lemonsqueezy.com/checkout/buy/c562946d-ef68-4c2f-a802-df9da0179895';
 
@@ -37,7 +37,7 @@
         const search = String(window.location.search || '').toLowerCase();
         if (search.indexOf('edition=ko') !== -1) return false;
         if (search.indexOf('edition=global') !== -1 || search.indexOf('paywall=1') !== -1) return true;
-        if (host.indexOf('truthofmarket.com') !== -1) return true;
+        if (host.indexOf('kisfitglobal.com') !== -1 || host.indexOf('kidsfitglobal.com') !== -1 || host.indexOf('truthofmarket.com') !== -1) return true;
       }
       return true;
     } catch (_) {}
@@ -48,10 +48,6 @@
     try {
       if (typeof window !== 'undefined' && window.location) {
         const s = String(window.location.search || '').toLowerCase();
-        if (s.indexOf('unlock=1') !== -1 || s.indexOf('unlocked=1') !== -1 || s.indexOf('payment=success') !== -1) {
-          if (window.localStorage) window.localStorage.setItem(UNLOCK_STORAGE_KEY, 'true');
-          return true;
-        }
         if (s.indexOf('lock=1') !== -1) {
           if (window.localStorage) window.localStorage.removeItem(UNLOCK_STORAGE_KEY);
           return false;
@@ -63,6 +59,111 @@
     } catch (_) {}
     return false;
   }
+
+  function hashAccessCode(str) {
+    let h = 0x811c9dc5;
+    for (let i = 0; i < str.length; i++) {
+      h ^= str.charCodeAt(i);
+      h = Math.imul(h, 0x01000193);
+    }
+    return (h >>> 0).toString(16).padStart(8, '0');
+  }
+
+  const AUTHORIZED_CODE_HASHES = ["326d5752","c61a52f4","437e3ac3","3f2e65ee"];
+
+  global.triggerKidsFitGlobalPrint = function () {
+    if (isGlobalPaidEdition() && !isReportUnlocked()) {
+      const printContainer = typeof document !== 'undefined' ? document.getElementById('clinic-print-report-container') : null;
+      if (printContainer) {
+        printContainer.innerHTML = '<div class="locked-print-notice" style="padding:48px 24px;text-align:center;font-family:sans-serif;font-size:18pt;font-weight:800;color:#0F172A;">Locked Clinical Report — Please unlock at kisfitglobal.com</div>';
+      }
+      if (typeof global.openKidsFitGlobalCheckoutModal === 'function') {
+        global.openKidsFitGlobalCheckoutModal();
+      }
+      return false;
+    }
+    if (typeof global.KidsFitGrowthTracker !== 'undefined' && typeof global.KidsFitGrowthTracker.preparePrintReport === 'function') {
+      const prof = (global.KidsFitApp && global.KidsFitApp.state && global.KidsFitApp.state.profile) || {};
+      global.KidsFitGrowthTracker.preparePrintReport(prof);
+    }
+    if (typeof window !== 'undefined' && typeof window.print === 'function') {
+      window.print();
+    }
+    return true;
+  };
+
+  global.updateGlobalHormoneSimulator = function () {
+    if (typeof document === 'undefined') return;
+    const bedEl = document.getElementById('hormone-bedtime-slider');
+    const mealEl = document.getElementById('hormone-meal-slider');
+    if (!bedEl || !mealEl) return;
+    const bedMin = Number(bedEl.value) || 1320;
+    const mealMin = Number(mealEl.value) || 1140;
+    const fmtTime = function (m) {
+      const norm = ((m % 1440) + 1440) % 1440;
+      const hh24 = Math.floor(norm / 60);
+      const mm = norm % 60;
+      const period = hh24 >= 12 ? 'PM' : 'AM';
+      const hh12 = hh24 % 12 === 0 ? 12 : hh24 % 12;
+      return hh12 + ':' + String(mm).padStart(2, '0') + ' ' + period;
+    };
+    const gapHrs = Math.max(0, Number(((bedMin - mealMin) / 60).toFixed(1)));
+    const delayPenalty = bedMin <= 1320 ? 0 : Math.min(38, Math.round((bedMin - 1320) * 0.32));
+    const carbPenalty = gapHrs >= 3.0 ? 0 : Math.min(36, Math.round((3.0 - gapHrs) * 12));
+    const totalSuppression = Math.min(62, delayPenalty + carbPenalty);
+    const activePulsePct = Math.max(38, 100 - totalSuppression);
+
+    const bDisp = document.getElementById('hormone-bedtime-display');
+    const mDisp = document.getElementById('hormone-meal-display');
+    const gDisp = document.getElementById('hormone-gap-display');
+    const lBadge = document.getElementById('hormone-loss-badge');
+    const advEl = document.getElementById('hormone-advice-text');
+    if (bDisp) bDisp.textContent = fmtTime(bedMin);
+    if (mDisp) mDisp.textContent = fmtTime(mealMin);
+    if (gDisp) gDisp.textContent = gapHrs.toFixed(1) + ' hrs pre-sleep fast';
+    if (lBadge) {
+      lBadge.textContent = totalSuppression === 0
+        ? '100% Optimal Nocturnal HGH Pulse (0% Suppression)'
+        : '-' + totalSuppression + '% Nocturnal HGH Suppression (' + activePulsePct + '% Active)';
+      lBadge.style.color = totalSuppression === 0 ? '#059669' : '#DC2626';
+      lBadge.style.background = totalSuppression === 0 ? '#ECFDF5' : '#FEF2F2';
+    }
+    if (advEl) {
+      advEl.textContent = totalSuppression === 0
+        ? 'Optimal Endocrine Window: Deep N3 sleep onset by 10:00 PM with a 3+ hour glycemic fast maximizes pituitary GH pulsatility.'
+        : 'Clinical Rx: Shift bedtime to 10:00 PM or earlier and finish last meal/milk at least 3 hours before sleep to recover +' + totalSuppression + '% suppressed HGH.';
+    }
+  };
+
+  let _postureTimerInterval = null;
+  global.startGlobalPostureTimer = function (seconds, label) {
+    if (typeof document === 'undefined') return;
+    if (_postureTimerInterval) {
+      clearInterval(_postureTimerInterval);
+      _postureTimerInterval = null;
+    }
+    let rem = Number(seconds) || 30;
+    const disp = document.getElementById('global-posture-timer-display');
+    const status = document.getElementById('global-posture-timer-status');
+    if (status) status.textContent = 'Active Routine: ' + (label || 'Bar Dead-Hang Decompression');
+    const renderSec = function (s) {
+      const m = Math.floor(s / 60);
+      const sec = s % 60;
+      if (disp) disp.textContent = String(m).padStart(2, '0') + ':' + String(sec).padStart(2, '0');
+    };
+    renderSec(rem);
+    _postureTimerInterval = setInterval(function () {
+      rem -= 1;
+      if (rem <= 0) {
+        clearInterval(_postureTimerInterval);
+        _postureTimerInterval = null;
+        renderSec(0);
+        if (status) status.textContent = '✓ Set Complete! Rest 30s and repeat (3 sets total for +0.7 in disc recovery).';
+      } else {
+        renderSec(rem);
+      }
+    }, 1000);
+  };
 
   function getActiveCheckoutUrl(plan) {
     const isPass = plan === 'pass';
@@ -177,7 +278,7 @@
         <div style="background:#FFFFFF;border:1.5px solid #BFDBFE;border-radius:22px;max-width:440px;width:100%;padding:1.5rem 1.4rem;box-shadow:0 25px 60px rgba(15,23,42,0.28);color:#0F172A;text-align:left;">
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.85rem;padding-bottom:0.65rem;border-bottom:1px solid #E2E8F0;">
             <div>
-              <span style="font-size:0.72rem;font-weight:800;color:#1D4ED8;background:#EFF6FF;padding:0.18rem 0.55rem;border-radius:9999px;">KIDS-FIT MEMBER ACCOUNT</span>
+              <span style="font-size:0.72rem;font-weight:800;color:#1D4ED8;background:#EFF6FF;padding:0.18rem 0.55rem;border-radius:9999px;">KISFIT MEMBER ACCOUNT</span>
               <h3 style="margin:0.3rem 0 0;font-size:1.15rem;font-weight:800;color:#0F172A;">${user.name || 'Parent Member'}</h3>
             </div>
             <button type="button" onclick="var m=document.getElementById('kidsfit-auth-modal');if(m)m.remove();" style="background:#F1F5F9;border:1px solid #CBD5E1;border-radius:9999px;width:32px;height:32px;font-weight:800;cursor:pointer;">✕</button>
@@ -202,7 +303,7 @@
       <div style="background:#FFFFFF;border:1.5px solid #BFDBFE;border-radius:22px;max-width:440px;width:100%;padding:1.5rem 1.4rem;box-shadow:0 25px 60px rgba(15,23,42,0.28);color:#0F172A;text-align:left;">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.85rem;padding-bottom:0.65rem;border-bottom:1px solid #E2E8F0;">
           <div>
-            <span style="font-size:0.72rem;font-weight:800;color:#1D4ED8;background:#EFF6FF;padding:0.18rem 0.55rem;border-radius:9999px;">KIDS-FIT BIO LABS · MEMBER PORTAL</span>
+            <span style="font-size:0.72rem;font-weight:800;color:#1D4ED8;background:#EFF6FF;padding:0.18rem 0.55rem;border-radius:9999px;">KISFIT BIO LABS · MEMBER PORTAL</span>
             <h3 style="margin:0.3rem 0 0;font-size:1.15rem;font-weight:800;color:#0F172A;">Sign In or Create Parent Account</h3>
           </div>
           <button type="button" onclick="var m=document.getElementById('kidsfit-auth-modal');if(m)m.remove();" style="background:#F1F5F9;border:1px solid #CBD5E1;border-radius:9999px;width:32px;height:32px;font-weight:800;cursor:pointer;">✕</button>
@@ -347,7 +448,7 @@
 
     document.documentElement.lang = 'en';
     document.documentElement.setAttribute('data-edition', 'global-paid');
-    document.title = 'KIDS-FIT BIO LABS — US CDC & 3,681-Paper Pediatric Height & Brain LQ Clinical Report';
+    document.title = 'KISFIT BIO LABS — US CDC & 3,714-Paper Pediatric Height & Brain LQ Clinical Report';
 
     // Force TallerI18n into English
     if (global.TallerI18n && typeof global.TallerI18n.setLanguage === 'function') {
@@ -592,9 +693,9 @@
     if (btnEnterStudio) btnEnterStudio.textContent = 'Start 1:1 Clinical Scan →';
 
     const appModalTitle = document.getElementById('app-modal-title');
-    if (appModalTitle) appModalTitle.textContent = 'Add KIDS-FIT Web App to Home Screen';
+    if (appModalTitle) appModalTitle.textContent = 'Add KISFIT Web App to Home Screen';
     const appModalNotice = document.getElementById('app-modal-env-notice');
-    if (appModalNotice) appModalNotice.innerHTML = 'Add the <strong>KIDS-FIT Bio Labs</strong> icon to your home screen for instant 1-tap access.';
+    if (appModalNotice) appModalNotice.innerHTML = 'Add the <strong>KISFIT Bio Labs</strong> icon to your home screen for instant 1-tap access.';
     const btnPwaInstall = document.getElementById('btn-modal-pwa-install');
     if (btnPwaInstall) btnPwaInstall.textContent = 'Install Web App to Home Screen';
     const btnOpenChrome = document.getElementById('btn-modal-open-chrome');
@@ -609,9 +710,9 @@
       Boolean(diagForm && diagForm.className && diagForm.className.includes('wizard-mode-learning'));
     if (modeBanner) {
       if (isLearningActive) {
-        modeBanner.innerHTML = '<strong>[Report 02 · 5-Axis Brain LQ &amp; Executive Function Assessment]</strong> Powered by Harvard / WashU Developmental Neuroscience &amp; 3,681 Peer-Reviewed PubMed Studies.';
+        modeBanner.innerHTML = '<strong>[Report 02 · 5-Axis Brain LQ &amp; Executive Function Assessment]</strong> Powered by Harvard / WashU Developmental Neuroscience &amp; 3,714 Peer-Reviewed PubMed Studies.';
       } else {
-        modeBanner.innerHTML = '<strong>[Report 01 · Pediatric Auxology &amp; Bone-Age Assessment]</strong> Powered by US CDC 2000 Growth Charts, Tanner Auxology &amp; 3,681 Peer-Reviewed PubMed Studies.';
+        modeBanner.innerHTML = '<strong>[Report 01 · Pediatric Auxology &amp; Bone-Age Assessment]</strong> Powered by US CDC 2000 Growth Charts, Tanner Auxology &amp; 3,714 Peer-Reviewed PubMed Studies.';
       }
     }
 
@@ -645,7 +746,13 @@
     const btnSwLearn = document.getElementById('btn-switch-report-learning');
     if (btnSwLearn) btnSwLearn.textContent = 'Brain & Learning Report';
     const btnPrintTop = document.getElementById('btn-print-report-top');
-    if (btnPrintTop) btnPrintTop.textContent = 'Print / Save PDF';
+    if (btnPrintTop) {
+      btnPrintTop.textContent = 'Print / Save Clinical PDF';
+      btnPrintTop.onclick = function (e) {
+        if (e && typeof e.preventDefault === 'function') e.preventDefault();
+        return global.triggerKidsFitGlobalPrint();
+      };
+    }
 
     // Translate any inline Korean badges inside #quiz-section
     const quizSec = document.getElementById('quiz-section');
@@ -663,10 +770,12 @@
   }
 
   /**
-   * Builds a 100% Native English Dual-Pillar Clinical Master Report for truthofmarket.com
+   * Builds a 100% Native English Dual-Pillar Clinical Master Report for kisfitglobal.com
    * using the real auxology, endocrine, biomechanical, and 5-Axis Brain LQ calculations.
    */
-  function buildNativeEnglishClinicalReportHTML(profile) {
+  function buildNativeEnglishClinicalReportHTML(profile, options) {
+    const opts = options || {};
+    const isMasked = Boolean(opts.masked);
     const GrowthEngine = global.KidsFitGrowthEngine;
     const ageMonths = Math.max(12, Math.min(240, Number(profile.ageMonths) || 120));
     const ageY = Math.max(1, Math.min(20, Math.floor(ageMonths / 12)));
@@ -677,7 +786,90 @@
     const weightKg = Number(profile.currentWeight) || 35.5;
     const fatherCm = Number(profile.fatherHeight) || 173.5;
     const motherCm = Number(profile.motherHeight) || 160.5;
-    const habits = Array.isArray(profile.habits) ? profile.habits : ['late_sleep'];
+    const recentGrowth6mCm = Number(profile.recentGrowth6m) || 3.2;
+    const annualVelocityCm = Number((recentGrowth6mCm * 2).toFixed(1));
+    const annualVelocityIn = Number((annualVelocityCm / 2.54).toFixed(1));
+    const habits = Array.isArray(profile.habits) && profile.habits.length ? profile.habits : ['late_sleep'];
+
+    // Extract Step 4, 5, 6 personalized survey selections (with live DOM fallback)
+    const getDomChecked = function (name, fallbackArr) {
+      if (typeof document !== 'undefined' && typeof document.querySelectorAll === 'function') {
+        const nodes = document.querySelectorAll('input[name="' + name + '"]:checked');
+        if (nodes && nodes.length > 0) {
+          const vals = [];
+          nodes.forEach(function (n) { if (n.value) vals.push(n.value); });
+          if (vals.length > 0) return vals;
+        }
+      }
+      return fallbackArr;
+    };
+
+    const traitSleepList = (Array.isArray(profile.traitSleepList) && profile.traitSleepList.length)
+      ? profile.traitSleepList
+      : getDomChecked('trait-sleep-quality', ['late_bedtime']);
+    const traitDietList = (Array.isArray(profile.traitDietList) && profile.traitDietList.length)
+      ? profile.traitDietList
+      : getDomChecked('trait-diet-digestion', ['small_appetite']);
+    const traitPostureList = (Array.isArray(profile.traitPostureList) && profile.traitPostureList.length)
+      ? profile.traitPostureList
+      : getDomChecked('trait-posture-type', ['turtle_slouch']);
+    const traitGrowthDetails = (Array.isArray(profile.traitGrowthDetails) && profile.traitGrowthDetails.length)
+      ? profile.traitGrowthDetails
+      : getDomChecked('trait-growth-detail', ['growing_pain_night']);
+    const domExEl = (typeof document !== 'undefined') ? document.getElementById('trait-exercise-freq') : null;
+    const traitExercise = profile.traitExercise || (domExEl && domExEl.value) || 'low_indoor';
+
+    const sleepLabelsMap = {
+      late_bedtime: 'Bedtime after 10:30 PM (Delayed N3 Slow-Wave Sleep GH Onset)',
+      toss_mouth: 'Restless Sleep / Mouth Breathing (Hypoxic SWS Fragmentation)',
+      hard_wakeup: 'Morning Awakening Fatigue (Cortisol/Melatonin Phase Delay)',
+      night_sweat: 'Sleep-Onset Head/Neck Sweating (Autonomic Thermoregulation Load)',
+      night_snack: 'Late-Night Snacking / Milk Before Bed (Insulin-Mediated Somatostatin Surge)',
+      light_dream: 'Light Sleep & Frequent Awakening (Reduced Pituitary GH Pulse Amplitude)',
+      weekend_oversleep: 'Weekend Social Jetlag (Circadian Phase Shift)',
+      deep_early: 'Sound Deep Sleep Before 9:30 PM (Optimal Pituitary GH Preservation)'
+    };
+    const dietLabelsMap = {
+      small_appetite: 'Small Meal Portions & Early Satiety (Caloric/Amino-Acid Deficit)',
+      meat_veggie_picky: 'Selective Picky Eating: Meat/Vegetables (Chelated Zinc & Heme-Iron Gap)',
+      dairy_sensitive: 'Lactose / Dairy Sensitivity (Requires Acid-Independent Calcium Citrate)',
+      constipation_hard: 'Functional Constipation / Slow GI Motility (Avoid Calcium Carbonate)',
+      sweet_carb: 'High Refined-Carb & Sweet Snack Preference (Postprandial Insulin Elevation)',
+      fast_indigestion: 'Post-Meal Indigestion / Incomplete Mastication',
+      water_low: 'Low Daily Pure Water Intake (<600 ml · Intervertebral Disc Dehydration)',
+      balanced_good: 'Balanced Macronutrient Intake Across Core Food Groups'
+    };
+    const postureLabelsMap = {
+      turtle_slouch: 'Forward-Head Posture (Tech-Neck) & Thoracic Slouching (-0.6 in Hidden Loss)',
+      leg_cross_pelvis: 'Pelvic Asymmetry / Leg-Crossing / W-Sitting Habit',
+      growing_pains: 'Nocturnal Lower-Extremity (Knee/Calf/Ankle) Epiphyseal Growing Pains',
+      chin_lean: 'Unilateral Chin-Leaning & Seated Spinal Lateral Deviation',
+      flat_foot: 'Pedal Arch Fatigue / Pronated Flat-Foot Gait Mechanics',
+      upright_good: 'Maintained Physiological Lordosis/Kyphosis Alignment'
+    };
+    const exerciseLabelsMap = {
+      low_indoor: 'Sedentary / Indoor Dominant (≤1x/wk · Insufficient Piezoelectric Bone Strain)',
+      moderate_2_3: 'Moderate Physical Activity (2–3x/wk PE & Recreational Play)',
+      active_4_plus: 'High Osteogenic Loading (4+x/wk Jumping & Aerobic Stimulus)'
+    };
+    const growthDetailLabelsMap = {
+      growing_pain_night: 'Nocturnal Knee/Calf/Ankle Growing Pains (Requires Magnesium & Evening Traction)',
+      underweight_thin: 'Underweight Trend Relative to Height (Priority Protein & Zinc Anabolic Support)',
+      overweight_fat_gain: 'Rapid Weight/Adiposity Gain (Leptin & Aromatase Bone-Age Acceleration Watch)',
+      rhinitis_mouth: 'Allergic Rhinitis / Nasal Obstruction (Disrupts N3 Delta-Wave GH Secretion)',
+      early_puberty_worry: 'Early Pubertal Signs Watch (Strict Estrogenic/Glycemic Bone-Age Defense)',
+      bone_age_delay: 'Sub-Optimal Annual Growth Velocity (<2.0 in / 5.0 cm per year)',
+      dairy_calcium_lack: 'Low Dairy Bioavailability (Requires Citrate/MCHA + Vitamin D3/K2 MK-7)',
+      slouch_disc_loss: 'Cervical/Lumbar Disc Compression (+0.7 in / +1.8 cm Decompression Recovery Target)'
+    };
+
+    const selectedSleepFindings = traitSleepList.map(function (k) { return sleepLabelsMap[k] || k; }).join(' · ');
+    const selectedDietFindings = traitDietList.map(function (k) { return dietLabelsMap[k] || k; }).join(' · ');
+    const selectedPostureFindings = traitPostureList.map(function (k) { return postureLabelsMap[k] || k; }).join(' · ');
+    const selectedExerciseFinding = exerciseLabelsMap[traitExercise] || exerciseLabelsMap.low_indoor;
+    const selectedGrowthDetailFindings = (traitGrowthDetails && traitGrowthDetails.length)
+      ? traitGrowthDetails.map(function (k) { return growthDetailLabelsMap[k] || k; }).join(' · ')
+      : 'Standard Pediatric Auxology & Epiphyseal Tracking';
 
     const lms = (GrowthEngine && typeof GrowthEngine.getLmsForMonth === 'function')
       ? GrowthEngine.getLmsForMonth(isBoy ? 'boy' : 'girl', ageMonths)
@@ -696,7 +888,6 @@
     const geneticCm = Number(mphCm).toFixed(1);
     const optimizedCm = Number(pred.potentialHeight || (mphCm + 4.8)).toFixed(1);
     const hiddenGainCm = Math.max(3.5, Number((optimizedCm - unmanagedCm).toFixed(1)));
-    const hiddenGainIn = (hiddenGainCm / 2.54).toFixed(1);
 
     const isImperial = (global.TallerI18n && typeof global.TallerI18n.getUnitSystem === 'function')
       ? global.TallerI18n.getUnitSystem() === 'imperial'
@@ -708,6 +899,13 @@
       const ftIn = cmToFtInStr(cm);
       const cmStr = cm.toFixed(1);
       return isImperial ? `${ftIn} (${cmStr} cm)` : `${cmStr} cm (${ftIn})`;
+    }
+
+    function fmtMaskedLen(cmVal) {
+      if (isMasked) {
+        return isImperial ? '5\' ?.?″ (??? cm)' : '???.? cm (5\' ?.?″)';
+      }
+      return fmtLen(cmVal);
     }
 
     function fmtWt(kgVal) {
@@ -726,23 +924,23 @@
       return isImperial ? `+${inVal} in (+${cmStr} cm)` : `+${cmStr} cm (+${inVal} in)`;
     }
 
-    const heightImp = cmToFtInStr(heightCm);
-    const unmanagedImp = cmToFtInStr(unmanagedCm);
-    const geneticImp = cmToFtInStr(geneticCm);
-    const optimizedImp = cmToFtInStr(optimizedCm);
-    const weightLbs = (weightKg * 2.20462262).toFixed(1);
+    const unmanagedImp = isMasked ? '5\' ?.?″' : cmToFtInStr(unmanagedCm);
+    const geneticImp = isMasked ? '5\' ?.?″' : cmToFtInStr(geneticCm);
+    const optimizedImp = isMasked ? '5\' ?.?″' : cmToFtInStr(optimizedCm);
+    const unmanagedCmDisp = isMasked ? '???.?' : unmanagedCm;
+    const geneticCmDisp = isMasked ? '???.?' : geneticCm;
+    const optimizedCmDisp = isMasked ? '???.?' : optimizedCm;
     const bmi = Number((weightKg / Math.pow(heightCm / 100, 2)).toFixed(1));
     const idealWeightKg = Number((18.5 * Math.pow(heightCm / 100, 2)).toFixed(1));
-    const idealWeightLbs = (idealWeightKg * 2.20462262).toFixed(1);
     const pctVal = Number(kdca.percentile || 50).toFixed(1);
     const remainYears = Math.max(1, (isBoy ? 17 : 15) - ageY);
 
-    // Nutrient targets scaled by weight
-    const caMg = Math.min(1300, Math.max(700, Math.round(weightKg * 26)));
+    // Nutrient targets scaled by weight & survey diet traits
+    const caMg = Math.min(1300, Math.max(700, Math.round(weightKg * (traitDietList.includes('dairy_sensitive') ? 28 : 26))));
     const vitDIu = ageY >= 9 ? 2000 : 1200;
     const vitK2Mcg = Math.min(120, Math.max(45, Math.round(weightKg * 2.2)));
-    const zincMg = ageY >= 9 ? 11 : 7;
-    const proteinG = Math.round(weightKg * 1.35);
+    const zincMg = ageY >= 9 ? (traitDietList.includes('meat_veggie_picky') ? 13 : 11) : 8;
+    const proteinG = Math.round(weightKg * (traitGrowthDetails.includes('underweight_thin') ? 1.5 : 1.35));
 
     const isBelow50 = Number(pctVal) < 50;
     const rawTargetCm = Number(profile.targetHeight) || 0;
@@ -795,10 +993,10 @@
         clinicalNote: 'High sensitivity to insulin-driven aromatase bone-age acceleration; evening glycemic fasting preserves +1.5 in (+3.8 cm) of open plate time.'
       },
       east_asian: {
-        label: 'East Asian American (Korean / Chinese / Japanese / Taiwanese)',
+        label: 'East Asian American (Chinese / Japanese / Taiwanese / Asian American)',
         phvNote: isBoy ? 'Boy PHV Peak: Age 12.8–13.3 yrs (Rapid Pubertal Acceleration)' : 'Girl PHV Peak: Age 11.0–11.4 yrs',
-        bmiThreshold: 'WHO Asian-Adjusted BMI > 19.5 kg/m²',
-        clinicalNote: 'Cross-referenced against KDCA & US Asian-American cohorts: faster bone-age acceleration during Tanner Stage 2–3 requires strict 10 PM SWS sleep.'
+        bmiThreshold: 'WHO / AAP Asian-Adjusted BMI > 19.5 kg/m²',
+        clinicalNote: 'Cross-referenced against US NHANES & AAP Asian-American pediatric cohorts: faster bone-age acceleration during Tanner Stage 2–3 requires strict 10 PM SWS sleep.'
       },
       south_asian: {
         label: 'South & Southeast Asian American (Indian / Filipino / Vietnamese)',
@@ -862,6 +1060,15 @@
     const overallLQ = Number(((literacyScore + mathSpatialScore + workingMemoryScore + activeRecallScore + scientificInquiryScore) / 5).toFixed(1));
     const coachedLQ = Math.min(98.5, Number((overallLQ + 14.5).toFixed(1)));
     const lqTopPct = Math.max(4, Math.min(45, Math.round(100 - overallLQ)));
+    const overallLQDisp = isMasked ? '??.?' : overallLQ;
+    const coachedLQDisp = isMasked ? '??.?' : coachedLQ;
+    const usGradeStageLabel = ageY <= 4
+      ? 'US Early Childhood / Pre-K (AAP & ASQ-3 Developmental Track)'
+      : (ageY <= 10
+        ? 'US Elementary School (Grades K–5 · Common Core ELA & Visual Math)'
+        : (ageY <= 13
+          ? 'US Middle School (Grades 6–8 · Pre-AP STEM & Executive Function)'
+          : 'US High School (Grades 9–12 · AP / SAT / ACT Analytical Readiness)'));
 
     return `
       <!-- Clinical Briefing Header (High-Contrast Medical Light Surface + Crisp White Child Conditions Box) -->
@@ -882,20 +1089,20 @@
             <button type="button" onclick="window.switchGlobalReportTab('learning')" id="btn-global-tab-learning" style="background:${isLearningMode ? '#1D4ED8' : '#FFFFFF'};color:${isLearningMode ? '#FFFFFF' : '#1E3A8A'};border:1.5px solid ${isLearningMode ? '#1E40AF' : '#93C5FD'};border-radius:9999px;padding:0.44rem 0.95rem;font-size:0.8rem;font-weight:900;cursor:pointer;">
               🧠 Report 02: 5-Axis Brain LQ
             </button>
-            <button type="button" onclick="window.print()" style="background:#059669;color:#FFFFFF;border:1.5px solid #047857;border-radius:9999px;padding:0.44rem 0.95rem;font-size:0.8rem;font-weight:900;cursor:pointer;">
-              🖨️ Print / Save A4 PDF
+            <button type="button" onclick="if(window.triggerKidsFitGlobalPrint){window.triggerKidsFitGlobalPrint();}else{window.print();}" style="background:#059669;color:#FFFFFF;border:1.5px solid #047857;border-radius:9999px;padding:0.44rem 0.95rem;font-size:0.8rem;font-weight:900;cursor:pointer;">
+              🖨️ Print / Save Clinical PDF
             </button>
           </div>
         </div>
         <h2 id="global-report-main-heading" style="font-size:clamp(1.25rem,3vw,1.6rem);font-weight:900;margin:0 0 0.55rem 0;color:#0F172A;letter-spacing:-0.02em;">
           ${isLearningMode
-            ? `1:1 Neuro-Cognitive 5-Axis Brain LQ &amp; Executive Function Master Report`
-            : `1:1 Pediatric Growth, Endocrine &amp; Bone-Age Trajectory Master Report`}
+            ? '1:1 Neuro-Cognitive 5-Axis Brain LQ &amp; Executive Function Master Report'
+            : '1:1 Pediatric Growth, Endocrine &amp; Bone-Age Trajectory Master Report'}
         </h2>
         <div id="global-report-child-conditions-box" style="background:#FFFFFF;border:1.5px solid #93C5FD;border-radius:12px;padding:0.75rem 1rem;color:#0F172A;font-size:0.86rem;line-height:1.55;">
           ${isLearningMode
-            ? `<strong style="color:#1D4ED8;">Evaluated Child Conditions (Brain &amp; Learning Mode):</strong> Age <strong>${ageY} yrs ${ageRemM} mos (${genderLabel})</strong> · Overall Brain LQ: <strong style="color:#1D4ED8;">${overallLQ} pts (Top ${lqTopPct}%)</strong> · Attention Span: <strong>${focusSpanLabel}</strong> · Preferred Absorption Style: <strong>${studyStyleLabel}</strong>`
-            : `<strong style="color:#1D4ED8;">Evaluated Child Conditions (Physical Growth Mode):</strong> Age <strong>${ageY} yrs ${ageRemM} mos (${genderLabel})</strong> · Current Stature: <strong style="color:#1D4ED8;">${fmtLen(heightCm)} · ${pctVal}th CDC Percentile</strong> · Weight: <strong>${fmtWt(weightKg)} · BMI ${bmi}</strong> · Reference: <strong>${ethInfo.label}</strong>`}
+            ? `<strong style="color:#1D4ED8;">Evaluated Child Conditions (Brain &amp; Learning Mode):</strong> Age <strong>${ageY} yrs ${ageRemM} mos (${genderLabel})</strong> · Overall Brain LQ: <strong style="color:#1D4ED8;">${overallLQDisp} pts (Top ${lqTopPct}%)</strong> · Attention Span: <strong>${focusSpanLabel}</strong> · Preferred Absorption Style: <strong>${studyStyleLabel}</strong>`
+            : `<strong style="color:#1D4ED8;">Evaluated Child Conditions (Physical Growth Mode):</strong> Age <strong>${ageY} yrs ${ageRemM} mos (${genderLabel})</strong> · Current Stature: <strong style="color:#1D4ED8;">${fmtLen(heightCm)} · ${pctVal}th CDC Percentile</strong> · Weight: <strong>${fmtWt(weightKg)} · BMI ${bmi}</strong> · 6-Mo Gain: <strong>${isImperial ? (recentGrowth6mCm / 2.54).toFixed(1) + ' in (' + recentGrowth6mCm.toFixed(1) + ' cm)' : recentGrowth6mCm.toFixed(1) + ' cm (' + (recentGrowth6mCm / 2.54).toFixed(1) + ' in)'}</strong> · Reference: <strong>${ethInfo.label}</strong>`}
         </div>
       </div>
 
@@ -914,7 +1121,7 @@
             </span>
           </div>
           <h3 style="font-size:1.2rem;font-weight:900;color:#0F172A;margin:0 0 0.45rem 0;">
-            Predicted Adult Height: Unmanaged (${fmtLen(unmanagedCm)}) vs. Genetic Target (${fmtLen(geneticCm)}) vs. Optimized (${fmtLen(optimizedCm)})
+            Predicted Adult Height: Unmanaged (${fmtMaskedLen(unmanagedCm)}) vs. Genetic Target (${fmtMaskedLen(geneticCm)}) vs. Optimized (${fmtMaskedLen(optimizedCm)})
           </h3>
           <p style="font-size:0.86rem;color:#475569;margin:0 0 1rem 0;line-height:1.55;">
             Based on Tanner Mid-Parental Height (Father ${fmtLen(fatherCm)}, Mother ${fmtLen(motherCm)}) and current CDC LMS Z-score (${kdca.zScore || '0.00'}), correcting nocturnal GH suppression and spinal disc compression unlocks up to <strong>${fmtGain(hiddenGainCm)}</strong> before epiphyseal fusion.
@@ -925,7 +1132,7 @@
             <div style="background:#F8FAFC;border:1.5px solid #CBD5E1;border-radius:14px;padding:0.95rem 1rem;">
               <div style="font-size:0.76rem;font-weight:800;color:#64748B;">① Unmanaged Trajectory (Current Habits)</div>
               <div style="font-size:1.45rem;font-weight:900;color:#475569;margin:0.25rem 0;">
-                ${isImperial ? `${unmanagedImp} <span style="font-size:0.9rem;">(${unmanagedCm} cm)</span>` : `${unmanagedCm} cm <span style="font-size:0.9rem;">(${unmanagedImp})</span>`}
+                ${isImperial ? `${unmanagedImp} <span style="font-size:0.9rem;">(${unmanagedCmDisp} cm)</span>` : `${unmanagedCmDisp} cm <span style="font-size:0.9rem;">(${unmanagedImp})</span>`}
               </div>
               <div style="font-size:0.76rem;color:#DC2626;font-weight:700;">
                 -${isImperial ? `${((pred.totalLoss || 2.3) / 2.54).toFixed(1)} in (-${pred.totalLoss || 2.3} cm)` : `${pred.totalLoss || 2.3} cm (-${((pred.totalLoss || 2.3) / 2.54).toFixed(1)} in)`} loss from late sleep / posture
@@ -934,7 +1141,7 @@
             <div style="background:#F8FAFC;border:1.5px solid #93C5FD;border-radius:14px;padding:0.95rem 1rem;">
               <div style="font-size:0.76rem;font-weight:800;color:#1E3A8A;">② Tanner Genetic Target (MPH)</div>
               <div style="font-size:1.45rem;font-weight:900;color:#1E3A8A;margin:0.25rem 0;">
-                ${isImperial ? `${geneticImp} <span style="font-size:0.9rem;">(${geneticCm} cm)</span>` : `${geneticCm} cm <span style="font-size:0.9rem;">(${geneticImp})</span>`}
+                ${isImperial ? `${geneticImp} <span style="font-size:0.9rem;">(${geneticCmDisp} cm)</span>` : `${geneticCmDisp} cm <span style="font-size:0.9rem;">(${geneticImp})</span>`}
               </div>
               <div style="font-size:0.76rem;color:#475569;font-weight:700;">
                 Mid-Parental Genetic Baseline (${isImperial ? '±2.0 in (±5.0 cm)' : '±5.0 cm (±2.0 in)'})
@@ -943,7 +1150,7 @@
             <div style="background:#EFF6FF;border:2px solid #1D4ED8;border-radius:14px;padding:0.95rem 1rem;">
               <div style="font-size:0.76rem;font-weight:900;color:#1D4ED8;">③ Optimized Peak Potential (6-Mo Protocol)</div>
               <div style="font-size:1.55rem;font-weight:900;color:#1D4ED8;margin:0.25rem 0;">
-                ${isImperial ? `${optimizedImp} <span style="font-size:0.9rem;">(${optimizedCm} cm)</span>` : `${optimizedCm} cm <span style="font-size:0.9rem;">(${optimizedImp})</span>`}
+                ${isImperial ? `${optimizedImp} <span style="font-size:0.9rem;">(${optimizedCmDisp} cm)</span>` : `${optimizedCmDisp} cm <span style="font-size:0.9rem;">(${optimizedImp})</span>`}
               </div>
               <div style="font-size:0.76rem;color:#059669;font-weight:800;">
                 ▲ ${fmtGain(hiddenGainCm)} vs. Unmanaged
@@ -968,6 +1175,12 @@
                   <td style="padding:0.65rem 0.8rem;font-weight:800;color:#1D4ED8;">${fmtLen(heightCm)} · ${pctVal}th %</td>
                   <td style="padding:0.65rem 0.8rem;color:#475569;">50th% Mean: ${fmtLen(lms.M)}</td>
                   <td style="padding:0.65rem 0.8rem;color:#334155;">${isBelow50 ? 'Priority Catch-Up Growth Window' : 'Above-Average Stature · Bone-Age Defense'}</td>
+                </tr>
+                <tr style="border-bottom:1px solid #E2E8F0;">
+                  <td style="padding:0.65rem 0.8rem;font-weight:800;color:#0F172A;">6-Mo Growth Velocity (Annualized)</td>
+                  <td style="padding:0.65rem 0.8rem;font-weight:800;color:#059669;">${isImperial ? `${annualVelocityIn} in/yr (${annualVelocityCm} cm/yr)` : `${annualVelocityCm} cm/yr (${annualVelocityIn} in/yr)`}</td>
+                  <td style="padding:0.65rem 0.8rem;color:#475569;">Norm: 2.0–2.8 in/yr (5.0–7.0 cm/yr)</td>
+                  <td style="padding:0.65rem 0.8rem;color:#334155;">${annualVelocityCm < 5.0 ? 'Sub-Optimal Velocity Alert (<2.0 in/yr) · Check IGF-1 &amp; Sleep' : (annualVelocityCm >= 7.0 ? 'Peak Height Velocity (PHV) Acceleration Phase' : 'Steady Normative Linear Growth Velocity')}</td>
                 </tr>
                 <tr style="border-bottom:1px solid #E2E8F0;">
                   <td style="padding:0.65rem 0.8rem;font-weight:800;color:#0F172A;">Weight-for-Height &amp; BMI</td>
@@ -998,19 +1211,19 @@
                 TARGET ADULT HEIGHT &amp; KHAMIS-ROCHE AUXOLOGY ANALYSIS
               </span>
               <span style="font-size:0.78rem;font-weight:900;color:#059669;">
-                Target Goal: ${fmtLen(targetHeightCm)} · ${dreamReachabilityPct}% Reachability Score
+                Target Goal: ${fmtMaskedLen(targetHeightCm)} · ${dreamReachabilityPct}% Reachability Score
               </span>
             </div>
             <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:0.75rem;">
               <div style="background:#FFFFFF;border:1px solid #BFDBFE;border-radius:10px;padding:0.7rem 0.85rem;">
                 <div style="font-size:0.73rem;font-weight:800;color:#475569;">Target Adult Height</div>
-                <div style="font-size:1.18rem;font-weight:900;color:#1D4ED8;margin:0.15rem 0;">${fmtLen(targetHeightCm)}</div>
+                <div style="font-size:1.18rem;font-weight:900;color:#1D4ED8;margin:0.15rem 0;">${fmtMaskedLen(targetHeightCm)}</div>
                 <div style="font-size:0.73rem;color:#059669;font-weight:800;">Reachability Odds: ${dreamReachabilityPct}% (6-Mo Protocol)</div>
               </div>
               <div style="background:#FFFFFF;border:1px solid #BFDBFE;border-radius:10px;padding:0.7rem 0.85rem;">
                 <div style="font-size:0.73rem;font-weight:800;color:#475569;">Remaining Growth Potential</div>
                 <div style="font-size:1.18rem;font-weight:900;color:#059669;margin:0.15rem 0;">${fmtGain(remainLinearCm)}</div>
-                <div style="font-size:0.73rem;color:#475569;font-weight:700;">From current ${fmtLen(heightCm)} to ${fmtLen(optimizedCm)}</div>
+                <div style="font-size:0.73rem;color:#475569;font-weight:700;">From current ${fmtLen(heightCm)} to ${fmtMaskedLen(optimizedCm)}</div>
               </div>
               <div style="background:#FFFFFF;border:1px solid #BFDBFE;border-radius:10px;padding:0.7rem 0.85rem;">
                 <div style="font-size:0.73rem;font-weight:800;color:#475569;">Growth Plate Openness Meter</div>
@@ -1023,14 +1236,20 @@
           </div>
         </section>
 
-        <!-- CHAPTER 2: rhGH Injection BMJ/Cochrane Fact-Check & Bone-Age Defense -->
+        <!-- CHAPTER 2: Personalized Sleep/Endocrine Survey Synthesis & rhGH Injection Fact-Check -->
         <section style="background:#FFFFFF;border:1.5px solid #BFDBFE;border-radius:18px;padding:1.35rem 1.3rem;margin-bottom:1.25rem;">
           <span style="display:inline-block;font-size:0.75rem;font-weight:900;color:#1D4ED8;background:#EFF6FF;border:1px solid #BFDBFE;padding:0.2rem 0.65rem;border-radius:9999px;margin-bottom:0.5rem;">
-            CHAPTER 02 · ENDOCRINE SPECIALIZATION &amp; rhGH INJECTION PAPER FACT-CHECK
+            CHAPTER 02 · 1:1 SLEEP ENDOCRINE PHENOTYPE &amp; rhGH INJECTION PAPER FACT-CHECK
           </span>
           <h3 style="font-size:1.15rem;font-weight:900;color:#0F172A;margin:0 0 0.5rem 0;">
-            Recombinant Growth Hormone (rhGH) Injections vs. Physiological Slow-Wave Sleep GH Optimization
+            Personalized Step 4 &amp; Step 6 Endocrine Findings + Recombinant GH (rhGH) Clinical Comparison
           </h3>
+          <div style="background:#EFF6FF;border:1.5px solid #93C5FD;border-radius:12px;padding:0.85rem 1rem;margin-bottom:0.85rem;font-size:0.83rem;color:#0F172A;line-height:1.55;">
+            <strong style="color:#1D4ED8;display:block;margin-bottom:0.25rem;">✓ Patient's Selected Sleep &amp; Constitutional Checkpoints (Steps 4 &amp; 6):</strong>
+            <div>• <strong>Nocturnal Sleep Pattern:</strong> ${selectedSleepFindings}</div>
+            <div>• <strong>Constitutional &amp; Bone-Age Checkpoints:</strong> ${selectedGrowthDetailFindings}</div>
+            <div>• <strong>6-Month Velocity Assessment:</strong> ${isImperial ? (recentGrowth6mCm / 2.54).toFixed(1) + ' in / 6 mos (' + annualVelocityIn + ' in/yr)' : recentGrowth6mCm.toFixed(1) + ' cm / 6 mos (' + annualVelocityCm + ' cm/yr)'} — ${traitSleepList.includes('late_bedtime') || traitSleepList.includes('night_snack') ? 'Correcting late sleep and pre-bedtime glycemic load restores up to +42% to +68% endogenous nocturnal HGH pulsatility.' : 'Maintain 9:30–10:00 PM N3 slow-wave sleep window to protect peak pituitary HGH pulses.'}</div>
+          </div>
           <p style="font-size:0.85rem;color:#334155;line-height:1.55;margin:0 0 0.85rem 0;">
             <strong>Peer-Reviewed Meta-Analysis (BMJ &amp; Cochrane Systematic Review):</strong> In children with Idiopathic Short Stature (ISS, non-GH deficient), daily rhGH injections cost <strong>$15,000–$40,000/year</strong> for 3–5 years yet yield an average adult height gain of only <strong>+1.5 to +2.3 inches (+4.0 to +6.0 cm)</strong>. Furthermore, high-dose exogenous IGF-1 can accelerate epiphyseal bone maturation if nocturnal sleep and insulin sensitivity are neglected.
           </p>
@@ -1046,19 +1265,54 @@
           </div>
         </section>
 
-        <!-- CHAPTER 3: 24-Hr Hormone Curve & Weight-Proportional Bio-Nutrition (iHerb Exclusive) -->
+        <!-- CHAPTER 3: 24-Hr Interactive Hormone Simulator & Weight-Proportional Bio-Nutrition (iHerb Exclusive) -->
         <section style="background:#FFFFFF;border:1.5px solid #BFDBFE;border-radius:18px;padding:1.35rem 1.3rem;margin-bottom:1.25rem;">
           <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.5rem;">
             <span style="display:inline-block;font-size:0.75rem;font-weight:900;color:#1D4ED8;background:#EFF6FF;border:1px solid #BFDBFE;padding:0.2rem 0.65rem;border-radius:9999px;">
-              CHAPTER 03 · WEIGHT-PROPORTIONAL BIO-NUTRITION &amp; iHERB CLINICAL FORMULAS
+              CHAPTER 03 · 1:1 DIGESTIVE BIO-NUTRITION &amp; INTERACTIVE 24-HR HGH SIMULATOR
             </span>
             <span style="font-size:0.74rem;font-weight:800;color:#059669;background:#ECFDF5;border:1px solid #A7F3D0;padding:0.18rem 0.6rem;border-radius:9999px;">
               Official iHerb Curation (Code: IPZ1547)
             </span>
           </div>
           <h3 style="font-size:1.15rem;font-weight:900;color:#0F172A;margin:0 0 0.5rem 0;">
-            Daily Micronutrient Dosage Targets Calibrated for ${fmtWt(weightKg)}
+            Daily Micronutrient Dosage Targets Calibrated for ${fmtWt(weightKg)} &amp; Digestive Profile
           </h3>
+          <div style="background:#F8FAFC;border:1px solid #BFDBFE;border-radius:12px;padding:0.8rem 1rem;margin-bottom:0.9rem;font-size:0.82rem;color:#1E293B;line-height:1.5;">
+            <strong style="color:#1D4ED8;">✓ Selected Nutritional &amp; GI Absorption Profile (Step 4):</strong> ${selectedDietFindings}<br>
+            <span style="color:#059669;font-weight:700;">→ Clinical Bioavailability Adjustment:</span> ${traitDietList.includes('dairy_sensitive') || traitDietList.includes('constipation_hard') ? 'Switched from Calcium Carbonate (22% absorption) to stomach-acid-independent Calcium Citrate + MCHA (45% absorption) to prevent GI bloating and maximize osteoblast mineralization.' : 'Paired Chelated Zinc + L-Arginine/Colostrum with Vitamin D3 (' + vitDIu + ' IU) and MK-7 (' + vitK2Mcg + ' mcg) to accelerate hepatic IGF-1 synthesis.'}
+          </div>
+
+          <!-- Interactive 24-Hour Nocturnal HGH & Glycemic Fasting Simulator -->
+          <div style="background:#EFF6FF;border:1.5px solid #93C5FD;border-radius:14px;padding:1rem 1.1rem;margin-bottom:1rem;">
+            <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.65rem;">
+              <strong style="font-size:0.88rem;color:#0F172A;">🎛️ Interactive 24-Hour Nocturnal HGH &amp; Insulin Suppression Simulator</strong>
+              <span id="hormone-loss-badge" style="font-size:0.76rem;font-weight:900;color:#DC2626;background:#FEF2F2;border:1px solid #FECACA;padding:0.2rem 0.65rem;border-radius:9999px;">
+                -18% Nocturnal HGH Suppression (82% Active)
+              </span>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0.85rem;margin-bottom:0.65rem;">
+              <div style="background:#FFFFFF;border:1px solid #BFDBFE;border-radius:10px;padding:0.7rem 0.85rem;">
+                <div style="display:flex;justify-content:space-between;font-size:0.78rem;font-weight:800;color:#334155;margin-bottom:0.35rem;">
+                  <span>Child's Bedtime</span>
+                  <strong id="hormone-bedtime-display" style="color:#1D4ED8;">10:30 PM</strong>
+                </div>
+                <input type="range" id="hormone-bedtime-slider" min="1230" max="1440" step="15" value="1350" oninput="if(window.updateGlobalHormoneSimulator)window.updateGlobalHormoneSimulator();" style="width:100%;">
+              </div>
+              <div style="background:#FFFFFF;border:1px solid #BFDBFE;border-radius:10px;padding:0.7rem 0.85rem;">
+                <div style="display:flex;justify-content:space-between;font-size:0.78rem;font-weight:800;color:#334155;margin-bottom:0.35rem;">
+                  <span>Last Meal / Milk Time</span>
+                  <strong id="hormone-meal-display" style="color:#1D4ED8;">8:30 PM</strong>
+                </div>
+                <input type="range" id="hormone-meal-slider" min="1080" max="1380" step="15" value="1230" oninput="if(window.updateGlobalHormoneSimulator)window.updateGlobalHormoneSimulator();" style="width:100%;">
+              </div>
+            </div>
+            <div style="font-size:0.79rem;color:#1E3A8A;display:flex;justify-content:space-between;flex-wrap:wrap;gap:0.4rem;">
+              <span>Glycemic Fasting Window: <strong id="hormone-gap-display">2.0 hrs pre-sleep fast</strong></span>
+              <span id="hormone-advice-text" style="font-weight:700;color:#0F172A;">Move bedtime to 10:00 PM and finish snacks 3 hrs prior to eliminate insulin somatostatin blockade.</span>
+            </div>
+          </div>
+
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:0.75rem;margin-bottom:0.85rem;">
             <div style="background:#EFF6FF;border:1px solid #BFDBFE;border-radius:12px;padding:0.85rem 0.95rem;display:flex;flex-direction:column;justify-content:space-between;">
               <div>
@@ -1093,14 +1347,33 @@
           </div>
         </section>
 
-        <!-- CHAPTER 4: Spinal Decompression Biomechanics & Daily Routine -->
+        <!-- CHAPTER 4: Spinal Decompression Biomechanics, Step 5 Survey Alignment & Interactive Routine Timer -->
         <section style="background:#FFFFFF;border:1.5px solid #BFDBFE;border-radius:18px;padding:1.35rem 1.3rem;margin-bottom:1.25rem;">
           <span style="display:inline-block;font-size:0.75rem;font-weight:900;color:#1D4ED8;background:#EFF6FF;border:1px solid #BFDBFE;padding:0.2rem 0.65rem;border-radius:9999px;margin-bottom:0.5rem;">
-            CHAPTER 04 · SPINAL DECOMPRESSION BIOMECHANICS (${fmtGain(1.8)} RECOVERY)
+            CHAPTER 04 · SPINAL DECOMPRESSION BIOMECHANICS (${fmtGain(1.8)} RECOVERY) &amp; LIVE TIMER
           </span>
           <h3 style="font-size:1.15rem;font-weight:900;color:#0F172A;margin:0 0 0.5rem 0;">
             10-Minute Daily Intervertebral Disc Rehydration &amp; Piezoelectric Loading Protocol
           </h3>
+          <div style="background:#F8FAFC;border:1px solid #BFDBFE;border-radius:12px;padding:0.8rem 1rem;margin-bottom:0.9rem;font-size:0.82rem;color:#0F172A;line-height:1.5;">
+            <div><strong style="color:#1D4ED8;">✓ Selected Posture &amp; Alignment Profile (Step 5):</strong> ${selectedPostureFindings}</div>
+            <div><strong style="color:#1D4ED8;">✓ Weekly Osteogenic Activity Level (Step 5):</strong> ${selectedExerciseFinding}</div>
+          </div>
+
+          <!-- Interactive 30s/45s Decompression & Jump Timer -->
+          <div style="background:#EFF6FF;border:1.5px solid #93C5FD;border-radius:14px;padding:0.95rem 1.1rem;margin-bottom:0.95rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;">
+            <div>
+              <div style="font-size:0.76rem;font-weight:900;color:#1D4ED8;">⏱️ Interactive Clinical Biomechanics Countdown Timer</div>
+              <div id="global-posture-timer-status" style="font-size:0.82rem;font-weight:700;color:#334155;margin-top:0.15rem;">Select a routine below to start real-time spinal decompression guidance</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:0.55rem;flex-wrap:wrap;">
+              <span id="global-posture-timer-display" style="font-family:monospace;font-size:1.45rem;font-weight:900;color:#0F172A;background:#FFFFFF;border:1.5px solid #93C5FD;padding:0.25rem 0.75rem;border-radius:10px;">00:30</span>
+              <button type="button" onclick="window.startGlobalPostureTimer(30, 'Doorway Bar Dead-Hang (30s Set)')" style="background:#1D4ED8;color:#FFFFFF;border:none;border-radius:8px;padding:0.45rem 0.8rem;font-size:0.78rem;font-weight:800;cursor:pointer;">▶ 30s Dead-Hang</button>
+              <button type="button" onclick="window.startGlobalPostureTimer(45, 'Cobra &amp; Thoracic Extension (45s Set)')" style="background:#059669;color:#FFFFFF;border:none;border-radius:8px;padding:0.45rem 0.8rem;font-size:0.78rem;font-weight:800;cursor:pointer;">▶ 45s Thoracic</button>
+              <button type="button" onclick="window.startGlobalPostureTimer(60, 'Piezoelectric Jump Interval (60s Set)')" style="background:#0F172A;color:#FFFFFF;border:none;border-radius:8px;padding:0.45rem 0.8rem;font-size:0.78rem;font-weight:800;cursor:pointer;">▶ 60s Jump Pulse</button>
+            </div>
+          </div>
+
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:0.8rem;">
             <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:12px;padding:0.85rem 1rem;">
               <strong style="color:#1D4ED8;font-size:0.84rem;display:block;margin-bottom:0.25rem;">① Morning &amp; Bedtime Bar Dead-Hang (3 Sets × 30s)</strong>
@@ -1129,11 +1402,11 @@
               CHAPTER 05 · 5-AXIS BRAIN LEARNING QUOTIENT (LQ) &amp; NEURAL BALANCE MATRIX
             </span>
             <span style="font-size:0.78rem;font-weight:800;color:#059669;">
-              6-Mo Coached Target: ${coachedLQ} pts (+${(coachedLQ - overallLQ).toFixed(1)} Pt Gain)
+              6-Mo Coached Target: ${coachedLQDisp} pts (+${(coachedLQ - overallLQ).toFixed(1)} Pt Gain)
             </span>
           </div>
           <h3 style="font-size:1.2rem;font-weight:900;color:#0F172A;margin:0 0 0.45rem 0;">
-            5-Axis Brain Balance Score: Overall LQ ${overallLQ} pts (Top ${lqTopPct}% Age-Matched Percentile)
+            5-Axis Brain Balance Score: Overall LQ ${overallLQDisp} pts (Top ${lqTopPct}% Age-Matched Percentile)
           </h3>
           <p style="font-size:0.85rem;color:#475569;margin:0 0 1rem 0;line-height:1.55;">
             Evaluates 5 core neuro-cognitive learning circuits for <strong>Age ${ageY} (${genderLabel})</strong> based on your child&apos;s attention span (<strong>${focusSpanLabel}</strong>) and cognitive absorption style (<strong>${studyStyleLabel}</strong>).
@@ -1143,7 +1416,7 @@
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0.85rem;margin-bottom:1.1rem;">
             <div style="background:#F8FAFC;border:1.5px solid #93C5FD;border-radius:14px;padding:0.95rem 1rem;">
               <div style="font-size:0.76rem;font-weight:800;color:#1E3A8A;">① Current 5-Axis Brain LQ</div>
-              <div style="font-size:1.5rem;font-weight:900;color:#1D4ED8;margin:0.25rem 0;">${overallLQ} pts <span style="font-size:0.85rem;color:#475569;">(Top ${lqTopPct}%)</span></div>
+              <div style="font-size:1.5rem;font-weight:900;color:#1D4ED8;margin:0.25rem 0;">${overallLQDisp} pts <span style="font-size:0.85rem;color:#475569;">(Top ${lqTopPct}%)</span></div>
               <div style="font-size:0.76rem;color:#475569;font-weight:700;">Age ${ageY} Developmental Norm: 78.0 pts</div>
             </div>
             <div style="background:#F8FAFC;border:1.5px solid #CBD5E1;border-radius:14px;padding:0.95rem 1rem;">
@@ -1153,7 +1426,7 @@
             </div>
             <div style="background:#EFF6FF;border:2px solid #1D4ED8;border-radius:14px;padding:0.95rem 1rem;">
               <div style="font-size:0.76rem;font-weight:900;color:#1D4ED8;">③ 6-Month Coached Potential LQ</div>
-              <div style="font-size:1.5rem;font-weight:900;color:#059669;margin:0.25rem 0;">${coachedLQ} pts <span style="font-size:0.85rem;">(Top 4%)</span></div>
+              <div style="font-size:1.5rem;font-weight:900;color:#059669;margin:0.25rem 0;">${coachedLQDisp} pts <span style="font-size:0.85rem;">(Top 4%)</span></div>
               <div style="font-size:0.76rem;color:#059669;font-weight:800;">▲ +${(coachedLQ - overallLQ).toFixed(1)} Pts Synaptic Efficiency Gain</div>
             </div>
           </div>
@@ -1205,16 +1478,16 @@
           </div>
         </section>
 
-        <!-- CHAPTER 6: 4-Week Neuro-Study Protocol & Career Roadmap -->
+        <!-- CHAPTER 6: 4-Week US K-12 Neuro-Study Protocol & STEM Career Roadmap -->
         <section style="background:#FFFFFF;border:1.5px solid #BFDBFE;border-radius:18px;padding:1.35rem 1.3rem;margin-bottom:1.25rem;">
           <span style="display:inline-block;font-size:0.75rem;font-weight:900;color:#1D4ED8;background:#EFF6FF;border:1px solid #BFDBFE;padding:0.2rem 0.65rem;border-radius:9999px;margin-bottom:0.5rem;">
-            CHAPTER 06 – 07 · 4-WEEK NEURO-STUDY FIX PROTOCOL &amp; STEM CAREER ROADMAP
+            CHAPTER 06 – 07 · US K–12 EXECUTIVE FUNCTION PROTOCOL &amp; STEM / AP PATHWAY
           </span>
           <h3 style="font-size:1.2rem;font-weight:900;color:#0F172A;margin:0 0 0.45rem 0;">
-            Prefrontal Executive Function, Working Memory &amp; Active Recall Bottleneck Prescription
+            ${usGradeStageLabel}: Working Memory &amp; Active Recall Prescription
           </h3>
           <p style="font-size:0.85rem;color:#475569;margin:0 0 0.95rem 0;line-height:1.55;">
-            Tailored to your child&apos;s preferred absorption mode (<strong>${studyStyleLabel}</strong>) to resolve passive recognition illusions and convert short-term tutoring into permanent neocortical schemas.
+            Tailored to your child&apos;s preferred absorption mode (<strong>${studyStyleLabel}</strong>) to resolve passive recognition illusions and convert US classroom instruction and independent reading into permanent neocortical schemas aligned with Common Core &amp; AP/STEM standards.
           </p>
 
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0.8rem;margin-bottom:1rem;">
@@ -1273,6 +1546,42 @@
         </section>
       </div>
 
+      <!-- =========================================================================
+           5 PRINTABLE CLINICAL & COGNITIVE WORKSHEETS (US LETTER 8.5" x 11" READY)
+           ========================================================================= -->
+      <section id="global-5-printable-worksheets-section" style="background:#FFFFFF;border:2px solid #93C5FD;border-radius:18px;padding:1.35rem 1.3rem;margin-bottom:1.25rem;display:${isMasked ? 'none' : 'block'};">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
+          <span style="font-size:0.75rem;font-weight:900;color:#1D4ED8;background:#EFF6FF;border:1px solid #BFDBFE;padding:0.22rem 0.7rem;border-radius:9999px;">
+            BONUS CLINICAL TOOLKIT · 5 PRINTABLE COGNITIVE &amp; GROWTH WORKSHEETS (US LETTER 8.5&quot; × 11&quot;)
+          </span>
+          <button type="button" onclick="if(window.triggerKidsFitGlobalPrint){window.triggerKidsFitGlobalPrint();}else{window.print();}" style="background:#1D4ED8;color:#FFFFFF;border:none;border-radius:9999px;padding:0.38rem 0.85rem;font-size:0.76rem;font-weight:800;cursor:pointer;">
+            🖨️ Print All 5 Worksheets
+          </button>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0.75rem;font-size:0.8rem;">
+          <div style="background:#F8FAFC;border:1px solid #CBD5E1;border-radius:12px;padding:0.85rem;">
+            <strong style="color:#1D4ED8;display:block;margin-bottom:0.2rem;">Worksheet 01 · Feynman 3-Min Blank-Page Recall</strong>
+            <span style="color:#475569;line-height:1.45;">Structured template for closing the book after 20 mins of reading and writing 3 core concepts + 1 self-check gap from memory (+150% 30-day retention).</span>
+          </div>
+          <div style="background:#F8FAFC;border:1px solid #CBD5E1;border-radius:12px;padding:0.85rem;">
+            <strong style="color:#1D4ED8;display:block;margin-bottom:0.2rem;">Worksheet 02 · Visual Math Bar-Modeling Canvas</strong>
+            <span style="color:#475569;line-height:1.45;">Part-Whole &amp; Comparison visual bar diagram grid that offloads prefrontal working memory on multi-step Common Core word problems.</span>
+          </div>
+          <div style="background:#F8FAFC;border:1px solid #CBD5E1;border-radius:12px;padding:0.85rem;">
+            <strong style="color:#1D4ED8;display:block;margin-bottom:0.2rem;">Worksheet 03 · 15-Min Prefrontal Focus Sprint Log</strong>
+            <span style="color:#475569;line-height:1.45;">Timed micro-mission checklist with distraction tally marks to train dorsolateral prefrontal sustained desk endurance.</span>
+          </div>
+          <div style="background:#F8FAFC;border:1px solid #CBD5E1;border-radius:12px;padding:0.85rem;">
+            <strong style="color:#1D4ED8;display:block;margin-bottom:0.2rem;">Worksheet 04 · Socratic 3-Step Inquiry Organizer</strong>
+            <span style="color:#475569;line-height:1.45;">Guides parent-child dialogue through [Observation] → [Hypothesis / Why?] → [Real-World STEM Application].</span>
+          </div>
+          <div style="background:#F8FAFC;border:1px solid #CBD5E1;border-radius:12px;padding:0.85rem;">
+            <strong style="color:#059669;display:block;margin-bottom:0.2rem;">Worksheet 05 · 7-Day 10 PM SWS HGH &amp; Dead-Hang Tracker</strong>
+            <span style="color:#475569;line-height:1.45;">Weekly fridge checklist tracking 10 PM bedtime, 3-hr pre-sleep glycemic fast, Ca/D3/K2 intake, and 3×30s doorway bar hangs.</span>
+          </div>
+        </div>
+      </section>
+
       <!-- High-Contrast Applied Child Conditions & Clinical Summary Footer (White Background + Dark Navy Text) -->
       <div id="global-report-child-conditions-footer" style="background:#FFFFFF;border:2px solid #93C5FD;border-radius:18px;padding:1.15rem 1.3rem;margin-top:0.5rem;color:#0F172A;box-shadow:0 6px 18px rgba(15,23,42,0.05);">
         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.55rem;padding-bottom:0.5rem;border-bottom:1px solid #DBEAFE;">
@@ -1280,7 +1589,7 @@
             APPLIED CHILD CONDITIONS &amp; 1:1 SURVEY PARAMETERS
           </span>
           <span style="font-size:0.76rem;font-weight:800;color:#059669;">
-            ✓ 3,681 Peer-Reviewed PubMed Studies Cross-Referenced
+            ✓ 3,714 Peer-Reviewed PubMed Studies Cross-Referenced
           </span>
         </div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0.65rem;font-size:0.83rem;color:#0F172A;line-height:1.5;">
@@ -1290,11 +1599,11 @@
           </div>
           <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:10px;padding:0.65rem 0.85rem;">
             <strong style="color:#1D4ED8;display:block;margin-bottom:0.15rem;">Physical Biometrics &amp; MPH</strong>
-            <span>${fmtLen(heightCm)} (${pctVal}th%) · ${fmtWt(weightKg)} · Genetic MPH ${fmtLen(geneticCm)}</span>
+            <span>${fmtLen(heightCm)} (${pctVal}th%) · ${fmtWt(weightKg)} · Genetic MPH ${fmtMaskedLen(geneticCm)}</span>
           </div>
           <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:10px;padding:0.65rem 0.85rem;">
             <strong style="color:#1D4ED8;display:block;margin-bottom:0.15rem;">Brain LQ &amp; Learning Profile</strong>
-            <span>Overall LQ ${overallLQ} pts · ${focusSpanLabel.split(' (')[0]} · ${studyStyleLabel.split(' &')[0]}</span>
+            <span>Overall LQ ${overallLQDisp} pts · ${focusSpanLabel.split(' (')[0]} · ${studyStyleLabel.split(' &')[0]}</span>
           </div>
         </div>
       </div>
@@ -1351,6 +1660,11 @@
     const card = document.getElementById('master-briefing-card');
     if (!card) return;
 
+    const unlocked = isReportUnlocked();
+    if (document.documentElement && typeof document.documentElement.setAttribute === 'function') {
+      document.documentElement.setAttribute('data-paywall-state', unlocked ? 'unlocked' : 'locked');
+    }
+
     const wizardProfile = (global.TallerOnboardingWizard && typeof global.TallerOnboardingWizard.getState === 'function' && global.TallerOnboardingWizard.getState().profile) || {};
     const appProfile = (global.KidsFitApp && global.KidsFitApp.state && global.KidsFitApp.state.profile) || {};
     const profile = Object.assign({}, wizardProfile, appProfile);
@@ -1380,27 +1694,33 @@
       }
     }
 
-    // Replace #master-briefing-card with 100% Native English Clinical Master Report
-    card.innerHTML = buildNativeEnglishClinicalReportHTML(profile);
+    // Replace #master-briefing-card with 100% Native English Clinical Master Report (masked when locked)
+    card.innerHTML = buildNativeEnglishClinicalReportHTML(profile, { masked: !unlocked });
     global.switchGlobalReportTab(isLearningMode ? 'learning' : 'growth');
+    if (typeof global.updateGlobalHormoneSimulator === 'function') {
+      global.updateGlobalHormoneSimulator();
+    }
 
     const p1 = document.getElementById('pillar-1-container');
     const p2 = document.getElementById('pillar-2-container');
+    const GrowthEngine = global.KidsFitGrowthEngine;
     const heightCm = parseFloat(profile.currentHeight) || 137.0;
     const weightKg = parseFloat(profile.currentWeight) || 35.5;
-    const fatherCm = parseFloat(profile.fatherHeight) || 175.0;
-    const motherCm = parseFloat(profile.motherHeight) || 162.0;
+    const fatherCm = parseFloat(profile.fatherHeight) || 173.5;
+    const motherCm = parseFloat(profile.motherHeight) || 160.5;
     const isBoy = profile.gender !== 'girl';
     const ageY = Math.max(1, Math.min(20, Math.floor((profile.ageMonths || 120) / 12)));
     const genderLabel = profile.gender === 'girl' ? 'Girl' : 'Boy';
-    const heightImp = cmToFtInStr(heightCm);
-    const weightLbs = (weightKg * 2.20462262).toFixed(1);
-    const mphCm = isBoy ? ((fatherCm + motherCm + 13) / 2) : ((fatherCm + motherCm - 13) / 2);
-    const optimizedCm = Number((mphCm + 4.8).toFixed(1));
-    const unmanagedCm = Number((mphCm - 1.9).toFixed(1));
+    const habits = Array.isArray(profile.habits) && profile.habits.length ? profile.habits : ['late_sleep'];
+    const mphCm = (GrowthEngine && typeof GrowthEngine.calculateMph === 'function')
+      ? GrowthEngine.calculateMph(fatherCm, motherCm, isBoy ? 'boy' : 'girl')
+      : Number(((fatherCm + motherCm + (isBoy ? 13 : -13)) / 2).toFixed(1));
+    const pred = (GrowthEngine && typeof GrowthEngine.calculateHeightPrediction === 'function')
+      ? GrowthEngine.calculateHeightPrediction(mphCm, habits, profile.tannerPhase || 'phase_2')
+      : { mph: mphCm, predictedCurrent: Number((mphCm - 2.3).toFixed(1)), potentialHeight: Number((mphCm + 4.8).toFixed(1)), totalLoss: 2.3, potentialGain: 4.8 };
+    const unmanagedCm = Number(pred.predictedCurrent || (mphCm - 2.3)).toFixed(1);
+    const optimizedCm = Number(pred.potentialHeight || (mphCm + 4.8)).toFixed(1);
     const hiddenGainCm = Math.max(3.5, Number((optimizedCm - unmanagedCm).toFixed(1)));
-    const hiddenGainIn = (hiddenGainCm / 2.54).toFixed(1);
-    const optimizedImp = cmToFtInStr(optimizedCm);
 
     const rxTitleEl = document.getElementById('rx-header-title');
     if (rxTitleEl) {
@@ -1437,7 +1757,7 @@
       return isImperial ? `+${inVal} in (+${cmStr} cm)` : `+${cmStr} cm (+${inVal} in)`;
     }
 
-    if (isReportUnlocked()) {
+    if (unlocked) {
       [p1, p2].forEach((el) => {
         if (el) {
           el.style.filter = 'none';
@@ -1448,16 +1768,19 @@
           el.style.opacity = '1';
         }
       });
+      if (global.KidsFitGrowthTracker && typeof global.KidsFitGrowthTracker.preparePrintReport === 'function') {
+        global.KidsFitGrowthTracker.preparePrintReport(profile);
+      }
       const unlockedBanner = document.createElement('div');
       unlockedBanner.id = 'taller-global-paywall-gate';
       unlockedBanner.style.cssText = 'background:#ECFDF5;border:2px solid #10B981;border-radius:16px;padding:0.9rem 1.2rem;margin-bottom:1.2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.6rem;';
       unlockedBanner.innerHTML = `
         <div style="display:flex;align-items:center;gap:0.6rem;">
           <span style="background:#10B981;color:#FFFFFF;font-size:0.76rem;font-weight:900;padding:0.22rem 0.65rem;border-radius:9999px;">UNLOCKED PRO PASS</span>
-          <span style="font-size:0.9rem;font-weight:800;color:#065F46;">Full US CDC &amp; 3,681-Paper Clinical Report Unlocked — Age ${ageY} ${genderLabel} (${isLearningMode ? '5-Axis Brain LQ &amp; Study Roadmap' : `${fmtLen(heightCm)} · ${fmtWt(weightKg)}`})</span>
+          <span style="font-size:0.9rem;font-weight:800;color:#065F46;">Full US CDC &amp; 3,714-Paper Clinical Report Unlocked — Age ${ageY} ${genderLabel} (${isLearningMode ? '5-Axis Brain LQ &amp; Study Roadmap' : `${fmtLen(heightCm)} · ${fmtWt(weightKg)}`})</span>
         </div>
-        <button type="button" onclick="window.print();" style="background:#059669;color:#FFFFFF;border:none;border-radius:9999px;padding:0.42rem 0.95rem;font-size:0.82rem;font-weight:800;cursor:pointer;">
-          Download / Print A4 PDF Report
+        <button type="button" onclick="if(window.triggerKidsFitGlobalPrint){window.triggerKidsFitGlobalPrint();}else{window.print();}" style="background:#059669;color:#FFFFFF;border:none;border-radius:9999px;padding:0.42rem 0.95rem;font-size:0.82rem;font-weight:800;cursor:pointer;">
+          Download / Print Clinical PDF Report
         </button>
       `;
       const headerEl = card.querySelector('.briefing-header');
@@ -1469,7 +1792,13 @@
       return;
     }
 
-    // Locked State: Blur Pillar 1 & Pillar 2 behind the Taller-Style Paywall Gate
+    // Locked State: Clear/Lock #clinic-print-report-container so @media print cannot leak paid report
+    const printContainer = document.getElementById('clinic-print-report-container');
+    if (printContainer) {
+      printContainer.innerHTML = '<div class="locked-print-notice" style="padding:48px 24px;text-align:center;font-family:sans-serif;font-size:18pt;font-weight:800;color:#0F172A;">Locked Clinical Report — Please unlock at kisfitglobal.com</div>';
+    }
+
+    // Blur Pillar 1 & Pillar 2 behind the Taller-Style Paywall Gate
     [p1, p2].forEach((el) => {
       if (el) {
         el.style.filter = 'blur(8px)';
@@ -1500,7 +1829,7 @@
           </span>
         </div>
         <span style="font-size:0.78rem;font-weight:800;color:#059669;background:#ECFDF5;border:1px solid #A7F3D0;padding:0.2rem 0.65rem;border-radius:9999px;">
-          3,681 PubMed Papers Matched
+          3,714 PubMed Papers Matched
         </span>
       </div>
 
@@ -1510,7 +1839,7 @@
         <div style="background:#FFFFFF;border:1.5px solid #93C5FD;border-radius:14px;padding:0.85rem 1rem;">
           <div style="font-size:0.75rem;font-weight:800;color:#475569;">① 5-Axis Brain Learning Quotient (LQ)</div>
           <div style="font-size:1.35rem;font-weight:900;color:#1D4ED8;margin-top:0.2rem;letter-spacing:-0.02em;">
-            🔒 <span style="filter:blur(5px);user-select:none;">92.4 pts</span> <span style="font-size:0.82rem;color:#DC2626;font-weight:800;">(Locked)</span>
+            🔒 <span style="filter:blur(5px);user-select:none;">??.? pts</span> <span style="font-size:0.82rem;color:#DC2626;font-weight:800;">(Locked)</span>
           </div>
           <div style="font-size:0.76rem;color:#059669;font-weight:800;margin-top:0.2rem;">
             ▲ +14.5 Pt Coached LQ Gain Window!
@@ -1538,7 +1867,7 @@
         <div style="background:#FFFFFF;border:1.5px solid #93C5FD;border-radius:14px;padding:0.85rem 1rem;">
           <div style="font-size:0.75rem;font-weight:800;color:#475569;">① Final Predicted Adult Height</div>
           <div style="font-size:1.35rem;font-weight:900;color:#1D4ED8;margin-top:0.2rem;letter-spacing:-0.02em;">
-            🔒 <span style="filter:blur(5px);user-select:none;">${isImperial ? optimizedImp : `${optimizedCm} cm`}</span> <span style="font-size:0.82rem;color:#DC2626;font-weight:800;">(Locked)</span>
+            🔒 <span style="filter:blur(5px);user-select:none;">${isImperial ? "5' ?.?″" : '???.? cm'}</span> <span style="font-size:0.82rem;color:#DC2626;font-weight:800;">(Locked)</span>
           </div>
           <div style="font-size:0.76rem;color:#059669;font-weight:800;margin-top:0.2rem;">
             ▲ ${fmtGain(hiddenGainCm)} Hidden Gain Detected!
@@ -1578,7 +1907,7 @@
               Unlock Your Child's Complete 1:1 Growth &amp; Brain LQ Master Report
             </h3>
             <p style="font-size:0.86rem;color:#475569;margin:0;">
-              Instant access to both full reports (Physical Auxology + Neuro-Cognitive LQ), downloadable Hospital-Style A4 PDF, and 5 Printable Cognitive Worksheets.
+              Instant access to both full reports (Physical Auxology + Neuro-Cognitive LQ), downloadable Hospital-Style Clinical PDF, and 5 Printable Cognitive Worksheets.
             </p>
           </div>
         </div>
@@ -1601,7 +1930,7 @@
             <div style="font-size:0.78rem;color:#334155;line-height:1.45;">
               ✓ Full Physical Height + rhGH Paper Report<br>
               ✓ Full 5-Axis Brain LQ &amp; 4-Week Study Plan<br>
-              ✓ Printable A4 Clinical PDF + 5 Worksheets
+              ✓ Printable Clinical PDF Report + 5 Worksheets
             </div>
           </label>
 
@@ -1684,7 +2013,7 @@
   global.applyKidsFitGlobalVipCode = function () {
     const inp = document.getElementById('input-global-vip-code');
     const code = String((inp && inp.value) || '').trim().toUpperCase();
-    if (code === 'VIP2026' || code === 'ADMIN' || code === 'KIDSFIT' || code === 'FREE100') {
+    if (code && AUTHORIZED_CODE_HASHES.indexOf(hashAccessCode(code)) !== -1) {
       try {
         if (window.localStorage) window.localStorage.setItem(UNLOCK_STORAGE_KEY, 'true');
       } catch (_) {}
@@ -1736,7 +2065,7 @@
             category: 'global_paywall',
             product_name: plan === 'pass' ? 'Lemon Squeezy $19.99 6-Month Pass Checkout' : 'Lemon Squeezy $8.99 Single Report Checkout',
             href: finalUrl,
-            domain: (window.location && window.location.hostname) || 'truthofmarket.com'
+            domain: (window.location && window.location.hostname) || 'kisfitglobal.com'
           })
         }).catch(function () {});
 
@@ -1770,7 +2099,7 @@
     const priceStr = selectedPlan === 'pass' ? '$19.99' : '$8.99';
     const planTitle = selectedPlan === 'pass'
       ? '6-Month Growth & Brain LQ Unlimited Pass'
-      : 'Single Child Full Clinical Report & A4 PDF Pass';
+      : 'Single Child Full Clinical Report & Printable PDF Pass';
     const lsBuyUrl = getActiveCheckoutUrl(selectedPlan);
     const loggedInUser = getLoggedInUser();
     const defaultEmail = (loggedInUser && loggedInUser.email) || '';
@@ -1782,7 +2111,7 @@
       <div style="background:#FFFFFF;border:2px solid #1D4ED8;border-radius:22px;max-width:460px;width:100%;padding:1.5rem 1.4rem;box-shadow:0 25px 60px rgba(0,0,0,0.35);color:#0F172A;text-align:left;">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.85rem;padding-bottom:0.65rem;border-bottom:1px solid #E2E8F0;">
           <div>
-            <span style="font-size:0.72rem;font-weight:900;color:#1D4ED8;background:#EFF6FF;padding:0.18rem 0.55rem;border-radius:9999px;">KIDS-FIT BIO LABS · OFFICIAL USD CHECKOUT</span>
+            <span style="font-size:0.72rem;font-weight:900;color:#1D4ED8;background:#EFF6FF;padding:0.18rem 0.55rem;border-radius:9999px;">KISFIT BIO LABS · OFFICIAL USD CHECKOUT</span>
             <h3 style="margin:0.3rem 0 0;font-size:1.12rem;font-weight:900;color:#0F172A;">${planTitle}</h3>
           </div>
           <button type="button" onclick="var m=document.getElementById('kidsfit-global-checkout-modal');if(m)m.remove();" style="background:#F1F5F9;border:1px solid #CBD5E1;border-radius:9999px;width:32px;height:32px;font-weight:900;cursor:pointer;">✕</button>

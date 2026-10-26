@@ -1,6 +1,6 @@
 /**
  * Taller Bio Labs (키즈핏 바이오 랩)
- * Core 5: 90-Day Growth & Routine Tracker & Hospital Clinic A4 PDF Report
+ * Core 5: 90-Day Growth & Routine Tracker & Hospital Clinic Clinical PDF Report
  * 
  * Features:
  * 1. 90-Day Longitudinal Growth & Daily Habit Streak Tracker:
@@ -9,7 +9,7 @@
  *    - Tracks date-stamped biometrics (height, weight, growth velocity)
  *    - Daily 3-Protocol tracking: Sleep (수면), Bio-Nutrition (영양), Biomechanics (운동)
  *    - Milestone streak badges: 7 days, 30 days, 90 days
- * 2. Dedicated 2-Page Hospital Clinic Style A4 PDF Report:
+ * 2. Dedicated 2-Page Hospital Clinic Style Clinical PDF Report:
  *    - Page 1: Auxology & Trajectory (Demographics, CDC/KDCA percentiles, Tanner MPH, 3-curve trajectory SVG)
  *    - Page 2: Endocrinology, Nutrition, Biomechanics & Neuro-Cognitive Matrix + Doctor Signature
  *    - Pure white `#FFFFFF` background, `#0F172A` typography, `page-break-after: always;`
@@ -374,7 +374,7 @@
     return html;
   }
 
-  // 3. 2-Page Hospital Clinic Style A4 PDF Document Generator
+  // 3. 2-Page Hospital Clinic Style Clinical PDF Document Generator
   function renderClinicalPdfReport(profile = {}) {
     const isGlobal = (typeof document !== 'undefined' && document.documentElement.lang === 'en') || profile.language === 'en';
     const ageMonths = Number(profile.ageMonths || profile.exactMonths) || 120;
@@ -477,7 +477,7 @@
             <div style="border-bottom: 2.5px solid #0F172A; padding-bottom: 12px; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: flex-end;">
               <div>
                 <div style="font-size: 10pt; font-weight: 800; color: #475569; letter-spacing: 0.08em; text-transform: uppercase;">
-                  KIDS-FIT AI STUDIO · PROPRIETARY PEDIATRIC AUXOLOGY AI™ v4.0 CLINICAL ATELIER
+                  KISFIT AI STUDIO · PROPRIETARY PEDIATRIC AUXOLOGY AI™ v4.0 CLINICAL ATELIER
                 </div>
                 <h1 style="font-size: 18pt; font-weight: 900; color: #0F172A; margin: 4px 0 0 0;">
                   Pediatric Auxology &amp; Bone-Age Precision Clinical Report (Page 1/2)
@@ -594,7 +594,7 @@
               </div>
             </div>
             <div style="border-top: 1px solid #CBD5E1; padding-top: 8px; font-size: 8pt; color: #64748B; display: flex; justify-content: space-between;">
-              <span>KIDS-FIT AI STUDIO · PROPRIETARY PEDIATRIC AUXOLOGY AI™ v4.0</span>
+              <span>KISFIT AI STUDIO · PROPRIETARY PEDIATRIC AUXOLOGY AI™ v4.0</span>
               <span>Page 1 of 2 (Continued on Page 2)</span>
             </div>
           </div>
@@ -602,7 +602,7 @@
             <div style="border-bottom: 2.5px solid #0F172A; padding-bottom: 12px; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: flex-end;">
               <div>
                 <div style="font-size: 10pt; font-weight: 800; color: #475569; letter-spacing: 0.08em; text-transform: uppercase;">
-                  KIDS-FIT AI STUDIO · PROPRIETARY PEDIATRIC AUXOLOGY AI™ v4.0 CLINICAL ATELIER
+                  KISFIT AI STUDIO · PROPRIETARY PEDIATRIC AUXOLOGY AI™ v4.0 CLINICAL ATELIER
                 </div>
                 <h1 style="font-size: 18pt; font-weight: 900; color: #0F172A; margin: 4px 0 0 0;">
                   Endocrinology, Bio-Nutrition, Biomechanics &amp; Neuro Prescription (Page 2/2)
@@ -734,7 +734,7 @@
               </div>
             </div>
             <div style="border-top: 1px solid #CBD5E1; padding-top: 8px; margin-top: 12px; font-size: 8pt; color: #64748B; display: flex; justify-content: space-between;">
-              <span>KIDS-FIT AI STUDIO · PROPRIETARY PEDIATRIC AUXOLOGY AI™ v4.0</span>
+              <span>KISFIT AI STUDIO · PROPRIETARY PEDIATRIC AUXOLOGY AI™ v4.0</span>
               <span>Page 2 of 2 (End of Clinical Assessment Report)</span>
             </div>
           </div>
@@ -753,7 +753,7 @@
           <div style="border-bottom: 2.5px solid #0F172A; padding-bottom: 12px; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: flex-end;">
             <div>
               <div style="font-size: 10pt; font-weight: 800; color: #475569; letter-spacing: 0.08em; text-transform: uppercase;">
-                KIDS-FIT AI STUDIO · PROPRIETARY K-GROWTH AI™ v4.0 CLINICAL ATELIER
+                KISFIT AI STUDIO · PROPRIETARY K-GROWTH AI™ v4.0 CLINICAL ATELIER
               </div>
               <h1 style="font-size: 18pt; font-weight: 900; color: #0F172A; margin: 4px 0 0 0;">
                 소아청소년 신체성장·골연령 정밀 진단 결과지 (Page 1/2)
@@ -892,7 +892,7 @@
 
           <!-- Page 1 Footer -->
           <div style="border-top: 1px solid #CBD5E1; padding-top: 8px; font-size: 8pt; color: #64748B; display: flex; justify-content: space-between;">
-            <span>KIDS-FIT AI STUDIO · PROPRIETARY K-GROWTH AI™ v4.0</span>
+            <span>KISFIT AI STUDIO · PROPRIETARY K-GROWTH AI™ v4.0</span>
             <span>Page 1 of 2 (다음 페이지에 계속)</span>
           </div>
 
@@ -905,7 +905,7 @@
           <div style="border-bottom: 2.5px solid #0F172A; padding-bottom: 12px; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: flex-end;">
             <div>
               <div style="font-size: 10pt; font-weight: 800; color: #475569; letter-spacing: 0.08em; text-transform: uppercase;">
-                KIDS-FIT AI STUDIO · PROPRIETARY K-GROWTH AI™ v4.0 CLINICAL ATELIER
+                KISFIT AI STUDIO · PROPRIETARY K-GROWTH AI™ v4.0 CLINICAL ATELIER
               </div>
               <h1 style="font-size: 18pt; font-weight: 900; color: #0F172A; margin: 4px 0 0 0;">
                 내분비·임상영양·생체역학 &amp; 뇌인지 처방전 (Page 2/2)
@@ -1049,7 +1049,7 @@
 
           <!-- Page 2 Footer -->
           <div style="border-top: 1px solid #CBD5E1; padding-top: 8px; margin-top: 12px; font-size: 8pt; color: #64748B; display: flex; justify-content: space-between;">
-            <span>KIDS-FIT AI STUDIO · PROPRIETARY K-GROWTH AI™ v4.0</span>
+            <span>KISFIT AI STUDIO · PROPRIETARY K-GROWTH AI™ v4.0</span>
             <span>Page 2 of 2 (End of Clinical Assessment Report)</span>
           </div>
 
@@ -1060,8 +1060,18 @@
   }
 
   // 4. Print Report Pre-population & Trigger
-  function preparePrintReport(profile = {}) {
+    function preparePrintReport(profile = {}) {
     if (typeof document === 'undefined') return;
+    if (typeof window !== 'undefined' && window.KidsFitGlobalPaywall && typeof window.KidsFitGlobalPaywall.isGlobalPaidEdition === 'function' && window.KidsFitGlobalPaywall.isGlobalPaidEdition() && typeof window.KidsFitGlobalPaywall.isReportUnlocked === 'function' && !window.KidsFitGlobalPaywall.isReportUnlocked()) {
+      let lockedContainer = document.getElementById('clinic-print-report-container');
+      if (!lockedContainer) {
+        lockedContainer = document.createElement('div');
+        lockedContainer.id = 'clinic-print-report-container';
+        if (document.body) document.body.appendChild(lockedContainer);
+      }
+      lockedContainer.innerHTML = '<div class="locked-print-notice" style="padding:48px 24px;text-align:center;font-family:sans-serif;font-size:18pt;font-weight:800;color:#0F172A;">Locked Clinical Report — Please unlock at kisfitglobal.com</div>';
+      return;
+    }
 
     const activeMode = profile.preferredReportMode || (typeof window !== 'undefined' && window.__KIDSFIT_PREFERRED_REPORT_MODE) || 'growth';
     if (document.body && document.body.classList) {
@@ -1077,7 +1087,14 @@
     printContainer.innerHTML = renderClinicalPdfReport(profile);
   }
 
-  function printClinicReport(profile = {}) {
+    function printClinicReport(profile = {}) {
+    if (typeof window !== 'undefined' && window.KidsFitGlobalPaywall && typeof window.KidsFitGlobalPaywall.isGlobalPaidEdition === 'function' && window.KidsFitGlobalPaywall.isGlobalPaidEdition() && typeof window.KidsFitGlobalPaywall.isReportUnlocked === 'function' && !window.KidsFitGlobalPaywall.isReportUnlocked()) {
+      preparePrintReport(profile);
+      if (typeof window.openKidsFitGlobalCheckoutModal === 'function') {
+        window.openKidsFitGlobalCheckoutModal();
+      }
+      return;
+    }
     preparePrintReport(profile);
     if (typeof window !== 'undefined' && typeof window.print === 'function') {
       window.print();

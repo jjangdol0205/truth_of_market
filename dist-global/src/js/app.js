@@ -180,7 +180,7 @@
       recentGrowth6m: 3.2,
       fatherHeight: 173.5,
       motherHeight: 160.5,
-      region: '서울 강남·서초·송파',
+      region: 'US National (CDC/AAP Standard)',
       pubertyStage: 'phase_2',
       tannerPhase: 'phase_2',
       habits: ['late_sleep'],
@@ -473,19 +473,27 @@
     const genderRadio = document.querySelector(`input[name="child-gender"][value="${profile.gender}"]`);
     if (genderRadio) genderRadio.checked = true;
 
-    // Numeric inputs
+    // Numeric inputs (Respect user-edited Imperial ft/in companion inputs on initial load)
     const isImperial = typeof document !== 'undefined' && document.documentElement.lang === 'en' && typeof global.TallerI18n !== 'undefined' && global.TallerI18n.getUnitSystem() === 'imperial';
     const setVal = (id, val) => {
       const el = document.getElementById(id);
-      if (el && val !== undefined) el.value = val;
+      if (el && val !== undefined && !(el.dataset && el.dataset.userEdited === 'true')) {
+        el.value = val;
+      }
     };
     setVal('child-age-months', profile.ageMonths);
     setVal('child-age-slider', profile.ageYears || Math.round(profile.ageMonths / 12));
     setVal('child-height', isImperial ? Number((profile.currentHeight / 2.54).toFixed(1)) : profile.currentHeight);
     setVal('child-weight', isImperial ? Number((profile.currentWeight * 2.20462262).toFixed(1)) : profile.currentWeight);
-    setVal('child-recent-gain', isImperial ? Number(((profile.recentGrowth6m || 3.0) / 2.54).toFixed(1)) : (profile.recentGrowth6m || 3.0));
+    setVal('child-recent-gain', isImperial ? Number(((profile.recentGrowth6m || 3.2) / 2.54).toFixed(1)) : (profile.recentGrowth6m || 3.2));
     setVal('father-height', isImperial ? Number((profile.fatherHeight / 2.54).toFixed(1)) : profile.fatherHeight);
     setVal('mother-height', isImperial ? Number((profile.motherHeight / 2.54).toFixed(1)) : profile.motherHeight);
+    if (isImperial && global.TallerOnboardingWizard && typeof global.TallerOnboardingWizard.syncCompanionInputs === 'function') {
+      const chH = document.getElementById('child-height');
+      if (!chH || !(chH.dataset && chH.dataset.userEdited === 'true')) {
+        global.TallerOnboardingWizard.syncCompanionInputs();
+      }
+    }
 
     // Region
     const regionSelect = document.getElementById('user-region');
@@ -737,7 +745,7 @@
       const isEn = document.documentElement && (document.documentElement.lang === 'en' || (typeof document.documentElement.getAttribute === 'function' && document.documentElement.getAttribute('data-edition') === 'global-paid'));
       headerSubEl.textContent = isEn
         ? (isLearningModeActive
-          ? '6-Step Clinical Scan + Phenotype Synthesis · US CDC & 3,681 Neuro-Cognitive Studies Analyzed'
+          ? '6-Step Clinical Scan + Phenotype Synthesis · US CDC & 3,714 Neuro-Cognitive Studies Analyzed'
           : '6-Step Clinical Scan + Phenotype Synthesis · US CDC 2000 & 3,714 Pediatric Endocrine Studies Analyzed')
         : (isLearningModeActive
           ? '진단 6단계 + 우리 아이 상세 특징 합산 · K-DST & 뇌인지 학습 논문 3,714편 정밀 분석 완료'
@@ -955,7 +963,7 @@
     const isEnShare = typeof document !== 'undefined' && document.documentElement && (document.documentElement.lang === 'en' || (typeof document.documentElement.getAttribute === 'function' && document.documentElement.getAttribute('data-edition') === 'global-paid'));
     const childGender = state.profile.gender === 'boy' ? (isEnShare ? 'Boy' : '남아') : (isEnShare ? 'Girl' : '여아');
     const text = isEnShare
-      ? `✨ KidsFit Clinical Growth Report (${state.profile.ageMonths} mos ${childGender}): Top ${kdca.topPercent}% on US CDC Growth Charts! With clinical optimization, projected adult height reaches ${pred.potentialHeight} cm (${Math.floor((pred.potentialHeight / 2.54) / 12)}'${Math.round((pred.potentialHeight / 2.54) % 12)}")! 👉 https://truthofmarket.com`
+      ? `✨ KidsFit Clinical Growth Report (${state.profile.ageMonths} mos ${childGender}): Top ${kdca.topPercent}% on US CDC Growth Charts! With clinical optimization, projected adult height reaches ${pred.potentialHeight} cm (${Math.floor((pred.potentialHeight / 2.54) / 12)}'${Math.round((pred.potentialHeight / 2.54) % 12)}")! 👉 https://kisfitglobal.com`
       : `💌 여보! 방금 우리 아이(만 ${state.profile.ageMonths}개월 ${childGender}) 질병관리청 성장도표 진단해봤는데, 또래 상위 ${kdca.topPercent}%래!\n골든타임 관리하면 최대 ${pred.potentialHeight}cm까지 클 수 있대!\n이번 주말엔 [${outing.destination}] 같이 가보자 👉 https://kidsfit.co.kr`;
 
     if (typeof navigator !== 'undefined' && navigator.clipboard && navigator.clipboard.writeText) {

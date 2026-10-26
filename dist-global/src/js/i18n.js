@@ -20,7 +20,7 @@
   const DICTIONARY = {
     ko: {
       // Header & Brand
-      'brand.title': 'KIDS-FIT',
+      'brand.title': 'KISFIT',
       'brand.tagline': '소아·청소년 신체 성장 · 골연령 및 신경인지 학습 정밀 진단 센터',
       'trust.badge': 'Built on Official Standards: 질병관리청 소아청소년 성장도표 & 보건복지부 영유아 발달선별검사(K-DST) 기준 적용',
       'nav.auxology': '신체 성장 · 골연령 궤적',
@@ -72,7 +72,7 @@
       'services.basis': '대한소아내분비학회지 · 대한소아과학회지 · 질병관리청(KDCA) · 학술논문 3,714편 기반',
 
       // Studio & Quiz Extra Keys
-      'studio.bar.title': 'KIDS-FIT 임상 데이터 기반 1:1 정밀 설문 진단',
+      'studio.bar.title': 'KISFIT 임상 데이터 기반 1:1 정밀 설문 진단',
       'studio.bar.back': '첫 화면으로 돌아가기',
       'presets.bar.label': '연령별 표준 임상 데이터 예시:',
       'preset.chip.1': '만 3세 (영유아기)',
@@ -255,20 +255,20 @@
 
     en: {
       // Header & Brand
-      'brand.title': 'KIDS-FIT',
+      'brand.title': 'KISFIT',
       'brand.tagline': 'Height · Physical · Mental Growth & Personalized Learning Platform',
       'trust.badge': 'Built on Official Standards: US CDC 2000, WHO & AAP Pediatric Auxology',
       'nav.auxology': 'Physical Growth & Auxology',
       'nav.endocrinology': 'Endocrinology & Bio-Nutrition',
       'nav.biomechanics': 'Biomechanics & Posture',
       'nav.neuro': 'Neuro-Cognitive Matrix',
-      'nav.tracker': '90-Day Tracker & A4 PDF',
+      'nav.tracker': '90-Day Tracker & Clinical PDF',
       'theme.dark': '🌙 Dark Mode',
       'theme.light': '☀️ Light Mode',
       'lang.toggle': '🇰🇷 한국어',
 
       // Hero
-      'hero.badge': '🌱 Powered by US CDC 2000, WHO Growth Standards & 3,714 Clinical Papers · KIDS-FIT AI™',
+      'hero.badge': '🌱 Powered by US CDC 2000, WHO Growth Standards & 3,714 Clinical Papers · KISFIT AI™',
       'hero.headline': 'How Tall Will Your Child Grow?\n<span class="hero-headline-highlight" style="background: linear-gradient(90deg, #38BDF8 0%, #34D399 60%, #A7F3D0 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Separate Physical Growth Report & Brain Learning Report in 1 Min</span>',
       'hero.subtitle': '1-Min Input → Independent [Physical Growth Report] & [Brain Learning Report]',
       'nav.forWhom': 'Who It\'s For',
@@ -307,7 +307,7 @@
       'services.basis': 'Clinical Basis: US CDC 2000 · WHO Growth Standards · ASQ-3 / AAP Milestones · 3,714-Paper DB',
 
       // Studio & Quiz Extra Keys
-      'studio.bar.title': '✦ KIDS-FIT AI · 1:1 Personalized Growth & Learning Diagnosis',
+      'studio.bar.title': '✦ KISFIT AI · 1:1 Personalized Growth & Learning Diagnosis',
       'studio.bar.back': '← Back to Overview',
       'presets.bar.label': '⚡ 1-Sec Demo Presets:',
       'preset.chip.1': '👶 Age 3',
@@ -337,9 +337,9 @@
       'results.tab3.desc': 'Intervertebral disc rehydration (+1.8 cm) and Wolff\'s Law mechanical loading routines with interactive countdown timers.',
       'results.tab4.title': 'Neuro-Cognitive Matrix & Weekend Socratic Inquiry Roadmap',
       'results.tab4.desc': '5-axis neuro-cognitive balance radar chart, age-specific cortical development guide, and 3-step inquiry dialogue prompts.',
-      'results.tab5.title': '90-Day Growth Tracker & Hospital-Style A4 Clinical Report',
-      'results.tab5.desc': 'Continuous height/weight streak tracker and 1-click printable 2-page A4 clinical report.',
-      'footer.disclaimer': 'Powered by proprietary KIDS-FIT AI™ algorithms and official US CDC 2000, WHO Growth Standards, AAP, PES, and ASQ-3 developmental milestones (3,714 papers). This guidebook is for educational and wellness guidance and does not replace medical diagnosis. Product recommendation links on this service are part of Amazon Associates and global affiliate programs, through which we may receive a commission.',
+      'results.tab5.title': '90-Day Growth Tracker & Hospital-Style Clinical PDF Report',
+      'results.tab5.desc': 'Continuous height/weight streak tracker and 1-click printable 2-page clinical PDF report.',
+      'footer.disclaimer': 'Powered by proprietary KISFIT AI™ algorithms and official US CDC 2000, WHO Growth Standards, AAP, PES, and ASQ-3 developmental milestones (3,714 papers). This guidebook is for educational and wellness guidance and does not replace medical diagnosis. Product recommendation links on this service are part of Amazon Associates and global affiliate programs, through which we may receive a commission.',
 
       // Presets
       'presets.badge': 'Clinical Demo Presets',
@@ -422,7 +422,7 @@
 
       // Results
       'rx.retest': '🔄 Re-enter Information',
-      'rx.standard.kdca': 'KIDS-FIT AI™ · US CDC 2000, WHO & AAP Precision Analysis Complete',
+      'rx.standard.kdca': 'KISFIT AI™ · US CDC 2000, WHO & AAP Precision Analysis Complete',
       'rx.standard.cdc': 'US CDC 2000 & WHO Clinical Growth Standards Applied',
 
       // Deep Child Trait Questions (Multi-Select Expanded)
@@ -544,7 +544,7 @@
         const search = String(window.location.search || '').toLowerCase();
         if (search.indexOf('edition=ko') !== -1) return false;
         if (search.indexOf('edition=global') !== -1 || search.indexOf('paywall=1') !== -1) return true;
-        if (host.indexOf('truthofmarket.com') !== -1 && typeof navigator !== 'undefined' && navigator.userAgent) {
+        if (host.indexOf('kisfitglobal.com') !== -1 && typeof navigator !== 'undefined' && navigator.userAgent) {
           return true;
         }
       }
@@ -783,7 +783,7 @@
       if (printTopBtn) printTopBtn.textContent = '🖨️ Print / Save PDF Report';
       const rxTitle = document.getElementById('rx-header-title');
       if (rxTitle && /[가-힣]/.test(rxTitle.textContent)) {
-        rxTitle.textContent = 'KIDS-FIT Personalized Clinical Growth & Brain LQ Report';
+        rxTitle.textContent = 'KISFIT Personalized Clinical Growth & Brain LQ Report';
       }
       const progText = document.getElementById('quiz-progress-text');
       if (progText && progText.textContent.indexOf('완료') !== -1) {
