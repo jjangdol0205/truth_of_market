@@ -690,7 +690,7 @@ def publish_blog_post(context, title: str, body: str, tags: list[str], img_path:
                 if img_btn.count() > 0:
                     try:
                         with page.expect_file_chooser(timeout=8000) as fc_info:
-                            img_btn.click(force=True)
+                            img_btn.click()
                         fc = fc_info.value
                         fc.set_files(str(img_path))
                         time.sleep(5.0)
@@ -708,11 +708,10 @@ def publish_blog_post(context, title: str, body: str, tags: list[str], img_path:
         type_multiline_into_se_one(page, body)
         time.sleep(1.0)
 
-        target.evaluate("""() => {
-            const btn = document.querySelector("button[class*='publish_btn']");
-            if (btn) btn.click();
-        }""")
-        time.sleep(1.8)
+        pub_btn = target.locator("button[class*='publish_btn']").first
+        if pub_btn.count() > 0:
+            pub_btn.click(force=True)
+        time.sleep(2.0)
 
         # Select the user's configured Blog category in the publish drawer
         try:
@@ -741,26 +740,21 @@ def publish_blog_post(context, title: str, body: str, tags: list[str], img_path:
                 page.keyboard.press("Enter")
                 time.sleep(0.15)
 
-        target.evaluate("""() => {
-            const confirmBtn = document.querySelector("button[data-testid='seOnePublishBtn'], button[class*='confirm_btn']");
-            if (confirmBtn) confirmBtn.click();
-        }""")
-        time.sleep(6.5)
+        confirm_btn = target.locator("button[data-testid='seOnePublishBtn'], button[class*='confirm_btn']").first
+        if confirm_btn.count() > 0:
+            confirm_btn.click(force=True)
+        time.sleep(7.0)
 
         final_url = target.url if target != page else page.url
         m = re.search(r"logNo=(\d+)", final_url) or re.search(r"expertise333/(\d+)", final_url)
         if m:
             final_url = f"https://blog.naver.com/expertise333/{m.group(1)}"
         else:
-            page.goto("https://blog.naver.com/PostList.naver?blogId=expertise333&categoryNo=0&from=postList", wait_until="domcontentloaded", timeout=15000)
-            time.sleep(2.5)
-            latest_log = page.evaluate("""() => {
-                const a = Array.from(document.querySelectorAll('a')).find(el => el.href && el.href.includes('logNo='));
-                if (!a) return null;
-                const m = a.href.match(/logNo=(\\d+)/);
-                return m ? m[1] : null;
-            }""")
-            final_url = f"https://blog.naver.com/expertise333/{latest_log}" if latest_log else "https://blog.naver.com/expertise333"
+            page.goto("https://blog.naver.com/PostTitleListAsync.naver?blogId=expertise333&viewdate=&currentPage=1&categoryNo=0&parentCategoryNo=0&countPerPage=5", wait_until="domcontentloaded", timeout=15000)
+            time.sleep(1.5)
+            raw_async = page.evaluate("() => document.body ? document.body.innerText : ''")
+            m_async = re.search(r'"logNo"\s*:\s*"(\d+)"', raw_async)
+            final_url = f"https://blog.naver.com/expertise333/{m_async.group(1)}" if m_async else "https://blog.naver.com/expertise333"
 
         print(f"  ✅ 블로그 발행 완료 ({category_name}): {final_url}", flush=True)
         return final_url
@@ -820,7 +814,7 @@ def publish_cafe_post(context, board_name: str, title: str, body: str, tags: lis
                 if img_btn.count() > 0:
                     try:
                         with page.expect_file_chooser(timeout=8000) as fc_info:
-                            img_btn.click(force=True)
+                            img_btn.click()
                         fc = fc_info.value
                         fc.set_files([str(img_path)])
                         time.sleep(5.0)
