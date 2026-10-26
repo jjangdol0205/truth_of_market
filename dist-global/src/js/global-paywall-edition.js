@@ -1492,12 +1492,24 @@
           </div>
 
           <!-- Interactive Month 1-6 Care Selector Buttons -->
-          <div style="display:flex;gap:0.45rem;flex-wrap:wrap;margin-bottom:0.85rem;">
+          <div style="display:flex;gap:0.45rem;flex-wrap:wrap;margin-bottom:0.75rem;">
             ${[1, 2, 3, 4, 5, 6].map(function (mIdx) {
               const mAge = exactAgeMonths + mIdx - 1;
               const isFirst = mIdx === 1;
               return `<button type="button" id="btn-growth-care-month-${mIdx}" onclick="window.selectKidsFitCareMonth('growth', ${mIdx})" style="padding:0.42rem 0.8rem;border-radius:9999px;border:1.5px solid ${isFirst ? '#059669' : '#CBD5E1'};background:${isFirst ? '#059669' : '#F8FAFC'};color:${isFirst ? '#FFFFFF' : '#334155'};font-size:0.76rem;font-weight:800;cursor:pointer;">Month ${mIdx} (${mAge}m)</button>`;
             }).join('')}
+          </div>
+
+          <!-- Dynamic Month-Specific & Situation-Matched Sub-Report Box (Updates per Selected Month) -->
+          <div id="active-month-situation-report-growth" data-base-month="${exactAgeMonths}" data-sleep="${selectedSleepFindings}" data-diet="${selectedDietFindings}" data-posture="${selectedPostureFindings}" style="background:#EFF6FF;border:2px solid #3B82F6;border-radius:14px;padding:0.95rem 1.1rem;margin-bottom:0.95rem;font-size:0.81rem;color:#0F172A;line-height:1.52;">
+            <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.4rem;margin-bottom:0.35rem;">
+              <strong style="color:#1D4ED8;font-size:0.86rem;">📋 [Month 1 · Age ${exactAgeMonths} Mos] 1:1 Situation-Matched Auxology Briefing</strong>
+              <span style="background:#1D4ED8;color:#FFFFFF;font-size:0.72rem;font-weight:800;padding:0.15rem 0.55rem;border-radius:9999px;">Matched to Your Child&apos;s Survey Conditions</span>
+            </div>
+            <div>
+              <strong>• Active Child Situation at ${exactAgeMonths} Months:</strong> Sleep [${selectedSleepFindings}] · Nutrition [${selectedDietFindings}] · Posture [${selectedPostureFindings}]<br>
+              <strong>• Month-${exactAgeMonths} Customized Clinical Action:</strong> Because your child is entering Month ${exactAgeMonths} with the above habit profile, Month 1 prioritizes eliminating evening insulin spikes 180 mins before bed, initiating <strong>${caMg} mg Calcium Citrate + ${vitDIu} IU Vitamin D3</strong>, and performing 3×30s doorway bar decompression before sleep.
+            </div>
           </div>
 
           <!-- 6-Month Detailed Month-by-Month Physical Care Cards -->
@@ -1750,12 +1762,24 @@
           </div>
 
           <!-- Interactive Month 1-6 Care Selector Buttons -->
-          <div style="display:flex;gap:0.45rem;flex-wrap:wrap;margin-bottom:0.85rem;">
+          <div style="display:flex;gap:0.45rem;flex-wrap:wrap;margin-bottom:0.75rem;">
             ${[1, 2, 3, 4, 5, 6].map(function (mIdx) {
               const mAge = exactAgeMonths + mIdx - 1;
               const isFirst = mIdx === 1;
               return `<button type="button" id="btn-learning-care-month-${mIdx}" onclick="window.selectKidsFitCareMonth('learning', ${mIdx})" style="padding:0.42rem 0.8rem;border-radius:9999px;border:1.5px solid ${isFirst ? '#1D4ED8' : '#CBD5E1'};background:${isFirst ? '#1D4ED8' : '#F8FAFC'};color:${isFirst ? '#FFFFFF' : '#334155'};font-size:0.76rem;font-weight:800;cursor:pointer;">Month ${mIdx} (${mAge}m)</button>`;
             }).join('')}
+          </div>
+
+          <!-- Dynamic Month-Specific & Situation-Matched Sub-Report Box (Updates per Selected Month) -->
+          <div id="active-month-situation-report-learning" data-base-month="${exactAgeMonths}" data-focus="${focusSpanLabel}" data-style="${studyStyleLabel}" data-focus-mins="${ageMonthFocusMinutes}" style="background:#ECFDF5;border:2px solid #059669;border-radius:14px;padding:0.95rem 1.1rem;margin-bottom:0.95rem;font-size:0.81rem;color:#0F172A;line-height:1.52;">
+            <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.4rem;margin-bottom:0.35rem;">
+              <strong style="color:#047857;font-size:0.86rem;">📋 [Month 1 · Age ${exactAgeMonths} Mos] 1:1 Situation-Matched Neuro-Study Briefing</strong>
+              <span style="background:#059669;color:#FFFFFF;font-size:0.72rem;font-weight:800;padding:0.15rem 0.55rem;border-radius:9999px;">Matched to Your Child&apos;s Cognitive Profile</span>
+            </div>
+            <div>
+              <strong>• Active Cognitive Situation at ${exactAgeMonths} Months:</strong> Desk Focus [${focusSpanLabel}] · Preferred Style [${studyStyleLabel}] · Working-Memory Buffer [${ageMonthWmChunks}]<br>
+              <strong>• Month-${exactAgeMonths} Customized Study Action:</strong> Tailored to your child&apos;s current ${focusSpanLabel.split(' (')[0]} span at ${exactAgeMonths} months, Month 1 locks in exact <strong>${ageMonthFocusMinutes}-minute timed micro-sprints</strong>, eliminates pre-study smartphone dopamine, and initiates morning DHA + Choline myelination support.
+            </div>
           </div>
 
           <!-- 6-Month Detailed Month-by-Month Cognitive & Study Care Cards -->
@@ -1873,16 +1897,26 @@
             Prefrontal working memory and active-recall neural myelination shift every <strong>30 days</strong>. Log your child&apos;s monthly Feynman/Cornell practice streak below to recalculate their 30-day Brain LQ jump and unlock next month&apos;s upgraded cognitive worksheet cycle:
           </div>
           <div style="display:flex;flex-wrap:wrap;gap:0.6rem;align-items:flex-end;">
-            <div style="flex:1;min-width:150px;">
+            <div style="flex:1;min-width:135px;">
               <label style="display:block;font-size:0.72rem;font-weight:800;color:#1E3A8A;margin-bottom:0.2rem;">30-Day Practice Days (0–30d)</label>
               <input type="number" id="monthly-recal-streak-days" value="22" min="0" max="30" style="width:100%;box-sizing:border-box;padding:0.48rem 0.65rem;border:1.5px solid #93C5FD;border-radius:8px;font-size:0.84rem;font-weight:800;color:#0F172A;background:#FFFFFF;">
             </div>
-            <div style="flex:1;min-width:150px;">
+            <div style="flex:1;min-width:135px;">
               <label style="display:block;font-size:0.72rem;font-weight:800;color:#1E3A8A;margin-bottom:0.2rem;">New Desk Focus Span (mins)</label>
               <input type="number" id="monthly-recal-focus-mins" value="35" min="5" max="120" style="width:100%;box-sizing:border-box;padding:0.48rem 0.65rem;border:1.5px solid #93C5FD;border-radius:8px;font-size:0.84rem;font-weight:800;color:#0F172A;background:#FFFFFF;">
             </div>
+            <div style="flex:1.4;min-width:200px;">
+              <label style="display:block;font-size:0.72rem;font-weight:800;color:#1E3A8A;margin-bottom:0.2rem;">This Month&apos;s Primary Study Situation</label>
+              <select id="monthly-recal-learning-situation" style="width:100%;box-sizing:border-box;padding:0.48rem 0.65rem;border:1.5px solid #93C5FD;border-radius:8px;font-size:0.81rem;font-weight:800;color:#0F172A;background:#FFFFFF;">
+                <option value="steady_recall">Steady Feynman Recall &amp; Focus Improvement</option>
+                <option value="screen_distracted">Smartphone / Short-Video Distraction &amp; Focus Drop</option>
+                <option value="math_word_stuck">Stuck on Multi-Step Math Word Problems / Long Texts</option>
+                <option value="test_careless">Careless Test Mistakes Despite Knowing Concepts</option>
+                <option value="memorize_forget">Forgetting Studied Material Within 48 Hours</option>
+              </select>
+            </div>
             <button type="button" onclick="window.recalculateKidsFitMonthlyProgress('learning', ${overallLQDisp})" style="padding:0.52rem 0.95rem;border-radius:8px;border:none;background:#1D4ED8;color:#FFFFFF;font-size:0.8rem;font-weight:900;cursor:pointer;">
-              🔄 Run 30-Day Brain LQ Re-Scan
+              🔄 Generate Monthly Situation Report
             </button>
           </div>
           <div id="monthly-recal-result-box" style="margin-top:0.65rem;font-size:0.8rem;font-weight:800;color:#065F46;background:#ECFDF5;border:1px solid #A7F3D0;border-radius:10px;padding:0.65rem 0.85rem;">
@@ -1920,16 +1954,26 @@
             A single height measurement is only a Day-1 snapshot. Enter your child&apos;s updated morning stature and weight after 30 days to compute <strong>Annualized Growth Velocity (cm/yr)</strong>, detect bone-plate catch-up vs. stagnation, and auto-adjust daily Ca/D3/K2/Zinc dosing:
           </div>
           <div style="display:flex;flex-wrap:wrap;gap:0.6rem;align-items:flex-end;">
-            <div style="flex:1;min-width:150px;">
+            <div style="flex:1;min-width:135px;">
               <label style="display:block;font-size:0.72rem;font-weight:800;color:#1E3A8A;margin-bottom:0.2rem;">Day-30 Morning Height (cm)</label>
               <input type="number" step="0.1" id="monthly-recal-height-cm" value="${(heightCm + 0.6).toFixed(1)}" style="width:100%;box-sizing:border-box;padding:0.48rem 0.65rem;border:1.5px solid #93C5FD;border-radius:8px;font-size:0.84rem;font-weight:800;color:#0F172A;background:#FFFFFF;">
             </div>
-            <div style="flex:1;min-width:150px;">
+            <div style="flex:1;min-width:135px;">
               <label style="display:block;font-size:0.72rem;font-weight:800;color:#1E3A8A;margin-bottom:0.2rem;">Day-30 Morning Weight (kg)</label>
               <input type="number" step="0.1" id="monthly-recal-weight-kg" value="${(weightKg + 0.5).toFixed(1)}" style="width:100%;box-sizing:border-box;padding:0.48rem 0.65rem;border:1.5px solid #93C5FD;border-radius:8px;font-size:0.84rem;font-weight:800;color:#0F172A;background:#FFFFFF;">
             </div>
+            <div style="flex:1.4;min-width:200px;">
+              <label style="display:block;font-size:0.72rem;font-weight:800;color:#1E3A8A;margin-bottom:0.2rem;">This Month&apos;s Primary Physical Situation</label>
+              <select id="monthly-recal-growth-situation" style="width:100%;box-sizing:border-box;padding:0.48rem 0.65rem;border:1.5px solid #93C5FD;border-radius:8px;font-size:0.81rem;font-weight:800;color:#0F172A;background:#FFFFFF;">
+                <option value="normal_catchup">Steady 10 PM Sleep &amp; Normal Appetite</option>
+                <option value="sleep_broken">Late Bedtime (&gt;10:30 PM) or Frequent Night Waking</option>
+                <option value="picky_appetite">Picky Eating / Low Meat &amp; Dairy Intake This Month</option>
+                <option value="growing_pains">Nocturnal Knee/Calf Growing Pains or Desk Slouching</option>
+                <option value="rapid_weight">Weight Gained Faster Than Height (Bone-Age Watch)</option>
+              </select>
+            </div>
             <button type="button" onclick="window.recalculateKidsFitMonthlyProgress('growth', ${heightCm}, ${weightKg})" style="padding:0.52rem 0.95rem;border-radius:8px;border:none;background:#059669;color:#FFFFFF;font-size:0.8rem;font-weight:900;cursor:pointer;">
-              🔄 Recalculate 30-Day Velocity &amp; Dosing
+              🔄 Generate Monthly Situation Report
             </button>
           </div>
           <div id="monthly-recal-result-box" style="margin-top:0.65rem;font-size:0.8rem;font-weight:800;color:#065F46;background:#ECFDF5;border:1px solid #A7F3D0;border-radius:10px;padding:0.65rem 0.85rem;">
@@ -2370,27 +2414,45 @@
     if (mode === 'learning') {
       const daysEl = document.getElementById('monthly-recal-streak-days');
       const focusEl = document.getElementById('monthly-recal-focus-mins');
+      const sitEl = document.getElementById('monthly-recal-learning-situation');
       const days = Math.max(0, Math.min(30, parseFloat((daysEl && daysEl.value) || '22')));
       const focusMins = Math.max(5, Math.min(120, parseFloat((focusEl && focusEl.value) || '35')));
+      const sit = (sitEl && sitEl.value) || 'steady_recall';
       const baseLq = parseFloat(baseVal1) || 74.5;
       const gain = Number(((days / 30) * 4.8 + Math.min(2.5, (focusMins - 20) * 0.08)).toFixed(1));
       const newLq = Math.min(99.4, Number((baseLq + Math.max(0.5, gain)).toFixed(1)));
-      out.innerHTML = `✅ <strong>30-Day Brain LQ Re-Scan Complete:</strong> Updated Score <strong>${newLq} pts (+${Math.max(0.5, gain).toFixed(1)} pts/mo)</strong> · Desk Endurance: ${focusMins} mins · <strong>Cycle 2 Advanced Bar-Modeling &amp; Socratic Pack Unlocked!</strong>`;
+      const sitRxMap = {
+        steady_recall: 'Maintain 3-Min Feynman Blank-Page Recall + unlock Cycle 2 Multi-Step Bar-Modeling templates.',
+        screen_distracted: 'Enforce 60-min pre-study phone lockbox + split study into two 15-min timer sprints with L-Theanine (100 mg).',
+        math_word_stuck: 'Mandate drawing a 3-box Part-Whole Bar Model before writing any equations to offload prefrontal working memory.',
+        test_careless: 'Apply 3-Color Cornell Error Tagging ([Red: Misread] vs [Blue: Concept Gap]) and re-test missed items in 72 hours.',
+        memorize_forget: 'Add 5-min bedtime verbal recall before N3 sleep + evening Magnesium Glycinate to boost hippocampal consolidation.'
+      };
+      out.innerHTML = `✅ <strong>Monthly Situation-Matched Brain LQ Report Generated:</strong> Updated Score <strong>${newLq} pts (+${Math.max(0.5, gain).toFixed(1)} pts/mo)</strong> · Desk Endurance: ${focusMins} mins<br>📌 <strong>This Month&apos;s Situation Rx:</strong> ${sitRxMap[sit] || sitRxMap.steady_recall}`;
     } else {
       const hEl = document.getElementById('monthly-recal-height-cm');
       const wEl = document.getElementById('monthly-recal-weight-kg');
+      const sitEl = document.getElementById('monthly-recal-growth-situation');
       const newH = parseFloat((hEl && hEl.value) || (baseVal1 + 0.6));
       const newW = parseFloat((wEl && wEl.value) || (baseVal2 + 0.5));
+      const sit = (sitEl && sitEl.value) || 'normal_catchup';
       const deltaCm = Math.max(0, Number((newH - (parseFloat(baseVal1) || 137)).toFixed(2)));
       const annualizedCmYr = Number((deltaCm * 12).toFixed(1));
       const annualizedInYr = Number((annualizedCmYr / 2.54).toFixed(1));
-      const newCa = Math.round(Math.min(1000, Math.max(400, newW * 16.5)));
-      const newD3 = Math.round(Math.min(2500, Math.max(1000, newW * 42)));
-      const newZn = Number(Math.min(15, Math.max(5, newW * 0.28)).toFixed(1));
+      const newCa = Math.round(Math.min(1200, Math.max(500, newW * 26)));
+      const newD3 = Math.round(Math.min(2500, Math.max(1200, newW * 45)));
+      const newZn = Number(Math.min(15, Math.max(6, newW * 0.31)).toFixed(1));
       const statusText = annualizedCmYr >= 6.0
         ? '🟢 ACCELERATED CATCH-UP ZONE (+3.3 in Trajectory Active)'
         : (annualizedCmYr >= 4.8 ? '🟡 NORMAL MAINTENANCE VELOCITY' : '🔴 STAGNATION ALERT: Enforce 10 PM SWS + 2h Carb Fast');
-      out.innerHTML = `✅ <strong>30-Day Velocity Re-Scan:</strong> +${deltaCm} cm in 30d = <strong>${annualizedCmYr} cm/yr (${annualizedInYr} in/yr)</strong> [${statusText}] · <strong>Updated Weight-Matched Dosing (${newW.toFixed(1)} kg):</strong> Ca Citrate <strong>${newCa} mg</strong>, Vit D3 <strong>${newD3} IU</strong>, Chelated Zinc <strong>${newZn} mg</strong>.`;
+      const sitRxMap = {
+        normal_catchup: `Continue 10 PM SWS schedule + 3×30s bar hangs; updated dosing for ${newW.toFixed(1)} kg locked.`,
+        sleep_broken: ` Nighttime GH blunting detected: add evening Magnesium Glycinate (${Math.round(newW * 5.5)} mg) + warm foot bath 45m before bed.`,
+        picky_appetite: `IGF-1 drop risk from low appetite: prioritize morning Chelated Zinc (${(newZn + 2).toFixed(1)} mg) + L-Lysine/Arginine amino support.`,
+        growing_pains: `Rapid periosteal stretching detected: split Calcium Citrate (${newCa} mg) AM/PM + add evening Magnesium & calf traction.`,
+        rapid_weight: `Aromatase bone-age acceleration alert: enforce strict 3-hr pre-bed zero-carb fast and increase vertical rope-jumping to 500 skips/day.`
+      };
+      out.innerHTML = `✅ <strong>Monthly Situation-Matched Auxology Report Generated:</strong> +${deltaCm} cm in 30d = <strong>${annualizedCmYr} cm/yr (${annualizedInYr} in/yr)</strong> [${statusText}] · <strong>Updated Dosing (${newW.toFixed(1)} kg):</strong> Ca Citrate <strong>${newCa} mg</strong>, Vit D3 <strong>${newD3} IU</strong>, Zinc <strong>${newZn} mg</strong><br>📌 <strong>This Month&apos;s Situation Rx:</strong> ${sitRxMap[sit] || sitRxMap.normal_catchup}`;
     }
   };
 
@@ -2410,6 +2472,56 @@
       if (card) {
         card.style.background = i === monthIdx ? activeBg : '#F8FAFC';
         card.style.border = i === monthIdx ? `2px solid ${activeColor}` : '1.5px solid #CBD5E1';
+      }
+    }
+    const reportBox = document.getElementById(`active-month-situation-report-${prefix}`);
+    if (reportBox) {
+      const baseMonth = parseInt(reportBox.getAttribute('data-base-month') || '120', 10);
+      const curMonth = baseMonth + monthIdx - 1;
+      if (isLearn) {
+        const focus = reportBox.getAttribute('data-focus') || '15–20 mins';
+        const style = reportBox.getAttribute('data-style') || 'Socratic Dialogue';
+        const baseMins = parseInt(reportBox.getAttribute('data-focus-mins') || '25', 10);
+        const monthActions = [
+          `Lock in exact <strong>${baseMins}-minute timed micro-sprints</strong>, eliminate pre-study smartphone dopamine, and initiate morning DHA + Choline myelination support.`,
+          `Transition from passive reading to <strong>Feynman 3-Min Blank-Page Recall</strong> (close book &amp; write 3 core concepts) + add Phosphatidylserine (100 mg).`,
+          `Offload prefrontal working memory using <strong>3-Box Visual Bar-Modeling (Worksheet 02)</strong> on multi-step math &amp; ELA problems; audit 90-day error drop.`,
+          `Execute <strong>Cornell 3-Color Error Tagging</strong> ([Careless Skip] vs [Concept Gap]) with mandatory 72-hour blind re-testing + evening Magnesium Glycinate.`,
+          `Advance to <strong>Socratic 3-Step Deep Transfer</strong> ([Observation] → [Why Hypothesis] → [STEM Application]) and increase sprint duration to <strong>${baseMins + 8} mins</strong>.`,
+          `Complete <strong>180-Day 5-Axis Brain LQ Audit</strong>, verify autonomous self-directed study habit at ${baseMins + 12} mins, and unlock Month ${curMonth + 1}+ curriculum.`
+        ];
+        reportBox.innerHTML = `
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.4rem;margin-bottom:0.35rem;">
+            <strong style="color:#047857;font-size:0.86rem;">📋 [Month ${monthIdx} · Age ${curMonth} Mos] 1:1 Situation-Matched Neuro-Study Briefing</strong>
+            <span style="background:#059669;color:#FFFFFF;font-size:0.72rem;font-weight:800;padding:0.15rem 0.55rem;border-radius:9999px;">Month-${curMonth} Active Prescription</span>
+          </div>
+          <div>
+            <strong>• Active Cognitive Situation at ${curMonth} Months:</strong> Desk Focus [${focus}] · Preferred Style [${style}]<br>
+            <strong>• Month-${curMonth} Customized Study Action:</strong> ${monthActions[monthIdx - 1] || monthActions[0]}
+          </div>
+        `;
+      } else {
+        const sleep = reportBox.getAttribute('data-sleep') || 'Late Bedtime';
+        const diet = reportBox.getAttribute('data-diet') || 'Picky Eating';
+        const posture = reportBox.getAttribute('data-posture') || 'Desk Slouch';
+        const monthActions = [
+          `Eliminate evening insulin spikes 180 mins before bed, initiate baseline <strong>Calcium Citrate + Vitamin D3</strong>, and perform 3×30s doorway bar decompression.`,
+          `Activate hepatic IGF-1 &amp; osteocalcin bone-locking by layering in <strong>Chelated Zinc + Vitamin K2 MK-7</strong>, clear nasal airways before sleep, and add 300 vertical rope-jumps/day.`,
+          `Conduct <strong>90-Day Height Velocity Audit (target ≥1.8 cm gain)</strong>, re-scale daily protein &amp; mineral dosing for Month-${curMonth} body weight, and add 45s Cobra thoracic extension.`,
+          `Enforce <strong>Bone-Age &amp; Aromatase Defense</strong> (keep BMI in lean zone, block ultra-processed snacks) and add evening Magnesium Glycinate for nocturnal growing-pain relief.`,
+          `Upgrade weight-matched Calcium/Zinc dosing for Month-${curMonth} mass, correct seated pelvic asymmetry, and progress to <strong>500 vertical plyometric jumps + 3×40s bar hangs</strong>.`,
+          `Complete <strong>180-Day US CDC 2000 Percentile Re-Calibration</strong>, verify open epiphyseal growth-plate tempo, and lock in the Month ${curMonth + 1}–${curMonth + 6} trajectory.`
+        ];
+        reportBox.innerHTML = `
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.4rem;margin-bottom:0.35rem;">
+            <strong style="color:#1D4ED8;font-size:0.86rem;">📋 [Month ${monthIdx} · Age ${curMonth} Mos] 1:1 Situation-Matched Auxology Briefing</strong>
+            <span style="background:#1D4ED8;color:#FFFFFF;font-size:0.72rem;font-weight:800;padding:0.15rem 0.55rem;border-radius:9999px;">Month-${curMonth} Active Prescription</span>
+          </div>
+          <div>
+            <strong>• Active Child Situation at ${curMonth} Months:</strong> Sleep [${sleep}] · Nutrition [${diet}] · Posture [${posture}]<br>
+            <strong>• Month-${curMonth} Customized Clinical Action:</strong> ${monthActions[monthIdx - 1] || monthActions[0]}
+          </div>
+        `;
       }
     }
   };
