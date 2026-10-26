@@ -4,7 +4,7 @@
  * while enabling native Android WebAPK / Chrome / Samsung Internet / Desktop PWA installation.
  */
 
-const CACHE_NAME = 'kidsfit-pwa-v20261026v35';
+const CACHE_NAME = 'kidsfit-pwa-v20261026v36';
 const APP_SHELL = [
   '/',
   '/manifest.json',

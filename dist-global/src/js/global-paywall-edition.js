@@ -1126,6 +1126,32 @@
           ? 'US Middle School (Grades 6–8 · Pre-AP STEM & Executive Function)'
           : 'US High School (Grades 9–12 · AP / SAT / ACT Analytical Readiness)'));
 
+    // Exact Age-in-Months (ageMonths) Developmental & Biological Precision Care Parameters
+    const exactAgeMonths = Math.max(24, Math.min(216, Math.round(Number(ageMonths) || (ageY * 12 + ageRemM))));
+    const ageMonthBedtimeTarget = exactAgeMonths <= 60
+      ? '8:00 PM – 8:30 PM (11.0 hrs N3 Delta SWS Window)'
+      : (exactAgeMonths <= 108
+        ? '8:30 PM – 9:00 PM (10.0 hrs Pituitary GH Surge Window)'
+        : (exactAgeMonths <= 144
+          ? '9:15 PM – 9:30 PM (9.5 hrs Pre-PHV Epiphyseal Window)'
+          : '9:45 PM – 10:00 PM (9.0 hrs Late-Pubertal Plate Defense Window)'));
+    const ageMonthGrowthPhaseDesc = exactAgeMonths <= 72
+      ? `Month ${exactAgeMonths} Early Childhood Rapid Chondrocyte Proliferation Phase — tibial/femoral growth plates are 94% open; gut calcium/zinc absorption and early 8:30 PM deep sleep govern baseline stature trajectory.`
+      : (exactAgeMonths <= 120
+        ? `Month ${exactAgeMonths} Mid-Childhood Steady Auxology & Pre-Spurt Storage Phase — building bone mineral density (BMD) and hepatic IGF-1 reserves before pubertal onset while preventing insulin/leptin bone-age acceleration.`
+        : (exactAgeMonths <= 156
+          ? `Month ${exactAgeMonths} Peak Height Velocity (PHV) & Epiphyseal Defense Phase — critical 36-month window where 10 PM SWS GH pulses and aromatase/glycemic control determine up to ±3.3 in (±8.5 cm) of final adult stature.`
+          : `Month ${exactAgeMonths} Late-Pubertal Epiphyseal Preservation & Spinal Decompression Phase — maximizing remaining open axial/vertebral growth plates and recovering +0.7 in (+1.8 cm) of compressed intervertebral disc height.`));
+    const ageMonthFocusMinutes = Math.min(50, Math.max(8, Math.round(exactAgeMonths * 0.22)));
+    const ageMonthWmChunks = exactAgeMonths < 84 ? '3 ± 1 chunks' : (exactAgeMonths < 144 ? '4 ± 1 chunks' : '5 ± 1 chunks');
+    const ageMonthBrainPhaseDesc = exactAgeMonths <= 72
+      ? `Month ${exactAgeMonths} Sensory-Motor & Phonological Synaptic Pruning Phase — rapid vocabulary mapping and hands-on 3D manipulative number sense; avoid passive screen flash-cards.`
+      : (exactAgeMonths <= 120
+        ? `Month ${exactAgeMonths} Dorsolateral Prefrontal Myelination & Rule-Switch Phase — transitioning from "learning to read" to "reading to learn"; requires visual bar-modeling to prevent working-memory overload on multi-step problems.`
+        : (exactAgeMonths <= 156
+          ? `Month ${exactAgeMonths} Abstract Deductive & Metacognitive Acceleration Phase — frontal-parietal network remodeling; Feynman 3-min blank-page recall and Cornell error-tagging yield +150% 30-day retention.`
+          : `Month ${exactAgeMonths} High-Order Analytical Synthesis & Timed Executive Output Phase — synaptic specialization for AP/SAT/STEM complex multi-variable reasoning and timed retrieval under pressure.`));
+
     return `
       <!-- Clinical Briefing Header (High-Contrast Medical Light Surface + Crisp White Child Conditions Box) -->
       <div class="briefing-header" style="background:linear-gradient(135deg,#EFF6FF 0%,#DBEAFE 100%);color:#0F172A;border:2px solid #93C5FD;border-radius:20px;padding:1.4rem 1.5rem;margin-bottom:1.25rem;box-shadow:0 10px 28px rgba(29,78,216,0.08);">
@@ -1443,6 +1469,112 @@
             </div>
           </div>
         </section>
+
+        <!-- CHAPTER 04-B: EXACT AGE-IN-MONTHS (${exactAgeMonths}M) & 6-MONTH MONTH-BY-MONTH PHYSICAL GROWTH CARE ROADMAP -->
+        <section id="global-growth-monthly-care-section" style="background:#FFFFFF;border:2px solid #6EE7B7;border-radius:18px;padding:1.35rem 1.3rem;margin-bottom:1.25rem;box-shadow:0 8px 24px rgba(5,150,105,0.06);">
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.65rem;">
+            <span style="font-size:0.75rem;font-weight:900;color:#047857;background:#ECFDF5;border:1px solid #6EE7B7;padding:0.22rem 0.7rem;border-radius:9999px;">
+              MONTH-BY-MONTH PRECISION AUXOLOGY CARE · MONTH ${exactAgeMonths} TO MONTH ${exactAgeMonths + 5}
+            </span>
+            <span style="font-size:0.78rem;font-weight:800;color:#1D4ED8;">
+              Exact Chronological Age: ${exactAgeMonths} Months (${ageY} yrs ${ageRemM} mos)
+            </span>
+          </div>
+          <h3 style="font-size:1.18rem;font-weight:900;color:#0F172A;margin:0 0 0.4rem 0;">
+            1:1 Month-by-Month Physical Growth, Bone-Plate &amp; Dosing Care Protocol (${exactAgeMonths}m → ${exactAgeMonths + 5}m)
+          </h3>
+          <div style="background:#F0FDF4;border:1.5px solid #86EFAC;border-radius:12px;padding:0.8rem 1rem;margin-bottom:0.95rem;font-size:0.82rem;color:#065F46;line-height:1.52;">
+            <strong style="color:#047857;display:block;margin-bottom:0.2rem;">🔬 Exact Month-${exactAgeMonths} Biological &amp; Bone-Age Care Priority:</strong>
+            ${ageMonthGrowthPhaseDesc}<br>
+            <span style="display:inline-block;margin-top:0.3rem;font-weight:800;color:#1E3A8A;">
+              • Month-${exactAgeMonths} Circadian Sleep Target: ${ageMonthBedtimeTarget} &nbsp;|&nbsp; • Target Monthly Velocity: +0.60 to +0.68 cm/mo (+0.24 to +0.27 in/mo)
+            </span>
+          </div>
+
+          <!-- Interactive Month 1-6 Care Selector Buttons -->
+          <div style="display:flex;gap:0.45rem;flex-wrap:wrap;margin-bottom:0.85rem;">
+            ${[1, 2, 3, 4, 5, 6].map(function (mIdx) {
+              const mAge = exactAgeMonths + mIdx - 1;
+              const isFirst = mIdx === 1;
+              return `<button type="button" id="btn-growth-care-month-${mIdx}" onclick="window.selectKidsFitCareMonth('growth', ${mIdx})" style="padding:0.42rem 0.8rem;border-radius:9999px;border:1.5px solid ${isFirst ? '#059669' : '#CBD5E1'};background:${isFirst ? '#059669' : '#F8FAFC'};color:${isFirst ? '#FFFFFF' : '#334155'};font-size:0.76rem;font-weight:800;cursor:pointer;">Month ${mIdx} (${mAge}m)</button>`;
+            }).join('')}
+          </div>
+
+          <!-- 6-Month Detailed Month-by-Month Physical Care Cards -->
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:0.8rem;">
+            <div id="card-growth-care-month-1" style="background:#ECFDF5;border:2px solid #059669;border-radius:14px;padding:0.9rem 1rem;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.3rem;">
+                <strong style="color:#047857;font-size:0.84rem;">Month 1 · Age ${exactAgeMonths} Mos</strong>
+                <span style="font-size:0.72rem;font-weight:800;background:#059669;color:#FFFFFF;padding:0.12rem 0.5rem;border-radius:9999px;">Target: ${fmtMaskedLen((heightCm + 0.6).toFixed(1))}</span>
+              </div>
+              <div style="font-size:0.79rem;color:#334155;line-height:1.48;">
+                <strong>• Endocrine &amp; Sleep Care:</strong> Lock in ${ageMonthBedtimeTarget.split(' (')[0]} bedtime + strict 2-hr pre-bed zero-sugar fast (+65% nocturnal GH pulse).<br>
+                <strong>• Bio-Nutrition Care:</strong> Start Elemental Calcium Citrate (<strong>${caMg} mg</strong>) + Vitamin D3 (<strong>${vitDIu} IU</strong>).<br>
+                <strong>• Biomechanical Care:</strong> 3×30s morning/evening doorway bar dead-hangs to decompress 23 spinal discs.
+              </div>
+            </div>
+
+            <div id="card-growth-care-month-2" style="background:#F8FAFC;border:1.5px solid #CBD5E1;border-radius:14px;padding:0.9rem 1rem;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.3rem;">
+                <strong style="color:#0F172A;font-size:0.84rem;">Month 2 · Age ${exactAgeMonths + 1} Mos</strong>
+                <span style="font-size:0.72rem;font-weight:800;background:#EFF6FF;color:#1D4ED8;padding:0.12rem 0.5rem;border-radius:9999px;">Target: ${fmtMaskedLen((heightCm + 1.2).toFixed(1))}</span>
+              </div>
+              <div style="font-size:0.79rem;color:#334155;line-height:1.48;">
+                <strong>• Hepatic IGF-1 Care:</strong> Layer in Chelated Zinc (<strong>${zincMg} mg</strong>) + Vitamin K2 MK-7 (<strong>${vitK2Mcg} mcg</strong>) to activate osteocalcin bone locking.<br>
+                <strong>• Airway &amp; N3 Sleep Check:</strong> Clear nasal congestion before bed to prevent mouth-breathing GH suppression.<br>
+                <strong>• Exercise Progression:</strong> Add 300 vertical rope-jumps/day (10 mins) for tibial/femoral growth plate stimulation.
+              </div>
+            </div>
+
+            <div id="card-growth-care-month-3" style="background:#F8FAFC;border:1.5px solid #CBD5E1;border-radius:14px;padding:0.9rem 1rem;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.3rem;">
+                <strong style="color:#0F172A;font-size:0.84rem;">Month 3 · Age ${exactAgeMonths + 2} Mos</strong>
+                <span style="font-size:0.72rem;font-weight:800;background:#EFF6FF;color:#1D4ED8;padding:0.12rem 0.5rem;border-radius:9999px;">Target: ${fmtMaskedLen((heightCm + 1.9).toFixed(1))}</span>
+              </div>
+              <div style="font-size:0.79rem;color:#334155;line-height:1.48;">
+                <strong>• 90-Day Velocity Audit:</strong> Verify ≥1.8 cm (0.7 in) 90-day gain; re-scale daily protein to <strong>${proteinG + 2}g/day</strong> for ${fmtWt((weightKg + 0.8).toFixed(1))}.<br>
+                <strong>• Posture &amp; Thoracic Care:</strong> Add 45s Cobra thoracic extension after homework to reverse desk-slouch kyphosis.<br>
+                <strong>• Exercise Progression:</strong> Increase plyometric vertical jumps to 400 skips/day.
+              </div>
+            </div>
+
+            <div id="card-growth-care-month-4" style="background:#F8FAFC;border:1.5px solid #CBD5E1;border-radius:14px;padding:0.9rem 1rem;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.3rem;">
+                <strong style="color:#0F172A;font-size:0.84rem;">Month 4 · Age ${exactAgeMonths + 3} Mos</strong>
+                <span style="font-size:0.72rem;font-weight:800;background:#EFF6FF;color:#1D4ED8;padding:0.12rem 0.5rem;border-radius:9999px;">Target: ${fmtMaskedLen((heightCm + 2.5).toFixed(1))}</span>
+              </div>
+              <div style="font-size:0.79rem;color:#334155;line-height:1.48;">
+                <strong>• Bone-Age &amp; Aromatase Guard:</strong> Keep BMI below ${ethInfo.bmiThreshold}; avoid ultra-processed foods &amp; plasticizer xenoestrogens.<br>
+                <strong>• Growing-Pain &amp; SWS Care:</strong> Add evening Magnesium Glycinate (<strong>${Math.round(weightKg * 5.5)} mg</strong>) + warm knee/calf stretching.<br>
+                <strong>• Amino-Acid Synergy:</strong> Pair dinner protein with vitamin-C-rich vegetables for collagen matrix synthesis.
+              </div>
+            </div>
+
+            <div id="card-growth-care-month-5" style="background:#F8FAFC;border:1.5px solid #CBD5E1;border-radius:14px;padding:0.9rem 1rem;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.3rem;">
+                <strong style="color:#0F172A;font-size:0.84rem;">Month 5 · Age ${exactAgeMonths + 4} Mos</strong>
+                <span style="font-size:0.72rem;font-weight:800;background:#EFF6FF;color:#1D4ED8;padding:0.12rem 0.5rem;border-radius:9999px;">Target: ${fmtMaskedLen((heightCm + 3.2).toFixed(1))}</span>
+              </div>
+              <div style="font-size:0.79rem;color:#334155;line-height:1.48;">
+                <strong>• Weight-Matched Dose Upgrade:</strong> Auto-adjust Calcium Citrate to <strong>${caMg + 35} mg</strong> &amp; Zinc to <strong>${(zincMg + 0.5).toFixed(1)} mg</strong> for ${fmtWt((weightKg + 1.4).toFixed(1))}.<br>
+                <strong>• Pelvic &amp; Gait Alignment:</strong> Eliminate W-sitting / leg-crossing; check shoe heel-wear symmetry.<br>
+                <strong>• Exercise Progression:</strong> 500 vertical jumps + 3×40s passive bar hangs.
+              </div>
+            </div>
+
+            <div id="card-growth-care-month-6" style="background:#F8FAFC;border:1.5px solid #CBD5E1;border-radius:14px;padding:0.9rem 1rem;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.3rem;">
+                <strong style="color:#0F172A;font-size:0.84rem;">Month 6 · Age ${exactAgeMonths + 5} Mos</strong>
+                <span style="font-size:0.72rem;font-weight:800;background:#ECFDF5;color:#059669;padding:0.12rem 0.5rem;border-radius:9999px;">Goal: ${fmtMaskedLen((heightCm + 3.8).toFixed(1))}</span>
+              </div>
+              <div style="font-size:0.79rem;color:#334155;line-height:1.48;">
+                <strong>• 180-Day CDC Percentile Re-Calibration:</strong> Evaluate 6-month cumulative stature gain (+3.6–4.0 cm / +1.4–1.6 in catch-up trajectory).<br>
+                <strong>• Bone-Plate Tempo Verification:</strong> Confirm linear height gain outpaces weight gain to preserve open epiphyseal window.<br>
+                <strong>• Next Cycle Transition:</strong> Lock in Month ${exactAgeMonths + 6}–${exactAgeMonths + 11} auxology protocol.
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
       ` : `
       <div id="pillar-2-container" style="display:block;">
@@ -1585,12 +1717,118 @@
               </div>
               <div style="background:#F8FAFC;border:1px solid #A7F3D0;border-radius:12px;padding:0.85rem 0.95rem;display:flex;flex-direction:column;justify-content:space-between;">
                 <div>
-                  <strong style="color:#0F172A;display:block;margin-bottom:0.25rem;">🌿 3. SWS Delta-Sleep &amp; IGF-1 Cofactors (iHerb)</strong>
-                  <span style="color:#475569;line-height:1.45;display:block;margin-bottom:0.6rem;">Chelated <em>Magnesium Glycinate</em> + <em>Pure Encapsulations Zinc (${zincMg} mg)</em> to deepen N3 slow-wave sleep and maximize nocturnal HGH &amp; hippocampal memory consolidation.</span>
+                  <strong style="color:#0F172A;display:block;margin-bottom:0.25rem;">🌿 3. N3 Delta-Sleep &amp; Memory Consolidation Cofactors (iHerb)</strong>
+                  <span style="color:#475569;line-height:1.45;display:block;margin-bottom:0.6rem;">Chelated <em>Magnesium Glycinate</em> + <em>Pure Encapsulations Zinc (${zincMg} mg)</em> to deepen N3 slow-wave sleep and maximize nocturnal hippocampal long-term memory consolidation.</span>
                 </div>
                 <a href="https://www.iherb.com/search?kw=Kids+Magnesium+Glycinate+Zinc+Chelate&amp;rcode=IPZ1547" target="_blank" rel="noopener noreferrer" style="display:inline-block;text-align:center;font-size:0.75rem;font-weight:800;color:#059669;background:#ECFDF5;border:1px solid #059669;padding:0.4rem 0.7rem;border-radius:8px;text-decoration:none;">
-                  View Sleep &amp; IGF-1 Cofactors on iHerb ↗
+                  View Memory Consolidation Cofactors on iHerb ↗
                 </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CHAPTER 08-B: EXACT AGE-IN-MONTHS (${exactAgeMonths}M) & 6-MONTH MONTH-BY-MONTH BRAIN & LEARNING CARE ROADMAP -->
+        <section id="global-learning-monthly-care-section" style="background:#FFFFFF;border:2px solid #93C5FD;border-radius:18px;padding:1.35rem 1.3rem;margin-bottom:1.25rem;box-shadow:0 8px 24px rgba(29,78,216,0.06);">
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.65rem;">
+            <span style="font-size:0.75rem;font-weight:900;color:#1D4ED8;background:#EFF6FF;border:1px solid #93C5FD;padding:0.22rem 0.7rem;border-radius:9999px;">
+              MONTH-BY-MONTH NEURO-COGNITIVE CARE · MONTH ${exactAgeMonths} TO MONTH ${exactAgeMonths + 5}
+            </span>
+            <span style="font-size:0.78rem;font-weight:800;color:#059669;">
+              Exact Chronological Age: ${exactAgeMonths} Months (${ageY} yrs ${ageRemM} mos)
+            </span>
+          </div>
+          <h3 style="font-size:1.18rem;font-weight:900;color:#0F172A;margin:0 0 0.4rem 0;">
+            1:1 Month-by-Month Prefrontal Myelination, Study Habit &amp; Brain LQ Care Protocol (${exactAgeMonths}m → ${exactAgeMonths + 5}m)
+          </h3>
+          <div style="background:#EFF6FF;border:1.5px solid #93C5FD;border-radius:12px;padding:0.8rem 1rem;margin-bottom:0.95rem;font-size:0.82rem;color:#1E3A8A;line-height:1.52;">
+            <strong style="color:#1D4ED8;display:block;margin-bottom:0.2rem;">🧠 Exact Month-${exactAgeMonths} Synaptic Plasticity &amp; Executive Function Priority:</strong>
+            ${ageMonthBrainPhaseDesc}<br>
+            <span style="display:inline-block;margin-top:0.3rem;font-weight:800;color:#065F46;">
+              • Month-${exactAgeMonths} Biological Focus Ceiling: ${ageMonthFocusMinutes} mins/sprint &nbsp;|&nbsp; • Working-Memory Buffer: ${ageMonthWmChunks} &nbsp;|&nbsp; • Track: ${usGradeStageLabel}
+            </span>
+          </div>
+
+          <!-- Interactive Month 1-6 Care Selector Buttons -->
+          <div style="display:flex;gap:0.45rem;flex-wrap:wrap;margin-bottom:0.85rem;">
+            ${[1, 2, 3, 4, 5, 6].map(function (mIdx) {
+              const mAge = exactAgeMonths + mIdx - 1;
+              const isFirst = mIdx === 1;
+              return `<button type="button" id="btn-learning-care-month-${mIdx}" onclick="window.selectKidsFitCareMonth('learning', ${mIdx})" style="padding:0.42rem 0.8rem;border-radius:9999px;border:1.5px solid ${isFirst ? '#1D4ED8' : '#CBD5E1'};background:${isFirst ? '#1D4ED8' : '#F8FAFC'};color:${isFirst ? '#FFFFFF' : '#334155'};font-size:0.76rem;font-weight:800;cursor:pointer;">Month ${mIdx} (${mAge}m)</button>`;
+            }).join('')}
+          </div>
+
+          <!-- 6-Month Detailed Month-by-Month Cognitive & Study Care Cards -->
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:0.8rem;">
+            <div id="card-learning-care-month-1" style="background:#EFF6FF;border:2px solid #1D4ED8;border-radius:14px;padding:0.9rem 1rem;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.3rem;">
+                <strong style="color:#1D4ED8;font-size:0.84rem;">Month 1 · Age ${exactAgeMonths} Mos</strong>
+                <span style="font-size:0.72rem;font-weight:800;background:#1D4ED8;color:#FFFFFF;padding:0.12rem 0.5rem;border-radius:9999px;">Target LQ: ${isMasked ? '??.?' : (overallLQ + 2.4).toFixed(1)} pts</span>
+              </div>
+              <div style="font-size:0.79rem;color:#334155;line-height:1.48;">
+                <strong>• Prefrontal Attention Reset:</strong> Set desk timer to exact <strong>${ageMonthFocusMinutes}-min micro-sprints</strong> + 5-min off-screen break; zero short-form video 60m before study.<br>
+                <strong>• Neuro-Nutrition Care:</strong> Start 600–800 mg Triglyceride DHA + Phosphatidylcholine at breakfast.<br>
+                <strong>• Parent Script:</strong> &ldquo;Let&apos;s just finish 3 problems in ${ageMonthFocusMinutes} minutes and stop right when the timer rings.&rdquo;
+              </div>
+            </div>
+
+            <div id="card-learning-care-month-2" style="background:#F8FAFC;border:1.5px solid #CBD5E1;border-radius:14px;padding:0.9rem 1rem;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.3rem;">
+                <strong style="color:#0F172A;font-size:0.84rem;">Month 2 · Age ${exactAgeMonths + 1} Mos</strong>
+                <span style="font-size:0.72rem;font-weight:800;background:#EFF6FF;color:#1D4ED8;padding:0.12rem 0.5rem;border-radius:9999px;">Target LQ: ${isMasked ? '??.?' : (overallLQ + 5.1).toFixed(1)} pts</span>
+              </div>
+              <div style="font-size:0.79rem;color:#334155;line-height:1.48;">
+                <strong>• Feynman Blank-Page Recall:</strong> Replace passive re-reading; close the book after 20 mins and write/say 3 core takeaways from memory (Worksheet 01).<br>
+                <strong>• Synaptic Calm Care:</strong> Add Phosphatidylserine (PS 100 mg) + L-Theanine for calm prefrontal working-memory focus.<br>
+                <strong>• Parent Script:</strong> &ldquo;Pretend I&apos;m a younger student—can you teach me today&apos;s main rule in 60 seconds?&rdquo;
+              </div>
+            </div>
+
+            <div id="card-learning-care-month-3" style="background:#F8FAFC;border:1.5px solid #CBD5E1;border-radius:14px;padding:0.9rem 1rem;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.3rem;">
+                <strong style="color:#0F172A;font-size:0.84rem;">Month 3 · Age ${exactAgeMonths + 2} Mos</strong>
+                <span style="font-size:0.72rem;font-weight:800;background:#EFF6FF;color:#1D4ED8;padding:0.12rem 0.5rem;border-radius:9999px;">Target LQ: ${isMasked ? '??.?' : (overallLQ + 7.8).toFixed(1)} pts</span>
+              </div>
+              <div style="font-size:0.79rem;color:#334155;line-height:1.48;">
+                <strong>• Visual Bar-Modeling Offload:</strong> Convert multi-step word problems &amp; long reading passages into 3-box visual diagrams (Worksheet 02) to bypass the ${ageMonthWmChunks} limit.<br>
+                <strong>• 90-Day Cognitive Audit:</strong> Verify 40% reduction in &ldquo;I knew it but misread the question&rdquo; errors.<br>
+                <strong>• Parent Script:</strong> &ldquo;Before we calculate, let&apos;s draw the two comparison bars on paper first.&rdquo;
+              </div>
+            </div>
+
+            <div id="card-learning-care-month-4" style="background:#F8FAFC;border:1.5px solid #CBD5E1;border-radius:14px;padding:0.9rem 1rem;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.3rem;">
+                <strong style="color:#0F172A;font-size:0.84rem;">Month 4 · Age ${exactAgeMonths + 3} Mos</strong>
+                <span style="font-size:0.72rem;font-weight:800;background:#EFF6FF;color:#1D4ED8;padding:0.12rem 0.5rem;border-radius:9999px;">Target LQ: ${isMasked ? '??.?' : (overallLQ + 10.2).toFixed(1)} pts</span>
+              </div>
+              <div style="font-size:0.79rem;color:#334155;line-height:1.48;">
+                <strong>• Cornell 72-Hr Error Retrieval:</strong> Tag missed questions into [Careless Skip] vs. [Concept Gap] and re-solve them 72 hours later with zero hints.<br>
+                <strong>• Hippocampal Sleep Care:</strong> Evening Magnesium Glycinate + Zinc (${zincMg} mg) to lock daytime study into long-term cortex storage during N3 sleep.<br>
+                <strong>• Focus Expansion:</strong> Extend desk sprint duration to <strong>${ageMonthFocusMinutes + 5} mins</strong>.
+              </div>
+            </div>
+
+            <div id="card-learning-care-month-5" style="background:#F8FAFC;border:1.5px solid #CBD5E1;border-radius:14px;padding:0.9rem 1rem;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.3rem;">
+                <strong style="color:#0F172A;font-size:0.84rem;">Month 5 · Age ${exactAgeMonths + 4} Mos</strong>
+                <span style="font-size:0.72rem;font-weight:800;background:#EFF6FF;color:#1D4ED8;padding:0.12rem 0.5rem;border-radius:9999px;">Target LQ: ${isMasked ? '??.?' : (overallLQ + 12.5).toFixed(1)} pts</span>
+              </div>
+              <div style="font-size:0.79rem;color:#334155;line-height:1.48;">
+                <strong>• Socratic Deep Transfer:</strong> Practice 3-step inquiry ([Observation] → [Why Hypothesis] → [Real-World STEM Application], Worksheet 04).<br>
+                <strong>• Timed Exam Resilience:</strong> Practice 20-minute timed problem sets while keeping heart-rate &amp; working memory steady.<br>
+                <strong>• Parent Script:</strong> &ldquo;What would change in this problem if we doubled the starting condition?&rdquo;
+              </div>
+            </div>
+
+            <div id="card-learning-care-month-6" style="background:#F8FAFC;border:1.5px solid #CBD5E1;border-radius:14px;padding:0.9rem 1rem;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.3rem;">
+                <strong style="color:#0F172A;font-size:0.84rem;">Month 6 · Age ${exactAgeMonths + 5} Mos</strong>
+                <span style="font-size:0.72rem;font-weight:800;background:#ECFDF5;color:#059669;padding:0.12rem 0.5rem;border-radius:9999px;">Goal LQ: ${coachedLQDisp} pts</span>
+              </div>
+              <div style="font-size:0.79rem;color:#334155;line-height:1.48;">
+                <strong>• 180-Day 5-Axis Brain LQ Audit:</strong> Verify +${(coachedLQ - overallLQ).toFixed(1)} pt overall Brain LQ jump and autonomous self-directed study loop.<br>
+                <strong>• Sustained Focus Milestone:</strong> Lock in <strong>${ageMonthFocusMinutes + 10}-min</strong> deep immersion capacity.<br>
+                <strong>• Next Cycle Transition:</strong> Unlock Month ${exactAgeMonths + 6}–${exactAgeMonths + 11} advanced grade-level cognitive pack.
               </div>
             </div>
           </div>
@@ -2153,6 +2391,26 @@
         ? '🟢 ACCELERATED CATCH-UP ZONE (+3.3 in Trajectory Active)'
         : (annualizedCmYr >= 4.8 ? '🟡 NORMAL MAINTENANCE VELOCITY' : '🔴 STAGNATION ALERT: Enforce 10 PM SWS + 2h Carb Fast');
       out.innerHTML = `✅ <strong>30-Day Velocity Re-Scan:</strong> +${deltaCm} cm in 30d = <strong>${annualizedCmYr} cm/yr (${annualizedInYr} in/yr)</strong> [${statusText}] · <strong>Updated Weight-Matched Dosing (${newW.toFixed(1)} kg):</strong> Ca Citrate <strong>${newCa} mg</strong>, Vit D3 <strong>${newD3} IU</strong>, Chelated Zinc <strong>${newZn} mg</strong>.`;
+    }
+  };
+
+  global.selectKidsFitCareMonth = function (mode, monthIdx) {
+    const isLearn = mode === 'learning';
+    const activeColor = isLearn ? '#1D4ED8' : '#059669';
+    const activeBg = isLearn ? '#EFF6FF' : '#ECFDF5';
+    const prefix = isLearn ? 'learning' : 'growth';
+    for (let i = 1; i <= 6; i++) {
+      const btn = document.getElementById(`btn-${prefix}-care-month-${i}`);
+      const card = document.getElementById(`card-${prefix}-care-month-${i}`);
+      if (btn) {
+        btn.style.background = i === monthIdx ? activeColor : '#F8FAFC';
+        btn.style.color = i === monthIdx ? '#FFFFFF' : '#334155';
+        btn.style.borderColor = i === monthIdx ? activeColor : '#CBD5E1';
+      }
+      if (card) {
+        card.style.background = i === monthIdx ? activeBg : '#F8FAFC';
+        card.style.border = i === monthIdx ? `2px solid ${activeColor}` : '1.5px solid #CBD5E1';
+      }
     }
   };
 
