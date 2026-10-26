@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 """
 scripts/auto_seo_promotion_engine.py
-100% Automated Multi-Channel SEO / AEO (AI Search) / IndexNow Promotion Engine for KIDS-FIT (https://kidsfit.co.kr)
+100% Automated Multi-Channel SEO / AEO (AI Search) / IndexNow Promotion Engine for KIDS-FIT (https://truthofmarket.com)
 
 What this engine automates:
 1. Generates 10 High-Intent Long-Tail Parenting Q&A Landing Pages (`qna/topic-01.html` ~ `qna/topic-10.html`)
    + Q&A Encyclopedia Hub (`qna/index.html`) with crisp 1-line clinical conclusions, KDCA/K-DST/PubMed citations,
-   and 1-click conversion CTAs into the main diagnostic studio (`https://kidsfit.co.kr/`).
+   and 1-click conversion CTAs into the main diagnostic studio (`https://truthofmarket.com/`).
 2. Embeds Schema.org `FAQPage` + `MedicalWebPage` JSON-LD on every page so Naver Search, Google Rich Results,
    ChatGPT Search, Perplexity, and Gemini (GEO/AEO) cite `kidsfit.co.kr` as the primary clinical authority.
 3. Updates `sitemap.xml` and `bb7865143f912a88c04d31d3921a0988.txt` (IndexNow verification key) and automatically
@@ -27,7 +27,7 @@ ROOT = Path(r"d:\키즈핏")
 QNA_DIR = ROOT / "qna"
 STATUS_PATH = ROOT / "logs" / "auto_seo_promotion_status.json"
 INDEXNOW_KEY = "bb7865143f912a88c04d31d3921a0988"
-SITE_HOST = "kidsfit.co.kr"
+SITE_HOST = "truthofmarket.com"
 SITE_URL = f"https://{SITE_HOST}"
 
 TOPICS = [

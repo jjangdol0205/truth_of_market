@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 """
 scripts/omni_channel_promotion_engine.py
-Automated 5x/Day Non-Naver 6-Channel Publishing & Syndication Engine for KidsFit Growth Studio (https://kidsfit.co.kr)
+Automated 5x/Day Non-Naver 6-Channel Publishing & Syndication Engine for KidsFit Growth Studio (https://truthofmarket.com)
 
 Runs 5 times every day (06:30, 09:30, 12:30, 16:30, 20:30 KST — parallel to the 5x/day Naver Blog & Cafe schedule) to:
-1. Publish a brand-new standalone Long-Tail Search & Community Article (`https://kidsfit.co.kr/qna/post-seq-XXX.html`) optimized for Daum (`Daumoa`), Google (`Googlebot`), Bing (`Bingbot`), KakaoTalk Scrap (`kakaotalk-scrap`), and AI Search (`GPTBot`, `PerplexityBot`, `ClaudeBot`).
+1. Publish a brand-new standalone Long-Tail Search & Community Article (`https://truthofmarket.com/qna/post-seq-XXX.html`) optimized for Daum (`Daumoa`), Google (`Googlebot`), Bing (`Bingbot`), KakaoTalk Scrap (`kakaotalk-scrap`), and AI Search (`GPTBot`, `PerplexityBot`, `ClaudeBot`).
 2. Update `/llms.txt` & `/llms-full.txt` so ChatGPT Search, Perplexity, Claude, Gemini, 뤼튼(Wrtn), and 에이닷(A.) immediately index the new article.
 3. Syndicate the new article across `sitemap.xml`, `rss.xml`, `feed.json`, `qna/index.html`, and `qna/omni-channel-kit.html`.
 4. Ping Google WebSub (`pubsubhubbub.appspot.com`), Global IndexNow (`api.indexnow.org`), Bing (`www.bing.com`), Yandex, Seznam, and Internet Archive.
@@ -29,7 +29,7 @@ DOC_PATH = ROOT / "docs" / "탈네이버_전채널_홍보_마스터플랜_다음
 STATUS_PATH = ROOT / "logs" / "omni_channel_promotion_status.json"
 CURSOR_PATH = ROOT / "logs" / "omni_channel_5x_daily_cursor.json"
 ENV_PATH = ROOT / ".env"
-SITE_URL = "https://kidsfit.co.kr"
+SITE_URL = "https://truthofmarket.com"
 INDEXNOW_KEY = "bb7865143f912a88c04d31d3921a0988"
 
 sys.path.insert(0, str(ROOT / "scripts"))

@@ -318,6 +318,24 @@ async function main() {
   }
 
   const epMeta = EPISODE_CATALOG.find(e => e.ep === targetEpNum) || EPISODE_CATALOG[0];
+  if (args.includes('--video-only')) {
+    const clipMap = {
+      1: '01_네이버클립_웹툰1화_만3세소근육민감기.mp4',
+      2: '02_네이버클립_웹툰2화_초등문장제수학작업기억.mp4',
+      3: '03_네이버클립_웹툰3화_밤10시숙면숨은키7cm.mp4',
+      4: '04_네이버클립_웹툰4화_편식아이미각민감기아연.mp4',
+      5: '05_네이버클립_웹툰5화_거북목자세교정숨은키2cm.mp4'
+    };
+    const clipPath = path.join(ROOT_DIR, '네이버클립_웹툰영상_모음', clipMap[epMeta.ep]);
+    await sendTelegramVideoFile(
+      cfg.botToken,
+      cfg.chatId,
+      clipPath,
+      `🎬 [제${epMeta.ep}화 네이버 클립 & 인스타 릴스용 16초 세로 웹툰 영상 — 재제작 완료!]\n✅ 1~3화와 동일하게 TTS 음성 완전 제거 + 잔잔한 어쿠스틱 피아노·오르골 선율 + 3D 그림책 책장 넘김(Page-Flip) 효과 적용 완료!`
+    );
+    console.log(`  ✓ Sent Video-Only for Episode ${epMeta.ep}`);
+    return;
+  }
   await sendEpisodePack(epMeta, cfg);
 
   if (args.includes('--advance') || epIdx !== -1) {

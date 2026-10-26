@@ -26,7 +26,20 @@ const telegramNotifier = require('./telegram-notify.js');
 const PROJECT_ROOT = path.resolve(__dirname, '..');
 const STATE_PATH = path.join(PROJECT_ROOT, 'logs', 'telegram_bridge_state.json');
 
-const DEFAULT_CONVERSATION_ID = 'efdd0412-2586-40cf-bb28-0fa8976613df';
+const DEFAULT_CONVERSATION_ID = 'e6c1bb34-f211-4899-a864-42850c85ae86';
+
+function resolveCliConversationId() {
+  const args = process.argv.slice(2);
+  for (let i = 0; i < args.length; i++) {
+    if (args[i].startsWith('--conversation=')) {
+      return args[i].split('=')[1].trim();
+    }
+    if (args[i] === '--conversation' && args[i + 1]) {
+      return args[i + 1].trim();
+    }
+  }
+  return '';
+}
 const AGENTAPI_BAT = 'C:\\Users\\jjang\\.gemini\\antigravity\\bin\\agentapi.bat';
 const LANGUAGE_SERVER_EXE = 'C:\\Users\\jjang\\AppData\\Local\\Programs\\Antigravity\\resources\\app\\extensions\\antigravity\\bin\\language_server_windows_x64.exe';
 
@@ -45,8 +58,8 @@ const CONTROL_PANEL_KEYBOARD = {
 
 function fetchLiveStatsJson() {
   return new Promise(resolve => {
-    https
-      .get('https://kidsfit.co.kr/api/stats', res => {
+    const req = https
+      .get('https://kidsfit.co.kr/api/stats', { timeout: 8000 }, res => {
         let raw = '';
         res.on('data', c => { raw += c.toString('utf8'); });
         res.on('end', () => {
@@ -56,6 +69,10 @@ function fetchLiveStatsJson() {
             resolve(null);
           }
         });
+      })
+      .on('timeout', () => {
+        try { req.destroy(); } catch (_) {}
+        resolve(null);
       })
       .on('error', () => resolve(null));
   });
@@ -164,7 +181,7 @@ async function sendChatMessage(botToken, chatId, htmlText, includeKeyboard = fal
 
 function dispatchToAntigravity(userCommandText, conversationId) {
   const cfg = telegramNotifier.getTelegramConfig();
-  const targetConvId = conversationId || cfg.conversationId || DEFAULT_CONVERSATION_ID;
+  const targetConvId = conversationId || resolveCliConversationId() || cfg.conversationId || DEFAULT_CONVERSATION_ID;
   const fullPrompt = [
     `[TELEGRAM REMOTE COMMAND]`,
     `사용자가 스마트폰 텔레그램에서 다음 원격 명령을 보냈습니다:`,
@@ -479,10 +496,16 @@ async function startPollingDaemon() {
     }
   }
 
+  const cliConvId = resolveCliConversationId();
+  if (cliConvId) {
+    telegramNotifier.saveTelegramConfig({ antigravityConversationId: cliConvId });
+  }
+  const activeConvId = cliConvId || cfg.conversationId || DEFAULT_CONVERSATION_ID;
+
   console.log('===============================================================');
   console.log('   🌱 KIDSFIT TELEGRAM <-> ANTIGRAVITY 24/7 BRIDGE DAEMON     ');
   console.log(`   Authorized Chat ID : ${ownerChatId || '(첫 메시지 수신 시 자동 등록)'}`);
-  console.log(`   Antigravity Session: ${cfg.conversationId || DEFAULT_CONVERSATION_ID}`);
+  console.log(`   Antigravity Session: ${activeConvId}`);
   console.log('===============================================================');
 
   // Only send welcome notice if explicitly requested via --welcome flag
@@ -496,7 +519,7 @@ async function startPollingDaemon() {
           `🌱 <b>[키즈핏 그로스 스튜디오 × Antigravity 텔레그램 브릿지 재연결 완료!]</b>`,
           `━━━━━━━━━━━━━━━━━━`,
           `✅ <b>상태</b>: 24시간 실시간 양방향 원격 제어 가동 중`,
-          `🖥 <b>직결된 대화방 ID</b>: <code>${cfg.conversationId || DEFAULT_CONVERSATION_ID}</code>`,
+          `🖥 <b>직결된 대화방 ID</b>: <code>${activeConvId}</code>`,
           `📚 <b>현재 학습된 학술 논문</b>: <b>총 ${research.total_papers || 663}편</b> (Cycle #${research.cycle_index || 34})`,
           `🌐 <b>실서버 도메인</b>: <a href="${cfg.siteUrl}">${cfg.siteUrl}</a>`,
           `━━━━━━━━━━━━━━━━━━`,

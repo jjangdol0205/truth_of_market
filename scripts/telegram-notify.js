@@ -41,7 +41,7 @@ function getTelegramConfig() {
   const conversationId = (
     process.env.ANTIGRAVITY_CONVERSATION_ID ||
     dotEnv.ANTIGRAVITY_CONVERSATION_ID ||
-    'efdd0412-2586-40cf-bb28-0fa8976613df'
+    'e6c1bb34-f211-4899-a864-42850c85ae86'
   ).trim();
   const siteUrl = 'https://kidsfit.co.kr';
   const isConfigured = Boolean(

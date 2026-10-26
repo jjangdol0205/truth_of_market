@@ -42,7 +42,7 @@ import qrcode
 from playwright.sync_api import sync_playwright
 
 # Production Domain & Diagnostic Bridge URLs
-PRODUCTION_DOMAIN = "kidsfit.co.kr"
+PRODUCTION_DOMAIN = "truthofmarket.com"
 CAFE_DIAGNOSTIC_BRIDGE_URL = f"https://{PRODUCTION_DOMAIN}/?utm_source=naver_cafe&utm_medium=organic_social&utm_campaign=kidsfit_diagnosis"
 CAFE_DIAGNOSTIC_BRIDGE_QR_URL = f"https://{PRODUCTION_DOMAIN}/?utm_source=naver_cafe_qr&utm_medium=qr_code&utm_campaign=kidsfit_diagnosis"
 
@@ -63,7 +63,7 @@ if sys.platform == "win32":
     except Exception:
         pass
 
-ROOT = Path(r"d:\키즈핏")
+ROOT = Path(__file__).resolve().parent.parent
 ENHANCED_IMG_DIR = ROOT / "samples" / "enhanced_blog_images"
 CURSOR_PATH = ROOT / "logs" / "cafe_publishing_cursor.json"
 AUDIT_LOG_PATH = ROOT / "logs" / "cafe_publishing_audit.json"
