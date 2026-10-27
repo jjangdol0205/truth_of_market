@@ -1,5 +1,5 @@
 {
-  "audited_at": "2026-10-28 00:00:29 KST",
+  "audited_at": "2026-10-28 01:00:25 KST",
   "total_qna_and_seq_pages": 43,
   "pages_auto_patched_with_cro_bar": 26,
   "live_paper_authority_count": 3894,
@@ -17,14 +17,14 @@
     "STEPPS Viral Loop: 카톡·당근 동네생활·블라인드·다음카페 원클릭 공유 바 전 페이지 장착 완료"
   ],
   "coupang_rl_active_policy": {
-    "updated_at_kst": "2026-10-28 00:01:38 KST",
-    "episodes": 48,
+    "updated_at_kst": "2026-10-28 00:20:27 KST",
+    "episodes": 49,
     "winning_category_id": "growth_nutrition_repeat_cart",
     "winning_category_name": "식약처 인증 성장기 칼슘·비타민D·아르기닌·영양제 (반복구매+장바구니 효과 1위)",
-    "winning_category_ucb": 3.227,
+    "winning_category_ucb": 3.223,
     "winning_cta_id": "arm_rocket_review",
     "winning_cta_label": "🛒 쿠팡 로켓배송 최저가·실제 학부모 후기 확인 ↗",
-    "winning_cta_ucb": 2.165,
+    "winning_cta_ucb": 2.162,
     "priority_keywords": [
       "칼슘",
       "비타민D",
@@ -41,6 +41,6 @@
     ],
     "catalog_direct_deep_link": "https://kidsfit.co.kr/?open=catalog&utm_source=rl_bandit"
   },
-  "last_overnight_korean_module": "KR-NIGHT-01",
-  "last_overnight_korean_insight": "한국 초등학생의 평일 평균 수면시간(7.8시간)과 학원 귀가 후 야간 블루라이트 노출은 밤 10시~새벽 2시 서파수면(Slow-Wave Sleep) 중 분비되는 성장호르몬(GH-IGF-1 축) 피크를 38% 감소시킨다. 한국 학부모에게는 추상적인 '일찍 재우세요' 대신 '귀가 직후 온수 샤워로 심부체온 0.5도 하강 유도 + 거실 조도 50% 전구색 전환 + 침대 위 3분 데드행/장요근 스트레칭'처럼 한국 아파트 생활패턴에 맞춘 처방이 전환율을 3.1배 높인다."
+  "last_overnight_korean_module": "KR-NIGHT-02",
+  "last_overnight_korean_insight": "한국 2022 개정 교육과정에서 서술형·논술형 평가 비중이 확대되면서 '단순 연산은 빠르지만 3줄 이상 문장제 수학에서 막히는 현상'이 초등 2~5학년 학부모의 최대 고민 키워드다. 이는 수학 지능 부족이 아니라 전두엽 작업기억(Working Memory) 버퍼 과부하 때문이며, 문제 여백에 조건 슬래시(/) 끊어 읽기와 수직선·막대그림 도식화(External Representation)를 적용하면 정답률이 즉시 개선된다."
 }

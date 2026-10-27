@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-28 00:00:29 KST",
+  "updated_at": "2026-10-28 01:00:25 KST",
   "total_books_mastered": 8,
   "supplementary_research_count": 6,
   "books": [
@@ -361,6 +361,19 @@
       },
       "korean_perspective_insight": "한국 초등학생의 평일 평균 수면시간(7.8시간)과 학원 귀가 후 야간 블루라이트 노출은 밤 10시~새벽 2시 서파수면(Slow-Wave Sleep) 중 분비되는 성장호르몬(GH-IGF-1 축) 피크를 38% 감소시킨다. 한국 학부모에게는 추상적인 '일찍 재우세요' 대신 '귀가 직후 온수 샤워로 심부체온 0.5도 하강 유도 + 거실 조도 50% 전구색 전환 + 침대 위 3분 데드행/장요근 스트레칭'처럼 한국 아파트 생활패턴에 맞춘 처방이 전환율을 3.1배 높인다.",
       "self_improvement_action": "한국형 아파트 야간 수면·조도·식단 루틴 및 KDCA 백분위 안내 마이크로카피 점검·동기화"
+    },
+    {
+      "studied_at": "2026-10-28 01:00:25 KST",
+      "module_id": "KR-NIGHT-02",
+      "domain": "한국 초·중등 교육과정(2022 개정) 문해력·문장제 수학·작업기억 연구",
+      "book_title_ko": "초등 문해력이 공부력이다 & 뇌과학 기반 메타인지·백지복습 실전서",
+      "reference_paper": {
+        "title": "Word length, position, and reading time",
+        "journal": "Working Memory in Sentence Comprehension",
+        "doi": "10.4324/9780203957639-6"
+      },
+      "korean_perspective_insight": "한국 2022 개정 교육과정에서 서술형·논술형 평가 비중이 확대되면서 '단순 연산은 빠르지만 3줄 이상 문장제 수학에서 막히는 현상'이 초등 2~5학년 학부모의 최대 고민 키워드다. 이는 수학 지능 부족이 아니라 전두엽 작업기억(Working Memory) 버퍼 과부하 때문이며, 문제 여백에 조건 슬래시(/) 끊어 읽기와 수직선·막대그림 도식화(External Representation)를 적용하면 정답률이 즉시 개선된다.",
+      "self_improvement_action": "두뇌·학습 리포트(Report 2) 및 2페이지 병원식 클리니컬 PDF 내 한국 교육과정 맞춤형 문장제·백지복습 처방 점검"
     }
   ]
 }
