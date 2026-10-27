@@ -231,7 +231,7 @@
       cognitiveAxes: ['science_nature'],
       traitLearningConcerns: ['reading_literacy'],
       traitStudyStyle: 'dialogue_question',
-      region: 'US National (CDC/AAP Standard)'
+      region: '서울 강남·서초·송파'
     }
   };
 
@@ -398,8 +398,9 @@
   /**
    * Synchronizes Date of Birth (Year/Month/Day) -> Exact Months/Days + Auto Growth Stage (Phase 1~4)
    */
-  function syncDobAndAutoStage() {
+  function syncDobAndAutoStage(options = {}) {
     if (typeof document === 'undefined') return;
+    const preserveUserInputs = Boolean(options && options.preserveUserInputs);
     if (!PinpointCurator && (global.TallerPinpointCurator || global.KidsFitPinpointCurator)) {
       PinpointCurator = global.TallerPinpointCurator || global.KidsFitPinpointCurator;
     }
@@ -451,13 +452,15 @@
     wizardState.profile.exactMonths = dobInfo.exactMonths;
     wizardState.profile.remainderDays = dobInfo.remainderDays;
     wizardState.profile.ageYears = dobInfo.ageYears;
-    wizardState.profile.tannerPhase = autoStage.tannerPhase;
+    if (!preserveUserInputs) {
+      wizardState.profile.tannerPhase = autoStage.tannerPhase;
+    }
 
-    // Auto-sync KDCA 50th percentile standard height & weight unless user manually edited
+    // Auto-sync KDCA 50th percentile standard height & weight unless user manually edited or preserveUserInputs is true
     if (!GrowthEngine && (global.GrowthEngine || global.KidsFitGrowthEngine || global.TallerGrowthEngine)) {
       GrowthEngine = global.GrowthEngine || global.KidsFitGrowthEngine || global.TallerGrowthEngine;
     }
-    if (GrowthEngine && typeof GrowthEngine.getLmsForMonth === 'function') {
+    if (!preserveUserInputs && GrowthEngine && typeof GrowthEngine.getLmsForMonth === 'function') {
       const lms = GrowthEngine.getLmsForMonth(gender, dobInfo.exactMonths || dobInfo.ageMonths);
       if (lms) {
         const heightInput = document.getElementById('child-height');
@@ -511,11 +514,13 @@
         : `${autoStage.boneAgeNoteKo}<br><strong style="color:#1D4ED8;">입력하신 생년월일 월령에 맞춰 최적 성장 단계가 자동 설정되었으므로 바로 [다음 단계]로 이동하시면 됩니다.</strong>`;
     }
 
-    const phaseRadios = document.querySelectorAll('input[name="tanner-phase"]');
-    if (phaseRadios && phaseRadios.forEach) {
-      phaseRadios.forEach((r) => {
-        r.checked = (r.value === autoStage.tannerPhase);
-      });
+    if (!preserveUserInputs) {
+      const phaseRadios = document.querySelectorAll('input[name="tanner-phase"]');
+      if (phaseRadios && phaseRadios.forEach) {
+        phaseRadios.forEach((r) => {
+          r.checked = (r.value === autoStage.tannerPhase);
+        });
+      }
     }
 
     syncAgeAppropriateQuizOptions(dobInfo.ageYears);
@@ -1338,8 +1343,8 @@
     const boyRadio = document.getElementById('gender-boy');
     const gender = (boyRadio && boyRadio.checked) ? 'boy' : 'girl';
 
-    // Sync DOB -> exactMonths & Auto Growth Stage first
-    syncDobAndAutoStage();
+    // Sync DOB -> exactMonths & Auto Growth Stage first (preserve user's manual tanner-phase & height/weight inputs)
+    syncDobAndAutoStage({ preserveUserInputs: true });
 
     const ageSlider = document.getElementById('child-age-slider');
     const ageMonthsEl = document.getElementById('child-age-months');
