@@ -1400,7 +1400,7 @@
 
     // Region & Ethnicity
     const regionSelect = document.getElementById('user-region');
-    const region = regionSelect ? regionSelect.value : 'US National (CDC/AAP Standard)';
+    const region = regionSelect ? regionSelect.value : '서울 강남·서초·송파';
     const ethnicitySelect = document.getElementById('child-ethnicity');
     const ethnicity = (ethnicitySelect && ethnicitySelect.value) ? ethnicitySelect.value : 'us_general';
 
