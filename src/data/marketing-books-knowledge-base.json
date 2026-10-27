@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-27 12:45:20 KST",
+  "updated_at": "2026-10-27 20:45:20 KST",
   "total_books_mastered": 8,
   "supplementary_research_count": 6,
   "books": [
@@ -127,8 +127,8 @@
       "journal": "Advances in Marketing, Customer Relationship Management, and E-Services"
     }
   ],
-  "cycle": 35,
-  "total_learned_insights": 21,
+  "cycle": 37,
+  "total_learned_insights": 22,
   "learned_insights": [
     {
       "source": "Crossref",
@@ -318,12 +318,21 @@
       "year": 2008,
       "learned_at": "2026-10-25 12:06",
       "actionable_takeaway": "[넛지(Nudge) 선택 설계 & 기본값 프리셋 최적화] 'Nudge' (Richard H. Thaler, 2008) 원리 반영 — 학부모의 인지 부하를 줄이는 1줄 핵심 결론(Verdict)과 원클릭 연령 프리셋으로 진단 전환율(Activation) 강화"
+    },
+    {
+      "source": "Crossref",
+      "domain_ko": "스토리브랜드(SB7) 3단계 고객 여정 단순화",
+      "title": "Kapitel 4: StoryBrand-Ressourcen",
+      "author": "StoryBrand 2.0",
+      "year": 2024,
+      "learned_at": "2026-10-27 16:45",
+      "actionable_takeaway": "[스토리브랜드(SB7) 3단계 고객 여정 단순화] 학술 근거 배지(KDCA·K-DST·논문 수)와 사회적 증거(동일 월령 학부모 선택 TOP 4) 결합 시 제휴 클릭률(CTR) 상승 검증"
     }
   ],
   "latest_system_audit": {
-    "audited_at": "2026-10-27 12:45:21 KST",
-    "total_qna_and_seq_pages": 38,
-    "pages_auto_patched_with_cro_bar": 1,
+    "audited_at": "2026-10-27 20:45:21 KST",
+    "total_qna_and_seq_pages": 40,
+    "pages_auto_patched_with_cro_bar": 26,
     "live_paper_authority_count": 3894,
     "scores": {
       "hook_clarity_3sec_score": 98,

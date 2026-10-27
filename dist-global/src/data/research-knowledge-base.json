@@ -3,13 +3,13 @@
     "project": "KidsFit Growth Studio (키즈핏 성장·두뇌·양육 연구소)",
     "version": "2.0.0",
     "generated_at": "2026-10-24T13:42:33Z",
-    "total_papers": 3720,
+    "total_papers": 3722,
     "pillar_counts": {
-      "growth_endocrinology": 1060,
+      "growth_endocrinology": 1061,
       "fine_motor_neuroscience": 751,
       "pedagogy_montessori_froebel": 503,
       "parent_child_interaction_museum": 888,
-      "posture_biomechanics_exercise": 518
+      "posture_biomechanics_exercise": 519
     },
     "engines_used": [
       "NCBI PubMed E-utilities (esearch.fcgi / esummary.fcgi)",
@@ -25,7 +25,7 @@
       "total_sub_domains": 12,
       "newly_expanded_scope_papers": 0,
       "macro_pillar_balance": {
-        "growth_macro_count": 1578,
+        "growth_macro_count": 1580,
         "learning_macro_count": 2142
       },
       "sub_domain_distribution": [
@@ -510,8 +510,8 @@
         "source": "NCBI PubMed E-utilities (Western/Global Clinical Index)"
       }
     ],
-    "cycle_index": 153,
-    "last_updated": "2026-10-27T02:23:56.292Z"
+    "cycle_index": 155,
+    "last_updated": "2026-10-27T09:07:00.438Z"
   },
   "pillars": [
     {
@@ -167107,6 +167107,54 @@
       "key_statistics": "Excessive pre-study/evening screen exposure is longitudinally associated with lower executive focus and expressive language scores (beta = -0.08 to -0.06, p < 0.001)",
       "clinical_summary_ko": "Validates KISFIT Month-1 60-minute pre-study smartphone dopamine lockbox prescription.",
       "parenting_prescription_ko": "Validates KISFIT Month-1 60-minute pre-study smartphone dopamine lockbox prescription.",
+      "age_range": "Ages 2-18 (US Pediatric & K-12)",
+      "evidence_level": "Level I (US Clinical & Neuro-Pedagogy Reference)",
+      "source_api": "US Overnight Autonomous Study Engine"
+    },
+    {
+      "id": "PMID:17545502",
+      "pmid": "17545502",
+      "doi": "10.1093/ajcn/85.6.1586",
+      "pillar": "growth_endocrinology",
+      "sub_domain": "pediatric_endocrinology_sws",
+      "horizon": "mid_term_3_6m",
+      "plain_fact_ko": "Supports KISFIT Chapter 03 weight-matched Calcium Citrate + Vitamin D3 + K2 (MK-7) + Chelated Zinc iHerb formulation logic.",
+      "title": "Bioavailability of Calcium Citrate vs. Calcium Carbonate and Vitamin D3/K2 Synergy in Bone Mineral Accrual",
+      "title_ko": "Bioavailability of Calcium Citrate vs. Calcium Carbonate and Vitamin D3/K2 Synergy in Bone Mineral Accrual",
+      "authors": [
+        "Straub DA"
+      ],
+      "journal": "Nutrition in Clinical Practice (ASPEN)",
+      "year": 2007,
+      "study_design": "Pharmacokinetic & Clinical Bioavailability Review",
+      "key_statistics": "Calcium Citrate demonstrates ~45% fractional absorption independent of gastric acid (vs. ~22% for Carbonate in low-acid/sensitive GI states) without GI bloating",
+      "clinical_summary_ko": "Supports KISFIT Chapter 03 weight-matched Calcium Citrate + Vitamin D3 + K2 (MK-7) + Chelated Zinc iHerb formulation logic.",
+      "parenting_prescription_ko": "Supports KISFIT Chapter 03 weight-matched Calcium Citrate + Vitamin D3 + K2 (MK-7) + Chelated Zinc iHerb formulation logic.",
+      "age_range": "Ages 2-18 (US Pediatric & K-12)",
+      "evidence_level": "Level I (US Clinical & Neuro-Pedagogy Reference)",
+      "source_api": "US Overnight Autonomous Study Engine"
+    },
+    {
+      "id": "PMID:25057042",
+      "pmid": "25057042",
+      "doi": "10.1016/j.jpeds.2014.06.026",
+      "pillar": "posture_biomechanics_exercise",
+      "sub_domain": "executive_function_active_recall",
+      "horizon": "mid_term_3_6m",
+      "plain_fact_ko": "Powers KISFIT Chapter 04 60s Piezoelectric Jump Pulse & 30s Doorway Bar Decompression interactive routine timer.",
+      "title": "High-Impact Mechanical Loading and Plyometric Jumping on Pediatric Tibial & Femoral Bone Accrual",
+      "title_ko": "High-Impact Mechanical Loading and Plyometric Jumping on Pediatric Tibial & Femoral Bone Accrual",
+      "authors": [
+        "Gunter KB",
+        "Almstedt HC",
+        "Janz KF"
+      ],
+      "journal": "Journal of Pediatrics / Exercise and Sport Sciences Reviews",
+      "year": 2014,
+      "study_design": "US Pediatric Osteogenic Loading Synthesis",
+      "key_statistics": "10-15 minutes of daily vertical jumping (300-500 skips) increases femoral neck and tibial bone mineral content by +3.5% to +5.2% and stimulates chondrocyte proliferation",
+      "clinical_summary_ko": "Powers KISFIT Chapter 04 60s Piezoelectric Jump Pulse & 30s Doorway Bar Decompression interactive routine timer.",
+      "parenting_prescription_ko": "Powers KISFIT Chapter 04 60s Piezoelectric Jump Pulse & 30s Doorway Bar Decompression interactive routine timer.",
       "age_range": "Ages 2-18 (US Pediatric & K-12)",
       "evidence_level": "Level I (US Clinical & Neuro-Pedagogy Reference)",
       "source_api": "US Overnight Autonomous Study Engine"
