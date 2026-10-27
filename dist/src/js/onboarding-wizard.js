@@ -1078,12 +1078,36 @@
     }
   }
 
-  function openMonthlyProductsOnlyModal() {
+  function openMonthlyProductsOnlyModal(customYear, customMonth, opts = {}) {
     if (typeof document === 'undefined') return;
+    const mainY = document.getElementById('child-birth-year');
+    const mainM = document.getElementById('child-birth-month');
+    const mainD = document.getElementById('child-birth-day');
+    if (customYear && mainY) mainY.value = String(customYear);
+    if (customMonth && mainM) mainM.value = String(customMonth);
+
     try {
       syncDobAndAutoStage({ preserveUserInputs: true });
       readProfileFromForm();
     } catch (_) {}
+
+    if (!PinpointCurator && (global.TallerPinpointCurator || global.KidsFitPinpointCurator)) {
+      PinpointCurator = global.TallerPinpointCurator || global.KidsFitPinpointCurator;
+    }
+    const finalY = parseInt(customYear || (mainY && mainY.value) || wizardState.profile.birthYear || 2016, 10);
+    const finalM = parseInt(customMonth || (mainM && mainM.value) || wizardState.profile.birthMonth || 10, 10);
+    const finalD = parseInt((mainD && mainD.value) || wizardState.profile.birthDay || 15, 10);
+    if (PinpointCurator && typeof PinpointCurator.calculateExactAgeFromDob === 'function') {
+      const dobInfo = PinpointCurator.calculateExactAgeFromDob(finalY, finalM, finalD);
+      wizardState.profile.birthYear = dobInfo.birthYear;
+      wizardState.profile.birthMonth = dobInfo.birthMonth;
+      wizardState.profile.birthDay = dobInfo.birthDay;
+      wizardState.profile.ageMonths = dobInfo.ageMonths;
+      wizardState.profile.exactMonths = dobInfo.exactMonths;
+      wizardState.profile.ageYears = dobInfo.ageYears;
+      wizardState.profile.birthDateStr = dobInfo.birthDateStr;
+      wizardState.profile.birthDateKo = dobInfo.birthDateKo;
+    }
 
     const quizSection = document.getElementById('quiz-section');
     if (quizSection) quizSection.style.display = 'none';
@@ -1107,33 +1131,32 @@
     const yrs = Math.floor(exactM / 12);
     const remM = exactM % 12;
     if (rxTitle) {
-      rxTitle.textContent = `생후 ${exactM}개월(만 ${yrs}세 ${remM}개월) 월령별 맞춤 추천템 전용관`;
+      rxTitle.textContent = `${finalY}년 ${finalM}월생 · 생후 ${exactM}개월(만 ${yrs}세 ${remM}개월) 월령별 추천템 전용관`;
     }
     if (rxSub) {
       rxSub.textContent = '설문 생략 모드 · 선택하신 생년월일(월령) 기준 엄선된 영양제·운동기구·두뇌교구·필독서 추천 리스트입니다.';
     }
 
-    if (!PinpointCurator && (global.TallerPinpointCurator || global.KidsFitPinpointCurator)) {
-      PinpointCurator = global.TallerPinpointCurator || global.KidsFitPinpointCurator;
-    }
     const mbEl = document.getElementById('master-briefing-card');
     if (mbEl && PinpointCurator && typeof PinpointCurator.renderMonthlyProductsOnlyCatalog === 'function') {
       mbEl.innerHTML = PinpointCurator.renderMonthlyProductsOnlyCatalog(wizardState.profile);
     }
-    if (dashboard && typeof dashboard.scrollIntoView === 'function') {
+    if (!opts.skipScroll && dashboard && typeof dashboard.scrollIntoView === 'function') {
       dashboard.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
 
-  function updateMonthlyProductsOnlyAge() {
+  function updateMonthlyProductsOnlyAge(presetYear, presetMonth) {
     if (typeof document === 'undefined') return;
     const yEl = document.getElementById('quick-catalog-birth-year');
     const mEl = document.getElementById('quick-catalog-birth-month');
+    const selY = presetYear ? parseInt(presetYear, 10) : (yEl ? parseInt(yEl.value, 10) : 2016);
+    const selM = presetMonth ? parseInt(presetMonth, 10) : (mEl ? parseInt(mEl.value, 10) : 10);
     const mainY = document.getElementById('child-birth-year');
     const mainM = document.getElementById('child-birth-month');
-    if (yEl && mainY) mainY.value = yEl.value;
-    if (mEl && mainM) mainM.value = mEl.value;
-    openMonthlyProductsOnlyModal();
+    if (mainY && selY) mainY.value = String(selY);
+    if (mainM && selM) mainM.value = String(selM);
+    openMonthlyProductsOnlyModal(selY, selM, { skipScroll: true });
   }
 
   function returnToSurveyFromProducts() {
@@ -1438,6 +1461,9 @@
     const exactMonths = wizardState.profile.exactMonths || ageMonths;
     const birthDateStr = wizardState.profile.birthDateStr || '';
     const birthDateKo = wizardState.profile.birthDateKo || '';
+    const birthYear = wizardState.profile.birthYear || (document.getElementById('child-birth-year') ? parseInt(document.getElementById('child-birth-year').value, 10) : 2016);
+    const birthMonth = wizardState.profile.birthMonth || (document.getElementById('child-birth-month') ? parseInt(document.getElementById('child-birth-month').value, 10) : 10);
+    const birthDay = wizardState.profile.birthDay || (document.getElementById('child-birth-day') ? parseInt(document.getElementById('child-birth-day').value, 10) : 15);
 
     const heightInput = document.getElementById('child-height');
     const weightInput = document.getElementById('child-weight');
@@ -1564,6 +1590,9 @@
       ageYears,
       ageMonths,
       exactMonths,
+      birthYear,
+      birthMonth,
+      birthDay,
       birthDateStr,
       birthDateKo,
       currentHeight,

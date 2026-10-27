@@ -3824,10 +3824,22 @@
               <select id="quick-catalog-birth-month" onchange="if(window.TallerOnboardingWizard&&typeof window.TallerOnboardingWizard.updateMonthlyProductsOnlyAge==='function'){window.TallerOnboardingWizard.updateMonthlyProductsOnlyAge();}" style="font-weight: 800; font-size: 0.85rem; padding: 0.38rem 0.6rem; border-radius: 8px; border: 1px solid #93C5FD; background: #FFFFFF; color: #0F172A;">
                 ${monthOptions.join('')}
               </select>
+              <button type="button" onclick="if(window.TallerOnboardingWizard&&typeof window.TallerOnboardingWizard.updateMonthlyProductsOnlyAge==='function'){window.TallerOnboardingWizard.updateMonthlyProductsOnlyAge();}" style="cursor: pointer; background: #1D4ED8; color: #FFFFFF; border: 1px solid #1E40AF; font-size: 0.82rem; font-weight: 900; padding: 0.4rem 0.85rem; border-radius: 8px;">적용</button>
             </div>
             <button type="button" onclick="if(window.TallerOnboardingWizard&&typeof window.TallerOnboardingWizard.returnToSurveyFromProducts==='function'){window.TallerOnboardingWizard.returnToSurveyFromProducts();}" style="cursor: pointer; background: #FFFFFF; border: 1.5px solid #1D4ED8; color: #1D4ED8; font-size: 0.8rem; font-weight: 900; padding: 0.45rem 0.85rem; border-radius: 9999px;">
               📏 실제 키·습관 입력하고 정밀 진단 보고서 받기 (설문으로 돌아가기 →)
             </button>
+          </div>
+          <!-- 1-Click Age Band Quick Switcher Pills -->
+          <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.55rem;">
+            ${[
+              { label: '👶 만 1~2세 (영아)', y: 2024, m: 6 },
+              { label: '🧒 만 3세 (유아)', y: 2023, m: 5 },
+              { label: '🎨 만 4~5세 (유치원)', y: 2021, m: 5 },
+              { label: '🎒 만 6~7세 (초등입학)', y: 2019, m: 5 },
+              { label: '📐 만 8~10세 (초등중학년)', y: 2016, m: 10 },
+              { label: '🚀 만 11~15세 (초등고·중등)', y: 2013, m: 5 }
+            ].map((p) => `<button type="button" onclick="if(window.TallerOnboardingWizard&&typeof window.TallerOnboardingWizard.updateMonthlyProductsOnlyAge==='function'){window.TallerOnboardingWizard.updateMonthlyProductsOnlyAge(${p.y},${p.m});}" style="cursor:pointer;background:${curYear===p.y?'#1D4ED8':'#FFFFFF'};color:${curYear===p.y?'#FFFFFF':'#1E3A8A'};border:1px solid ${curYear===p.y?'#1D4ED8':'#93C5FD'};font-size:0.76rem;font-weight:800;padding:0.32rem 0.68rem;border-radius:9999px;">${p.label}</button>`).join('')}
           </div>
         </div>
 
