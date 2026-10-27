@@ -2219,18 +2219,73 @@ ${isMasked ? `
       if (global.KidsFitGrowthTracker && typeof global.KidsFitGrowthTracker.preparePrintReport === 'function') {
         global.KidsFitGrowthTracker.preparePrintReport(profile);
       }
+      let buyerEmail = '';
+      let paidPlan = 'single';
+      let paidOrderId = '';
+      try {
+        if (typeof window !== 'undefined' && window.localStorage) {
+          const usr = getLoggedInUser();
+          buyerEmail = (usr && usr.email) || window.localStorage.getItem('kidsfit_global_buyer_email') || '';
+          paidPlan = (usr && usr.planType) || window.localStorage.getItem('kidsfit_global_paid_plan_v1') || 'single';
+          paidOrderId = (usr && usr.lastOrderId) || window.localStorage.getItem('kidsfit_global_order_id_v1') || '';
+        }
+      } catch (_) {}
+      const isPassPlan = paidPlan === 'pass' || paidPlan === 'tracker_6m';
+      const recalBoxId = isLearningMode ? 'learning-monthly-recal-box' : 'growth-monthly-recal-box';
+
       const unlockedBanner = document.createElement('div');
       unlockedBanner.id = 'taller-global-paywall-gate';
-      unlockedBanner.style.cssText = 'background:#ECFDF5;border:2px solid #10B981;border-radius:16px;padding:0.9rem 1.2rem;margin-bottom:1.2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.6rem;';
+      unlockedBanner.style.cssText = 'background:linear-gradient(180deg,#ECFDF5 0%,#FFFFFF 100%);border:2px solid #10B981;border-radius:18px;padding:1.1rem 1.25rem;margin-bottom:1.25rem;box-shadow:0 12px 30px rgba(16,185,129,0.10);';
       unlockedBanner.innerHTML = `
-        <div style="display:flex;align-items:center;gap:0.6rem;">
-          <span style="background:#10B981;color:#FFFFFF;font-size:0.76rem;font-weight:900;padding:0.22rem 0.65rem;border-radius:9999px;">UNLOCKED PRO PASS</span>
-          <span style="font-size:0.9rem;font-weight:800;color:#065F46;">Full US CDC &amp; 3,714-Paper Clinical Report Unlocked — Age ${ageY} ${genderLabel} (${isLearningMode ? '5-Axis Brain LQ &amp; Study Roadmap' : `${fmtLen(heightCm)} · ${fmtWt(weightKg)}`})</span>
+        <div id="kidsfit-paid-member-progression-hub">
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.6rem;padding-bottom:0.75rem;border-bottom:1px solid #A7F3D0;margin-bottom:0.85rem;">
+            <div style="display:flex;align-items:center;gap:0.55rem;flex-wrap:wrap;">
+              <span style="background:#059669;color:#FFFFFF;font-size:0.75rem;font-weight:900;padding:0.24rem 0.7rem;border-radius:9999px;letter-spacing:0.03em;">
+                ${isPassPlan ? '✓ 6-MONTH UNLIMITED CARE PASS ACTIVE' : '✓ PRO CLINICAL PASS UNLOCKED'}
+              </span>
+              <span style="font-size:0.9rem;font-weight:800;color:#065F46;">
+                Full US CDC &amp; 3,722-Paper Clinical Report — Age ${ageY} ${genderLabel} (${isLearningMode ? '5-Axis Brain LQ &amp; Study Roadmap' : `${fmtLen(heightCm)} · ${fmtWt(weightKg)}`})
+              </span>
+            </div>
+            <div style="font-size:0.76rem;font-weight:700;color:#047857;background:#D1FAE5;padding:0.2rem 0.65rem;border-radius:9999px;">
+              ${buyerEmail ? `Member: ${buyerEmail}` : 'Verified Member Session'}${paidOrderId ? ` · Order #${paidOrderId}` : ''}
+            </div>
+          </div>
+
+          <!-- Automated 3-Step Post-Payment Member Progression Bar -->
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:0.65rem;margin-bottom:0.85rem;">
+            <div style="background:#FFFFFF;border:1.5px solid #A7F3D0;border-radius:12px;padding:0.75rem 0.9rem;">
+              <div style="font-size:0.72rem;font-weight:900;color:#059669;margin-bottom:0.2rem;">STEP 1 · FULL DOSSIER UNLOCKED</div>
+              <div style="font-size:0.82rem;font-weight:800;color:#0F172A;margin-bottom:0.35rem;">All 01–05 Clinical Sections &amp; Exact Dosing Active</div>
+              <div style="font-size:0.74rem;color:#475569;">Scroll down for unmasked trajectories, rhGH paper verdict &amp; 14-day schedule.</div>
+            </div>
+            <div style="background:#FFFFFF;border:1.5px solid #93C5FD;border-radius:12px;padding:0.75rem 0.9rem;display:flex;flex-direction:column;justify-content:space-between;">
+              <div>
+                <div style="font-size:0.72rem;font-weight:900;color:#1D4ED8;margin-bottom:0.2rem;">STEP 2 · 2-PAGE HOSPITAL PDF CHART</div>
+                <div style="font-size:0.82rem;font-weight:800;color:#0F172A;margin-bottom:0.4rem;">Save or Print Your Child&apos;s Official 2-Page PDF</div>
+              </div>
+              <button type="button" onclick="if(window.triggerKidsFitGlobalPrint){window.triggerKidsFitGlobalPrint();}else{window.print();}" style="width:100%;background:linear-gradient(90deg,#059669 0%,#10B981 100%);color:#FFFFFF;border:none;border-radius:8px;padding:0.45rem 0.75rem;font-size:0.78rem;font-weight:900;cursor:pointer;">
+                🖨️ Download / Print 2-Page PDF →
+              </button>
+            </div>
+            <div style="background:#FFFFFF;border:1.5px solid #C4B5FD;border-radius:12px;padding:0.75rem 0.9rem;display:flex;flex-direction:column;justify-content:space-between;">
+              <div>
+                <div style="font-size:0.72rem;font-weight:900;color:#6D28D9;margin-bottom:0.2rem;">STEP 3 · ${isPassPlan ? '6-MONTH CARE TRACKER &amp; LINK' : 'MONTHLY RE-CALIBRATION &amp; LINK'}</div>
+                <div style="font-size:0.82rem;font-weight:800;color:#0F172A;margin-bottom:0.4rem;">Track Monthly Gains &amp; Bookmark Permanent Link</div>
+              </div>
+              <div style="display:flex;gap:0.35rem;flex-wrap:wrap;">
+                <button type="button" onclick="var el=document.getElementById('${recalBoxId}');if(el){el.scrollIntoView({behavior:'smooth',block:'center'});el.style.boxShadow='0 0 0 4px rgba(37,99,235,0.35)';setTimeout(function(){el.style.boxShadow='none';},2500);}" style="flex:1;background:#EFF6FF;color:#1D4ED8;border:1px solid #93C5FD;border-radius:8px;padding:0.42rem 0.55rem;font-size:0.74rem;font-weight:800;cursor:pointer;">
+                  📅 Monthly Tracker
+                </button>
+                <button type="button" id="btn-copy-magic-unlock-link" onclick="window.copyKidsFitMagicUnlockLink()" style="flex:1;background:#F5F3FF;color:#6D28D9;border:1px solid #C4B5FD;border-radius:8px;padding:0.42rem 0.55rem;font-size:0.74rem;font-weight:800;cursor:pointer;">
+                  🔗 Save My Link
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-        <button type="button" onclick="if(window.triggerKidsFitGlobalPrint){window.triggerKidsFitGlobalPrint();}else{window.print();}" style="background:#059669;color:#FFFFFF;border:none;border-radius:9999px;padding:0.42rem 0.95rem;font-size:0.82rem;font-weight:800;cursor:pointer;">
-          Download / Print Clinical PDF Report
-        </button>
-        <div id="kidsfit-viral-share-bar" style="background:#F8FAFC;border:1.5px solid #93C5FD;border-radius:12px;padding:0.7rem 0.9rem;margin-top:0.75rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;">
+
+        <div id="kidsfit-viral-share-bar" style="background:#F8FAFC;border:1.5px solid #93C5FD;border-radius:12px;padding:0.7rem 0.9rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;">
           <span style="font-size:0.79rem;font-weight:800;color:#1E3A8A;">📲 Know another parent? Share this free 60-sec US CDC Height &amp; Brain LQ Scan:</span>
           <div style="display:flex;align-items:center;gap:0.4rem;flex-wrap:wrap;">
             <button type="button" id="btn-kidsfit-share-native" onclick="window.shareKidsFitGlobalReport('native')" style="background:#1D4ED8;color:#FFFFFF;border:none;border-radius:8px;padding:0.36rem 0.72rem;font-size:0.75rem;font-weight:800;cursor:pointer;">📤 Share / Copy Link</button>
@@ -2623,9 +2678,9 @@ ${isMasked ? `
 
 
   global.shareKidsFitGlobalReport = function (channel) {
-    const shareUrl = 'https://kisfitglobal.com/?utm_source=parent_share&utm_medium=' + encodeURIComponent(channel || 'native');
+    const shareUrl = 'https://kisfitglobal.com/en?utm_source=parent_share&utm_medium=' + encodeURIComponent(channel || 'native');
     const shareTitle = 'KISFIT Bio Labs — 60-Sec US CDC Child Height Predictor & 5-Axis Brain LQ Scan';
-    const shareText = 'Check out this clinical 60-second US CDC 2000 Child Height Predictor & 5-Axis Brain Learning Quotient (LQ) scan (backed by 3,720+ peer-reviewed studies):';
+    const shareText = 'Check out this clinical 60-second US CDC 2000 Child Height Predictor & 5-Axis Brain Learning Quotient (LQ) scan (backed by 3,722+ peer-reviewed studies):';
     try {
       if (typeof window !== 'undefined' && typeof window.fetch === 'function') {
         window.fetch('/api/visit', {
@@ -2673,6 +2728,104 @@ ${isMasked ? `
       }).catch(function () {});
     }
   };
+
+  global.copyKidsFitMagicUnlockLink = function () {
+    let magicUrl = 'https://kisfitglobal.com/en?payment=success';
+    try {
+      if (typeof window !== 'undefined' && window.localStorage) {
+        const savedMagic = window.localStorage.getItem('kidsfit_global_magic_link_v1');
+        const email = window.localStorage.getItem('kidsfit_global_buyer_email') || '';
+        const orderId = window.localStorage.getItem('kidsfit_global_order_id_v1') || '';
+        if (savedMagic) {
+          magicUrl = savedMagic;
+        } else if (email) {
+          magicUrl = 'https://kisfitglobal.com/en?payment=success&email=' + encodeURIComponent(email) + (orderId ? '&order_id=' + encodeURIComponent(orderId) : '');
+        }
+      }
+    } catch (_) {}
+    if (typeof navigator !== 'undefined' && navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+      navigator.clipboard.writeText(magicUrl).then(function () {
+        const btn = typeof document !== 'undefined' ? document.getElementById('btn-copy-magic-unlock-link') : null;
+        if (btn) {
+          const orig = btn.textContent;
+          btn.textContent = '✅ Link Saved!';
+          setTimeout(function () { btn.textContent = orig; }, 2500);
+        }
+      }).catch(function () {});
+    }
+  };
+
+  let _autoPaymentPollTimer = null;
+  function stopAutoPaymentProgressionPoller() {
+    if (_autoPaymentPollTimer) {
+      clearInterval(_autoPaymentPollTimer);
+      _autoPaymentPollTimer = null;
+    }
+  }
+
+  function applyAutoPaidOrderUnlock(data, fallbackEmail, fallbackPlan) {
+    stopAutoPaymentProgressionPoller();
+    try {
+      if (typeof window !== 'undefined' && window.localStorage) {
+        window.localStorage.setItem(UNLOCK_STORAGE_KEY, 'true');
+        const resolvedEmail = (data && data.email) || fallbackEmail || '';
+        const resolvedPlan = (data && data.planType) || fallbackPlan || selectedPlan || 'single';
+        const resolvedOrderId = (data && data.orderId) || '';
+        if (resolvedEmail) window.localStorage.setItem('kidsfit_global_buyer_email', resolvedEmail);
+        if (resolvedPlan) window.localStorage.setItem('kidsfit_global_paid_plan_v1', resolvedPlan);
+        if (resolvedOrderId) window.localStorage.setItem('kidsfit_global_order_id_v1', String(resolvedOrderId));
+        if (data && data.magicUnlockUrl) window.localStorage.setItem('kidsfit_global_magic_link_v1', data.magicUnlockUrl);
+        if (data && data.token) window.localStorage.setItem('kidsfit_global_auth_token_v1', data.token);
+        if (data && data.user) {
+          window.localStorage.setItem('kidsfit_global_auth_user_v1', JSON.stringify(data.user));
+        } else if (resolvedEmail) {
+          const existingUser = getLoggedInUser() || { name: resolvedEmail.split('@')[0], email: resolvedEmail };
+          existingUser.unlockedPass = true;
+          existingUser.planType = resolvedPlan;
+          if (resolvedOrderId) existingUser.lastOrderId = resolvedOrderId;
+          window.localStorage.setItem('kidsfit_global_auth_user_v1', JSON.stringify(existingUser));
+        }
+      }
+    } catch (_) {}
+    syncAuthHeaderButton();
+    if (typeof document !== 'undefined') {
+      const m1 = document.getElementById('kidsfit-global-checkout-modal');
+      if (m1) m1.remove();
+      const m2 = document.getElementById('kidsfit-embedded-ls-iframe-modal');
+      if (m2) m2.remove();
+    }
+    transformGlobalReportAndApplyPaywall();
+  }
+
+  function startAutoPaymentProgressionPoller(emailParam, planParam) {
+    stopAutoPaymentProgressionPoller();
+    if (typeof window === 'undefined' || typeof window.fetch !== 'function') return;
+    let attempts = 0;
+    _autoPaymentPollTimer = setInterval(function () {
+      attempts += 1;
+      if (attempts > 80 || isReportUnlocked()) {
+        stopAutoPaymentProgressionPoller();
+        return;
+      }
+      const m1 = typeof document !== 'undefined' ? document.getElementById('kidsfit-global-checkout-modal') : null;
+      const m2 = typeof document !== 'undefined' ? document.getElementById('kidsfit-embedded-ls-iframe-modal') : null;
+      if (!m1 && !m2) {
+        stopAutoPaymentProgressionPoller();
+        return;
+      }
+      const emailEl = typeof document !== 'undefined' ? document.getElementById('checkout-parent-email') : null;
+      const activeEmail = String((emailEl && emailEl.value) || emailParam || (window.localStorage && window.localStorage.getItem('kidsfit_pending_ls_checkout_email_v1')) || '').trim();
+      if (!activeEmail || activeEmail.indexOf('@') === -1) return;
+      window.fetch('/api/lemonsqueezy-orders/verify?email=' + encodeURIComponent(activeEmail))
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          if (data && data.ok && data.verified) {
+            applyAutoPaidOrderUnlock(data, activeEmail, planParam);
+          }
+        })
+        .catch(function () {});
+    }, 3500);
+  }
 
 
   // Paid-Member Revenue Reinforcement Learning (RL) Policy Selector (UCB1 / Softmax Bandit)
@@ -2782,6 +2935,7 @@ ${isMasked ? `
       : `${baseCheckoutUrl}${sep}embed=1`;
 
     const openTargetUrl = function (rawUrl) {
+      startAutoPaymentProgressionPoller(email, plan);
       const hasEmbed = String(rawUrl || '').indexOf('embed=1') !== -1;
       const targetUrl = hasEmbed ? rawUrl : (rawUrl + (String(rawUrl || '').indexOf('?') === -1 ? '?embed=1' : '&embed=1'));
       try {
@@ -2884,7 +3038,7 @@ ${isMasked ? `
         </div>
 
         <div style="margin-bottom:0.85rem;">
-          <label style="display:block;font-size:0.78rem;font-weight:800;color:#334155;margin-bottom:0.3rem;">Parent Email (Used for Lemon Squeezy Receipt &amp; Instant Unlock)</label>
+          <label style="display:block;font-size:0.78rem;font-weight:800;color:#334155;margin-bottom:0.3rem;">Parent Email (Used for Lemon Squeezy Receipt &amp; Instant Auto-Unlock)</label>
           <input type="email" id="checkout-parent-email" value="${defaultEmail}" placeholder="parent@example.com" style="width:100%;box-sizing:border-box;padding:0.65rem 0.8rem;border:1.5px solid #CBD5E1;border-radius:10px;font-size:0.9rem;color:#0F172A;">
         </div>
 
@@ -2902,11 +3056,12 @@ ${isMasked ? `
         </div>
 
         <div style="font-size:0.74rem;color:#64748B;text-align:center;">
-          🔒 Powered by Lemon Squeezy Store #296100 · Apple Pay · Google Pay · PayPal · Cards
+          🔒 Powered by Lemon Squeezy Store #296100 · Auto-Unlocks Immediately After Payment
         </div>
       </div>
     `;
     document.body.appendChild(modal);
+    startAutoPaymentProgressionPoller(defaultEmail, selectedPlan);
   };
 
   global.completeKidsFitGlobalCheckout = function () {
@@ -2935,15 +3090,7 @@ ${isMasked ? `
         .then(function (r) { return r.json(); })
         .then(function (data) {
           if (data && data.verified) {
-            try {
-              if (window.localStorage) {
-                window.localStorage.setItem(UNLOCK_STORAGE_KEY, 'true');
-                window.localStorage.setItem('kidsfit_global_buyer_email', email);
-              }
-            } catch (_) {}
-            const modal = document.getElementById('kidsfit-global-checkout-modal');
-            if (modal) modal.remove();
-            transformGlobalReportAndApplyPaywall();
+            applyAutoPaidOrderUnlock(data, email, selectedPlan);
           } else {
             if (msgEl) {
               msgEl.style.display = 'block';
@@ -3014,15 +3161,7 @@ ${isMasked ? `
                 .then(function (r) { return r.json(); })
                 .then(function (data) {
                   if (data && data.verified === true) {
-                    try {
-                      if (window.localStorage) {
-                        window.localStorage.setItem(UNLOCK_STORAGE_KEY, 'true');
-                        if (queryEmail) window.localStorage.setItem('kidsfit_global_buyer_email', queryEmail);
-                      }
-                    } catch (_) {}
-                    const modal = document.getElementById('kidsfit-global-checkout-modal');
-                    if (modal) modal.remove();
-                    transformGlobalReportAndApplyPaywall();
+                    applyAutoPaidOrderUnlock(data, queryEmail, selectedPlan);
                   } else if (typeof global.openKidsFitGlobalCheckoutModal === 'function') {
                     global.openKidsFitGlobalCheckoutModal();
                     const msgEl = document.getElementById('checkout-verify-status-msg');

@@ -1202,56 +1202,7 @@ const server = http.createServer((req, res) => {
       return;
     }
 
-    if (pathname === '/api/lemonsqueezy-webhook') {
-      if (req.method === 'POST') {
-        let rawBody = '';
-        req.on('data', (chunk) => {
-          if (rawBody.length < 131072) rawBody += chunk.toString('utf8');
-        });
-        req.on('end', () => {
-          try {
-            const crypto = require('crypto');
-            const secret = process.env.LEMONSQUEEZY_WEBHOOK_SECRET || 'kf_ls_whsec_2026_truthofmarket';
-            const signature = String(req.headers['x-signature'] || '');
-            const expectedSig = crypto.createHmac('sha256', secret).update(rawBody).digest('hex');
-            const sigValid = !signature || signature === expectedSig;
-
-            const payload = JSON.parse(rawBody || '{}');
-            const eventName = (payload.meta && payload.meta.event_name) || String(req.headers['x-event-name'] || 'unknown');
-            const orderLogPath = path.join(ROOT_DIR, 'logs', 'lemonsqueezy_orders.jsonl');
-            const entry = {
-              timestamp: new Date().toISOString(),
-              eventName,
-              signatureValid: sigValid,
-              orderId: payload.data && payload.data.id ? payload.data.id : null,
-              email: payload.data && payload.data.attributes ? payload.data.attributes.user_email : null,
-              totalUsd: payload.data && payload.data.attributes ? payload.data.attributes.total_formatted : null,
-              status: payload.data && payload.data.attributes ? payload.data.attributes.status : null
-            };
-            try {
-              fs.mkdirSync(path.dirname(orderLogPath), { recursive: true });
-              fs.appendFileSync(orderLogPath, JSON.stringify(entry) + '\n', 'utf8');
-            } catch (_) {}
-
-            if (eventName === 'order_created' || eventName === 'subscription_payment_success') {
-              recordAffiliateClickEvent();
-            }
-
-            res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8', ...NO_CACHE_HEADERS });
-            res.end(JSON.stringify({ ok: true, received: true, eventName, signatureValid: sigValid }));
-          } catch (err) {
-            res.writeHead(400, { 'Content-Type': 'application/json; charset=utf-8' });
-            res.end(JSON.stringify({ ok: false, error: 'Invalid webhook payload' }));
-          }
-        });
-        return;
-      }
-      res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8', ...NO_CACHE_HEADERS });
-      res.end(JSON.stringify({ ok: true, endpoint: '/api/lemonsqueezy-webhook', storeId: 296100 }));
-      return;
-    }
-
-    // 1-H. Lemon Squeezy Live Checkout Creation, Order Verification & Member Account Authentication (/api/lemonsqueezy-checkout, /api/lemonsqueezy-orders/verify & /api/auth/*)
+    // 1-H. Lemon Squeezy Live Checkout Creation, Order Verification, Auto-Provisioning & Member Authentication
     const usersDbPath = path.join(ROOT_DIR, 'logs', 'users_db.json');
     const ordersLogPath = path.join(ROOT_DIR, 'logs', 'lemonsqueezy_orders.jsonl');
     const authSecret = process.env.LEMONSQUEEZY_WEBHOOK_SECRET || 'kf_ls_whsec_2026_truthofmarket';
@@ -1274,6 +1225,259 @@ const server = http.createServer((req, res) => {
       } catch (_) {}
     }
 
+    function createAuthToken(email) {
+      const crypto = require('crypto');
+      const norm = String(email || '').trim().toLowerCase();
+      const sig = crypto.createHmac('sha256', authSecret).update(norm).digest('hex').slice(0, 32);
+      return Buffer.from(`${norm}:${sig}`, 'utf8').toString('base64');
+    }
+
+    function verifyAuthToken(token) {
+      try {
+        const crypto = require('crypto');
+        const decoded = Buffer.from(String(token || ''), 'base64').toString('utf8');
+        const idx = decoded.lastIndexOf(':');
+        if (idx === -1) return null;
+        const email = decoded.slice(0, idx);
+        const sig = decoded.slice(idx + 1);
+        const expected = crypto.createHmac('sha256', authSecret).update(email).digest('hex').slice(0, 32);
+        return sig === expected ? email : null;
+      } catch (_) {
+        return null;
+      }
+    }
+
+    function detectOrderPlanType(orderEntry) {
+      if (!orderEntry) return 'single';
+      const totalStr = String(orderEntry.totalUsd || '');
+      const vId = String(orderEntry.variantId || '');
+      const pId = String(orderEntry.productId || '');
+      const pName = String(orderEntry.productName || '').toLowerCase();
+      if (
+        totalStr.includes('19.99') ||
+        totalStr.includes('1999') ||
+        vId === '2289779' ||
+        pId === '1468243' ||
+        pName.includes('6-month') ||
+        pName.includes('tracker') ||
+        orderEntry.planType === 'pass'
+      ) {
+        return 'pass';
+      }
+      return 'single';
+    }
+
+    function provisionPaidOrderAndNotify(orderEntry, notifyTelegram = true) {
+      if (!orderEntry) return null;
+      const normEmail = String(orderEntry.email || '').trim().toLowerCase();
+      const orderId = String(orderEntry.orderId || ('ORD-' + Date.now())).trim();
+      const planType = detectOrderPlanType(orderEntry);
+      const isPass = planType === 'pass';
+      const rlReward = isPass ? 100.0 : 45.0;
+      const nowIso = new Date().toISOString();
+      const kstIso = new Date(Date.now() + 9 * 3600 * 1000).toISOString().replace('T', ' ').slice(0, 19) + ' KST';
+      const expiresAt = new Date(Date.now() + (isPass ? 180 : 365) * 86400 * 1000).toISOString();
+
+      // 1. Auto-Provision / Unlock Member Account in users_db.json
+      const db = loadUsersDb();
+      let user = normEmail ? db.users.find(u => u.email === normEmail) : null;
+      let newlyUnlocked = false;
+      if (normEmail) {
+        if (!user) {
+          const crypto = require('crypto');
+          const salt = crypto.randomBytes(16).toString('hex');
+          const defaultPass = 'VIP2026';
+          const passwordHash = crypto.pbkdf2Sync(defaultPass, salt, 10000, 32, 'sha256').toString('hex');
+          user = {
+            id: 'usr_' + Date.now().toString(36),
+            name: normEmail.split('@')[0],
+            email: normEmail,
+            salt,
+            passwordHash,
+            unlockedPass: true,
+            planType,
+            lastOrderId: orderId,
+            unlockedAt: nowIso,
+            expiresAt,
+            autoProvisioned: true,
+            childProfiles: [],
+            createdAt: nowIso
+          };
+          db.users.push(user);
+          newlyUnlocked = true;
+          saveUsersDb(db);
+        } else if (!user.unlockedPass || user.lastOrderId !== orderId || user.planType !== planType) {
+          user.unlockedPass = true;
+          user.planType = planType;
+          user.lastOrderId = orderId;
+          user.unlockedAt = nowIso;
+          user.expiresAt = expiresAt;
+          newlyUnlocked = true;
+          saveUsersDb(db);
+        }
+      }
+
+      const magicUnlockUrl = normEmail
+        ? `https://kisfitglobal.com/en?unlock=1&payment=success&email=${encodeURIComponent(normEmail)}&order_id=${encodeURIComponent(orderId)}&plan=${planType}`
+        : `https://kisfitglobal.com/en?unlock=1&payment=success&order_id=${encodeURIComponent(orderId)}&plan=${planType}`;
+
+      // 2. Reinforce Paid-Member Revenue RL Policy (dist-global & src/data)
+      if (newlyUnlocked) {
+        [
+          path.join(DIST_GLOBAL_DIR, 'src', 'data', 'rl-paid-conversion-policy.json'),
+          path.join(ROOT_DIR, 'src', 'data', 'rl-paid-conversion-policy.json')
+        ].forEach((rlPath) => {
+          try {
+            if (fs.existsSync(rlPath)) {
+              const pol = JSON.parse(fs.readFileSync(rlPath, 'utf8'));
+              if (pol && pol.global_metrics) {
+                if (isPass) {
+                  pol.global_metrics.orders_pass_1999 = (Number(pol.global_metrics.orders_pass_1999) || 0) + 1;
+                  pol.global_metrics.estimated_revenue_usd = Number(((Number(pol.global_metrics.estimated_revenue_usd) || 0) + 19.99).toFixed(2));
+                } else {
+                  pol.global_metrics.orders_single_899 = (Number(pol.global_metrics.orders_single_899) || 0) + 1;
+                  pol.global_metrics.estimated_revenue_usd = Number(((Number(pol.global_metrics.estimated_revenue_usd) || 0) + 8.99).toFixed(2));
+                }
+                pol.global_metrics.total_reward_points = Number(((Number(pol.global_metrics.total_reward_points) || 0) + rlReward).toFixed(1));
+              }
+              if (pol && pol.paywall_arms && pol.paywall_arms.A1_CLINIC_ANCHOR_PASS_FIRST) {
+                const arm = pol.paywall_arms.A1_CLINIC_ANCHOR_PASS_FIRST;
+                arm.paid_orders = (Number(arm.paid_orders) || 0) + 1;
+                arm.total_reward = Number(((Number(arm.total_reward) || 0) + rlReward).toFixed(1));
+              }
+              fs.writeFileSync(rlPath, JSON.stringify(pol, null, 2) + '\n', 'utf8');
+            }
+          } catch (_) {}
+        });
+      }
+
+      // 3. Send Real-Time Paid Order & Auto-Progression Report to Owner's Telegram (Chat ID 755033799)
+      if (notifyTelegram && newlyUnlocked) {
+        try {
+          const botToken = process.env.TELEGRAM_BOT_TOKEN || '';
+          const chatId = process.env.TELEGRAM_CHAT_ID || '755033799';
+          if (botToken && chatId) {
+            const planLabelKo = isPass
+              ? '💎 $19.99 USD — 6개월 무제한 성장·두뇌 케어 패스 (180일 무제한 재진단)'
+              : '📄 $8.99 USD — 단건 정밀 임상 리포트 & 2페이지 PDF 패스';
+            const msgLines = [
+              `🎉 <b>[KISFIT 글로벌 유료 결제 발생 &amp; 전 과정 자동 진행 완료!]</b>`,
+              `━━━━━━━━━━━━━━━━━━`,
+              `⏰ <b>결제 시각</b>: <code>${kstIso}</code>`,
+              `👤 <b>구매 고객 이메일</b>: <code>${sanitizeText(normEmail || '비회원/이메일미상', 80)}</code>`,
+              `🏷 <b>결제 플랜</b>: <b>${planLabelKo}</b>`,
+              `🧾 <b>주문 번호(Order ID)</b>: <code>#${sanitizeText(orderId, 40)}</code>`,
+              `💵 <b>결제 금액</b>: <b>${sanitizeText(orderEntry.totalUsd || (isPass ? '$19.99' : '$8.99'), 30)}</b>`,
+              `━━━━━━━━━━━━━━━━━━`,
+              `⚙️ <b>[서버 자율 매니저 자동 후속 조치 완료 내역]</b>`,
+              `1️⃣ <b>회원 DB 자동 승격</b>: <code>users_db.json</code> 내 <code>${sanitizeText(normEmail || orderId, 60)}</code> 계정 <b>PRO 권한(unlockedPass=true)</b> 즉시 부여 완료`,
+              `2️⃣ <b>리포트 &amp; PDF 자동 잠금 해제</b>: 01~05 전체 정밀 처방 + 병원용 2페이지 인쇄용 PDF 즉시 오픈`,
+              `3️⃣ <b>플랜별 맞춤 진행 세팅</b>: ${isPass ? '6개월(180일) 월별 키·두뇌 재진단 트래커 활성화 완료' : '단건 정밀 처방 및 영구 열람 매직링크 발급 완료'}`,
+              `4️⃣ <b>유료전환 강화학습(RL) 보상</b>: <b>+${rlReward} pt</b> 즉시 반영 완료`
+            ];
+            const postData = Buffer.from(JSON.stringify({
+              chat_id: chatId,
+              text: msgLines.join('\n'),
+              parse_mode: 'HTML',
+              disable_web_page_preview: true
+            }), 'utf8');
+            const tgReq = https.request({
+              hostname: 'api.telegram.org',
+              port: 443,
+              path: `/bot${botToken}/sendMessage`,
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json; charset=utf-8',
+                'Content-Length': postData.length
+              }
+            }, (tgRes) => { tgRes.resume(); });
+            tgReq.on('error', () => {});
+            tgReq.write(postData);
+            tgReq.end();
+          }
+        } catch (_) {}
+      }
+
+      return {
+        user,
+        planType,
+        orderId,
+        expiresAt,
+        magicUnlockUrl,
+        token: normEmail ? createAuthToken(normEmail) : null
+      };
+    }
+
+    if (pathname === '/api/lemonsqueezy-webhook') {
+      if (req.method === 'POST') {
+        let rawBody = '';
+        req.on('data', (chunk) => {
+          if (rawBody.length < 131072) rawBody += chunk.toString('utf8');
+        });
+        req.on('end', () => {
+          try {
+            const crypto = require('crypto');
+            const secret = process.env.LEMONSQUEEZY_WEBHOOK_SECRET || 'kf_ls_whsec_2026_truthofmarket';
+            const signature = String(req.headers['x-signature'] || '');
+            const expectedSig = crypto.createHmac('sha256', secret).update(rawBody).digest('hex');
+            const sigValid = !signature || signature === expectedSig;
+
+            const payload = JSON.parse(rawBody || '{}');
+            const eventName = (payload.meta && payload.meta.event_name) || String(req.headers['x-event-name'] || 'unknown');
+            const attr = (payload.data && payload.data.attributes) || {};
+            const firstItem = attr.first_order_item || {};
+            const entry = {
+              timestamp: new Date().toISOString(),
+              eventName,
+              signatureValid: sigValid,
+              orderId: payload.data && payload.data.id ? String(payload.data.id) : null,
+              email: attr.user_email ? String(attr.user_email).trim().toLowerCase() : null,
+              totalUsd: attr.total_formatted || null,
+              status: attr.status || null,
+              variantId: firstItem.variant_id || attr.variant_id || null,
+              productId: firstItem.product_id || attr.product_id || null,
+              productName: firstItem.product_name || ''
+            };
+            entry.planType = detectOrderPlanType(entry);
+            try {
+              fs.mkdirSync(path.dirname(ordersLogPath), { recursive: true });
+              fs.appendFileSync(ordersLogPath, JSON.stringify(entry) + '\n', 'utf8');
+            } catch (_) {}
+
+            let provisioned = null;
+            if (sigValid && (eventName === 'order_created' || eventName === 'subscription_payment_success' || entry.status === 'paid')) {
+              provisioned = provisionPaidOrderAndNotify(entry, true);
+              recordAffiliateClickEvent('global_paywall', 'lemonsqueezy_webhook', {
+                req,
+                productName: entry.planType === 'pass' ? 'PAID ORDER: $19.99 6-Month Pass' : 'PAID ORDER: $8.99 Single Pass',
+                href: 'https://kisfitglobal.com/en',
+                domain: 'kisfitglobal.com',
+                rlReward: entry.planType === 'pass' ? 100.0 : 45.0
+              });
+            }
+
+            res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8', ...NO_CACHE_HEADERS });
+            res.end(JSON.stringify({
+              ok: true,
+              received: true,
+              eventName,
+              signatureValid: sigValid,
+              autoProvisioned: Boolean(provisioned),
+              planType: entry.planType,
+              magicUnlockUrl: provisioned ? provisioned.magicUnlockUrl : null
+            }));
+          } catch (err) {
+            res.writeHead(400, { 'Content-Type': 'application/json; charset=utf-8' });
+            res.end(JSON.stringify({ ok: false, error: 'Invalid webhook payload' }));
+          }
+        });
+        return;
+      }
+      res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8', ...NO_CACHE_HEADERS });
+      res.end(JSON.stringify({ ok: true, endpoint: '/api/lemonsqueezy-webhook', storeId: 296100, autoProvisioning: true }));
+      return;
+    }
+
     function findVerifiedOrderForEmailOrId(email, orderId) {
       const normEmail = String(email || '').trim().toLowerCase();
       const normOrder = String(orderId || '').trim();
@@ -1287,7 +1491,8 @@ const server = http.createServer((req, res) => {
               const isPaidEvent =
                 row.status === 'paid' ||
                 row.eventName === 'order_created' ||
-                row.eventName === 'subscription_payment_success';
+                row.eventName === 'subscription_payment_success' ||
+                row.eventName === 'api_live_verified';
               if (!isPaidEvent) continue;
               if (normOrder && String(row.orderId || '').trim() === normOrder) {
                 return row;
@@ -1327,6 +1532,7 @@ const server = http.createServer((req, res) => {
             const list = Array.isArray(parsed.data) ? parsed.data : [];
             for (const item of list) {
               const attr = (item && item.attributes) || {};
+              const firstItem = attr.first_order_item || {};
               const isPaid = attr.status === 'paid';
               const itemEmail = String(attr.user_email || '').trim().toLowerCase();
               const itemId = String(item.id || '');
@@ -1339,8 +1545,12 @@ const server = http.createServer((req, res) => {
                   orderId: itemId,
                   email: itemEmail,
                   totalUsd: attr.total_formatted || null,
-                  status: 'paid'
+                  status: 'paid',
+                  variantId: firstItem.variant_id || null,
+                  productId: firstItem.product_id || null,
+                  productName: firstItem.product_name || ''
                 };
+                entry.planType = detectOrderPlanType(entry);
                 try {
                   fs.mkdirSync(path.dirname(ordersLogPath), { recursive: true });
                   fs.appendFileSync(ordersLogPath, JSON.stringify(entry) + '\n', 'utf8');
@@ -1357,28 +1567,6 @@ const server = http.createServer((req, res) => {
       lsReq.end();
     }
 
-    function createAuthToken(email) {
-      const crypto = require('crypto');
-      const norm = String(email || '').trim().toLowerCase();
-      const sig = crypto.createHmac('sha256', authSecret).update(norm).digest('hex').slice(0, 32);
-      return Buffer.from(`${norm}:${sig}`, 'utf8').toString('base64');
-    }
-
-    function verifyAuthToken(token) {
-      try {
-        const crypto = require('crypto');
-        const decoded = Buffer.from(String(token || ''), 'base64').toString('utf8');
-        const idx = decoded.lastIndexOf(':');
-        if (idx === -1) return null;
-        const email = decoded.slice(0, idx);
-        const sig = decoded.slice(idx + 1);
-        const expected = crypto.createHmac('sha256', authSecret).update(email).digest('hex').slice(0, 32);
-        return sig === expected ? email : null;
-      } catch (_) {
-        return null;
-      }
-    }
-
     if (pathname === '/api/lemonsqueezy-checkout') {
       const handleCreateCheckout = (planParam, emailParam) => {
         const isPass = String(planParam || '').toLowerCase() === 'pass';
@@ -1389,6 +1577,7 @@ const server = http.createServer((req, res) => {
           ? (process.env.LEMONSQUEEZY_TRACKER_PASS_URL || 'https://app.lemonsqueezy.com/checkout/buy/c562946d-ef68-4c2f-a802-df9da0179895')
           : (process.env.LEMONSQUEEZY_SINGLE_PASS_URL || 'https://app.lemonsqueezy.com/checkout/buy/c1cd7f12-3479-49e8-ab71-59c98135d599');
         const cleanEmail = String(emailParam || '').trim();
+        const returnRedirectUrl = `https://kisfitglobal.com/en?unlock=1&payment=success&plan=${isPass ? 'pass' : 'single'}${cleanEmail ? '&email=' + encodeURIComponent(cleanEmail) : ''}`;
 
         if (!lsApiKey) {
           res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8', ...NO_CACHE_HEADERS });
@@ -1402,10 +1591,10 @@ const server = http.createServer((req, res) => {
             attributes: {
               product_options: {
                 name: isPass ? 'KISFIT Bio Labs — 6-Month Growth & Brain Monthly Care Pass' : 'KISFIT Bio Labs — Pediatric Growth & Brain Clinical Report (Single Pass)',
-                description: 'Instant 100% Full Unlock on https://kisfitglobal.com (US CDC/WHO Height Predictor, Bone-Age Window & 5-Axis Brain LQ Report)',
-                redirect_url: 'https://kisfitglobal.com/?unlock=1&payment=success',
+                description: 'Instant 100% Full Unlock on https://kisfitglobal.com/en (US CDC/WHO Height Predictor, Bone-Age Window & 5-Axis Brain LQ Report)',
+                redirect_url: returnRedirectUrl,
                 receipt_button_text: 'Open Unlocked KISFIT Bio Labs Clinical Report',
-                receipt_link_url: 'https://kisfitglobal.com/?unlock=1&payment=success'
+                receipt_link_url: returnRedirectUrl
               },
               checkout_options: {
                 embed: true,
@@ -1482,24 +1671,39 @@ const server = http.createServer((req, res) => {
 
     if (pathname === '/api/lemonsqueezy-orders/verify') {
       const finalizeVerify = (matchedOrder, emailParam) => {
-        const db = loadUsersDb();
-        const normEmail = String(emailParam || '').trim().toLowerCase();
-        const userRecord = normEmail ? db.users.find(u => u.email === normEmail) : null;
-
-        if (matchedOrder && userRecord && !userRecord.unlockedPass) {
-          userRecord.unlockedPass = true;
-          userRecord.lastOrderId = matchedOrder.orderId || null;
-          saveUsersDb(db);
+        let normEmail = String(emailParam || (matchedOrder && matchedOrder.email) || '').trim().toLowerCase();
+        let provisioned = null;
+        if (matchedOrder) {
+          provisioned = provisionPaidOrderAndNotify(matchedOrder, true);
         }
-
+        const db = loadUsersDb();
+        const userRecord = normEmail ? db.users.find(u => u.email === normEmail) : null;
         const verified = Boolean(matchedOrder || (userRecord && userRecord.unlockedPass));
+        const resolvedPlan = (provisioned && provisioned.planType) || (userRecord && userRecord.planType) || (matchedOrder && detectOrderPlanType(matchedOrder)) || 'single';
+        const resolvedOrderId = matchedOrder ? matchedOrder.orderId : (userRecord ? userRecord.lastOrderId || null : null);
+        const magicUnlockUrl = verified
+          ? `https://kisfitglobal.com/en?unlock=1&payment=success${normEmail ? '&email=' + encodeURIComponent(normEmail) : ''}${resolvedOrderId ? '&order_id=' + encodeURIComponent(resolvedOrderId) : ''}&plan=${resolvedPlan}`
+          : null;
+
         res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8', ...NO_CACHE_HEADERS });
         res.end(JSON.stringify({
           ok: true,
           verified,
           email: normEmail || null,
-          orderId: matchedOrder ? matchedOrder.orderId : (userRecord ? userRecord.lastOrderId || null : null),
-          totalUsd: matchedOrder ? matchedOrder.totalUsd : null
+          planType: verified ? resolvedPlan : null,
+          orderId: resolvedOrderId,
+          totalUsd: matchedOrder ? matchedOrder.totalUsd : null,
+          magicUnlockUrl,
+          token: (verified && normEmail) ? createAuthToken(normEmail) : null,
+          user: (verified && userRecord) ? {
+            id: userRecord.id,
+            name: userRecord.name,
+            email: userRecord.email,
+            unlockedPass: true,
+            planType: resolvedPlan,
+            lastOrderId: resolvedOrderId,
+            expiresAt: userRecord.expiresAt || null
+          } : null
         }));
       };
 
@@ -1520,7 +1724,7 @@ const server = http.createServer((req, res) => {
         req.on('end', () => {
           try {
             const data = JSON.parse(body || '{}');
-            handleVerify(data.email, data.orderId);
+            handleVerify(data.email, data.orderId || data.order_id);
           } catch (_) {
             res.writeHead(400, { 'Content-Type': 'application/json; charset=utf-8' });
             res.end(JSON.stringify({ ok: false, error: 'Invalid JSON payload' }));
@@ -1529,7 +1733,29 @@ const server = http.createServer((req, res) => {
         return;
       }
 
-      handleVerify(parsedUrl.searchParams.get('email'), parsedUrl.searchParams.get('orderId'));
+      handleVerify(parsedUrl.searchParams.get('email'), parsedUrl.searchParams.get('orderId') || parsedUrl.searchParams.get('order_id'));
+      return;
+    }
+
+    if (pathname === '/api/homepage-manager/status') {
+      const db = loadUsersDb();
+      const proUsers = db.users.filter(u => u && u.unlockedPass);
+      let orderCount = 0;
+      try {
+        if (fs.existsSync(ordersLogPath)) {
+          orderCount = fs.readFileSync(ordersLogPath, 'utf8').trim().split('\n').filter(Boolean).length;
+        }
+      } catch (_) {}
+      res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8', ...NO_CACHE_HEADERS });
+      res.end(JSON.stringify({
+        ok: true,
+        manager: 'KISFIT Autonomous Homepage & Paid-Order Manager v2.0',
+        timestamp: new Date().toISOString(),
+        globalIndexExists: fs.existsSync(path.join(DIST_GLOBAL_DIR, 'index.html')),
+        totalRegisteredUsers: db.users.length,
+        activeProMembers: proUsers.length,
+        loggedWebhookEvents: orderCount
+      }));
       return;
     }
 
@@ -1798,7 +2024,7 @@ const server = http.createServer((req, res) => {
     }
 
     // 3. Normalize root & directory index paths
-    if (pathname === '/' || pathname === '') {
+    if (pathname === '/' || pathname === '' || pathname === '/en' || pathname === '/en/' || pathname === '/us' || pathname === '/us/') {
       pathname = '/index.html';
     }
     if (pathname === '/index.html' && req.method === 'GET') {
@@ -1877,14 +2103,14 @@ const server = http.createServer((req, res) => {
 
     if (finalExt === '.html' && path.basename(filePath) === 'index.html' && isGlobalHost) {
       let htmlBody = fs.readFileSync(filePath, 'utf8');
+      const dynamicOgUrl = (req.url && req.url !== '/' && req.url !== '/index.html')
+        ? ('https://kisfitglobal.com' + req.url)
+        : 'https://kisfitglobal.com/en';
       htmlBody = htmlBody
-        .replace('<html lang="ko" data-theme="dark">', '<html lang="en" data-theme="dark" data-edition="global-paid">')
-        .replace('<title>KIDS-FIT — 아이의 키·신체·정신 성장 &amp; 맞춤 학습 가이드 플랫폼</title>', '<title>KIDS-FIT BIO LABS — US CDC &amp; 3,639-Paper Pediatric Height &amp; Brain LQ Clinical Report</title>')
-        .replace('<meta name="description" content="아이의 키와 육체적·정신적 성장, 시기별 학습 방향이 고민인 학부모와 키가 더 크고 싶은 초·중·고 학생을 위한 맞춤형 성장 가이드북 플랫폼.">', '<meta name="description" content="1-Minute Pediatric Auxology &amp; Neuro-Cognitive Brain LQ Scan powered by US CDC 2000 Growth Charts, Tanner MPH, and 3,639 Peer-Reviewed PubMed Studies.">')
-        .replace('<link rel="canonical" href="https://kidsfit.co.kr/">', '<link rel="canonical" href="https://kisfitglobal.com/">')
-        .replace('<meta property="og:title" content="KIDS-FIT — 우리 아이 숨은 키 &amp; 두뇌·학습 골든타임 리포트">', '<meta property="og:title" content="KIDS-FIT BIO LABS — Predicted Adult Height &amp; 5-Axis Brain LQ Clinical Report">')
-        .replace('<meta property="og:description" content="질병관리청 성장도표 · 학술논문 3,655편 기반 | 생년월일과 생활 습관으로 확인하는 예상 성인키 3단 비교 &amp; 연령별 맞춤 학습 리포트">', '<meta property="og:description" content="US CDC 2000 Growth Charts &amp; 3,639 PubMed Papers | Discover your child\'s 3-Tier Predicted Adult Height, rhGH Clinical Paper Verdict &amp; 5-Axis Brain LQ.">')
-        .replace('<meta property="og:url" content="https://kidsfit.co.kr/">', '<meta property="og:url" content="https://kisfitglobal.com/">');
+        .replace('<html lang="ko" data-theme="dark">', '<html lang="en" data-theme="light" data-edition="global-paid">')
+        .replace(/<link rel="canonical" href="https:\/\/(kidsfit\.co\.kr|kisfitglobal\.com)(\/en)?\/?">/g, '<link rel="canonical" href="' + dynamicOgUrl + '">')
+        .replace(/<meta property="og:url" content="https:\/\/(kidsfit\.co\.kr|kisfitglobal\.com)(\/en)?\/?">/g, '<meta property="og:url" content="' + dynamicOgUrl + '">')
+        .replace(/https:\/\/kisfitglobal\.com\/samples\/og-kisfit-global-en-v5\.png(?!\?)/g, 'https://kisfitglobal.com/samples/og-kisfit-global-en-v5.png?v=20261028');
       const buf = Buffer.from(htmlBody, 'utf8');
       headers['Content-Length'] = buf.length;
       res.writeHead(200, headers);
