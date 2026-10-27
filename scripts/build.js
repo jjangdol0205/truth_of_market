@@ -124,7 +124,11 @@ function build() {
   }
 
   // Copy robots.txt, sitemap.xml, rss.xml, feed.json, llms.txt, llms-full.txt, manifest.json, and sw.js if they exist (with EBUSY retry)
-  ['robots.txt', 'sitemap.xml', 'rss.xml', 'feed.json', 'llms.txt', 'llms-full.txt', 'manifest.json', 'sw.js', 'bb7865143f912a88c04d31d3921a0988.txt'].forEach((file) => {
+  ['robots.txt', 'sitemap.xml', 'rss.xml', 'feed.json', 'llms.txt', 'llms-full.txt', 'manifest.json', 'sw.js', 'bb7865143f912a88c04d31d3921a0988.txt',
+    'about.html',
+    'privacy.html',
+    'terms.html',
+    'contact.html'].forEach((file) => {
     const fPath = path.join(ROOT_DIR, file);
     if (fs.existsSync(fPath)) {
       for (let attempt = 0; attempt < 5; attempt++) {
