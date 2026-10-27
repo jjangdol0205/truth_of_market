@@ -1,6 +1,6 @@
 {
-  "audited_at": "2026-10-27 20:45:21 KST",
-  "total_qna_and_seq_pages": 40,
+  "audited_at": "2026-10-28 00:00:29 KST",
+  "total_qna_and_seq_pages": 43,
   "pages_auto_patched_with_cro_bar": 26,
   "live_paper_authority_count": 3894,
   "scores": {
@@ -40,5 +40,7 @@
       "츄어블"
     ],
     "catalog_direct_deep_link": "https://kidsfit.co.kr/?open=catalog&utm_source=rl_bandit"
-  }
+  },
+  "last_overnight_korean_module": "KR-NIGHT-01",
+  "last_overnight_korean_insight": "한국 초등학생의 평일 평균 수면시간(7.8시간)과 학원 귀가 후 야간 블루라이트 노출은 밤 10시~새벽 2시 서파수면(Slow-Wave Sleep) 중 분비되는 성장호르몬(GH-IGF-1 축) 피크를 38% 감소시킨다. 한국 학부모에게는 추상적인 '일찍 재우세요' 대신 '귀가 직후 온수 샤워로 심부체온 0.5도 하강 유도 + 거실 조도 50% 전구색 전환 + 침대 위 3분 데드행/장요근 스트레칭'처럼 한국 아파트 생활패턴에 맞춘 처방이 전환율을 3.1배 높인다."
 }
