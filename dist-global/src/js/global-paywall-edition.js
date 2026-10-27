@@ -2230,6 +2230,15 @@ ${isMasked ? `
         <button type="button" onclick="if(window.triggerKidsFitGlobalPrint){window.triggerKidsFitGlobalPrint();}else{window.print();}" style="background:#059669;color:#FFFFFF;border:none;border-radius:9999px;padding:0.42rem 0.95rem;font-size:0.82rem;font-weight:800;cursor:pointer;">
           Download / Print Clinical PDF Report
         </button>
+        <div id="kidsfit-viral-share-bar" style="background:#F8FAFC;border:1.5px solid #93C5FD;border-radius:12px;padding:0.7rem 0.9rem;margin-top:0.75rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;">
+          <span style="font-size:0.79rem;font-weight:800;color:#1E3A8A;">📲 Know another parent? Share this free 60-sec US CDC Height &amp; Brain LQ Scan:</span>
+          <div style="display:flex;align-items:center;gap:0.4rem;flex-wrap:wrap;">
+            <button type="button" id="btn-kidsfit-share-native" onclick="window.shareKidsFitGlobalReport('native')" style="background:#1D4ED8;color:#FFFFFF;border:none;border-radius:8px;padding:0.36rem 0.72rem;font-size:0.75rem;font-weight:800;cursor:pointer;">📤 Share / Copy Link</button>
+            <button type="button" onclick="window.shareKidsFitGlobalReport('whatsapp')" style="background:#16A34A;color:#FFFFFF;border:none;border-radius:8px;padding:0.36rem 0.72rem;font-size:0.75rem;font-weight:800;cursor:pointer;">💬 WhatsApp</button>
+            <button type="button" onclick="window.shareKidsFitGlobalReport('sms')" style="background:#0F172A;color:#FFFFFF;border:none;border-radius:8px;padding:0.36rem 0.72rem;font-size:0.75rem;font-weight:800;cursor:pointer;">📱 iMessage / SMS</button>
+            <button type="button" onclick="window.shareKidsFitGlobalReport('x')" style="background:#334155;color:#FFFFFF;border:none;border-radius:8px;padding:0.36rem 0.72rem;font-size:0.75rem;font-weight:800;cursor:pointer;">𝕏 Post</button>
+          </div>
+        </div>
       `;
       const headerEl = card.querySelector('.briefing-header');
       if (headerEl && headerEl.nextSibling) {
@@ -2447,6 +2456,15 @@ ${isMasked ? `
             👤 Sign In / Verify Order →
           </button>
         </div>
+        <div id="kidsfit-viral-share-bar" style="background:#F8FAFC;border:1.5px solid #93C5FD;border-radius:12px;padding:0.7rem 0.9rem;margin-top:0.75rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;">
+          <span style="font-size:0.79rem;font-weight:800;color:#1E3A8A;">📲 Know another parent? Share this free 60-sec US CDC Height &amp; Brain LQ Scan:</span>
+          <div style="display:flex;align-items:center;gap:0.4rem;flex-wrap:wrap;">
+            <button type="button" id="btn-kidsfit-share-native" onclick="window.shareKidsFitGlobalReport('native')" style="background:#1D4ED8;color:#FFFFFF;border:none;border-radius:8px;padding:0.36rem 0.72rem;font-size:0.75rem;font-weight:800;cursor:pointer;">📤 Share / Copy Link</button>
+            <button type="button" onclick="window.shareKidsFitGlobalReport('whatsapp')" style="background:#16A34A;color:#FFFFFF;border:none;border-radius:8px;padding:0.36rem 0.72rem;font-size:0.75rem;font-weight:800;cursor:pointer;">💬 WhatsApp</button>
+            <button type="button" onclick="window.shareKidsFitGlobalReport('sms')" style="background:#0F172A;color:#FFFFFF;border:none;border-radius:8px;padding:0.36rem 0.72rem;font-size:0.75rem;font-weight:800;cursor:pointer;">📱 iMessage / SMS</button>
+            <button type="button" onclick="window.shareKidsFitGlobalReport('x')" style="background:#334155;color:#FFFFFF;border:none;border-radius:8px;padding:0.36rem 0.72rem;font-size:0.75rem;font-weight:800;cursor:pointer;">𝕏 Post</button>
+          </div>
+        </div>
       </div>
     `;
 
@@ -2600,6 +2618,59 @@ ${isMasked ? `
           </div>
         `;
       }
+    }
+  };
+
+
+  global.shareKidsFitGlobalReport = function (channel) {
+    const shareUrl = 'https://kisfitglobal.com/?utm_source=parent_share&utm_medium=' + encodeURIComponent(channel || 'native');
+    const shareTitle = 'KISFIT Bio Labs — 60-Sec US CDC Child Height Predictor & 5-Axis Brain LQ Scan';
+    const shareText = 'Check out this clinical 60-second US CDC 2000 Child Height Predictor & 5-Axis Brain Learning Quotient (LQ) scan (backed by 3,720+ peer-reviewed studies):';
+    try {
+      if (typeof window !== 'undefined' && typeof window.fetch === 'function') {
+        window.fetch('/api/visit', {
+          method: 'POST',
+          keepalive: true,
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            event: 'parent_viral_share',
+            category: 'viral_referral',
+            product_name: 'Parent 1-Tap Viral Share (' + (channel || 'native') + ')',
+            href: shareUrl,
+            domain: (window.location && window.location.hostname) || 'kisfitglobal.com'
+          })
+        }).catch(function () {});
+      }
+    } catch (_) {}
+
+    if (channel === 'whatsapp') {
+      const waUrl = 'https://api.whatsapp.com/send?text=' + encodeURIComponent(shareText + ' ' + shareUrl);
+      if (typeof window !== 'undefined' && window.open) window.open(waUrl, '_blank', 'noopener');
+      return;
+    }
+    if (channel === 'sms') {
+      const smsUrl = 'sms:?&body=' + encodeURIComponent(shareText + ' ' + shareUrl);
+      if (typeof window !== 'undefined' && window.location) window.location.href = smsUrl;
+      return;
+    }
+    if (channel === 'x') {
+      const xUrl = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(shareText) + '&url=' + encodeURIComponent(shareUrl);
+      if (typeof window !== 'undefined' && window.open) window.open(xUrl, '_blank', 'noopener');
+      return;
+    }
+    if (typeof navigator !== 'undefined' && typeof navigator.share === 'function') {
+      navigator.share({ title: shareTitle, text: shareText, url: shareUrl }).catch(function () {});
+      return;
+    }
+    if (typeof navigator !== 'undefined' && navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+      navigator.clipboard.writeText(shareText + ' ' + shareUrl).then(function () {
+        const btn = typeof document !== 'undefined' ? document.getElementById('btn-kidsfit-share-native') : null;
+        if (btn) {
+          const orig = btn.textContent;
+          btn.textContent = '✅ Link Copied!';
+          setTimeout(function () { btn.textContent = orig; }, 2500);
+        }
+      }).catch(function () {});
     }
   };
 
