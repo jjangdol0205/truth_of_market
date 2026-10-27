@@ -1682,7 +1682,9 @@ const server = http.createServer((req, res) => {
     }
 
     if (pathname === '/manifest.json' || pathname === '/manifest.webmanifest') {
-      const mfFile = resolveSafeFile(DIST_DIR, 'manifest.json') || resolveSafeFile(ROOT_DIR, 'manifest.json');
+      const reqHostMf = String(req.headers['x-forwarded-host'] || req.headers.host || '').toLowerCase();
+      const isGlobalMf = reqHostMf.includes('kisfitglobal.com') || reqHostMf.includes('kidsfitglobal.com');
+      const mfFile = (isGlobalMf && resolveSafeFile(DIST_GLOBAL_DIR, 'manifest.json')) || resolveSafeFile(DIST_DIR, 'manifest.json') || resolveSafeFile(ROOT_DIR, 'manifest.json');
       if (mfFile) {
         res.writeHead(200, {
           'Content-Type': 'application/manifest+json; charset=utf-8',

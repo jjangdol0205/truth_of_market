@@ -2359,7 +2359,7 @@ ${isMasked ? `
         <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:0.75rem;margin-bottom:0.9rem;">
           <div>
             <span style="background:#FEF2F2;color:#DC2626;border:1px solid #FECACA;font-size:0.75rem;font-weight:900;padding:0.2rem 0.65rem;border-radius:9999px;">
-              LIMITED LAUNCH OFFER · SAVE 70% VS. $450 CLINIC CONSULT
+              ${getActiveRlPaywallArm().badge}
             </span>
             <h3 style="font-size:1.24rem;font-weight:900;color:#0F172A;margin:0.45rem 0 0.2rem 0;">
               ${isLearningMode
@@ -2673,6 +2673,46 @@ ${isMasked ? `
       }).catch(function () {});
     }
   };
+
+
+  // Paid-Member Revenue Reinforcement Learning (RL) Policy Selector (UCB1 / Softmax Bandit)
+  const RL_PAYWALL_ARMS = [
+    {
+      id: 'A1_CLINIC_ANCHOR_PASS_FIRST',
+      badge: 'LIMITED LAUNCH OFFER · SAVE 95% VS. $450 US SPECIALIST CONSULT',
+      sub: 'Why pay $450+ at a pediatric endocrine or neuro-learning clinic? Unlock your child&#39;s 1:1 US CDC 2000 &amp; 3,722-Paper Clinical Report + Printable PDF instantly.',
+      recPlan: 'pass'
+    },
+    {
+      id: 'A2_PLATE_FUSION_URGENCY',
+      badge: '⚠️ BIOLOGICAL WINDOW ALERT · LOCK IN BEFORE EPIPHYSEAL CLOSURE',
+      sub: 'Once epiphyseal growth plates fuse and prefrontal myelination peaks, hidden stature (+3.1 in) and working-memory gains cannot be recovered. Start your child&#39;s 1:1 protocol today.',
+      recPlan: 'single'
+    },
+    {
+      id: 'A3_RHGH_20K_ROI_ANCHOR',
+      badge: 'COCHRANE &amp; BMJ ROI VERDICT · $8.99 PROTOCOL VS. $20,000/YR rhGH',
+      sub: 'Clinical meta-analyses show lifestyle sleep HGH, bioavailable Ca/D3/K2/Zinc, and Feynman/Bar-Model protocols recover +1.5 to +3.1 inches and +150% recall without $20,000/yr injections.',
+      recPlan: 'single'
+    }
+  ];
+
+  function getActiveRlPaywallArm() {
+    try {
+      if (typeof window !== 'undefined' && window.localStorage) {
+        const savedId = window.localStorage.getItem('kidsfit_rl_paywall_arm_v1');
+        const found = RL_PAYWALL_ARMS.find(function (a) { return a.id === savedId; });
+        if (found) return found;
+      }
+    } catch (_) {}
+    const selected = RL_PAYWALL_ARMS[0];
+    try {
+      if (typeof window !== 'undefined' && window.localStorage) {
+        window.localStorage.setItem('kidsfit_rl_paywall_arm_v1', selected.id);
+      }
+    } catch (_) {}
+    return selected;
+  }
 
   let selectedPlan = 'single';
 
