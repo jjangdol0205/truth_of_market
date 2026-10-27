@@ -1,5 +1,5 @@
 {
-  "audited_at": "2026-10-28 03:00:21 KST",
+  "audited_at": "2026-10-28 04:00:23 KST",
   "total_qna_and_seq_pages": 43,
   "pages_auto_patched_with_cro_bar": 26,
   "live_paper_authority_count": 3894,
@@ -17,14 +17,14 @@
     "STEPPS Viral Loop: 카톡·당근 동네생활·블라인드·다음카페 원클릭 공유 바 전 페이지 장착 완료"
   ],
   "coupang_rl_active_policy": {
-    "updated_at_kst": "2026-10-28 02:01:20 KST",
-    "episodes": 53,
+    "updated_at_kst": "2026-10-28 03:01:12 KST",
+    "episodes": 55,
     "winning_category_id": "growth_nutrition_repeat_cart",
     "winning_category_name": "식약처 인증 성장기 칼슘·비타민D·아르기닌·영양제 (반복구매+장바구니 효과 1위)",
-    "winning_category_ucb": 3.281,
+    "winning_category_ucb": 3.305,
     "winning_cta_id": "arm_rocket_review",
     "winning_cta_label": "🛒 쿠팡 로켓배송 최저가·실제 학부모 후기 확인 ↗",
-    "winning_cta_ucb": 2.212,
+    "winning_cta_ucb": 2.233,
     "priority_keywords": [
       "칼슘",
       "비타민D",
@@ -41,6 +41,6 @@
     ],
     "catalog_direct_deep_link": "https://kidsfit.co.kr/?open=catalog&utm_source=rl_bandit"
   },
-  "last_overnight_korean_module": "KR-NIGHT-04",
-  "last_overnight_korean_insight": "한국 아동의 국물·탄수화물 위주 식습관과 우유 과다 섭취(하루 600ml 이상 시 철분 흡수 저해)는 미각 세포 재생에 필수적인 아연(Zn)과 저장철(Ferritin) 결핍으로 이어져 밥 한 숟가락에 1시간 걸리는 악순환을 만든다. 위산 분비가 적은 소아에게는 탄산칼슘 대신 구연산·어골칼슘 + 비타민D3 + 마그네슘 배합 기준을 명확히 제시해야 구매 전환이 일어난다."
+  "last_overnight_korean_module": "KR-NIGHT-05",
+  "last_overnight_korean_insight": "만 2~6세 한국 영유아 부모들이 고가 전집이나 연령에 맞지 않는 교구를 일괄 구매했다가 당근마켓에 되파는 실패를 줄이려면, 아이의 현재 월령(생년월일 정밀 산출)과 소근육 삼지집기·시지각 단계에 맞춘 핀포인트 교구 1~2종만 추천하고 부모의 15분 하브루타 발문 가이드를 함께 제공해야 한다."
 }

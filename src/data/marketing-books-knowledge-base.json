@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-28 03:00:21 KST",
+  "updated_at": "2026-10-28 04:00:23 KST",
   "total_books_mastered": 8,
   "supplementary_research_count": 6,
   "books": [
@@ -400,6 +400,19 @@
       },
       "korean_perspective_insight": "한국 아동의 국물·탄수화물 위주 식습관과 우유 과다 섭취(하루 600ml 이상 시 철분 흡수 저해)는 미각 세포 재생에 필수적인 아연(Zn)과 저장철(Ferritin) 결핍으로 이어져 밥 한 숟가락에 1시간 걸리는 악순환을 만든다. 위산 분비가 적은 소아에게는 탄산칼슘 대신 구연산·어골칼슘 + 비타민D3 + 마그네슘 배합 기준을 명확히 제시해야 구매 전환이 일어난다.",
       "self_improvement_action": "영양 큐레이션 스펙 비교표(일반 탄산칼슘 vs 구연산/어골칼슘+D3) 및 Q&A 랜딩페이지 내부링크 클러스터 자동 보강"
+    },
+    {
+      "studied_at": "2026-10-28 04:00:23 KST",
+      "module_id": "KR-NIGHT-05",
+      "domain": "소근육·시지각 협응(K-DST) 및 전두엽 실행기능 교구·보드게임 중재 연구",
+      "book_title_ko": "보건복지부 K-DST 영유아 발달선별검사 해설서 & 가정 내 감각통합 놀이 코칭",
+      "reference_paper": {
+        "title": "The Effect of Collage Games on Fine Motor Skills and Creativity in Early Childhood",
+        "journal": "Jurnal Pendidikan Anak Usia Dini Undiksha",
+        "doi": "10.23887/paud.v14i1.97012"
+      },
+      "korean_perspective_insight": "만 2~6세 한국 영유아 부모들이 고가 전집이나 연령에 맞지 않는 교구를 일괄 구매했다가 당근마켓에 되파는 실패를 줄이려면, 아이의 현재 월령(생년월일 정밀 산출)과 소근육 삼지집기·시지각 단계에 맞춘 핀포인트 교구 1~2종만 추천하고 부모의 15분 하브루타 발문 가이드를 함께 제공해야 한다.",
+      "self_improvement_action": "연령별 프리셋(만 2~3세, 만 4~5세, 초등 저/고학년, 중등) 6단계 온보딩 위저드 및 맞춤 교구 서랍 UX 검증"
     }
   ]
 }
