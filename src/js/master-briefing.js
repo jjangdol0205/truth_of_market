@@ -2362,6 +2362,9 @@
             </div>
           ` : ''}
 
+          <!-- Monthly Micro-Cohort Detailed Analysis, 3-Step Solutions & Pinpoint Products (Growth) -->
+          ${PinpointCurator && typeof PinpointCurator.renderMonthlyMicroPrescriptionCard === 'function' ? PinpointCurator.renderMonthlyMicroPrescriptionCard(profile, 'growth') : ''}
+
           <!-- Hidden legacy live free-text input preserved in DOM for script safety -->
           <div style="display: none;">
             <input type="text" id="live-bespoke-note-input" value="${(bespokeNote.rawNote || '').replace(/"/g, '&quot;')}" />
@@ -2918,6 +2921,9 @@
               </div>
             ` : ''}
           </div>
+
+          <!-- ==================== MONTHLY MICRO-COHORT LEARNING ANALYSIS, SOLUTIONS & PINPOINT PRODUCTS ==================== -->
+          ${PinpointCurator && typeof PinpointCurator.renderMonthlyMicroPrescriptionCard === 'function' ? PinpointCurator.renderMonthlyMicroPrescriptionCard(profile, 'learning') : ''}
 
           <!-- ==================== SPECIALIZED LEARNING BOTTLENECK SPOTLIGHT ==================== -->
           ${bottleneckSpecializedLearningHtml}
