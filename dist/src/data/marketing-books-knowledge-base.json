@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-28 01:00:25 KST",
+  "updated_at": "2026-10-28 02:00:33 KST",
   "total_books_mastered": 8,
   "supplementary_research_count": 6,
   "books": [
@@ -374,6 +374,19 @@
       },
       "korean_perspective_insight": "한국 2022 개정 교육과정에서 서술형·논술형 평가 비중이 확대되면서 '단순 연산은 빠르지만 3줄 이상 문장제 수학에서 막히는 현상'이 초등 2~5학년 학부모의 최대 고민 키워드다. 이는 수학 지능 부족이 아니라 전두엽 작업기억(Working Memory) 버퍼 과부하 때문이며, 문제 여백에 조건 슬래시(/) 끊어 읽기와 수직선·막대그림 도식화(External Representation)를 적용하면 정답률이 즉시 개선된다.",
       "self_improvement_action": "두뇌·학습 리포트(Report 2) 및 2페이지 병원식 클리니컬 PDF 내 한국 교육과정 맞춤형 문장제·백지복습 처방 점검"
+    },
+    {
+      "studied_at": "2026-10-28 02:00:33 KST",
+      "module_id": "KR-NIGHT-03",
+      "domain": "한국 3040 학부모 온라인 마케팅 & 네이버 C-Rank/DIA+·지식iN·맘카페 전환 심리학",
+      "book_title_ko": "한국형 검색 의도(Search Intent) 마케팅 & 3040 학부모 커뮤니티 바이럴 플레이북",
+      "reference_paper": {
+        "title": "Human–Generative AI Collaboration in Digital Marketing: Its Impact on Consumer Trust, Purchase Intentions, and Financial Decision-Making",
+        "journal": "Journal of Intelligent Decision Making and Information Science",
+        "doi": "10.59543/jidmis.v3.642"
+      },
+      "korean_perspective_insight": "한국 3040 엄마·아빠는 광고성 문구에 즉각 방어기제를 작동시키지만, '질병관리청(KDCA) 2017 LMS 표준', '보건복지부 K-DST 월령별 발달지표', '거실 0원 놀이 선제시 후 부족한 2%만 채우는 스펙 비교표'에는 높은 신뢰를 보인다. 특히 카카오톡 인앱 브라우저와 네이버 모바일 뷰포트(360~430px)에서 첫 화면 3초 안에 거주 지역(서울 강남·서초·송파 등 국내 16개 권역)과 연령 프리셋이 즉시 매칭될 때 진단 완료율이 극대화된다.",
+      "self_improvement_action": "한국 16개 권역 프리셋·주말 나들이(마이리얼트립/클룩)·쿠팡(AF7865143)/예스24(A100708867) 스펙 비교 브릿지 무결성 점검"
     }
   ]
 }
