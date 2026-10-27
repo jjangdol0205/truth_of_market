@@ -3263,7 +3263,14 @@
                 <div style="font-size: 0.79rem; color: #475569; line-height: 1.35;">
                   ${tk.ageSpecificGuide}
                 </div>
-
+                <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.35rem; margin-top: 0.15rem;">
+                  <a href="${tk.myrealtripUrl || tk.klookUrl}" target="_blank" rel="noopener sponsored" class="pinpoint-direct-link mobile-touch-btn" data-merchant="myrealtrip" data-product-id="${tk.id}" data-product-category="learning" style="display: flex; min-height: 36px; align-items: center; justify-content: center; background: #EFF6FF; border: 1px solid #BFDBFE; color: #1D4ED8; font-size: 0.78rem; font-weight: 800; padding: 0.3rem 0.5rem; border-radius: 8px; text-decoration: none; text-align: center;">
+                    🎟️ 최저가 티켓·체험권 확인하기 →
+                  </a>
+                  <a href="${tk.klookUrl || tk.myrealtripUrl}" target="_blank" rel="noopener sponsored" class="pinpoint-direct-link mobile-touch-btn" data-merchant="klook" data-product-id="${tk.id}" data-product-category="learning" style="display: flex; min-height: 36px; align-items: center; justify-content: center; background: #F8FAFC; border: 1px solid #BFDBFE; color: #0F172A; font-size: 0.78rem; font-weight: 800; padding: 0.3rem 0.5rem; border-radius: 8px; text-decoration: none; text-align: center;">
+                    클룩(Klook) 패스 확인 ↗
+                  </a>
+                </div>
               </div>
             `).join('')}
           </div>

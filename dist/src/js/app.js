@@ -42,7 +42,7 @@
       recentGrowth6m: 3.5,
       fatherHeight: 175.0,
       motherHeight: 162.0,
-      region: 'United States',
+      region: '서울 강남·서초·송파',
       pubertyStage: 'phase_1',
       tannerPhase: 'phase_1',
       habits: ['picky_eater'],
@@ -62,7 +62,7 @@
       recentGrowth6m: 2.8,
       fatherHeight: 176.0,
       motherHeight: 163.0,
-      region: 'Canada',
+      region: '경기 남부(분당·수원·용인·동탄)',
       pubertyStage: 'phase_1',
       tannerPhase: 'phase_1',
       habits: ['poor_posture'],
@@ -82,7 +82,7 @@
       recentGrowth6m: 3.2,
       fatherHeight: 173.5,
       motherHeight: 160.5,
-      region: 'United Kingdom & Europe',
+      region: '서울 강북·마포·용산',
       pubertyStage: 'phase_2',
       tannerPhase: 'phase_2',
       habits: ['late_sleep'],
@@ -102,7 +102,7 @@
       recentGrowth6m: 4.5,
       fatherHeight: 174.0,
       motherHeight: 161.0,
-      region: 'Australia & New Zealand',
+      region: '경기 북부·인천',
       pubertyStage: 'phase_2',
       tannerPhase: 'phase_2',
       habits: ['late_sleep', 'night_carbs'],
@@ -122,7 +122,7 @@
       recentGrowth6m: 0.8,
       fatherHeight: 177.0,
       motherHeight: 164.0,
-      region: 'Asia-Pacific & Global',
+      region: '부산·경남',
       pubertyStage: 'phase_4',
       tannerPhase: 'phase_4',
       habits: ['poor_posture', 'late_sleep'],
@@ -1040,8 +1040,8 @@
     myrealtripMylinkId: '6226316',
     klookAid: '140161',
     klookAdId: '1514603',
-    cafeUrl: 'https://cafe.naver.com/kidsfitgrowth',
-    blogUrl: 'https://blog.naver.com/kidsfit_studio'
+    cafeUrl: 'https://cafe.naver.com/moneyfitlab',
+    blogUrl: 'https://blog.naver.com/expertise333'
   };
 
   let inMemoryAffiliateConfig = null;
@@ -1049,9 +1049,15 @@
   function getAffiliateConfig() {
     if (typeof window !== 'undefined' && window.localStorage) {
       try {
-        const raw = localStorage.getItem('kidsfit_affiliate_config');
-        if (raw) {
-          return Object.assign({}, DEFAULT_AFFILIATE_CONFIG, JSON.parse(raw));
+        const rawTaller = localStorage.getItem('taller_affiliate_config');
+        const rawKidsfit = localStorage.getItem('kidsfit_affiliate_config');
+        if (rawTaller || rawKidsfit) {
+          return Object.assign(
+            {},
+            DEFAULT_AFFILIATE_CONFIG,
+            rawKidsfit ? JSON.parse(rawKidsfit) : {},
+            rawTaller ? JSON.parse(rawTaller) : {}
+          );
         }
       } catch (e) {
         // fallback
@@ -1068,6 +1074,7 @@
     if (typeof window !== 'undefined' && window.localStorage) {
       try {
         localStorage.setItem('kidsfit_affiliate_config', JSON.stringify(config));
+        localStorage.setItem('taller_affiliate_config', JSON.stringify(config));
       } catch (e) {
         console.error('Failed to save affiliate config to localStorage', e);
       }
@@ -1274,13 +1281,20 @@
       });
     }
 
-    // Initialize to Step 1
-    goToStep(1);
-    const initialStepTag = document.getElementById('quiz-step-tag');
-    if (initialStepTag) {
-      initialStepTag.textContent = 'Step 1 / 6';
+    // Unify Step 1 initialization with TallerOnboardingWizard when present so app.js does not overwrite
+    // the 6-step wizard progress (17%), Step 1 title, or syncDobAndAutoStage() LMS values.
+    if (typeof window !== 'undefined' && window.TallerOnboardingWizard) {
+      if (typeof window.TallerOnboardingWizard.syncDobAndAutoStage === 'function') {
+        window.TallerOnboardingWizard.syncDobAndAutoStage({ preserveUserInputs: true });
+      }
+    } else {
+      goToStep(1);
+      const initialStepTag = document.getElementById('quiz-step-tag');
+      if (initialStepTag) {
+        initialStepTag.textContent = 'Step 1 / 6';
+      }
+      syncStateToForm(state.profile);
     }
-    syncStateToForm(state.profile);
 
     // Support direct URL view, preset, and mode parameters (?view=... | ?preset=... | ?mode=growth|learning)
     if (typeof window !== 'undefined' && window.location && window.location.search) {

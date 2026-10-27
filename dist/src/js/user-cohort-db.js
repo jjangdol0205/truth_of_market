@@ -254,6 +254,7 @@
       habits: Array.isArray(profile.habits) && profile.habits.length > 0 ? profile.habits : ['late_sleep'],
       cognitiveAxes: Array.isArray(profile.cognitiveAxes) && profile.cognitiveAxes.length > 0 ? profile.cognitiveAxes : ['science_nature'],
       region: profile.region || '서울 강남·서초·송파',
+      preferredReportMode: (profile.preferredReportMode === 'learning') ? 'learning' : 'growth',
       kdcaPercentile: Number(computedMetrics.kdcaPercentile || computedMetrics.percentile || 50.0),
       zScore: Number(computedMetrics.zScore || 0.0),
       mph: computeDynamicRecordTrajectory(profile, computedMetrics).mph,

@@ -1695,23 +1695,23 @@ const server = http.createServer((req, res) => {
 
     if (pathname === '/download/kidsfit-app') {
       const appLauncherHtml = `<!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
-  <meta name="theme-color" content="#05070B">
+  <meta name="theme-color" content="#F8FAFC">
   <title>KIDS-FIT 앱 실행기</title>
   <link rel="icon" href="https://kidsfit.co.kr/samples/app-icon-192.png">
   <link rel="apple-touch-icon" href="https://kidsfit.co.kr/samples/apple-touch-icon.png">
   <style>
-    body { margin: 0; background: #05070B; color: #FFFFFF; font-family: -apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; text-align: center; padding: 24px; box-sizing: border-box; }
-    .card { max-width: 400px; width: 100%; background: rgba(15, 23, 42, 0.95); border: 1.5px solid rgba(56, 189, 248, 0.45); border-radius: 24px; padding: 28px 22px; box-shadow: 0 20px 50px rgba(0,0,0,0.65); }
-    .icon { width: 84px; height: 84px; border-radius: 20px; margin-bottom: 16px; border: 2px solid #38BDF8; }
-    h1 { font-size: 22px; font-weight: 900; margin: 0 0 8px; color: #FFFFFF; }
-    p { font-size: 14.5px; color: #CBD5E1; line-height: 1.55; margin: 0 0 20px; }
-    .btn { display: block; width: 100%; padding: 15px 18px; border-radius: 14px; background: linear-gradient(90deg, #0284C7 0%, #10B981 100%); color: #FFFFFF; font-weight: 900; font-size: 16px; text-decoration: none; box-sizing: border-box; margin-bottom: 10px; }
+    body { margin: 0; background: #F8FAFC; color: #0F172A; font-family: -apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; text-align: center; padding: 24px; box-sizing: border-box; }
+    .card { max-width: 400px; width: 100%; background: #FFFFFF; border: 1.5px solid #BFDBFE; border-radius: 24px; padding: 28px 22px; box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08); }
+    .icon { width: 84px; height: 84px; border-radius: 20px; margin-bottom: 16px; border: 2px solid #1D4ED8; }
+    h1 { font-size: 22px; font-weight: 900; margin: 0 0 8px; color: #0F172A; }
+    p { font-size: 14.5px; color: #475569; line-height: 1.55; margin: 0 0 20px; }
+    .btn { display: block; width: 100%; padding: 15px 18px; border-radius: 14px; background: #1D4ED8; color: #FFFFFF; font-weight: 900; font-size: 16px; text-decoration: none; box-sizing: border-box; margin-bottom: 10px; }
   </style>
   <script>
     setTimeout(function() {

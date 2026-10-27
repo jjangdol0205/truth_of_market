@@ -231,7 +231,7 @@
       cognitiveAxes: ['science_nature'],
       traitLearningConcerns: ['reading_literacy'],
       traitStudyStyle: 'dialogue_question',
-      region: '서울 강남·서초·송파'
+      region: 'US National (CDC/AAP Standard)'
     }
   };
 
@@ -398,9 +398,8 @@
   /**
    * Synchronizes Date of Birth (Year/Month/Day) -> Exact Months/Days + Auto Growth Stage (Phase 1~4)
    */
-  function syncDobAndAutoStage(options = {}) {
+  function syncDobAndAutoStage() {
     if (typeof document === 'undefined') return;
-    const preserveUserInputs = Boolean(options && options.preserveUserInputs);
     if (!PinpointCurator && (global.TallerPinpointCurator || global.KidsFitPinpointCurator)) {
       PinpointCurator = global.TallerPinpointCurator || global.KidsFitPinpointCurator;
     }
@@ -431,7 +430,13 @@
     const boyRadio = document.getElementById('gender-boy');
     const gender = (boyRadio && boyRadio.checked) ? 'boy' : 'girl';
     const recentInput = document.getElementById('child-recent-gain');
-    const recent6m = recentInput ? parseFloat(recentInput.value) || 3.2 : 3.2;
+    const isImpGain = typeof isCurrentImperial === 'function'
+      ? isCurrentImperial()
+      : (typeof document !== 'undefined' && document.documentElement.lang === 'en' && typeof global.TallerI18n !== 'undefined' && global.TallerI18n.getUnitSystem() === 'imperial');
+    const rawRecent = recentInput ? parseFloat(recentInput.value) : NaN;
+    const recent6m = !isNaN(rawRecent) && rawRecent > 0
+      ? (isImpGain ? Math.round(rawRecent * 2.54 * 10) / 10 : rawRecent)
+      : 3.2;
 
     const dobInfo = PinpointCurator.calculateExactAgeFromDob(yearEl.value, monthEl.value, dayEl.value);
     const autoStage = PinpointCurator.autoDetectGrowthStage(dobInfo.exactMonths, gender, recent6m);
@@ -446,37 +451,33 @@
     wizardState.profile.exactMonths = dobInfo.exactMonths;
     wizardState.profile.remainderDays = dobInfo.remainderDays;
     wizardState.profile.ageYears = dobInfo.ageYears;
-    if (!preserveUserInputs) {
-      wizardState.profile.tannerPhase = autoStage.tannerPhase;
+    wizardState.profile.tannerPhase = autoStage.tannerPhase;
+
+    // Auto-sync KDCA 50th percentile standard height & weight unless user manually edited
+    if (!GrowthEngine && (global.GrowthEngine || global.KidsFitGrowthEngine || global.TallerGrowthEngine)) {
+      GrowthEngine = global.GrowthEngine || global.KidsFitGrowthEngine || global.TallerGrowthEngine;
     }
+    if (GrowthEngine && typeof GrowthEngine.getLmsForMonth === 'function') {
+      const lms = GrowthEngine.getLmsForMonth(gender, dobInfo.exactMonths || dobInfo.ageMonths);
+      if (lms) {
+        const heightInput = document.getElementById('child-height');
+        const weightInput = document.getElementById('child-weight');
+        const roundedH = Math.round((Number(lms.M) || 137.0) * 10) / 10;
+        const roundedW = Math.round((Number(lms.wM) || 35.5) * 10) / 10;
+        const isImperial = typeof document !== 'undefined' && document.documentElement.lang === 'en' && typeof global.TallerI18n !== 'undefined' && global.TallerI18n.getUnitSystem() === 'imperial';
+        const displayH = isImperial ? (Math.round((roundedH / 2.54) * 10) / 10).toFixed(1) : roundedH.toFixed(1);
+        const displayW = isImperial ? (Math.round(roundedW * 2.20462262 * 10) / 10).toFixed(1) : roundedW.toFixed(1);
 
-    // Auto-sync KDCA 50th percentile standard height & weight unless user manually edited or reading final form state
-    if (!preserveUserInputs) {
-      if (!GrowthEngine && (global.GrowthEngine || global.KidsFitGrowthEngine || global.TallerGrowthEngine)) {
-        GrowthEngine = global.GrowthEngine || global.KidsFitGrowthEngine || global.TallerGrowthEngine;
-      }
-      if (GrowthEngine && typeof GrowthEngine.getLmsForMonth === 'function') {
-        const lms = GrowthEngine.getLmsForMonth(gender, dobInfo.exactMonths || dobInfo.ageMonths);
-        if (lms) {
-          const heightInput = document.getElementById('child-height');
-          const weightInput = document.getElementById('child-weight');
-          const roundedH = Math.round((Number(lms.M) || 137.0) * 10) / 10;
-          const roundedW = Math.round((Number(lms.wM) || 35.5) * 10) / 10;
-          const isImperial = typeof document !== 'undefined' && document.documentElement.lang === 'en' && typeof global.TallerI18n !== 'undefined' && global.TallerI18n.getUnitSystem() === 'imperial';
-          const displayH = isImperial ? (Math.round((roundedH / 2.54) * 10) / 10).toFixed(1) : roundedH.toFixed(1);
-          const displayW = isImperial ? (Math.round(roundedW * 2.20462262 * 10) / 10).toFixed(1) : roundedW.toFixed(1);
-
-          if (heightInput && !(heightInput.dataset && heightInput.dataset.userEdited === 'true')) {
-            heightInput.value = displayH;
-            wizardState.profile.currentHeight = roundedH;
-          }
-          if (weightInput && !(weightInput.dataset && weightInput.dataset.userEdited === 'true')) {
-            weightInput.value = displayW;
-            wizardState.profile.currentWeight = roundedW;
-          }
-          if (typeof syncCompanionInputs === 'function') {
-            syncCompanionInputs();
-          }
+        if (heightInput && !(heightInput.dataset && heightInput.dataset.userEdited === 'true')) {
+          heightInput.value = displayH;
+          wizardState.profile.currentHeight = roundedH;
+        }
+        if (weightInput && !(weightInput.dataset && weightInput.dataset.userEdited === 'true')) {
+          weightInput.value = displayW;
+          wizardState.profile.currentWeight = roundedW;
+        }
+        if (typeof syncCompanionInputs === 'function') {
+          syncCompanionInputs();
         }
       }
     }
@@ -510,13 +511,11 @@
         : `${autoStage.boneAgeNoteKo}<br><strong style="color:#1D4ED8;">입력하신 생년월일 월령에 맞춰 최적 성장 단계가 자동 설정되었으므로 바로 [다음 단계]로 이동하시면 됩니다.</strong>`;
     }
 
-    if (!preserveUserInputs) {
-      const phaseRadios = document.querySelectorAll('input[name="tanner-phase"]');
-      if (phaseRadios && phaseRadios.forEach) {
-        phaseRadios.forEach((r) => {
-          r.checked = (r.value === autoStage.tannerPhase);
-        });
-      }
+    const phaseRadios = document.querySelectorAll('input[name="tanner-phase"]');
+    if (phaseRadios && phaseRadios.forEach) {
+      phaseRadios.forEach((r) => {
+        r.checked = (r.value === autoStage.tannerPhase);
+      });
     }
 
     syncAgeAppropriateQuizOptions(dobInfo.ageYears);
@@ -1339,8 +1338,8 @@
     const boyRadio = document.getElementById('gender-boy');
     const gender = (boyRadio && boyRadio.checked) ? 'boy' : 'girl';
 
-    // Sync DOB -> exactMonths without overwriting user-entered height, weight, or Tanner stage
-    syncDobAndAutoStage({ preserveUserInputs: true });
+    // Sync DOB -> exactMonths & Auto Growth Stage first
+    syncDobAndAutoStage();
 
     const ageSlider = document.getElementById('child-age-slider');
     const ageMonthsEl = document.getElementById('child-age-months');
@@ -1396,7 +1395,7 @@
 
     // Region & Ethnicity
     const regionSelect = document.getElementById('user-region');
-    const region = regionSelect ? regionSelect.value : '서울 강남·서초·송파';
+    const region = regionSelect ? regionSelect.value : 'US National (CDC/AAP Standard)';
     const ethnicitySelect = document.getElementById('child-ethnicity');
     const ethnicity = (ethnicitySelect && ethnicitySelect.value) ? ethnicitySelect.value : 'us_general';
 
@@ -2441,6 +2440,7 @@
     module.exports = OnboardingWizard;
   } else {
     global.TallerOnboardingWizard = OnboardingWizard;
+    global.KidsFitOnboardingWizard = OnboardingWizard;
     if (typeof window !== 'undefined' && typeof document !== 'undefined') {
       if (document.readyState === 'loading') {
         window.addEventListener('DOMContentLoaded', () => {
@@ -2453,32 +2453,3 @@
   }
 
 })(typeof window !== 'undefined' ? window : global);
-
-
-    // Dispatch unified diagnosis completion telemetry to /api/visit & /api/user-cohort
-    try {
-      if (typeof window !== 'undefined' && typeof window.fetch === 'function') {
-        const urlParams = new URLSearchParams(window.location.search || '');
-        const utmSource = urlParams.get('utm_source') || 'direct';
-        window.fetch('/api/visit', {
-          method: 'POST',
-          keepalive: true,
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            event: 'diagnosis',
-            mode: 'both',
-            preferredReportMode: 'both',
-            utm_source: utmSource
-          })
-        }).catch(function () {});
-        window.fetch('/api/user-cohort', {
-          method: 'POST',
-          keepalive: true,
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            preferredReportMode: 'both',
-            utm_source: utmSource
-          })
-        }).catch(function () {});
-      }
-    } catch (_) {}

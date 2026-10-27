@@ -3604,13 +3604,18 @@
                 </span>
               </div>
 
-              <!-- Concise Curated Cards (#pillar2-learning-tools-box, Education Chapter) -->
+              <!-- Concise Curated Cards (#pillar2-learning-tools-box, Education Chapter, Travel Chapter) -->
               ${PinpointCurator && typeof PinpointCurator.renderPillar2LearningToolsPrescription === 'function'
                 ? PinpointCurator.renderPillar2LearningToolsPrescription(profile)
                 : ''}
               ${PinpointCurator && typeof PinpointCurator.renderCustomEducationChapter === 'function'
                 ? PinpointCurator.renderCustomEducationChapter(profile)
                 : ''}
+              ${PinpointCurator && typeof PinpointCurator.renderCustomTravelChapter === 'function'
+                ? PinpointCurator.renderCustomTravelChapter(profile)
+                : (typeof window !== 'undefined' && window.TallerPinpointCurator && typeof window.TallerPinpointCurator.renderCustomTravelChapter === 'function'
+                  ? window.TallerPinpointCurator.renderCustomTravelChapter(profile)
+                  : '')}
             </div>
           </div>
         </div><!-- /#report-ch-8 -->
@@ -3909,8 +3914,34 @@
               : '공식 블로그·카페의 아이 성장 심층 글과 인스타·쓰레드 공감 4칸 웹툰'}
           </h3>
           <div class="learning-mobile-stack" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.65rem;">
+            ${(function () {
+              let storedCfg = {};
+              if (typeof window !== 'undefined' && window.localStorage) {
+                try {
+                  const rawT = window.localStorage.getItem('taller_affiliate_config');
+                  const rawK = window.localStorage.getItem('kidsfit_affiliate_config');
+                  storedCfg = Object.assign(
+                    {},
+                    rawK ? JSON.parse(rawK) : {},
+                    rawT ? JSON.parse(rawT) : {}
+                  );
+                } catch (_) {}
+              } else if (typeof localStorage !== 'undefined') {
+                try {
+                  const rawT = localStorage.getItem('taller_affiliate_config');
+                  const rawK = localStorage.getItem('kidsfit_affiliate_config');
+                  storedCfg = Object.assign(
+                    {},
+                    rawK ? JSON.parse(rawK) : {},
+                    rawT ? JSON.parse(rawT) : {}
+                  );
+                } catch (_) {}
+              }
+              const hubBlogUrl = (storedCfg && storedCfg.blogUrl) || 'https://blog.naver.com/expertise333';
+              const hubCafeUrl = (storedCfg && storedCfg.cafeUrl) || 'https://cafe.naver.com/moneyfitlab';
+              return `
             <!-- 1. Naver Blog -->
-            <a href="https://blog.naver.com/expertise333" target="_blank" rel="noopener noreferrer" id="hub-link-naver-blog" style="text-decoration: none; background: #EFF6FF; border: 1.5px solid #BFDBFE; border-radius: 14px; padding: 0.85rem 0.95rem; display: flex; flex-direction: column; justify-content: space-between; gap: 0.35rem;">
+            <a href="${hubBlogUrl}" target="_blank" rel="noopener noreferrer" id="hub-link-naver-blog" style="text-decoration: none; background: #EFF6FF; border: 1.5px solid #BFDBFE; border-radius: 14px; padding: 0.85rem 0.95rem; display: flex; flex-direction: column; justify-content: space-between; gap: 0.35rem;">
               <div>
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.2rem;">
                   <span style="font-size: 0.75rem; font-weight: 900; color: #1D4ED8;">공식 네이버 블로그</span>
@@ -3923,7 +3954,7 @@
             </a>
 
             <!-- 2. Naver Cafe -->
-            <a href="https://cafe.naver.com/moneyfitlab" target="_blank" rel="noopener noreferrer" id="hub-link-naver-cafe" style="text-decoration: none; background: #EFF6FF; border: 1.5px solid #BFDBFE; border-radius: 14px; padding: 0.85rem 0.95rem; display: flex; flex-direction: column; justify-content: space-between; gap: 0.35rem;">
+            <a href="${hubCafeUrl}" target="_blank" rel="noopener noreferrer" id="hub-link-naver-cafe" style="text-decoration: none; background: #EFF6FF; border: 1.5px solid #BFDBFE; border-radius: 14px; padding: 0.85rem 0.95rem; display: flex; flex-direction: column; justify-content: space-between; gap: 0.35rem;">
               <div>
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.2rem;">
                   <span style="font-size: 0.75rem; font-weight: 900; color: #1D4ED8;">공식 네이버 카페</span>
@@ -3933,7 +3964,8 @@
                   연령별 무료 워크지 PDF &amp; 학부모 정보 나눔
                 </div>
               </div>
-            </a>
+            </a>`;
+            })()}
 
             <!-- 3. Instagram (4-Panel Webtoon) -->
             <a href="https://www.instagram.com/kids_fit1" target="_blank" rel="noopener noreferrer" id="hub-link-instagram" style="text-decoration: none; background: #EFF6FF; border: 1.5px solid #BFDBFE; border-radius: 14px; padding: 0.85rem 0.95rem; display: flex; flex-direction: column; justify-content: space-between; gap: 0.35rem;">
