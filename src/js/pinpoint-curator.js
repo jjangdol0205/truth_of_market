@@ -328,7 +328,7 @@
     const lpId = encodeURIComponent(cfg.linkprice || DEFAULT_AFF.linkprice);
 
     const enc = (s) => encodeURIComponent(s || '').replace(/'/g, '%27');
-    const cpUrl = `https://link.coupang.com/re/AFFSRP?lptag=${cpTag}&subid=kidsfit&pageKey=${enc(coupangQuery)}`;
+    const cpUrl = `https://www.coupang.com/np/search?q=${enc(coupangQuery)}&channel=user&lptag=${cpTag}&subid=kidsfit`;
     const ihUrl = `https://kr.iherb.com/search?kw=${enc(iherbQuery)}&rcode=${ihCode}`;
     const amzUrl = `https://www.amazon.com/s?k=${enc(iherbQuery)}&tag=${amzTag}`;
     const yesTarget = `https://www.yes24.com/Product/Search?domain=ALL&query=${enc(yes24Query || coupangQuery)}`;
@@ -2483,8 +2483,8 @@
                 ${isEn ? sub.specEn : sub.specKo}
               </div>
               <div style="display: grid; grid-template-columns: ${categoryType === 'book' ? 'repeat(2, minmax(0, 1fr))' : 'minmax(0, 1fr)'}; gap: 0.35rem; margin-top: 0.1rem;">
-                <a href="${sub.coupangUrl}" target="_blank" rel="noopener noreferrer" class="pinpoint-direct-link mobile-touch-btn" data-merchant="coupang" data-product-id="${item.id}" data-product-category="${productCategory}" style="display: flex; min-height: 36px; align-items: center; justify-content: center; background: #EFF6FF; border: 1px solid #BFDBFE; color: #0F172A; font-size: 0.78rem; font-weight: 800; padding: 0.3rem 0.5rem; border-radius: 8px; text-decoration: none; text-align: center;">
-                  쿠팡 로켓배송 ↗
+                <a href="${sub.coupangUrl}" target="_blank" rel="noopener noreferrer" class="pinpoint-direct-link mobile-touch-btn" data-merchant="coupang" data-product-id="${item.id}" data-product-category="${productCategory}" style="display: flex; min-height: 40px; align-items: center; justify-content: center; background: #1D4ED8; border: 1px solid #1E40AF; color: #FFFFFF; font-size: 0.82rem; font-weight: 900; padding: 0.35rem 0.55rem; border-radius: 8px; text-decoration: none; text-align: center;">
+                  🛒 쿠팡 로켓배송 최저가·학부모 후기 확인 ↗
                 </a>
                 ${categoryType === 'book' ? `
                 <a href="${sub.yes24Url}" target="_blank" rel="noopener noreferrer" class="pinpoint-direct-link mobile-touch-btn" data-merchant="linkprice" data-product-id="${item.id}" data-product-category="${productCategory}" style="display: flex; min-height: 36px; align-items: center; justify-content: center; background: #EFF6FF; border: 1px solid #BFDBFE; color: #1D4ED8; font-size: 0.78rem; font-weight: 800; padding: 0.3rem 0.5rem; border-radius: 8px; text-decoration: none; text-align: center;">
@@ -2519,8 +2519,8 @@
             </div>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(135px, 1fr)); gap: 0.35rem; margin-top: 0.15rem;">
-              <a href="${sub.coupangUrl}" target="_blank" rel="noopener noreferrer" class="pinpoint-direct-link mobile-touch-btn" data-merchant="coupang" data-product-id="${item.id}" data-product-category="${productCategory}" style="display: flex; min-height: 38px; align-items: center; justify-content: center; background: #EFF6FF; border: 1px solid #BFDBFE; color: #0F172A; font-size: 0.8rem; font-weight: 800; padding: 0.38rem 0.6rem; border-radius: 8px; text-decoration: none; text-align: center;">
-                쿠팡 로켓배송 ↗
+              <a href="${sub.coupangUrl}" target="_blank" rel="noopener noreferrer" class="pinpoint-direct-link mobile-touch-btn" data-merchant="coupang" data-product-id="${item.id}" data-product-category="${productCategory}" style="display: flex; min-height: 42px; align-items: center; justify-content: center; background: #1D4ED8; border: 1px solid #1E40AF; color: #FFFFFF; font-size: 0.84rem; font-weight: 900; padding: 0.42rem 0.65rem; border-radius: 8px; text-decoration: none; text-align: center;">
+                🛒 쿠팡 로켓배송 최저가·학부모 후기 확인 ↗
               </a>
               ${categoryType === 'supplement' && sub.hasExactIherb
                 ? `<a href="${sub.iherbUrl}" target="_blank" rel="noopener noreferrer" class="pinpoint-direct-link mobile-touch-btn" data-merchant="iherb" data-product-id="${item.id}" data-product-category="${productCategory}" style="display: flex; min-height: 38px; align-items: center; justify-content: center; background: #EFF6FF; border: 1px solid #BFDBFE; color: #1D4ED8; font-size: 0.8rem; font-weight: 800; padding: 0.38rem 0.6rem; border-radius: 8px; text-decoration: none; text-align: center;">iHerb 직구 ↗</a>`
@@ -3223,7 +3223,7 @@
                   <a href="${item.yes24Url}" target="_blank" rel="noopener noreferrer" class="pinpoint-direct-link mobile-touch-btn" data-merchant="linkprice" data-product-id="${item.key || 'workbook_' + idx}" data-product-category="learning" style="display: flex; min-height: 36px; align-items: center; justify-content: center; background: #EFF6FF; border: 1px solid #BFDBFE; color: #0F172A; font-size: 0.78rem; font-weight: 800; padding: 0.3rem 0.5rem; border-radius: 8px; text-decoration: none; text-align: center;">
                     YES24 도서 ↗
                   </a>
-                  <a href="${item.coupangUrl}" target="_blank" rel="noopener noreferrer" class="pinpoint-direct-link mobile-touch-btn" data-merchant="coupang" data-product-id="${item.key || 'workbook_' + idx}" data-product-category="learning" style="display: flex; min-height: 36px; align-items: center; justify-content: center; background: #F8FAFC; border: 1px solid #BFDBFE; color: #0F172A; text-decoration: none; text-align: center; font-size: 0.78rem; font-weight: 800; border-radius: 8px;">쿠팡 로켓배송 ↗</a>
+                  <a href="${item.coupangUrl}" target="_blank" rel="noopener noreferrer" class="pinpoint-direct-link mobile-touch-btn" data-merchant="coupang" data-product-id="${item.key || 'workbook_' + idx}" data-product-category="learning" style="display: flex; min-height: 40px; align-items: center; justify-content: center; background: #1D4ED8; border: 1px solid #1E40AF; color: #FFFFFF; text-decoration: none; text-align: center; font-size: 0.8rem; font-weight: 900; border-radius: 8px;">🛒 쿠팡 로켓배송 최저가·후기 ↗</a>
                 </div>
               </div>
             `).join('')}
@@ -3670,7 +3670,7 @@
                 <div style="font-size: 0.78rem; color: #475569; line-height: 1.4; word-break: keep-all;">${itemA.spec}</div>
               </div>
               <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.35rem; margin-top: 0.25rem;">
-                <a href="${itemA.coupangUrl}" target="_blank" rel="noopener sponsored" class="pinpoint-direct-link mobile-touch-btn" data-merchant="coupang" data-product-category="${catAttr}" style="display:flex; min-height:36px; align-items:center; justify-content:center; background:#1D4ED8; color:#FFFFFF; font-size:0.77rem; font-weight:800; border-radius:8px; text-decoration:none; text-align:center; padding:0.3rem 0.4rem;">쿠팡 로켓배송 ↗</a>
+                <a href="${itemA.coupangUrl}" target="_blank" rel="noopener sponsored" class="pinpoint-direct-link mobile-touch-btn" data-merchant="coupang" data-product-category="${catAttr}" style="display:flex; min-height:40px; align-items:center; justify-content:center; background:#1D4ED8; color:#FFFFFF; font-size:0.8rem; font-weight:900; border-radius:8px; text-decoration:none; text-align:center; padding:0.35rem 0.5rem;">🛒 쿠팡 로켓배송 최저가·후기 ↗</a>
                 <a href="${isLearning ? itemA.yes24Url : itemA.iherbUrl}" target="_blank" rel="noopener sponsored" class="pinpoint-direct-link mobile-touch-btn" data-merchant="${isLearning ? 'linkprice' : 'iherb'}" data-product-category="${catAttr}" style="display:flex; min-height:36px; align-items:center; justify-content:center; background:#EFF6FF; border:1px solid #93C5FD; color:#1D4ED8; font-size:0.77rem; font-weight:800; border-radius:8px; text-decoration:none; text-align:center; padding:0.3rem 0.4rem;">${isLearning ? 'YES24 교구·도서 ↗' : 'iHerb 글로벌 스펙 ↗'}</a>
               </div>
             </div>
@@ -3682,7 +3682,7 @@
                 <div style="font-size: 0.78rem; color: #475569; line-height: 1.4; word-break: keep-all;">${itemB.spec}</div>
               </div>
               <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.35rem; margin-top: 0.25rem;">
-                <a href="${itemB.coupangUrl}" target="_blank" rel="noopener sponsored" class="pinpoint-direct-link mobile-touch-btn" data-merchant="coupang" data-product-category="${catAttr}" style="display:flex; min-height:36px; align-items:center; justify-content:center; background:#1D4ED8; color:#FFFFFF; font-size:0.77rem; font-weight:800; border-radius:8px; text-decoration:none; text-align:center; padding:0.3rem 0.4rem;">쿠팡 로켓배송 ↗</a>
+                <a href="${itemB.coupangUrl}" target="_blank" rel="noopener sponsored" class="pinpoint-direct-link mobile-touch-btn" data-merchant="coupang" data-product-category="${catAttr}" style="display:flex; min-height:40px; align-items:center; justify-content:center; background:#1D4ED8; color:#FFFFFF; font-size:0.8rem; font-weight:900; border-radius:8px; text-decoration:none; text-align:center; padding:0.35rem 0.5rem;">🛒 쿠팡 로켓배송 최저가·후기 ↗</a>
                 <a href="${itemB.yes24Url}" target="_blank" rel="noopener sponsored" class="pinpoint-direct-link mobile-touch-btn" data-merchant="linkprice" data-product-category="${catAttr}" style="display:flex; min-height:36px; align-items:center; justify-content:center; background:#EFF6FF; border:1px solid #93C5FD; color:#1D4ED8; font-size:0.77rem; font-weight:800; border-radius:8px; text-decoration:none; text-align:center; padding:0.3rem 0.4rem;">YES24 도서·가이드 ↗</a>
               </div>
             </div>
@@ -3692,10 +3692,92 @@
     `;
   }
 
+  function renderFirstFoldQuickPurchaseBridge(profile = {}, mode = 'growth', affConfig = {}) {
+    const exactM = Number(profile.exactMonths || profile.ageMonths) || 120;
+    const info = getMonthlyMicroAnalysisAndProducts(exactM, profile, affConfig);
+    const isLearning = mode === 'learning';
+    const itemA = isLearning ? info.learningTool : info.growthSupp;
+    const itemB = isLearning ? info.learningBook : info.growthEquip;
+    const bridgeId = isLearning ? 'first-fold-learning-purchase-bridge' : 'first-fold-growth-purchase-bridge';
+    const drawerId = isLearning ? 'learning-curated-products-drawer' : 'growth-curated-products-drawer';
+    const catAttr = isLearning ? 'learning' : 'growth';
+    const compareLeft = isLearning
+      ? '❌ 일반 문제집·단순 암기: 월령 전두엽 발달과 안 맞아 흥미 상실·공부 거부감 유발'
+      : '❌ 일반 탄산칼슘·단순 스트레칭: 위산 부족으로 흡수율 낮고 성장판 압전 자극 부족';
+    const compareRight = isLearning
+      ? `✅ K-DST·뇌과학 권장 [${info.bandTitle}]: 손끝·시각 작업기억 직결 핀포인트 교구·워크북`
+      : `✅ KDCA·소아내분비 권장 [${info.bandTitle}]: 고흡수 킬레이트/구연산 제형 & 추간판 감압 기구`;
+
+    return `
+      <div id="${bridgeId}" class="first-fold-purchase-bridge" data-product-category="${catAttr}" style="background: linear-gradient(180deg, #EFF6FF 0%, #FFFFFF 100%); border: 2px solid #1D4ED8; border-radius: 20px; padding: 1.1rem 1.25rem; margin-bottom: 1.15rem; text-align: left; box-shadow: 0 8px 22px rgba(29, 78, 216, 0.12);">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.55rem;">
+          <span style="background: #1D4ED8; color: #FFFFFF; font-size: 0.78rem; font-weight: 900; padding: 0.24rem 0.75rem; border-radius: 9999px;">
+            ⚡ 바쁜 부모님용 첫 화면 3초 핵심 요약 · ${info.exactBadgeKo} 1순위 필수 준비물
+          </span>
+          <button type="button" onclick="var el=document.getElementById('${drawerId}');if(el){el.scrollIntoView({behavior:'smooth',block:'start'});}" style="cursor: pointer; background: #FFFFFF; border: 1px solid #1D4ED8; color: #1D4ED8; font-size: 0.75rem; font-weight: 900; padding: 0.22rem 0.65rem; border-radius: 9999px;">
+            👇 아래 상세 성향별 TOP 3 전체 리스트 바로 이동
+          </button>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.45rem; margin-bottom: 0.65rem; font-size: 0.78rem; line-height: 1.42;">
+          <div style="background: #F8FAFC; border: 1px solid #CBD5E1; border-radius: 9px; padding: 0.45rem 0.65rem; color: #475569; font-weight: 700;">
+            ${compareLeft}
+          </div>
+          <div style="background: #EFF6FF; border: 1px solid #93C5FD; border-radius: 9px; padding: 0.45rem 0.65rem; color: #1D4ED8; font-weight: 900;">
+            ${compareRight}
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.6rem;">
+          <div class="pinpoint-item-card" data-product-category="${catAttr}" style="background: #FFFFFF; border: 1.5px solid #93C5FD; border-radius: 14px; padding: 0.75rem 0.85rem; display: flex; flex-direction: column; justify-content: space-between; gap: 0.35rem;">
+            <div>
+              <div style="font-size: 0.74rem; font-weight: 900; color: #1D4ED8; margin-bottom: 0.15rem;">
+                🔥 ${isLearning ? `[${info.exactBadgeKo} 맞춤 교구·도구 1위]` : `[${info.exactBadgeKo} 맞춤 성장 영양 1위]`}
+              </div>
+              <div style="font-size: 0.92rem; font-weight: 900; color: #0F172A; line-height: 1.35; margin-bottom: 0.18rem; word-break: keep-all;">
+                ${itemA.name}
+              </div>
+              <div style="font-size: 0.77rem; color: #475569; line-height: 1.38; word-break: keep-all;">
+                ${itemA.spec}
+              </div>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.35rem; margin-top: 0.2rem;">
+              <a href="${itemA.coupangUrl}" target="_blank" rel="noopener sponsored" class="pinpoint-direct-link mobile-touch-btn" data-merchant="coupang" data-product-category="${catAttr}" style="display:flex; min-height:40px; align-items:center; justify-content:center; background:#1D4ED8; color:#FFFFFF; font-size:0.79rem; font-weight:900; border-radius:8px; text-decoration:none; text-align:center; padding:0.35rem 0.45rem; box-shadow: 0 3px 10px rgba(29, 78, 216, 0.2);">🛒 쿠팡 로켓 최저가·후기 ↗</a>
+              <a href="${isLearning ? itemA.yes24Url : itemA.iherbUrl}" target="_blank" rel="noopener sponsored" class="pinpoint-direct-link mobile-touch-btn" data-merchant="${isLearning ? 'linkprice' : 'iherb'}" data-product-category="${catAttr}" style="display:flex; min-height:40px; align-items:center; justify-content:center; background:#EFF6FF; border:1.5px solid #93C5FD; color:#1D4ED8; font-size:0.78rem; font-weight:900; border-radius:8px; text-decoration:none; text-align:center; padding:0.35rem 0.45rem;">${isLearning ? '📚 YES24 특가 보기 ↗' : '🌿 iHerb 직구 스펙 ↗'}</a>
+            </div>
+          </div>
+
+          <div class="pinpoint-item-card" data-product-category="${catAttr}" style="background: #FFFFFF; border: 1.5px solid #93C5FD; border-radius: 14px; padding: 0.75rem 0.85rem; display: flex; flex-direction: column; justify-content: space-between; gap: 0.35rem;">
+            <div>
+              <div style="font-size: 0.74rem; font-weight: 900; color: #1D4ED8; margin-bottom: 0.15rem;">
+                🔥 ${isLearning ? `[${info.exactBadgeKo} 맞춤 필독서·워크북 1위]` : `[${info.exactBadgeKo} 맞춤 성장판·체형 기구 1위]`}
+              </div>
+              <div style="font-size: 0.92rem; font-weight: 900; color: #0F172A; line-height: 1.35; margin-bottom: 0.18rem; word-break: keep-all;">
+                ${itemB.name}
+              </div>
+              <div style="font-size: 0.77rem; color: #475569; line-height: 1.38; word-break: keep-all;">
+                ${itemB.spec}
+              </div>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.35rem; margin-top: 0.2rem;">
+              <a href="${itemB.coupangUrl}" target="_blank" rel="noopener sponsored" class="pinpoint-direct-link mobile-touch-btn" data-merchant="coupang" data-product-category="${catAttr}" style="display:flex; min-height:40px; align-items:center; justify-content:center; background:#1D4ED8; color:#FFFFFF; font-size:0.79rem; font-weight:900; border-radius:8px; text-decoration:none; text-align:center; padding:0.35rem 0.45rem; box-shadow: 0 3px 10px rgba(29, 78, 216, 0.2);">🛒 쿠팡 로켓 최저가·후기 ↗</a>
+              <a href="${itemB.yes24Url}" target="_blank" rel="noopener sponsored" class="pinpoint-direct-link mobile-touch-btn" data-merchant="linkprice" data-product-category="${catAttr}" style="display:flex; min-height:40px; align-items:center; justify-content:center; background:#EFF6FF; border:1.5px solid #93C5FD; color:#1D4ED8; font-size:0.78rem; font-weight:900; border-radius:8px; text-decoration:none; text-align:center; padding:0.35rem 0.45rem;">📚 YES24 도서·특가 ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 0.55rem; background: #FFFFFF; border: 1px dashed #93C5FD; border-radius: 10px; padding: 0.42rem 0.75rem; font-size: 0.76rem; color: #1E3A8A; font-weight: 800; line-height: 1.4;">
+          💡 <strong>스마트 비교 팁:</strong> 당장 결제하지 않으셔도 위 버튼으로 오늘 로켓와우 할인율과 실제 구매 학부모 후기를 확인한 뒤 <strong>[장바구니]</strong>에 먼저 담아두시면 배우자분과 편하게 비교하실 수 있습니다.
+        </div>
+      </div>
+    `;
+  }
+
   const TallerPinpointCurator = {
     MONTHLY_MICRO_CURATION_DB,
     getMonthlyMicroAnalysisAndProducts,
     renderMonthlyMicroPrescriptionCard,
+    renderFirstFoldQuickPurchaseBridge,
     AGE_LIFECYCLE_DB,
     calculateExactAgeFromDob,
     getDobFromAgeMonths,

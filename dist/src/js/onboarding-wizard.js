@@ -1078,6 +1078,21 @@
     }
   }
 
+  function quickCompleteFromCurrentStep() {
+    try {
+      readProfileFromForm();
+    } catch (_) {}
+    completeScan((profile) => {
+      if (typeof global.KidsFitApp !== 'undefined') {
+        if (typeof global.KidsFitApp.renderPrescriptionResults === 'function') {
+          global.KidsFitApp.renderPrescriptionResults(profile);
+        } else if (typeof global.KidsFitApp.renderPrescriptionReport === 'function') {
+          global.KidsFitApp.renderPrescriptionReport(profile);
+        }
+      }
+    });
+  }
+
   function completeScan(onComplete) {
     if (scanTimer) {
       clearInterval(scanTimer);
@@ -2430,6 +2445,7 @@
     applyPreset,
     start3SecondScan,
     completeScan,
+    quickCompleteFromCurrentStep,
     readProfileFromForm,
     openAdditionalNarrativeStep,
     closeAdditionalNarrativeStep,

@@ -207,6 +207,35 @@ def apply_alphamale_and_cclass_to_qna_pages() -> int:
 </script>
 <!-- ALPHAMALE_CCLASS_CRO_END -->"""
 
+        top_fold_html = f"""<!-- TOP_FOLD_CCLASS_BAR_START -->
+<div style="margin:14px 0 20px 0;padding:14px 16px;border-radius:16px;background:linear-gradient(180deg,#EFF6FF 0%,#FFFFFF 100%);border:2px solid #2563EB;box-shadow:0 6px 18px rgba(37,99,235,0.1);">
+  <div style="font-size:12.5px;font-weight:900;color:#1D4ED8;margin-bottom:6px;">
+    ⚡ 바쁜 부모님용 첫 화면 3초 핵심 준비물 요약 ({spec['badge']})
+  </div>
+  <div style="font-size:13.5px;color:#0F172A;line-height:1.45;margin-bottom:10px;">
+    <strong>1순위 권장 스펙:</strong> {spec['item_a_good']}
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:8px;">
+    <a href="{url_a}" data-product-category="{cat_val}" data-product-name="{spec['item_a_name']}" target="_blank" rel="noopener sponsored" style="display:flex;align-items:center;justify-content:center;padding:10px 12px;border-radius:10px;background:#1D4ED8;color:#FFFFFF;font-weight:900;font-size:13px;text-decoration:none;">
+      🛒 [쿠팡 로켓] {spec['item_a_name'][:16]} 최저가·후기 ↗
+    </a>
+    <a href="{url_b}" data-product-category="{cat_val}" data-product-name="{spec['item_b_name']}" target="_blank" rel="noopener sponsored" style="display:flex;align-items:center;justify-content:center;padding:10px 12px;border-radius:10px;background:#EFF6FF;border:1.5px solid #93C5FD;color:#1D4ED8;font-weight:900;font-size:13px;text-decoration:none;">
+      🚀 [쿠팡 로켓] {spec['item_b_name'][:16]} 스펙 확인 ↗
+    </a>
+  </div>
+</div>
+<!-- TOP_FOLD_CCLASS_BAR_END -->"""
+
+        if "<!-- TOP_FOLD_CCLASS_BAR_START -->" in html:
+            html = re.sub(
+                r"<!-- TOP_FOLD_CCLASS_BAR_START -->.*?<!-- TOP_FOLD_CCLASS_BAR_END -->",
+                lambda _: top_fold_html,
+                html,
+                flags=re.DOTALL,
+            )
+        elif "</h1>" in html:
+            html = html.replace("</h1>", f"</h1>\n{top_fold_html}", 1)
+
         if "<!-- ALPHAMALE_CCLASS_CRO_START -->" in html:
             html = re.sub(
                 r"<!-- ALPHAMALE_CCLASS_CRO_START -->.*?<!-- ALPHAMALE_CCLASS_CRO_END -->",

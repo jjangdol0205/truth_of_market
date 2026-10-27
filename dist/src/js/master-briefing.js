@@ -2188,6 +2188,9 @@
         </div>
 
         <!-- ================================================================== -->
+        <!-- First-Fold 3-Second Quick Purchase Bridge (Growth) -->
+        ${PinpointCurator && typeof PinpointCurator.renderFirstFoldQuickPurchaseBridge === 'function' ? PinpointCurator.renderFirstFoldQuickPurchaseBridge(profile, 'growth') : ''}
+
         <!-- VIVID WEIGHT & BMI BALANCE HERO CARD (몸무게도 키처럼 한눈에 진단!)   -->
         <!-- ================================================================== -->
         <div id="taller-weight-reveal-hero" style="margin-bottom: 1.15rem; padding: 1.25rem 1.35rem; background: #F8FAFC; border: 2px solid #93C5FD; border-radius: 22px;">
@@ -2853,6 +2856,9 @@
               <strong>6개월 예측:</strong> 맞춤 루틴 실천 시 <strong style="color: #1D4ED8;">LQ ${lqData.trajectory.coached.lqScore}점(+${lqData.trajectory.coached.gainLq}점) · 몰입 ${isToddlerAge ? '20분' : '35분'} · 기억보존 92%</strong> 도달
             </div>
           </div>
+
+          <!-- First-Fold 3-Second Quick Purchase Bridge (Learning) -->
+          ${PinpointCurator && typeof PinpointCurator.renderFirstFoldQuickPurchaseBridge === 'function' ? PinpointCurator.renderFirstFoldQuickPurchaseBridge(profile, 'learning') : ''}
 
           <!-- Bespoke Learning Q&A Section (#bespoke-learning-note-section: Responsive Circuit Summary + Clinical Insight Cards) -->
           <div id="bespoke-learning-note-section" style="background: #FFFFFF; border: 1.5px solid #BFDBFE; border-radius: 18px; padding: 1.15rem 1.25rem; margin-bottom: 1.2rem; text-align: left;">
