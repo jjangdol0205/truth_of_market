@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-28 02:00:33 KST",
+  "updated_at": "2026-10-28 03:00:21 KST",
   "total_books_mastered": 8,
   "supplementary_research_count": 6,
   "books": [
@@ -387,6 +387,19 @@
       },
       "korean_perspective_insight": "한국 3040 엄마·아빠는 광고성 문구에 즉각 방어기제를 작동시키지만, '질병관리청(KDCA) 2017 LMS 표준', '보건복지부 K-DST 월령별 발달지표', '거실 0원 놀이 선제시 후 부족한 2%만 채우는 스펙 비교표'에는 높은 신뢰를 보인다. 특히 카카오톡 인앱 브라우저와 네이버 모바일 뷰포트(360~430px)에서 첫 화면 3초 안에 거주 지역(서울 강남·서초·송파 등 국내 16개 권역)과 연령 프리셋이 즉시 매칭될 때 진단 완료율이 극대화된다.",
       "self_improvement_action": "한국 16개 권역 프리셋·주말 나들이(마이리얼트립/클룩)·쿠팡(AF7865143)/예스24(A100708867) 스펙 비교 브릿지 무결성 점검"
+    },
+    {
+      "studied_at": "2026-10-28 03:00:21 KST",
+      "module_id": "KR-NIGHT-04",
+      "domain": "한국 소아 영양학(2020 KDRIs) 편식·철분·아연·칼슘 생체이용률 연구",
+      "book_title_ko": "한국인 영양소 섭취기준(KDRIs) 소아청소년 실전 가이드 & 식탁 위의 영양학",
+      "reference_paper": {
+        "title": "Zinc and Growth in Jordan pediatric with picky eating; An observational research",
+        "journal": "Edited Book",
+        "doi": "10.51219/urforum.2022.amjad-tarawneh"
+      },
+      "korean_perspective_insight": "한국 아동의 국물·탄수화물 위주 식습관과 우유 과다 섭취(하루 600ml 이상 시 철분 흡수 저해)는 미각 세포 재생에 필수적인 아연(Zn)과 저장철(Ferritin) 결핍으로 이어져 밥 한 숟가락에 1시간 걸리는 악순환을 만든다. 위산 분비가 적은 소아에게는 탄산칼슘 대신 구연산·어골칼슘 + 비타민D3 + 마그네슘 배합 기준을 명확히 제시해야 구매 전환이 일어난다.",
+      "self_improvement_action": "영양 큐레이션 스펙 비교표(일반 탄산칼슘 vs 구연산/어골칼슘+D3) 및 Q&A 랜딩페이지 내부링크 클러스터 자동 보강"
     }
   ]
 }

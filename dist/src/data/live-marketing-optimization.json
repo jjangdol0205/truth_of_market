@@ -1,5 +1,5 @@
 {
-  "audited_at": "2026-10-28 02:00:33 KST",
+  "audited_at": "2026-10-28 03:00:21 KST",
   "total_qna_and_seq_pages": 43,
   "pages_auto_patched_with_cro_bar": 26,
   "live_paper_authority_count": 3894,
@@ -17,14 +17,14 @@
     "STEPPS Viral Loop: 카톡·당근 동네생활·블라인드·다음카페 원클릭 공유 바 전 페이지 장착 완료"
   ],
   "coupang_rl_active_policy": {
-    "updated_at_kst": "2026-10-28 01:01:14 KST",
-    "episodes": 51,
+    "updated_at_kst": "2026-10-28 02:01:20 KST",
+    "episodes": 53,
     "winning_category_id": "growth_nutrition_repeat_cart",
     "winning_category_name": "식약처 인증 성장기 칼슘·비타민D·아르기닌·영양제 (반복구매+장바구니 효과 1위)",
-    "winning_category_ucb": 3.254,
+    "winning_category_ucb": 3.281,
     "winning_cta_id": "arm_rocket_review",
     "winning_cta_label": "🛒 쿠팡 로켓배송 최저가·실제 학부모 후기 확인 ↗",
-    "winning_cta_ucb": 2.189,
+    "winning_cta_ucb": 2.212,
     "priority_keywords": [
       "칼슘",
       "비타민D",
@@ -41,6 +41,6 @@
     ],
     "catalog_direct_deep_link": "https://kidsfit.co.kr/?open=catalog&utm_source=rl_bandit"
   },
-  "last_overnight_korean_module": "KR-NIGHT-03",
-  "last_overnight_korean_insight": "한국 3040 엄마·아빠는 광고성 문구에 즉각 방어기제를 작동시키지만, '질병관리청(KDCA) 2017 LMS 표준', '보건복지부 K-DST 월령별 발달지표', '거실 0원 놀이 선제시 후 부족한 2%만 채우는 스펙 비교표'에는 높은 신뢰를 보인다. 특히 카카오톡 인앱 브라우저와 네이버 모바일 뷰포트(360~430px)에서 첫 화면 3초 안에 거주 지역(서울 강남·서초·송파 등 국내 16개 권역)과 연령 프리셋이 즉시 매칭될 때 진단 완료율이 극대화된다."
+  "last_overnight_korean_module": "KR-NIGHT-04",
+  "last_overnight_korean_insight": "한국 아동의 국물·탄수화물 위주 식습관과 우유 과다 섭취(하루 600ml 이상 시 철분 흡수 저해)는 미각 세포 재생에 필수적인 아연(Zn)과 저장철(Ferritin) 결핍으로 이어져 밥 한 숟가락에 1시간 걸리는 악순환을 만든다. 위산 분비가 적은 소아에게는 탄산칼슘 대신 구연산·어골칼슘 + 비타민D3 + 마그네슘 배합 기준을 명확히 제시해야 구매 전환이 일어난다."
 }

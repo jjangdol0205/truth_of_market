@@ -4,9 +4,9 @@
     "version": "1.0.0",
     "partner_id": "AF7865143",
     "ultimate_objective": "Maximize Coupang Partners Expected Commission Revenue + 24h Rocket Cart Halo Conversion",
-    "last_updated_kst": "2026-10-28 02:01:20 KST",
-    "total_episodes": 53,
-    "total_cumulative_reward": 3957.0,
+    "last_updated_kst": "2026-10-28 03:00:57 KST",
+    "total_episodes": 54,
+    "total_cumulative_reward": 3990,
     "exploration_rate_epsilon": 0.18,
     "ucb_exploration_constant_c": 1.414,
     "winning_category_arm": "growth_nutrition_repeat_cart",
@@ -31,11 +31,11 @@
       "id": "arm_rocket_review",
       "label": "🛒 쿠팡 로켓배송 최저가·실제 학부모 후기 확인 ↗",
       "badge": "🚀 로켓와우 내일도착 · 학부모 실구매 후기 검증",
-      "alpha": 52.46,
+      "alpha": 55.76,
       "beta": 12.84,
       "impressions": 336,
-      "clicks": 32,
-      "cumulative_reward": 776,
+      "clicks": 33,
+      "cumulative_reward": 809,
       "ucb_score": 2.212
     },
     "arm_wow_tomorrow": {
@@ -93,11 +93,11 @@
       "commission_multiplier": 1.65,
       "avg_order_value_krw": 38000,
       "cart_halo_multiplier": 2.2,
-      "alpha": 64.02,
+      "alpha": 68.14,
       "beta": 11.05,
       "impressions": 426,
-      "clicks": 39,
-      "cumulative_reward": 1287,
+      "clicks": 40,
+      "cumulative_reward": 1320,
       "ucb_score": 3.281,
       "priority_rank": 1
     },
@@ -260,6 +260,14 @@
     }
   },
   "recent_reward_history": [
+    {
+      "timestampKst": "2026-10-28 03:00:57 KST",
+      "armId": "growth_nutrition_repeat_cart",
+      "ctaArm": "arm_rocket_review",
+      "productName": "칼슴",
+      "reward": 33,
+      "utmSource": "direct"
+    },
     {
       "timestampKst": "2026-10-28 02:01:05 KST",
       "armId": "growth_nutrition_repeat_cart",
