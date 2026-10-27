@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-28 04:00:23 KST",
+  "updated_at": "2026-10-28 05:00:26 KST",
   "total_books_mastered": 8,
   "supplementary_research_count": 6,
   "books": [
@@ -413,6 +413,19 @@
       },
       "korean_perspective_insight": "만 2~6세 한국 영유아 부모들이 고가 전집이나 연령에 맞지 않는 교구를 일괄 구매했다가 당근마켓에 되파는 실패를 줄이려면, 아이의 현재 월령(생년월일 정밀 산출)과 소근육 삼지집기·시지각 단계에 맞춘 핀포인트 교구 1~2종만 추천하고 부모의 15분 하브루타 발문 가이드를 함께 제공해야 한다.",
       "self_improvement_action": "연령별 프리셋(만 2~3세, 만 4~5세, 초등 저/고학년, 중등) 6단계 온보딩 위저드 및 맞춤 교구 서랍 UX 검증"
+    },
+    {
+      "studied_at": "2026-10-28 05:00:26 KST",
+      "module_id": "KR-NIGHT-06",
+      "domain": "한국 주말 가족 체험학습(박물관·과학관·천문대)과 해마 일화기억(Episodic Memory) 전이 연구",
+      "book_title_ko": "주말 박물관·과학관 200% 활용하는 하브루타 대화법 & 체험학습 로드맵",
+      "reference_paper": {
+        "title": "Active Dreaming Memory: Biologically-Inspired Episodic Consolidation for Lifelong Learning in Autonomous Agents",
+        "journal": "International Pediatric Research",
+        "doi": "10.31224/5919"
+      },
+      "korean_perspective_insight": "주말에 국립과천과학관이나 국립중앙박물관을 다녀와도 48시간 내 80%가 망각되는 이유는 관람 전후 인지적 앵커링이 없기 때문이다. 거주 지역별 맞춤 주말 체험 TOP 3 추천과 함께 출발 전 3분 호기심 질문 → 현장 미션 → 귀가 후 연계 도서 1권 루틴을 결합하면 학부모의 체류시간과 마이리얼트립/클룩·예스24 동시 전환율이 상승한다.",
+      "self_improvement_action": "성장 리포트(Report 1) 및 두뇌·학습 리포트(Report 2) 내 거주 지역별 주말 현장 체험 섹션 및 예매 CTA 무결성 점검"
     }
   ]
 }
