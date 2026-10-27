@@ -1282,13 +1282,36 @@
       });
     }
 
-    // Initialize to Step 1
-    goToStep(1);
-    const initialStepTag = document.getElementById('quiz-step-tag');
-    if (initialStepTag) {
-      initialStepTag.textContent = 'Step 1 / 6';
+    // Initialize to Step 1 (Preserve 6-Step OnboardingWizard header, progress, and DOB-matched Imperial ft/in & lbs defaults)
+    const activeWizard = (typeof window !== 'undefined' && (window.KidsFitOnboardingWizard || window.TallerOnboardingWizard)) ||
+      (typeof global !== 'undefined' && (global.KidsFitOnboardingWizard || global.TallerOnboardingWizard)) || null;
+    let hasSavedProfile = false;
+    try {
+      if (typeof window !== 'undefined' && window.localStorage) {
+        hasSavedProfile = Boolean(window.localStorage.getItem('kidsfit_last_quiz_profile_v1'));
+      }
+    } catch (_) {}
+
+    if (activeWizard) {
+      if (typeof activeWizard.goToStep === 'function') {
+        activeWizard.goToStep(1);
+      }
+      if (hasSavedProfile) {
+        syncStateToForm(state.profile);
+      } else if (typeof activeWizard.syncDobAndAutoStage === 'function') {
+        activeWizard.syncDobAndAutoStage();
+        if (typeof activeWizard.getState === 'function' && activeWizard.getState() && activeWizard.getState().profile) {
+          state.profile = Object.assign({}, state.profile, activeWizard.getState().profile);
+        }
+      }
+    } else {
+      goToStep(1);
+      const initialStepTag = document.getElementById('quiz-step-tag');
+      if (initialStepTag) {
+        initialStepTag.textContent = 'Step 1 / 6';
+      }
+      syncStateToForm(state.profile);
     }
-    syncStateToForm(state.profile);
 
     // Support direct URL view, preset, and mode parameters (?view=... | ?preset=... | ?mode=growth|learning)
     if (typeof window !== 'undefined' && window.location && window.location.search) {

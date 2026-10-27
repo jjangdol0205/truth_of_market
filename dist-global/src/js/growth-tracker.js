@@ -453,6 +453,265 @@
     const patientId = `TB-2026-${Math.abs((ageMonths * 73 + Math.round(height * 11)) % 9000 + 1000)}`;
     const todayStrEn = new Date().toISOString().split('T')[0];
     if (isGlobal) {
+      const formEl = (typeof document !== 'undefined') ? document.getElementById('diagnosis-form') : null;
+      const isLearningMode = (profile.preferredReportMode === 'learning') ||
+        (typeof window !== 'undefined' && window.__KIDSFIT_PREFERRED_REPORT_MODE === 'learning') ||
+        Boolean(formEl && formEl.className && formEl.className.includes('wizard-mode-learning'));
+
+      if (isLearningMode) {
+        const cogAxes = Array.isArray(profile.cognitiveAxes) && profile.cognitiveAxes.length ? profile.cognitiveAxes : ['science_nature', 'math_logic'];
+        const concerns = Array.isArray(profile.traitLearningConcerns) && profile.traitLearningConcerns.length ? profile.traitLearningConcerns : ['reading_literacy', 'passive_forget'];
+        const focusSpanVal = profile.traitFocusSpan || (typeof document !== 'undefined' && document.getElementById('trait-focus-span') ? document.getElementById('trait-focus-span').value : '15_20m');
+        const studyStyleVal = profile.traitStudyStyle || (typeof document !== 'undefined' && document.getElementById('trait-study-style') ? document.getElementById('trait-study-style').value : 'dialogue_question');
+        const focusSpanMap = {
+          under_10m: 'Under 10 mins (Short Modular Sprint Tasks)',
+          '15_20m': '15-20 mins (Structured Step-by-Step Routine)',
+          '30m_plus': '30+ mins (Deep Inquiry & Project Immersion)'
+        };
+        const studyStyleMap = {
+          dialogue_question: 'Socratic Dialogue & Feynman Active Explanation',
+          play_manipulative: 'Hands-On 3D Manipulative & Experimental Modeling',
+          visual_story: 'Visual Schema, Diagram & Mind-Map Structuring',
+          goal_workbook: '15-Minute Timed Micro-Mission & Milestone Checklist'
+        };
+        const focusSpanLabel = focusSpanMap[focusSpanVal] || focusSpanMap['15_20m'];
+        const studyStyleLabel = studyStyleMap[studyStyleVal] || studyStyleMap.dialogue_question;
+
+        const literacyScore = concerns.includes('reading_literacy') ? 72 : (cogAxes.includes('language_reading') ? 89 : 82);
+        const mathSpatialScore = concerns.includes('math_concept') ? 74 : (cogAxes.includes('math_logic') ? 91 : 84);
+        const workingMemoryScore = focusSpanVal === 'under_10m' ? 66 : (focusSpanVal === '30m_plus' ? 88 : 75);
+        const activeRecallScore = concerns.includes('passive_forget') ? 68 : 83;
+        const scientificInquiryScore = cogAxes.includes('science_nature') ? 90 : 85;
+        const overallLQ = Number(((literacyScore + mathSpatialScore + workingMemoryScore + activeRecallScore + scientificInquiryScore) / 5).toFixed(1));
+        const coachedLQ = Math.min(98.5, Number((overallLQ + 14.5).toFixed(1)));
+        const lqTopPct = Math.max(4, Math.min(45, Math.round(100 - overallLQ)));
+        const exactAgeMonths = Math.max(24, Math.min(216, Math.round(Number(ageMonths) || (ageYears * 12))));
+        const ageMonthFocusMinutes = Math.min(50, Math.max(8, Math.round(exactAgeMonths * 0.22)));
+        const ageMonthWmChunks = exactAgeMonths < 84 ? '3 ± 1 chunks' : (exactAgeMonths < 144 ? '4 ± 1 chunks' : '5 ± 1 chunks');
+        const zincMg = ageYears >= 9 ? 11 : 8;
+
+        return `
+        <div id="clinic-print-report" class="clinic-print-report" style="display: none;" data-report-mode="learning">
+          <div class="print-page print-page-1" style="page-break-after: always; padding: 20mm 15mm; background: #FFFFFF; color: #0F172A; font-family: 'Plus Jakarta Sans', sans-serif;">
+            <div style="border-bottom: 2.5px solid #1D4ED8; padding-bottom: 12px; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: flex-end;">
+              <div>
+                <div style="font-size: 10pt; font-weight: 800; color: #1D4ED8; letter-spacing: 0.08em; text-transform: uppercase;">
+                  KISFIT BIO LABS · HARVARD / WASHU NEURO-COGNITIVE 5-AXIS BRAIN LQ™ v4.0
+                </div>
+                <h1 style="font-size: 18pt; font-weight: 900; color: #0F172A; margin: 4px 0 0 0;">
+                  5-Axis Brain Learning Quotient (LQ) &amp; Executive Function Clinical Report (Page 1/2)
+                </h1>
+              </div>
+              <div style="text-align: right; font-size: 8.5pt; color: #475569;">
+                <div><strong>Reference Standard:</strong> Harvard / WashU Neuro-Pedagogy &amp; NIH ODS</div>
+                <div><strong>Issued Date:</strong> ${todayStrEn}</div>
+              </div>
+            </div>
+
+            <table style="width: 100%; border: 1.5px solid #CBD5E1; border-collapse: collapse; margin-bottom: 16px; font-size: 9.5pt;">
+              <tr style="background: #F8FAFC; border-bottom: 1px solid #CBD5E1;">
+                <th style="padding: 6px 10px; width: 14%; border-right: 1px solid #CBD5E1; color: #475569;">Patient ID</th>
+                <td style="padding: 6px 10px; width: 20%; border-right: 1px solid #CBD5E1; font-weight: 700; font-family: monospace;">${patientId}</td>
+                <th style="padding: 6px 10px; width: 14%; border-right: 1px solid #CBD5E1; color: #475569;">Sex / Age</th>
+                <td style="padding: 6px 10px; width: 20%; border-right: 1px solid #CBD5E1; font-weight: 700;">${gender} / Age ${ageYears} (${exactAgeMonths} mos)</td>
+                <th style="padding: 6px 10px; width: 14%; border-right: 1px solid #CBD5E1; color: #475569;">Division</th>
+                <td style="padding: 6px 10px; font-weight: 700; color: #1D4ED8;">Developmental Cognitive Neuroscience</td>
+              </tr>
+              <tr>
+                <th style="padding: 6px 10px; border-right: 1px solid #CBD5E1; background: #F8FAFC; color: #475569;">Overall Brain LQ</th>
+                <td style="padding: 6px 10px; border-right: 1px solid #CBD5E1; font-weight: 800; color: #1D4ED8;">${overallLQ} pts (Top ${lqTopPct}%)</td>
+                <th style="padding: 6px 10px; border-right: 1px solid #CBD5E1; background: #F8FAFC; color: #475569;">Desk Focus Span</th>
+                <td style="padding: 6px 10px; border-right: 1px solid #CBD5E1; font-weight: 700;">${focusSpanLabel}</td>
+                <th style="padding: 6px 10px; border-right: 1px solid #CBD5E1; background: #F8FAFC; color: #475569;">Absorption Style</th>
+                <td style="padding: 6px 10px; font-weight: 700;">${studyStyleLabel}</td>
+              </tr>
+            </table>
+
+            <div style="margin-bottom: 16px;">
+              <h2 style="font-size: 11pt; font-weight: 800; color: #0F172A; border-left: 4px solid #1D4ED8; padding-left: 8px; margin: 0 0 8px 0;">
+                1. 5-Axis Brain Learning Quotient (LQ) Percentile &amp; Neural Circuit Breakdown
+              </h2>
+              <table style="width: 100%; border: 1px solid #CBD5E1; border-collapse: collapse; font-size: 9pt; text-align: left;">
+                <thead>
+                  <tr style="background: #EFF6FF; border-bottom: 1px solid #CBD5E1; color: #1E3A8A;">
+                    <th style="padding: 6px 8px; border-right: 1px solid #CBD5E1;">Neural Circuit Axis</th>
+                    <th style="padding: 6px 8px; border-right: 1px solid #CBD5E1; text-align: center;">Baseline Score</th>
+                    <th style="padding: 6px 8px; border-right: 1px solid #CBD5E1; text-align: center;">6-Mo Coached Target</th>
+                    <th style="padding: 6px 8px;">Clinical Neuro-Cognitive Assessment</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="border-bottom: 1px solid #E2E8F0;">
+                    <td style="padding: 6px 8px; border-right: 1px solid #E2E8F0; font-weight: 700;">1. Reading Comprehension &amp; Literacy</td>
+                    <td style="padding: 6px 8px; border-right: 1px solid #E2E8F0; text-align: center; font-weight: 800; color: #1D4ED8;">${literacyScore} / 100</td>
+                    <td style="padding: 6px 8px; border-right: 1px solid #E2E8F0; text-align: center; font-weight: 800; color: #059669;">${Math.min(98, literacyScore + 14)} / 100</td>
+                    <td style="padding: 6px 8px;">Semantic chunking &amp; 3-sentence paragraph synthesis</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid #E2E8F0;">
+                    <td style="padding: 6px 8px; border-right: 1px solid #E2E8F0; font-weight: 700;">2. Spatial-Mathematical Reasoning</td>
+                    <td style="padding: 6px 8px; border-right: 1px solid #E2E8F0; text-align: center; font-weight: 800; color: #1D4ED8;">${mathSpatialScore} / 100</td>
+                    <td style="padding: 6px 8px; border-right: 1px solid #E2E8F0; text-align: center; font-weight: 800; color: #059669;">${Math.min(99, mathSpatialScore + 12)} / 100</td>
+                    <td style="padding: 6px 8px;">Parietal visual bar-modeling before algebraic equations</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid #E2E8F0;">
+                    <td style="padding: 6px 8px; border-right: 1px solid #E2E8F0; font-weight: 700;">3. Prefrontal Working Memory &amp; Focus</td>
+                    <td style="padding: 6px 8px; border-right: 1px solid #E2E8F0; text-align: center; font-weight: 800; color: #DC2626;">${workingMemoryScore} / 100</td>
+                    <td style="padding: 6px 8px; border-right: 1px solid #E2E8F0; text-align: center; font-weight: 800; color: #059669;">${Math.min(96, workingMemoryScore + 18)} / 100</td>
+                    <td style="padding: 6px 8px;">Dorsolateral prefrontal sustained attention (${ageMonthWmChunks} buffer)</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid #E2E8F0;">
+                    <td style="padding: 6px 8px; border-right: 1px solid #E2E8F0; font-weight: 700;">4. Metacognitive Active Recall</td>
+                    <td style="padding: 6px 8px; border-right: 1px solid #E2E8F0; text-align: center; font-weight: 800; color: #DC2626;">${activeRecallScore} / 100</td>
+                    <td style="padding: 6px 8px; border-right: 1px solid #E2E8F0; text-align: center; font-weight: 800; color: #059669;">${Math.min(97, activeRecallScore + 19)} / 100</td>
+                    <td style="padding: 6px 8px;">Hippocampal retrieval practice &amp; Feynman blank-page recall</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 6px 8px; border-right: 1px solid #E2E8F0; font-weight: 700;">5. Scientific Inquiry &amp; Creative Transfer</td>
+                    <td style="padding: 6px 8px; border-right: 1px solid #E2E8F0; text-align: center; font-weight: 800; color: #1D4ED8;">${scientificInquiryScore} / 100</td>
+                    <td style="padding: 6px 8px; border-right: 1px solid #E2E8F0; text-align: center; font-weight: 800; color: #059669;">${Math.min(99, scientificInquiryScore + 10)} / 100</td>
+                    <td style="padding: 6px 8px;">Hypothesis testing &amp; cross-domain STEM conceptual transfer</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div style="margin-bottom: 16px;">
+              <h2 style="font-size: 11pt; font-weight: 800; color: #0F172A; border-left: 4px solid #059669; padding-left: 8px; margin: 0 0 8px 0;">
+                2. 3-Tier Brain LQ Trajectory &amp; Customized Neuro-Study Strategy
+              </h2>
+              <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; text-align: center; margin-bottom: 10px;">
+                <div style="border: 1px solid #93C5FD; border-radius: 6px; padding: 10px; background: #F8FAFC;">
+                  <div style="font-size: 8pt; font-weight: 700; color: #1E3A8A;">Current 5-Axis Brain LQ</div>
+                  <div style="font-size: 14pt; font-weight: 900; color: #1D4ED8; margin: 4px 0;">${overallLQ} pts (Top ${lqTopPct}%)</div>
+                  <div style="font-size: 7.5pt; color: #64748B;">Age ${ageYears} Norm: 78.0 pts</div>
+                </div>
+                <div style="border: 1px solid #FECDD3; border-radius: 6px; padding: 10px; background: #FFF1F2;">
+                  <div style="font-size: 8pt; font-weight: 700; color: #DC2626;">Primary Cognitive Bottleneck</div>
+                  <div style="font-size: 11pt; font-weight: 900; color: #DC2626; margin: 6px 0;">Working Memory &amp; Active Recall</div>
+                  <div style="font-size: 7.5pt; color: #475569;">Sprint Ceiling: ${ageMonthFocusMinutes} mins/block</div>
+                </div>
+                <div style="border: 1px solid #6EE7B7; border-radius: 6px; padding: 10px; background: #ECFDF5;">
+                  <div style="font-size: 8pt; font-weight: 700; color: #047857;">6-Month Coached Potential LQ</div>
+                  <div style="font-size: 14pt; font-weight: 900; color: #059669; margin: 4px 0;">${coachedLQ} pts (Top 4%)</div>
+                  <div style="font-size: 7.5pt; color: #059669;">+${(coachedLQ - overallLQ).toFixed(1)} Pts Synaptic Efficiency Gain</div>
+                </div>
+              </div>
+              <div style="border: 1px solid #BFDBFE; border-radius: 6px; padding: 10px; background: #EFF6FF; font-size: 8.5pt; line-height: 1.5;">
+                <strong>• Protocol A (Feynman 3-Min Blank-Page Recall):</strong> Close the textbook after 20 minutes of study and write/explain 3 core concepts from memory (+150% 30-day retention).<br>
+                <strong>• Protocol B (Visual Bar-Modeling Offload):</strong> Externalize multi-step math &amp; reading variables into a 3-box diagram before writing equations to bypass the ${ageMonthWmChunks} working-memory ceiling.<br>
+                <strong>• Protocol C (N3 Sleep Hippocampal Consolidation + Neuro-Nutrition):</strong> 10-min pre-sleep review + Triglyceride DHA (600-800 mg), Phosphatidylcholine, and evening Magnesium Glycinate + Chelated Zinc (${zincMg} mg).
+              </div>
+            </div>
+
+            <div style="border-top: 1px solid #CBD5E1; padding-top: 8px; font-size: 8pt; color: #64748B; display: flex; justify-content: space-between;">
+              <span>KISFIT BIO LABS · NEURO-COGNITIVE 5-AXIS BRAIN LQ™ v4.0</span>
+              <span>Page 1 of 2 (Continued on Page 2)</span>
+            </div>
+          </div>
+
+          <div class="print-page print-page-2" style="padding: 20mm 15mm; background: #FFFFFF; color: #0F172A; font-family: 'Plus Jakarta Sans', sans-serif;">
+            <div style="border-bottom: 2.5px solid #1D4ED8; padding-bottom: 12px; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: flex-end;">
+              <div>
+                <div style="font-size: 10pt; font-weight: 800; color: #1D4ED8; letter-spacing: 0.08em; text-transform: uppercase;">
+                  KISFIT BIO LABS · HARVARD / WASHU NEURO-COGNITIVE 5-AXIS BRAIN LQ™ v4.0
+                </div>
+                <h1 style="font-size: 18pt; font-weight: 900; color: #0F172A; margin: 4px 0 0 0;">
+                  6-Month Monthly Neuro-Study Roadmap &amp; 4 Printable Cognitive Worksheets (Page 2/2)
+                </h1>
+              </div>
+              <div style="text-align: right; font-size: 8.5pt; color: #475569;">
+                <div><strong>Patient ID:</strong> <span style="font-family: monospace;">${patientId}</span></div>
+                <div><strong>Patient / Track:</strong> Age ${ageYears} (${gender}) · Brain &amp; Learning</div>
+              </div>
+            </div>
+
+            <div style="margin-bottom: 16px;">
+              <h2 style="font-size: 11pt; font-weight: 800; color: #0F172A; border-left: 4px solid #1D4ED8; padding-left: 8px; margin: 0 0 8px 0;">
+                3. 6-Month Month-by-Month Prefrontal Myelination &amp; Study Care Roadmap (Months ${exactAgeMonths} to ${exactAgeMonths + 5})
+              </h2>
+              <table style="width: 100%; border: 1px solid #CBD5E1; border-collapse: collapse; font-size: 8.5pt;">
+                <thead>
+                  <tr style="background: #F1F5F9; border-bottom: 1px solid #CBD5E1;">
+                    <th style="padding: 6px; width: 18%; border-right: 1px solid #CBD5E1;">Month / Age</th>
+                    <th style="padding: 6px; width: 16%; border-right: 1px solid #CBD5E1; text-align: center;">Target Brain LQ</th>
+                    <th style="padding: 6px;">Monthly Executive Function, Study Habit &amp; Neuro-Nutrition Action Plan</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="border-bottom: 1px solid #E2E8F0;">
+                    <td style="padding: 6px; border-right: 1px solid #E2E8F0; font-weight: 700;">Month 1 (${exactAgeMonths}m)</td>
+                    <td style="padding: 6px; border-right: 1px solid #E2E8F0; text-align: center; font-weight: 800; color: #1D4ED8;">${(overallLQ + 2.4).toFixed(1)} pts</td>
+                    <td style="padding: 6px;">Lock in ${ageMonthFocusMinutes}-min timed micro-sprints + 60m pre-study screen lockbox + morning DHA/Choline.</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid #E2E8F0;">
+                    <td style="padding: 6px; border-right: 1px solid #E2E8F0; font-weight: 700;">Month 2 (${exactAgeMonths + 1}m)</td>
+                    <td style="padding: 6px; border-right: 1px solid #E2E8F0; text-align: center; font-weight: 800; color: #1D4ED8;">${(overallLQ + 5.1).toFixed(1)} pts</td>
+                    <td style="padding: 6px;">Transition from passive reading to Feynman 3-Min Blank-Page Recall (Worksheet 01) + Phosphatidylserine (100 mg).</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid #E2E8F0;">
+                    <td style="padding: 6px; border-right: 1px solid #E2E8F0; font-weight: 700;">Month 3 (${exactAgeMonths + 2}m)</td>
+                    <td style="padding: 6px; border-right: 1px solid #E2E8F0; text-align: center; font-weight: 800; color: #1D4ED8;">${(overallLQ + 7.8).toFixed(1)} pts</td>
+                    <td style="padding: 6px;">Apply 3-Box Visual Bar-Modeling (Worksheet 02) on multi-step math &amp; ELA problems; audit 90-day error reduction.</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid #E2E8F0;">
+                    <td style="padding: 6px; border-right: 1px solid #E2E8F0; font-weight: 700;">Month 4 (${exactAgeMonths + 3}m)</td>
+                    <td style="padding: 6px; border-right: 1px solid #E2E8F0; text-align: center; font-weight: 800; color: #1D4ED8;">${(overallLQ + 10.2).toFixed(1)} pts</td>
+                    <td style="padding: 6px;">Cornell 3-Color Error Tagging ([Careless Skip] vs [Concept Gap]) with mandatory 72-hr blind re-testing.</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid #E2E8F0;">
+                    <td style="padding: 6px; border-right: 1px solid #E2E8F0; font-weight: 700;">Month 5 (${exactAgeMonths + 4}m)</td>
+                    <td style="padding: 6px; border-right: 1px solid #E2E8F0; text-align: center; font-weight: 800; color: #1D4ED8;">${(overallLQ + 12.5).toFixed(1)} pts</td>
+                    <td style="padding: 6px;">Socratic 3-Step Deep Transfer ([Observation] → [Why Hypothesis] → [STEM Application]); extend sprint to ${ageMonthFocusMinutes + 8} mins.</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 6px; border-right: 1px solid #E2E8F0; font-weight: 700;">Month 6 (${exactAgeMonths + 5}m)</td>
+                    <td style="padding: 6px; border-right: 1px solid #E2E8F0; text-align: center; font-weight: 800; color: #059669;">${coachedLQ} pts</td>
+                    <td style="padding: 6px;">180-Day 5-Axis Brain LQ Audit; verify autonomous self-directed study habit at ${ageMonthFocusMinutes + 12} mins.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div style="margin-bottom: 14px;">
+              <h2 style="font-size: 11pt; font-weight: 800; color: #0F172A; border-left: 4px solid #059669; padding-left: 8px; margin: 0 0 8px 0;">
+                4. 4 Printable Cognitive &amp; Working-Memory Worksheets (US Letter 8.5&quot; × 11&quot; Desk Templates)
+              </h2>
+              <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; font-size: 8.5pt;">
+                <div style="border: 1.5px solid #93C5FD; border-radius: 8px; padding: 10px; background: #F8FAFC;">
+                  <div style="font-weight: 900; color: #1D4ED8; margin-bottom: 4px;">Worksheet 01 · Feynman 3-Min Blank-Page Recall</div>
+                  <div>1. Core Concept Learned Today: ____________________________</div>
+                  <div>2. Explain It to a Younger Student: ________________________</div>
+                  <div>3. 1 Self-Check Question / Gap: ___________________________</div>
+                </div>
+                <div style="border: 1.5px solid #93C5FD; border-radius: 8px; padding: 10px; background: #F8FAFC;">
+                  <div style="font-weight: 900; color: #1D4ED8; margin-bottom: 4px;">Worksheet 02 · Visual Math Bar-Modeling Canvas</div>
+                  <div>[Given Part A: ______ ] + [Given Part B: ______ ] = [Total: ______ ]</div>
+                  <div>Comparison Difference Bar: _______________________________</div>
+                  <div>Target Equation &amp; Units: _________________________________</div>
+                </div>
+                <div style="border: 1.5px solid #93C5FD; border-radius: 8px; padding: 10px; background: #F8FAFC;">
+                  <div style="font-weight: 900; color: #1D4ED8; margin-bottom: 4px;">Worksheet 03 · ${ageMonthFocusMinutes}-Min Prefrontal Focus Sprint Log</div>
+                  <div>Sprint Goal (3 Tasks): □ Task 1  □ Task 2  □ Task 3</div>
+                  <div>Distraction Tally Marks: __________________________________</div>
+                  <div>Completion Time &amp; Accuracy: ________ mins / _____%</div>
+                </div>
+                <div style="border: 1.5px solid #93C5FD; border-radius: 8px; padding: 10px; background: #F8FAFC;">
+                  <div style="font-weight: 900; color: #1D4ED8; margin-bottom: 4px;">Worksheet 04 · Socratic 3-Step Inquiry Organizer</div>
+                  <div>Step 1 (Observation): What did you notice? _________________</div>
+                  <div>Step 2 (Hypothesis): Why does this rule work? ______________</div>
+                  <div>Step 3 (Transfer): Real-World STEM Example: _______________</div>
+                </div>
+              </div>
+            </div>
+
+            <div style="border-top: 1px solid #CBD5E1; padding-top: 8px; font-size: 8pt; color: #64748B; display: flex; justify-content: space-between;">
+              <span>KISFIT BIO LABS · NEURO-COGNITIVE 5-AXIS BRAIN LQ™ v4.0 (kisfitglobal.com)</span>
+              <span>Page 2 of 2 (End of Clinical Report)</span>
+            </div>
+          </div>
+        </div>
+        `;
+      }
       const isImp = typeof window !== 'undefined' && (window.__KIDSFIT_UNIT_SYSTEM__ === 'imperial' || (window.TallerI18n && typeof window.TallerI18n.getUnitSystem === 'function' && window.TallerI18n.getUnitSystem() === 'imperial'));
       const fmtH = (cmVal) => {
         const c = Number(cmVal) || 0;

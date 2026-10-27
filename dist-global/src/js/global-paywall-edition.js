@@ -52,13 +52,6 @@
           if (window.localStorage) window.localStorage.removeItem(UNLOCK_STORAGE_KEY);
           return false;
         }
-        if (s.indexOf('payment=success') !== -1 && window.localStorage) {
-          const pendingTs = parseInt(window.localStorage.getItem('kidsfit_pending_ls_checkout_ts_v1') || '0', 10);
-          if (pendingTs > 0 && (Date.now() - pendingTs) < 86400000) {
-            window.localStorage.setItem(UNLOCK_STORAGE_KEY, 'true');
-            return true;
-          }
-        }
       }
       if (typeof window !== 'undefined' && window.localStorage) {
         return window.localStorage.getItem(UNLOCK_STORAGE_KEY) === 'true';
@@ -91,7 +84,23 @@
       return false;
     }
     if (typeof global.KidsFitGrowthTracker !== 'undefined' && typeof global.KidsFitGrowthTracker.preparePrintReport === 'function') {
-      const prof = (global.KidsFitApp && global.KidsFitApp.state && global.KidsFitApp.state.profile) || {};
+      let savedProf = {};
+      try {
+        if (typeof window !== 'undefined' && window.localStorage) {
+          const rawSaved = window.localStorage.getItem('kidsfit_last_quiz_profile_v1');
+          if (rawSaved) savedProf = JSON.parse(rawSaved) || {};
+        }
+      } catch (_) {}
+      const wizObj = global.KidsFitOnboardingWizard || global.TallerOnboardingWizard;
+      const wizProf = (wizObj && typeof wizObj.getState === 'function' && wizObj.getState().profile) || {};
+      const appProf = (global.KidsFitApp && global.KidsFitApp.state && global.KidsFitApp.state.profile) || {};
+      const prof = Object.assign({}, savedProf, wizProf, appProf);
+      const formEl = typeof document !== 'undefined' ? document.getElementById('diagnosis-form') : null;
+      const isLearningMode = (prof.preferredReportMode === 'learning') ||
+        (wizProf.preferredReportMode === 'learning') ||
+        (global.__KIDSFIT_PREFERRED_REPORT_MODE === 'learning') ||
+        Boolean(formEl && formEl.className && formEl.className.includes('wizard-mode-learning'));
+      prof.preferredReportMode = isLearningMode ? 'learning' : 'growth';
       global.KidsFitGrowthTracker.preparePrintReport(prof);
     }
     if (typeof window !== 'undefined' && typeof window.print === 'function') {
@@ -959,7 +968,7 @@
 
     function fmtMaskedLen(cmVal) {
       if (isMasked) {
-        return isImperial ? '5\' ?.?″ (??? cm)' : '???.? cm (5\' ?.?″)';
+        return isImperial ? '5\' █.█″ (███.█ cm)' : '███.█ cm (5\' █.█″)';
       }
       return fmtLen(cmVal);
     }
@@ -980,15 +989,17 @@
       return isImperial ? `+${inVal} in (+${cmStr} cm)` : `+${cmStr} cm (+${inVal} in)`;
     }
 
-    const unmanagedImp = isMasked ? '5\' ?.?″' : cmToFtInStr(unmanagedCm);
-    const geneticImp = isMasked ? '5\' ?.?″' : cmToFtInStr(geneticCm);
-    const optimizedImp = isMasked ? '5\' ?.?″' : cmToFtInStr(optimizedCm);
-    const unmanagedCmDisp = isMasked ? '???.?' : unmanagedCm;
-    const geneticCmDisp = isMasked ? '???.?' : geneticCm;
-    const optimizedCmDisp = isMasked ? '???.?' : optimizedCm;
+    const unmanagedImp = isMasked ? '5\' █.█″' : cmToFtInStr(unmanagedCm);
+    const geneticImp = isMasked ? '5\' █.█″' : cmToFtInStr(geneticCm);
+    const optimizedImp = isMasked ? '5\' █.█″' : cmToFtInStr(optimizedCm);
+    const unmanagedCmDisp = isMasked ? '███.█' : unmanagedCm;
+    const geneticCmDisp = isMasked ? '███.█' : geneticCm;
+    const optimizedCmDisp = isMasked ? '███.█' : optimizedCm;
     const bmi = Number((weightKg / Math.pow(heightCm / 100, 2)).toFixed(1));
     const idealWeightKg = Number((18.5 * Math.pow(heightCm / 100, 2)).toFixed(1));
     const pctVal = Number(kdca.percentile || 50).toFixed(1);
+    const pctValDisp = isMasked ? '██.█' : pctVal;
+    const zScoreDisp = isMasked ? '█.██' : (kdca.zScore || '0.00');
     const remainYears = Math.max(1, (isBoy ? 17 : 15) - ageY);
 
     // Nutrient targets scaled by weight & survey diet traits
@@ -1116,8 +1127,19 @@
     const overallLQ = Number(((literacyScore + mathSpatialScore + workingMemoryScore + activeRecallScore + scientificInquiryScore) / 5).toFixed(1));
     const coachedLQ = Math.min(98.5, Number((overallLQ + 14.5).toFixed(1)));
     const lqTopPct = Math.max(4, Math.min(45, Math.round(100 - overallLQ)));
-    const overallLQDisp = isMasked ? '??.?' : overallLQ;
-    const coachedLQDisp = isMasked ? '??.?' : coachedLQ;
+    const overallLQDisp = isMasked ? '██.█' : overallLQ;
+    const coachedLQDisp = isMasked ? '██.█' : coachedLQ;
+    const lqTopPctDisp = isMasked ? '██' : lqTopPct;
+    const literacyScoreDisp = isMasked ? '██' : literacyScore;
+    const literacyTargetDisp = isMasked ? '██' : Math.min(98, literacyScore + 14);
+    const mathSpatialScoreDisp = isMasked ? '██' : mathSpatialScore;
+    const mathSpatialTargetDisp = isMasked ? '██' : Math.min(99, mathSpatialScore + 12);
+    const workingMemoryScoreDisp = isMasked ? '██' : workingMemoryScore;
+    const workingMemoryTargetDisp = isMasked ? '██' : Math.min(96, workingMemoryScore + 18);
+    const activeRecallScoreDisp = isMasked ? '██' : activeRecallScore;
+    const activeRecallTargetDisp = isMasked ? '██' : Math.min(97, activeRecallScore + 19);
+    const scientificInquiryScoreDisp = isMasked ? '██' : scientificInquiryScore;
+    const scientificInquiryTargetDisp = isMasked ? '██' : Math.min(99, scientificInquiryScore + 10);
     const usGradeStageLabel = ageY <= 4
       ? 'US Early Childhood / Pre-K (AAP & ASQ-3 Developmental Track)'
       : (ageY <= 10
@@ -1180,8 +1202,8 @@
         </h2>
         <div id="global-report-child-conditions-box" style="background:#FFFFFF;border:1.5px solid #93C5FD;border-radius:12px;padding:0.75rem 1rem;color:#0F172A;font-size:0.86rem;line-height:1.55;">
           ${isLearningMode
-            ? `<strong style="color:#1D4ED8;">Evaluated Child Conditions (Brain &amp; Learning Mode):</strong> Age <strong>${ageY} yrs ${ageRemM} mos (${genderLabel})</strong> · Overall Brain LQ: <strong style="color:#1D4ED8;">${overallLQDisp} pts (Top ${lqTopPct}%)</strong> · Attention Span: <strong>${focusSpanLabel}</strong> · Preferred Absorption Style: <strong>${studyStyleLabel}</strong>`
-            : `<strong style="color:#1D4ED8;">Evaluated Child Conditions (Physical Growth Mode):</strong> Age <strong>${ageY} yrs ${ageRemM} mos (${genderLabel})</strong> · Current Stature: <strong style="color:#1D4ED8;">${fmtLen(heightCm)} · ${pctVal}th CDC Percentile</strong> · Weight: <strong>${fmtWt(weightKg)} · BMI ${bmi}</strong> · 6-Mo Gain: <strong>${isImperial ? (recentGrowth6mCm / 2.54).toFixed(1) + ' in (' + recentGrowth6mCm.toFixed(1) + ' cm)' : recentGrowth6mCm.toFixed(1) + ' cm (' + (recentGrowth6mCm / 2.54).toFixed(1) + ' in)'}</strong> · Reference: <strong>${ethInfo.label}</strong>`}
+            ? `<strong style="color:#1D4ED8;">Evaluated Child Conditions (Brain &amp; Learning Mode):</strong> Age <strong>${ageY} yrs ${ageRemM} mos (${genderLabel})</strong> · Overall Brain LQ: <strong style="color:#1D4ED8;">${overallLQDisp} pts (Top ${lqTopPctDisp}%)</strong> · Attention Span: <strong>${focusSpanLabel}</strong> · Preferred Absorption Style: <strong>${studyStyleLabel}</strong>`
+            : `<strong style="color:#1D4ED8;">Evaluated Child Conditions (Physical Growth Mode):</strong> Age <strong>${ageY} yrs ${ageRemM} mos (${genderLabel})</strong> · Current Stature: <strong style="color:#1D4ED8;">${fmtLen(heightCm)} · ${pctValDisp}th CDC Percentile</strong> · Weight: <strong>${fmtWt(weightKg)} · BMI ${bmi}</strong> · 6-Mo Gain: <strong>${isImperial ? (recentGrowth6mCm / 2.54).toFixed(1) + ' in (' + recentGrowth6mCm.toFixed(1) + ' cm)' : recentGrowth6mCm.toFixed(1) + ' cm (' + (recentGrowth6mCm / 2.54).toFixed(1) + ' in)'}</strong> · Reference: <strong>${ethInfo.label}</strong>`}
         </div>
       </div>
 
@@ -1204,7 +1226,7 @@
             Predicted Adult Height: Unmanaged (${fmtMaskedLen(unmanagedCm)}) vs. Genetic Target (${fmtMaskedLen(geneticCm)}) vs. Optimized (${fmtMaskedLen(optimizedCm)})
           </h3>
           <p style="font-size:0.86rem;color:#475569;margin:0 0 1rem 0;line-height:1.55;">
-            Based on Tanner Mid-Parental Height (Father ${fmtLen(fatherCm)}, Mother ${fmtLen(motherCm)}) and current CDC LMS Z-score (${kdca.zScore || '0.00'}), correcting nocturnal GH suppression and spinal disc compression unlocks up to <strong>${fmtGain(hiddenGainCm)}</strong> before epiphyseal fusion.
+            Based on Tanner Mid-Parental Height (Father ${fmtLen(fatherCm)}, Mother ${fmtLen(motherCm)}) and current CDC LMS Z-score (${zScoreDisp}), correcting nocturnal GH suppression and spinal disc compression unlocks up to <strong>${fmtGain(hiddenGainCm)}</strong> before epiphyseal fusion.
           </p>
 
           <!-- 3-Tier Height Cards -->
@@ -1252,7 +1274,7 @@
               <tbody>
                 <tr style="border-bottom:1px solid #E2E8F0;">
                   <td style="padding:0.65rem 0.8rem;font-weight:800;color:#0F172A;">Current Height Percentile</td>
-                  <td style="padding:0.65rem 0.8rem;font-weight:800;color:#1D4ED8;">${fmtLen(heightCm)} · ${pctVal}th %</td>
+                  <td style="padding:0.65rem 0.8rem;font-weight:800;color:#1D4ED8;">${fmtLen(heightCm)} · ${pctValDisp}th %</td>
                   <td style="padding:0.65rem 0.8rem;color:#475569;">50th% Mean: ${fmtLen(lms.M)}</td>
                   <td style="padding:0.65rem 0.8rem;color:#334155;">${isBelow50 ? 'Priority Catch-Up Growth Window' : 'Above-Average Stature · Bone-Age Defense'}</td>
                 </tr>
@@ -1316,6 +1338,12 @@
           </div>
         </section>
 
+${isMasked ? `
+        <section id="global-locked-chapters-skeleton" style="background:#F8FAFC;border:1.5px dashed #93C5FD;border-radius:18px;padding:1.35rem 1.3rem;margin-bottom:1.25rem;text-align:center;color:#475569;">
+          <div style="font-size:0.82rem;font-weight:900;color:#1D4ED8;margin-bottom:0.35rem;">🔒 CHAPTERS 02 – 04-B &amp; PRINTABLE TRACKERS LOCKED IN DOM UNTIL VERIFIED CHECKOUT</div>
+          <div style="font-size:0.8rem;line-height:1.5;">Full 1:1 Sleep Endocrine &amp; rhGH Fact-Check, Weight-Matched Micronutrient Dosages (mg / IU / mcg), 10-Min Spinal Decompression Timer, and 6-Month Month-by-Month Care Protocol are rendered only after payment verification.</div>
+        </section>
+        ` : `
         <!-- CHAPTER 2: Personalized Sleep/Endocrine Survey Synthesis & rhGH Injection Fact-Check -->
         <section style="background:#FFFFFF;border:1.5px solid #BFDBFE;border-radius:18px;padding:1.35rem 1.3rem;margin-bottom:1.25rem;">
           <span style="display:inline-block;font-size:0.75rem;font-weight:900;color:#1D4ED8;background:#EFF6FF;border:1px solid #BFDBFE;padding:0.2rem 0.65rem;border-radius:9999px;margin-bottom:0.5rem;">
@@ -1587,6 +1615,7 @@
             </div>
           </div>
         </section>
+        `}
       </div>
       ` : `
       <div id="pillar-2-container" style="display:block;">
@@ -1601,7 +1630,7 @@
             </span>
           </div>
           <h3 style="font-size:1.2rem;font-weight:900;color:#0F172A;margin:0 0 0.45rem 0;">
-            5-Axis Brain Balance Score: Overall LQ ${overallLQDisp} pts (Top ${lqTopPct}% Age-Matched Percentile)
+            5-Axis Brain Balance Score: Overall LQ ${overallLQDisp} pts (Top ${lqTopPctDisp}% Age-Matched Percentile)
           </h3>
           <p style="font-size:0.85rem;color:#475569;margin:0 0 1rem 0;line-height:1.55;">
             Evaluates 5 core neuro-cognitive learning circuits for <strong>Age ${ageY} (${genderLabel})</strong> based on your child&apos;s attention span (<strong>${focusSpanLabel}</strong>) and cognitive absorption style (<strong>${studyStyleLabel}</strong>).
@@ -1611,7 +1640,7 @@
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0.85rem;margin-bottom:1.1rem;">
             <div style="background:#F8FAFC;border:1.5px solid #93C5FD;border-radius:14px;padding:0.95rem 1rem;">
               <div style="font-size:0.76rem;font-weight:800;color:#1E3A8A;">① Current 5-Axis Brain LQ</div>
-              <div style="font-size:1.5rem;font-weight:900;color:#1D4ED8;margin:0.25rem 0;">${overallLQDisp} pts <span style="font-size:0.85rem;color:#475569;">(Top ${lqTopPct}%)</span></div>
+              <div style="font-size:1.5rem;font-weight:900;color:#1D4ED8;margin:0.25rem 0;">${overallLQDisp} pts <span style="font-size:0.85rem;color:#475569;">(Top ${lqTopPctDisp}%)</span></div>
               <div style="font-size:0.76rem;color:#475569;font-weight:700;">Age ${ageY} Developmental Norm: 78.0 pts</div>
             </div>
             <div style="background:#F8FAFC;border:1.5px solid #CBD5E1;border-radius:14px;padding:0.95rem 1rem;">
@@ -1640,32 +1669,32 @@
               <tbody>
                 <tr style="border-bottom:1px solid #E2E8F0;">
                   <td style="padding:0.65rem 0.8rem;font-weight:800;color:#0F172A;">1. Reading Comprehension &amp; Literacy</td>
-                  <td style="padding:0.65rem 0.8rem;font-weight:800;color:#1D4ED8;">${literacyScore} / 100</td>
-                  <td style="padding:0.65rem 0.8rem;font-weight:800;color:#059669;">${Math.min(98, literacyScore + 14)} / 100</td>
+                  <td style="padding:0.65rem 0.8rem;font-weight:800;color:#1D4ED8;">${literacyScoreDisp} / 100</td>
+                  <td style="padding:0.65rem 0.8rem;font-weight:800;color:#059669;">${literacyTargetDisp} / 100</td>
                   <td style="padding:0.65rem 0.8rem;color:#334155;">Semantic chunking &amp; 3-sentence paragraph summarization</td>
                 </tr>
                 <tr style="border-bottom:1px solid #E2E8F0;">
                   <td style="padding:0.65rem 0.8rem;font-weight:800;color:#0F172A;">2. Spatial-Mathematical Reasoning</td>
-                  <td style="padding:0.65rem 0.8rem;font-weight:800;color:#1D4ED8;">${mathSpatialScore} / 100</td>
-                  <td style="padding:0.65rem 0.8rem;font-weight:800;color:#059669;">${Math.min(99, mathSpatialScore + 12)} / 100</td>
+                  <td style="padding:0.65rem 0.8rem;font-weight:800;color:#1D4ED8;">${mathSpatialScoreDisp} / 100</td>
+                  <td style="padding:0.65rem 0.8rem;font-weight:800;color:#059669;">${mathSpatialTargetDisp} / 100</td>
                   <td style="padding:0.65rem 0.8rem;color:#334155;">Parietal visual-bar modeling before algebraic abstraction</td>
                 </tr>
                 <tr style="border-bottom:1px solid #E2E8F0;">
                   <td style="padding:0.65rem 0.8rem;font-weight:800;color:#0F172A;">3. Prefrontal Working Memory &amp; Focus</td>
-                  <td style="padding:0.65rem 0.8rem;font-weight:800;color:#DC2626;">${workingMemoryScore} / 100</td>
-                  <td style="padding:0.65rem 0.8rem;font-weight:800;color:#059669;">${Math.min(96, workingMemoryScore + 18)} / 100</td>
+                  <td style="padding:0.65rem 0.8rem;font-weight:800;color:#DC2626;">${workingMemoryScoreDisp} / 100</td>
+                  <td style="padding:0.65rem 0.8rem;font-weight:800;color:#059669;">${workingMemoryTargetDisp} / 100</td>
                   <td style="padding:0.65rem 0.8rem;color:#334155;">Dorsolateral prefrontal sustained attention (${focusSpanLabel})</td>
                 </tr>
                 <tr style="border-bottom:1px solid #E2E8F0;">
                   <td style="padding:0.65rem 0.8rem;font-weight:800;color:#0F172A;">4. Metacognitive Active Recall</td>
-                  <td style="padding:0.65rem 0.8rem;font-weight:800;color:#DC2626;">${activeRecallScore} / 100</td>
-                  <td style="padding:0.65rem 0.8rem;font-weight:800;color:#059669;">${Math.min(97, activeRecallScore + 19)} / 100</td>
+                  <td style="padding:0.65rem 0.8rem;font-weight:800;color:#DC2626;">${activeRecallScoreDisp} / 100</td>
+                  <td style="padding:0.65rem 0.8rem;font-weight:800;color:#059669;">${activeRecallTargetDisp} / 100</td>
                   <td style="padding:0.65rem 0.8rem;color:#334155;">Hippocampal retrieval practice &amp; Feynman self-explanation</td>
                 </tr>
                 <tr>
                   <td style="padding:0.65rem 0.8rem;font-weight:800;color:#0F172A;">5. Scientific Inquiry &amp; Creative Transfer</td>
-                  <td style="padding:0.65rem 0.8rem;font-weight:800;color:#1D4ED8;">${scientificInquiryScore} / 100</td>
-                  <td style="padding:0.65rem 0.8rem;font-weight:800;color:#059669;">${Math.min(99, scientificInquiryScore + 10)} / 100</td>
+                  <td style="padding:0.65rem 0.8rem;font-weight:800;color:#1D4ED8;">${scientificInquiryScoreDisp} / 100</td>
+                  <td style="padding:0.65rem 0.8rem;font-weight:800;color:#059669;">${scientificInquiryTargetDisp} / 100</td>
                   <td style="padding:0.65rem 0.8rem;color:#334155;">High hypothesis-testing &amp; cross-domain conceptual synthesis</td>
                 </tr>
               </tbody>
@@ -1673,6 +1702,12 @@
           </div>
         </section>
 
+${isMasked ? `
+        <section id="global-locked-chapters-skeleton" style="background:#F8FAFC;border:1.5px dashed #93C5FD;border-radius:18px;padding:1.35rem 1.3rem;margin-bottom:1.25rem;text-align:center;color:#475569;">
+          <div style="font-size:0.82rem;font-weight:900;color:#1D4ED8;margin-bottom:0.35rem;">🔒 CHAPTERS 06 – 08-B &amp; COGNITIVE WORKSHEETS LOCKED IN DOM UNTIL VERIFIED CHECKOUT</div>
+          <div style="font-size:0.8rem;line-height:1.5;">Full 4-Week US K-12 Executive Function Prescription, Neuro-Nutrition Dosages, 6-Month Month-by-Month Synaptic Care Roadmap, and 4 Printable Cognitive Worksheets are rendered only after payment verification.</div>
+        </section>
+        ` : `
         <!-- CHAPTER 6: 4-Week US K-12 Neuro-Study Protocol & STEM Career Roadmap -->
         <section style="background:#FFFFFF;border:1.5px solid #BFDBFE;border-radius:18px;padding:1.35rem 1.3rem;margin-bottom:1.25rem;">
           <span style="display:inline-block;font-size:0.75rem;font-weight:900;color:#1D4ED8;background:#EFF6FF;border:1px solid #BFDBFE;padding:0.2rem 0.65rem;border-radius:9999px;margin-bottom:0.5rem;">
@@ -1857,14 +1892,15 @@
             </div>
           </div>
         </section>
+        `}
       </div>
       `}
 
       <!-- =========================================================================
            MODE-SPECIFIC PRINTABLE TOOLKIT & MONTHLY LONGITUDINAL SUBSCRIPTION TRACKER
            ========================================================================= -->
-      ${isLearningMode ? `
-      <section id="global-5-printable-worksheets-section" style="background:#FFFFFF;border:2px solid #93C5FD;border-radius:18px;padding:1.35rem 1.3rem;margin-bottom:1.25rem;display:${isMasked ? 'none' : 'block'};">
+      ${isMasked ? '' : (isLearningMode ? `
+      <section id="global-5-printable-worksheets-section" style="background:#FFFFFF;border:2px solid #93C5FD;border-radius:18px;padding:1.35rem 1.3rem;margin-bottom:1.25rem;display:block;">
         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
           <span style="font-size:0.75rem;font-weight:900;color:#1D4ED8;background:#EFF6FF;border:1px solid #BFDBFE;padding:0.22rem 0.7rem;border-radius:9999px;">
             NEURO-STUDY TOOLKIT · 4 PRINTABLE COGNITIVE &amp; WORKING MEMORY WORKSHEETS (US LETTER 8.5&quot; × 11&quot;)
@@ -1925,7 +1961,7 @@
         </div>
       </section>
       ` : `
-      <section id="global-5-printable-worksheets-section" style="background:#FFFFFF;border:2px solid #93C5FD;border-radius:18px;padding:1.35rem 1.3rem;margin-bottom:1.25rem;display:${isMasked ? 'none' : 'block'};">
+      <section id="global-5-printable-worksheets-section" style="background:#FFFFFF;border:2px solid #93C5FD;border-radius:18px;padding:1.35rem 1.3rem;margin-bottom:1.25rem;display:block;">
         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
           <span style="font-size:0.75rem;font-weight:900;color:#059669;background:#ECFDF5;border:1px solid #A7F3D0;padding:0.22rem 0.7rem;border-radius:9999px;">
             LONGITUDINAL AUXOLOGY TRACKER · 90-DAY VELOCITY, BONE-AGE &amp; DOSING RE-CALIBRATION
@@ -1951,9 +1987,22 @@
         <div style="background:#EFF6FF;border:1.5px solid #93C5FD;border-radius:14px;padding:1rem 1.1rem;">
           <div style="font-size:0.84rem;font-weight:900;color:#1E3A8A;margin-bottom:0.35rem;">📅 Interactive 30-Day Monthly Height Velocity &amp; Weight-Adjusted Dosing Re-Calibrator</div>
           <div style="font-size:0.79rem;color:#334155;line-height:1.5;margin-bottom:0.75rem;">
-            A single height measurement is only a Day-1 snapshot. Enter your child&apos;s updated morning stature and weight after 30 days to compute <strong>Annualized Growth Velocity (cm/yr)</strong>, detect bone-plate catch-up vs. stagnation, and auto-adjust daily Ca/D3/K2/Zinc dosing:
+            A single height measurement is only a Day-1 snapshot. Enter your child&apos;s updated morning stature and weight after 30 days to compute <strong>Annualized Growth Velocity (${isImperial ? 'in/yr &amp; cm/yr' : 'cm/yr &amp; in/yr'})</strong>, detect bone-plate catch-up vs. stagnation, and auto-adjust daily Ca/D3/K2/Zinc dosing:
           </div>
           <div style="display:flex;flex-wrap:wrap;gap:0.6rem;align-items:flex-end;">
+            ${isImperial ? `
+            <div style="flex:1.1;min-width:165px;">
+              <label style="display:block;font-size:0.72rem;font-weight:800;color:#1E3A8A;margin-bottom:0.2rem;">Day-30 Morning Height (ft / in)</label>
+              <div style="display:flex;gap:0.35rem;">
+                <input type="number" step="1" min="1" max="7" id="monthly-recal-height-ft" value="${Math.floor(((heightCm + 0.6) / 2.54) / 12)}" placeholder="ft" style="width:48%;box-sizing:border-box;padding:0.48rem 0.5rem;border:1.5px solid #93C5FD;border-radius:8px;font-size:0.84rem;font-weight:800;color:#0F172A;background:#FFFFFF;">
+                <input type="number" step="0.1" min="0" max="11.9" id="monthly-recal-height-in" value="${(((heightCm + 0.6) / 2.54) - Math.floor(((heightCm + 0.6) / 2.54) / 12) * 12).toFixed(1)}" placeholder="in" style="width:52%;box-sizing:border-box;padding:0.48rem 0.5rem;border:1.5px solid #93C5FD;border-radius:8px;font-size:0.84rem;font-weight:800;color:#0F172A;background:#FFFFFF;">
+              </div>
+            </div>
+            <div style="flex:1;min-width:135px;">
+              <label style="display:block;font-size:0.72rem;font-weight:800;color:#1E3A8A;margin-bottom:0.2rem;">Day-30 Morning Weight (lbs)</label>
+              <input type="number" step="0.1" id="monthly-recal-weight-lbs" value="${((weightKg + 0.5) * 2.20462262).toFixed(1)}" style="width:100%;box-sizing:border-box;padding:0.48rem 0.65rem;border:1.5px solid #93C5FD;border-radius:8px;font-size:0.84rem;font-weight:800;color:#0F172A;background:#FFFFFF;">
+            </div>
+            ` : `
             <div style="flex:1;min-width:135px;">
               <label style="display:block;font-size:0.72rem;font-weight:800;color:#1E3A8A;margin-bottom:0.2rem;">Day-30 Morning Height (cm)</label>
               <input type="number" step="0.1" id="monthly-recal-height-cm" value="${(heightCm + 0.6).toFixed(1)}" style="width:100%;box-sizing:border-box;padding:0.48rem 0.65rem;border:1.5px solid #93C5FD;border-radius:8px;font-size:0.84rem;font-weight:800;color:#0F172A;background:#FFFFFF;">
@@ -1962,6 +2011,7 @@
               <label style="display:block;font-size:0.72rem;font-weight:800;color:#1E3A8A;margin-bottom:0.2rem;">Day-30 Morning Weight (kg)</label>
               <input type="number" step="0.1" id="monthly-recal-weight-kg" value="${(weightKg + 0.5).toFixed(1)}" style="width:100%;box-sizing:border-box;padding:0.48rem 0.65rem;border:1.5px solid #93C5FD;border-radius:8px;font-size:0.84rem;font-weight:800;color:#0F172A;background:#FFFFFF;">
             </div>
+            `}
             <div style="flex:1.4;min-width:200px;">
               <label style="display:block;font-size:0.72rem;font-weight:800;color:#1E3A8A;margin-bottom:0.2rem;">This Month&apos;s Primary Physical Situation</label>
               <select id="monthly-recal-growth-situation" style="width:100%;box-sizing:border-box;padding:0.48rem 0.65rem;border:1.5px solid #93C5FD;border-radius:8px;font-size:0.81rem;font-weight:800;color:#0F172A;background:#FFFFFF;">
@@ -1977,11 +2027,11 @@
             </button>
           </div>
           <div id="monthly-recal-result-box" style="margin-top:0.65rem;font-size:0.8rem;font-weight:800;color:#065F46;background:#ECFDF5;border:1px solid #A7F3D0;border-radius:10px;padding:0.65rem 0.85rem;">
-            ✓ Baseline Locked: ${fmtLen(heightCm)} / ${fmtWt(weightKg)} · Projected 30-Day Catch-Up Velocity: <strong>7.2 cm/yr (2.8 in/yr)</strong> · Next Bone-Age &amp; Dosing Check-In in 30 Days.
+            ✓ Baseline Locked: ${fmtLen(heightCm)} / ${fmtWt(weightKg)} · Projected 30-Day Catch-Up Velocity: <strong>${isImperial ? '2.8 in/yr (7.2 cm/yr)' : '7.2 cm/yr (2.8 in/yr)'}</strong> · Next Bone-Age &amp; Dosing Check-In in 30 Days.
           </div>
         </div>
       </section>
-      `}
+      `)}
 
       <!-- High-Contrast Applied Child Conditions & Clinical Summary Footer (Strictly Mode-Separated) -->
       <div id="global-report-child-conditions-footer" style="background:#FFFFFF;border:2px solid #93C5FD;border-radius:18px;padding:1.15rem 1.3rem;margin-top:0.5rem;color:#0F172A;box-shadow:0 6px 18px rgba(15,23,42,0.05);">
@@ -2001,7 +2051,7 @@
           ${isLearningMode ? `
           <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:10px;padding:0.65rem 0.85rem;">
             <strong style="color:#1D4ED8;display:block;margin-bottom:0.15rem;">5-Axis Brain LQ &amp; Focus Span</strong>
-            <span>Overall LQ ${overallLQDisp} pts (Top ${lqTopPct}%) · ${focusSpanLabel.split(' (')[0]}</span>
+            <span>Overall LQ ${overallLQDisp} pts (Top ${lqTopPctDisp}%) · ${focusSpanLabel.split(' (')[0]}</span>
           </div>
           <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:10px;padding:0.65rem 0.85rem;">
             <strong style="color:#1D4ED8;display:block;margin-bottom:0.15rem;">Preferred Cognitive Absorption</strong>
@@ -2010,7 +2060,7 @@
           ` : `
           <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:10px;padding:0.65rem 0.85rem;">
             <strong style="color:#1D4ED8;display:block;margin-bottom:0.15rem;">Physical Biometrics &amp; MPH</strong>
-            <span>${fmtLen(heightCm)} (${pctVal}th%) · ${fmtWt(weightKg)} · Genetic MPH ${fmtMaskedLen(geneticCm)}</span>
+            <span>${fmtLen(heightCm)} (${pctValDisp}th%) · ${fmtWt(weightKg)} · Genetic MPH ${fmtMaskedLen(geneticCm)}</span>
           </div>
           <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:10px;padding:0.65rem 0.85rem;">
             <strong style="color:#1D4ED8;display:block;margin-bottom:0.15rem;">Ancestry &amp; Bone-Age Calibration</strong>
@@ -2430,15 +2480,42 @@
       };
       out.innerHTML = `✅ <strong>Monthly Situation-Matched Brain LQ Report Generated:</strong> Updated Score <strong>${newLq} pts (+${Math.max(0.5, gain).toFixed(1)} pts/mo)</strong> · Desk Endurance: ${focusMins} mins<br>📌 <strong>This Month&apos;s Situation Rx:</strong> ${sitRxMap[sit] || sitRxMap.steady_recall}`;
     } else {
+      const ftEl = document.getElementById('monthly-recal-height-ft');
+      const inEl = document.getElementById('monthly-recal-height-in');
+      const lbsEl = document.getElementById('monthly-recal-weight-lbs');
       const hEl = document.getElementById('monthly-recal-height-cm');
       const wEl = document.getElementById('monthly-recal-weight-kg');
       const sitEl = document.getElementById('monthly-recal-growth-situation');
-      const newH = parseFloat((hEl && hEl.value) || (baseVal1 + 0.6));
-      const newW = parseFloat((wEl && wEl.value) || (baseVal2 + 0.5));
+      const isImpMode = Boolean(ftEl || inEl || lbsEl) || ((global.TallerI18n && typeof global.TallerI18n.getUnitSystem === 'function') ? global.TallerI18n.getUnitSystem() === 'imperial' : true);
+
+      let newH = parseFloat(baseVal1 || 137) + 0.6;
+      if (ftEl || inEl) {
+        const ftVal = parseFloat((ftEl && ftEl.value) || '0') || 0;
+        const inVal = parseFloat((inEl && inEl.value) || '0') || 0;
+        const totalIn = ftVal * 12 + inVal;
+        if (totalIn > 0) newH = Number((totalIn * 2.54).toFixed(2));
+      } else if (hEl && hEl.value) {
+        newH = parseFloat(hEl.value) || newH;
+      }
+
+      let newW = parseFloat(baseVal2 || 35.5) + 0.5;
+      if (lbsEl && lbsEl.value) {
+        const lbsVal = parseFloat(lbsEl.value) || 0;
+        if (lbsVal > 0) newW = Number((lbsVal / 2.20462262).toFixed(2));
+      } else if (wEl && wEl.value) {
+        newW = parseFloat(wEl.value) || newW;
+      }
+
       const sit = (sitEl && sitEl.value) || 'normal_catchup';
       const deltaCm = Math.max(0, Number((newH - (parseFloat(baseVal1) || 137)).toFixed(2)));
+      const deltaIn = Number((deltaCm / 2.54).toFixed(2));
       const annualizedCmYr = Number((deltaCm * 12).toFixed(1));
       const annualizedInYr = Number((annualizedCmYr / 2.54).toFixed(1));
+      const newLbs = Number((newW * 2.20462262).toFixed(1));
+      const wtLabel = isImpMode ? `${newLbs} lbs (${newW.toFixed(1)} kg)` : `${newW.toFixed(1)} kg (${newLbs} lbs)`;
+      const velSummary = isImpMode
+        ? `+${deltaIn} in/month (+${deltaCm} cm/month) = <strong>${annualizedInYr} in/yr (${annualizedCmYr} cm/yr)</strong>`
+        : `+${deltaCm} cm/month (+${deltaIn} in/month) = <strong>${annualizedCmYr} cm/yr (${annualizedInYr} in/yr)</strong>`;
       const newCa = Math.round(Math.min(1200, Math.max(500, newW * 26)));
       const newD3 = Math.round(Math.min(2500, Math.max(1200, newW * 45)));
       const newZn = Number(Math.min(15, Math.max(6, newW * 0.31)).toFixed(1));
@@ -2446,13 +2523,13 @@
         ? '🟢 ACCELERATED CATCH-UP ZONE (+3.3 in Trajectory Active)'
         : (annualizedCmYr >= 4.8 ? '🟡 NORMAL MAINTENANCE VELOCITY' : '🔴 STAGNATION ALERT: Enforce 10 PM SWS + 2h Carb Fast');
       const sitRxMap = {
-        normal_catchup: `Continue 10 PM SWS schedule + 3×30s bar hangs; updated dosing for ${newW.toFixed(1)} kg locked.`,
+        normal_catchup: `Continue 10 PM SWS schedule + 3×30s bar hangs; updated dosing for ${wtLabel} locked.`,
         sleep_broken: ` Nighttime GH blunting detected: add evening Magnesium Glycinate (${Math.round(newW * 5.5)} mg) + warm foot bath 45m before bed.`,
         picky_appetite: `IGF-1 drop risk from low appetite: prioritize morning Chelated Zinc (${(newZn + 2).toFixed(1)} mg) + L-Lysine/Arginine amino support.`,
         growing_pains: `Rapid periosteal stretching detected: split Calcium Citrate (${newCa} mg) AM/PM + add evening Magnesium & calf traction.`,
         rapid_weight: `Aromatase bone-age acceleration alert: enforce strict 3-hr pre-bed zero-carb fast and increase vertical rope-jumping to 500 skips/day.`
       };
-      out.innerHTML = `✅ <strong>Monthly Situation-Matched Auxology Report Generated:</strong> +${deltaCm} cm in 30d = <strong>${annualizedCmYr} cm/yr (${annualizedInYr} in/yr)</strong> [${statusText}] · <strong>Updated Dosing (${newW.toFixed(1)} kg):</strong> Ca Citrate <strong>${newCa} mg</strong>, Vit D3 <strong>${newD3} IU</strong>, Zinc <strong>${newZn} mg</strong><br>📌 <strong>This Month&apos;s Situation Rx:</strong> ${sitRxMap[sit] || sitRxMap.normal_catchup}`;
+      out.innerHTML = `✅ <strong>Monthly Situation-Matched Auxology Report Generated:</strong> ${velSummary} [${statusText}] · <strong>Updated Dosing (${wtLabel}):</strong> Ca Citrate <strong>${newCa} mg</strong>, Vit D3 <strong>${newD3} IU</strong>, Zinc <strong>${newZn} mg</strong><br>📌 <strong>This Month&apos;s Situation Rx:</strong> ${sitRxMap[sit] || sitRxMap.normal_catchup}`;
     }
   };
 
@@ -2583,6 +2660,11 @@
     const baseCheckoutUrl = getActiveCheckoutUrl(plan);
     const emailEl = document.getElementById('checkout-parent-email');
     const email = String((emailEl && emailEl.value) || '').trim();
+    try {
+      if (email && email.indexOf('@') !== -1 && typeof window !== 'undefined' && window.localStorage) {
+        window.localStorage.setItem('kidsfit_pending_ls_checkout_email_v1', email);
+      }
+    } catch (_) {}
     const sep = baseCheckoutUrl.indexOf('?') === -1 ? '?' : '&';
     const finalUrl = email && email.indexOf('@') !== -1
       ? `${baseCheckoutUrl}${sep}embed=1&checkout[email]=${encodeURIComponent(email)}`
@@ -2700,11 +2782,13 @@
           💳 Pay ${priceStr} via Official Lemon Squeezy Checkout →
         </a>
 
-        <div id="checkout-verify-status-msg" style="display:none;font-size:0.8rem;font-weight:700;padding:0.55rem 0.75rem;border-radius:10px;margin-bottom:0.65rem;"></div>
+        <div id="kidsfit-paywall-verify-box">
+          <div id="checkout-verify-status-msg" style="display:none;font-size:0.8rem;font-weight:700;padding:0.55rem 0.75rem;border-radius:10px;margin-bottom:0.65rem;"></div>
 
-        <button type="button" onclick="window.completeKidsFitGlobalCheckout()" style="width:100%;padding:0.78rem 1rem;border-radius:12px;border:1.5px solid #1D4ED8;background:#EFF6FF;color:#1D4ED8;font-size:0.86rem;font-weight:800;cursor:pointer;margin-bottom:0.55rem;">
-          Already Completed Lemon Squeezy Payment? Verify Email &amp; Unlock →
-        </button>
+          <button type="button" onclick="window.completeKidsFitGlobalCheckout()" style="width:100%;padding:0.78rem 1rem;border-radius:12px;border:1.5px solid #1D4ED8;background:#EFF6FF;color:#1D4ED8;font-size:0.86rem;font-weight:800;cursor:pointer;margin-bottom:0.55rem;">
+            Already Completed Lemon Squeezy Payment? Verify Email &amp; Unlock →
+          </button>
+        </div>
 
         <div style="font-size:0.74rem;color:#64748B;text-align:center;">
           🔒 Powered by Lemon Squeezy Store #296100 · Apple Pay · Google Pay · PayPal · Cards
@@ -2774,22 +2858,86 @@
     ensureLemonSqueezyScriptLoaded();
     applyGlobalHomepageEnglishDOM();
 
-    // Auto-restore report view when returning from Lemon Squeezy checkout (?unlock=1&payment=success)
+    // Securely verify order status via /api/lemonsqueezy-orders/verify when returning from Lemon Squeezy (?payment=success or order_id/email)
     try {
-      if (typeof window !== 'undefined' && window.location && String(window.location.search || '').indexOf('payment=success') !== -1) {
-        if (isReportUnlocked() && window.localStorage) {
-          const rawSaved = window.localStorage.getItem('kidsfit_last_quiz_profile_v1');
-          if (rawSaved) {
-            const restoredProfile = JSON.parse(rawSaved);
-            if (global.KidsFitApp && global.KidsFitApp.state) {
-              global.KidsFitApp.state.profile = Object.assign({}, global.KidsFitApp.state.profile || {}, restoredProfile);
+      if (typeof window !== 'undefined' && window.location) {
+        const rawSearch = String(window.location.search || '');
+        const lowerSearch = rawSearch.toLowerCase();
+        if (lowerSearch.indexOf('payment=success') !== -1 || lowerSearch.indexOf('order_id=') !== -1) {
+          if (window.localStorage) {
+            const rawSaved = window.localStorage.getItem('kidsfit_last_quiz_profile_v1');
+            if (rawSaved) {
+              const restoredProfile = JSON.parse(rawSaved);
+              if (global.KidsFitApp && global.KidsFitApp.state) {
+                global.KidsFitApp.state.profile = Object.assign({}, global.KidsFitApp.state.profile || {}, restoredProfile);
+              }
+              const dash = document.getElementById('results-dashboard');
+              if (dash) {
+                dash.classList.remove('hidden');
+                dash.style.display = 'block';
+              }
+              transformGlobalReportAndApplyPaywall();
             }
-            const dash = document.getElementById('results-dashboard');
-            if (dash) {
-              dash.classList.remove('hidden');
-              dash.style.display = 'block';
+          }
+
+          if (!isReportUnlocked()) {
+            let queryEmail = '';
+            let queryOrderId = '';
+            try {
+              const params = new URLSearchParams(rawSearch);
+              queryEmail = String(params.get('email') || params.get('user_email') || '').trim();
+              queryOrderId = String(params.get('order_id') || params.get('orderId') || '').trim();
+            } catch (_) {}
+            if (!queryEmail && window.localStorage) {
+              queryEmail = String(
+                window.localStorage.getItem('kidsfit_pending_ls_checkout_email_v1') ||
+                window.localStorage.getItem('kidsfit_global_buyer_email') ||
+                ''
+              ).trim();
             }
-            transformGlobalReportAndApplyPaywall();
+
+            if ((queryEmail || queryOrderId) && typeof window.fetch === 'function') {
+              const verifyUrl = '/api/lemonsqueezy-orders/verify?email=' + encodeURIComponent(queryEmail) +
+                (queryOrderId ? '&order_id=' + encodeURIComponent(queryOrderId) : '');
+              window.fetch(verifyUrl)
+                .then(function (r) { return r.json(); })
+                .then(function (data) {
+                  if (data && data.verified === true) {
+                    try {
+                      if (window.localStorage) {
+                        window.localStorage.setItem(UNLOCK_STORAGE_KEY, 'true');
+                        if (queryEmail) window.localStorage.setItem('kidsfit_global_buyer_email', queryEmail);
+                      }
+                    } catch (_) {}
+                    const modal = document.getElementById('kidsfit-global-checkout-modal');
+                    if (modal) modal.remove();
+                    transformGlobalReportAndApplyPaywall();
+                  } else if (typeof global.openKidsFitGlobalCheckoutModal === 'function') {
+                    global.openKidsFitGlobalCheckoutModal();
+                    const msgEl = document.getElementById('checkout-verify-status-msg');
+                    if (msgEl) {
+                      msgEl.style.display = 'block';
+                      msgEl.style.background = '#EFF6FF';
+                      msgEl.style.color = '#1D4ED8';
+                      msgEl.textContent = 'Please verify your Lemon Squeezy checkout email to unlock your clinical report.';
+                    }
+                  }
+                })
+                .catch(function () {
+                  if (typeof global.openKidsFitGlobalCheckoutModal === 'function') {
+                    global.openKidsFitGlobalCheckoutModal();
+                  }
+                });
+            } else if (typeof global.openKidsFitGlobalCheckoutModal === 'function') {
+              global.openKidsFitGlobalCheckoutModal();
+              const msgEl = document.getElementById('checkout-verify-status-msg');
+              if (msgEl) {
+                msgEl.style.display = 'block';
+                msgEl.style.background = '#EFF6FF';
+                msgEl.style.color = '#1D4ED8';
+                msgEl.textContent = 'Please enter and verify your Lemon Squeezy checkout email to unlock your report.';
+              }
+            }
           }
         }
       }

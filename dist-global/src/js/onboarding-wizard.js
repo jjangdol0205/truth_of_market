@@ -2440,6 +2440,7 @@
     module.exports = OnboardingWizard;
   } else {
     global.TallerOnboardingWizard = OnboardingWizard;
+    global.KidsFitOnboardingWizard = OnboardingWizard;
     if (typeof window !== 'undefined' && typeof document !== 'undefined') {
       if (document.readyState === 'loading') {
         window.addEventListener('DOMContentLoaded', () => {
