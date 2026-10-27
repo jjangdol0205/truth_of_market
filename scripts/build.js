@@ -233,6 +233,7 @@ function generateDataBundle() {
   const authPath = path.join(ROOT_DIR, 'src', 'data', 'official-authorities.json');
   const researchPath = path.join(ROOT_DIR, 'src', 'data', 'research-knowledge-base.json');
   const cohortPath = path.join(ROOT_DIR, 'src', 'data', 'user-cohort-db.json');
+  const rlPolicyPath = path.join(ROOT_DIR, 'src', 'data', 'coupang-rl-policy.json');
 
   if (!fs.existsSync(growthPath) || !fs.existsSync(kdstPath) || !fs.existsSync(catalogPath)) {
     return;
@@ -244,6 +245,7 @@ function generateDataBundle() {
   const authJson = fs.existsSync(authPath) ? fs.readFileSync(authPath, 'utf8').trim() : '{}';
   const researchJson = fs.existsSync(researchPath) ? fs.readFileSync(researchPath, 'utf8').trim() : '{}';
   const cohortJson = fs.existsSync(cohortPath) ? fs.readFileSync(cohortPath, 'utf8').trim() : '{}';
+  const rlPolicyJson = fs.existsSync(rlPolicyPath) ? fs.readFileSync(rlPolicyPath, 'utf8').trim() : '{}';
 
   const bundleContent = `/**
  * KidsFit Growth Studio - Client-Side Data Bundle
@@ -262,6 +264,7 @@ function generateDataBundle() {
   var authoritiesData = ${authJson};
   var researchData = ${researchJson};
   var userCohortData = ${cohortJson};
+  var coupangRlPolicy = ${rlPolicyJson};
 
   if (typeof window !== 'undefined') {
     window.KIDSFIT_GROWTH_DATA = growthData;
@@ -270,6 +273,7 @@ function generateDataBundle() {
     window.KIDSFIT_AUTHORITIES_DATA = authoritiesData;
     window.KIDSFIT_RESEARCH_DATA = researchData;
     window.KIDSFIT_USER_COHORT_DB = userCohortData;
+    window.KIDSFIT_COUPANG_RL_POLICY = coupangRlPolicy;
   }
   if (typeof global !== 'undefined' && typeof window === 'undefined') {
     global.KIDSFIT_GROWTH_DATA = growthData;
@@ -278,10 +282,11 @@ function generateDataBundle() {
     global.KIDSFIT_AUTHORITIES_DATA = authoritiesData;
     global.KIDSFIT_RESEARCH_DATA = researchData;
     global.KIDSFIT_USER_COHORT_DB = userCohortData;
+    global.KIDSFIT_COUPANG_RL_POLICY = coupangRlPolicy;
   }
 
   if (typeof module !== 'undefined' && module.exports) {
-    module.exports = { growthData, kdstData, catalogData, authoritiesData, researchData, userCohortData };
+    module.exports = { growthData, kdstData, catalogData, authoritiesData, researchData, userCohortData, coupangRlPolicy };
   }
 })(typeof window !== 'undefined' ? window : (typeof global !== 'undefined' ? global : this));
 `;

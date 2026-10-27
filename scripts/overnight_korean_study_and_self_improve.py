@@ -251,6 +251,15 @@ def main():
     paper_info = fetch_latest_paper_sample(module["query"])
     result = run_homepage_self_improvement(module, paper_info)
 
+    rl_summary = {}
+    try:
+        from coupang_rl_optimizer_daemon import execute_rl_policy_update
+        rl_summary = execute_rl_policy_update()
+        result["coupang_rl_episode"] = rl_summary.get("episodes")
+        result["coupang_rl_winning_arm"] = rl_summary.get("winning_cat", {}).get("id")
+    except Exception:
+        pass
+
     OVERNIGHT_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
     with open(OVERNIGHT_LOG_PATH, "a", encoding="utf-8") as f:
         f.write(json.dumps(result, ensure_ascii=False) + "\n")
@@ -258,13 +267,20 @@ def main():
     print(f"✅ [심야 한국관점 학습 & 홈페이지 자가개선 완료] {result['module_id']} | Verify: {result['verify_passed']}")
 
     if notify:
+        rl_line = ""
+        if rl_summary and rl_summary.get("winning_cat"):
+            rl_line = (
+                f"\n🤖 <b>쿠팡파트너스 수익 강화학습(RL) 에피소드 #{rl_summary.get('episodes')}</b>:\n"
+                f"• 1위 승리 상품군: <b>{rl_summary['winning_cat'].get('name', '')}</b> (UCB {rl_summary['winning_cat'].get('ucb_score')} · 누적보상 {rl_summary.get('total_reward')} pt)\n"
+            )
         msg = (
-            f"🌙 <b>[키즈핏 심야 한국관점 집중학습 & 홈페이지 자가개선 리포트 ({now.strftime('%H:%M')} KST)]</b>\n\n"
+            f"🌙 <b>[키즈핏 심야 한국관점 집중학습 & 쿠팡 수익 강화학습(RL) 리포트 ({now.strftime('%H:%M')} KST)]</b>\n\n"
             f"📚 <b>학습 모듈</b>: <code>{result['module_id']}</code> ({result['domain']})\n"
             f"📖 <b>핵심 도서·가이드</b>: {result['book_title_ko']}\n"
             f"🔬 <b>연계 학술논문</b>: {result['paper_title'][:90]}...\n\n"
             f"🇰🇷 <b>한국 3040 학부모 관점 핵심 인사이트</b>:\n"
-            f"• {result['korean_insight']}\n\n"
+            f"• {result['korean_insight']}\n"
+            f"{rl_line}\n"
             f"🛠️ <b>홈페이지(kidsfit.co.kr) 자가 점검 및 자동 개선 내역</b>:\n"
             f"• {result['self_improvement_action']}\n"
             f"• Q&A/시퀀스 랜딩페이지({result['total_qna_pages']}개) 한국형 스펙 비교표·내부링크 클러스터 동기화 완료\n"

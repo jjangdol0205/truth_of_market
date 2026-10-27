@@ -430,6 +430,7 @@ function sendInstantPurchaseClickTelegram(clickRecord, dayStats, totalStats) {
       `📂 <b>영역</b>: <b>${catLabel}</b>`,
       `🏷 <b>클릭한 상품/버튼</b>: <b>${sanitizeText(clickRecord.productName || '추천 제휴 상품 버튼', 100)}</b>`,
       `🛍 <b>연결 제휴사</b>: <code>${clickRecord.platform}</code>`,
+      `🤖 <b>강화학습(RL) 보상</b>: <b>+${clickRecord.rlReward || 33.0} pt</b> (<code>${clickRecord.rlArmId || 'growth'}</code> · <code>${clickRecord.rlCtaArm || 'arm_rocket_review'}</code> 정책 가중치 즉시 강화!)`,
       `📱 <b>접속 기기 / 유입경로</b>: ${clickRecord.device === 'mobile' ? '📱 모바일' : '💻 PC'} / <code>${clickRecord.utmSource}</code>`,
       `━━━━━━━━━━━━━━━━━━`,
       `📊 <b>오늘 누적 구매버튼 클릭</b>: <b>${dayStats.affiliateClicks || 1}건</b> (신체성장 ${dayStats.productClicks.growth || 0}건 / 두뇌학습 ${dayStats.productClicks.learning || 0}건)`,
@@ -526,6 +527,46 @@ function recordAffiliateClickEvent(category, utmSource, details = {}) {
       notifiedByServer: false
     };
 
+    clickRecord.rlArmId = sanitizeText(details.rlArmId || (catKey === 'learning' ? 'cognitive_learning_problem_solver' : 'growth_nutrition_repeat_cart'), 60);
+    clickRecord.rlCtaArm = sanitizeText(details.rlCtaArm || 'arm_rocket_review', 60);
+    clickRecord.rlReward = Number(details.rlReward) || 33.0;
+    clickRecord.sessionClicks = Number(details.sessionClicks) || 1;
+    try {
+      const rlPolicyPath = path.join(ROOT_DIR, 'src', 'data', 'coupang-rl-policy.json');
+      if (fs.existsSync(rlPolicyPath)) {
+        const rlPolicy = JSON.parse(fs.readFileSync(rlPolicyPath, 'utf8'));
+        if (rlPolicy && rlPolicy.category_arms && rlPolicy.category_arms[clickRecord.rlArmId]) {
+          const cArm = rlPolicy.category_arms[clickRecord.rlArmId];
+          cArm.clicks = (Number(cArm.clicks) || 0) + 1;
+          cArm.alpha = Number(((Number(cArm.alpha) || 30) + (clickRecord.rlReward / 8.0)).toFixed(2));
+          cArm.cumulative_reward = Number(((Number(cArm.cumulative_reward) || 0) + clickRecord.rlReward).toFixed(1));
+        }
+        if (rlPolicy && rlPolicy.cta_arms && rlPolicy.cta_arms[clickRecord.rlCtaArm]) {
+          const tArm = rlPolicy.cta_arms[clickRecord.rlCtaArm];
+          tArm.clicks = (Number(tArm.clicks) || 0) + 1;
+          tArm.alpha = Number(((Number(tArm.alpha) || 25) + (clickRecord.rlReward / 10.0)).toFixed(2));
+          tArm.cumulative_reward = Number(((Number(tArm.cumulative_reward) || 0) + clickRecord.rlReward).toFixed(1));
+        }
+        if (rlPolicy && rlPolicy.metadata) {
+          rlPolicy.metadata.total_episodes = (Number(rlPolicy.metadata.total_episodes) || 0) + 1;
+          rlPolicy.metadata.total_cumulative_reward = Number(((Number(rlPolicy.metadata.total_cumulative_reward) || 0) + clickRecord.rlReward).toFixed(1));
+          rlPolicy.metadata.last_updated_kst = kstIso;
+        }
+        if (!Array.isArray(rlPolicy.recent_reward_history)) rlPolicy.recent_reward_history = [];
+        rlPolicy.recent_reward_history.unshift({
+          timestampKst: kstIso,
+          armId: clickRecord.rlArmId,
+          ctaArm: clickRecord.rlCtaArm,
+          productName: clickRecord.productName,
+          reward: clickRecord.rlReward,
+          utmSource: clickRecord.utmSource
+        });
+        if (rlPolicy.recent_reward_history.length > 40) rlPolicy.recent_reward_history = rlPolicy.recent_reward_history.slice(0, 40);
+        fs.writeFileSync(rlPolicyPath, JSON.stringify(rlPolicy, null, 2), 'utf8');
+      }
+      const rlEventsPath = path.join(ROOT_DIR, 'logs', 'coupang_rl_events.jsonl');
+      fs.appendFileSync(rlEventsPath, JSON.stringify(clickRecord) + '\n', 'utf8');
+    } catch (_) {}
     clickRecord.notifiedByServer = sendInstantPurchaseClickTelegram(clickRecord, day, visitorStats.total);
 
     if (!Array.isArray(day.recentClicks)) day.recentClicks = [];
@@ -613,6 +654,18 @@ const server = http.createServer((req, res) => {
       return;
     }
 
+    // 1-RL. Coupang Partners Reinforcement Learning Policy Endpoint (/api/rl-policy)
+    if (pathname === '/api/rl-policy') {
+      const rlPolicyPath = path.join(ROOT_DIR, 'src', 'data', 'coupang-rl-policy.json');
+      let rlPolicy = {};
+      try {
+        if (fs.existsSync(rlPolicyPath)) rlPolicy = JSON.parse(fs.readFileSync(rlPolicyPath, 'utf8'));
+      } catch (_) {}
+      res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8', ...NO_CACHE_HEADERS });
+      res.end(JSON.stringify({ ok: true, policy: rlPolicy }));
+      return;
+    }
+
     // 1-0. Client Beacon Endpoint (/api/visit) for accurate referrer & funnel events
     if (pathname === '/api/visit') {
       if (req.method === 'POST') {
@@ -631,7 +684,12 @@ const server = http.createServer((req, res) => {
                 req,
                 href: data.href || '',
                 productName: data.product_name || data.productName || '',
-                domain: data.domain || ''
+                domain: data.domain || '',
+                rlArmId: data.rl_arm_id || '',
+                rlCtaArm: data.rl_cta_arm || '',
+                rlSlotRank: Number(data.rl_slot_rank) || 1,
+                rlReward: Number(data.rl_reward) || 33.0,
+                sessionClicks: Number(data.session_clicks) || 1
               });
             } else {
               recordVisitorPageview(req, data.referrer || '');
