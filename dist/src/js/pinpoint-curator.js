@@ -3773,11 +3773,110 @@
     `;
   }
 
+  function renderMonthlyProductsOnlyCatalog(profile = {}, affConfig = {}) {
+    const exactM = Math.max(12, Math.min(216, Math.round(Number(profile.exactMonths || profile.ageMonths) || 120)));
+    const info = getMonthlyMicroAnalysisAndProducts(exactM, profile, affConfig);
+    const curYear = Number(profile.birthYear) || 2016;
+    const curMonth = Number(profile.birthMonth) || 10;
+    const yearOptions = [];
+    for (let y = 2025; y >= 2007; y--) {
+      yearOptions.push(`<option value="${y}" ${y === curYear ? 'selected' : ''}>${y}년생</option>`);
+    }
+    const monthOptions = [];
+    for (let m = 1; m <= 12; m++) {
+      monthOptions.push(`<option value="${m}" ${m === curMonth ? 'selected' : ''}>${m}월생</option>`);
+    }
+
+    const fourFlagships = [
+      { badge: `[${info.exactBadgeKo} 성장 영양제 1순위]`, cat: 'growth', item: info.growthSupp, secLabel: 'iHerb 직구 스펙 ↗', secUrl: info.growthSupp.iherbUrl, secMerchant: 'iherb' },
+      { badge: `[${info.exactBadgeKo} 성장판·체형 기구 1순위]`, cat: 'growth', item: info.growthEquip, secLabel: 'YES24 가이드·특가 ↗', secUrl: info.growthEquip.yes24Url, secMerchant: 'linkprice' },
+      { badge: `[${info.exactBadgeKo} 두뇌·소근육 교구 1순위]`, cat: 'learning', item: info.learningTool, secLabel: 'YES24 교구·특가 ↗', secUrl: info.learningTool.yes24Url, secMerchant: 'linkprice' },
+      { badge: `[${info.exactBadgeKo} 필독서·사고력 워크북 1순위]`, cat: 'learning', item: info.learningBook, secLabel: 'YES24 도서·특가 ↗', secUrl: info.learningBook.yes24Url, secMerchant: 'linkprice' }
+    ];
+
+    return `
+      <div id="monthly-products-only-catalog" style="background: #F8FAFC; border: 2px solid #1D4ED8; border-radius: 22px; padding: 1.25rem 1.35rem; text-align: left;">
+        <!-- Top Header & Live Birth Year/Month Switcher -->
+        <div style="background: #FFFFFF; border: 1.5px solid #93C5FD; border-radius: 18px; padding: 1.1rem 1.2rem; margin-bottom: 1.15rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.6rem;">
+            <span style="background: #1D4ED8; color: #FFFFFF; font-size: 0.82rem; font-weight: 900; padding: 0.26rem 0.85rem; border-radius: 9999px;">
+              🛒 설문 생략 · 월령별 맞춤 추천템 전용관 (${info.exactBadgeKo})
+            </span>
+            <span style="font-size: 0.8rem; font-weight: 900; color: #1D4ED8; background: #EFF6FF; border: 1px solid #BFDBFE; padding: 0.22rem 0.7rem; border-radius: 9999px;">
+              ${info.bandTitle}
+            </span>
+          </div>
+
+          <h3 style="font-size: 1.24rem; font-weight: 900; color: #0F172A; margin: 0 0 0.45rem 0; line-height: 1.38;">
+            ${info.exactBadgeKo} 우리 아이 발달 주기에 딱 맞춘 <span style="color: #1D4ED8;">영양제 · 운동기구 · 두뇌교구 · 필독서</span> 엄선 리스트
+          </h3>
+          <p style="font-size: 0.84rem; color: #475569; margin: 0 0 0.85rem 0; line-height: 1.5;">
+            ※ 설문을 건너뛰고 선택하신 <strong>생년월일(월령)</strong>만 기준으로 추천 상품만 깔끔하게 모아 보여드리는 전용 화면입니다. (설문 미입력 상태의 부정확한 진단 보고서는 표시되지 않습니다.)
+          </p>
+
+          <!-- Instant Birth Year/Month Switcher + Return to Survey Button -->
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.6rem; background: #EFF6FF; border: 1px solid #BFDBFE; border-radius: 12px; padding: 0.7rem 0.9rem;">
+            <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 0.45rem;">
+              <span style="font-size: 0.82rem; font-weight: 900; color: #1E3A8A;">👶 다른 월령·자녀 바로 변경:</span>
+              <select id="quick-catalog-birth-year" onchange="if(window.TallerOnboardingWizard&&typeof window.TallerOnboardingWizard.updateMonthlyProductsOnlyAge==='function'){window.TallerOnboardingWizard.updateMonthlyProductsOnlyAge();}" style="font-weight: 800; font-size: 0.85rem; padding: 0.38rem 0.6rem; border-radius: 8px; border: 1px solid #93C5FD; background: #FFFFFF; color: #0F172A;">
+                ${yearOptions.join('')}
+              </select>
+              <select id="quick-catalog-birth-month" onchange="if(window.TallerOnboardingWizard&&typeof window.TallerOnboardingWizard.updateMonthlyProductsOnlyAge==='function'){window.TallerOnboardingWizard.updateMonthlyProductsOnlyAge();}" style="font-weight: 800; font-size: 0.85rem; padding: 0.38rem 0.6rem; border-radius: 8px; border: 1px solid #93C5FD; background: #FFFFFF; color: #0F172A;">
+                ${monthOptions.join('')}
+              </select>
+            </div>
+            <button type="button" onclick="if(window.TallerOnboardingWizard&&typeof window.TallerOnboardingWizard.returnToSurveyFromProducts==='function'){window.TallerOnboardingWizard.returnToSurveyFromProducts();}" style="cursor: pointer; background: #FFFFFF; border: 1.5px solid #1D4ED8; color: #1D4ED8; font-size: 0.8rem; font-weight: 900; padding: 0.45rem 0.85rem; border-radius: 9999px;">
+              📏 실제 키·습관 입력하고 정밀 진단 보고서 받기 (설문으로 돌아가기 →)
+            </button>
+          </div>
+        </div>
+
+        <!-- Section 1: Exact Month Pinpoint Top 4 Flagship Products -->
+        <div style="background: #FFFFFF; border: 2px solid #3B82F6; border-radius: 18px; padding: 1.1rem 1.2rem; margin-bottom: 1.15rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.65rem;">
+            <span style="font-size: 1rem; font-weight: 900; color: #0F172A;">
+              🎯 1. ${info.exactBadgeKo} 핀포인트 1순위 핵심 추천템 4선 (개월수 제형·난이도 100% 매칭)
+            </span>
+            <span style="font-size: 0.76rem; font-weight: 800; color: #1D4ED8;">
+              신체 성장 2선 + 두뇌·학습 2선
+            </span>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 0.7rem;">
+            ${fourFlagships.map((f) => `
+              <div class="pinpoint-item-card" data-product-category="${f.cat}" style="background: #F8FAFC; border: 1.5px solid #93C5FD; border-radius: 14px; padding: 0.85rem 0.95rem; display: flex; flex-direction: column; justify-content: space-between; gap: 0.4rem;">
+                <div>
+                  <div style="font-size: 0.75rem; font-weight: 900; color: #1D4ED8; margin-bottom: 0.2rem;">${f.badge}</div>
+                  <div style="font-size: 0.94rem; font-weight: 900; color: #0F172A; line-height: 1.36; margin-bottom: 0.22rem; word-break: keep-all;">${f.item.name}</div>
+                  <div style="font-size: 0.8rem; color: #334155; line-height: 1.44; word-break: keep-all;">${f.item.spec}</div>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.38rem; margin-top: 0.25rem;">
+                  <a href="${f.item.coupangUrl}" target="_blank" rel="noopener sponsored" class="pinpoint-direct-link mobile-touch-btn" data-merchant="coupang" data-product-category="${f.cat}" style="display:flex; min-height:40px; align-items:center; justify-content:center; background:#1D4ED8; color:#FFFFFF; font-size:0.8rem; font-weight:900; border-radius:8px; text-decoration:none; text-align:center; padding:0.35rem 0.45rem;">🛒 쿠팡 로켓 최저가·후기 ↗</a>
+                  <a href="${f.secUrl}" target="_blank" rel="noopener sponsored" class="pinpoint-direct-link mobile-touch-btn" data-merchant="${f.secMerchant}" data-product-category="${f.cat}" style="display:flex; min-height:40px; align-items:center; justify-content:center; background:#EFF6FF; border:1.5px solid #93C5FD; color:#1D4ED8; font-size:0.78rem; font-weight:900; border-radius:8px; text-decoration:none; text-align:center; padding:0.35rem 0.45rem;">${f.secLabel}</a>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        <!-- Section 2: Category Best Top 3 Lists (Supplements, Biomechanics, Learning Tools, Books, Weekend Tickets) -->
+        <div style="display: flex; flex-direction: column; gap: 0.9rem;">
+          ${renderContextualSupplementsPrescription(profile, affConfig)}
+          ${renderContextualBiomechanicsPrescription(profile, affConfig)}
+          ${renderPillar2LearningToolsPrescription(profile, affConfig)}
+          ${renderCustomEducationChapter(profile, affConfig)}
+          ${renderCustomTravelChapter(profile, affConfig)}
+        </div>
+      </div>
+    `;
+  }
+
   const TallerPinpointCurator = {
     MONTHLY_MICRO_CURATION_DB,
     getMonthlyMicroAnalysisAndProducts,
     renderMonthlyMicroPrescriptionCard,
     renderFirstFoldQuickPurchaseBridge,
+    renderMonthlyProductsOnlyCatalog,
     AGE_LIFECYCLE_DB,
     calculateExactAgeFromDob,
     getDobFromAgeMonths,

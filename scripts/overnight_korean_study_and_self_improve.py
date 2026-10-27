@@ -105,6 +105,19 @@ KOREAN_OVERNIGHT_MODULES = [
         ),
         "self_improvement_action": "성장 리포트(Report 1) 및 두뇌·학습 리포트(Report 2) 내 거주 지역별 주말 현장 체험 섹션 및 예매 CTA 무결성 점검"
     },
+    {
+        "module_id": "KR-NIGHT-07",
+        "domain": "100% 무인 자동화 검색 유입(Zero-Touch SEO/AEO) 및 설문 생략 월령별 추천템 전용관(CRO) 고도화 연구",
+        "query": "automated conversion rate optimization e-commerce product recommendation funnel consumer behavior",
+        "book_title_ko": "무인 자동화 제휴마케팅 퍼널 아키텍처 & 한국형 구매전환(CRO) 실전 바이블",
+        "korean_perspective_insight": (
+            "인스타·클립·쓰레드 외의 모든 웹 유입과 구매 전환은 대표님 수동 개입 없이 24시간 무인 자동화 파이프라인으로 작동해야 한다. "
+            "특히 설문을 건너뛰고 추천 상품만 바로 보고 싶어 하는 학부모에게 미입력 상태의 부정확한 진단 보고서를 노출하면 신뢰도가 하락하므로, "
+            "설문 생략 시에는 오직 생년월일(생후 12~216개월) 기반 '월령별 추천템 전용관(추천템만 노출)'으로 직결시키고 "
+            "검색엔진(qna/monthly-curation.html)에서도 개월별 추천템 전용 허브가 자동 색인·백링크 확산되도록 매일 밤 자가 진화시킨다."
+        ),
+        "self_improvement_action": "설문 생략 월령별 추천템 전용관(renderMonthlyProductsOnlyCatalog & qna/monthly-curation.html) 및 무인 백링크·검색핑 자동 고도화"
+    },
 ]
 
 
@@ -175,7 +188,8 @@ def run_homepage_self_improvement(module: dict, paper_info: dict) -> dict:
     # 2. Apply AlphaNam / ChallengeClass Korean CRO & Internal Link Clusters across all Q&A pages
     patched_qna = 0
     try:
-        from apply_alphamale_cclass_and_advisor_daemon import apply_alphamale_and_cclass_to_qna_pages
+        from apply_alphamale_cclass_and_advisor_daemon import apply_alphamale_and_cclass_to_qna_pages, generate_and_sync_monthly_curation_hub_page
+        generate_and_sync_monthly_curation_hub_page()
         patched_qna = apply_alphamale_and_cclass_to_qna_pages()
     except Exception as e:
         print(f"[Warning] QnA CRO patch skipped: {e}")
@@ -196,10 +210,15 @@ def run_homepage_self_improvement(module: dict, paper_info: dict) -> dict:
     live_opt["last_overnight_korean_insight"] = module["korean_perspective_insight"]
     LIVE_OPT_PATH.write_text(json.dumps(live_opt, ensure_ascii=False, indent=2), encoding="utf-8")
 
-    # 4. Run build & verify-acceptance
+    # 4. Run build, verify-acceptance, auto-backlink syndication, and auto git push
+    subprocess.run(["python", "scripts/auto_backlink_engine.py"], cwd=str(ROOT), capture_output=True, text=True, encoding="utf-8", errors="ignore")
     build_res = subprocess.run(["node", "scripts/build.js"], cwd=str(ROOT), capture_output=True, text=True, encoding="utf-8", errors="ignore")
     verify_res = subprocess.run(["node", "scripts/verify-acceptance.js"], cwd=str(ROOT), capture_output=True, text=True, encoding="utf-8", errors="ignore")
     verify_passed = "33/33 checks passed" in (verify_res.stdout or "")
+    if verify_passed and build_res.returncode == 0:
+        subprocess.run(["git", "add", "src/data/", "qna/", "dist/", "sitemap.xml", "rss.xml", "feed.json", "README.md"], cwd=str(ROOT), capture_output=True)
+        subprocess.run(["git", "commit", "-m", f"chore(overnight-self-improve): {module['module_id']} auto-study & zero-touch CRO evolution"], cwd=str(ROOT), capture_output=True)
+        subprocess.run(["git", "push", "origin", "main"], cwd=str(ROOT), capture_output=True)
 
     return {
         "timestamp": now_str,

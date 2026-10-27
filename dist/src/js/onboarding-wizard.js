@@ -1078,19 +1078,85 @@
     }
   }
 
-  function quickCompleteFromCurrentStep() {
+  function openMonthlyProductsOnlyModal() {
+    if (typeof document === 'undefined') return;
     try {
+      syncDobAndAutoStage({ preserveUserInputs: true });
       readProfileFromForm();
     } catch (_) {}
-    completeScan((profile) => {
-      if (typeof global.KidsFitApp !== 'undefined') {
-        if (typeof global.KidsFitApp.renderPrescriptionResults === 'function') {
-          global.KidsFitApp.renderPrescriptionResults(profile);
-        } else if (typeof global.KidsFitApp.renderPrescriptionReport === 'function') {
-          global.KidsFitApp.renderPrescriptionReport(profile);
-        }
-      }
-    });
+
+    const quizSection = document.getElementById('quiz-section');
+    if (quizSection) quizSection.style.display = 'none';
+    const heroSection = document.getElementById('hero-section');
+    if (heroSection) heroSection.style.display = 'none';
+    const presetsBar = document.getElementById('quick-presets-bar');
+    if (presetsBar) presetsBar.style.display = 'none';
+
+    const dashboard = document.getElementById('results-dashboard') || document.getElementById('prescription-container');
+    if (dashboard) {
+      dashboard.classList.remove('hidden');
+      dashboard.style.display = 'block';
+    }
+
+    const printBtnTop = document.getElementById('btn-print-report-top');
+    if (printBtnTop) printBtnTop.style.display = 'none';
+
+    const rxTitle = document.getElementById('rx-header-title');
+    const rxSub = document.getElementById('rx-header-subtitle');
+    const exactM = Math.max(12, Math.min(216, Math.round(Number(wizardState.profile.exactMonths || wizardState.profile.ageMonths) || 120)));
+    const yrs = Math.floor(exactM / 12);
+    const remM = exactM % 12;
+    if (rxTitle) {
+      rxTitle.textContent = `생후 ${exactM}개월(만 ${yrs}세 ${remM}개월) 월령별 맞춤 추천템 전용관`;
+    }
+    if (rxSub) {
+      rxSub.textContent = '설문 생략 모드 · 선택하신 생년월일(월령) 기준 엄선된 영양제·운동기구·두뇌교구·필독서 추천 리스트입니다.';
+    }
+
+    if (!PinpointCurator && (global.TallerPinpointCurator || global.KidsFitPinpointCurator)) {
+      PinpointCurator = global.TallerPinpointCurator || global.KidsFitPinpointCurator;
+    }
+    const mbEl = document.getElementById('master-briefing-card');
+    if (mbEl && PinpointCurator && typeof PinpointCurator.renderMonthlyProductsOnlyCatalog === 'function') {
+      mbEl.innerHTML = PinpointCurator.renderMonthlyProductsOnlyCatalog(wizardState.profile);
+    }
+    if (dashboard && typeof dashboard.scrollIntoView === 'function') {
+      dashboard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  function updateMonthlyProductsOnlyAge() {
+    if (typeof document === 'undefined') return;
+    const yEl = document.getElementById('quick-catalog-birth-year');
+    const mEl = document.getElementById('quick-catalog-birth-month');
+    const mainY = document.getElementById('child-birth-year');
+    const mainM = document.getElementById('child-birth-month');
+    if (yEl && mainY) mainY.value = yEl.value;
+    if (mEl && mainM) mainM.value = mEl.value;
+    openMonthlyProductsOnlyModal();
+  }
+
+  function returnToSurveyFromProducts() {
+    if (typeof document === 'undefined') return;
+    const printBtnTop = document.getElementById('btn-print-report-top');
+    if (printBtnTop) printBtnTop.style.display = '';
+    const dashboard = document.getElementById('results-dashboard') || document.getElementById('prescription-container');
+    if (dashboard) {
+      dashboard.classList.add('hidden');
+      dashboard.style.display = 'none';
+    }
+    const quizSection = document.getElementById('quiz-section');
+    if (quizSection) quizSection.style.display = 'block';
+    const presetsBar = document.getElementById('quick-presets-bar');
+    if (presetsBar) presetsBar.style.display = 'block';
+    goToStep(1);
+    if (typeof window !== 'undefined' && typeof window.scrollTo === 'function') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }
+
+  function quickCompleteFromCurrentStep() {
+    openMonthlyProductsOnlyModal();
   }
 
   function completeScan(onComplete) {
@@ -1119,6 +1185,8 @@
     if (presetsBar) presetsBar.style.display = 'none';
 
     // Show Phase 2 Results Dashboard
+    const printBtnTop = document.getElementById('btn-print-report-top');
+    if (printBtnTop) printBtnTop.style.display = '';
     const dashboard = document.getElementById('results-dashboard') || document.getElementById('prescription-container');
     if (dashboard) {
       dashboard.classList.remove('hidden');
@@ -2446,6 +2514,9 @@
     start3SecondScan,
     completeScan,
     quickCompleteFromCurrentStep,
+    openMonthlyProductsOnlyModal,
+    updateMonthlyProductsOnlyAge,
+    returnToSurveyFromProducts,
     readProfileFromForm,
     openAdditionalNarrativeStep,
     closeAdditionalNarrativeStep,
