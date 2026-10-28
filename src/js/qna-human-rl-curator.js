@@ -97,6 +97,11 @@
       '</section>';
   }
 
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', renderHumanCuration);
+  } else {
+    renderHumanCuration();
+  }
   ['scroll', 'touchstart', 'mousemove', 'keydown'].forEach(function (evt) {
     window.addEventListener(evt, renderHumanCuration, { once: true, passive: true });
   });

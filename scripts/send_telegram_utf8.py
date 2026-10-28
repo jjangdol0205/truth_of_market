@@ -9,6 +9,11 @@ import sys
 import urllib.request
 from pathlib import Path
 
+try:
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+except Exception:
+    pass
+
 ROOT = Path(__file__).resolve().parent.parent
 ENV_PATH = ROOT / ".env"
 CHAT_ID = "755033799"
