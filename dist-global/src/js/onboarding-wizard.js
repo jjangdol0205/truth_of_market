@@ -1198,13 +1198,24 @@
     const presetsBar = document.getElementById('quick-presets-bar');
     if (presetsBar) presetsBar.style.display = 'none';
 
-    // Show Phase 2 Results Dashboard
+    // Show Phase 2 Results Dashboard & force viewport to the very top of the report
+    const scrollToReportTop = () => {
+      try {
+        if (typeof window !== 'undefined' && typeof window.scrollTo === 'function') {
+          window.scrollTo(0, 0);
+        }
+        if (typeof document !== 'undefined') {
+          if (document.documentElement) document.documentElement.scrollTop = 0;
+          if (document.body) document.body.scrollTop = 0;
+        }
+      } catch (_) {}
+    };
     const dashboard = document.getElementById('results-dashboard') || document.getElementById('prescription-container');
     if (dashboard) {
       dashboard.classList.remove('hidden');
       dashboard.style.display = 'block';
-      dashboard.scrollIntoView({ behavior: 'smooth' });
     }
+    scrollToReportTop();
 
     // Record user input into Cohort DB for autonomous self-improvement
     if (!UserCohortDB && (global.TallerUserCohortDB || global.KidsFitUserCohortDB)) {
@@ -1257,6 +1268,11 @@
       window.dispatchEvent(new CustomEvent('taller-scan-completed', {
         detail: { profile: wizardState.profile }
       }));
+    }
+    scrollToReportTop();
+    if (typeof setTimeout === 'function') {
+      setTimeout(scrollToReportTop, 20);
+      setTimeout(scrollToReportTop, 100);
     }
   }
 

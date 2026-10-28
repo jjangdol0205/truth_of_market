@@ -646,7 +646,11 @@
         if (avatarEl) {
           avatarEl.textContent = state.profile.gender === 'boy' ? '👦' : '👧';
         }
-        dashboard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (typeof window !== 'undefined' && typeof window.scrollTo === 'function') {
+          window.scrollTo(0, 0);
+        }
+        if (document.documentElement) document.documentElement.scrollTop = 0;
+        if (document.body) document.body.scrollTop = 0;
       }
 
       const quizSection = document.getElementById('quiz-section');
@@ -690,7 +694,11 @@
           if (avatarEl) {
             avatarEl.textContent = state.profile.gender === 'boy' ? '👦' : '👧';
           }
-          container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          if (typeof window !== 'undefined' && typeof window.scrollTo === 'function') {
+            window.scrollTo(0, 0);
+          }
+          if (document.documentElement) document.documentElement.scrollTop = 0;
+          if (document.body) document.body.scrollTop = 0;
         }
         const quizSection = document.getElementById('quiz-section');
         if (quizSection) quizSection.style.display = 'none';
@@ -863,6 +871,19 @@
             setTimeout(() => targetEl.scrollIntoView({ behavior: 'instant', block: 'start' }), 80);
           }
         } catch (_) {}
+      } else {
+        const forceTop = () => {
+          try {
+            if (typeof window !== 'undefined' && typeof window.scrollTo === 'function') window.scrollTo(0, 0);
+            if (document.documentElement) document.documentElement.scrollTop = 0;
+            if (document.body) document.body.scrollTop = 0;
+          } catch (_) {}
+        };
+        forceTop();
+        if (typeof setTimeout === 'function') {
+          setTimeout(forceTop, 10);
+          setTimeout(forceTop, 80);
+        }
       }
     }
   }
