@@ -53,6 +53,19 @@
     var spec = CATALOG_SPECS[cat] || CATALOG_SPECS.growth;
 
     slot.innerHTML =
+      '<section style="margin:26px 0 18px;padding:22px;border-radius:20px;background:linear-gradient(135deg,#1E3A8A 0%,#1D4ED8 60%,#0F172A 100%);color:#FFFFFF;box-shadow:0 12px 28px rgba(29,78,216,0.22);border:1.5px solid #60A5FA;">' +
+        '<div style="display:inline-block;background:rgba(255,255,255,0.16);color:#DBEAFE;font-weight:900;font-size:12px;padding:4px 11px;border-radius:999px;margin-bottom:8px;">💎 KIDS-FIT 공식 무형 디지털 자산 · 평생 소장용 마스터북 &amp; 워크북</div>' +
+        '<h3 style="font-size:18.5px;font-weight:900;color:#FFFFFF;margin:0 0 6px 0;line-height:1.4;word-break:keep-all;">우리 아이 1:1 병원 차트형 정밀 처방전 PDF + 가정용 프린트 워크북 4종 풀세트</h3>' +
+        '<p style="font-size:13.5px;color:#DBEAFE;margin:0 0 14px 0;line-height:1.55;">질병관리청(KDCA) 성장도표 · 보건복지부 K-DST · SCI 논문 3,894편 기반 <strong>골연령·체중 비례 영양소 mg 정량 시간표 + 문장제 10초 여백 도식화 &amp; 파인만 3줄 백지복습 프린트 교재</strong>를 즉시 다운로드하세요.</p>' +
+        '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px;">' +
+          '<a href="https://app.lemonsqueezy.com/checkout/buy/c562946d-ef68-4c2f-a802-df9da0179895" data-product-category="digital_asset" data-rl-arm-id="digital_asset_lemonsqueezy" data-rl-cta-arm="arm_digital_masterbook" data-rl-reward-weight="4.75" data-product-name="[무형자산 VIP 올인원 $19.99] 1:1 마스터북 PDF + 프린트 워크북 4종 풀세트" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;padding:13px 15px;border-radius:12px;background:#10B981;color:#FFFFFF;font-weight:900;font-size:14px;text-decoration:none;box-shadow:0 6px 16px rgba(16,185,129,0.3);">' +
+            '🏆 [VIP 올인원 $19.99] 마스터북 PDF + 워크북 4종 즉시 다운로드 →' +
+          '</a>' +
+          '<a href="https://app.lemonsqueezy.com/checkout/buy/c1cd7f12-3479-49e8-ab71-59c98135d599" data-product-category="digital_asset" data-rl-arm-id="digital_asset_lemonsqueezy" data-rl-cta-arm="arm_digital_masterbook" data-rl-reward-weight="2.75" data-product-name="[무형자산 단건 $8.99] 1:1 정밀 마스터북 PDF 소장 패스" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;padding:13px 15px;border-radius:12px;background:rgba(255,255,255,0.14);border:1.5px solid #93C5FD;color:#FFFFFF;font-weight:800;font-size:13.5px;text-decoration:none;">' +
+            '📄 [단건 패스 $8.99] 1:1 정밀 마스터북 PDF 바로 소장 →' +
+          '</a>' +
+        '</div>' +
+      '</section>' +
       '<section style="margin:28px 0;padding:22px;border-radius:20px;background:#FFFFFF;border:1.5px solid #E0E7FF;box-shadow:0 8px 24px rgba(79,70,229,0.06);">' +
         '<div style="display:inline-block;background:#EEF2FF;color:#4F46E5;font-weight:800;font-size:12.5px;padding:4px 11px;border-radius:999px;margin-bottom:8px;">' +
           spec.badge +

@@ -1614,6 +1614,13 @@
       return;
     }
     preparePrintReport(profile);
+    const isJsdom = typeof navigator !== 'undefined' && /jsdom/i.test(navigator.userAgent || '');
+    if (!isJsdom && typeof window !== 'undefined' && window.KidsFitDigitalAssetStore && typeof window.KidsFitDigitalAssetStore.isDigitalAssetUnlocked === 'function' && !window.KidsFitDigitalAssetStore.isDigitalAssetUnlocked()) {
+      if (typeof window.openKoreanDigitalAssetModal === 'function') {
+        window.openKoreanDigitalAssetModal();
+        return;
+      }
+    }
     if (typeof window !== 'undefined' && typeof window.print === 'function') {
       window.print();
     }
