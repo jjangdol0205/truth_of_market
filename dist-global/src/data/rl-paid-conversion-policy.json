@@ -1,7 +1,7 @@
 {
   "version": "2.0.0",
-  "episode": 12,
-  "lastUpdated": "2026-10-27T21:16:11.854Z",
+  "episode": 14,
+  "lastUpdated": "2026-10-28T03:15:24.739Z",
   "objective": "MAXIMIZE_PAID_MEMBER_REVENUE_USD",
   "rewardWeights": {
     "paid_pass_1999": 100,
@@ -12,10 +12,10 @@
   },
   "cumulativeMetrics": {
     "totalPaidOrders": 157,
-    "totalUnlockedMembers": 0,
-    "totalCheckoutClicks": 491,
+    "totalUnlockedMembers": 5,
+    "totalCheckoutClicks": 494,
     "totalDiagnosesCompleted": 41,
-    "totalCumulativeReward": 15213
+    "totalCumulativeReward": 15723
   },
   "activeChampionPaywallArm": "A2_PLATE_FUSION_URGENCY",
   "activeChampionSeoTopicSlug": "topic-17",
@@ -26,11 +26,11 @@
       "badgeText": "⚠️ BIOLOGICAL WINDOW ALERT · LOCK IN BEFORE EPIPHYSEAL CLOSURE",
       "urgencySubtext": "Once epiphyseal growth plates fuse and prefrontal myelination peaks, hidden stature (+3.1 in) and working-memory gains cannot be recovered. Start your child's 1:1 protocol today.",
       "defaultRecommendedPlan": "single",
-      "trials": 23,
-      "totalReward": 855,
-      "qValue": 37.17,
-      "ucbScore": 38.2,
-      "selectionProb": 0.762
+      "trials": 25,
+      "totalReward": 957,
+      "qValue": 38.28,
+      "ucbScore": 39.28,
+      "selectionProb": 0.794
     },
     {
       "id": "A1_CLINIC_ANCHOR_PASS_FIRST",
@@ -38,11 +38,11 @@
       "badgeText": "LIMITED LAUNCH OFFER · SAVE 95% VS. $450 US SPECIALIST CONSULT",
       "urgencySubtext": "Why pay $450+ at a pediatric endocrine or neuro-learning clinic? Unlock your child's 1:1 US CDC 2000 & 3,722-Paper Clinical Report + Printable PDF instantly.",
       "defaultRecommendedPlan": "pass",
-      "trials": 25,
-      "totalReward": 804.5,
-      "qValue": 32.18,
-      "ucbScore": 33.17,
-      "selectionProb": 0.219
+      "trials": 27,
+      "totalReward": 879.5,
+      "qValue": 32.57,
+      "ucbScore": 33.53,
+      "selectionProb": 0.19
     },
     {
       "id": "A3_RHGH_20K_ROI_ANCHOR",
@@ -50,92 +50,92 @@
       "badgeText": "COCHRANE & BMJ ROI VERDICT · $8.99 EVIDENCE PROTOCOL VS. $20,000/YR rhGH",
       "urgencySubtext": "Clinical meta-analyses show lifestyle sleep HGH, bioavailable Ca/D3/K2/Zinc, and Feynman/Bar-Model protocols recover +1.5 to +3.1 inches and +150% recall without $20,000/yr injections.",
       "defaultRecommendedPlan": "single",
-      "trials": 21,
-      "totalReward": 473.5,
-      "qValue": 22.55,
-      "selectionProb": 0.02,
-      "ucbScore": 23.63
+      "trials": 23,
+      "totalReward": 520.5,
+      "qValue": 22.63,
+      "selectionProb": 0.016,
+      "ucbScore": 23.67
     }
   ],
   "seoTopicArms": [
     {
       "slug": "topic-17",
       "label": "$20,000/yr rhGH Injection ROI vs. Natural Sleep/Mineral Catch-Up",
-      "trials": 19,
-      "totalReward": 518.5,
-      "qValue": 27.29,
-      "ucbScore": 28.55
+      "trials": 21,
+      "totalReward": 573.5,
+      "qValue": 27.31,
+      "ucbScore": 28.52
     },
     {
       "slug": "topic-01",
       "label": "US CDC 2000 Adult Height Prediction & +3.3 Inch Sleep HGH Window",
-      "trials": 21,
-      "totalReward": 558.7,
-      "qValue": 26.6,
-      "ucbScore": 27.79
+      "trials": 23,
+      "totalReward": 612.1,
+      "qValue": 26.61,
+      "ucbScore": 27.76
     },
     {
       "slug": "topic-07",
       "label": "Math Word-Problem Working Memory Overload & Singapore Bar Modeling",
-      "trials": 20,
-      "totalReward": 514.4,
-      "qValue": 25.72,
-      "ucbScore": 26.94
+      "trials": 22,
+      "totalReward": 566.2,
+      "qValue": 25.74,
+      "ucbScore": 26.92
     },
     {
       "slug": "topic-04",
       "label": "Rapid Weight Gain, Aromatase Estrogen & Early Bone-Age Closure Defense",
-      "trials": 18,
-      "totalReward": 447.6,
-      "qValue": 24.87,
-      "ucbScore": 26.16
+      "trials": 20,
+      "totalReward": 497.8,
+      "qValue": 24.89,
+      "ucbScore": 26.13
     },
     {
       "slug": "topic-10",
       "label": "Class Understanding vs. Test Blanking: 3-Min Feynman Blank-Page Recall",
-      "trials": 18,
-      "totalReward": 406.5,
-      "qValue": 22.58,
-      "ucbScore": 23.87
+      "trials": 20,
+      "totalReward": 450.5,
+      "qValue": 22.52,
+      "ucbScore": 23.76
     },
     {
       "slug": "topic-18",
       "label": "Calcium Citrate vs. Carbonate + Vitamin D3/K2 (MK-7) & Chelated Zinc",
-      "trials": 17,
-      "totalReward": 380,
-      "qValue": 22.35,
-      "ucbScore": 23.68
+      "trials": 19,
+      "totalReward": 424,
+      "qValue": 22.32,
+      "ucbScore": 23.59
     },
     {
       "slug": "topic-15",
       "label": "18-Month Peak Height Velocity (PHV) Puberty Spurt Optimization",
-      "trials": 17,
-      "totalReward": 377,
-      "qValue": 22.18,
-      "ucbScore": 23.51
+      "trials": 19,
+      "totalReward": 421,
+      "qValue": 22.16,
+      "ucbScore": 23.43
     },
     {
       "slug": "topic-02",
       "label": "Nocturnal Knee/Calf Growing Pains & Magnesium Glycinate Protocol",
-      "trials": 17,
-      "totalReward": 371,
-      "qValue": 21.82,
-      "ucbScore": 23.15
+      "trials": 19,
+      "totalReward": 415,
+      "qValue": 21.84,
+      "ucbScore": 23.11
     },
     {
       "slug": "topic-05",
       "label": "Tech-Neck Cervical Spine Load (45 lbs) & Doorway Bar Hidden Height",
-      "trials": 17,
-      "totalReward": 368,
-      "qValue": 21.65,
-      "ucbScore": 22.98
+      "trials": 19,
+      "totalReward": 412,
+      "qValue": 21.68,
+      "ucbScore": 22.95
     },
     {
       "slug": "topic-09",
       "label": "Short-Form Video Dopamine Reset & 20-Min Visual Timer Focus Sprint",
-      "trials": 17,
-      "totalReward": 365,
-      "qValue": 21.47,
+      "trials": 19,
+      "totalReward": 409,
+      "qValue": 21.53,
       "ucbScore": 22.8
     }
   ]

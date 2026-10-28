@@ -713,6 +713,12 @@
         `;
       }
       const isImp = typeof window !== 'undefined' && (window.__KIDSFIT_UNIT_SYSTEM__ === 'imperial' || (window.TallerI18n && typeof window.TallerI18n.getUnitSystem === 'function' && window.TallerI18n.getUnitSystem() === 'imperial'));
+      const cmToFtIn = (cmVal) => {
+        const totIn = (Number(cmVal) || 0) / 2.54;
+        const ft = Math.floor(totIn / 12);
+        const inch = Math.round((totIn - ft * 12) * 10) / 10;
+        return `${ft}'${inch}"`;
+      };
       const fmtH = (cmVal) => {
         const c = Number(cmVal) || 0;
         if (!isImp) return `${c} cm`;
@@ -785,7 +791,7 @@
                     <td style="padding: 6px; border-right: 1px solid #E2E8F0; font-weight: 700;">Height</td>
                     <td style="padding: 6px; border-right: 1px solid #E2E8F0; font-weight: 700; color: #1D4ED8;">${fmtH(height)}</td>
                     <td style="padding: 6px; border-right: 1px solid #E2E8F0;">${fmtH(medianHeight.toFixed(1))}</td>
-                    <td style="padding: 6px; border-right: 1px solid #E2E8F0;">${hDeltaStr}</td>
+                    <td style="padding: 6px; border-right: 1px solid #E2E8F0;">${isImp ? `${hDeltaVal >= 0 ? '+' : ''}${(hDeltaVal / 2.54).toFixed(1)} in (${hDeltaStr})` : hDeltaStr}</td>
                     <td style="padding: 6px; border-right: 1px solid #E2E8F0; font-family: monospace;">${hZStr}</td>
                     <td style="padding: 6px; font-weight: 700; color: #1D4ED8;">${hPctEn}</td>
                   </tr>
@@ -793,7 +799,7 @@
                     <td style="padding: 6px; border-right: 1px solid #E2E8F0; font-weight: 700;">Weight</td>
                     <td style="padding: 6px; border-right: 1px solid #E2E8F0; font-weight: 700;">${fmtW(weight)}</td>
                     <td style="padding: 6px; border-right: 1px solid #E2E8F0;">${fmtW(medianWeight.toFixed(1))}</td>
-                    <td style="padding: 6px; border-right: 1px solid #E2E8F0;">${wDeltaStr}</td>
+                    <td style="padding: 6px; border-right: 1px solid #E2E8F0;">${isImp ? `${wDeltaVal >= 0 ? '+' : ''}${(wDeltaVal * 2.20462262).toFixed(1)} lbs (${wDeltaStr})` : wDeltaStr}</td>
                     <td style="padding: 6px; border-right: 1px solid #E2E8F0; font-family: monospace;">${wZStr}</td>
                     <td style="padding: 6px; font-weight: 700;">${wPctEn}</td>
                   </tr>
@@ -940,12 +946,12 @@
                 <div style="border: 1px solid #CBD5E1; border-radius: 4px; padding: 6px 8px; background: #F8FAFC;">
                   <div style="font-weight: 800; color: #1D4ED8;">1. Passive Spinal Dead Hang</div>
                   <div>30s x 3 sets (30s rest)</div>
-                  <div style="color: #64748B; font-size: 7.5pt;">L1–L5 intervertebral disc unloading (+0.8cm)</div>
+                  <div style="color: #64748B; font-size: 7.5pt;">L1–L5 intervertebral disc unloading (+0.3 in (+0.8 cm))</div>
                 </div>
                 <div style="border: 1px solid #CBD5E1; border-radius: 4px; padding: 6px 8px; background: #F8FAFC;">
                   <div style="font-weight: 800; color: #1D4ED8;">2. Thoracic &amp; Pelvic Alignment</div>
                   <div>45s x 2 sets (bilateral)</div>
-                  <div style="color: #64748B; font-size: 7.5pt;">Text-neck &amp; pelvic tilt correction (+1.8cm)</div>
+                  <div style="color: #64748B; font-size: 7.5pt;">Text-neck &amp; pelvic tilt correction (+0.7 in (+1.8 cm))</div>
                 </div>
                 <div style="border: 1px solid #CBD5E1; border-radius: 4px; padding: 6px 8px; background: #F8FAFC;">
                   <div style="font-weight: 800; color: #1D4ED8;">3. Plyometric Micro-Loading</div>
@@ -961,7 +967,7 @@
               <table style="width: 100%; border: 1px solid #CBD5E1; border-collapse: collapse; font-size: 8pt; margin-bottom: 8px;">
                 <tr style="background: #F8FAFC; border-bottom: 1px solid #CBD5E1;">
                   <th style="padding: 5px 8px; width: 22%; border-right: 1px solid #CBD5E1; color: #1D4ED8;">Short-Term (Weeks 1–4)</th>
-                  <td style="padding: 5px 8px;">21:45 bedtime · 3h pre-sleep zero-carb fasting (0% GH suppression) · Evening 3x30s dead hang (+1.8cm disc recovery)</td>
+                  <td style="padding: 5px 8px;">21:45 bedtime · 3h pre-sleep zero-carb fasting (0% GH suppression) · Evening 3x30s dead hang (+0.7 in (+1.8 cm) disc recovery)</td>
                 </tr>
                 <tr style="border-bottom: 1px solid #CBD5E1;">
                   <th style="padding: 5px 8px; border-right: 1px solid #CBD5E1; background: #F8FAFC; color: #1D4ED8;">Mid-Term (Months 1–3)</th>

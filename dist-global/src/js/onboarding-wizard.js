@@ -2451,6 +2451,20 @@
         });
       }
     }
+
+    // Auto-start preset wizard & clinical scan when URL contains ?preset=... (from Q&A or external links)
+    try {
+      if (typeof window !== 'undefined' && window.location && window.location.search) {
+        const params = new URLSearchParams(window.location.search);
+        const rawPreset = String(params.get('preset') || '').trim();
+        const rawMode = String(params.get('mode') || '').trim().toLowerCase() === 'learning' ? 'learning' : 'growth';
+        if (rawPreset && PRESETS[rawPreset] && !window._kidsfitUrlPresetApplied) {
+          window._kidsfitUrlPresetApplied = true;
+          enterStudioMode('child', rawMode);
+          applyPreset(rawPreset);
+        }
+      }
+    } catch (_) {}
   }
 
   function openAdditionalNarrativeStep() {
@@ -2508,20 +2522,6 @@
         }
       });
     }
-
-    // Auto-start preset wizard & clinical scan when URL contains ?preset=... (from Q&A or external links)
-    try {
-      if (typeof window !== 'undefined' && window.location && window.location.search) {
-        const params = new URLSearchParams(window.location.search);
-        const rawPreset = String(params.get('preset') || '').trim();
-        const rawMode = String(params.get('mode') || '').trim().toLowerCase() === 'learning' ? 'learning' : 'growth';
-        if (rawPreset && PRESETS[rawPreset] && !window._kidsfitUrlPresetApplied) {
-          window._kidsfitUrlPresetApplied = true;
-          enterStudioMode('child', rawMode);
-          applyPreset(rawPreset);
-        }
-      }
-    } catch (_) {}
   }
 
   // Export
