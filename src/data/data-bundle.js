@@ -177857,9 +177857,9 @@
     "version": "1.0.0",
     "partner_id": "AF7865143",
     "ultimate_objective": "Maximize Coupang Partners Expected Commission Revenue + 24h Rocket Cart Halo Conversion",
-    "last_updated_kst": "2026-10-28 07:15:43 KST",
-    "total_episodes": 63,
-    "total_cumulative_reward": 4089.0,
+    "last_updated_kst": "2026-10-28 09:03:22 KST",
+    "total_episodes": 65,
+    "total_cumulative_reward": 4122,
     "exploration_rate_epsilon": 0.18,
     "ucb_exploration_constant_c": 1.414,
     "winning_category_arm": "growth_nutrition_repeat_cart",
@@ -177884,45 +177884,45 @@
       "id": "arm_rocket_review",
       "label": "🛒 쿠팡 로켓배송 최저가·실제 학부모 후기 확인 ↗",
       "badge": "🚀 로켓와우 내일도착 · 학부모 실구매 후기 검증",
-      "alpha": 66.74,
-      "beta": 13.56,
-      "impressions": 343,
-      "clicks": 36,
-      "cumulative_reward": 908,
-      "ucb_score": 2.28
+      "alpha": 70.22,
+      "beta": 13.68,
+      "impressions": 345,
+      "clicks": 37,
+      "cumulative_reward": 941,
+      "ucb_score": 2.277
     },
     "arm_wow_tomorrow": {
       "id": "arm_wow_tomorrow",
       "label": "⚡ 쿠팡 와우 내일도착 · 품절 전 할인가 비교하기 ↗",
       "badge": "⚡ 오늘 주문 시 내일 도착 · 24시간 장바구니 혜택",
-      "alpha": 33.34,
-      "beta": 15.56,
-      "impressions": 283,
+      "alpha": 33.52,
+      "beta": 15.68,
+      "impressions": 285,
       "clicks": 21,
       "cumulative_reward": 472.5,
-      "ucb_score": 1.927
+      "ucb_score": 1.925
     },
     "arm_cart_bundle": {
       "id": "arm_cart_bundle",
       "label": "🎁 쿠팡 로켓 장바구니 특가 · 오늘 할인율 확인 ↗",
       "badge": "💡 쿠팡 팁: 장바구니에 담아두면 생필품과 함께 로켓묶음할인!",
-      "alpha": 26.34,
-      "beta": 16.56,
-      "impressions": 233,
+      "alpha": 26.52,
+      "beta": 16.68,
+      "impressions": 235,
       "clicks": 15,
       "cumulative_reward": 330,
-      "ucb_score": 1.78
+      "ucb_score": 1.779
     },
     "arm_spec_verified": {
       "id": "arm_spec_verified",
       "label": "🔬 식약처·KC 인증 스펙 확인 및 쿠팡 최저가 보기 ↗",
       "badge": "🏅 식약처 건강기능식품 · KC 안전인증 스펙 통과",
-      "alpha": 29.34,
-      "beta": 15.56,
-      "impressions": 253,
+      "alpha": 29.52,
+      "beta": 15.68,
+      "impressions": 255,
       "clicks": 18,
       "cumulative_reward": 396,
-      "ucb_score": 1.869
+      "ucb_score": 1.867
     }
   },
   "category_arms": {
@@ -177946,12 +177946,12 @@
       "commission_multiplier": 1.65,
       "avg_order_value_krw": 38000,
       "cart_halo_multiplier": 2.2,
-      "alpha": 82.67,
-      "beta": 11.95,
-      "impressions": 433,
-      "clicks": 43,
-      "cumulative_reward": 1419,
-      "ucb_score": 3.356,
+      "alpha": 87.16,
+      "beta": 12.1,
+      "impressions": 435,
+      "clicks": 44,
+      "cumulative_reward": 1452,
+      "ucb_score": 3.352,
       "priority_rank": 1
     },
     "ergonomic_hardware_high_ticket": {
@@ -177973,12 +177973,12 @@
       "commission_multiplier": 1.85,
       "avg_order_value_krw": 145000,
       "cart_halo_multiplier": 1.3,
-      "alpha": 47.33,
-      "beta": 12.95,
-      "impressions": 403,
+      "alpha": 47.74,
+      "beta": 13.1,
+      "impressions": 405,
       "clicks": 31,
       "cumulative_reward": 1147,
-      "ucb_score": 2.079,
+      "ucb_score": 2.077,
       "priority_rank": 3
     },
     "cognitive_learning_problem_solver": {
@@ -178001,12 +178001,12 @@
       "commission_multiplier": 1.45,
       "avg_order_value_krw": 26000,
       "cart_halo_multiplier": 1.8,
-      "alpha": 43.16,
-      "beta": 13.95,
-      "impressions": 373,
+      "alpha": 43.48,
+      "beta": 14.1,
+      "impressions": 375,
       "clicks": 29,
       "cumulative_reward": 841,
-      "ucb_score": 2.171,
+      "ucb_score": 2.169,
       "priority_rank": 2
     },
     "sleep_biomechanics_gear": {
@@ -178028,9 +178028,9 @@
       "commission_multiplier": 1.55,
       "avg_order_value_krw": 49000,
       "cart_halo_multiplier": 1.5,
-      "alpha": 36.42,
-      "beta": 15.95,
-      "impressions": 313,
+      "alpha": 36.76,
+      "beta": 16.1,
+      "impressions": 315,
       "clicks": 22,
       "cumulative_reward": 682,
       "ucb_score": 1.833,
@@ -178113,6 +178113,14 @@
     }
   },
   "recent_reward_history": [
+    {
+      "timestampKst": "2026-10-28 09:03:22 KST",
+      "armId": "growth_nutrition_repeat_cart",
+      "ctaArm": "arm_rocket_review",
+      "productName": "칼슴",
+      "reward": 33,
+      "utmSource": "direct"
+    },
     {
       "timestampKst": "2026-10-28 06:50:21 KST",
       "armId": "growth_nutrition_repeat_cart",

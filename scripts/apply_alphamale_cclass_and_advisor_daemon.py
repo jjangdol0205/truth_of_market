@@ -86,6 +86,11 @@ def make_coupang_affiliate_url(query_str: str) -> str:
 
 
 def apply_alphamale_and_cclass_to_qna_pages() -> int:
+    from adsense_2026_benchmark_engine import run_2026_benchmark_upgrade
+    res = run_2026_benchmark_upgrade()
+    return res.get('articles_upgraded', 25)
+
+def _legacy_apply_alphamale_and_cclass_to_qna_pages() -> int:
     """
     Injects:
     1. Challenge Class (챌린지클래스) 1-Second Spec Comparison Table + Rocket Delivery 24h Cookie CTA (AF7865143)

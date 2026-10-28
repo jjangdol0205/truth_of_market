@@ -633,6 +633,11 @@ def update_sitemap_and_indexnow(urls: list) -> dict:
 
 def main():
     QNA_DIR.mkdir(parents=True, exist_ok=True)
+    from adsense_2026_benchmark_engine import run_2026_benchmark_upgrade
+    return run_2026_benchmark_upgrade()
+
+def _legacy_main():
+    QNA_DIR.mkdir(parents=True, exist_ok=True)
     generated_urls = [f"{SITE_URL}/", f"{SITE_URL}/qna/index.html"]
 
     (QNA_DIR / "index.html").write_text(render_hub_html(TOPICS), encoding="utf-8")
