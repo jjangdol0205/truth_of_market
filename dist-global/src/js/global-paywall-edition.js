@@ -1927,7 +1927,7 @@ ${isMasked ? `
             <span style="color:#475569;line-height:1.45;">Guides parent-child dialogue through [Observation] → [Hypothesis / Why?] → [Real-World STEM Application].</span>
           </div>
         </div>
-        <div style="background:#EFF6FF;border:1.5px solid #93C5FD;border-radius:14px;padding:1rem 1.1rem;">
+        <div id="learning-monthly-recal-box" style="background:#EFF6FF;border:1.5px solid #93C5FD;border-radius:14px;padding:1rem 1.1rem;">
           <div style="font-size:0.84rem;font-weight:900;color:#1E3A8A;margin-bottom:0.35rem;">📅 Interactive 30-Day Monthly Brain LQ Re-Calibration &amp; Cycle 2–6 Worksheet Unlocker</div>
           <div style="font-size:0.79rem;color:#334155;line-height:1.5;margin-bottom:0.75rem;">
             Prefrontal working memory and active-recall neural myelination shift every <strong>30 days</strong>. Log your child&apos;s monthly Feynman/Cornell practice streak below to recalculate their 30-day Brain LQ jump and unlock next month&apos;s upgraded cognitive worksheet cycle:
@@ -1984,7 +1984,7 @@ ${isMasked ? `
             <span style="color:#475569;line-height:1.45;">Automatically recalculates elemental Calcium Citrate (${caMg} mg), Vitamin D3 (${vitDIu} IU), and Zinc (${zincMg} mg) as your child gains weight each month.</span>
           </div>
         </div>
-        <div style="background:#EFF6FF;border:1.5px solid #93C5FD;border-radius:14px;padding:1rem 1.1rem;">
+        <div id="growth-monthly-recal-box" style="background:#EFF6FF;border:1.5px solid #93C5FD;border-radius:14px;padding:1rem 1.1rem;">
           <div style="font-size:0.84rem;font-weight:900;color:#1E3A8A;margin-bottom:0.35rem;">📅 Interactive 30-Day Monthly Height Velocity &amp; Weight-Adjusted Dosing Re-Calibrator</div>
           <div style="font-size:0.79rem;color:#334155;line-height:1.5;margin-bottom:0.75rem;">
             A single height measurement is only a Day-1 snapshot. Enter your child&apos;s updated morning stature and weight after 30 days to compute <strong>Annualized Growth Velocity (${isImperial ? 'in/yr &amp; cm/yr' : 'cm/yr &amp; in/yr'})</strong>, detect bone-plate catch-up vs. stagnation, and auto-adjust daily Ca/D3/K2/Zinc dosing:
@@ -2678,7 +2678,7 @@ ${isMasked ? `
 
 
   global.shareKidsFitGlobalReport = function (channel) {
-    const shareUrl = 'https://kisfitglobal.com/en?utm_source=parent_share&utm_medium=' + encodeURIComponent(channel || 'native');
+    const shareUrl = 'https://kisfitglobal.com/?utm_source=parent_share&utm_medium=' + encodeURIComponent(channel || 'native');
     const shareTitle = 'KISFIT Bio Labs — 60-Sec US CDC Child Height Predictor & 5-Axis Brain LQ Scan';
     const shareText = 'Check out this clinical 60-second US CDC 2000 Child Height Predictor & 5-Axis Brain Learning Quotient (LQ) scan (backed by 3,722+ peer-reviewed studies):';
     try {
@@ -2730,16 +2730,16 @@ ${isMasked ? `
   };
 
   global.copyKidsFitMagicUnlockLink = function () {
-    let magicUrl = 'https://kisfitglobal.com/en?payment=success';
+    let magicUrl = 'https://kisfitglobal.com/?payment=success';
     try {
       if (typeof window !== 'undefined' && window.localStorage) {
         const savedMagic = window.localStorage.getItem('kidsfit_global_magic_link_v1');
         const email = window.localStorage.getItem('kidsfit_global_buyer_email') || '';
         const orderId = window.localStorage.getItem('kidsfit_global_order_id_v1') || '';
         if (savedMagic) {
-          magicUrl = savedMagic;
+          magicUrl = savedMagic.replace(/\/en\?/, '/?');
         } else if (email) {
-          magicUrl = 'https://kisfitglobal.com/en?payment=success&email=' + encodeURIComponent(email) + (orderId ? '&order_id=' + encodeURIComponent(orderId) : '');
+          magicUrl = 'https://kisfitglobal.com/?payment=success&email=' + encodeURIComponent(email) + (orderId ? '&order_id=' + encodeURIComponent(orderId) : '');
         }
       }
     } catch (_) {}

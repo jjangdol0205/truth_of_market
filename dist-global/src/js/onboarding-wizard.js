@@ -114,6 +114,101 @@
       traitLearningConcerns: ['reading_literacy', 'passive_forget'],
       traitStudyStyle: 'dialogue_question',
       region: 'Asia-Pacific & Global'
+    },
+    'infant_1': {
+      id: 'infant_1',
+      labelKo: '영아기 1세 (만 18개월) — 영유아 초기 성장 & 감각 발달',
+      labelEn: 'Infant 1.5 Yrs (18 Mo) — Early Auxology & Sensory Milestones',
+      gender: 'boy',
+      ageYears: 1,
+      ageMonths: 18,
+      currentHeight: 82.3,
+      currentWeight: 11.1,
+      recentGrowth6m: 6.0,
+      fatherHeight: 175.0,
+      motherHeight: 162.0,
+      tannerPhase: 'phase_1',
+      habits: ['picky_eater'],
+      cognitiveAxes: ['sensory_arts'],
+      traitLearningConcerns: ['vocab_expression'],
+      traitStudyStyle: 'play_manipulative',
+      region: 'United States'
+    },
+    'toddler_2_3': {
+      id: 'toddler_2_3',
+      labelKo: '영유아기 3세 (만 36개월) — 기초 성장기 & 소근육 감각 협응',
+      labelEn: 'Toddler 3 Yrs (36 Mo) — Foundation Auxology & Motor Skills',
+      gender: 'boy',
+      ageYears: 3,
+      ageMonths: 36,
+      currentHeight: 96.5,
+      currentWeight: 14.7,
+      recentGrowth6m: 3.5,
+      fatherHeight: 175.0,
+      motherHeight: 162.0,
+      tannerPhase: 'phase_1',
+      habits: ['picky_eater'],
+      cognitiveAxes: ['sensory_arts'],
+      traitLearningConcerns: ['desk_endurance', 'vocab_expression'],
+      traitStudyStyle: 'play_manipulative',
+      region: 'United States'
+    },
+    'child_4_5': {
+      id: 'child_4_5',
+      labelKo: '유아기 5세 (만 60개월) — 취학 전 성장 & 수리·언어 기초',
+      labelEn: 'Preschool 5 Yrs (60 Mo) — Pre-K Growth Velocity & Early Literacy',
+      gender: 'girl',
+      ageYears: 5,
+      ageMonths: 60,
+      currentHeight: 109.2,
+      currentWeight: 18.6,
+      recentGrowth6m: 3.2,
+      fatherHeight: 175.5,
+      motherHeight: 162.5,
+      tannerPhase: 'phase_1',
+      habits: ['picky_eater', 'late_sleep'],
+      cognitiveAxes: ['language_reading'],
+      traitLearningConcerns: ['desk_endurance', 'reading_literacy'],
+      traitStudyStyle: 'play_manipulative',
+      region: 'United States'
+    },
+    'elem_low': {
+      id: 'elem_low',
+      labelKo: '초등 저학년 8세 (만 96개월) — 수리·공간 논리 & 척추 바른 정렬',
+      labelEn: 'Lower Elementary 8 Yrs (96 Mo) — Spatial Logic & Postural Alignment',
+      gender: 'girl',
+      ageYears: 8,
+      ageMonths: 96,
+      currentHeight: 127.5,
+      currentWeight: 26.4,
+      recentGrowth6m: 2.9,
+      fatherHeight: 176.0,
+      motherHeight: 163.0,
+      tannerPhase: 'phase_1',
+      habits: ['poor_posture', 'late_sleep'],
+      cognitiveAxes: ['math_logic'],
+      traitLearningConcerns: ['math_concept', 'reading_literacy'],
+      traitStudyStyle: 'dialogue_question',
+      region: 'United States'
+    },
+    'elem_high': {
+      id: 'elem_high',
+      labelKo: '초등 고학년·사춘기 11세 (만 132개월) — 사춘기 급성장 & 메타인지',
+      labelEn: 'Upper Elementary & Puberty 11 Yrs (132 Mo) — PHV Window & Executive LQ',
+      gender: 'boy',
+      ageYears: 11,
+      ageMonths: 132,
+      currentHeight: 143.5,
+      currentWeight: 38.2,
+      recentGrowth6m: 3.4,
+      fatherHeight: 174.0,
+      motherHeight: 161.0,
+      tannerPhase: 'phase_2',
+      habits: ['late_sleep', 'poor_posture'],
+      cognitiveAxes: ['executive_focus'],
+      traitLearningConcerns: ['passive_forget', 'math_concept'],
+      traitStudyStyle: 'goal_workbook',
+      region: 'United States'
     }
   };
 
@@ -2413,6 +2508,20 @@
         }
       });
     }
+
+    // Auto-start preset wizard & clinical scan when URL contains ?preset=... (from Q&A or external links)
+    try {
+      if (typeof window !== 'undefined' && window.location && window.location.search) {
+        const params = new URLSearchParams(window.location.search);
+        const rawPreset = String(params.get('preset') || '').trim();
+        const rawMode = String(params.get('mode') || '').trim().toLowerCase() === 'learning' ? 'learning' : 'growth';
+        if (rawPreset && PRESETS[rawPreset] && !window._kidsfitUrlPresetApplied) {
+          window._kidsfitUrlPresetApplied = true;
+          enterStudioMode('child', rawMode);
+          applyPreset(rawPreset);
+        }
+      }
+    } catch (_) {}
   }
 
   // Export

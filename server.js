@@ -1318,8 +1318,8 @@ const server = http.createServer((req, res) => {
       }
 
       const magicUnlockUrl = normEmail
-        ? `https://kisfitglobal.com/en?unlock=1&payment=success&email=${encodeURIComponent(normEmail)}&order_id=${encodeURIComponent(orderId)}&plan=${planType}`
-        : `https://kisfitglobal.com/en?unlock=1&payment=success&order_id=${encodeURIComponent(orderId)}&plan=${planType}`;
+        ? `https://kisfitglobal.com/?unlock=1&payment=success&email=${encodeURIComponent(normEmail)}&order_id=${encodeURIComponent(orderId)}&plan=${planType}`
+        : `https://kisfitglobal.com/?unlock=1&payment=success&order_id=${encodeURIComponent(orderId)}&plan=${planType}`;
 
       // 2. Reinforce Paid-Member Revenue RL Policy (dist-global & src/data)
       if (newlyUnlocked) {
@@ -1577,7 +1577,7 @@ const server = http.createServer((req, res) => {
           ? (process.env.LEMONSQUEEZY_TRACKER_PASS_URL || 'https://app.lemonsqueezy.com/checkout/buy/c562946d-ef68-4c2f-a802-df9da0179895')
           : (process.env.LEMONSQUEEZY_SINGLE_PASS_URL || 'https://app.lemonsqueezy.com/checkout/buy/c1cd7f12-3479-49e8-ab71-59c98135d599');
         const cleanEmail = String(emailParam || '').trim();
-        const returnRedirectUrl = `https://kisfitglobal.com/en?unlock=1&payment=success&plan=${isPass ? 'pass' : 'single'}${cleanEmail ? '&email=' + encodeURIComponent(cleanEmail) : ''}`;
+        const returnRedirectUrl = `https://kisfitglobal.com/?unlock=1&payment=success&plan=${isPass ? 'pass' : 'single'}${cleanEmail ? '&email=' + encodeURIComponent(cleanEmail) : ''}`;
 
         if (!lsApiKey) {
           res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8', ...NO_CACHE_HEADERS });
@@ -1591,7 +1591,7 @@ const server = http.createServer((req, res) => {
             attributes: {
               product_options: {
                 name: isPass ? 'KISFIT Bio Labs — 6-Month Growth & Brain Monthly Care Pass' : 'KISFIT Bio Labs — Pediatric Growth & Brain Clinical Report (Single Pass)',
-                description: 'Instant 100% Full Unlock on https://kisfitglobal.com/en (US CDC/WHO Height Predictor, Bone-Age Window & 5-Axis Brain LQ Report)',
+                description: 'Instant 100% Full Unlock on https://kisfitglobal.com/ (US CDC/WHO Height Predictor, Bone-Age Window & 5-Axis Brain LQ Report)',
                 redirect_url: returnRedirectUrl,
                 receipt_button_text: 'Open Unlocked KISFIT Bio Labs Clinical Report',
                 receipt_link_url: returnRedirectUrl
@@ -1682,7 +1682,7 @@ const server = http.createServer((req, res) => {
         const resolvedPlan = (provisioned && provisioned.planType) || (userRecord && userRecord.planType) || (matchedOrder && detectOrderPlanType(matchedOrder)) || 'single';
         const resolvedOrderId = matchedOrder ? matchedOrder.orderId : (userRecord ? userRecord.lastOrderId || null : null);
         const magicUnlockUrl = verified
-          ? `https://kisfitglobal.com/en?unlock=1&payment=success${normEmail ? '&email=' + encodeURIComponent(normEmail) : ''}${resolvedOrderId ? '&order_id=' + encodeURIComponent(resolvedOrderId) : ''}&plan=${resolvedPlan}`
+          ? `https://kisfitglobal.com/?unlock=1&payment=success${normEmail ? '&email=' + encodeURIComponent(normEmail) : ''}${resolvedOrderId ? '&order_id=' + encodeURIComponent(resolvedOrderId) : ''}&plan=${resolvedPlan}`
           : null;
 
         res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8', ...NO_CACHE_HEADERS });
@@ -2101,15 +2101,13 @@ const server = http.createServer((req, res) => {
       headers['Cache-Control'] = 'public, max-age=3600';
     }
 
-    if (finalExt === '.html' && path.basename(filePath) === 'index.html' && isGlobalHost) {
+    if (finalExt === '.html' && pathname === '/index.html' && isGlobalHost) {
       let htmlBody = fs.readFileSync(filePath, 'utf8');
-      const dynamicOgUrl = (req.url && req.url !== '/' && req.url !== '/index.html')
-        ? ('https://kisfitglobal.com' + req.url)
-        : 'https://kisfitglobal.com/en';
+      const canonicalRootUrl = 'https://kisfitglobal.com/';
       htmlBody = htmlBody
         .replace('<html lang="ko" data-theme="dark">', '<html lang="en" data-theme="light" data-edition="global-paid">')
-        .replace(/<link rel="canonical" href="https:\/\/(kidsfit\.co\.kr|kisfitglobal\.com)(\/en)?\/?">/g, '<link rel="canonical" href="' + dynamicOgUrl + '">')
-        .replace(/<meta property="og:url" content="https:\/\/(kidsfit\.co\.kr|kisfitglobal\.com)(\/en)?\/?">/g, '<meta property="og:url" content="' + dynamicOgUrl + '">')
+        .replace(/<link rel="canonical" href="https:\/\/(kidsfit\.co\.kr|kisfitglobal\.com)(\/en)?\/?">/g, '<link rel="canonical" href="' + canonicalRootUrl + '">')
+        .replace(/<meta property="og:url" content="https:\/\/(kidsfit\.co\.kr|kisfitglobal\.com)(\/en)?\/?">/g, '<meta property="og:url" content="' + canonicalRootUrl + '">')
         .replace(/https:\/\/kisfitglobal\.com\/samples\/og-kisfit-global-en-v5\.png(?!\?)/g, 'https://kisfitglobal.com/samples/og-kisfit-global-en-v5.png?v=20261028');
       const buf = Buffer.from(htmlBody, 'utf8');
       headers['Content-Length'] = buf.length;

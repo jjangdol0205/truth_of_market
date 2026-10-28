@@ -799,8 +799,8 @@
                   </tr>
                   <tr>
                     <td style="padding: 6px; border-right: 1px solid #E2E8F0; font-weight: 700;">Annual Growth Velocity</td>
-                    <td style="padding: 6px; border-right: 1px solid #E2E8F0; font-weight: 700; color: #1D4ED8;">${velocityVal} cm/yr</td>
-                    <td style="padding: 6px; border-right: 1px solid #E2E8F0;">5.0 ~ 7.0 cm/yr</td>
+                    <td style="padding: 6px; border-right: 1px solid #E2E8F0; font-weight: 700; color: #1D4ED8;">${isImp ? `${(Number(velocityVal) / 2.54).toFixed(1)} in/yr (${velocityVal} cm/yr)` : `${velocityVal} cm/yr`}</td>
+                    <td style="padding: 6px; border-right: 1px solid #E2E8F0;">${isImp ? '2.0 ~ 2.8 in/yr (5.0 ~ 7.0 cm/yr)' : '5.0 ~ 7.0 cm/yr'}</td>
                     <td style="padding: 6px; border-right: 1px solid #E2E8F0;">${velCalc.alert ? 'Clinical Watch' : 'Normal Range'}</td>
                     <td style="padding: 6px; border-right: 1px solid #E2E8F0;">-</td>
                     <td style="padding: 6px; font-weight: 700; color: #1D4ED8;">${velStatusEn}</td>
@@ -816,17 +816,17 @@
                 <div style="border: 1px solid #CBD5E1; border-radius: 6px; padding: 10px; background: #F8FAFC;">
                   <div style="font-size: 8pt; font-weight: 700; color: #64748B;">Genetic Target Height (Tanner MPH)</div>
                   <div style="font-size: 14pt; font-weight: 900; color: #0F172A; margin: 4px 0;">${fmtH(mph)}</div>
-                  <div style="font-size: 7.5pt; color: #64748B;">Range: ${mphMin} ~ ${mphMax} cm</div>
+                  <div style="font-size: 7.5pt; color: #64748B;">Range: ${isImp ? `${cmToFtIn(mphMin)} ~ ${cmToFtIn(mphMax)} (${mphMin} ~ ${mphMax} cm)` : `${mphMin} ~ ${mphMax} cm`}</div>
                 </div>
                 <div style="border: 1px solid #FECDD3; border-radius: 6px; padding: 10px; background: #FFF1F2;">
                   <div style="font-size: 8pt; font-weight: 700; color: #1D4ED8;">Unmanaged Habits Trajectory</div>
                   <div style="font-size: 14pt; font-weight: 900; color: #1D4ED8; margin: 4px 0;">${fmtH(unmanagedHeight)}</div>
-                  <div style="font-size: 7.5pt; color: #1D4ED8;">Sleep &amp; Posture Loss: -${unmanagedPenalty} cm</div>
+                  <div style="font-size: 7.5pt; color: #1D4ED8;">Sleep &amp; Posture Loss: -${isImp ? `${(Number(unmanagedPenalty) / 2.54).toFixed(1)} in (-${unmanagedPenalty} cm)` : `${unmanagedPenalty} cm`}</div>
                 </div>
                 <div style="border: 1px solid #93C5FD; border-radius: 6px; padding: 10px; background: #ECFDF5;">
                   <div style="font-size: 8pt; font-weight: 700; color: #1D4ED8;">Clinically Optimized Potential</div>
                   <div style="font-size: 14pt; font-weight: 900; color: #1D4ED8; margin: 4px 0;">${fmtH(potentialHeight)}</div>
-                  <div style="font-size: 7.5pt; color: #1D4ED8;">Nutrition &amp; Decompression: +${potentialBoost} cm</div>
+                  <div style="font-size: 7.5pt; color: #1D4ED8;">Nutrition &amp; Decompression: +${isImp ? `${(Number(potentialBoost) / 2.54).toFixed(1)} in (+${potentialBoost} cm)` : `${potentialBoost} cm`}</div>
                 </div>
               </div>
             </div>
@@ -846,9 +846,9 @@
                   <path d="M 50,150 Q 250,110 560,70" fill="none" stroke="#E11D48" stroke-width="1.5" stroke-dasharray="3,3" />
                   <circle cx="280" cy="98" r="5" fill="#059669" stroke="#FFFFFF" stroke-width="2" />
                   <text x="280" y="88" font-size="9" font-weight="bold" fill="#059669" text-anchor="middle">Current Patient (${fmtH(height)})</text>
-                  <text x="60" y="22" font-size="8" fill="#0284C7">― Optimized Trajectory (+${potentialBoost}cm)</text>
-                  <text x="235" y="22" font-size="8" fill="#D97706">― Genetic Baseline (MPH ${mph}cm)</text>
-                  <text x="405" y="22" font-size="8" fill="#E11D48">--- Unmanaged Habits (-${unmanagedPenalty}cm)</text>
+                  <text x="60" y="22" font-size="8" fill="#0284C7">― Optimized Trajectory (+${isImp ? `${(Number(potentialBoost) / 2.54).toFixed(1)} in / +${potentialBoost} cm` : `${potentialBoost}cm`})</text>
+                  <text x="235" y="22" font-size="8" fill="#D97706">― Genetic Baseline (MPH ${isImp ? `${cmToFtIn(mph)} / ${mph} cm` : `${mph}cm`})</text>
+                  <text x="405" y="22" font-size="8" fill="#E11D48">--- Unmanaged Habits (-${isImp ? `${(Number(unmanagedPenalty) / 2.54).toFixed(1)} in / -${unmanagedPenalty} cm` : `${unmanagedPenalty}cm`})</text>
                 </svg>
               </div>
             </div>
