@@ -848,6 +848,9 @@
       if (BiomechanicsStudio && typeof BiomechanicsStudio.initRoutineTimers === 'function') {
         BiomechanicsStudio.initRoutineTimers();
       }
+      if (typeof window !== 'undefined' && typeof window.applyKidsFitReportLockState === 'function') {
+        window.applyKidsFitReportLockState();
+      }
       if (typeof window !== 'undefined' && window.location && window.location.hash) {
         try {
           const targetEl = document.querySelector(window.location.hash);
@@ -1422,6 +1425,9 @@
     saveAffiliateConfig,
     renderAdminOsmuStudio,
     handleSharePrescription,
+    unlockDiagnosticTests: (pName, net) => (Monetization && Monetization.unlockDiagnosticTests ? Monetization.unlockDiagnosticTests(pName, net) : null),
+    isDiagnosticUnlocked: () => (Monetization && Monetization.isDiagnosticUnlocked ? Monetization.isDiagnosticUnlocked() : false),
+    getDiagnosticTickets: () => (Monetization && Monetization.getDiagnosticTickets ? Monetization.getDiagnosticTickets() : {}),
     initApp,
     GrowthEngine,
     EndocrinologyEngine,

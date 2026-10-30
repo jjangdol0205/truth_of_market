@@ -4,9 +4,9 @@
     "version": "1.0.0",
     "partner_id": "AF7865143",
     "ultimate_objective": "Maximize Coupang Partners Expected Commission Revenue + 24h Rocket Cart Halo Conversion",
-    "last_updated_kst": "2026-10-30 17:49:44 KST",
-    "total_episodes": 72,
-    "total_cumulative_reward": 4353,
+    "last_updated_kst": "2026-10-30 22:11:00 KST",
+    "total_episodes": 104,
+    "total_cumulative_reward": 5409,
     "exploration_rate_epsilon": 0.18,
     "ucb_exploration_constant_c": 1.414,
     "winning_category_arm": "growth_nutrition_repeat_cart",
@@ -31,11 +31,11 @@
       "id": "arm_rocket_review",
       "label": "🛒 쿠팡 로켓배송 최저가·실제 학부모 후기 확인 ↗",
       "badge": "🚀 로켓와우 내일도착 · 학부모 실구매 후기 검증",
-      "alpha": 93.32,
+      "alpha": 198.92,
       "beta": 13.68,
       "impressions": 345,
-      "clicks": 44,
-      "cumulative_reward": 1172,
+      "clicks": 76,
+      "cumulative_reward": 2228,
       "ucb_score": 2.277
     },
     "arm_wow_tomorrow": {
@@ -93,11 +93,11 @@
       "commission_multiplier": 1.65,
       "avg_order_value_krw": 38000,
       "cart_halo_multiplier": 2.2,
-      "alpha": 116.03,
+      "alpha": 248.03,
       "beta": 12.1,
       "impressions": 435,
-      "clicks": 51,
-      "cumulative_reward": 1683,
+      "clicks": 83,
+      "cumulative_reward": 2739,
       "ucb_score": 3.352,
       "priority_rank": 1
     },
@@ -261,6 +261,262 @@
   },
   "recent_reward_history": [
     {
+      "timestampKst": "2026-10-30 22:11:00 KST",
+      "armId": "growth_nutrition_repeat_cart",
+      "ctaArm": "arm_rocket_review",
+      "productName": "칼슴",
+      "reward": 33,
+      "utmSource": "direct"
+    },
+    {
+      "timestampKst": "2026-10-30 22:10:39 KST",
+      "armId": "growth_nutrition_repeat_cart",
+      "ctaArm": "arm_rocket_review",
+      "productName": "칼슴",
+      "reward": 33,
+      "utmSource": "direct"
+    },
+    {
+      "timestampKst": "2026-10-30 22:01:33 KST",
+      "armId": "growth_nutrition_repeat_cart",
+      "ctaArm": "arm_rocket_review",
+      "productName": "칼슴",
+      "reward": 33,
+      "utmSource": "direct"
+    },
+    {
+      "timestampKst": "2026-10-30 21:59:48 KST",
+      "armId": "growth_nutrition_repeat_cart",
+      "ctaArm": "arm_rocket_review",
+      "productName": "칼슴",
+      "reward": 33,
+      "utmSource": "direct"
+    },
+    {
+      "timestampKst": "2026-10-30 21:59:29 KST",
+      "armId": "growth_nutrition_repeat_cart",
+      "ctaArm": "arm_rocket_review",
+      "productName": "테스트 상품",
+      "reward": 33,
+      "utmSource": "direct"
+    },
+    {
+      "timestampKst": "2026-10-30 21:59:28 KST",
+      "armId": "growth_nutrition_repeat_cart",
+      "ctaArm": "arm_rocket_review",
+      "productName": "칼슴",
+      "reward": 33,
+      "utmSource": "direct"
+    },
+    {
+      "timestampKst": "2026-10-30 21:54:50 KST",
+      "armId": "growth_nutrition_repeat_cart",
+      "ctaArm": "arm_rocket_review",
+      "productName": "칼슴",
+      "reward": 33,
+      "utmSource": "direct"
+    },
+    {
+      "timestampKst": "2026-10-30 21:54:15 KST",
+      "armId": "growth_nutrition_repeat_cart",
+      "ctaArm": "arm_rocket_review",
+      "productName": "칼슴",
+      "reward": 33,
+      "utmSource": "direct"
+    },
+    {
+      "timestampKst": "2026-10-30 21:53:49 KST",
+      "armId": "growth_nutrition_repeat_cart",
+      "ctaArm": "arm_rocket_review",
+      "productName": "칼슴",
+      "reward": 33,
+      "utmSource": "direct"
+    },
+    {
+      "timestampKst": "2026-10-30 21:52:28 KST",
+      "armId": "growth_nutrition_repeat_cart",
+      "ctaArm": "arm_rocket_review",
+      "productName": "칼슴",
+      "reward": 33,
+      "utmSource": "direct"
+    },
+    {
+      "timestampKst": "2026-10-30 21:51:51 KST",
+      "armId": "growth_nutrition_repeat_cart",
+      "ctaArm": "arm_rocket_review",
+      "productName": "칼슴",
+      "reward": 33,
+      "utmSource": "direct"
+    },
+    {
+      "timestampKst": "2026-10-30 21:51:33 KST",
+      "armId": "growth_nutrition_repeat_cart",
+      "ctaArm": "arm_rocket_review",
+      "productName": "칼슴",
+      "reward": 33,
+      "utmSource": "direct"
+    },
+    {
+      "timestampKst": "2026-10-30 21:46:36 KST",
+      "armId": "growth_nutrition_repeat_cart",
+      "ctaArm": "arm_rocket_review",
+      "productName": "칼슴",
+      "reward": 33,
+      "utmSource": "direct"
+    },
+    {
+      "timestampKst": "2026-10-30 21:46:13 KST",
+      "armId": "growth_nutrition_repeat_cart",
+      "ctaArm": "arm_rocket_review",
+      "productName": "칼슴",
+      "reward": 33,
+      "utmSource": "direct"
+    },
+    {
+      "timestampKst": "2026-10-30 21:44:22 KST",
+      "armId": "growth_nutrition_repeat_cart",
+      "ctaArm": "arm_rocket_review",
+      "productName": "칼슴",
+      "reward": 33,
+      "utmSource": "direct"
+    },
+    {
+      "timestampKst": "2026-10-30 21:44:03 KST",
+      "armId": "growth_nutrition_repeat_cart",
+      "ctaArm": "arm_rocket_review",
+      "productName": "칼슴",
+      "reward": 33,
+      "utmSource": "direct"
+    },
+    {
+      "timestampKst": "2026-10-30 21:33:31 KST",
+      "armId": "growth_nutrition_repeat_cart",
+      "ctaArm": "arm_rocket_review",
+      "productName": "칼슴",
+      "reward": 33,
+      "utmSource": "direct"
+    },
+    {
+      "timestampKst": "2026-10-30 21:33:12 KST",
+      "armId": "growth_nutrition_repeat_cart",
+      "ctaArm": "arm_rocket_review",
+      "productName": "칼슴",
+      "reward": 33,
+      "utmSource": "direct"
+    },
+    {
+      "timestampKst": "2026-10-30 21:30:35 KST",
+      "armId": "growth_nutrition_repeat_cart",
+      "ctaArm": "arm_rocket_review",
+      "productName": "칼슴",
+      "reward": 33,
+      "utmSource": "direct"
+    },
+    {
+      "timestampKst": "2026-10-30 21:30:09 KST",
+      "armId": "growth_nutrition_repeat_cart",
+      "ctaArm": "arm_rocket_review",
+      "productName": "칼슴",
+      "reward": 33,
+      "utmSource": "direct"
+    },
+    {
+      "timestampKst": "2026-10-30 21:27:19 KST",
+      "armId": "growth_nutrition_repeat_cart",
+      "ctaArm": "arm_rocket_review",
+      "productName": "칼슴",
+      "reward": 33,
+      "utmSource": "direct"
+    },
+    {
+      "timestampKst": "2026-10-30 21:26:46 KST",
+      "armId": "growth_nutrition_repeat_cart",
+      "ctaArm": "arm_rocket_review",
+      "productName": "칼슴",
+      "reward": 33,
+      "utmSource": "direct"
+    },
+    {
+      "timestampKst": "2026-10-30 21:24:35 KST",
+      "armId": "growth_nutrition_repeat_cart",
+      "ctaArm": "arm_rocket_review",
+      "productName": "칼슴",
+      "reward": 33,
+      "utmSource": "direct"
+    },
+    {
+      "timestampKst": "2026-10-30 21:20:41 KST",
+      "armId": "growth_nutrition_repeat_cart",
+      "ctaArm": "arm_rocket_review",
+      "productName": "칼슴",
+      "reward": 33,
+      "utmSource": "direct"
+    },
+    {
+      "timestampKst": "2026-10-30 21:15:33 KST",
+      "armId": "growth_nutrition_repeat_cart",
+      "ctaArm": "arm_rocket_review",
+      "productName": "칼슴",
+      "reward": 33,
+      "utmSource": "direct"
+    },
+    {
+      "timestampKst": "2026-10-30 21:14:53 KST",
+      "armId": "growth_nutrition_repeat_cart",
+      "ctaArm": "arm_rocket_review",
+      "productName": "칼슴",
+      "reward": 33,
+      "utmSource": "direct"
+    },
+    {
+      "timestampKst": "2026-10-30 21:14:30 KST",
+      "armId": "growth_nutrition_repeat_cart",
+      "ctaArm": "arm_rocket_review",
+      "productName": "칼슴",
+      "reward": 33,
+      "utmSource": "direct"
+    },
+    {
+      "timestampKst": "2026-10-30 21:13:04 KST",
+      "armId": "growth_nutrition_repeat_cart",
+      "ctaArm": "arm_rocket_review",
+      "productName": "칼슴",
+      "reward": 33,
+      "utmSource": "direct"
+    },
+    {
+      "timestampKst": "2026-10-30 21:05:57 KST",
+      "armId": "growth_nutrition_repeat_cart",
+      "ctaArm": "arm_rocket_review",
+      "productName": "칼슴",
+      "reward": 33,
+      "utmSource": "direct"
+    },
+    {
+      "timestampKst": "2026-10-30 21:05:26 KST",
+      "armId": "growth_nutrition_repeat_cart",
+      "ctaArm": "arm_rocket_review",
+      "productName": "칼슴",
+      "reward": 33,
+      "utmSource": "direct"
+    },
+    {
+      "timestampKst": "2026-10-30 21:04:08 KST",
+      "armId": "growth_nutrition_repeat_cart",
+      "ctaArm": "arm_rocket_review",
+      "productName": "칼슴",
+      "reward": 33,
+      "utmSource": "direct"
+    },
+    {
+      "timestampKst": "2026-10-30 21:03:16 KST",
+      "armId": "growth_nutrition_repeat_cart",
+      "ctaArm": "arm_rocket_review",
+      "productName": "칼슴",
+      "reward": 33,
+      "utmSource": "direct"
+    },
+    {
       "timestampKst": "2026-10-30 17:49:44 KST",
       "armId": "growth_nutrition_repeat_cart",
       "ctaArm": "arm_rocket_review",
@@ -318,70 +574,6 @@
     },
     {
       "timestampKst": "2026-10-28 09:03:22 KST",
-      "armId": "growth_nutrition_repeat_cart",
-      "ctaArm": "arm_rocket_review",
-      "productName": "칼슴",
-      "reward": 33,
-      "utmSource": "direct"
-    },
-    {
-      "timestampKst": "2026-10-28 06:50:21 KST",
-      "armId": "growth_nutrition_repeat_cart",
-      "ctaArm": "arm_rocket_review",
-      "productName": "칼슴",
-      "reward": 33,
-      "utmSource": "direct"
-    },
-    {
-      "timestampKst": "2026-10-28 05:01:01 KST",
-      "armId": "growth_nutrition_repeat_cart",
-      "ctaArm": "arm_rocket_review",
-      "productName": "칼슴",
-      "reward": 33,
-      "utmSource": "direct"
-    },
-    {
-      "timestampKst": "2026-10-28 04:00:55 KST",
-      "armId": "growth_nutrition_repeat_cart",
-      "ctaArm": "arm_rocket_review",
-      "productName": "칼슴",
-      "reward": 33,
-      "utmSource": "direct"
-    },
-    {
-      "timestampKst": "2026-10-28 03:00:57 KST",
-      "armId": "growth_nutrition_repeat_cart",
-      "ctaArm": "arm_rocket_review",
-      "productName": "칼슴",
-      "reward": 33,
-      "utmSource": "direct"
-    },
-    {
-      "timestampKst": "2026-10-28 02:01:05 KST",
-      "armId": "growth_nutrition_repeat_cart",
-      "ctaArm": "arm_rocket_review",
-      "productName": "칼슴",
-      "reward": 33,
-      "utmSource": "direct"
-    },
-    {
-      "timestampKst": "2026-10-28 01:00:58 KST",
-      "armId": "growth_nutrition_repeat_cart",
-      "ctaArm": "arm_rocket_review",
-      "productName": "칼슴",
-      "reward": 33,
-      "utmSource": "direct"
-    },
-    {
-      "timestampKst": "2026-10-28 00:01:08 KST",
-      "armId": "growth_nutrition_repeat_cart",
-      "ctaArm": "arm_rocket_review",
-      "productName": "칼슴",
-      "reward": 33,
-      "utmSource": "direct"
-    },
-    {
-      "timestampKst": "2026-10-27 21:25:35 KST",
       "armId": "growth_nutrition_repeat_cart",
       "ctaArm": "arm_rocket_review",
       "productName": "칼슴",

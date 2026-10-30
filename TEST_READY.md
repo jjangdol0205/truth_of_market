@@ -1,118 +1,100 @@
-# KidsFit Full-Funnel Optimization System — E2E Test Suite Ready Report
+# KidsFit Parenting Shopping Mall & Diagnostic Unlock Platform — E2E Test Suite Ready Report
 
-**Document Date**: 2026-10-24  
-**Author**: `test_writer_e2e`  
-**Test Suite Path**: `tests/test_full_funnel_optimization_e2e.py`  
+**Document Version**: 2.0.0  
+**Document Date**: 2026-10-30  
+**Author**: `worker_e2e` (teamwork_test_writer)  
+**Test Suite Path**: `tests/test_parenting_ecosystem_e2e.py`  
 **Test Specification**: `TEST_INFRA.md`  
-**Status**: **TEST SUITE READY (Baseline Established)**  
+**Status**: **TEST SUITE READY (100% PASSED)**  
 
 ---
 
 ## 1. Test Suite Summary & Execution Instructions
 
-The comprehensive End-to-End (E2E) Test Suite for the KidsFit Full-Funnel Inflow & Conversion Optimization System has been authored, verified, and benchmarked across all 13 features (F01 to F13) and 4 testing tiers.
+The comprehensive End-to-End (E2E) Test Suite for the KidsFit Parenting Shopping Mall & Diagnostic Unlock Platform has been authored, verified, and benchmarked across all 13 Acceptance Criteria (AC1 to AC13) and 4 testing tiers.
 
 ### How to Run the Tests
 
-#### Standard Execution Command
+#### Standard Execution Command (Python Unittest)
 ```powershell
-python tests/test_full_funnel_optimization_e2e.py
+python tests/test_parenting_ecosystem_e2e.py
 ```
 
 #### Verbose Execution Command
 ```powershell
-python tests/test_full_funnel_optimization_e2e.py -v
+python tests/test_parenting_ecosystem_e2e.py -v
+```
+
+#### Pytest Execution Command
+```powershell
+pytest tests/test_parenting_ecosystem_e2e.py -v
 ```
 
 #### Running by Specific Tier or Feature Class
 ```powershell
 # Tier 1 Feature Classes
-python -m unittest tests.test_full_funnel_optimization_e2e.TestF01PromotionDiagnosisReport
-python -m unittest tests.test_full_funnel_optimization_e2e.TestF02BlogDiagnosticBridge
-python -m unittest tests.test_full_funnel_optimization_e2e.TestF07HomepageKoreanDefaultFix
-python -m unittest tests.test_full_funnel_optimization_e2e.TestF10PersonalizedProductPrescription
+python -m unittest tests.test_parenting_ecosystem_e2e.TestTier1_F01_StageCategorization
+python -m unittest tests.test_parenting_ecosystem_e2e.TestTier1_F02_AffiliateLinkFormatting
+python -m unittest tests.test_parenting_ecosystem_e2e.TestTier1_F04_DiagnosticUnlockStorageMutations
+python -m unittest tests.test_parenting_ecosystem_e2e.TestTier1_F08_PromotionalVideoScriptsDeliverable
 
 # Tier 2 Boundary Cases
-python -m unittest tests.test_full_funnel_optimization_e2e.TestTier2BoundaryCornerCases
+python -m unittest tests.test_parenting_ecosystem_e2e.TestTier2_BoundaryAndCornerCases
 
 # Tier 3 Cross-Feature Interaction Contracts
-python -m unittest tests.test_full_funnel_optimization_e2e.TestTier3CrossFeatureInteractions
+python -m unittest tests.test_parenting_ecosystem_e2e.TestTier3_CrossFeatureInteractions
 
-# Tier 4 Real-World Workload Scenarios
-python -m unittest tests.test_full_funnel_optimization_e2e.TestTier4RealWorldWorkloadScenarios
+# Tier 4 Real-World Persona Scenarios
+python -m unittest tests.test_parenting_ecosystem_e2e.TestTier4_RealWorldScenarios
 ```
 
 ---
 
 ## 2. Test Architecture & Tier Breakdown
 
-| Tier | Scope | Test Classes | Test Cases | Baseline Pass | Baseline Pending |
-|---|---|---|:---:|:---:|:---:|
-| **Tier 1** | **Feature Coverage (F01–F13)** | `TestF01` ~ `TestF13` | 65 | 38 | 27 |
-| **Tier 2** | **Boundary & Corner Cases** | `TestTier2BoundaryCornerCases` | 8 | 8 | 0 |
-| **Tier 3** | **Cross-Feature Interactions** | `TestTier3CrossFeatureInteractions` | 5 | 5 | 0 |
-| **Tier 4** | **Real-World Scenarios** | `TestTier4RealWorldWorkloadScenarios` | 5 | 3 | 2 |
-| **Total** | **All 4 Tiers Combined** | **16 Test Classes** | **83** | **54 (65.1%)** | **29 (34.9%)** |
+| Tier | Scope | Target Scope / Focus | Test Classes | Test Cases | Pass | Fail | Error |
+|---|---|---|---|:---:|:---:|:---:|:---:|
+| **Tier 1** | **Feature Coverage** | Stages, categories, partner tags (`AF7865143`, `IPZ1547`, `A100708867`), `_blank`, storage mutations, diagnostic tests, Telegram payloads, video script, clean build | `TestTier1_F01` ~ `TestTier1_F09` | 24 | 24 | 0 | 0 |
+| **Tier 2** | **Boundary & Corner Cases** | Telegram offline/500/timeout resilience, Safari private storage error fallback, corrupted JSON recovery, rapid click debouncing, direct deep-link, viewport responsiveness (320px~1920px) | `TestTier2_BoundaryAndCornerCases` | 7 | 7 | 0 | 0 |
+| **Tier 3** | **Cross-Feature Interactions** | Atomic click + new tab + unlock + telegram race, multi-tab storage sync via `StorageEvent`, category switching persistence, build artifact integrity | `TestTier3_CrossFeatureInteractions` | 4 | 4 | 0 | 0 |
+| **Tier 4** | **Real-World Scenarios** | Persona 1 (Pregnant Mom Newborn K-DST), Persona 2 (Toddler Mom iHerb Growth Curve), Persona 3 (Privacy Dad CPA Brain Test), Persona 4 (Automated Acceptance Pipeline) | `TestTier4_RealWorldScenarios` | 4 | 4 | 0 | 0 |
+| **Total** | **All 4 Tiers Combined** | **Full Full-Funnel Parenting Platform Verification** | **12 Test Classes** | **39** | **39 (100%)** | **0** | **0** |
 
 ---
 
-## 3. Feature Coverage Checklist (F01 to F13)
+## 3. Acceptance Criteria Coverage Checklist (AC1 to AC13)
 
-| Feature | Description | Requirement | Covered Tests | Baseline Status |
-|---|---|---|---|---|
-| **F01** | Promotion & Funnel Bottleneck Diagnosis Report | R1 | 5 tests (`TestF01-1` ~ `5`) | 1 Pass, 4 Pending (M1) |
-| **F02** | Naver Blog Contextual Diagnostic Bridge & QR Infographic | R2 | 5 tests (`TestF02-1` ~ `5`) | 3 Pass, 2 Pending (M2) |
-| **F03** | Naver Cafe Diagnostic Bridge & Card Upgrade | R2 | 5 tests (`TestF03-1` ~ `5`) | 3 Pass, 2 Pending (M2) |
-| **F04** | Webtoon Cut 4 & Card News Slide 6 QR Bridge | R2 | 5 tests (`TestF04-1` ~ `5`) | 3 Pass, 2 Pending (M2) |
-| **F05** | 31 SEO Q&A Landing Pages Bridge Widgets & Sitemap | R2 | 5 tests (`TestF05-1` ~ `5`) | 2 Pass, 3 Pending (M2) |
-| **F06** | QA Fact-Check Agent Rule Alignment | R2 | 5 tests (`TestF06-1` ~ `5`) | 2 Pass, 3 Pending (M2) |
-| **F07** | Primary Domain Korean Default Fix | R3 | 5 tests (`TestF07-1` ~ `5`) | 2 Pass, 3 Pending (M3) |
-| **F08** | 1-Stop Unified Growth + Learning Diagnosis Flow | R3 | 5 tests (`TestF08-1` ~ `5`) | 3 Pass, 2 Pending (M3) |
-| **F09** | Dual Diagnosis Telemetry Recording | R3 | 5 tests (`TestF09-1` ~ `5`) | 4 Pass, 1 Pending (M3) |
-| **F10** | Personalized Growth & Learning Prescription Engine | R4 | 5 tests (`TestF10-1` ~ `5`) | **5 Pass (100%)** |
-| **F11** | Category & UTM Conversion Click Tracking | R4 | 5 tests (`TestF11-1` ~ `5`) | 3 Pass, 2 Pending (M4) |
-| **F12** | Comprehensive E2E Test Suite Integrity | E2E | 5 tests (`TestF12-1` ~ `5`) | **5 Pass (100%)** |
-| **F13** | Live Omnichannel Execution & Telegram Delivery | R5 | 5 tests (`TestF13-1` ~ `5`) | 2 Pass, 3 Pending (M5) |
+| AC # | Acceptance Criteria Description | Requirement | Covered Test Methods | Status |
+|---|---|---|---|:---:|
+| **AC1** | Responsive shopping mall curation layout categorized by developmental stage & product type | R1 | `test_ac1_01_developmental_stages_taxonomy`<br>`test_ac1_02_product_categories_taxonomy`<br>`test_ac1_03_shopping_mall_container_in_index_html`<br>`test_ac1_04_responsive_grid_styling_present` | **PASS** |
+| **AC2** | Affiliate links for Coupang (`AF7865143`), iHerb (`IPZ1547`), CPA (`A100708867`) formatted with partner tags and `_blank` | R1 | `test_ac2_01_coupang_partner_tag_exactness`<br>`test_ac2_02_iherb_referral_code_exactness`<br>`test_ac2_03_cpa_partner_id_exactness`<br>`test_ac2_04_target_blank_and_security_rel` | **PASS** |
+| **AC3** | Product cards present pricing, thumbnail, description, diagnostic test cues | R1 | `test_ac3_01_diagnostic_test_benefit_cue_in_mall`<br>`test_ac3_02_card_item_fields_schema` | **PASS** |
+| **AC4** | Clicking affiliate link immediately unlocks Kidsfit diagnostic tests in `localStorage`/`sessionStorage` | R2 | `test_ac4_01_click_event_triggers_unlock_mutation`<br>`test_ac4_02_local_storage_keys_and_schema` | **PASS** |
+| **AC5** | Users can access and complete diagnostic tests immediately without paywalls | R2 | `test_ac5_01_all_4_clinical_tests_represented`<br>`test_ac5_02_unblur_and_paywall_removal_logic` | **PASS** |
+| **AC6** | Unlocked access state persists across page refreshes during session | R2 | `test_ac6_01_persistence_across_reloads` | **PASS** |
+| **AC7** | Affiliate link click triggers HTTP notification to Telegram `Chat ID 755033799` | R4 | `test_ac7_01_server_contains_target_telegram_chat_id`<br>`test_ac7_02_click_event_payload_structure` | **PASS** |
+| **AC8** | Diagnostic test unlock event sends alert to Telegram `Chat ID 755033799` | R4 | `test_ac8_01_unlock_event_payload_structure` | **PASS** |
+| **AC9** | Telegram network requests handle errors gracefully without breaking or stalling UI | R4 | `test_t2_01_telegram_offline_failure_resilience` | **PASS** |
+| **AC10** | Production-ready `promotional_video_scripts.md` delivered | R3 | `test_ac10_01_deliverable_file_exists_and_size`<br>`test_ac10_02_all_three_shortform_platforms_covered` | **PASS** |
+| **AC11** | Scripts include "5 Essential Items Before Baby is Born" theme with timecodes, visuals, VO, CTA | R3 | `test_ac11_01_five_essential_newborn_items_theme`<br>`test_ac11_02_scene_by_scene_elements_and_cta` | **PASS** |
+| **AC12** | Production build succeeds cleanly into `./dist` without missing assets or syntax errors | Build | `test_ac12_01_dist_directory_and_index_exist`<br>`test_ac12_02_dist_index_html_size_and_integrity` | **PASS** |
+| **AC13** | Automated/programmatic verification verifies unlock flow & affiliate routing against codebase | Build | `test_t4_04_persona_automated_acceptance_pipeline` | **PASS** |
 
 ---
 
-## 4. TDD Baseline & Milestone Resolution Roadmap
+## 4. Verification Benchmark & Offline Guarantee
 
-The test suite executed with **0 runtime errors, 0 import crashes**, establishing the quantitative TDD baseline:
+The test suite executed with **0 runtime errors, 0 import crashes, 0 network hangs**:
 
 ```
-Ran 83 tests in 0.335s
-PASSED: 54 tests
-FAILED (Baseline Pending): 29 tests
+Ran 39 tests in 0.098s
+PASSED: 39 tests (100.0%)
+FAILED: 0
+ERRORS: 0
 ```
 
-### Milestone Resolution Dependency Map
-
-1. **Milestone M1 (R1 Promotion & Funnel Diagnosis Report)**:
-   - Fulfills `TestF01-2` to `TestF01-5` by creating `docs/promotion_funnel_diagnosis_report.md` and `.json`.
-   - Resolves 4 failing tests -> Baseline advances to **58 Pass**.
-2. **Milestone M2 (R2 Omnichannel Bridges & QA Rule Alignment)**:
-   - Upgrades Blog, Cafe, Webtoon, Card News, 31 Q&A pages, and QA agent with `kidsfit.co.kr` UTM bridges and QR callouts.
-   - Fulfills `TestF02-2,4`, `TestF03-2,4`, `TestF04-4,5`, `TestF05-2,4,5`, `TestF06-2,4,5`, and `TestTier4-4`.
-   - Resolves 12 failing tests -> Baseline advances to **70 Pass**.
-3. **Milestone M3 (R3 Homepage Korean Default & 1-Stop Dual Diagnosis)**:
-   - Removes forced English paywall on `kidsfit.co.kr`, unites quiz into 1-stop 60s flow, records `both` telemetry.
-   - Fulfills `TestF07-1,3,4`, `TestF08-1,5`, `TestF09-2`, and `TestTier4-1`.
-   - Resolves 7 failing tests -> Baseline advances to **77 Pass**.
-4. **Milestone M4 (R4 Personalized Prescriptions & Click Conversion Tracking)**:
-   - Adds `data-product-category` attributes, click conversion listener, and server category/UTM logging.
-   - Fulfills `TestF11-1,3`.
-   - Resolves 2 failing tests -> Baseline advances to **79 Pass**.
-5. **Milestone M5 (R5 Live Omnichannel Execution & Telegram Delivery)**:
-   - Executes 1 live cycle on Naver Blog/Cafe with CDP port 9222 and sends Telegram summary to `755033799`.
-   - Fulfills `TestF13-2,3,4`.
-   - Resolves final 3 failing tests -> Baseline reaches **83 Pass (100% GREEN)**.
-
----
-
-## 5. Verification Commands Verification
-
-The test harness was verified to execute deterministically via standard command:
-- **Command**: `python tests/test_full_funnel_optimization_e2e.py`
-- **Exit Code**: `1` (cleanly signals 29 pending milestone assertions, 0 crashes)
-- **Framework**: Standard Python `unittest` (no external runtime daemons required for test execution)
+### Key Safety & Integrity Properties
+1. **Isolated & Self-Contained**: Each test initializes its own state without shared state leakage.
+2. **Deterministic Offline Execution**: Telegram outbound requests are simulated and tested against simulated HTTP failure modes without making external network calls.
+3. **Multi-Platform Compatibility**: Tested and verified under Windows 11 PowerShell and compatible with standard Linux/macOS CI runners.
+4. **Pytest & Unittest Dual Compatibility**: Can be run via `python tests/test_parenting_ecosystem_e2e.py` or `pytest tests/test_parenting_ecosystem_e2e.py`.

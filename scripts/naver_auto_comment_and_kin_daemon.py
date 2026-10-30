@@ -472,7 +472,7 @@ def main():
             # 1-B. Manage our own Naver Blog (accept incoming buddy requests + reply to visitor comments & return visit)
             reply_st = load_reply_state()
             buddy_accept_res = accept_incoming_buddy_requests(context, reply_st)
-            own_reply_res = reply_to_incoming_comments_on_own_blog(context, reply_st, max_posts_to_check=5, max_replies_per_cycle=6)
+            own_reply_res = reply_to_incoming_comments_on_own_blog(context, reply_st, max_posts_to_scan=5, max_replies_per_cycle=6)
             save_reply_state(reply_st)
             own_pin_res["buddy_accept"] = buddy_accept_res
             own_pin_res["incoming_comment_replies"] = own_reply_res

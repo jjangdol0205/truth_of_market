@@ -402,9 +402,9 @@ const recentAffiliateClickMap = new Map();
 function classifyAffiliatePlatform(hrefStr) {
   const h = String(hrefStr || '').toLowerCase();
   if (h.includes('lemonsqueezy')) return 'Lemon Squeezy 글로벌 결제 ($8.99/$19.99)';
-  if (h.includes('coupang') || h.includes('/api/coupang')) return '쿠팡 파트너스 (AF7865143)';
-  if (h.includes('yes24') || h.includes('linkprice') || h.includes('11st')) return '링크프라이스·YES24/11번가 (A100708867)';
-  if (h.includes('iherb')) return '아이허브 (IPZ1547)';
+  if (h.includes('coupang') || h.includes('/api/coupang') || h.includes('af7865143')) return '쿠팡 파트너스 (AF7865143)';
+  if (h.includes('iherb') || h.includes('ipz1547')) return '아이허브 (IPZ1547)';
+  if (h.includes('yes24') || h.includes('linkprice') || h.includes('11st') || h.includes('a100708867') || h.includes('cpa')) return '링크프라이스 CPA (A100708867)';
   if (h.includes('amazon')) return '아마존 (kidfit-20)';
   if (h.includes('myrealtrip')) return '마이리얼트립 (6226316)';
   if (h.includes('klook') || h.includes('/api/klook')) return '클룩 Klook (140161)';
@@ -436,6 +436,7 @@ function sendInstantPurchaseClickTelegram(clickRecord, dayStats, totalStats) {
       `🛍 <b>연결 제휴사</b>: <code>${clickRecord.platform}</code>`,
       `🤖 <b>강화학습(RL) 보상</b>: <b>+${clickRecord.rlReward || 33.0} pt</b> (<code>${clickRecord.rlArmId || 'growth'}</code> · <code>${clickRecord.rlCtaArm || 'arm_rocket_review'}</code> 정책 가중치 즉시 강화!)`,
       `📱 <b>접속 기기 / 유입경로</b>: ${clickRecord.device === 'mobile' ? '📱 모바일' : '💻 PC'} / <code>${clickRecord.utmSource}</code>`,
+      `⚡ <b>상태</b>: <b>스토어 새 탭 이동 완료 (${clickRecord.status || 'SUCCESS'})</b>`,
       `━━━━━━━━━━━━━━━━━━`,
       `📊 <b>오늘 누적 구매버튼 클릭</b>: <b>${dayStats.affiliateClicks || 1}건</b> (신체성장 ${dayStats.productClicks.growth || 0}건 / 두뇌학습 ${dayStats.productClicks.learning || 0}건)`,
       `📈 <b>전체 누적 구매버튼 클릭</b>: <b>${totalStats.affiliateClicks || 1}건</b> (오늘 방문자 UV ${dayStats.uv || 0}명 · 진단완료 ${(dayStats.diagnoses && dayStats.diagnoses.total) || 0}건)`
@@ -458,12 +459,144 @@ function sendInstantPurchaseClickTelegram(clickRecord, dayStats, totalStats) {
         'Content-Length': postData.length
       }
     }, (res) => { res.resume(); });
+
+    req.setTimeout(5000, () => {
+      try { req.destroy(); } catch (_) {}
+    });
+    req.on('timeout', () => {
+      try { req.destroy(); } catch (_) {}
+    });
     req.on('error', () => {});
     req.write(postData);
     req.end();
     return true;
   } catch (_) {
     return false;
+  }
+}
+
+function sendDiagnosticUnlockTelegram(unlockRecord, dayStats, totalStats) {
+  try {
+    const botToken = process.env.TELEGRAM_BOT_TOKEN || '';
+    const chatId = process.env.TELEGRAM_CHAT_ID || '755033799';
+    if (!botToken || !chatId) return false;
+
+    const network = unlockRecord.affiliateNetwork || unlockRecord.platform || '제휴 파트너사';
+    const triggerItem = sanitizeText(unlockRecord.triggerItem || unlockRecord.productName || '키즈핏 추천 육아템', 100);
+    const kstIso = unlockRecord.timestampKst || (new Date(Date.now() + 9 * 3600 * 1000).toISOString().replace('T', ' ').slice(0, 19) + ' KST');
+    const statusText = unlockRecord.status || 'SUCCESS';
+
+    const msgLines = [
+      `🔓 <b>[키즈핏 4대 아동 정밀 진단 전액 무료 티켓 언락!]</b>`,
+      `━━━━━━━━━━━━━━━━━━`,
+      `⏰ <b>시각</b>: <code>${kstIso}</code>`,
+      `🏷 <b>트리거 상품</b>: <b>${triggerItem}</b>`,
+      `🛍 <b>트리거 제휴 네트워크</b>: <code>${network}</code>`,
+      `🎟 <b>지급된 4대 발달 정밀 진단 티켓</b>:`,
+      `  1. 📏 신체 성장 백분위 & 3단 예상키 진단`,
+      `  2. 🦴 골연령·성조숙증 판정 & 2차성징 방어`,
+      `  3. 🧠 두뇌 5대 역량 진단 & K-DST 인지 레이다`,
+      `  4. 🎨 아동 기질 & 자기주도 학습 스타일 진단`,
+      `🌐 <b>도메인</b>: <code>${unlockRecord.domain || 'kidsfit.co.kr'}</code>`,
+      `📱 <b>접속 기기 / 유입</b>: ${unlockRecord.device === 'mobile' ? '📱 모바일' : '💻 PC'} / <code>${unlockRecord.utmSource || 'direct'}</code>`,
+      `⚡ <b>상태</b>: <b>${statusText} · 로컬스토리지 무료 티켓 영구 활성화 완료</b>`,
+      `━━━━━━━━━━━━━━━━━━`,
+      `📊 <b>오늘 누적 제휴 클릭</b>: <b>${(dayStats && dayStats.affiliateClicks) || 1}건</b>`,
+      `📈 <b>전체 누적 제휴 클릭</b>: <b>${(totalStats && totalStats.affiliateClicks) || 1}건</b>`
+    ];
+
+    const postData = Buffer.from(JSON.stringify({
+      chat_id: chatId,
+      text: msgLines.join('\n'),
+      parse_mode: 'HTML',
+      disable_web_page_preview: true
+    }), 'utf8');
+
+    const req = https.request({
+      hostname: 'api.telegram.org',
+      port: 443,
+      path: `/bot${botToken}/sendMessage`,
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json; charset=utf-8',
+        'Content-Length': postData.length
+      }
+    }, (res) => { res.resume(); });
+
+    req.setTimeout(5000, () => {
+      try { req.destroy(); } catch (_) {}
+    });
+    req.on('timeout', () => {
+      try { req.destroy(); } catch (_) {}
+    });
+    req.on('error', () => {});
+    req.write(postData);
+    req.end();
+    return true;
+  } catch (_) {
+    return false;
+  }
+}
+
+const recentDiagnosticUnlockMap = new Map();
+
+function recordDiagnosticUnlockEvent(details = {}) {
+  try {
+    const req = details.req || null;
+    const ua = req ? String(req.headers['user-agent'] || '') : '';
+    if (ua && BOT_UA_REGEX.test(ua) && !details.forceNotify) {
+      return null;
+    }
+
+    const ip = req ? getClientIp(req) : '0.0.0.0';
+    const now = Date.now();
+    const dedupKey = `${ip}|unlock`;
+    const prev = recentDiagnosticUnlockMap.get(dedupKey);
+    if (prev && (now - prev.time < 2500)) {
+      return prev.record;
+    }
+
+    const todayStr = getKstDateString(0);
+    const day = ensureDayBucket(todayStr);
+    day.diagnosticUnlocks = (day.diagnosticUnlocks || 0) + 1;
+    visitorStats.total.diagnosticUnlocks = (visitorStats.total.diagnosticUnlocks || 0) + 1;
+
+    const kstIso = new Date(now + 9 * 3600 * 1000).toISOString().replace('T', ' ').slice(0, 19) + ' KST';
+    const isMobile = /(Mobile|Android|iPhone|iPad|iPod)/i.test(ua);
+    const reqHost = req ? String(req.headers['x-forwarded-host'] || req.headers.host || 'kidsfit.co.kr') : 'kidsfit.co.kr';
+
+    let net = details.affiliateNetwork || details.platform || '';
+    if (!net && details.href) {
+      net = classifyAffiliatePlatform(details.href);
+    }
+    if (!net) net = '쿠팡 파트너스 (AF7865143)';
+
+    const unlockRecord = {
+      id: `UNL-${now}-${Math.floor(Math.random() * 899 + 100)}`,
+      timestampKst: kstIso,
+      triggerItem: sanitizeText(details.triggerItem || details.productName || '키즈핏 추천 육아템', 100),
+      affiliateNetwork: net,
+      unlockedTests: Array.isArray(details.unlockedTests) ? details.unlockedTests : ['growth', 'precocious_puberty', 'brain_development', 'temperament_learning'],
+      utmSource: details.utmSource || 'direct',
+      device: isMobile ? 'mobile' : 'desktop',
+      domain: sanitizeText(details.domain || reqHost, 60),
+      status: details.status || 'SUCCESS',
+      notifiedByServer: false
+    };
+
+    unlockRecord.notifiedByServer = sendDiagnosticUnlockTelegram(unlockRecord, day, visitorStats.total);
+
+    if (!Array.isArray(day.recentUnlocks)) day.recentUnlocks = [];
+    day.recentUnlocks.unshift(unlockRecord);
+    if (day.recentUnlocks.length > 30) day.recentUnlocks = day.recentUnlocks.slice(0, 30);
+
+    recentDiagnosticUnlockMap.set(dedupKey, { time: now, record: unlockRecord });
+    if (recentDiagnosticUnlockMap.size > 1000) recentDiagnosticUnlockMap.clear();
+
+    saveVisitorStats();
+    return unlockRecord;
+  } catch (_) {
+    return null;
   }
 }
 
@@ -522,12 +655,13 @@ function recordAffiliateClickEvent(category, utmSource, details = {}) {
       id: `CLK-${now}-${Math.floor(Math.random() * 899 + 100)}`,
       timestampKst: kstIso,
       category: category || 'growth',
-      platform: classifyAffiliatePlatform(href || details.platformHint || ''),
+      platform: details.platform || details.platformHint || classifyAffiliatePlatform(href || details.platformHint || ''),
       productName: productName || '추천 제휴 상품 바로가기',
       href: href || '',
       utmSource: refKey,
       device: isMobile ? 'mobile' : 'desktop',
       domain: sanitizeText(details.domain || reqHost, 60),
+      status: details.status || 'SUCCESS',
       notifiedByServer: false
     };
 
@@ -681,6 +815,21 @@ const server = http.createServer((req, res) => {
             const ev = String(data.event || 'pageview');
             if (ev === 'diagnosis') {
               recordDiagnosisEvent(data.mode || 'growth');
+            } else if (ev === 'diagnostic_test_unlock') {
+              const triggerItem = data.trigger_item || data.triggerItem || data.product_name || data.productName || '키즈핏 추천 육아템';
+              const affiliateNetwork = data.affiliate_network || data.affiliateNetwork || data.platform || (data.href ? classifyAffiliatePlatform(data.href) : '');
+              const unlockedTests = Array.isArray(data.unlocked_tests) ? data.unlocked_tests : ['growth', 'precocious_puberty', 'brain_development', 'temperament_learning'];
+              const utmSource = data.utm_source || 'direct';
+              recordDiagnosticUnlockEvent({
+                req,
+                triggerItem,
+                affiliateNetwork,
+                unlockedTests,
+                utmSource,
+                domain: data.domain || '',
+                status: data.status || 'SUCCESS',
+                href: data.href || ''
+              });
             } else if (ev === 'affiliate_click' || ev === 'growth_product_click' || ev === 'learning_product_click') {
               const category = data.category || (ev === 'learning_product_click' ? 'learning' : 'growth');
               const utmSource = data.utm_source || 'direct';
@@ -688,12 +837,15 @@ const server = http.createServer((req, res) => {
                 req,
                 href: data.href || '',
                 productName: data.product_name || data.productName || '',
+                platform: data.platform || '',
+                platformHint: data.platform || '',
                 domain: data.domain || '',
                 rlArmId: data.rl_arm_id || '',
                 rlCtaArm: data.rl_cta_arm || '',
                 rlSlotRank: Number(data.rl_slot_rank) || 1,
                 rlReward: Number(data.rl_reward) || 33.0,
-                sessionClicks: Number(data.session_clicks) || 1
+                sessionClicks: Number(data.session_clicks) || 1,
+                status: data.status || 'SUCCESS'
               });
             } else {
               recordVisitorPageview(req, data.referrer || '');

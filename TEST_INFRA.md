@@ -1,239 +1,234 @@
-# KidsFit Full-Funnel Inflow & Conversion Optimization — Test Infrastructure Specification
+# KidsFit Parenting Shopping Mall & Diagnostic Unlock Platform — Test Infrastructure Specification
 
-**Document Version**: 1.0.0  
-**Target Milestone**: Full-Funnel Optimization E2E Test Suite Creation (F01–F13)  
-**Author**: `test_writer_e2e`  
+**Document Version**: 2.0.0  
+**Target Milestone**: E2E Testing Track (Requirement-Driven, Opaque-Box)  
+**Author**: `worker_e2e` (teamwork_test_writer)  
 **Working Directory**: `d:\사업아이템`  
-**Primary Test Suite**: `tests/test_full_funnel_optimization_e2e.py`  
-**Execution Runtime**: Python 3.10+ `unittest`  
+**Primary Test Suite**: `tests/test_parenting_ecosystem_e2e.py`  
+**Execution Runtime**: Python 3.10+ `unittest` & `pytest`  
+**Authoritative Sources**: `ORIGINAL_REQUEST.md`, `PROJECT.md`, `survey_spec_miner_3/handoff.md`  
 
 ---
 
 ## 1. System Overview & Testing Mission
 
-The KidsFit platform is a full-funnel parental healthcare and learning guidance system consisting of four tightly integrated operational layers:
-1. **Omnichannel Inflow Layer**: Naver Blog (`expertise333`), Naver Cafe (`moneyfitlab`), Instagram/Threads Webtoons (4-cut) and Card News (6-slide), and 31 SEO Q&A Landing Pages (`qna/*.html`).
-2. **On-Site Diagnosis & Onboarding Funnel Layer (`https://kidsfit.co.kr`)**: Primary domain defaulting to Korean (`ko`) Free Studio, unified 60-second Growth + Learning quiz, and dual telemetry (`diagnoses.growth` and `diagnoses.learning`).
-3. **Product Prescription & Conversion Monetization Layer**: Post-diagnosis personalized recommendations dynamically mapped to diagnosed deficits with academic paper citations (PMID/KDCA) and affiliate tracking (Coupang Partners `AF7865143`, LinkPrice `A100708867`).
-4. **Verification & Live Execution Layer**: Automated test harness, Chrome CDP (port 9222) publishing verification, and Telegram notification delivery (`755033799`).
-
-The testing mission is to implement a rock-solid, deterministic, self-contained end-to-end verification harness across all 13 features (F01 to F13) using the **4-Tier Testing Methodology**:
-- **Tier 1: Feature Coverage (F01–F13)** — Verification of individual feature contracts, schemas, files, and core logic.
-- **Tier 2: Boundary & Corner Cases** — Extreme inputs, missing fields, malformed URLs, empty referrers, zero counts, and fallback paths.
-- **Tier 3: Cross-Feature Interactions** — End-to-end contracts between layers (Bridge UTM -> Inflow classifier -> Unified Funnel -> Dual Telemetry -> Product Prescription -> Conversion Click Tracking).
-- **Tier 4: Real-World Workload Scenarios** — Complete realistic user journeys across 5 acquisition and conversion paths.
+The KidsFit platform is being overhauled into a curated parenting shopping-mall and diagnostic unlock ecosystem (`https://kidsfit.co.kr`):
+1. **Curated Parenting Shopping Mall**:
+   - Structured taxonomy across **4 developmental stages**:
+     - `pregnancy_newborn` (임신/신생아)
+     - `infancy` (영아기)
+     - `toddler` (유아기)
+     - `child` (아동/학령기)
+   - Categorized across **4 core product categories**:
+     - `nutrition` (영양·건강식품)
+     - `development` (발달교구·완구)
+     - `gear` (자세·수면·성장기구)
+     - `learning` (학습도서·문해력)
+2. **Affiliate Monetization Integration**:
+   - Strict partner ID injection:
+     - **Coupang Partners**: `lptag=AF7865143`
+     - **iHerb**: `rcode=IPZ1547`
+     - **Parenting / Education CPA**: `A100708867`
+   - External links open securely in a new tab (`target="_blank"`, `rel="noopener noreferrer sponsored"`).
+3. **Click-Based Diagnostic Test Unlock System**:
+   - Clicking any affiliate product card opens the external store in a new tab and immediately awards the user free access tickets to Kidsfit clinical diagnostic tests:
+     1. 신체 성장 정밀 진단 (Growth LMS Percentiles & MPH)
+     2. 골연령·성조숙증 위험도 판정 (Precocious Puberty Assessment)
+     3. 두뇌 5대 역량 & K-DST 발달 진단 (Brain & Sensory Development)
+     4. 기질 및 수면·학습 스타일 진단 (Temperament & Learning Style Analysis)
+   - Unlock state persisted in browser `localStorage` and `sessionStorage`:
+     - Keys: `kidsfit_diagnostic_unlocked`, `kf_report_unlocked`, `kidsfit_unlocked_tests`, `kidsfit_free_tickets`.
+   - Complete unblurring and removal of paywall barriers without payment.
+4. **Real-Time Telemetry & Fail-Safe Telegram Alerts**:
+   - Ingestion via `POST /api/visit` and Telegram bot dispatch to **Chat ID 755033799**.
+   - Asynchronous, non-blocking HTTP requests; network errors or offline states are caught quietly without freezing the UI or blocking outbound link navigation.
+5. **Promotional Short-Form Video Marketing Deliverable**:
+   - `promotional_video_scripts.md` delivering production-ready scripts for YouTube Shorts (60s), Instagram Reels (30s), TikTok (25s) focused on the *"5 Essential Items Before Baby is Born"* theme.
+6. **Deterministic Production Build Pipeline**:
+   - Compiles static assets, data bundles, cache-busting index into `./dist` with zero external dependencies.
 
 ---
 
-## 2. Feature-to-Requirement Traceability Matrix (F01–F13)
+## 2. Acceptance Criteria Traceability Matrix (AC1 to AC13)
 
-| Feature ID | Feature Name | Target Scope | Authoritative Source | Primary Test Class |
+| AC # | Requirement Category | Acceptance Criteria Specification | Authoritative Source | Primary Test Class / Methods |
 |---|---|---|---|---|
-| **F01** | Promotion & Funnel Bottleneck Diagnosis Report | Markdown & JSON diagnosis reports with quantitative baseline (UV, PV, 29 vs 0 split, 189 clicks) and root-cause matrices | ORIGINAL_REQUEST R1, PROJECT.md F01 | `TestF01PromotionDiagnosisReport` |
-| **F02** | Naver Blog Contextual Diagnostic Bridge & QR Infographic | High-CTR UTM diagnostic bridge in blog columns + 135x135 QR code and callout banner in 3rd checklist infographic image | ORIGINAL_REQUEST R2, PROJECT.md F02 | `TestF02BlogDiagnosticBridge` |
-| **F03** | Naver Cafe Diagnostic Bridge & Card Upgrade | Contextual diagnostic bridge text in 7 cafe boards + 120x120 QR code in cafe card image | ORIGINAL_REQUEST R2, PROJECT.md F03 | `TestF03CafeDiagnosticBridge` |
-| **F04** | Webtoon Cut 4 & Card News Slide 6 QR Bridge | Visual end-card QR code and callout banner in Webtoon cut 4 and Card News slide 6 + UTM-tagged copy text | ORIGINAL_REQUEST R2, PROJECT.md F04 | `TestF04WebtoonCardNewsQRBridge` |
-| **F05** | 31 SEO Q&A Landing Pages Bridge Widgets & Sitemap Unification | Top & bottom 1-click diagnostic bridge widgets in all `qna/*.html`, canonical & sitemap unification to `kidsfit.co.kr` | ORIGINAL_REQUEST R2, PROJECT.md F05 | `TestF05QnAPagesBridgeSitemap` |
-| **F06** | QA Fact-Check Agent Rule Alignment | Stage 1 & 2 QA rules requiring `kidsfit.co.kr` UTM bridge links while strictly prohibiting commercial affiliate links on external channels | ORIGINAL_REQUEST R2, PROJECT.md F06 | `TestF06QAFactCheckAgentAlignment` |
-| **F07** | Primary Domain Korean Default Fix | Remove forced English paywall on `kidsfit.co.kr`, default to `lang="ko"` free studio, allow global paid mode only via `?edition=global` | ORIGINAL_REQUEST R3, PROJECT.md F07 | `TestF07HomepageKoreanDefaultFix` |
-| **F08** | 1-Stop Unified Growth + Learning Diagnosis Flow | Combine physical growth and cognitive learning survey into single <60s flow, removing CSS mutual exclusion | ORIGINAL_REQUEST R3, PROJECT.md F08 | `TestF08UnifiedDiagnosisFunnel` |
-| **F09** | Dual Diagnosis Telemetry Recording | Record both `diagnoses.growth` and `diagnoses.learning` events in `visitor_analytics.json` and server upon diagnosis completion | ORIGINAL_REQUEST R3, PROJECT.md F09 | `TestF09DualDiagnosisTelemetry` |
-| **F10** | Personalized Growth & Learning Prescription Engine | Render paper-backed product cards directly matched to child's diagnosed deficits with PMID citations and clean CTAs | ORIGINAL_REQUEST R4, PROJECT.md F10 | `TestF10PersonalizedProductPrescription` |
-| **F11** | Category & UTM Conversion Click Tracking | Intercept product clicks, record `growth_product_click` / `learning_product_click` with `utm_source` in `visitor_analytics.json` | ORIGINAL_REQUEST R4, PROJECT.md F11 | `TestF11CategoryUtmClickTracking` |
-| **F12** | Comprehensive E2E Test Suite | Automated test suite verifying R1~R5 requirements across Category-Partition, BVA, Pairwise, and Scenario tiers | ORIGINAL_REQUEST Criteria, PROJECT.md F12 | `TestF12E2ETestHarnessIntegrity` |
-| **F13** | Live Omnichannel Execution & Telegram Delivery | 1 live blog post + 1 live cafe post published and verified via DOM, Telegram summary and asset pack sent to `755033799` | ORIGINAL_REQUEST R5, PROJECT.md F13 | `TestF13LiveExecutionTelegramDelivery` |
+| **AC1** | Shopping Mall UI | Responsive shopping mall curation layout categorized by developmental stage and product type across 320px~1920px | ORIGINAL_REQUEST R1, AC1 | `TestTier1_F01_StageCategorization` |
+| **AC2** | Affiliate Catalog | Affiliate links for Coupang (`lptag=AF7865143`), iHerb (`rcode=IPZ1547`), CPA (`A100708867`) formatted with partner tags and `_blank` | ORIGINAL_REQUEST R1, AC2 | `TestTier1_F02_AffiliateLinkFormatting` |
+| **AC3** | Product Presentation | Product cards present pricing, thumbnail, description, and visual cues connecting to diagnostic test benefits | ORIGINAL_REQUEST R1, AC3 | `TestTier1_F03_ProductCardPresentation` |
+| **AC4** | Diagnostic Unlock | Clicking affiliate link immediately unlocks Kidsfit diagnostic tests in `localStorage` / `sessionStorage` | ORIGINAL_REQUEST R2, AC4 | `TestTier1_F04_DiagnosticUnlockStorageMutations` |
+| **AC5** | Unrestricted Access | Users can access and complete all 4 diagnostic tests immediately without paywalls | ORIGINAL_REQUEST R2, AC5 | `TestTier1_F05_DiagnosticTestsUnrestrictedAccess` |
+| **AC6** | State Persistence | Unlocked access state persists across browser page reloads during session | ORIGINAL_REQUEST R2, AC6 | `TestTier1_F06_UnlockSessionPersistence` |
+| **AC7** | Telegram Event (Click) | Affiliate click triggers notification to Telegram `Chat ID 755033799` with item and partner details | ORIGINAL_REQUEST R4, AC7 | `TestTier1_F07_TelegramNotificationPayloads` |
+| **AC8** | Telegram Event (Unlock) | Diagnostic test unlock triggers notification to Telegram `Chat ID 755033799` | ORIGINAL_REQUEST R4, AC8 | `TestTier1_F07_TelegramNotificationPayloads` |
+| **AC9** | Telegram Error Containment | Telegram network requests handle errors gracefully without breaking or stalling UI | ORIGINAL_REQUEST R4, AC9 | `TestTier2_B01_TelegramOfflineFailureResilience` |
+| **AC10** | Video Deliverable Existence | Production-ready `promotional_video_scripts.md` is delivered with Shorts, Reels, TikTok scripts | ORIGINAL_REQUEST R3, AC10 | `TestTier1_F08_PromotionalVideoScriptsDeliverable` |
+| **AC11** | Video Content Fidelity | Scripts include 5 Essential Items theme with timecodes, visuals, VO scripts, and CTA hooks | ORIGINAL_REQUEST R3, AC11 | `TestTier1_F08_PromotionalVideoScriptsDeliverable` |
+| **AC12** | Production Build | Production build succeeds cleanly into `./dist` without missing assets or syntax errors | ORIGINAL_REQUEST Build, AC12 | `TestTier1_F09_ProductionBuildCleanliness` |
+| **AC13** | E2E Verification Harness | Automated/programmatic verification validates unlock flow & affiliate routing against codebase | ORIGINAL_REQUEST Build, AC13 | `TestTier4_S04_PersonaAutomatedAcceptancePipeline` |
 
 ---
 
 ## 3. 4-Tier Test Architecture & Methodological Standards
 
-### Tier 1: Feature Coverage (F01–F13)
-Each of the 13 features receives dedicated unit and integration assertions ensuring:
-- File existence and structural integrity.
-- Schema compliance against authoritative JSON specifications.
-- Exact string, regex, and pattern matching for banned/required tokens.
-- Parameter validation, image resolution standards (1080x1080 / 1080x1350), and QR code decode accuracy.
+The test suite in `tests/test_parenting_ecosystem_e2e.py` implements a 4-Tier Opaque-Box testing methodology designed for deterministic, non-flaky execution in offline and local environments:
 
-### Tier 2: Boundary & Corner Cases
-Targeted test cases probing boundary conditions:
-- **T2-1: Empty / Malformed Referrers & Missing UTM Parameters**: Verifies server fallback to `'direct'` when referrer header is missing or empty.
-- **T2-2: Extreme Age Boundaries (1 year & 20 years)**: Verifies valid KDCA percentile computation and appropriate age-band cohort classification at minimum and maximum ages.
-- **T2-3: Extreme Physical Measurements**: Verifies Z-score calculations with extreme height/weight inputs (e.g. 50cm infant vs 200cm adolescent).
-- **T2-4: Zero Diagnoses Baseline & Counter Stability**: Verifies arithmetic safety when increments occur from 0.
-- **T2-5: Category Click Attribution with Missing Product Category**: Verifies fallback categorization to `'growth'` or rejection without corrupting data structures.
-- **T2-6: Special Characters in Query Strings**: Verifies URL encoding and parsing stability (`?utm_source=naver_blog&note=%ED%95%9C%EA%B8%80`).
-- **T2-7: Unknown Mode in Diagnosis Telemetry**: Verifies graceful handling when `mode` is neither `'growth'`, `'learning'`, nor `'both'`.
-- **T2-8: Empty Deficit Habits Array**: Verifies safe rendering of general recommendations when no specific deficit habits are selected.
-
-### Tier 3: Cross-Feature Interactions
-Integration assertions verifying end-to-end dataflow contracts:
-- **T3-1: Blog/Cafe Bridge UTM -> Server Inflow Classification**: External bridge link clicked -> `classifyReferrer` outputs matching source (`naver_blog` / `naver_cafe`).
-- **T3-2: Q&A Diagnostic Bridge -> Homepage Unified Funnel Entry**: `qna_top` / `qna_bottom` deep links enter unified diagnosis mode without triggering paywall.
-- **T3-3: Unified Diagnosis Submission -> Dual Telemetry Synchronization**: Submitting `preferredReportMode = 'both'` increments both `diagnoses.growth` and `diagnoses.learning` in telemetry store.
-- **T3-4: Diagnosed Deficits -> Academic Prescription Mapping**: Checking `#late_sleep` maps to Tart Cherry / Magnesium with PMID citation; checking `#math_spatial` maps to Froebel Gabe.
-- **T3-5: Prescription CTA Click -> Category & UTM Conversion Recording**: Clicking prescription CTA dispatches `/api/visit` with category and `utm_source`, updating `productClicks.byReferrer`.
-
-### Tier 4: Real-World Workload Scenarios
-Five comprehensive end-to-end multi-step simulations:
-- **Scenario 1 (Naver Blog Parent Journey)**: Reads deep sleep column -> scans 3rd image QR / clicks UTM bridge -> lands on `kidsfit.co.kr` in Korean -> completes 1-stop quiz in 52s -> receives HT042 & Magnesium prescription -> clicks Coupang link -> telemetry logs `growth_product_click` with `utm_source=naver_blog`.
-- **Scenario 2 (Naver Cafe Parent Journey)**: Browses Board 4 (소근육·두뇌발달) -> clicks cafe bridge link -> runs unified assessment with literacy bottleneck -> receives Froebel Gabe & YES24 workbook prescription -> clicks LinkPrice CTA -> telemetry logs `learning_product_click` with `utm_source=naver_cafe`.
-- **Scenario 3 (Instagram / Threads Parent Journey)**: Reads Webtoon Cut 4 / Card News Slide 6 -> scans visual QR -> enters `kidsfit.co.kr` -> verifies zero English paywall -> completes unified survey -> views executive function timer & jump gear -> telemetry records dual diagnosis.
-- **Scenario 4 (Organic SEO Q&A Parent Journey)**: Google search lands on `qna/topic-03.html` (성조숙증 신호) -> clicks top 1-click bridge widget -> arrives at `kidsfit.co.kr/?utm_source=qna_top` -> completes assessment -> logs `qna_top` referrer.
-- **Scenario 5 (Live Omnichannel Execution & Telegram Delivery Cycle)**: Scheduled publisher runs -> audits zero affiliate links and verified UTM bridge -> publishes live blog and cafe posts -> dispatches diagnosis report and assets to Telegram `755033799` with HTTP 200 `ok: true`.
-
----
-
-## 4. Authoritative Interface Contracts & Specifications
-
-### 4.1 Client ↔ Server Analytics Telemetry (`/api/visit`)
-
-#### Diagnosis Completion Event
-- **Endpoint**: `POST /api/visit`
-- **Request Headers**: `Content-Type: application/json`
-- **Request Body**:
-  ```json
-  {
-    "event": "diagnosis",
-    "mode": "both",
-    "profile": {
-      "gender": "boy",
-      "ageMonths": 84,
-      "currentHeight": 122.5,
-      "currentWeight": 24.1,
-      "habits": ["late_sleep", "sedentary"],
-      "learningBottlenecks": ["math_concept"]
-    }
-  }
-  ```
-- **Server Behavior**:
-  1. Increments `day.diagnoses.total` by 1.
-  2. Increments `day.diagnoses.growth` by 1.
-  3. Increments `day.diagnoses.learning` by 1.
-  4. Saves to `logs/visitor_analytics.json` atomically.
-
-#### Product Click Conversion Event
-- **Endpoint**: `POST /api/visit`
-- **Request Headers**: `Content-Type: application/json`
-- **Request Body**:
-  ```json
-  {
-    "event": "growth_product_click",
-    "category": "growth",
-    "href": "https://link.coupang.com/re/AFFSRP?lptag=AF7865143&...",
-    "utm_source": "naver_blog"
-  }
-  ```
-- **Server Behavior**:
-  1. Increments `day.affiliateClicks` by 1.
-  2. Increments `day.productClicks.growth` by 1 (or `learning` if category is learning).
-  3. Updates `day.productClicks.byReferrer[utm_source][category] += 1`.
-  4. Saves to `logs/visitor_analytics.json`.
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│                        4-TIER TEST ARCHITECTURE                        │
+├────────────────────────────────────────────────────────────────────────┤
+│ TIER 1: FEATURE COVERAGE                                               │
+│  - 4 Developmental Stage Tabs & 4 Categories Taxonomy Validation       │
+│  - Partner ID Injection (AF7865143, IPZ1547, A100708867)               │
+│  - Target '_blank' & Security Rel Attributes                           │
+│  - Product Card Details & Benefit Cues                                 │
+│  - Unlock State Mutations (localStorage, sessionStorage)               │
+│  - Unrestricted Diagnostic Access (Growth, Puberty, Brain, Style)      │
+│  - Telegram Payload Schemas & Chat ID 755033799                        │
+│  - Video Scripts Deliverable & 5 Essential Items Markdown Spec         │
+│  - Production Build Cleanliness into ./dist                            │
+├────────────────────────────────────────────────────────────────────────┤
+│ TIER 2: BOUNDARY & CORNER CASES                                        │
+│  - Telegram API Offline / 500 / Network Timeout Resilience             │
+│  - Safari Private Browsing / SecurityError Fallback                    │
+│  - Malformed & Corrupted Storage JSON Self-Healing                     │
+│  - Rapid Click Debouncing & Deduplication                              │
+│  - Direct Deep-Link Navigation Without Prior Unlock                    │
+│  - Viewport Scaling (320px, 375px, 768px, 1920px)                     │
+│  - Missing Parameter Sanitization & Fallback                           │
+├────────────────────────────────────────────────────────────────────────┤
+│ TIER 3: CROSS-FEATURE COMBINATIONS                                     │
+│  - Atomic Click + New Tab + Unlock Write + Non-Blocking Telegram Flow  │
+│  - Multi-Tab Synchronization via StorageEvents                         │
+│  - Category Filter Switching with Active Unlock Retention              │
+│  - Build Artifact Integrity & Asset Packaging Verification             │
+├────────────────────────────────────────────────────────────────────────┤
+│ TIER 4: REAL-WORLD PERSONA SCENARIOS                                   │
+│  - Scenario 1: Pregnant Mom Newborn Shopping & K-DST Development Test  │
+│  - Scenario 2: 3-Year-Old Toddler Mom Picky Eater & Growth Curve Test  │
+│  - Scenario 3: Privacy/AdBlock Dad CPA Click & Brain Diagnostic Test   │
+│  - Scenario 4: Automated CI/CD 100% Acceptance Verification Pass       │
+└────────────────────────────────────────────────────────────────────────┘
+```
 
 ---
 
-### 4.2 External Bridge ↔ Homepage UTM Contracts
+## 4. Authoritative Interface Contracts
 
-All external promotion channels must route visitors to `https://kidsfit.co.kr` using strictly defined UTM parameter contracts:
-
-| Channel | Placement | Target Bridge URL |
-|---|---|---|
-| **Naver Blog** | End of post text | `https://kidsfit.co.kr/?utm_source=naver_blog&utm_medium=organic_social&utm_campaign=kidsfit_diagnosis` |
-| **Naver Blog** | 3rd Image QR code | `https://kidsfit.co.kr/?utm_source=naver_blog_qr&utm_medium=qr_code&utm_campaign=kidsfit_diagnosis` |
-| **Naver Cafe** | Bottom of article & comment | `https://kidsfit.co.kr/?utm_source=naver_cafe&utm_medium=organic_social&utm_campaign=kidsfit_diagnosis` |
-| **Naver Cafe** | Card Image QR code | `https://kidsfit.co.kr/?utm_source=naver_cafe_qr&utm_medium=qr_code&utm_campaign=kidsfit_diagnosis` |
-| **Instagram** | Bio Link | `https://kidsfit.co.kr/?utm_source=instagram_bio&utm_medium=social_bio&utm_campaign=kidsfit_diagnosis` |
-| **Instagram** | Post Captions | `https://kidsfit.co.kr/?utm_source=instagram&utm_medium=organic_social&utm_campaign=kidsfit_diagnosis` |
-| **Threads** | Post & First Comment | `https://kidsfit.co.kr/?utm_source=threads&utm_medium=organic_social&utm_campaign=kidsfit_diagnosis` |
-| **Webtoon** | Cut 04 QR code | `https://kidsfit.co.kr/?utm_source=instagram_webtoon_qr&utm_medium=qr_code&utm_campaign=kidsfit_diagnosis` |
-| **Card News** | Slide 06 QR code | `https://kidsfit.co.kr/?utm_source=cardnews_qr&utm_medium=qr_code&utm_campaign=kidsfit_diagnosis` |
-| **SEO Q&A** | Top Bridge Widget | `https://kidsfit.co.kr/?utm_source=qna_top&utm_medium=organic_search&utm_campaign=kidsfit_diagnosis&utm_content={slug}` |
-| **SEO Q&A** | Bottom Bridge Widget | `https://kidsfit.co.kr/?utm_source=qna_bottom&utm_medium=organic_search&utm_campaign=kidsfit_diagnosis&utm_content={slug}` |
-
----
-
-### 4.3 Deficit-to-Product Prescription Mapping Contract
-
-| Diagnosed Deficit Habit / Bottleneck | Category | Recommended Item / Class | Academic Rationale (PMID / KDCA) | Required Affiliate Tag |
-|---|---|---|---|---|
-| `late_sleep` (Bedtime > 22:30) | Growth | Tart Cherry Extract + Magnesium Glycinate | SWS deep sleep increases nocturnal GH pulse by up to 52% (PMID: 24899893) | Coupang `AF7865143` |
-| `picky_eater` / `small_appetite` | Growth | WPI Whey Colostrum Protein + Zinc Picolinate | Zinc activates hepatic GH -> IGF-1 conversion; chondrogenesis (PMID: 17684179) | Coupang `AF7865143` |
-| `poor_posture` / `turtle_slouch` | Growth | Pediatric Dead Hang Bar + Ergo Reading Stand | Decompresses intervertebral discs (+1.5~2.2cm) (PMID: 22441957) | Coupang `AF7865143` / YES24 `A100708867` |
-| `sedentary` (Lack of jump exercise) | Growth | Indoor Shock-Absorbing Trampoline / Jump Rope | Wolff's Law: intermittent axial cyclic loading stimulates chondrocyte proliferation (PMID: 19164344) | Coupang `AF7865143` |
-| `reading_literacy` bottleneck | Learning | Age-Graded Literacy Workbook & Reading Sets | Structural schema transfer activates left temporal-parietal cortex (PMID: 25528634) | YES24 `A100708867` |
-| `math_concept` / spatial block | Learning | Froebel Gabe / 3D Magnetic Spatial Blocks | Visual-spatial manipulatives form parietal cortical representations (PMID: 28628612) | Coupang `AF7865143` |
-| `desk_endurance` / `screen_dopamine` | Learning | Visual Time Timer + Focus Stand | Visual countdown provides external prefrontal scaffold, mitigating dopamine depletion (PMID: 31562143) | Coupang `AF7865143` |
-| `passive_forget` (no recall) | Learning | Metacognitive Retrieval Whiteboard Notebook | Retrieval practice (testing effect) strengthens hippocampal synaptic consolidation (PMID: 21252341) | Coupang `AF7865143` / YES24 `A100708867` |
-
----
-
-### 4.4 Diagnosis Report JSON Schema (`docs/promotion_funnel_diagnosis_report.json`)
-
-The quantitative bottleneck report must expose a structured schema containing:
+### 4.1 Contract 1: Shopping Mall Item Data Schema
 ```json
 {
-  "report_timestamp": "2026-10-24T...",
-  "audit_version": "1.0.0",
-  "baseline_metrics": {
-    "total_uv": 11,
-    "total_pv": 16,
-    "diagnoses": {
-      "total": 29,
-      "growth": 29,
-      "learning": 0
-    },
-    "affiliate_clicks": 189,
-    "referrers": {
-      "direct": 16,
-      "naver_blog": 0,
-      "naver_cafe": 0,
-      "instagram": 0,
-      "threads": 0
-    }
-  },
-  "bottleneck_root_causes": {
-    "inflow": [ ... ],
-    "diagnosis_split": [ ... ],
-    "conversion": [ ... ],
-    "domain_canonical": [ ... ]
-  },
-  "implemented_solutions": { ... },
-  "target_kpis": {
-    "blog_inflow_uv_target": ">=50/day",
-    "learning_diagnosis_ratio": "50%",
-    "affiliate_cvr_target": ">=3.5%"
+  "id": "prod_newborn_swaddle",
+  "name": "모로반사 숙면 스와들업 속싸개 & 비타민D3 드롭스",
+  "stage": "pregnancy_newborn",
+  "category": "nutrition",
+  "platform": "iherb",
+  "partnerTag": "IPZ1547",
+  "price": "24,800원",
+  "rating": 4.9,
+  "description": "모로반사 꿀잠 유도 및 소아과 권장 영유아 필수 액상 비타민D",
+  "benefitCue": "확인 시 4대 발달 정밀 진단 티켓 100% 무료 지급!",
+  "url": "https://kr.iherb.com/pr/childlife-essentials-liquid-vitamin-d3-natural-berry-flavor-1-fl-oz-29-6-ml/24742?rcode=IPZ1547"
+}
+```
+
+### 4.2 Contract 2: Diagnostic Unlock Storage Schema
+```json
+// localStorage key: "kidsfit_diagnostic_unlocked" -> "true"
+// localStorage key: "kf_report_unlocked" -> "1"
+// sessionStorage key: "kf_report_unlocked" -> "1"
+// localStorage key: "kidsfit_unlocked_tests" or "kidsfit_free_tickets":
+{
+  "unlocked": true,
+  "unlockedAt": "2026-10-30T12:00:00.000Z",
+  "triggerItem": "스마트 온습도계 & 수유등",
+  "triggerNetwork": "Coupang Partners",
+  "tickets": {
+    "growth": { "name": "신체 성장 정밀 진단", "unlocked": true },
+    "precocious_puberty": { "name": "골연령·성조숙증 판정", "unlocked": true },
+    "brain_development": { "name": "두뇌 5대 역량 진단", "unlocked": true },
+    "temperament_learning": { "name": "기질·학습 스타일 진단", "unlocked": true }
   }
 }
 ```
 
+### 4.3 Contract 3: Telemetry Ingestion (`POST /api/visit`)
+```json
+// Affiliate Link Click
+{
+  "event": "affiliate_click",
+  "product_name": "스마트 온습도계 & 수유 무드등",
+  "platform": "Coupang Partners (AF7865143)",
+  "stage": "pregnancy_newborn",
+  "href": "https://www.coupang.com/...",
+  "domain": "kidsfit.co.kr",
+  "status": "SUCCESS"
+}
+
+// Diagnostic Test Unlock
+{
+  "event": "diagnostic_test_unlock",
+  "trigger_item": "스마트 온습도계 & 수유 무드등",
+  "affiliate_network": "Coupang Partners (AF7865143)",
+  "unlocked_tests": ["growth", "precocious_puberty", "brain_development", "temperament_learning"],
+  "domain": "kidsfit.co.kr",
+  "status": "SUCCESS"
+}
+```
+
+### 4.4 Contract 4: Telegram Alert Dispatch (`server.js` -> Chat ID `755033799`)
+- Endpoint: `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`
+- Target Chat ID: `755033799`
+- Format: HTML with timestamp, item name, affiliate network, event status
+- Error handling: Asynchronous non-blocking dispatch; catch blocks ensure zero UI stall or promise rejection crash.
+
 ---
 
-## 5. Verification Commands & Baseline Tracking
+## 5. Coverage Thresholds & Quality Gates
 
-### Test Execution Command
+1. **Zero External Daemon Dependency**:
+   - Tests execute deterministically without requiring an active browser CDP daemon (port 9222) or live internet connection to Telegram.
+   - HTTP requests to external APIs are mocked/simulated with realistic status codes (200, 500, network error) to verify client error containment.
+2. **100% Traceability**:
+   - Every single AC (AC1 through AC13) must be explicitly asserted by at least 2 distinct test methods.
+3. **Deterministic Exit Codes**:
+   - Test suite returns exit code `0` on success and `1` on assertion failure.
+4. **Anti-Facade Guarantee**:
+   - Zero trivial `self.assertTrue(True)` or dummy passing facade assertions. All test cases parse real files (`index.html`, `promotional_video_scripts.md`, `scripts/build.js`, `server.js`, `curation-catalog.json`), execute genuine data transformations, and validate actual contract specifications.
+
+---
+
+## 6. Verification Commands
+
+### Standard Python Unittest Runner
 ```powershell
-python tests/test_full_funnel_optimization_e2e.py
+python tests/test_parenting_ecosystem_e2e.py
 ```
 
-### Verbose Execution Command
+### Verbose Runner with Summary Matrix
 ```powershell
-python tests/test_full_funnel_optimization_e2e.py -v
+python tests/test_parenting_ecosystem_e2e.py -v
 ```
 
-### Sub-Suite Isolation Commands
+### Pytest Runner
 ```powershell
-# Tier 1 Feature Coverage
-python -m unittest tests.test_full_funnel_optimization_e2e.TestF01PromotionDiagnosisReport
-python -m unittest tests.test_full_funnel_optimization_e2e.TestF07HomepageKoreanDefaultFix
-
-# Tier 2 Boundary Tests
-python -m unittest tests.test_full_funnel_optimization_e2e.TestTier2BoundaryCornerCases
-
-# Tier 3 Cross-Feature Tests
-python -m unittest tests.test_full_funnel_optimization_e2e.TestTier3CrossFeatureInteractions
-
-# Tier 4 Real-World Workload Scenarios
-python -m unittest tests.test_full_funnel_optimization_e2e.TestTier4RealWorldWorkloadScenarios
+pytest tests/test_parenting_ecosystem_e2e.py -v
 ```
 
-### Baseline Management
-When executed prior to feature implementation (during test suite delivery), tests asserting un-implemented features (such as `docs/promotion_funnel_diagnosis_report.md` generation in M1, bridge additions in M2, Korean default fix in M3, product prescription cards in M4, and live publishing in M5) will register as failures with descriptive assertion diagnostics. These failures represent the **TDD Verification Baseline**. As implementing agents complete M1 through M5, tests flip sequentially to PASS until reaching 100% test success.
+### Tier-Specific Execution Commands
+```powershell
+# Tier 1: Feature Coverage
+python -m unittest tests.test_parenting_ecosystem_e2e.TestTier1_F01_StageCategorization
+python -m unittest tests.test_parenting_ecosystem_e2e.TestTier1_F02_AffiliateLinkFormatting
+python -m unittest tests.test_parenting_ecosystem_e2e.TestTier1_F04_DiagnosticUnlockStorageMutations
+python -m unittest tests.test_parenting_ecosystem_e2e.TestTier1_F08_PromotionalVideoScriptsDeliverable
+
+# Tier 2: Boundary & Corner Cases
+python -m unittest tests.test_parenting_ecosystem_e2e.TestTier2_BoundaryAndCornerCases
+
+# Tier 3: Cross-Feature Combinations
+python -m unittest tests.test_parenting_ecosystem_e2e.TestTier3_CrossFeatureInteractions
+
+# Tier 4: Real-World Scenarios
+python -m unittest tests.test_parenting_ecosystem_e2e.TestTier4_RealWorldScenarios
+```
