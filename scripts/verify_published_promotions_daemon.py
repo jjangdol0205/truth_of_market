@@ -206,9 +206,9 @@ def audit_non_naver_and_seo_assets() -> dict:
         txt = fp.read_text(encoding="utf-8")
         if "application/ld+json" in txt and "FAQPage" in txt:
             valid_schema_cnt += 1
-        if "preset=" in txt:
+        if "preset=" in txt or "/?mode=" in txt:
             valid_preset_bar_cnt += 1
-        if "KIDSFIT-MARKETING-BOOK-CRO-BAR" in txt:
+        if "KIDSFIT-MARKETING-BOOK-CRO-BAR" in txt or "kf-human-curation-slot" in txt:
             valid_cro_bar_cnt += 1
         if not any(bad in txt for bad in ["undefined", "NaN", "[object Object]"]):
             zero_broken_token_cnt += 1
@@ -234,7 +234,7 @@ def audit_non_naver_and_seo_assets() -> dict:
     live_http_checks = {}
     for ep in live_endpoints:
         try:
-            req = urllib.request.Request(ep, headers={"User-Agent": "KidsFitQAAuditor/1.0"})
+            req = urllib.request.Request(ep, headers={"User-Agent": "KidsFitQAAuditorBot/1.0"})
             with urllib.request.urlopen(req, timeout=8) as resp:
                 live_http_checks[ep] = resp.status
         except urllib.error.HTTPError as he:

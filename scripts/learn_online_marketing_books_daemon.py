@@ -221,7 +221,7 @@ def audit_and_apply_to_kidsfit_system(kb: dict):
       <div style="font-size:1.02rem;font-weight:900;margin-bottom:0.4rem;word-break:keep-all;">우리 아이 생년월일·키·몸무게만 넣으면 [유전키 vs 숨은 잠재키 +7cm]와 [두뇌 5각 밸런스]가 10초 만에 무료 출력됩니다!</div>
       <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.7rem;">
         <a href="/?utm_source=mkt_cro_bar" style="flex:1;min-width:200px;text-align:center;background:#10B981;color:#FFFFFF;text-decoration:none;font-weight:900;font-size:0.92rem;padding:0.75rem 1rem;border-radius:12px;">⚡ 내 아이 10초 무료 진단 시작하기 →</a>
-        <a href="/qna/omni-channel-kit.html" style="text-align:center;background:rgba(255,255,255,0.14);color:#FFFFFF;text-decoration:none;font-weight:800;font-size:0.84rem;padding:0.75rem 0.95rem;border-radius:12px;">💌 카톡·당근·블라인드 1초 공유</a>
+        <a href="/qna/free-worksheets.html" style="text-align:center;background:rgba(255,255,255,0.14);color:#FFFFFF;text-decoration:none;font-weight:800;font-size:0.84rem;padding:0.75rem 0.95rem;border-radius:12px;">🖨️ 무료 A4 프린트 워크지 5종</a>
       </div>
     </div>"""
 

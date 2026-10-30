@@ -2431,9 +2431,8 @@ svg {
 .wizard-mode-growth .mode-growth-field {
   display: block !important;
 }
-.wizard-mode-growth .mode-learning-field {
-  display: none !important;
-}
+/* Unified 1-Stop Growth + Learning funnel: both fields active */
+.wizard-mode-growth .mode-learning-field { display: block; }
 
 /* ==========================================================================
    25. UNIFIED REPORT TYPOGRAPHY (GROWTH & LEARNING) + 1-LINE VERTICAL FLOW

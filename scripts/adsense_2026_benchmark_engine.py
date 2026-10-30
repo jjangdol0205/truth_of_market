@@ -478,6 +478,7 @@ def render_2026_article_html(t: dict, idx: int, all_topics: list) -> str:
         <a href="/">홈·성장진단기</a>
         <a href="/qna/index.html?cat=growth" class="{'active' if cat_key == 'growth' else ''}">신체성장·영양 클리닉 ({growth_count})</a>
         <a href="/qna/index.html?cat=learning" class="{'active' if cat_key == 'learning' else ''}">두뇌발달·학습 클리닉 ({learning_count})</a>
+        <a href="/qna/free-worksheets.html">무료 활동지</a>
         <a href="/about.html">연구소 소개</a>
         <a href="/contact.html">문의하기</a>
       </nav>
@@ -599,7 +600,7 @@ def render_2026_article_html(t: dict, idx: int, all_topics: list) -> str:
           <li><a href="/qna/index.html" style="color:#0F172A;font-weight:800;text-decoration:none;display:flex;justify-content:space-between;"><span>📚 전체 임상 칼럼 아카이브</span><span>25편</span></a></li>
           <li><a href="/qna/index.html?cat=growth" style="color:#1D4ED8;font-weight:800;text-decoration:none;display:flex;justify-content:space-between;"><span>📏 신체성장·수면·영양 클리닉</span><span>{growth_count}편</span></a></li>
           <li><a href="/qna/index.html?cat=learning" style="color:#059669;font-weight:800;text-decoration:none;display:flex;justify-content:space-between;"><span>🧠 두뇌발달·학습코칭 클리닉</span><span>{learning_count}편</span></a></li>
-          <li><a href="/qna/free-worksheets.html" style="color:#4F46E5;font-weight:800;text-decoration:none;display:flex;justify-content:space-between;"><span>🖨️ 무료 프린트 학습지·체크표</span><span>3종</span></a></li>
+          <li><a href="/qna/free-worksheets.html" style="color:#4F46E5;font-weight:800;text-decoration:none;display:flex;justify-content:space-between;"><span>🖨️ 무료 프린트 학습지·체크표</span><span>5종</span></a></li>
         </ul>
       </div>
 
@@ -623,6 +624,7 @@ def render_2026_article_html(t: dict, idx: int, all_topics: list) -> str:
     </div>
     <div>&copy; 2026 KIDS-FIT Growth &amp; Brain Development Studio (kidsfit.co.kr). All rights reserved.</div>
   </footer>
+  <script src="/src/js/korean-digital-asset-monetization.js" defer></script>
   <script src="/src/js/qna-human-rl-curator.js" defer></script>
 </body>
 </html>
@@ -680,6 +682,7 @@ def render_2026_hub_html(all_topics: list) -> str:
         <a href="/">홈·성장진단기</a>
         <a href="/qna/index.html?cat=growth">신체성장·영양 클리닉 ({growth_count})</a>
         <a href="/qna/index.html?cat=learning">두뇌발달·학습 클리닉 ({learning_count})</a>
+        <a href="/qna/free-worksheets.html">무료 활동지</a>
         <a href="/about.html">연구소 소개</a>
         <a href="/contact.html">문의하기</a>
       </nav>
@@ -714,7 +717,7 @@ def render_2026_hub_html(all_topics: list) -> str:
         <h2 style="font-size:0.96rem;font-weight:900;margin:0 0 0.65rem;">🏛️ 연구소 신뢰 및 정책 안내</h2>
         <ul style="list-style:none;padding:0;margin:0;font-size:0.86rem;line-height:2.0;">
           <li><a href="/about.html" style="color:#1D4ED8;text-decoration:none;font-weight:700;">• 연구소 소개 및 편집 윤리 강령</a></li>
-          <li><a href="/privacy.html" style="color:#334155;text-decoration:none;font-weight:700;">• 개인정보처리방침 (쿠키·광고 고지)</a></li>
+          <li><a href="/privacy.html" style="color:#334155;text-decoration:none;font-weight:700;">• 개인정보처리방침</a></li>
           <li><a href="/terms.html" style="color:#334155;text-decoration:none;font-weight:700;">• 서비스 이용약관</a></li>
           <li><a href="/contact.html" style="color:#334155;text-decoration:none;font-weight:700;">• 학부모 문의 및 오류 제보 센터</a></li>
         </ul>
@@ -750,6 +753,8 @@ def render_2026_hub_html(all_topics: list) -> str:
       }}
     }})();
   </script>
+  <script src="/src/js/korean-digital-asset-monetization.js" defer></script>
+  <script src="/src/js/qna-human-rl-curator.js" defer></script>
 </body>
 </html>
 """
@@ -789,7 +794,7 @@ def clean_programmatic_pages_for_adsense():
         if "qna-human-rl-curator.js" not in html and "</body>" in html:
             html = html.replace(
                 "</body>",
-                '  <div id="kf-human-curation-slot" data-category="growth"></div>\n  <script src="/src/js/qna-human-rl-curator.js" defer></script>\n</body>',
+                '  <div id="kf-human-curation-slot" data-category="growth"></div>\n  <script src="/src/js/korean-digital-asset-monetization.js" defer></script>\n  <script src="/src/js/qna-human-rl-curator.js" defer></script>\n</body>',
                 1,
             )
         p.write_text(html, encoding="utf-8")
@@ -854,7 +859,8 @@ def run_2026_benchmark_upgrade():
     cleaned_seq = clean_programmatic_pages_for_adsense()
     sitemap_count = build_clean_2026_sitemap(TOPICS)
 
-    subprocess.run(["node", str(ROOT / "scripts" / "build.js")], cwd=str(ROOT), check=True)
+    if datetime.now() >= datetime(2026, 11, 1):
+        subprocess.run(["node", str(ROOT / "scripts" / "build.js")], cwd=str(ROOT), check=True)
     avg_chars = int(sum(char_counts) / max(1, len(char_counts)))
     print(
         f"✅ [2026 AdSense Approval Benchmark Upgrade] 25 Unique Case-Study Articles (avg {avg_chars} chars), "

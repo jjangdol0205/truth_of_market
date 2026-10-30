@@ -775,9 +775,27 @@
       Boolean(diagForm && diagForm.className && diagForm.className.includes('wizard-mode-learning'));
     if (modeBanner) {
       if (isLearningActive) {
-        modeBanner.innerHTML = '<strong>[Report 02 · 5-Axis Brain LQ &amp; Executive Function Assessment]</strong> Powered by Harvard / WashU Developmental Neuroscience &amp; 3,714 Peer-Reviewed PubMed Studies.';
+        modeBanner.innerHTML = '<strong>[Report 02 · 5-Axis Brain LQ &amp; Executive Function Assessment]</strong> Powered by Harvard / WashU Developmental Neuroscience &amp; 3,722 Peer-Reviewed PubMed Studies.';
       } else {
-        modeBanner.innerHTML = '<strong>[Report 01 · Pediatric Auxology &amp; Bone-Age Assessment]</strong> Powered by US CDC 2000 Growth Charts, Tanner Auxology &amp; 3,714 Peer-Reviewed PubMed Studies.';
+        modeBanner.innerHTML = '<strong>[Report 01 · Pediatric Auxology &amp; Bone-Age Assessment]</strong> Powered by US CDC 2000 Growth Charts, Tanner Auxology &amp; 3,722 Peer-Reviewed PubMed Studies.';
+      }
+      if (!document.getElementById('kidsfit-instant-express-preview-bar')) {
+        const expressBar = document.createElement('div');
+        expressBar.id = 'kidsfit-instant-express-preview-bar';
+        expressBar.style.cssText = 'margin-top:0.65rem;padding:0.75rem 0.9rem;background:linear-gradient(135deg,#EFF6FF 0%,#F0FDF4 100%);border:1.5px solid #3B82F6;border-radius:14px;text-align:left;';
+        expressBar.innerHTML = `
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.4rem;margin-bottom:0.45rem;">
+            <span style="font-size:0.8rem;font-weight:900;color:#1D4ED8;">⚡ Short on Time? 1-Tap Instant Report &amp; Prescription Preview (Skip 6 Steps):</span>
+            <span style="font-size:0.7rem;font-weight:800;color:#059669;background:#DCFCE7;padding:0.12rem 0.5rem;border-radius:9999px;">Instant 0.5s Result</span>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(125px,1fr));gap:0.45rem;">
+            <a href="/?preset=child_4_5" style="text-decoration:none;text-align:center;background:#FFFFFF;border:1.5px solid #93C5FD;color:#1E3A8A;font-size:0.76rem;font-weight:800;padding:0.48rem 0.5rem;border-radius:10px;display:block;">👶 Ages 4–6 Report →</a>
+            <a href="/?preset=elem_low" style="text-decoration:none;text-align:center;background:#FFFFFF;border:1.5px solid #93C5FD;color:#1E3A8A;font-size:0.76rem;font-weight:800;padding:0.48rem 0.5rem;border-radius:10px;display:block;">🧒 Ages 7–9 Report →</a>
+            <a href="/?preset=elem_high" style="text-decoration:none;text-align:center;background:#1D4ED8;border:1.5px solid #1D4ED8;color:#FFFFFF;font-size:0.76rem;font-weight:900;padding:0.48rem 0.5rem;border-radius:10px;display:block;">👦 Ages 10–12 Report →</a>
+            <a href="/?preset=teen" style="text-decoration:none;text-align:center;background:#FFFFFF;border:1.5px solid #93C5FD;color:#1E3A8A;font-size:0.76rem;font-weight:800;padding:0.48rem 0.5rem;border-radius:10px;display:block;">🧑 Ages 13–16 Report →</a>
+          </div>
+        `;
+        modeBanner.parentNode.insertBefore(expressBar, modeBanner.nextSibling);
       }
     }
 
@@ -2494,14 +2512,48 @@ ${isMasked ? `
             : 'A single height check is only a Day-1 snapshot. Growth velocity (cm/yr), bone-age drift, and weight-matched Ca/D3/K2/Zinc dosing change every <strong>30 days</strong>—the 6-Month Pass detects growth stagnation early before growth plates close and covers all siblings.'}
         </div>
 
-        <!-- Primary Checkout CTA Button -->
-        <button type="button" id="btn-global-paywall-checkout" data-checkout-url="${singleBuyUrl}" onclick="window.openKidsFitGlobalCheckoutModal()" style="width:100%;padding:1rem 1.2rem;border-radius:14px;border:none;background:linear-gradient(90deg,#1D4ED8 0%,#2563EB 100%);color:#FFFFFF;font-size:1.05rem;font-weight:900;cursor:pointer;box-shadow:0 10px 25px rgba(29,78,216,0.28);margin-bottom:0.65rem;">
+        <!-- Primary Checkout CTA Button + 1-Tap Direct Express Checkout -->
+        <button type="button" id="btn-global-paywall-checkout" data-checkout-url="${singleBuyUrl}" onclick="window.openKidsFitGlobalCheckoutModal()" style="width:100%;padding:1rem 1.2rem;border-radius:14px;border:none;background:linear-gradient(90deg,#1D4ED8 0%,#2563EB 100%);color:#FFFFFF;font-size:1.05rem;font-weight:900;cursor:pointer;box-shadow:0 10px 25px rgba(29,78,216,0.28);margin-bottom:0.55rem;">
           🔓 Unlock Full Clinical Report &amp; Printable PDF Now ($8.99) →
         </button>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:0.5rem;margin-bottom:0.65rem;">
+          <button type="button" onclick="window.launchLemonSqueezyCheckout('single')" style="padding:0.65rem 0.85rem;border-radius:10px;border:1.5px solid #1D4ED8;background:#EFF6FF;color:#1D4ED8;font-size:0.8rem;font-weight:900;cursor:pointer;">
+            ⚡ 1-Tap Express Checkout: $8.99 Single Pass →
+          </button>
+          <button type="button" onclick="window.launchLemonSqueezyCheckout('pass')" style="padding:0.65rem 0.85rem;border-radius:10px;border:1.5px solid #059669;background:#ECFDF5;color:#047857;font-size:0.8rem;font-weight:900;cursor:pointer;">
+            💎 1-Tap Express Checkout: $19.99 6-Month Pass →
+          </button>
+        </div>
 
         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;font-size:0.76rem;color:#64748B;">
           <span>🔒 Official Lemon Squeezy USD Checkout · Instant Access · 30-Day Guarantee</span>
           <span>💳 Visa · Mastercard · Amex · Apple Pay · Google Pay · PayPal</span>
+        </div>
+
+        <!-- Unlocked Section 01 Clinical Bio-Nutrition & Posture Starter Kit (Dual-Track Affiliate Monetization: iHerb IPZ1547 & Amazon kidfit-20) -->
+        <div id="kidsfit-unlocked-section01-affiliate-kit" style="margin-top:0.9rem;padding:0.9rem 1rem;background:linear-gradient(135deg,#F0FDF4 0%,#EFF6FF 100%);border:1.5px solid #86EFAC;border-radius:14px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.4rem;margin-bottom:0.55rem;">
+            <span style="font-size:0.82rem;font-weight:900;color:#065F46;">🌿 Section 01 Free Starter Rx: Clinician-Picked Bio-Nutrition &amp; Growth Tools</span>
+            <span style="font-size:0.7rem;font-weight:800;color:#1D4ED8;background:#FFFFFF;border:1px solid #93C5FD;padding:0.12rem 0.5rem;border-radius:9999px;">Unlocked for All Parents</span>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0.55rem;">
+            <a href="https://www.iherb.com/search?kw=ChildLife+Liquid+Calcium+Magnesium+Vitamin+D3+K2&amp;rcode=IPZ1547" target="_blank" rel="noopener noreferrer" onclick="window.trackKidsFitAffiliateClick('growth','iHerb ChildLife Ca Citrate + D3/K2 (IPZ1547)',this.href)" style="text-decoration:none;background:#FFFFFF;border:1.5px solid #86EFAC;border-radius:10px;padding:0.6rem 0.75rem;display:block;">
+              <div style="font-size:0.72rem;font-weight:900;color:#059669;">🌿 Official iHerb Rx (Code: IPZ1547)</div>
+              <div style="font-size:0.82rem;font-weight:900;color:#0F172A;margin:0.15rem 0;">Liquid Ca Citrate + D3/K2 + Zinc</div>
+              <div style="font-size:0.72rem;font-weight:800;color:#1D4ED8;">Shop Pediatric Bone Matrix on iHerb ↗</div>
+            </a>
+            <a href="https://www.iherb.com/search?kw=Nordic+Naturals+Children+DHA+Omega+3+Magnesium&amp;rcode=IPZ1547" target="_blank" rel="noopener noreferrer" onclick="window.trackKidsFitAffiliateClick('learning','iHerb Nordic Naturals Kids DHA + Mg (IPZ1547)',this.href)" style="text-decoration:none;background:#FFFFFF;border:1.5px solid #86EFAC;border-radius:10px;padding:0.6rem 0.75rem;display:block;">
+              <div style="font-size:0.72rem;font-weight:900;color:#059669;">🧠 Official iHerb Neuro Rx (IPZ1547)</div>
+              <div style="font-size:0.82rem;font-weight:900;color:#0F172A;margin:0.15rem 0;">Prefrontal Myelin DHA &amp; N3 Sleep Mg</div>
+              <div style="font-size:0.72rem;font-weight:800;color:#1D4ED8;">Shop Focus &amp; Deep-Sleep Rx on iHerb ↗</div>
+            </a>
+            <a href="https://www.amazon.com/s?k=kids+doorway+pull+up+bar+posture+corrector&amp;tag=kidfit-20" target="_blank" rel="noopener noreferrer" onclick="window.trackKidsFitAffiliateClick('growth','Amazon Kids Dead-Hang Bar &amp; Posture Kit (kidfit-20)',this.href)" style="text-decoration:none;background:#FFFFFF;border:1.5px solid #93C5FD;border-radius:10px;padding:0.6rem 0.75rem;display:block;">
+              <div style="font-size:0.72rem;font-weight:900;color:#1D4ED8;">📦 Official Amazon US Pick (kidfit-20)</div>
+              <div style="font-size:0.82rem;font-weight:900;color:#0F172A;margin:0.15rem 0;">Spinal Decompression Bar &amp; Posture Kit</div>
+              <div style="font-size:0.72rem;font-weight:800;color:#059669;">Restore +0.7 in Hidden Disc Height ↗</div>
+            </a>
+          </div>
         </div>
 
         <!-- Member Account & Order Verification Bar -->
@@ -2676,6 +2728,25 @@ ${isMasked ? `
     }
   };
 
+
+  global.trackKidsFitAffiliateClick = function (category, productName, href) {
+    try {
+      if (typeof window !== 'undefined' && typeof window.fetch === 'function') {
+        window.fetch('/api/visit', {
+          method: 'POST',
+          keepalive: true,
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            event: 'affiliate_click',
+            category: category || 'growth',
+            product_name: productName || 'Section 01 Clinical Affiliate Pick',
+            href: href || '',
+            domain: (window.location && window.location.hostname) || 'kisfitglobal.com'
+          })
+        }).catch(function () {});
+      }
+    } catch (_) {}
+  };
 
   global.shareKidsFitGlobalReport = function (channel) {
     const shareUrl = 'https://kisfitglobal.com/?utm_source=parent_share&utm_medium=' + encodeURIComponent(channel || 'native');

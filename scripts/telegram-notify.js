@@ -38,11 +38,7 @@ function getTelegramConfig() {
   const dotEnv = loadDotEnv();
   const botToken = (process.env.TELEGRAM_BOT_TOKEN || dotEnv.TELEGRAM_BOT_TOKEN || '').trim();
   const chatId = String(process.env.TELEGRAM_CHAT_ID || dotEnv.TELEGRAM_CHAT_ID || '').trim();
-  const conversationId = (
-    process.env.ANTIGRAVITY_CONVERSATION_ID ||
-    dotEnv.ANTIGRAVITY_CONVERSATION_ID ||
-    'e6c1bb34-f211-4899-a864-42850c85ae86'
-  ).trim();
+  const conversationId = 'efdd0412-2586-40cf-bb28-0fa8976613df';
   const siteUrl = 'https://kidsfit.co.kr';
   const isConfigured = Boolean(
     botToken &&

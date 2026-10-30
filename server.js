@@ -137,7 +137,7 @@ function resolveSafeFile(baseDir, relPath) {
 // ============================================================================
 const VISITOR_ANALYTICS_PATH = path.join(ROOT_DIR, 'logs', 'visitor_analytics.json');
 const VISITOR_SNAPSHOT_PATH = path.join(ROOT_DIR, 'src', 'data', 'visitor-analytics-snapshot.json');
-const BOT_UA_REGEX = /(bot|crawler|spider|slurp|yeti|daumoa|mediapartners|facebookexternalhit|telegrambot|kakaotalk-scrap|curl|python|headless|monitor|uptime)/i;
+const BOT_UA_REGEX = /(bot|crawler|spider|slurp|yeti|daumoa|mediapartners|facebookexternalhit|telegrambot|kakaotalk-scrap|curl|python|headless|monitor|uptime|kidsfit|auditor|advisor|ia_archiver|archive\.org|wayback|indexnow|preview|fetcher|go-http-client|axios|okhttp|lighthouse|pagespeed|phantomjs)/i;
 const recentPageviewMap = new Map();
 
 function getKstDateString(offsetDays = 0) {
@@ -327,7 +327,11 @@ function recordVisitorPageview(req, customRef) {
     const todayStr = getKstDateString(0);
     const day = ensureDayBucket(todayStr);
 
-    if (BOT_UA_REGEX.test(ua)) {
+    const acceptHdr = String(req.headers['accept'] || '');
+    const langHdr = String(req.headers['accept-language'] || '');
+    const isLikelyAutomatedGet = req.method === 'GET' && (!langHdr || !acceptHdr.includes('text/html'));
+
+    if (BOT_UA_REGEX.test(ua) || isLikelyAutomatedGet) {
       day.bots = (day.bots || 0) + 1;
       visitorStats.total.bots = (visitorStats.total.bots || 0) + 1;
       saveVisitorStats();
@@ -753,13 +757,14 @@ const server = http.createServer((req, res) => {
               tannerPhase: String(incoming.tannerPhase || 'phase_2'),
               habits: Array.isArray(incoming.habits) ? incoming.habits.slice(0, 5) : ['late_sleep'],
               cognitiveAxes: Array.isArray(incoming.cognitiveAxes) ? incoming.cognitiveAxes.slice(0, 5) : ['science_nature'],
-              region: String(incoming.region || '서울 강남·서초·송파'),
+              region: String(incoming.region || 'United States — Northeast (NY · NJ · MA · PA)'),
               kdcaPercentile: Number(incoming.kdcaPercentile) || 50.0,
               zScore: Number(incoming.zScore) || 0.0,
               mph: Number(incoming.mph) || 173.5,
               unmanagedHeight: Number(incoming.unmanagedHeight) || 171.2,
               optimizedHeight: Number(incoming.optimizedHeight) || 180.5,
               potentialGainCm: Number(incoming.potentialGainCm) || 7.2,
+              isOwnerTest: Boolean(incoming.isOwnerTest),
               parentFreeNote: sanitizeText(incoming.parentFreeNote, 1000)
             };
 
@@ -785,7 +790,9 @@ const server = http.createServer((req, res) => {
               fs.writeFileSync(cohortDbPath, JSON.stringify(cohortDb, null, 2), 'utf8');
             } catch (_) {}
 
-            recordDiagnosisEvent(incoming.preferredReportMode || 'growth');
+            if (!incoming.isOwnerTest) {
+              recordDiagnosisEvent(incoming.preferredReportMode || 'growth');
+            }
 
             res.writeHead(200, {
               'Content-Type': 'application/json; charset=utf-8',
@@ -2027,7 +2034,7 @@ const server = http.createServer((req, res) => {
     if (pathname === '/' || pathname === '' || pathname === '/en' || pathname === '/en/' || pathname === '/us' || pathname === '/us/') {
       pathname = '/index.html';
     }
-    if (pathname === '/index.html' && req.method === 'GET') {
+    if ((pathname === '/index.html' || (pathname.startsWith('/qna/') && pathname.endsWith('.html'))) && req.method === 'GET') {
       recordVisitorPageview(req, parsedUrl.searchParams.get('utm_source') || '');
     }
 
@@ -2037,19 +2044,35 @@ const server = http.createServer((req, res) => {
       parsedUrl.searchParams.get('edition') !== 'ko' &&
       (reqHost.includes('kisfitglobal.com') || reqHost.includes('kidsfitglobal.com') || parsedUrl.searchParams.get('edition') === 'global' || parsedUrl.searchParams.get('paywall') === '1');
 
-    // Look up file in DIST_GLOBAL_DIR first when serving Global English edition (kisfitglobal.com), then DIST_DIR, then ROOT_DIR
-    let filePath =
-      (isGlobalHost && (resolveSafeFile(DIST_GLOBAL_DIR, relPath) || resolveSafeFile(DIST_GLOBAL_DIR, path.join(relPath, 'index.html')))) ||
-      resolveSafeFile(DIST_DIR, relPath) ||
-      resolveSafeFile(ROOT_DIR, relPath) ||
-      resolveSafeFile(DIST_DIR, path.join(relPath, 'index.html')) ||
-      resolveSafeFile(ROOT_DIR, path.join(relPath, 'index.html'));
+    // Look up file in DIST_GLOBAL_DIR first when serving Global English edition (kisfitglobal.com).
+    // Strictly prevent kisfitglobal.com from falling back to Korean DIST_DIR for HTML/text/script routes.
+    const reqExt = path.extname(pathname).toLowerCase();
+    const isSharedMediaAsset = ['.mp4', '.png', '.jpg', '.jpeg', '.webp', '.svg', '.ico', '.woff2', '.woff', '.ttf'].includes(reqExt);
+    const hasGlobalDist = fs.existsSync(path.join(DIST_GLOBAL_DIR, 'index.html'));
+    let filePath = null;
+    if (isGlobalHost && hasGlobalDist) {
+      filePath =
+        resolveSafeFile(DIST_GLOBAL_DIR, relPath) ||
+        resolveSafeFile(DIST_GLOBAL_DIR, path.join(relPath, 'index.html'));
+      if (!filePath && pathname.startsWith('/qna/')) {
+        filePath = resolveSafeFile(DIST_GLOBAL_DIR, 'qna/topic-01.html') || resolveSafeFile(DIST_GLOBAL_DIR, 'qna/index.html');
+      }
+      if (!filePath && isSharedMediaAsset) {
+        filePath = resolveSafeFile(DIST_DIR, relPath) || resolveSafeFile(ROOT_DIR, relPath);
+      }
+    } else {
+      filePath =
+        resolveSafeFile(DIST_DIR, relPath) ||
+        resolveSafeFile(ROOT_DIR, relPath) ||
+        resolveSafeFile(DIST_DIR, path.join(relPath, 'index.html')) ||
+        resolveSafeFile(ROOT_DIR, path.join(relPath, 'index.html'));
+    }
 
-    // Fallback to index.html for legacy HTML routes so old MoneyFit links land cleanly on KidsFit
+    // Fallback to index.html for legacy HTML routes
     const ext = path.extname(filePath || pathname).toLowerCase();
     if (!filePath && (ext === '' || ext === '.html')) {
       filePath =
-        (isGlobalHost && resolveSafeFile(DIST_GLOBAL_DIR, 'index.html')) ||
+        (isGlobalHost && hasGlobalDist && resolveSafeFile(DIST_GLOBAL_DIR, 'index.html')) ||
         resolveSafeFile(DIST_DIR, 'index.html') ||
         resolveSafeFile(ROOT_DIR, 'index.html');
     }

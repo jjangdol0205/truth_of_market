@@ -32,7 +32,7 @@ from playwright.sync_api import sync_playwright
 
 sys.stdout.reconfigure(encoding="utf-8")
 
-ROOT = Path(r"d:\키즈핏")
+ROOT = Path(__file__).resolve().parent.parent
 PACK_DIR = ROOT / "samples" / "7_naver_blog_daily_pack" / "폴더별_글모음"
 GEN_IMG_DIR = ROOT / "samples" / "9_naver_brand_assets" / "daily_auto_cards"
 CURSOR_PATH = ROOT / "logs" / "blog_cafe_3x_daily_cursor.json"
@@ -574,13 +574,33 @@ def append_triangular_backlink_mesh(body: str, seq_num: int, source_type: str = 
         "우리 아이 생년월일·키·몸무게만 넣으면 질병관리청(KDCA) 백분위·3단 예상키 & 두뇌 5대 역량(LQ) 처방전이 10초 만에 무료 출력됩니다 👇\n"
         "https://kidsfit.co.kr\n\n"
     )
-    if clean_body.startswith("⚡ [바쁜 부모님을 위한"):
-        return clean_body
-    return top_inflow_box + clean_body
+    return humanize_de_ai_body(clean_body)
+
+
+from naver_blog_own_comment_reply_and_deai import humanize_de_ai_body, humanize_de_ai_title
+
+UPGRADED_BANK_JSON = ROOT / "src" / "data" / "overnight-upgraded-blog-cafe-bank.json"
+
+
+def _load_overnight_upgraded_bank() -> list:
+    if UPGRADED_BANK_JSON.exists():
+        try:
+            return json.loads(UPGRADED_BANK_JSON.read_text(encoding="utf-8"))
+        except Exception:
+            return []
+    return []
 
 
 def get_next_blog_content(blog_seq: int):
     """Returns (title, body, tags, img_path, category_name) for the given blog sequence number."""
+    upgraded = _load_overnight_upgraded_bank()
+    if upgraded:
+        u = upgraded[(blog_seq - 1) % len(upgraded)]
+        title = humanize_de_ai_title(u["blog_title"], blog_seq)
+        img_out = GEN_IMG_DIR / f"blog_auto_seq_{blog_seq:03d}.png"
+        generate_summary_card_png(img_out, f"키즈핏 학술 리포트 #{blog_seq}", u["blog_title"], u["points"], accent_rgb=(79, 70, 229))
+        return title, append_triangular_backlink_mesh(u["blog_body"], blog_seq, "blog"), u["tags"], str(img_out), u.get("blog_category", "우리 아이 키성장·성조숙증")
+
     folders = sorted([d for d in PACK_DIR.iterdir() if d.is_dir()]) if PACK_DIR.exists() else []
     if 1 <= blog_seq <= len(folders):
         folder = folders[blog_seq - 1]
@@ -597,6 +617,15 @@ def get_next_blog_content(blog_seq: int):
 
 def get_next_cafe_content(cafe_seq: int):
     """Returns (board, title, body, tags, img_path) for the given cafe sequence number."""
+    upgraded = _load_overnight_upgraded_bank()
+    if upgraded:
+        u = upgraded[(cafe_seq - 1) % len(upgraded)]
+        title = humanize_de_ai_title(u["cafe_title"], cafe_seq)
+        img_out = GEN_IMG_DIR / f"cafe_auto_seq_{cafe_seq:03d}.png"
+        generate_summary_card_png(img_out, f"키즈핏 카페 양육가이드 #{cafe_seq}", u["cafe_title"], u["points"], accent_rgb=(16, 185, 129))
+        _, exact_board_name = infer_cafe_board(u.get("cafe_board", "키성장·성조숙증 고민상담"), title, u["cafe_body"])
+        return exact_board_name, title, append_triangular_backlink_mesh(u["cafe_body"], cafe_seq, "cafe"), u["tags"], str(img_out)
+
     item = CAFE_TOPICS_BANK[(cafe_seq - 1) % len(CAFE_TOPICS_BANK)]
     cycle_num = (cafe_seq - 1) // len(CAFE_TOPICS_BANK) + 1
     title = item["title"] if cycle_num == 1 else f"{item['title']} (심화 #{cafe_seq})"

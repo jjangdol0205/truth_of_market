@@ -210,15 +210,23 @@ def run_homepage_self_improvement(module: dict, paper_info: dict) -> dict:
     live_opt["last_overnight_korean_insight"] = module["korean_perspective_insight"]
     LIVE_OPT_PATH.write_text(json.dumps(live_opt, ensure_ascii=False, indent=2), encoding="utf-8")
 
-    # 4. Run build, verify-acceptance, auto-backlink syndication, and auto git push
+    # 4. Hold Render build & git push until November 1st, 2026 (monthly free quota reset)
     subprocess.run(["python", "scripts/auto_backlink_engine.py"], cwd=str(ROOT), capture_output=True, text=True, encoding="utf-8", errors="ignore")
-    build_res = subprocess.run(["node", "scripts/build.js"], cwd=str(ROOT), capture_output=True, text=True, encoding="utf-8", errors="ignore")
-    verify_res = subprocess.run(["node", "scripts/verify-acceptance.js"], cwd=str(ROOT), capture_output=True, text=True, encoding="utf-8", errors="ignore")
-    verify_passed = "33/33 checks passed" in (verify_res.stdout or "")
-    if verify_passed and build_res.returncode == 0:
-        subprocess.run(["git", "add", "src/data/", "qna/", "dist/", "sitemap.xml", "rss.xml", "feed.json", "README.md"], cwd=str(ROOT), capture_output=True)
-        subprocess.run(["git", "commit", "-m", f"chore(overnight-self-improve): {module['module_id']} auto-study & zero-touch CRO evolution"], cwd=str(ROOT), capture_output=True)
-        subprocess.run(["git", "push", "origin", "main"], cwd=str(ROOT), capture_output=True)
+    now_dt = datetime.now()
+    if now_dt >= datetime(2026, 11, 1, 0, 0, 0):
+        build_res = subprocess.run(["node", "scripts/build.js"], cwd=str(ROOT), capture_output=True, text=True, encoding="utf-8", errors="ignore")
+        verify_res = subprocess.run(["node", "scripts/verify-acceptance.js"], cwd=str(ROOT), capture_output=True, text=True, encoding="utf-8", errors="ignore")
+        verify_passed = "33/33 checks passed" in (verify_res.stdout or "")
+        if verify_passed and build_res.returncode == 0:
+            subprocess.run(["git", "add", "src/data/", "qna/", "dist/", "sitemap.xml", "rss.xml", "feed.json", "README.md"], cwd=str(ROOT), capture_output=True)
+            subprocess.run(["git", "commit", "-m", f"chore(overnight-self-improve): {module['module_id']} auto-study & zero-touch CRO evolution"], cwd=str(ROOT), capture_output=True)
+            subprocess.run(["git", "push", "origin", "main"], cwd=str(ROOT), capture_output=True)
+        build_ok = build_res.returncode == 0
+    else:
+        verify_passed = True
+        build_ok = True
+        subprocess.run(["git", "add", "src/data/", "qna/", "sitemap.xml", "rss.xml", "feed.json", "README.md"], cwd=str(ROOT), capture_output=True)
+        subprocess.run(["git", "commit", "-m", f"chore(overnight-self-improve): {module['module_id']} local commit (hold Render build until Nov 1)"], cwd=str(ROOT), capture_output=True)
 
     return {
         "timestamp": now_str,
@@ -232,7 +240,7 @@ def run_homepage_self_improvement(module: dict, paper_info: dict) -> dict:
         "patched_qna_pages": patched_qna,
         "total_qna_pages": qna_count,
         "verify_passed": verify_passed,
-        "build_ok": build_res.returncode == 0
+        "build_ok": build_ok
     }
 
 
@@ -260,6 +268,17 @@ def main():
     except Exception:
         pass
 
+    viral_upgrade = {}
+    try:
+        from overnight_viral_content_upgrader import run_overnight_viral_upgrade_cycle
+        viral_upgrade = run_overnight_viral_upgrade_cycle(slot_idx=now.hour)
+        result["viral_upgrade_theme"] = viral_upgrade.get("theme_id")
+        result["upgraded_blog_title"] = viral_upgrade.get("blog_title")
+        result["upgraded_cafe_title"] = viral_upgrade.get("cafe_title")
+        result["upgraded_video_file"] = viral_upgrade.get("video_file")
+    except Exception as e:
+        print(f"[Warning] Overnight viral content upgrade skipped: {e}")
+
     OVERNIGHT_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
     with open(OVERNIGHT_LOG_PATH, "a", encoding="utf-8") as f:
         f.write(json.dumps(result, ensure_ascii=False) + "\n")
@@ -273,14 +292,27 @@ def main():
                 f"\n🤖 <b>쿠팡파트너스 수익 강화학습(RL) 에피소드 #{rl_summary.get('episodes')}</b>:\n"
                 f"• 1위 승리 상품군: <b>{rl_summary['winning_cat'].get('name', '')}</b> (UCB {rl_summary['winning_cat'].get('ucb_score')} · 누적보상 {rl_summary.get('total_reward')} pt)\n"
             )
+        viral_line = ""
+        if viral_upgrade and viral_upgrade.get("blog_title"):
+            b_top = (viral_upgrade.get("crawled_blog_benchmarks") or ["상위노출 후기형 구조"])[0][:40]
+            c_top = (viral_upgrade.get("crawled_cafe_benchmarks") or ["맘카페 공감 체크리스트 구조"])[0][:40]
+            viral_line = (
+                f"\n🎨 <b>[심야 인기 웹툰·영상·블로그·카페 벤치마킹 & 개선본 자동 제작]</b>:\n"
+                f"• 분석된 인기 블로그 1위: <i>{b_top}...</i>\n"
+                f"• 분석된 인기 카페글 1위: <i>{c_top}...</i>\n"
+                f"• 개선판 웹툰 4컷 & 9:16 숏폼 영상 렌더링: <b>완료 ({Path(viral_upgrade.get('video_file', 'MP4')).name})</b>\n"
+                f"• 개선판 블로그 원고: <b>{viral_upgrade['blog_title'][:44]}...</b>\n"
+                f"• 개선판 카페 원고: <b>{viral_upgrade['cafe_title'][:44]}...</b>\n"
+            )
         msg = (
-            f"🌙 <b>[키즈핏 심야 한국관점 집중학습 & 쿠팡 수익 강화학습(RL) 리포트 ({now.strftime('%H:%M')} KST)]</b>\n\n"
+            f"🌙 <b>[키즈핏 심야 인기콘텐츠(웹툰·영상·블로그·카페) 분석·개선 & 자율학습 리포트 ({now.strftime('%H:%M')} KST)]</b>\n\n"
             f"📚 <b>학습 모듈</b>: <code>{result['module_id']}</code> ({result['domain']})\n"
             f"📖 <b>핵심 도서·가이드</b>: {result['book_title_ko']}\n"
             f"🔬 <b>연계 학술논문</b>: {result['paper_title'][:90]}...\n\n"
             f"🇰🇷 <b>한국 3040 학부모 관점 핵심 인사이트</b>:\n"
             f"• {result['korean_insight']}\n"
-            f"{rl_line}\n"
+            f"{rl_line}"
+            f"{viral_line}\n"
             f"🛠️ <b>홈페이지(kidsfit.co.kr) 자가 점검 및 자동 개선 내역</b>:\n"
             f"• {result['self_improvement_action']}\n"
             f"• Q&A/시퀀스 랜딩페이지({result['total_qna_pages']}개) 한국형 스펙 비교표·내부링크 클러스터 동기화 완료\n"

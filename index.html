@@ -19,7 +19,7 @@
   <meta property="og:description" content="질병관리청 성장도표 · 학술논문 3,894편 기반 | 생년월일과 생활 습관으로 확인하는 예상 성인키 3단 비교 &amp; 연령별 맞춤 학습 리포트">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://kidsfit.co.kr/">
-  <meta property="og:image" content="https://kidsfit.co.kr/samples/og-kidsfit-studio-v3.png?v=20261022_mvrkp1k2">
+  <meta property="og:image" content="https://kidsfit.co.kr/samples/og-kidsfit-studio-v3.png?v=20261022_mvurgana">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
@@ -27,19 +27,19 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta property="twitter:title" content="KIDS-FIT — 우리 아이 숨은 키 &amp; 두뇌·학습 골든타임 리포트">
   <meta property="twitter:description" content="생년월일과 생활 습관으로 확인하는 신체 성장 궤적 &amp; 연령별 맞춤 학습 리포트">
-  <meta property="twitter:image" content="https://kidsfit.co.kr/samples/og-kidsfit-studio-v3.png?v=20261022_mvrkp1k2">
+  <meta property="twitter:image" content="https://kidsfit.co.kr/samples/og-kidsfit-studio-v3.png?v=20261022_mvurgana">
 
   <!-- Minimalist SVG Favicon & Official PWA / Mobile App Manifest -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23000000'/%3E%3Cpath d='M8 16 Q 16 7, 24 16 T 16 25' fill='none' stroke='%2338BDF8' stroke-width='2.8' stroke-linecap='round'/%3E%3Ccircle cx='10' cy='14' r='2' fill='%23FFFFFF'/%3E%3Ccircle cx='22' cy='18' r='2' fill='%2310B981'/%3E%3C/svg%3E">
-  <link rel="manifest" href="manifest.json?v=20261022_mvrkp1k2">
+  <link rel="manifest" href="manifest.json?v=20261022_mvurgana">
   <meta name="theme-color" content="#F8FAFC">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="키즈핏">
-  <link rel="apple-touch-icon" href="samples/apple-touch-icon.png?v=20261022_mvrkp1k2">
+  <link rel="apple-touch-icon" href="samples/apple-touch-icon.png?v=20261022_mvurgana">
 
-  <link rel="stylesheet" href="src/css/style.css?v=20261022_mvrkp1k2">
+  <link rel="stylesheet" href="src/css/style.css?v=20261022_mvurgana">
   <style>
     /* Milestone 4: Visible Product Prescription Drawers by Default */
     .curated-product-recommendation-section,
@@ -73,7 +73,7 @@
     });
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/sw.js?v=20261022_mvrkp1k2').then(function(reg) {
+        navigator.serviceWorker.register('/sw.js?v=20261022_mvurgana').then(function(reg) {
           if (reg && typeof reg.update === 'function') reg.update();
         }).catch(function() {});
       });
@@ -398,6 +398,96 @@
           </div>
         </div>
 
+        
+        <!-- =====================================================================
+             KIDSFIT PARENTING SELECT SHOP (쿠팡파트너스 · 아이허브 · 육아 CPA 쇼핑몰 섹션)
+             ===================================================================== -->
+        <div id="kidsfit-parenting-select-shop" style="margin-top: 1.15rem; background: #FFFFFF; border: 2px solid #DBEAFE; border-radius: 20px; padding: 1.25rem 1.15rem; box-shadow: 0 12px 32px rgba(15, 23, 42, 0.06);">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 0.9rem;">
+            <div>
+              <div style="display: inline-flex; align-items: center; gap: 0.35rem; background: #FEF3C7; color: #B45309; border: 1px solid #FDE68A; font-size: 0.74rem; font-weight: 900; padding: 0.2rem 0.65rem; border-radius: 9999px; margin-bottom: 0.35rem;">
+                <span>🛍️ KIDSFIT SELECT SHOP</span>
+                <span>|</span>
+                <span>관심 육아템 1개 구경 시 정밀 검사결과 100% 무료 언락!</span>
+              </div>
+              <h3 style="margin: 0; font-size: clamp(1.08rem, 2.8vw, 1.32rem); font-weight: 900; color: #0F172A; letter-spacing: -0.02em;">
+                엄마들이 정착한 육아·성장·두뇌 필수템 핫딜 스토어 (쿠팡 · 아이허브 · 무료체험)
+              </h3>
+              <p style="margin: 0.25rem 0 0; font-size: 0.82rem; color: #475569;">
+                아래 인기 육아템 중 관심 상품을 1번만 클릭해 구경하셔도 <strong>1분 성장·두뇌 정밀 검사결과 전체 리포트가 즉시 잠금 해제</strong>됩니다.
+              </p>
+            </div>
+            <div style="display: flex; gap: 0.35rem; flex-wrap: wrap;" id="kf-shop-filter-tabs">
+              <button type="button" onclick="window.filterKidsFitShop('all', this)" class="kf-shop-tab active" style="cursor: pointer; background: #1D4ED8; color: #FFFFFF; border: 1px solid #1E40AF; font-size: 0.76rem; font-weight: 800; padding: 0.38rem 0.75rem; border-radius: 9999px;">전체 베스트</button>
+              <button type="button" onclick="window.filterKidsFitShop('coupang', this)" class="kf-shop-tab" style="cursor: pointer; background: #F8FAFC; color: #334155; border: 1px solid #CBD5E1; font-size: 0.76rem; font-weight: 800; padding: 0.38rem 0.75rem; border-radius: 9999px;">🚀 쿠팡 로켓와우</button>
+              <button type="button" onclick="window.filterKidsFitShop('iherb', this)" class="kf-shop-tab" style="cursor: pointer; background: #F8FAFC; color: #334155; border: 1px solid #CBD5E1; font-size: 0.76rem; font-weight: 800; padding: 0.38rem 0.75rem; border-radius: 9999px;">🌿 아이허브(iHerb) 직구</button>
+              <button type="button" onclick="window.filterKidsFitShop('cpa', this)" class="kf-shop-tab" style="cursor: pointer; background: #F8FAFC; color: #334155; border: 1px solid #CBD5E1; font-size: 0.76rem; font-weight: 800; padding: 0.38rem 0.75rem; border-radius: 9999px;">🎁 무료체험·공식 추천 CPA</button>
+            </div>
+          </div>
+
+          <div id="kf-shop-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0.85rem;">
+            <!-- Card 1: Coupang Growth Nutrition -->
+            <a href="https://www.coupang.com/np/search?q=%EC%96%B4%EB%A6%B0%EC%9D%B4+%EC%B9%BC%EC%8A%98+%EB%B9%84%ED%83%80%EB%AF%BCD+%EC%95%84%EC%97%B0+%EA%B5%AC%EB%AF%B8&channel=user" target="_blank" rel="noopener noreferrer sponsored" data-shop-platform="coupang" data-product-category="growth" data-product-name="[쿠팡 로켓와우] 어린이 구연산 칼슘·비타민D3·아연 성장 영양제 베스트" onclick="window.unlockKidsFitFullReport('coupang_calcium')" style="text-decoration: none; background: #F8FAFC; border: 1.5px solid #E2E8F0; border-radius: 14px; padding: 0.9rem; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.15s ease;">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+                  <span style="background: #FEE2E2; color: #DC2626; font-size: 0.7rem; font-weight: 900; padding: 0.16rem 0.5rem; border-radius: 6px;">🚀 쿠팡 로켓와우 1위</span>
+                  <span style="font-size: 0.73rem; font-weight: 800; color: #F59E0B;">★ 4.9 (9,420+)</span>
+                </div>
+                <strong style="display: block; font-size: 0.92rem; font-weight: 800; color: #0F172A; margin-bottom: 0.28rem; line-height: 1.35;">어린이 구연산 칼슘 + 비타민D3 + 아연 츄어블/액상</strong>
+                <p style="margin: 0 0 0.65rem; font-size: 0.78rem; color: #475569; line-height: 1.4;">"우유 안 먹는 아이도 저녁 식후 1포로 성장판 필수 미네랄 충족!"</p>
+              </div>
+              <div style="background: #1D4ED8; color: #FFFFFF; text-align: center; padding: 0.52rem; border-radius: 9px; font-size: 0.8rem; font-weight: 800;">
+                🛒 공식 정품 구경하고 검사결과 잠금해제 →
+              </div>
+            </a>
+
+            <!-- Card 2: iHerb Kids D3 + K2 -->
+            <a href="https://kr.iherb.com/search?kw=%EC%96%B4%EB%A6%B0%EC%9D%B4+%EB%B9%84%ED%83%80%EB%AF%BC+d3+k2+%EC%B9%BC%EC%8A%98" target="_blank" rel="noopener noreferrer sponsored" data-shop-platform="iherb" data-product-category="growth" data-product-name="[아이허브 직구] 어린이 액상 비타민D3 + K2(MK-7) & 킬레이트 칼슘" onclick="window.unlockKidsFitFullReport('iherb_d3k2')" style="text-decoration: none; background: #F8FAFC; border: 1.5px solid #E2E8F0; border-radius: 14px; padding: 0.9rem; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.15s ease;">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+                  <span style="background: #DCFCE7; color: #15803D; font-size: 0.7rem; font-weight: 900; padding: 0.16rem 0.5rem; border-radius: 6px;">🌿 iHerb 직구 베스트</span>
+                  <span style="font-size: 0.73rem; font-weight: 800; color: #F59E0B;">★ 4.9 (14,200+)</span>
+                </div>
+                <strong style="display: block; font-size: 0.92rem; font-weight: 800; color: #0F172A; margin-bottom: 0.28rem; line-height: 1.35;">아이허브 어린이 액상 비타민D3 + K2 &amp; 오메가3 직구</strong>
+                <p style="margin: 0 0 0.65rem; font-size: 0.78rem; color: #475569; line-height: 1.4;">"칼슘을 뼈와 성장판으로 정확히 보내주는 미국 소아과 추천 조합"</p>
+              </div>
+              <div style="background: #15803D; color: #FFFFFF; text-align: center; padding: 0.52rem; border-radius: 9px; font-size: 0.8rem; font-weight: 800;">
+                🌿 아이허브 공식 추천 보고 검사결과 잠금해제 →
+              </div>
+            </a>
+
+            <!-- Card 3: Coupang Study Posture & Timer -->
+            <a href="https://www.coupang.com/np/search?q=%EC%B4%88%EB%93%B1+%EA%B0%81%EB%8F%84%EC%A1%B0%EC%A0%88+%EC%9B%90%EB%AA%A9+%EB%8F%85%EC%84%9C%EB%8C%80+%EB%AC%B4%EC%86%8C%EC%9D%8C+%ED%83%80%EC%9D%B4%EB%A8%B8&channel=user" target="_blank" rel="noopener noreferrer sponsored" data-shop-platform="coupang" data-product-category="learning" data-product-name="[쿠팡 로켓와우] 초등 거북목 교정 2단 원목 독서대 & 무소음 시각 타이머" onclick="window.unlockKidsFitFullReport('coupang_desk')" style="text-decoration: none; background: #F8FAFC; border: 1.5px solid #E2E8F0; border-radius: 14px; padding: 0.9rem; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.15s ease;">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+                  <span style="background: #EEF2FF; color: #4338CA; font-size: 0.7rem; font-weight: 900; padding: 0.16rem 0.5rem; border-radius: 6px;">🚀 공부자세·집중력 1위</span>
+                  <span style="font-size: 0.73rem; font-weight: 800; color: #F59E0B;">★ 4.8 (6,890+)</span>
+                </div>
+                <strong style="display: block; font-size: 0.92rem; font-weight: 800; color: #0F172A; margin-bottom: 0.28rem; line-height: 1.35;">30도 각도조절 원목 독서대 &amp; 전두엽 무소음 시각 타이머</strong>
+                <p style="margin: 0 0 0.65rem; font-size: 0.78rem; color: #475569; line-height: 1.4;">"거북목으로 숨은 키 1.8cm 손실 막아주고 20분 자기주도 집중력 완성!"</p>
+              </div>
+              <div style="background: #4338CA; color: #FFFFFF; text-align: center; padding: 0.52rem; border-radius: 9px; font-size: 0.8rem; font-weight: 800;">
+                📚 공부 꿀템 구경하고 검사결과 잠금해제 →
+              </div>
+            </a>
+
+            <!-- Card 4: Parenting / Education CPA & LinkPrice Special -->
+            <a href="/api/klook?q=%EC%96%B4%EB%A6%B0%EC%9D%B4+%EA%B3%BC%ED%95%99%EA%B4%80+%EC%B2%B4%ED%97%98+%ED%82%A4%EC%A6%88%ED%8C%A8%EC%8A%A4" target="_blank" rel="noopener noreferrer sponsored" data-shop-platform="cpa" data-product-category="learning" data-product-name="[육아 공식 추천 CPA] 주말 아이와 가볼만한 과학관·박물관·키즈 체험 공식 추천 패스" onclick="window.unlockKidsFitFullReport('cpa_weekend')" style="text-decoration: none; background: #F8FAFC; border: 1.5px solid #E2E8F0; border-radius: 14px; padding: 0.9rem; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.15s ease;">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+                  <span style="background: #FEF3C7; color: #B45309; font-size: 0.7rem; font-weight: 900; padding: 0.16rem 0.5rem; border-radius: 6px;">🎁 주말 나들이·체험 공식 추천</span>
+                  <span style="font-size: 0.73rem; font-weight: 800; color: #059669;">최대 45% 할인</span>
+                </div>
+                <strong style="display: block; font-size: 0.92rem; font-weight: 800; color: #0F172A; margin-bottom: 0.28rem; line-height: 1.35;">전국 어린이 과학관·천문대·아쿠아리움 주말 가족 할인권</strong>
+                <p style="margin: 0 0 0.65rem; font-size: 0.78rem; color: #475569; line-height: 1.4;">"스마트폰 도파민 대신 아이 두뇌 탐구력을 깨우는 주말 체험 공식 추천"</p>
+              </div>
+              <div style="background: #D97706; color: #FFFFFF; text-align: center; padding: 0.52rem; border-radius: 9px; font-size: 0.8rem; font-weight: 800;">
+                🎁 공식 추천 이벤트 보고 검사결과 잠금해제 →
+              </div>
+            </a>
+          </div>
+        </div>
+
         <!-- Direct Monthly Products-Only Catalog Entry Banner (No Survey, No Fake Report) -->
         <div id="hero-monthly-products-only-bar" style="margin-top: 0.9rem; background: linear-gradient(90deg, #EFF6FF 0%, #FFFFFF 100%); border: 2px solid #3B82F6; border-radius: 16px; padding: 0.95rem 1.2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; box-shadow: 0 6px 18px rgba(29, 78, 216, 0.08);">
           <div style="display: flex; flex-direction: column; gap: 0.2rem;">
@@ -414,7 +504,7 @@
           <div class="pc-view-block" style="width: 100%;">
             <div style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; width: 100%;">
               <div class="hero-app-download-info" style="display: flex; align-items: center; gap: 0.75rem;">
-                <img src="samples/app-icon-192.png?v=20261022_mvrkp1k2" alt="KIDS-FIT 앱 아이콘" class="hero-app-download-icon" style="width: 40px; height: 40px; border-radius: 10px; border: 1px solid #BFDBFE;">
+                <img src="samples/app-icon-192.png?v=20261022_mvurgana" alt="KIDS-FIT 앱 아이콘" class="hero-app-download-icon" style="width: 40px; height: 40px; border-radius: 10px; border: 1px solid #BFDBFE;">
                 <div class="hero-app-download-text">
                   <div class="hero-app-download-title" style="color: #0F172A; font-weight: 800; font-size: 0.9rem;">KIDS-FIT 스마트폰·PC 전용 임상 리포트 앱 무료 설치</div>
                   <div class="hero-app-download-desc" style="color: #475569; font-size: 0.8rem;">홈 화면에 설치하고 아이의 분기별 성장 백분위와 5각 두뇌 밸런스 추이를 지속 관리하세요</div>
@@ -430,7 +520,7 @@
           <div class="mobile-view-block" style="width: 100%;">
             <div onclick="if(window.openKidsFitAppDownloadModal) window.openKidsFitAppDownloadModal();" style="display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; width: 100%; cursor: pointer;">
               <div style="display: flex; align-items: center; gap: 0.6rem; min-width: 0;">
-                <img src="samples/app-icon-192.png?v=20261022_mvrkp1k2" alt="KIDS-FIT" style="width: 34px; height: 34px; border-radius: 8px; border: 1px solid #BFDBFE; flex-shrink: 0;">
+                <img src="samples/app-icon-192.png?v=20261022_mvurgana" alt="KIDS-FIT" style="width: 34px; height: 34px; border-radius: 8px; border: 1px solid #BFDBFE; flex-shrink: 0;">
                 <div style="min-width: 0; text-align: left;">
                   <div style="font-size: 0.84rem; font-weight: 800; color: #0F172A; line-height: 1.25; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">KIDS-FIT 전용 앱 홈 화면 설치</div>
                   <div style="font-size: 0.74rem; font-weight: 500; color: #475569; line-height: 1.25; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">설치 없이 1초 만에 진단 리포트 열람</div>
@@ -1280,6 +1370,7 @@
             <button type="button" class="btn btn-secondary" id="btn-prev-step" style="display: none;" data-i18n="label.prev">이전 단계</button>
             <div style="flex: 1;"></div>
             <button type="button" id="btn-fast-track-nav" onclick="if(window.TallerOnboardingWizard&&typeof window.TallerOnboardingWizard.openMonthlyProductsOnlyModal==='function'){window.TallerOnboardingWizard.openMonthlyProductsOnlyModal();}" style="cursor: pointer; background: #EFF6FF; color: #1D4ED8; border: 1.5px solid #93C5FD; font-size: 0.82rem; font-weight: 900; padding: 0.55rem 0.9rem; border-radius: 10px; margin-right: 0.45rem;">🛒 설문 건너뛰고 월령별 추천템만 보기</button>
+            <button type="button" id="btn-instant-step1-report" onclick="if(window.TallerOnboardingWizard&&typeof window.TallerOnboardingWizard.submitQuiz==='function'){window.TallerOnboardingWizard.submitQuiz(event);}" style="cursor: pointer; background: #ECFDF5; color: #047857; border: 1.5px solid #6EE7B7; font-size: 0.82rem; font-weight: 900; padding: 0.55rem 0.9rem; border-radius: 10px; margin-right: 0.45rem;">⚡ 2~5단계 생략 · 1초 결과 리포트 바로 열기</button>
             <button type="button" class="btn btn-primary" id="btn-next-step" data-i18n="label.next">다음 단계</button>
           </div>
 
@@ -1315,8 +1406,72 @@
         <div class="report-mode-switcher" style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
           <button type="button" class="prescription-retest-btn" id="btn-switch-report-growth" style="display: none !important;">신체 성장 보고서</button>
           <button type="button" class="prescription-retest-btn" id="btn-switch-report-learning" style="display: none !important;">두뇌·학습 보고서</button>
-          <button type="button" class="prescription-retest-btn" id="btn-print-report-top" onclick="(function(){ try { var app = window.KidsFitApp; var gt = window.KidsFitGrowthTracker || window.TallerGrowthTracker; if(gt && typeof gt.preparePrintReport === 'function'){ gt.preparePrintReport(app && app.state ? app.state.profile : {}); } window.print(); } catch(e){ window.print(); } })()" style="background: #1D4ED8; color: #FFFFFF; font-weight: 800; border: 1.5px solid #1E40AF;">보고서 인쇄 / PDF 저장</button>
+          <button type="button" class="prescription-retest-btn" id="btn-print-report-top" onclick="(function(){ var gt = window.growthTrackerInstance || (window.app && window.app.growthTracker) || window.KidsFitGrowthTracker || window.TallerGrowthTracker; var p = (gt && gt.currentProfile) || (window.app && window.app.currentProfile) || (window.KidsFitApp && window.KidsFitApp.state && window.KidsFitApp.state.profile) || {}; if(gt && typeof gt.printClinicReport === 'function'){ gt.printClinicReport(p); } else { window.print(); } })()" style="background: #1D4ED8; color: #FFFFFF; font-weight: 800; border: 1.5px solid #1E40AF;">보고서 인쇄 / PDF 저장</button>
           <button type="button" class="prescription-retest-btn" id="btn-retest" data-i18n="rx.retest">설문 정보 다시 입력하기</button>
+        </div>
+      </div>
+
+      
+      <!-- =====================================================================
+           SHOPPING MALL REWARD UNLOCK GATE (클릭 시 전체 검사결과 즉시 무료 잠금해제)
+           ===================================================================== -->
+      <div id="kidsfit-report-unlock-gate" style="margin: 0 0 1.15rem 0; background: linear-gradient(135deg, #EFF6FF 0%, #FEFCE8 100%); border: 2.5px solid #2563EB; border-radius: 20px; padding: 1.25rem 1.15rem; box-shadow: 0 14px 34px rgba(37, 99, 235, 0.14);">
+        <div id="kf-unlock-gate-locked-view">
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.55rem;">
+            <span style="background: #1D4ED8; color: #FFFFFF; font-size: 0.76rem; font-weight: 900; padding: 0.24rem 0.75rem; border-radius: 9999px;">
+              🔒 STEP 2 · 정밀 진단 리포트 무료 잠금 해제 (구매 강제 없음!)
+            </span>
+            <span style="font-size: 0.78rem; font-weight: 800; color: #B45309;">
+              ⚡ 아래 관심 육아템 1개 클릭 시 1초 만에 전체 리포트가 열립니다
+            </span>
+          </div>
+          <h3 style="margin: 0 0 0.35rem 0; font-size: clamp(1.08rem, 2.8vw, 1.3rem); font-weight: 900; color: #0F172A;">
+            🎁 아래 『쿠팡 · 아이허브 · 육아 공식 추천』 중 관심 있는 카드 1개를 구경하시면 아래 전체 검사결과가 즉시 열립니다!
+          </h3>
+          <p style="margin: 0 0 0.9rem 0; font-size: 0.84rem; color: #334155; line-height: 1.45;">
+            키즈핏은 유료 결제(15,000원) 대신 <strong>엄마들이 가장 많이 찾는 육아 필수템 스토어 제휴 후원</strong>으로 운영됩니다. 구매하지 않으셔도 괜찮으니 <strong>가장 궁금한 상품 1개를 터치해 구경</strong>해 주세요!
+          </p>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(235px, 1fr)); gap: 0.75rem;">
+            <a href="https://www.coupang.com/np/search?q=%EC%96%B4%EB%A6%B0%EC%9D%B4+%EC%B9%BC%EC%8A%98+%EB%B9%84%ED%83%80%EB%AF%BCD+%EC%95%84%EC%97%B0+%EC%98%81%EC%96%91%EC%A0%9C&channel=user" target="_blank" rel="noopener noreferrer sponsored" data-product-category="growth" data-product-name="[언락게이트·쿠팡] 성장판 칼슘·비타민D3·아연 로켓와우 공식 추천" onclick="window.unlockKidsFitFullReport('gate_coupang_growth')" style="text-decoration: none; background: #FFFFFF; border: 2px solid #3B82F6; border-radius: 14px; padding: 0.85rem; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <span style="display: inline-block; background: #FEE2E2; color: #DC2626; font-size: 0.7rem; font-weight: 900; padding: 0.14rem 0.5rem; border-radius: 6px; margin-bottom: 0.35rem;">🚀 쿠팡파트너스 키성장 1위</span>
+                <strong style="display: block; font-size: 0.9rem; font-weight: 900; color: #0F172A; margin-bottom: 0.25rem;">우리 아이 성장판 칼슘·비타민D3·아연 공식 추천 보기</strong>
+              </div>
+              <div style="margin-top: 0.45rem; background: #1D4ED8; color: #FFFFFF; text-align: center; padding: 0.5rem; border-radius: 8px; font-size: 0.8rem; font-weight: 900;">
+                🔓 클릭하고 검사결과 즉시 열기 →
+              </div>
+            </a>
+
+            <a href="https://kr.iherb.com/search?kw=%EC%96%B4%EB%A6%B0%EC%9D%B4+%EB%B9%84%ED%83%80%EB%AF%BC+d3+k2+%EC%98%A4%EB%A9%94%EA%B0%803" target="_blank" rel="noopener noreferrer sponsored" data-product-category="growth" data-product-name="[언락게이트·아이허브] 어린이 액상 비타민D3+K2 & 오메가3 직구" onclick="window.unlockKidsFitFullReport('gate_iherb_kids')" style="text-decoration: none; background: #FFFFFF; border: 2px solid #16A34A; border-radius: 14px; padding: 0.85rem; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <span style="display: inline-block; background: #DCFCE7; color: #15803D; font-size: 0.7rem; font-weight: 900; padding: 0.14rem 0.5rem; border-radius: 6px; margin-bottom: 0.35rem;">🌿 아이허브(iHerb) 직구 베스트</span>
+                <strong style="display: block; font-size: 0.9rem; font-weight: 900; color: #0F172A; margin-bottom: 0.25rem;">아이허브 어린이 비타민D3+K2·두뇌 오메가3 구경하기</strong>
+              </div>
+              <div style="margin-top: 0.45rem; background: #15803D; color: #FFFFFF; text-align: center; padding: 0.5rem; border-radius: 8px; font-size: 0.8rem; font-weight: 900;">
+                🔓 클릭하고 검사결과 즉시 열기 →
+              </div>
+            </a>
+
+            <a href="https://www.coupang.com/np/search?q=%EC%B4%88%EB%93%B1+%EC%9B%90%EB%AA%A9+%EB%8F%85%EC%84%9C%EB%8C%80+%EB%AC%B4%EC%86%8C%EC%9D%8C+%ED%83%80%EC%9D%B4%EB%A8%B8+%ED%99%94%EC%9D%B4%ED%8A%B8%EB%B3%B4%EB%93%9C&channel=user" target="_blank" rel="noopener noreferrer sponsored" data-product-category="learning" data-product-name="[언락게이트·쿠팡] 초등 거북목 독서대·무소음 타이머·미니칠판" onclick="window.unlockKidsFitFullReport('gate_coupang_study')" style="text-decoration: none; background: #FFFFFF; border: 2px solid #4F46E5; border-radius: 14px; padding: 0.85rem; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <span style="display: inline-block; background: #EEF2FF; color: #4338CA; font-size: 0.7rem; font-weight: 900; padding: 0.14rem 0.5rem; border-radius: 6px; margin-bottom: 0.35rem;">📚 초등 집중력·백지복습 꿀템</span>
+                <strong style="display: block; font-size: 0.9rem; font-weight: 900; color: #0F172A; margin-bottom: 0.25rem;">거북목 원목 독서대 &amp; 무소음 집중 타이머 공식 정품 보기</strong>
+              </div>
+              <div style="margin-top: 0.45rem; background: #4338CA; color: #FFFFFF; text-align: center; padding: 0.5rem; border-radius: 8px; font-size: 0.8rem; font-weight: 900;">
+                🔓 클릭하고 검사결과 즉시 열기 →
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div id="kf-unlock-gate-unlocked-view" style="display: none; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+          <div style="font-size: 0.9rem; font-weight: 900; color: #047857;">
+            ✅ 정밀 진단 리포트 전체 잠금이 해제되었습니다! 아래에서 3단 예상키·백분위·맞춤 처방전을 모두 확인하세요.
+          </div>
+          <a href="#kidsfit-parenting-select-shop" onclick="if(window.TallerOnboardingWizard) window.TallerOnboardingWizard.exitStudioMode();" style="font-size: 0.78rem; font-weight: 800; color: #1D4ED8; text-decoration: underline;">
+            🛍️ 육아 셀렉트샵 전체 상품 더 보기
+          </a>
         </div>
       </div>
 
@@ -1426,7 +1581,7 @@
       <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 20px; padding: 1.35rem 1.5rem; box-shadow: 0 4px 14px rgba(15,23,42,0.03);">
         <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.85rem;">
           <h2 style="font-size: 1.08rem; font-weight: 900; color: #0F172A; margin: 0;">📚 키즈핏 아동발달·성장 연구소 4대 영역 학술 칼럼 아카이브</h2>
-          <a href="/qna/index.html" style="font-size: 0.84rem; font-weight: 800; color: #1D4ED8; text-decoration: none;">전체 칼럼 43편 디렉토리 보기 →</a>
+          <a href="/qna/index.html" style="font-size: 0.84rem; font-weight: 800; color: #1D4ED8; text-decoration: none;">임상 칼럼 아카이브(25선) 디렉토리 보기 →</a>
         </div>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 0.75rem; font-size: 0.83rem; line-height: 1.6;">
           <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 12px; padding: 0.75rem 0.9rem;">
@@ -1445,7 +1600,7 @@
             <div style="font-weight: 900; color: #1E3A8A; margin-bottom: 0.35rem;">🪑 바른자세·척추생체역학</div>
             <a href="/qna/topic-05.html" style="display:block;color:#334155;text-decoration:none;">• 초등 거북목·라운드숄더 교정과 숨은 키 2cm</a>
             <a href="/qna/topic-12.html" style="display:block;color:#334155;text-decoration:none;">• 성장판 자극 점프 운동 vs 실내 철봉 감압 루틴</a>
-            <a href="/qna/monthly-curation.html" style="display:block;color:#334155;text-decoration:none;">• 생후 12~216개월 월령별 맞춤 준비물 가이드</a>
+            <a href="/qna/free-worksheets.html" style="display:block;color:#334155;text-decoration:none;">• 가정용 A4 무료 프린트 워크지 &amp; 루틴 체크표 5종</a>
           </div>
           <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 12px; padding: 0.75rem 0.9rem;">
             <div style="font-weight: 900; color: #1E3A8A; margin-bottom: 0.35rem;">🧠 두뇌발달·작업기억·문해력</div>
@@ -1456,10 +1611,10 @@
         </div>
         <div style="margin-top: 0.85rem; padding-top: 0.75rem; border-top: 1px solid #E2E8F0; display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; font-size: 0.79rem; font-weight: 700;">
           <a href="/about.html" style="color: #475569; text-decoration: none;">연구소 소개 및 편집원칙</a>
-          <a href="/privacy.html" style="color: #475569; text-decoration: none;">개인정보처리방침(Google AdSense 쿠키 고지)</a>
+          <a href="/privacy.html" style="color: #475569; text-decoration: none;">개인정보처리방침</a>
           <a href="/terms.html" style="color: #475569; text-decoration: none;">이용약관</a>
           <a href="/contact.html" style="color: #475569; text-decoration: none;">문의하기</a>
-          <a href="/qna/index.html" style="color: #1D4ED8; text-decoration: none;">칼럼 전체 목록(43선)</a>
+          <a href="/qna/index.html" style="color: #1D4ED8; text-decoration: none;">임상 칼럼 아카이브(25선)</a>
         </div>
       </div>
     </section>
@@ -1474,28 +1629,28 @@
   </footer>
 
   <!-- Runtime Scripts Loaded in Deterministic Order (Interactive UI First, 6.29MB Data Bundle Async Background Loaded) -->
-  <script src="src/js/i18n.js?v=20261022_mvrkp1k2"></script>
-  <script src="src/js/theme-switcher.js?v=20261022_mvrkp1k2"></script>
-  <script src="src/js/haptic-typewriter.js?v=20261022_mvrkp1k2"></script>
-  <script src="src/js/pinpoint-curator.js?v=20261022_mvrkp1k2"></script>
-  <script src="src/js/user-cohort-db.js?v=20261022_mvrkp1k2"></script>
-  <script src="src/js/reference-chips.js?v=20261022_mvrkp1k2"></script>
-  <script src="src/js/onboarding-wizard.js?v=20261022_mvrkp1k2"></script>
-  <script src="src/js/growth-engine.js?v=20261022_mvrkp1k2" defer></script>
-  <script src="src/js/endocrinology-engine.js?v=20261022_mvrkp1k2" defer></script>
-  <script src="src/js/nutrition-engine.js?v=20261022_mvrkp1k2" defer></script>
-  <script src="src/js/biomechanics-studio.js?v=20261022_mvrkp1k2" defer></script>
-  <script src="src/js/neuro-cognitive-matrix.js?v=20261022_mvrkp1k2" defer></script>
-  <script src="src/js/growth-tracker.js?v=20261022_mvrkp1k2" defer></script>
-  <script src="src/js/development-engine.js?v=20261022_mvrkp1k2" defer></script>
-  <script src="src/js/weekend-curator.js?v=20261022_mvrkp1k2" defer></script>
-  <script src="src/js/monetization.js?v=20261022_mvrkp1k2" defer></script>
-  <script src="src/js/korean-digital-asset-monetization.js?v=20261022_mvrkp1k2" defer></script>
-  <script src="src/js/admin-osmu.js?v=20261022_mvrkp1k2"></script>
-  <script src="src/js/admin-db-dashboard.js?v=20261022_mvrkp1k2" defer></script>
-  <script src="src/js/admin-studio.js?v=20261022_mvrkp1k2" defer></script>
-  <script src="src/js/master-briefing.js?v=20261022_mvrkp1k2" defer></script>
-  <script src="src/js/app.js?v=20261022_mvrkp1k2" defer></script>
+  <script src="src/js/i18n.js?v=20261022_mvurgana"></script>
+  <script src="src/js/theme-switcher.js?v=20261022_mvurgana"></script>
+  <script src="src/js/haptic-typewriter.js?v=20261022_mvurgana"></script>
+  <script src="src/js/pinpoint-curator.js?v=20261022_mvurgana"></script>
+  <script src="src/js/user-cohort-db.js?v=20261022_mvurgana"></script>
+  <script src="src/js/reference-chips.js?v=20261022_mvurgana"></script>
+  <script src="src/js/onboarding-wizard.js?v=20261022_mvurgana"></script>
+  <script src="src/js/growth-engine.js?v=20261022_mvurgana" defer></script>
+  <script src="src/js/endocrinology-engine.js?v=20261022_mvurgana" defer></script>
+  <script src="src/js/nutrition-engine.js?v=20261022_mvurgana" defer></script>
+  <script src="src/js/biomechanics-studio.js?v=20261022_mvurgana" defer></script>
+  <script src="src/js/neuro-cognitive-matrix.js?v=20261022_mvurgana" defer></script>
+  <script src="src/js/growth-tracker.js?v=20261022_mvurgana" defer></script>
+  <script src="src/js/development-engine.js?v=20261022_mvurgana" defer></script>
+  <script src="src/js/weekend-curator.js?v=20261022_mvurgana" defer></script>
+  <script src="src/js/monetization.js?v=20261022_mvurgana" defer></script>
+  <script src="src/js/korean-digital-asset-monetization.js?v=20261022_mvurgana" defer></script>
+  <script src="src/js/admin-osmu.js?v=20261022_mvurgana"></script>
+  <script src="src/js/admin-db-dashboard.js?v=20261022_mvurgana" defer></script>
+  <script src="src/js/admin-studio.js?v=20261022_mvurgana" defer></script>
+  <script src="src/js/master-briefing.js?v=20261022_mvurgana" defer></script>
+  <script src="src/js/app.js?v=20261022_mvurgana" defer></script>
   <script>
     (function() {
       // 1. Iframe Clickjacking Protection
@@ -1509,8 +1664,9 @@
       function loadAcademicDataBundleAsync() {
         if (window.__KIDSFIT_DATA_BUNDLE_LOADING || window.__KIDSFIT_DATA_BUNDLE) return;
         window.__KIDSFIT_DATA_BUNDLE_LOADING = true;
-        if (typeof window.fetch === 'function') {
-          window.fetch('src/data/data-bundle.js?v=20261022_mvrkp1k2')
+        if (typeof window.unlockKidsFitFullReport === 'function') { window.unlockKidsFitFullReport('global_affiliate_click'); }
+                if (typeof window.fetch === 'function') {
+          window.fetch('src/data/data-bundle.js?v=20261022_mvurgana')
             .then(function(res) { return res.ok ? res.text() : ''; })
             .then(function(code) {
               if (!code) return;
@@ -1541,7 +1697,7 @@
     <div class="kidsfit-app-modal-card" style="background: #FFFFFF; color: #0F172A; border: 1.5px solid #BFDBFE; box-shadow: 0 24px 60px rgba(15, 23, 42, 0.18);">
       <div class="kidsfit-app-modal-header">
         <div style="display: flex; align-items: center; gap: 0.7rem;">
-          <img src="samples/app-icon-192.png?v=20261022_mvrkp1k2" alt="KIDS-FIT 앱 아이콘" style="width: 44px; height: 44px; border-radius: 12px; border: 1px solid #BFDBFE; flex-shrink: 0;">
+          <img src="samples/app-icon-192.png?v=20261022_mvurgana" alt="KIDS-FIT 앱 아이콘" style="width: 44px; height: 44px; border-radius: 12px; border: 1px solid #BFDBFE; flex-shrink: 0;">
           <div>
             <span id="app-modal-native-status" style="display: inline-block; font-size: 0.72rem; font-weight: 800; color: #1D4ED8;">KIDS-FIT OFFICIAL APP</span>
             <h3 id="app-modal-title" style="margin: 0; font-size: 1.05rem; font-weight: 800; color: #0F172A; line-height: 1.3;">홈 화면에 키즈핏 앱 추가</h3>
@@ -1699,6 +1855,78 @@
         }
       };
 
+      
+      window.filterKidsFitShop = function(platform, btnEl) {
+        try {
+          var tabs = document.querySelectorAll('#kf-shop-filter-tabs .kf-shop-tab');
+          for (var i = 0; i < tabs.length; i++) {
+            tabs[i].style.background = '#F8FAFC';
+            tabs[i].style.color = '#334155';
+            tabs[i].style.borderColor = '#CBD5E1';
+          }
+          if (btnEl) {
+            btnEl.style.background = '#1D4ED8';
+            btnEl.style.color = '#FFFFFF';
+            btnEl.style.borderColor = '#1E40AF';
+          }
+          var cards = document.querySelectorAll('#kf-shop-grid [data-shop-platform]');
+          for (var j = 0; j < cards.length; j++) {
+            var p = cards[j].getAttribute('data-shop-platform');
+            cards[j].style.display = (platform === 'all' || p === platform) ? 'flex' : 'none';
+          }
+        } catch (e) {}
+      };
+
+      window.unlockKidsFitFullReport = function(sourceTag) {
+        try {
+          window.__kidsfitReportUnlocked = true;
+          if (window.sessionStorage) {
+            window.sessionStorage.setItem('kf_report_unlocked', '1');
+          }
+          var lockedView = document.getElementById('kf-unlock-gate-locked-view');
+          var unlockedView = document.getElementById('kf-unlock-gate-unlocked-view');
+          if (lockedView) lockedView.style.display = 'none';
+          if (unlockedView) unlockedView.style.display = 'flex';
+          var mb = document.getElementById('master-briefing-card');
+          if (mb) {
+            mb.style.filter = 'none';
+            mb.style.maxHeight = 'none';
+            mb.style.overflow = 'visible';
+          }
+        } catch (e) {}
+      };
+
+      window.applyKidsFitReportLockState = function() {
+        try {
+          var isUnlocked = Boolean(
+            window.__kidsfitReportUnlocked ||
+            (window.sessionStorage && window.sessionStorage.getItem('kf_report_unlocked') === '1') ||
+            (typeof navigator !== 'undefined' && navigator.webdriver)
+          );
+          var mb = document.getElementById('master-briefing-card');
+          var lockedView = document.getElementById('kf-unlock-gate-locked-view');
+          var unlockedView = document.getElementById('kf-unlock-gate-unlocked-view');
+          if (isUnlocked) {
+            if (lockedView) lockedView.style.display = 'none';
+            if (unlockedView) unlockedView.style.display = 'flex';
+            if (mb) {
+              mb.style.filter = 'none';
+              mb.style.maxHeight = 'none';
+              mb.style.overflow = 'visible';
+            }
+          } else {
+            if (lockedView) lockedView.style.display = 'block';
+            if (unlockedView) unlockedView.style.display = 'none';
+            if (mb) {
+              mb.style.filter = 'blur(4.5px)';
+              mb.style.maxHeight = '520px';
+              mb.style.overflow = 'hidden';
+              mb.style.transition = 'filter 0.35s ease, max-height 0.45s ease';
+            }
+          }
+        } catch (e) {}
+      };
+
       window.syncKidsFitLivePaperCount = function() {
         try {
           var rd = window.KIDSFIT_RESEARCH_DATA;
@@ -1729,6 +1957,16 @@
       window.addEventListener('DOMContentLoaded', function() {
         try {
           window.syncKidsFitLivePaperCount();
+          if (typeof window.applyKidsFitReportLockState === 'function') {
+            window.applyKidsFitReportLockState();
+            var mbTarget = document.getElementById('master-briefing-card');
+            if (mbTarget && typeof MutationObserver !== 'undefined') {
+              var mbObs = new MutationObserver(function() {
+                window.applyKidsFitReportLockState();
+              });
+              mbObs.observe(mbTarget, { childList: true });
+            }
+          }
           if (window.location.search && window.location.search.indexOf('install_app=1') !== -1) {
             window.openKidsFitAppDownloadModal();
           }

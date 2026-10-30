@@ -903,7 +903,7 @@ def publish_blog_post_cdp(
 
         try:
             print(f"📝 네이버 블로그 글쓰기 접속 중: {TARGET_WRITE_URL}", flush=True)
-            page.goto(TARGET_WRITE_URL, wait_until="domcontentloaded", timeout=35000)
+            page.goto(TARGET_WRITE_URL, wait_until="commit", timeout=35000)
             time.sleep(5.5)
 
             # Resolve SmartEditor ONE frame
@@ -1026,7 +1026,7 @@ def publish_blog_post_cdp(
 
             if not log_no:
                 try:
-                    page.goto("https://blog.naver.com/PostList.naver?blogId=expertise333&categoryNo=0&from=postList", wait_until="domcontentloaded", timeout=15000)
+                    page.goto("https://blog.naver.com/PostList.naver?blogId=expertise333&categoryNo=0&from=postList", wait_until="commit", timeout=15000)
                     time.sleep(2.5)
                     log_no = page.evaluate("""() => {
                         const a = Array.from(document.querySelectorAll('a')).find(el => el.href && el.href.includes('logNo='));
@@ -1058,7 +1058,7 @@ def publish_blog_post_cdp(
             if log_no:
                 try:
                     verify_page = context.new_page()
-                    verify_page.goto(post_url, wait_until="domcontentloaded", timeout=20000)
+                    verify_page.goto(post_url, wait_until="commit", timeout=20000)
                     time.sleep(3.0)
                     dom_audit = verify_page.evaluate("""() => {
                         const frame = document.querySelector("#mainFrame") || document;

@@ -27,6 +27,22 @@ const PROJECT_ROOT = path.resolve(__dirname, '..');
 const STATE_PATH = path.join(PROJECT_ROOT, 'logs', 'telegram_bridge_state.json');
 
 const DEFAULT_CONVERSATION_ID = 'efdd0412-2586-40cf-bb28-0fa8976613df';
+const PID_FILE_PATH = path.join(PROJECT_ROOT, 'logs', 'telegram_bridge.pid');
+
+function ensureSingleBridgeInstance() {
+  try {
+    if (fs.existsSync(PID_FILE_PATH)) {
+      const oldPid = Number(fs.readFileSync(PID_FILE_PATH, 'utf8').trim());
+      if (oldPid && oldPid !== process.pid) {
+        try {
+          process.kill(oldPid, 'SIGTERM');
+        } catch (e) {}
+      }
+    }
+    fs.mkdirSync(path.dirname(PID_FILE_PATH), { recursive: true });
+    fs.writeFileSync(PID_FILE_PATH, String(process.pid), 'utf8');
+  } catch (e) {}
+}
 
 function resolveCliConversationId() {
   const args = process.argv.slice(2);
@@ -41,7 +57,7 @@ function resolveCliConversationId() {
   return '';
 }
 const AGENTAPI_BAT = 'C:\\Users\\jjang\\.gemini\\antigravity\\bin\\agentapi.bat';
-const LANGUAGE_SERVER_EXE = 'C:\\Users\\jjang\\AppData\\Local\\Programs\\Antigravity\\resources\\app\\extensions\\antigravity\\bin\\language_server_windows_x64.exe';
+const LANGUAGE_SERVER_EXE = 'C:\\Users\\jjang\\AppData\\Local\\Programs\\Antigravity\\resources\\bin\\language_server.exe';
 
 const CONTROL_PANEL_KEYBOARD = {
   inline_keyboard: [
@@ -181,7 +197,7 @@ async function sendChatMessage(botToken, chatId, htmlText, includeKeyboard = fal
 
 function dispatchToAntigravity(userCommandText, conversationId) {
   const cfg = telegramNotifier.getTelegramConfig();
-  const targetConvId = conversationId || resolveCliConversationId() || cfg.conversationId || DEFAULT_CONVERSATION_ID;
+  const targetConvId = DEFAULT_CONVERSATION_ID;
   const fullPrompt = [
     `[TELEGRAM REMOTE COMMAND]`,
     `사용자가 스마트폰 텔레그램에서 다음 원격 명령을 보냈습니다:`,
@@ -500,7 +516,7 @@ async function startPollingDaemon() {
   if (cliConvId) {
     telegramNotifier.saveTelegramConfig({ antigravityConversationId: cliConvId });
   }
-  const activeConvId = cliConvId || cfg.conversationId || DEFAULT_CONVERSATION_ID;
+  const activeConvId = DEFAULT_CONVERSATION_ID;
 
   console.log('===============================================================');
   console.log('   🌱 KIDSFIT TELEGRAM <-> ANTIGRAVITY 24/7 BRIDGE DAEMON     ');

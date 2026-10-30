@@ -256,6 +256,9 @@ def publish_next_sequence_article(seq: int, paper_cnt: int) -> dict:
       <a href="{SITE_URL}/?utm_source=qna_bottom&amp;utm_medium=organic_search&amp;utm_campaign=kidsfit_diagnosis&amp;utm_content={slug}" style="display:block;text-align:center;background:#1D4ED8;color:#FFFFFF;text-decoration:none;font-weight:900;font-size:0.98rem;padding:0.9rem 1.2rem;border-radius:14px;box-shadow:0 6px 18px rgba(29,78,216,0.22);">👉 내 아이 1분 무료 정밀 진단 리포트 발급받기 →</a>
     </div>
   </div>
+  <div id="kf-human-curation-slot" data-category="growth"></div>
+  <script src="/src/js/korean-digital-asset-monetization.js" defer></script>
+  <script src="/src/js/qna-human-rl-curator.js" defer></script>
 </body>
 </html>
 """
@@ -462,6 +465,9 @@ def render_omni_channel_web_hub(latest_post: dict, seq_history: list):
       <a href="{SITE_URL}/?utm_source=qna_bottom&amp;utm_medium=organic_search&amp;utm_campaign=kidsfit_diagnosis&amp;utm_content=omni-channel-kit" style="display:block;text-align:center;background:#1D4ED8;color:#FFFFFF;text-decoration:none;font-weight:900;font-size:0.98rem;padding:0.9rem 1.2rem;border-radius:14px;box-shadow:0 6px 18px rgba(29,78,216,0.22);">👉 내 아이 1분 무료 정밀 진단 리포트 발급받기 →</a>
     </div>
   </div>
+  <div id="kf-human-curation-slot" data-category="growth"></div>
+  <script src="/src/js/korean-digital-asset-monetization.js" defer></script>
+  <script src="/src/js/qna-human-rl-curator.js" defer></script>
 </body>
 </html>
 """
@@ -469,6 +475,11 @@ def render_omni_channel_web_hub(latest_post: dict, seq_history: list):
 
 
 def update_sitemap_with_seq_articles(seq_history: list):
+    from adsense_2026_benchmark_engine import build_clean_2026_sitemap
+    build_clean_2026_sitemap(QNA_TOPICS)
+    return [f"{SITE_URL}/", f"{SITE_URL}/qna/index.html"] + [f"{SITE_URL}/qna/{t['slug']}.html" for t in QNA_TOPICS]
+
+def _legacy_update_sitemap_with_seq_articles(seq_history: list):
     today = datetime.now().strftime("%Y-%m-%d")
     urls = (
         [f"{SITE_URL}/", f"{SITE_URL}/qna/index.html", f"{SITE_URL}/qna/omni-channel-kit.html"]

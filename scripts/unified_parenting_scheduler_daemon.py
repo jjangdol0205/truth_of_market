@@ -872,14 +872,14 @@ def execute_immediate_cycle(dry_run: bool = False) -> Dict[str, Any]:
             audit_post_publish,
             auto_fix_blog
         )
-        from scripts.publish_enhanced_naver_blog import DEEP_PARENTING_TOPICS, generate_all_blog_images
+        from scripts.publish_enhanced_naver_blog import DEEP_PARENTING_TOPICS, BLOG_DIAGNOSTIC_BRIDGE_TEXT, generate_all_blog_images
 
         # Stage 1 QA Verification with verified authoritative topic (>1,500 chars, 3 PNG images)
         topic = DEEP_PARENTING_TOPICS[0]
         generated_images = generate_all_blog_images(topic, seq_num=1)
         blog_payload = {
             "title": topic["title"],
-            "body": topic["body"],
+            "body": topic["body"] + BLOG_DIAGNOSTIC_BRIDGE_TEXT,
             "images": generated_images,
             "category": topic["category"],
             "post_type": "blog"
@@ -895,7 +895,7 @@ def execute_immediate_cycle(dry_run: bool = False) -> Dict[str, Any]:
         if s2_candidate and "PostWriteForm" not in s2_candidate and ("expertise333" in s2_candidate or "PostView" in s2_candidate):
             s2_target_url = s2_candidate
         else:
-            s2_target_url = "https://blog.naver.com/expertise333/224450570303"
+            s2_target_url = "https://blog.naver.com/expertise333/224456996987"
         s2_valid, s2_log = audit_post_publish(
             url=s2_target_url,
             post_type="blog",
@@ -910,7 +910,7 @@ def execute_immediate_cycle(dry_run: bool = False) -> Dict[str, Any]:
         if not s2_valid:
             print("  🛠️ Stage 2 Defect detected, triggering auto_fix_blog...")
             m_log = re.search(r"(\d{10,})", s2_target_url)
-            log_no = m_log.group(1) if m_log else "224450570303"
+            log_no = m_log.group(1) if m_log else "224456996987"
             fix_ok = auto_fix_blog(logNo=log_no, fixed_dict=s1_clean, dry_run=dry_run)
             qa_step_res["auto_fix_executed"] = fix_ok
             if fix_ok:

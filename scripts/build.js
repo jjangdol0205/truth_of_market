@@ -163,8 +163,105 @@ function build() {
     }
   } catch (_) {}
 
+  generateStaticApiEndpoints();
+
   const duration = Date.now() - startTime;
   console.log(`Build complete in ${duration}ms! Target: ${DIST_DIR}`);
+}
+
+function generateStaticApiEndpoints() {
+  try {
+    const apiDir = path.join(DIST_DIR, 'api');
+    fs.mkdirSync(apiDir, { recursive: true });
+    const globalDir = path.join(ROOT_DIR, 'dist-global');
+    const globalApiDir = path.join(globalDir, 'api');
+    if (fs.existsSync(globalDir)) {
+      fs.mkdirSync(globalApiDir, { recursive: true });
+    }
+
+    const kbPath = path.join(ROOT_DIR, 'src', 'data', 'research-knowledge-base.json');
+    let totalPapers = 3894;
+    if (fs.existsSync(kbPath)) {
+      try {
+        const kb = JSON.parse(fs.readFileSync(kbPath, 'utf8'));
+        totalPapers = Number((kb.metadata && kb.metadata.total_papers) || (Array.isArray(kb.papers) ? kb.papers.length : 3894));
+      } catch (_) {}
+    }
+
+    const healthPayload = JSON.stringify({
+      status: 'ok',
+      service: 'KidsFit Growth Studio (Render Static Site)',
+      mode: 'static',
+      domain: 'kidsfit.co.kr',
+      total_papers: totalPapers,
+      timestamp: new Date().toISOString()
+    }, null, 2);
+    fs.writeFileSync(path.join(apiDir, 'health'), healthPayload, 'utf8');
+    fs.writeFileSync(path.join(apiDir, 'health.json'), healthPayload, 'utf8');
+
+    let statsData = {
+      status: 'ok',
+      mode: 'static',
+      analytics: {
+        today: { date: new Date(Date.now() + 9 * 3600 * 1000).toISOString().slice(0, 10), uv: 0, pv: 0, diagnoses: { total: 0, growth: 0, learning: 0 }, affiliateClicks: 0, recentClicks: [] },
+        total: { uv: 0, pv: 0, diagnoses: { total: 0, growth: 0, learning: 0 }, affiliateClicks: 0 }
+      }
+    };
+    const snapPath = path.join(ROOT_DIR, 'src', 'data', 'visitor-analytics-snapshot.json');
+    const logStatsPath = path.join(ROOT_DIR, 'logs', 'visitor_analytics.json');
+    const sourceStatsPath = fs.existsSync(logStatsPath) ? logStatsPath : (fs.existsSync(snapPath) ? snapPath : null);
+    if (sourceStatsPath) {
+      try {
+        const rawStats = JSON.parse(fs.readFileSync(sourceStatsPath, 'utf8'));
+        const kstToday = new Date(Date.now() + 9 * 3600 * 1000).toISOString().slice(0, 10);
+        const days = rawStats.days || {};
+        const todayBucket = days[kstToday] || Object.values(days).slice(-1)[0] || statsData.analytics.today;
+        statsData = {
+          status: 'ok',
+          mode: 'static',
+          analytics: {
+            today: todayBucket,
+            total: rawStats.total || statsData.analytics.total
+          }
+        };
+      } catch (_) {}
+    }
+    const statsJson = JSON.stringify(statsData, null, 2);
+    fs.writeFileSync(path.join(apiDir, 'stats'), statsJson, 'utf8');
+    fs.writeFileSync(path.join(apiDir, 'stats.json'), statsJson, 'utf8');
+    if (fs.existsSync(globalApiDir)) {
+      fs.writeFileSync(path.join(globalApiDir, 'health'), healthPayload, 'utf8');
+      fs.writeFileSync(path.join(globalApiDir, 'health.json'), healthPayload, 'utf8');
+      fs.writeFileSync(path.join(globalApiDir, 'stats'), statsJson, 'utf8');
+      fs.writeFileSync(path.join(globalApiDir, 'stats.json'), statsJson, 'utf8');
+    }
+
+    const adpickJson = JSON.stringify({
+      status: 'ok',
+      source: 'static-curated',
+      offers: [
+        { id: 'coupang-calc', title: '어린이 구연산·어골칼슘 & 비타민D3 로켓배송', url: 'https://www.coupang.com/np/search?q=%EC%96%B4%EB%A6%B0%EC%9D%B4+%EA%B5%AC%EC%97%B0%EC%82%B0+%EC%96%B4%EA%B3%A8%EC%B9%BC%EC%8A%98+%EB%B9%84%ED%83%80%EB%AF%BCD3&channel=user&lptag=AF7865143', platform: 'Coupang Partners' },
+        { id: 'iherb-zinc', title: '아이허브 어린이 액상 글루콘산 아연 & 유기농 D3', url: 'https://kr.iherb.com/search?kw=%EC%96%B4%EB%A6%B0%EC%9D%B4+%EC%95%84%EC%97%B0+%EB%B9%84%ED%83%80%EB%AF%BCD3&rcode=IPZ1547', platform: 'iHerb' }
+      ]
+    }, null, 2);
+    fs.writeFileSync(path.join(apiDir, 'adpick-offers'), adpickJson, 'utf8');
+    fs.writeFileSync(path.join(apiDir, 'adpick-offers.json'), adpickJson, 'utf8');
+
+    const shareSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420"><rect width="800" height="420" rx="28" fill="#1E3A8A"/><text x="50" y="95" fill="#93C5FD" font-family="sans-serif" font-size="22" font-weight="bold">KIDS-FIT GROWTH &amp; BRAIN STUDIO (kidsfit.co.kr)</text><text x="50" y="165" fill="#FFFFFF" font-family="sans-serif" font-size="38" font-weight="bold">우리 아이 맞춤형 키성장 · 두뇌발달 정밀 처방전</text><text x="50" y="235" fill="#DBEAFE" font-family="sans-serif" font-size="24">질병관리청(KDCA) 성장도표 · K-DST · 학술논문 ${totalPapers.toLocaleString('en-US')}편 기반</text><rect x="50" y="295" width="380" height="64" rx="32" fill="#10B981"/><text x="90" y="336" fill="#FFFFFF" font-family="sans-serif" font-size="24" font-weight="bold">https://kidsfit.co.kr 무료 진단</text></svg>`;
+    fs.writeFileSync(path.join(apiDir, 'share-card.svg'), shareSvg, 'utf8');
+
+    const redirectsContent = [
+      '/api/health /api/health.json 200',
+      '/api/stats /api/stats.json 200',
+      '/api/adpick-offers /api/adpick-offers.json 200',
+      '/en /en/index.html 200',
+      '/* /index.html 200'
+    ].join('\n') + '\n';
+    fs.writeFileSync(path.join(DIST_DIR, '_redirects'), redirectsContent, 'utf8');
+    console.log('[Build] Generated static API endpoints (dist/api/health, stats, adpick-offers, share-card.svg) & dist/_redirects for Render Static Site.');
+  } catch (e) {
+    console.warn('[Build] Static API generation warning:', e.message);
+  }
 }
 
 function syncLiveResearchCountToSourceFiles() {

@@ -22,27 +22,23 @@ def main():
     env = load_env()
     token = env.get("TELEGRAM_BOT_TOKEN", "")
     chat_id = env.get("TELEGRAM_CHAT_ID", "755033799")
-    try:
-        with urllib.request.urlopen("https://kidsfit.co.kr/api/stats", timeout=10) as r:
-            st = json.loads(r.read().decode("utf-8"))
-    except Exception as e:
-        st = {"error": str(e)}
+    sys.path.insert(0, str(ROOT / "scripts"))
+    from apply_alphamale_cclass_and_advisor_daemon import fetch_live_system_metrics
+    m = fetch_live_system_metrics()
 
-    tot = st.get("total", {})
-    td = st.get("today", {})
-    tdate = st.get("todayDate", "2026-10-25")
-    uv_td, pv_td, hm_td = td.get("uniqueVisitors", 0), td.get("pageviews", 0), td.get("humanViews", 0)
-    uv_tot, pv_tot = tot.get("uniqueVisitors", 0), tot.get("pageviews", 0)
-    diag_tot, aff_tot = tot.get("diagnosesTotal", 0), tot.get("affiliateClicksTotal", 0)
+    tdate = m.get("kstDate", "2026-10-28")
+    uv_td, pv_td, bots_td = m.get("uv", 0), m.get("pv", 0), m.get("bots", 0)
+    raw_uv, raw_pv = m.get("rawServerUv", uv_td), m.get("rawServerPv", pv_td)
+    diag_td, aff_td = m.get("diagnoses", 0), m.get("affiliateClicks", 0)
 
     msg = (
         f"📊 <b>[키즈핏 09:00 AM 일일 방문자 & 퍼널 브리핑]</b>\n"
         f"• 기준일: {tdate} 09:00 KST\n\n"
-        f"<b>1️⃣ 실시간 홈페이지 유입 현황 (kidsfit.co.kr / kidsfit.co.kr)</b>\n"
-        f"• 오늘 순방문자(UV): <b>{uv_td}명</b> / 페이지뷰(PV): <b>{pv_td}회</b> (실유입: {hm_td}회)\n"
-        f"• 누적 순방문자(UV): <b>{uv_tot}명</b> / 누적 페이지뷰(PV): <b>{pv_tot}회</b>\n"
-        f"• 누적 진단 완료: <b>{diag_tot}건</b> / 제휴·결제 클릭: <b>{aff_tot}건</b>\n\n"
-        f"<b>2️⃣ 오늘 오전 홍보 가동 현황</b>\n"
+        f"<b>1️⃣ 실시간 홈페이지 유입 현황 (kidsfit.co.kr · 영구 원장 보정)</b>\n"
+        f"• 오늘 순수 실방문자(Human UV): <b>{uv_td}명</b> / 실페이지뷰(Human PV): <b>{pv_td}회</b>\n"
+        f"• 검색엔진·외부 색인/점검봇 수집: <b>{bots_td}회</b> (서버 전체 호출: UV {raw_uv} / PV {raw_pv})\n"
+        f"• 오늘 진단 완료: <b>{diag_td}건</b> / 제휴·결제 클릭: <b>{aff_td}건</b>\n\n"
+        f"<b>2️⃣ 오늘 오전 무인 자동 홍보 가동 현황</b>\n"
         f"• 06:00 인스타·쓰레드(@kids_fit1) 웹툰·카드뉴스 패키지 발송 완료\n"
         f"• 06:00 네이버 블로그 & 카페 1차 발행 완료\n"
         f"• 06:30 탈네이버 6대 채널 시퀀스 아티클 발행 완료\n"

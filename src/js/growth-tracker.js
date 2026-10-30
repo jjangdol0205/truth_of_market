@@ -19,6 +19,15 @@
   'use strict';
 
   const STORAGE_KEYS = ['taller_growth_logs', 'kidsfit_tracker_v2', 'taller_bio_tracker'];
+  function cmToFtIn(cm) {
+    const c = Number(cm) || 0;
+    const totalInches = c / 2.54;
+    const ft = Math.floor(totalInches / 12);
+    const inch = Math.round((totalInches - ft * 12) * 10) / 10;
+    return `${ft}'${inch}"`;
+  }
+  if (typeof global !== 'undefined') { global.cmToFtIn = cmToFtIn; }
+  if (typeof window !== 'undefined') { window.cmToFtIn = cmToFtIn; }
   const PRIMARY_STORAGE_KEY = 'taller_growth_logs';
 
   // In-memory fallback if localStorage throws (e.g. sandboxed iframe or private browsing)
@@ -355,7 +364,7 @@
                 ${logs.slice(-6).reverse().map(l => `
                   <tr style="border-bottom: 1px solid var(--theme-border-subtle); color: var(--text-primary);">
                     <td style="padding: 0.65rem 0.75rem; font-family: var(--font-mono); font-size: 0.8rem;">${l.date}</td>
-                    <td style="padding: 0.65rem 0.75rem; font-weight: 700; color: var(--cyan-pulse); font-family: var(--font-mono);">${isGlobal ? `${Math.floor((Number(l.height) / 2.54) / 12)}'${Math.round(((Number(l.height) / 2.54) % 12) * 10) / 10}" (${l.height} cm)` : `${l.height} cm`}</td>
+                    <td style="padding: 0.65rem 0.75rem; font-weight: 700; color: var(--cyan-pulse); font-family: var(--font-mono);">${isGlobal ? `${cmToFtIn(l.height)} (${l.height} cm)` : `${l.height} cm`}</td>
                     <td style="padding: 0.65rem 0.75rem; font-family: var(--font-mono);">${isGlobal ? `${Math.round(Number(l.weight) * 2.20462262 * 10) / 10} lbs (${l.weight} kg)` : `${l.weight} kg`}</td>
                     <td style="padding: 0.65rem 0.75rem;">${l.sleep ? '' : ''}</td>
                     <td style="padding: 0.65rem 0.75rem;">${l.nutrition ? '' : ''}</td>
@@ -1605,7 +1614,7 @@
     printContainer.innerHTML = renderClinicalPdfReport(profile);
   }
 
-    function printClinicReport(profile = {}) {
+  function printClinicReport(profile = {}) {
     if (typeof window !== 'undefined' && window.KidsFitGlobalPaywall && typeof window.KidsFitGlobalPaywall.isGlobalPaidEdition === 'function' && window.KidsFitGlobalPaywall.isGlobalPaidEdition() && typeof window.KidsFitGlobalPaywall.isReportUnlocked === 'function' && !window.KidsFitGlobalPaywall.isReportUnlocked()) {
       preparePrintReport(profile);
       if (typeof window.openKidsFitGlobalCheckoutModal === 'function') {
@@ -1613,13 +1622,18 @@
       }
       return;
     }
-    preparePrintReport(profile);
     const isJsdom = typeof navigator !== 'undefined' && /jsdom/i.test(navigator.userAgent || '');
     if (!isJsdom && typeof window !== 'undefined' && window.KidsFitDigitalAssetStore && typeof window.KidsFitDigitalAssetStore.isDigitalAssetUnlocked === 'function' && !window.KidsFitDigitalAssetStore.isDigitalAssetUnlocked()) {
+      preparePrintReport(profile);
       if (typeof window.openKoreanDigitalAssetModal === 'function') {
         window.openKoreanDigitalAssetModal();
         return;
       }
+    }
+    if (this && typeof this.preparePrintReport === 'function') {
+      this.preparePrintReport(profile);
+    } else {
+      preparePrintReport(profile);
     }
     if (typeof window !== 'undefined' && typeof window.print === 'function') {
       window.print();
@@ -1688,6 +1702,7 @@
   if (typeof global !== 'undefined') {
     global.KidsFitGrowthTracker = GrowthTracker;
     global.TallerGrowthTracker = GrowthTracker;
+    global.growthTrackerInstance = GrowthTracker;
   }
 
 })(typeof window !== 'undefined' ? window : (typeof global !== 'undefined' ? global : this));

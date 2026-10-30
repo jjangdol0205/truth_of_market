@@ -23,13 +23,19 @@ from playwright.sync_api import sync_playwright
 
 sys.stdout.reconfigure(encoding="utf-8")
 
-ROOT = Path(r"d:\키즈핏")
+ROOT = Path(__file__).resolve().parent.parent
 STATE_PATH = ROOT / "logs" / "naver_auto_comment_state.json"
 BLOG_CURSOR_PATH = ROOT / "logs" / "blog_cafe_3x_daily_cursor.json"
 ENV_PATH = ROOT / ".env"
 
 sys.path.insert(0, str(ROOT / "scripts"))
 from publish_3x_daily_blog_and_cafe import ensure_naver_session_cookies, load_env, send_telegram_message
+from naver_blog_own_comment_reply_and_deai import (
+    accept_incoming_buddy_requests,
+    load_reply_state,
+    reply_to_incoming_comments_on_own_blog,
+    save_reply_state,
+)
 from execute_safe_backlog_activity import (
     SAFE_BACKLOG_ITEMS,
     ensure_clean_cdp_browser,
@@ -462,6 +468,14 @@ def main():
             own_pin_res = pin_first_comment_on_own_latest_cafe_post(context, st.setdefault("commented_own_posts", []))
             own_blog_pin_res = pin_first_comment_on_own_latest_blog_post(context, st.setdefault("commented_own_posts", []))
             own_pin_res["blog_pin"] = own_blog_pin_res
+
+            # 1-B. Manage our own Naver Blog (accept incoming buddy requests + reply to visitor comments & return visit)
+            reply_st = load_reply_state()
+            buddy_accept_res = accept_incoming_buddy_requests(context, reply_st)
+            own_reply_res = reply_to_incoming_comments_on_own_blog(context, reply_st, max_posts_to_check=5, max_replies_per_cycle=6)
+            save_reply_state(reply_st)
+            own_pin_res["buddy_accept"] = buddy_accept_res
+            own_pin_res["incoming_comment_replies"] = own_reply_res
 
             # 2. External Naver Blog Sympathy + Comment + Mutual Neighbor Tour (5 target parenting blogs across 2 topics)
             blog_tour_res = execute_external_blog_sympathy_and_comment_tour(

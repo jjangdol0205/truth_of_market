@@ -1,0 +1,5 @@
+/api/health /api/health.json 200
+/api/stats /api/stats.json 200
+/api/adpick-offers /api/adpick-offers.json 200
+/en /en/index.html 200
+/* /index.html 200

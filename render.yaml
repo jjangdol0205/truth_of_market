@@ -4,8 +4,31 @@ services:
     runtime: static
     buildCommand: ""
     staticPublishPath: ./dist
+    routes:
+      - type: rewrite
+        source: /api/health
+        destination: /api/health.json
+      - type: rewrite
+        source: /api/stats
+        destination: /api/stats.json
+      - type: rewrite
+        source: /api/adpick-offers
+        destination: /api/adpick-offers.json
+      - type: rewrite
+        source: /*
+        destination: /index.html
   - type: web
     name: kisfit-global-static
     runtime: static
     buildCommand: ""
     staticPublishPath: ./dist-global
+    routes:
+      - type: rewrite
+        source: /api/health
+        destination: /api/health.json
+      - type: rewrite
+        source: /api/stats
+        destination: /api/stats.json
+      - type: rewrite
+        source: /*
+        destination: /index.html
