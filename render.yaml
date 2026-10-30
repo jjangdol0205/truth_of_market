@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: kidsfit-kr-static
+    runtime: static
+    buildCommand: ""
+    staticPublishPath: ./dist
+  - type: web
+    name: kisfit-global-static
+    runtime: static
+    buildCommand: ""
+    staticPublishPath: ./dist-global
