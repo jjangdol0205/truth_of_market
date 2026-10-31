@@ -1,14 +1,14 @@
 {
   "ok": true,
-  "rl_cycle": 12,
-  "updated_at_kst": "2026-10-29 05:00:14 KST",
+  "rl_cycle": 25,
+  "updated_at_kst": "2026-11-01 00:08:15 KST",
   "channels": {
     "youtube_shorts": "https://www.youtube.com/@kisfitglobal",
     "instagram_reels": "https://www.instagram.com/kisfitglobal"
   },
   "live_channel_totals": {
-    "youtube_uploaded_shorts": 3,
-    "youtube_total_views": 28,
+    "youtube_uploaded_shorts": 5,
+    "youtube_total_views": 29,
     "youtube_total_likes": 1,
     "instagram_synced_views": 0,
     "site_instagram_referral_clicks_today": 0,
@@ -19,14 +19,14 @@
     "arm_id": "arm_ep3_math_working_memory",
     "topic_ko": "3화: 연산은 빠른데 문장제 수학에서 멈추는 아이 (전두엽 작업기억)",
     "yt_video_id": "qh6R0mRcCcc",
-    "yt_views": 15,
-    "yt_views_per_day": 16.51,
-    "raw_reward": 80.28,
+    "yt_views": 14,
+    "yt_views_per_day": 3.78,
+    "raw_reward": 34.23,
     "policy_weight": 1.8,
     "winning_hook_formula": "Why [Positive Kid Trait: Smart/Active/Tall Kids] [Unexpected Symptom: Freeze/Stop/Lose] (Biology/Stat Shock!) + #ParentingHacks"
   },
   "rl_insights_and_actions": [
-    "1. [1위 챔피언 영상]: 3화 'Why Smart Kids Freeze on Math Word Problems' (ID: qh6R0mRcCcc) — 조회수 15회 (일평균 16.51회/일, 1화 대비 +225% 높은 조회 속도 달성).",
+    "1. [1위 챔피언 영상]: 3화 'Why Smart Kids Freeze on Math Word Problems' (ID: qh6R0mRcCcc) — 조회수 14회 (일평균 3.78회/일, 1화 대비 +225% 높은 조회 속도 달성).",
     "2. [2위 우수 영상]: 2화 'Why Picky Eaters Refuse Meat & Green Veggies (It's Biology!)' (ID: b6zHOumwNIo) — 조회수 8회 ('훈육이 아니라 생물학적 아연 결핍'이라는 부모 죄책감 해소 훅이 1화 대비 2.0배 높은 조회수 기록).",
     "3. [강화학습(RL) 정책 전이 완료]: 조회수가 가장 높았던 'Why [긍정적 아이 특성: Smart/Active Kids] + [의외의 병목 증상] + (생물학적 수치 팩트!)' 공식과 #ParentingHacks 태그를 전 에피소드(1~5화)의 상단 2줄 타이틀 및 유튜브·릴스 제목에 자동 이식 완료!"
   ],
@@ -44,13 +44,13 @@
       "yt_url": "https://www.youtube.com/shorts/Sx22K09QvAk",
       "yt_views": 5,
       "yt_likes": 1,
-      "yt_views_per_day": 2.22,
+      "yt_views_per_day": 0.99,
       "ig_views": 0,
       "ig_likes": 0,
-      "pulls": 1,
-      "raw_reward": 21.27,
-      "ucb1_score": 39.51,
-      "policy_weight": 1.1
+      "pulls": 2,
+      "raw_reward": 16.96,
+      "ucb1_score": 30.13,
+      "policy_weight": 1.32
     },
     {
       "ep": 2,
@@ -63,15 +63,15 @@
       "hook_formula": "Guilt-Reversal Biological Reframe (It's Biology, Not Behavior!)",
       "yt_video_id": "b6zHOumwNIo",
       "yt_url": "https://www.youtube.com/shorts/b6zHOumwNIo",
-      "yt_views": 8,
+      "yt_views": 9,
       "yt_likes": 0,
-      "yt_views_per_day": 4.22,
+      "yt_views_per_day": 1.92,
       "ig_views": 0,
       "ig_likes": 0,
       "pulls": 1,
-      "raw_reward": 26.77,
-      "ucb1_score": 45.01,
-      "policy_weight": 1.17
+      "raw_reward": 20.22,
+      "ucb1_score": 38.83,
+      "policy_weight": 1.41
     },
     {
       "ep": 3,
@@ -84,14 +84,14 @@
       "hook_formula": "CHAMPION ARM (#1 Views & Velocity): 'Why Smart Kids Freeze on [Task]'",
       "yt_video_id": "qh6R0mRcCcc",
       "yt_url": "https://www.youtube.com/shorts/qh6R0mRcCcc",
-      "yt_views": 15,
+      "yt_views": 14,
       "yt_likes": 0,
-      "yt_views_per_day": 16.51,
+      "yt_views_per_day": 3.78,
       "ig_views": 0,
       "ig_likes": 0,
       "pulls": 1,
-      "raw_reward": 80.28,
-      "ucb1_score": 98.53,
+      "raw_reward": 34.23,
+      "ucb1_score": 52.84,
       "policy_weight": 1.8
     },
     {
@@ -112,7 +112,7 @@
       "ig_likes": 0,
       "pulls": 0,
       "raw_reward": 0.0,
-      "ucb1_score": 18.24,
+      "ucb1_score": 18.61,
       "policy_weight": 1.25
     },
     {
@@ -124,41 +124,63 @@
       "rl_evolved_title_line2_yellow": "Flashcards (30% Finger-Brain Link)",
       "rl_evolved_yt_title": "Why Finger Play Beats Flashcards for Smart Kids (30% Brain Cortex Link!) 🖐️🧠 #Shorts #ParentingHacks",
       "hook_formula": "Transferred Champion Formula + Neuroscience Stat (30% Cortex Link)",
-      "yt_video_id": null,
-      "yt_url": null,
-      "yt_views": 0,
+      "yt_video_id": "gbNtudUJhsU",
+      "yt_url": "https://www.youtube.com/shorts/gbNtudUJhsU",
+      "yt_views": 1,
       "yt_likes": 0,
-      "yt_views_per_day": 0.0,
+      "yt_views_per_day": 0.59,
       "ig_views": 0,
       "ig_likes": 0,
-      "pulls": 0,
-      "raw_reward": 0.0,
-      "ucb1_score": 18.24,
-      "policy_weight": 1.25
+      "pulls": 1,
+      "raw_reward": 3.56,
+      "ucb1_score": 22.18,
+      "policy_weight": 0.95
     }
   ],
   "live_youtube_videos": [
     {
       "platform": "youtube_shorts",
+      "videoId": "gbNtudUJhsU",
+      "url": "https://www.youtube.com/shorts/gbNtudUJhsU",
+      "title": "Why Finger Play Beats Flashcards for Smart Kids (30% Brain Cortex Link!) ðï¸ð§  #Shorts #ParentingHacks",
+      "views": 1,
+      "likes": 0,
+      "publishDate": "2026-10-29T15:12:30-07:00",
+      "daysLive": 1.71,
+      "viewsPerDay": 0.59
+    },
+    {
+      "platform": "youtube_shorts",
+      "videoId": "jonIYd80k-E",
+      "url": "https://www.youtube.com/shorts/jonIYd80k-E",
+      "title": "0",
+      "views": 0,
+      "likes": 0,
+      "publishDate": "2026-10-31T15:08:17.250585+00:00",
+      "daysLive": 0.5,
+      "viewsPerDay": 0.0
+    },
+    {
+      "platform": "youtube_shorts",
       "videoId": "qh6R0mRcCcc",
       "url": "https://www.youtube.com/shorts/qh6R0mRcCcc",
       "title": "Why Smart Kids Freeze on Math Word Problems ð§ ð #Shorts #ParentingHacks",
-      "views": 15,
+      "views": 14,
       "likes": 0,
       "publishDate": "2026-10-27T15:11:43-07:00",
-      "daysLive": 0.91,
-      "viewsPerDay": 16.51
+      "daysLive": 3.71,
+      "viewsPerDay": 3.78
     },
     {
       "platform": "youtube_shorts",
       "videoId": "b6zHOumwNIo",
       "url": "https://www.youtube.com/shorts/b6zHOumwNIo",
       "title": "Why Picky Eaters Refuse Meat & Green Veggies (It's Biology!) ð¥¦ð§¬ #Shorts #PickyEater #KidsNutrition",
-      "views": 8,
+      "views": 9,
       "likes": 0,
       "publishDate": "2026-10-26T15:28:46-07:00",
-      "daysLive": 1.9,
-      "viewsPerDay": 4.22
+      "daysLive": 4.69,
+      "viewsPerDay": 1.92
     },
     {
       "platform": "youtube_shorts",
@@ -168,8 +190,8 @@
       "views": 5,
       "likes": 1,
       "publishDate": "2026-10-26T07:03:36-07:00",
-      "daysLive": 2.25,
-      "viewsPerDay": 2.22
+      "daysLive": 5.04,
+      "viewsPerDay": 0.99
     }
   ],
   "instagram_telemetry": {
