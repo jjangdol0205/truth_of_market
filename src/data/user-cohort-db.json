@@ -2,10 +2,10 @@
   "metadata": {
     "db_name": "Taller Bio Labs — User Input Cohort & Autonomous Self-Improvement DB",
     "db_version": "2.4.0",
-    "last_updated_utc": "2026-10-23T11:41:44.028Z",
-    "total_records": 157,
+    "last_updated_utc": "2026-10-31T02:50:24.130Z",
+    "total_records": 159,
     "subject_mode_counts": {
-      "child": 118,
+      "child": 120,
       "self": 39
     },
     "gender_counts": {
@@ -16,12 +16,12 @@
       "1-3y": 22,
       "4-6y": 26,
       "7-9y": 29,
-      "10-12y": 47,
+      "10-12y": 49,
       "13-16y": 27,
       "17-20y": 6
     },
     "bottleneck_habit_frequencies": {
-      "late_sleep": 113,
+      "late_sleep": 115,
       "picky_eater": 61,
       "poor_posture": 58,
       "sedentary": 49,
@@ -122,6 +122,66 @@
     }
   },
   "records": [
+    {
+      "id": "USR-MVVT00ZM",
+      "timestamp": "2026-10-31T02:50:24.130Z",
+      "targetSubject": "child",
+      "gender": "boy",
+      "birthDateStr": "",
+      "exactMonths": 120,
+      "ageYears": 10,
+      "currentHeight": 137,
+      "currentWeight": 35.5,
+      "recentGrowth6m": 3.2,
+      "fatherHeight": 173.5,
+      "motherHeight": 160.5,
+      "tannerPhase": "phase_2",
+      "habits": [
+        "late_sleep"
+      ],
+      "cognitiveAxes": [
+        "science_nature"
+      ],
+      "region": "United States — Northeast (NY · NJ · MA · PA)",
+      "kdcaPercentile": 50,
+      "zScore": 0,
+      "mph": 173.5,
+      "unmanagedHeight": 171.2,
+      "optimizedHeight": 180.5,
+      "potentialGainCm": 7.2,
+      "isOwnerTest": false,
+      "parentFreeNote": ""
+    },
+    {
+      "id": "USR-MVVFG3DF",
+      "timestamp": "2026-10-30T20:30:59.091Z",
+      "targetSubject": "child",
+      "gender": "boy",
+      "birthDateStr": "",
+      "exactMonths": 120,
+      "ageYears": 10,
+      "currentHeight": 137,
+      "currentWeight": 35.5,
+      "recentGrowth6m": 3.2,
+      "fatherHeight": 173.5,
+      "motherHeight": 160.5,
+      "tannerPhase": "phase_2",
+      "habits": [
+        "late_sleep"
+      ],
+      "cognitiveAxes": [
+        "science_nature"
+      ],
+      "region": "United States — Northeast (NY · NJ · MA · PA)",
+      "kdcaPercentile": 50,
+      "zScore": 0,
+      "mph": 173.5,
+      "unmanagedHeight": 171.2,
+      "optimizedHeight": 180.5,
+      "potentialGainCm": 7.2,
+      "isOwnerTest": false,
+      "parentFreeNote": ""
+    },
     {
       "id": "USR-MVKWGIC7",
       "timestamp": "2026-10-23T11:41:44.028Z",

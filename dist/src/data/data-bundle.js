@@ -1512,13 +1512,37 @@
       "priceNum": 26400,
       "rating": 4.9,
       "reviewCount": 14200,
-      "thumbnail": "🍼",
-      "badgeText": "🌿 iHerb 직구 베스트",
+      "thumbnail": "src/images/products/prod_nb_nut_1.webp",
+      "badgeText": "🌿 글로벌 안심인증 베스트",
       "description": "모유수유아 소아과 권장 필수 액상 비타민D 하루 1방울 및 신생아 배앓이 방지 프리미엄 유산균",
-      "benefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
-      "testBenefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
+      "benefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
+      "testBenefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
       "url": "https://kr.iherb.com/pr/california-gold-nutrition-baby-vitamin-d3-drops-400-iu-34-fl-oz-10-ml/65958?rcode=IPZ1547",
-      "affiliateUrl": "https://kr.iherb.com/pr/california-gold-nutrition-baby-vitamin-d3-drops-400-iu-34-fl-oz-10-ml/65958?rcode=IPZ1547"
+      "affiliateUrl": "https://kr.iherb.com/pr/california-gold-nutrition-baby-vitamin-d3-drops-400-iu-34-fl-oz-10-ml/65958?rcode=IPZ1547",
+      "image": "src/images/products/prod_nb_nut_1.webp",
+      "imageFallback": "src/images/products/prod_nb_nut_1.svg",
+      "specs": [
+        "1일 1방울(0.03ml)로 영유아 일일 권장량 400IU 100% 충족",
+        "스위스 DSM사 프리미엄 Quali-D 비타민D3 원료 사용",
+        "락토바실러스 루테리(L.reuteri) 배앓이 방지 특허 유산균 배합",
+        "감미료, 착색료, 합성향료, 보존료 4無 원칙"
+      ],
+      "whyWePicked": [
+        "모유에는 비타민D가 거의 없어 소아청소년과학회에서 생후 즉시 보충을 권고하는 필수 영양소입니다.",
+        "유로드롭 특수 드로퍼 기술로 거꾸로 들면 정확히 1방울만 떨어져 과다 복용 위험이 없습니다.",
+        "신생아 영아산통(배앓이) 감소 효과가 입증된 루테리 균주가 배합되어 밤잠 안정에 기여합니다."
+      ],
+      "buyingGuide": {
+        "pros": "분유, 모유, 쪽쪽이에 1방울만 톡 떨어뜨려 먹이기 매우 간편함.",
+        "considerations": "오일 제형이므로 직사광선을 피해 25도 이하 실온 보관 필수.",
+        "recommendedBaby": "완모(완전모유수유) 아기, 밤에 배앓이로 자주 보채는 생후 0~6개월 신생아."
+      },
+      "momReviews": [
+        "조리원에서 나오자마자 밤마다 영아산통으로 울던 아기였는데, 1주일 먹이고 나서 트림도 잘하고 밤잠 시간이 눈에 띄게 늘었어요.",
+        "스포이드 방식은 흘리기 쉬운데 이건 병을 기울이면 딱 한 방울만 똑 떨어져서 젖꼭지 위에 바르기 최고입니다.",
+        "소아과 정기검진 때 의사선생님께서도 권장하신 제품이라 둘째 때도 고민 없이 선택했습니다."
+      ],
+      "summary": "모유수유아 소아과 권장 필수 액상 비타민D 하루 1방울 및 신생아 배앓이 방지 프리미엄 유산균"
     },
     {
       "id": "prod_nb_dev_1",
@@ -1534,13 +1558,37 @@
       "priceNum": 19800,
       "rating": 4.9,
       "reviewCount": 8930,
-      "thumbnail": "👁️",
-      "badgeText": "🚀 쿠팡 로켓와우 1위",
+      "thumbnail": "src/images/products/prod_nb_dev_1.webp",
+      "badgeText": "🚀 에디터 셀렉트 1위",
       "description": "생후 0~3개월 시신경·두뇌 망막 자극 흑백 초점 병풍책과 무독성 구강기 안심 헝겊 인형",
-      "benefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
-      "testBenefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
+      "benefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
+      "testBenefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
       "url": "https://www.coupang.com/np/search?q=%EC%8B%A0%EC%83%9D%EC%95%84+%ED%9D%91%EB%B0%B1+%EC%B4%88%EC%A0%90%EC%B1%85+%ED%97%93%EA%B2%81%EC%B1%85&channel=user&lptag=AF7865143",
-      "affiliateUrl": "https://www.coupang.com/np/search?q=%EC%8B%A0%EC%83%9D%EC%95%84+%ED%9D%91%EB%B0%B1+%EC%B4%88%EC%A0%90%EC%B1%85+%ED%97%93%EA%B2%81%EC%B1%85&channel=user&lptag=AF7865143"
+      "affiliateUrl": "https://www.coupang.com/np/search?q=%EC%8B%A0%EC%83%9D%EC%95%84+%ED%9D%91%EB%B0%B1+%EC%B4%88%EC%A0%90%EC%B1%85+%ED%97%93%EA%B2%81%EC%B1%85&channel=user&lptag=AF7865143",
+      "image": "src/images/products/prod_nb_dev_1.webp",
+      "imageFallback": "src/images/products/prod_nb_dev_1.svg",
+      "specs": [
+        "생후 0~100일 망막 시신경 자극용 고대비 흑백 기하학 패턴 12면",
+        "백일 이후 시각 변별력 확장을 위한 원색 컬러 스토리 12면",
+        "무독성 유기농 순면(OEKO-TEX Class 1) 촉각 바스락 헝겊 인형",
+        "침이나 물에 젖어도 찢어지지 않는 방수 코팅 병풍형 보드북"
+      ],
+      "whyWePicked": [
+        "갓 태어난 신생아는 명암만 구별할 수 있어 고대비 흑백 초점책이 시각 피질 뇌 발달의 필수 자극원입니다.",
+        "아기 침대나 역류방지쿠션 옆에 병풍처럼 스스로 세워둘 수 있어 터미타임 유도에 최적입니다.",
+        "구강기 아기가 물고 빨아도 유해물질이 나오지 않는 오가닉 안전 인증 원단만 엄선했습니다."
+      ],
+      "buyingGuide": {
+        "pros": "터미타임(배밀이 연습) 시 아기 시선을 30분 이상 고정시켜 목 근육 발달 촉진.",
+        "considerations": "헝겊 인형은 미온수 손세탁 권장(세탁기 온수 탈수 시 바스락 소리 감소 가능).",
+        "recommendedBaby": "생후 0~4개월 누워있는 시간이 많고 시선 맞추기 연습이 필요한 아기."
+      },
+      "momReviews": [
+        "터미타임 힘들어하던 아이가 이 흑백 초점책만 펴주면 고개 번쩍 들고 초집중해서 쳐다봐요!",
+        "헝겊 인형에서 바스락 소리가 나니까 칭얼거리다가도 손을 뻗으며 만지작거리다 스르륵 잠드네요.",
+        "출산선물로 받았던 수많은 교구 중 가장 활용도 높고 사진 찍어줄 때도 너무 예쁘게 나옵니다."
+      ],
+      "summary": "생후 0~3개월 시신경·두뇌 망막 자극 흑백 초점 병풍책과 무독성 구강기 안심 헝겊 인형"
     },
     {
       "id": "prod_nb_gear_1",
@@ -1556,13 +1604,37 @@
       "priceNum": 28500,
       "rating": 4.8,
       "reviewCount": 16540,
-      "thumbnail": "🌙",
+      "thumbnail": "src/images/products/prod_nb_gear_1.webp",
       "badgeText": "🚀 꿀잠 수면 1위",
       "description": "나비잠 자세를 유지시켜 신생아 모로반사 깜짝 놀람을 막아주고 깊은 수면(SWS) 호르몬 분비 유도",
-      "benefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
-      "testBenefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
+      "benefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
+      "testBenefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
       "url": "https://www.coupang.com/np/search?q=%EC%8B%A0%EC%83%9D%EC%95%84+%EC%8A%A4%EC%99%80%EB%93%A4%EC%97%85+%EC%86%8D%EC%8B%B8%EA%B0%9C&channel=user&lptag=AF7865143",
-      "affiliateUrl": "https://www.coupang.com/np/search?q=%EC%8B%A0%EC%83%9D%EC%95%84+%EC%8A%A4%EC%99%80%EB%93%A4%EC%97%85+%EC%86%8D%EC%8B%B8%EA%B0%9C&channel=user&lptag=AF7865143"
+      "affiliateUrl": "https://www.coupang.com/np/search?q=%EC%8B%A0%EC%83%9D%EC%95%84+%EC%8A%A4%EC%99%80%EB%93%A4%EC%97%85+%EC%86%8D%EC%8B%B8%EA%B0%9C&channel=user&lptag=AF7865143",
+      "image": "src/images/products/prod_nb_gear_1.webp",
+      "imageFallback": "src/images/products/prod_nb_gear_1.svg",
+      "specs": [
+        "태아기 자궁 속 자세를 재현하는 자연스러운 나비잠(Arms-Up) 디자인",
+        "기저귀 교체가 간편한 상하 양방향 2-Way YKK 무독성 지퍼",
+        "100% 오가닉 코튼 40수 신축성 원단으로 통기성 및 체온 조절 탁월",
+        "국제고관절이형성증협회(IHDI) 인증 인체공학적 고관절 보호 설계"
+      ],
+      "whyWePicked": [
+        "신생아 모로반사(허우적거림)로 인한 잦은 깸을 완벽 차단하여 3~4시간 연속 숙면을 돕습니다.",
+        "팔을 위로 올린 자세로 손을 빨며 스스로 안정을 찾는 자기진정(Self-Soothing) 능력을 키워줍니다.",
+        "양방향 지퍼 구조로 새벽 수유 후 속싸개를 다 벗기지 않고 기저귀만 10초 만에 교체 가능합니다."
+      ],
+      "buyingGuide": {
+        "pros": "신생아 육아의 질을 바꿔주는 대표적인 '육아 꿀잠템'.",
+        "considerations": "몸에 딱 맞게 입혀야 모로반사 억제 효과가 있으므로 아기 몸무게 기준 정사이즈 추천.",
+        "recommendedBaby": "작은 소리에도 깜짝 놀라 팔을 번쩍 들며 우는 0~3개월 신생아."
+      },
+      "momReviews": [
+        "이거 입히기 전에는 30분마다 깨서 울었는데 입힌 첫날부터 4시간 연속으로 잤어요. 기적의 속싸개 맞습니다.",
+        "새벽에 지퍼 아래만 쓱 올려서 기저귀 갈아주면 아기가 잠에서 완전히 깨지 않아 수면 교육이 훨씬 쉬워졌어요.",
+        "일반 천 속싸개는 풀려서 질식 위험이 걱정됐는데, 이건 착용도 쉽고 고관절도 편안해 보여 안심입니다."
+      ],
+      "summary": "나비잠 자세를 유지시켜 신생아 모로반사 깜짝 놀람을 막아주고 깊은 수면(SWS) 호르몬 분비 유도"
     },
     {
       "id": "prod_nb_gear_2",
@@ -1578,13 +1650,37 @@
       "priceNum": 34000,
       "rating": 4.9,
       "reviewCount": 7420,
-      "thumbnail": "🛏️",
+      "thumbnail": "src/images/products/prod_nb_gear_2.webp",
       "badgeText": "🚀 두상·경추 보호",
       "description": "신생아 연약한 경추 C자 곡선 지지 및 열 많은 아기 태열·두상 변형 방지 에어쿨링 설계",
-      "benefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
-      "testBenefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
+      "benefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
+      "testBenefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
       "url": "https://www.coupang.com/np/search?q=%EC%8B%A0%EC%83%9D%EC%95%84+%EB%91%90%EC%83%81+%EB%B2%A0%EA%B0%9C+%EC%97%90%EC%96%B4%EB%A9%94%EC%89%AC&channel=user&lptag=AF7865143",
-      "affiliateUrl": "https://www.coupang.com/np/search?q=%EC%8B%A0%EC%83%9D%EC%95%84+%EB%91%90%EC%83%81+%EB%B2%A0%EA%B0%9C+%EC%97%90%EC%96%B4%EB%A9%94%EC%89%AC&channel=user&lptag=AF7865143"
+      "affiliateUrl": "https://www.coupang.com/np/search?q=%EC%8B%A0%EC%83%9D%EC%95%84+%EB%91%90%EC%83%81+%EB%B2%A0%EA%B0%9C+%EC%97%90%EC%96%B4%EB%A9%94%EC%89%AC&channel=user&lptag=AF7865143",
+      "image": "src/images/products/prod_nb_gear_2.webp",
+      "imageFallback": "src/images/products/prod_nb_gear_2.svg",
+      "specs": [
+        "뒷머리 압력을 고르게 분산하는 원형 서라운드 홀(Concave) 구조",
+        "열 많은 아기 태열 방지를 위한 독일 기술 3D 에어메쉬 100% 입체 통기 구조",
+        "연약한 신생아 목 경추 C자 커브를 지지하는 0.5cm 초저자극 넥 서포트",
+        "통째로 물세탁 가능한 위생적 워셔블 소재 (진드기·곰팡이 억제)"
+      ],
+      "whyWePicked": [
+        "신생아기 연한 머리뼈가 한쪽으로 눌려 납작해지는 사두증·단두증을 조기에 예방합니다.",
+        "체온 조절 능력이 미숙해 머리에 땀이 많은 아기들의 땀띠와 지루성 두피염을 방지합니다.",
+        "턱이 가슴 쪽으로 꺾이지 않는 인체공학 높이 설계로 수면 중 자연스러운 기도 확보를 보장합니다."
+      ],
+      "buyingGuide": {
+        "pros": "베개 통째로 세탁기에 돌려 30분 만에 건조될 정도로 위생 관리가 편함.",
+        "considerations": "엎드려 자는 자세에서는 사용을 금하며 반드시 천장을 보고 눕힐 때 사용.",
+        "recommendedBaby": "한쪽 방향으로만 고개를 돌려 자거나 뒷머리 태열 땀이 많은 생후 1~12개월 아기."
+      },
+      "momReviews": [
+        "아기가 한쪽으로만 누워 자서 두상이 삐뚤어질까 봐 조마조마했는데, 이 베개 쓰고 동글동글 예쁜 짱구 두상 유지 중이에요.",
+        "머리에 열이 많아 자고 일어나면 베개가 흠뻑 젖곤 했는데, 에어메쉬라 바람이 숭숭 통해 태열이 싹 가라앉았습니다.",
+        "샤워기로 쓱 뿌려 빨아도 물이 쏙 빠지고 금방 말라서 땀 많은 여름철에도 냄새 없이 깨끗하게 써요."
+      ],
+      "summary": "신생아 연약한 경추 C자 곡선 지지 및 열 많은 아기 태열·두상 변형 방지 에어쿨링 설계"
     },
     {
       "id": "prod_nb_learn_1",
@@ -1600,13 +1696,37 @@
       "priceNum": 0,
       "rating": 4.9,
       "reviewCount": 5200,
-      "thumbnail": "📖",
+      "thumbnail": "src/images/products/prod_nb_learn_1.webp",
       "badgeText": "🎁 공식 추천 0원 체험",
       "description": "임신·출산 학부모 대상 영아 첫 뇌신경 언어 자극 그림책 및 프리미엄 오감발달 키트 무료 배송",
-      "benefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
-      "testBenefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
+      "benefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
+      "testBenefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
       "url": "https://click.linkprice.com/click.php?m=wjbookclub&a=A100708867&l=0000",
-      "affiliateUrl": "https://click.linkprice.com/click.php?m=wjbookclub&a=A100708867&l=0000"
+      "affiliateUrl": "https://click.linkprice.com/click.php?m=wjbookclub&a=A100708867&l=0000",
+      "image": "src/images/products/prod_nb_learn_1.webp",
+      "imageFallback": "src/images/products/prod_nb_learn_1.svg",
+      "specs": [
+        "0~12개월 뇌신경 시냅스 폭발기 전두엽 자극 첫 그림책 3종 세트",
+        "영아 발달 단계별 오감 자극 사운드 놀이 키트 무료 집앞 배송",
+        "아동 발달 전문가의 1:1 우리 아이 기질 및 발달 상담 서비스 포함",
+        "100% 무료 체험 (체험 후 교재 회수 없음, 약정 및 추가 비용 0원)"
+      ],
+      "whyWePicked": [
+        "생후 1년 동안 완성되는 언어 청각 시냅스를 최적화하는 의성어·의태어 중심 리듬 그림책입니다.",
+        "수십만 원대 전집을 덜컥 구매하기 전, 우리 아이의 반응과 발달 성향을 0원으로 직접 테스트할 수 있습니다.",
+        "K-DST 영유아 건강검진 문진표와 연계된 부모 코칭 가이드가 함께 제공되어 홈스쿨링 첫걸음에 제격입니다."
+      ],
+      "buyingGuide": {
+        "pros": "비용 부담 없이 프리미엄 교육 전문 기업의 첫 아기책과 교구를 무료로 체험 가능.",
+        "considerations": "1회 신청 시 전문 상담사의 안내 전화가 진행되므로 편한 시간대 상담 지정 권장.",
+        "recommendedBaby": "첫 아이라 책 읽어주기를 어떻게 시작해야 할지 막막한 초보 부모 및 0~12개월 영아."
+      },
+      "momReviews": [
+        "전집 들이기 전에 아기가 좋아할지 몰라 망설였는데, 무료체험으로 받은 사운드북을 아이가 물고 빨며 너무 좋아해서 확신을 얻었어요.",
+        "상담사분이 아이 개월 수에 맞는 상호작용 놀이법을 친절하게 알려주셔서 육아 꿀팁 많이 배웠습니다.",
+        "체험판인데도 종이 질이 두껍고 모서리가 둥글려져 있어 신생아가 손에 쥐고 놀기에 아주 안전해요."
+      ],
+      "summary": "임신·출산 학부모 대상 영아 첫 뇌신경 언어 자극 그림책 및 프리미엄 오감발달 키트 무료 배송"
     },
     {
       "id": "prod_inf_nut_1",
@@ -1622,13 +1742,37 @@
       "priceNum": 24800,
       "rating": 4.9,
       "reviewCount": 9420,
-      "thumbnail": "🦴",
-      "badgeText": "🚀 쿠팡 로켓와우 1위",
+      "thumbnail": "src/images/products/prod_inf_nut_1.webp",
+      "badgeText": "🚀 에디터 셀렉트 1위",
       "description": "우유 안 먹는 아이도 저녁 식후 1포로 골격 형성 3대 핵심 미네랄 완벽 흡수",
-      "benefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
-      "testBenefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
+      "benefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
+      "testBenefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
       "url": "https://www.coupang.com/np/search?q=%EC%96%B4%EB%A6%B0%EC%9D%B4+%EC%B9%BC%EC%8A%98+%EB%B9%84%ED%83%80%EB%AF%BCD+%EC%95%84%EC%97%B0+%EA%B5%AC%EB%AF%B8&channel=user&lptag=AF7865143",
-      "affiliateUrl": "https://www.coupang.com/np/search?q=%EC%96%B4%EB%A6%B0%EC%9D%B4+%EC%B9%BC%EC%8A%98+%EB%B9%84%ED%83%80%EB%AF%BCD+%EC%95%84%EC%97%B0+%EA%B5%AC%EB%AF%B8&channel=user&lptag=AF7865143"
+      "affiliateUrl": "https://www.coupang.com/np/search?q=%EC%96%B4%EB%A6%B0%EC%9D%B4+%EC%B9%BC%EC%8A%98+%EB%B9%84%ED%83%80%EB%AF%BCD+%EC%95%84%EC%97%B0+%EA%B5%AC%EB%AF%B8&channel=user&lptag=AF7865143",
+      "image": "src/images/products/prod_inf_nut_1.webp",
+      "imageFallback": "src/images/products/prod_inf_nut_1.svg",
+      "specs": [
+        "위산 분비가 적은 소아도 공복에 속쓰림 없이 흡수되는 흡수율 1위 구연산 칼슘",
+        "뼈 형성 및 칼슘 흡수율을 3배 증대시키는 활성형 비타민D3 400IU 함유",
+        "성장기 세포 분열과 면역 기능에 필수적인 글루콘산 아연 복합 배합",
+        "입맛 까다로운 아이도 좋아하는 상큼한 천연 과일맛 젤리/시럽 제형"
+      ],
+      "whyWePicked": [
+        "탄산칼슘과 달리 흡수율이 월등히 높고 가스 차거나 변비 생기는 부작용이 없습니다.",
+        "우유를 거부하거나 유당불내증이 있는 영유아의 골격 형성기 칼슘 결핍을 완벽히 방어합니다.",
+        "저녁 식후 1포로 수면 중 분비되는 성장호르몬과 시너지를 내어 야간 뼈 성장을 극대화합니다."
+      ],
+      "buyingGuide": {
+        "pros": "츄어블 형태로 간식처럼 맛있게 씹어 먹거나 액상으로 주스에 타서 복용 가능.",
+        "considerations": "칼슘과 철분은 서로 흡수를 방해하므로 철분제 복용 시 2시간 이상 간격 유지.",
+        "recommendedBaby": "우유를 하루 200ml 미만으로 마시거나 키 성장이 하위 25% 미만인 1~3세 아이."
+      },
+      "momReviews": [
+        "우유 알레르기가 있어 칼슘 섭취가 늘 걱정이었는데, 이 젤리는 아이가 먼저 '곰돌이 영양제 달라'고 조를 정도로 잘 먹어요.",
+        "변비 생길까 봐 칼슘제 먹이기 꺼려졌는데, 구연산 칼슘이라 그런지 변비 하나 없이 응가도 황금색으로 잘 봅니다.",
+        "3개월 꾸준히 먹이고 영유아검진 갔더니 백분위가 10프로대에서 35프로로 껑충 뛰어올라 너무 뿌듯해요!"
+      ],
+      "summary": "우유 안 먹는 아이도 저녁 식후 1포로 골격 형성 3대 핵심 미네랄 완벽 흡수"
     },
     {
       "id": "prod_inf_nut_2",
@@ -1644,13 +1788,37 @@
       "priceNum": 22300,
       "rating": 4.9,
       "reviewCount": 18450,
-      "thumbnail": "🍊",
-      "badgeText": "🌿 iHerb 글로벌 직구 1위",
+      "thumbnail": "src/images/products/prod_inf_nut_2.webp",
+      "badgeText": "🌿 글로벌 안심인증 1위",
       "description": "미국 소아과 전문의 추천 배합, 액상형으로 체내 흡수율 3배 높은 영유아 성장기 칼마디",
-      "benefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
-      "testBenefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
+      "benefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
+      "testBenefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
       "url": "https://kr.iherb.com/pr/childlife-liquid-calcium-with-magnesium-natural-orange-flavor-16-fl-oz-473-ml/9434?rcode=IPZ1547",
-      "affiliateUrl": "https://kr.iherb.com/pr/childlife-liquid-calcium-with-magnesium-natural-orange-flavor-16-fl-oz-473-ml/9434?rcode=IPZ1547"
+      "affiliateUrl": "https://kr.iherb.com/pr/childlife-liquid-calcium-with-magnesium-natural-orange-flavor-16-fl-oz-473-ml/9434?rcode=IPZ1547",
+      "image": "src/images/products/prod_inf_nut_2.webp",
+      "imageFallback": "src/images/products/prod_inf_nut_2.svg",
+      "specs": [
+        "미국 영유아 전문 영양 브랜드 ChildLife 스테디셀러 (473ml 대용량)",
+        "칼슘:마그네슘 황금 비율 2:1 배합으로 체내 이용률 극대화",
+        "알약이나 젤리를 삼키기 힘든 12개월 이상 유아를 위한 크리미 요거트 액상",
+        "글루텐, 인공색소, 알레르기 유발 유제품 0%의 안심 포뮬러"
+      ],
+      "whyWePicked": [
+        "액상 제형이라 체내 흡수 속도가 가장 빠르며 목걸림 위험이 전혀 없습니다.",
+        "근육 긴장 완화와 숙면을 돕는 마그네슘이 함께 들어있어 야경증이나 밤보챔을 줄여줍니다.",
+        "천연 오렌지 향의 요거트 같은 맛으로 요구르트나 과일 퓨레에 섞어주기 매우 좋습니다."
+      ],
+      "buyingGuide": {
+        "pros": "가성비가 매우 뛰어나며 계량컵/스푼으로 아이 개월 수에 맞게 정밀 계량 복용 가능.",
+        "considerations": "개봉 후에는 반드시 냉장 보관해야 하며, 먹이기 전 충분히 흔들어 주어야 함.",
+        "recommendedBaby": "밤마다 성장통으로 다리가 아프다고 칭얼거리거나 깊은 잠을 못 자는 1~3세 아이."
+      },
+      "momReviews": [
+        "글로벌 공식 스토어 1위에는 다 이유가 있네요. 바닐라 요거트 맛이라 약 거부 심한 우리 아이도 숟가락째 넙죽 받아먹습니다.",
+        "밤에 다리 주물러달라고 자주 깨던 아이였는데 마그네슘이 같이 들어가서 그런지 통잠 자는 날이 많아졌어요.",
+        "냉장고에 넣어두고 아침마다 요거트에 한 숟가락씩 타서 주면 하루 영양 챙기기 끝이라 너무 간편합니다."
+      ],
+      "summary": "미국 소아과 전문의 추천 배합, 액상형으로 체내 흡수율 3배 높은 영유아 성장기 칼마디"
     },
     {
       "id": "prod_inf_dev_1",
@@ -1666,13 +1834,37 @@
       "priceNum": 23500,
       "rating": 4.8,
       "reviewCount": 6310,
-      "thumbnail": "🧩",
+      "thumbnail": "src/images/products/prod_inf_dev_1.webp",
       "badgeText": "🚀 소근육 집중 1위",
       "description": "손가락 정밀 조작과 시지각 협응력을 키워 전두엽 뇌 시냅스를 연결하는 친환경 천연원목 교구",
-      "benefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
-      "testBenefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
+      "benefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
+      "testBenefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
       "url": "https://www.coupang.com/np/search?q=%EB%AA%AC%ED%85%8C%EC%86%8C%EB%A6%AC+%EC%9B%90%EB%AA%A9+%EA%B5%90%EA%B5%AC+%EC%86%8C%EA%B7%BC%EC%9C%A1&channel=user&lptag=AF7865143",
-      "affiliateUrl": "https://www.coupang.com/np/search?q=%EB%AA%AC%ED%85%8C%EC%86%8C%EB%A6%AC+%EC%9B%90%EB%AA%A9+%EA%B5%90%EA%B5%AC+%EC%86%8C%EA%B7%BC%EC%9C%A1&channel=user&lptag=AF7865143"
+      "affiliateUrl": "https://www.coupang.com/np/search?q=%EB%AA%AC%ED%85%8C%EC%86%8C%EB%A6%AC+%EC%9B%90%EB%AA%A9+%EA%B5%90%EA%B5%AC+%EC%86%8C%EA%B7%BC%EC%9C%A1&channel=user&lptag=AF7865143",
+      "image": "src/images/products/prod_inf_dev_1.webp",
+      "imageFallback": "src/images/products/prod_inf_dev_1.svg",
+      "specs": [
+        "천연 너도밤나무 원목 및 물고 빨아도 안전한 수성 무독성 페인트 마감",
+        "12~36개월 영유아 손바닥 그립감에 최적화된 라운딩 블록 큐브",
+        "시지각-운동 협응력을 자극하는 입체 3차원 와이어 비즈 미로 롤러코스터",
+        "유럽 CE 및 한국 KC 어린이 안전 공급자 적합성 인증 완료"
+      ],
+      "whyWePicked": [
+        "엄지와 검지로 작은 비즈를 쥐고 이동시키는 조작 활동이 뇌의 언어·수리 중추 시냅스를 자극합니다.",
+        "평면 도형을 입체 구멍에 맞추어 넣는 과정을 통해 대상영속성과 공간 인지 능력을 형성합니다.",
+        "플라스틱 장난감과 달리 따뜻한 원목 촉감과 자연스러운 소리가 아이의 정서적 안정감을 높여줍니다."
+      ],
+      "buyingGuide": {
+        "pros": "내구성이 뛰어나 부러지지 않고 둘째, 셋째까지 물려줄 수 있는 클래식 몬테소리 교구.",
+        "considerations": "원목 특성상 물에 담가 세탁하지 말고 제균 티슈로 닦아 그늘에서 자연 건조.",
+        "recommendedBaby": "소근육 쥐는 힘이 약하거나 장난감에 5분 이상 집중하지 못하는 12~36개월 아이."
+      },
+      "momReviews": [
+        "스마트폰 영상 끊으려고 들였는데, 구슬을 이리저리 굴리고 도형 맞추면서 혼자 40분씩 앉아서 놀아요.",
+        "모서리가 하나도 날카롭지 않고 매끄럽게 마감되어 있어서 구강기 아기 손에 쥐여줘도 안심입니다.",
+        "문센 몬테소리 수업에서 쓰던 교구랑 똑같은데 집에서 매일 반복해서 놀아줄 수 있어 가성비 최고예요."
+      ],
+      "summary": "손가락 정밀 조작과 시지각 협응력을 키워 전두엽 뇌 시냅스를 연결하는 친환경 천연원목 교구"
     },
     {
       "id": "prod_inf_gear_1",
@@ -1688,13 +1880,37 @@
       "priceNum": 38000,
       "rating": 4.8,
       "reviewCount": 4890,
-      "thumbnail": "🚶",
+      "thumbnail": "src/images/products/prod_inf_gear_1.webp",
       "badgeText": "🚀 O다리 방지 보행",
       "description": "골반 수평과 대퇴골 각도를 지켜주는 속도조절 바퀴 설계로 O자 다리 예방 및 대근육 강화",
-      "benefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
-      "testBenefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
+      "benefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
+      "testBenefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
       "url": "https://www.coupang.com/np/search?q=%EA%B1%B8%EC%9D%8C%EB%A7%88+%ED%95%99%EC%8A%B5%EA%B8%B0+%EC%95%88%EC%A0%84+%ED%97%AC%EB%A9%A7&channel=user&lptag=AF7865143",
-      "affiliateUrl": "https://www.coupang.com/np/search?q=%EC%96%B4%EB%A6%B0%EC%9D%B4+%EA%B1%B8%EC%9D%8C%EB%A7%88+%ED%95%99%EC%8A%B5%EA%B8%B0&channel=user&lptag=AF7865143"
+      "affiliateUrl": "https://www.coupang.com/np/search?q=%EA%B1%B8%EC%9D%8C%EB%A7%88+%ED%95%99%EC%8A%B5%EA%B8%B0+%EC%95%88%EC%A0%84+%ED%97%AC%EB%A9%A7&channel=user&lptag=AF7865143",
+      "image": "src/images/products/prod_inf_gear_1.webp",
+      "imageFallback": "src/images/products/prod_inf_gear_1.svg",
+      "specs": [
+        "아이 걸음 속도에 맞춰 바퀴 회전 저항을 조절할 수 있는 2단계 감속 다이얼",
+        "고관절과 무릎 각도가 바깥으로 휘는 O자 다리(내반슬) 변형 방지 와이드 휠베이스",
+        "걸음마 보행기와 분리형 다기능 인지 놀이 테이블 2-in-1 구조",
+        "80g 초경량 충격 흡수 3D 통기성 에어쿠션 유아 머리보호 헬멧 세트"
+      ],
+      "whyWePicked": [
+        "바퀴가 미끄러져 앞으로 쏠려 넘어지는 낙상 사고를 감속 다이얼로 원천 차단합니다.",
+        "아기 걸음걸이 시 대퇴골 각도를 수평으로 유지시켜 곧은 1자 다리 골격 형성을 유도합니다.",
+        "뒤로 쿵 넘어지기 쉬운 걸음마 초기 뇌진탕 위험을 충격 흡수 초경량 헬멧으로 완벽 보호합니다."
+      ],
+      "buyingGuide": {
+        "pros": "잡고 서기 시작하는 10개월부터 걷기 이후 놀이 테이블까지 활용 기간이 2년 이상으로 김.",
+        "considerations": "처음 연습 시 물통이나 장난감으로 본체 하단 무게 중심을 잡아주면 더욱 안정적.",
+        "recommendedBaby": "잡고 일어서기 시작했거나 다리 힘이 부족해 자주 넘어지는 10~24개월 아기."
+      },
+      "momReviews": [
+        "속도 조절 안 되는 걸음마기는 앞으로 밀려서 턱 찧기 일쑤인데, 이건 바퀴를 뻑뻑하게 조절할 수 있어 정말 안전해요.",
+        "아이가 뒤로 꽈당 넘어졌을 때 안전 헬멧 덕분에 울지도 않고 머리도 멀쩡해서 가슴을 쓸어내렸습니다.",
+        "앞판 장난감만 떼서 바닥에 놔줘도 누르고 돌리며 잘 놀고, 바퀴 잠그면 미니 놀이책상이 되어 활용도 200%예요."
+      ],
+      "summary": "골반 수평과 대퇴골 각도를 지켜주는 속도조절 바퀴 설계로 O자 다리 예방 및 대근육 강화"
     },
     {
       "id": "prod_inf_learn_1",
@@ -1710,13 +1926,37 @@
       "priceNum": 0,
       "rating": 4.9,
       "reviewCount": 3820,
-      "thumbnail": "🗣️",
+      "thumbnail": "src/images/products/prod_inf_learn_1.webp",
       "badgeText": "🎁 말문 트이기 무료상담",
       "description": "12~36개월 언어 폭발기 어휘력 300% 확장 K-DST 언어발달 정밀 검사 연계 0원 상담 키트",
-      "benefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
-      "testBenefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
+      "benefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
+      "testBenefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
       "url": "https://click.linkprice.com/click.php?m=hansolfinden&a=A100708867&l=0000",
-      "affiliateUrl": "https://click.linkprice.com/click.php?m=hansolfinden&a=A100708867&l=0000"
+      "affiliateUrl": "https://click.linkprice.com/click.php?m=hansolfinden&a=A100708867&l=0000",
+      "image": "src/images/products/prod_inf_learn_1.webp",
+      "imageFallback": "src/images/products/prod_inf_learn_1.svg",
+      "specs": [
+        "12~36개월 언어 폭발기 어휘력 3배 확장을 위한 리듬 말놀이 보드북",
+        "소리 나는 특수 핀덴카 음원 연계 및 오감 자극 감각 놀이 키트",
+        "K-DST 영유아 발달 검사 연계 전문 교사의 1:1 발달 상담 리포트 제공",
+        "공식 제휴 무료 체험 신청 시 교재와 교구 일체 0원 무료 배송"
+      ],
+      "whyWePicked": [
+        "말문이 트이는 결정적 시기에 일상 대화 어휘를 챈트와 동요로 익혀 말문 트이기를 촉진합니다.",
+        "시각, 청각, 촉각을 동시에 자극하는 다중지능 이론 기반으로 두뇌 언어 회로를 확장합니다.",
+        "우리 아이의 언어 발달 속도가 또래 대비 어느 수준인지 공신력 있는 발달 상담으로 점검받을 수 있습니다."
+      ],
+      "buyingGuide": {
+        "pros": "비용 부담 없이 언어 자극 명품 교재를 집에서 직접 사용해보고 아이의 선호도 확인 가능.",
+        "considerations": "무료 신청 후 안내 해피콜 수신 시 상담 일정을 조율할 수 있음.",
+        "recommendedBaby": "18~36개월인데 옹알이 단계에 머물러 있거나 단어 연결(엄마 물 등)이 늦은 아이."
+      },
+      "momReviews": [
+        "두 돌인데 '엄마', '아빠'만 해서 마음 졸였는데, 말놀이 그림책 노래를 매일 틀어줬더니 한 달 만에 단어가 폭발했어요.",
+        "단순히 책만 오는 게 아니라 선생님이 오셔서 아이랑 놀아주며 언어 발달 상태를 짚어주셔서 큰 도움이 됐습니다.",
+        "노래 멜로디가 너무 신나서 아이가 책을 장난감처럼 들고 다니며 흥얼거려요."
+      ],
+      "summary": "12~36개월 언어 폭발기 어휘력 300% 확장 K-DST 언어발달 정밀 검사 연계 0원 상담 키트"
     },
     {
       "id": "prod_tod_nut_1",
@@ -1732,13 +1972,37 @@
       "priceNum": 29900,
       "rating": 4.9,
       "reviewCount": 11200,
-      "thumbnail": "🛡️",
+      "thumbnail": "src/images/products/prod_tod_nut_1.webp",
       "badgeText": "🚀 단체생활 면역 1위",
       "description": "어린이집·유치원 단체생활 감기·장염 방어 면역력 아연과 장내 마이크로바이옴 정상화 생유산균",
-      "benefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
-      "testBenefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
+      "benefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
+      "testBenefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
       "url": "https://www.coupang.com/np/search?q=%EC%96%B4%EB%A6%B0%EC%9D%B4+%EC%9C%A0%EC%82%B0%EA%B7%A0+%EC%95%84%EC%97%B0+%EB%A9%B4%EC%97%AD&channel=user&lptag=AF7865143",
-      "affiliateUrl": "https://www.coupang.com/np/search?q=%EC%96%B4%EB%A6%B0%EC%9D%B4+%EC%9C%A0%EC%82%B0%EA%B7%A0+%EC%95%84%EC%97%B0+%EB%A9%B4%EC%97%AD&channel=user&lptag=AF7865143"
+      "affiliateUrl": "https://www.coupang.com/np/search?q=%EC%96%B4%EB%A6%B0%EC%9D%B4+%EC%9C%A0%EC%82%B0%EA%B7%A0+%EC%95%84%EC%97%B0+%EB%A9%B4%EC%97%AD&channel=user&lptag=AF7865143",
+      "image": "src/images/products/prod_tod_nut_1.webp",
+      "imageFallback": "src/images/products/prod_tod_nut_1.svg",
+      "specs": [
+        "장 끝까지 살아남는 4중 코팅 특허 유산균 보장균수 100억 CFU",
+        "정상적인 면역 기능과 세포 분열을 위한 글루콘산 아연 일일 섭취량 100%",
+        "뉴질랜드 청정 초유 단백 분말(면역글로불린 IgG 20% 이상 함유) 배합",
+        "합성향료, 이산화규소, 스테아린산마그네슘 無첨가 안심 처방"
+      ],
+      "whyWePicked": [
+        "유치원, 어린이집 단체생활을 시작하며 잦은 감기, 수족구, 장염에 노출되는 시기 면역 장벽을 세워줍니다.",
+        "면역 세포의 70%가 집중된 장내 마이크로바이옴 생태계를 건강하게 조성합니다.",
+        "고소한 분유맛 분말 스틱 제형으로 아이들이 간식처럼 가루째 털어먹거나 우유에 타 먹기 편합니다."
+      ],
+      "buyingGuide": {
+        "pros": "면역 아연과 초유 단백까지 한 포로 해결되어 여러 영양제를 따로 챙길 필요가 없음.",
+        "considerations": "유산균은 열에 약하므로 뜨거운 우유나 물에 타지 말고 미온수나 차가운 음료에 혼합.",
+        "recommendedBaby": "어린이집 입소 후 콧물, 감기를 달고 살거나 배변이 불규칙한 4~6세 유아."
+      },
+      "momReviews": [
+        "어린이집 가고 나서 2주에 한 번씩 소아과 출석 도장을 찍었는데, 이 유산균 먹인 뒤로 감기 횟수가 확 줄었어요.",
+        "맛이 분유처럼 달콤고소해서 약 싫어하는 첫째도 아침마다 스스로 스틱 들고 와서 뜯어달라고 합니다.",
+        "화장실 갈 때마다 힘들어하고 토끼똥 싸던 아이가 매일 아침 황금 바나나똥을 시원하게 봐요!"
+      ],
+      "summary": "어린이집·유치원 단체생활 감기·장염 방어 면역력 아연과 장내 마이크로바이옴 정상화 생유산균"
     },
     {
       "id": "prod_tod_nut_2",
@@ -1754,13 +2018,37 @@
       "priceNum": 31500,
       "rating": 4.8,
       "reviewCount": 22100,
-      "thumbnail": "🍓",
-      "badgeText": "🌿 iHerb 직구 인기 구미",
+      "thumbnail": "src/images/products/prod_tod_nut_2.webp",
+      "badgeText": "🌿 글로벌 안심인증 구미",
       "description": "인공 색소·합성 감미료 0%, 두뇌 발달 필수 DHA와 뼈 형성 비타민D3가 함유된 맛있는 젤리",
-      "benefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
-      "testBenefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
+      "benefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
+      "testBenefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
       "url": "https://kr.iherb.com/pr/smartypants-kids-formula-cherry-lemon-orange-120-gummies/56345?rcode=IPZ1547",
-      "affiliateUrl": "https://kr.iherb.com/pr/smartypants-kids-formula-cherry-lemon-orange-120-gummies/56345?rcode=IPZ1547"
+      "affiliateUrl": "https://kr.iherb.com/pr/smartypants-kids-formula-cherry-lemon-orange-120-gummies/56345?rcode=IPZ1547",
+      "image": "src/images/products/prod_tod_nut_2.webp",
+      "imageFallback": "src/images/products/prod_tod_nut_2.svg",
+      "specs": [
+        "두뇌 및 망막 신경 발달을 위한 야생 어류 추출 고순도 오메가3 EPA & DHA",
+        "뼈 성장과 튼튼한 치아 형성을 돕는 비타민D3(콜레칼시페롤) 고함량 배합",
+        "인공 감미료, 합성 색소, 고과당 옥수수 시럽 0%",
+        "젤라틴 대신 천연 펙틴 베이스를 사용하여 치아에 달라붙지 않는 젤리"
+      ],
+      "whyWePicked": [
+        "생선을 안 먹는 편식 아이에게 두뇌 발달 필수 지방산 DHA를 젤리로 간편하게 공급합니다.",
+        "비타민 A, C, D, E, B6, B12, 엽산, 요오드 등 15가지 핵심 미량 영양소가 골고루 들어있습니다.",
+        "합성 젤라틴이 아닌 감귤 펙틴을 사용하여 치아에 달라붙지 않아 충치 걱정을 덜어줍니다."
+      ],
+      "buyingGuide": {
+        "pros": "아이들이 젤리 간식으로 착각할 정도로 기호성이 매우 뛰어나 영양제 거부감 제로.",
+        "considerations": "너무 맛있어서 과다 섭취하려 할 수 있으므로 하루 권장량(4구미) 준수 지도 필요.",
+        "recommendedBaby": "생선이나 채소 편식이 심하고 달콤한 간식만 찾는 4~6세 유아."
+      },
+      "momReviews": [
+        "오메가3 특유의 비린내가 전혀 안 나고 상큼한 딸기 레몬 젤리 맛이라 아이가 약인 줄도 모르고 먹어요.",
+        "치아 치료 중이라 젤리 주기 무서웠는데, 펙틴 성분이라 이빨에 끈적하게 달라붙지 않아서 너무 만족합니다.",
+        "영양제 먹일 때마다 실랑이하던 스트레스가 완전히 사라졌어요. 직구 장바구니 필수템입니다."
+      ],
+      "summary": "인공 색소·합성 감미료 0%, 두뇌 발달 필수 DHA와 뼈 형성 비타민D3가 함유된 맛있는 젤리"
     },
     {
       "id": "prod_tod_dev_1",
@@ -1776,13 +2064,37 @@
       "priceNum": 42000,
       "rating": 4.9,
       "reviewCount": 8150,
-      "thumbnail": "🏰",
+      "thumbnail": "src/images/products/prod_tod_dev_1.webp",
       "badgeText": "🚀 창의 공간수리 1위",
       "description": "평면 도형에서 입체 건축물로 변환하며 두뇌 두정엽 3차원 공간지각과 수학적 직관력 자극",
-      "benefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
-      "testBenefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
+      "benefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
+      "testBenefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
       "url": "https://www.coupang.com/np/search?q=%EC%9E%90%EC%84%9D+%EB%A7%88%EA%B7%B8%EB%84%A4%ED%8B%B1+%EB%B8%94%EB%A1%9D+120p&channel=user&lptag=AF7865143",
-      "affiliateUrl": "https://www.coupang.com/np/search?q=%EC%9E%90%EC%84%9D+%EB%A7%88%EA%B7%B8%EB%84%A4%ED%8B%B1+%EB%B8%94%EB%A1%9D+120p&channel=user&lptag=AF7865143"
+      "affiliateUrl": "https://www.coupang.com/np/search?q=%EC%9E%90%EC%84%9D+%EB%A7%88%EA%B7%B8%EB%84%A4%ED%8B%B1+%EB%B8%94%EB%A1%9D+120p&channel=user&lptag=AF7865143",
+      "image": "src/images/products/prod_tod_dev_1.webp",
+      "imageFallback": "src/images/products/prod_tod_dev_1.svg",
+      "specs": [
+        "영구 자석 N35 탑재로 360도 어느 각도에서나 척척 달라붙는 초강력 자력",
+        "투명 프리즘 다이아몬드 커팅 설계로 빛 투과 시 아름다운 무지개 그림자 연출",
+        "안전한 초음파 융착 기술로 자석 빠짐 및 삼킴 사고 원천 방지",
+        "정삼각형, 이등변삼각형, 정사각형, 사다리꼴 등 입체 기하학 풀세트 120피스"
+      ],
+      "whyWePicked": [
+        "2D 평면 전개도가 3D 입체 구조물로 순식간에 조립되며 공간지각력과 두정엽을 자극합니다.",
+        "블록끼리 힘들이지 않고 착착 붙어 소근육 조작 능력이 미숙한 4세 아이도 좌절 없이 성공 경험을 맛봅니다.",
+        "단순 조립을 넘어 창문, 성, 다리, 자동차 등 무한한 창의적 건축 놀이로 확장됩니다."
+      ],
+      "buyingGuide": {
+        "pros": "일반 레고보다 조립과 정리가 훨씬 쉽고 바퀴 섀시가 포함되어 자동차 놀이도 가능.",
+        "considerations": "자석 제품이므로 전자기기나 신용카드 근처 보관을 피할 것.",
+        "recommendedBaby": "소근육 협응력이 필요한 시기이자 집중력이 짧은 4~6세 유아."
+      },
+      "momReviews": [
+        "햇빛 비치는 창가에 지어놓으면 알록달록 스테인드글라스처럼 예뻐서 아이가 매일 성을 만들어요.",
+        "일반 블록은 높이 쌓으면 무너져서 짜증 냈는데, 이건 자석이 짱짱하게 잡아줘서 혼자서도 높은 탑을 척척 완성하네요.",
+        "120피스라 형제자매 둘이서 싸우지 않고 사이좋게 나눠 갖고 놀기에 피스 수가 딱 적당합니다."
+      ],
+      "summary": "평면 도형에서 입체 건축물로 변환하며 두뇌 두정엽 3차원 공간지각과 수학적 직관력 자극"
     },
     {
       "id": "prod_tod_gear_1",
@@ -1798,13 +2110,37 @@
       "priceNum": 65000,
       "rating": 4.8,
       "reviewCount": 9140,
-      "thumbnail": "⚡",
+      "thumbnail": "src/images/products/prod_tod_gear_1.webp",
       "badgeText": "🚀 성장판 수직 자극",
       "description": "층간소음 차단 탄성 번지로 관절 무리 없이 무릎 연골 성장판을 자극하고 성장호르몬 분비 촉진",
-      "benefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
-      "testBenefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
+      "benefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
+      "testBenefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
       "url": "https://www.coupang.com/np/search?q=%EC%96%B4%EB%A6%B0%EC%9D%B4+%EB%AC%B4%EC%86%8C%EC%9D%8C+%ED%8A%B8%EB%9E%A8%ED%8F%B4%EB%A6%B0+%EC%84%B1%EC%9E%A5%ED%8C%90&channel=user&lptag=AF7865143",
-      "affiliateUrl": "https://www.coupang.com/np/search?q=%EC%96%B4%EB%A6%B0%EC%9D%B4+%EB%AC%B4%EC%86%8C%EC%9D%8C+%ED%8A%B8%EB%9E%A8%ED%8F%B4%EB%A6%B0+%EC%84%B1%EC%9E%A5%ED%8C%90&channel=user&lptag=AF7865143"
+      "affiliateUrl": "https://www.coupang.com/np/search?q=%EC%96%B4%EB%A6%B0%EC%9D%B4+%EB%AC%B4%EC%86%8C%EC%9D%8C+%ED%8A%B8%EB%9E%A8%ED%8F%B4%EB%A6%B0+%EC%84%B1%EC%9E%A5%ED%8C%90&channel=user&lptag=AF7865143",
+      "image": "src/images/products/prod_tod_gear_1.webp",
+      "imageFallback": "src/images/products/prod_tod_gear_1.svg",
+      "specs": [
+        "삐걱거리는 쇠 스프링 대신 소음 제로 고탄성 특수 번지 로프 30줄 적용",
+        "층간소음 방지 두꺼운 흡음 충격 방진 고무 캡 다리 장착",
+        "3단계 높이 조절 가능한 안전 핸들바 부착으로 점핑 안정성 확보",
+        "최대 하중 100kg 내구성 테스트 통과 (부모와 아이 함께 운동 가능)"
+      ],
+      "whyWePicked": [
+        "수직 점핑 운동은 무릎 연골 성장판에 주기적인 물리적 자극을 주어 성장호르몬 분비를 촉진합니다.",
+        "아파트 층간소음 걱정 없이 미세먼지나 비 오는 날에도 집안에서 넘치는 에너지를 발산시킵니다.",
+        "신체 균형 감각과 전신 대근육 협응력을 길러주어 비만 예방과 바른 체형 형성에 탁월합니다."
+      ],
+      "buyingGuide": {
+        "pros": "스프링 사이에 발이 끼일 위험이 없는 안전 번지코드 방식이며 접이식 보관 가능.",
+        "considerations": "천장 조명이나 가구와 1.5m 이상 안전거리를 확보하고 핸들바를 잡고 뛰도록 지도.",
+        "recommendedBaby": "에너지가 넘쳐 소파나 침대에서 자꾸 뛰어내리는 4~6세 에너자이저 아이."
+      },
+      "momReviews": [
+        "아랫집 층간소음 항의받고 가슴 졸였는데, 번지코드 트램폴린 들이고 나서 발소리 소음 걱정 끝났어요!",
+        "밤마다 잠투정 심하던 아이가 저녁 먹고 20분만 신나게 뛰면 씻자마자 기절해서 꿀잠 잡니다.",
+        "쇠 스프링은 녹슬고 삐걱거리는데 이건 소리가 정말 하나도 안 나고 핸들바가 있어 4세 아이도 안전하게 타요."
+      ],
+      "summary": "층간소음 차단 탄성 번지로 관절 무리 없이 무릎 연골 성장판을 자극하고 성장호르몬 분비 촉진"
     },
     {
       "id": "prod_tod_learn_1",
@@ -1820,13 +2156,37 @@
       "priceNum": 0,
       "rating": 4.9,
       "reviewCount": 14500,
-      "thumbnail": "💻",
+      "thumbnail": "src/images/products/prod_tod_learn_1.webp",
       "badgeText": "🎁 천재교육 7일 무료체험",
       "description": "한글·수학·동화·영어까지 전용 태블릿과 체험 교재 집앞 무료배송 및 1:1 맞춤 학습케어",
-      "benefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
-      "testBenefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
+      "benefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
+      "testBenefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
       "url": "https://click.linkprice.com/click.php?m=milkti_i&a=A100708867&l=0000",
-      "affiliateUrl": "https://click.linkprice.com/click.php?m=milkti_i&a=A100708867&l=0000"
+      "affiliateUrl": "https://click.linkprice.com/click.php?m=milkti_i&a=A100708867&l=0000",
+      "image": "src/images/products/prod_tod_learn_1.webp",
+      "imageFallback": "src/images/products/prod_tod_learn_1.svg",
+      "specs": [
+        "4~6세 발달 단계 맞춤 한글, 수학, 영어, 동화, 기초 코딩 전과목 수록",
+        "아이 시력 보호를 위한 유아 전용 블루라이트 차단 케이스 전용 태블릿",
+        "오프라인 연계 한글 쓰기 노트 및 창의 놀이 학습 교재 집앞 무료 배송",
+        "유아 교육 전문 담임선생님의 주 1회 1:1 맞춤 화상 코칭 관리"
+      ],
+      "whyWePicked": [
+        "주입식 학습이 아닌 게임과 인터랙티브 터치 놀이로 자연스럽게 한글 글자를 눈에 익힙니다.",
+        "취학 전 필수 운필력(연필 쥐는 힘)을 전용 스마트펜 쓰기 연습으로 단계별로 길러줍니다.",
+        "기기 배송비부터 체험 교재까지 전액 0원으로 태블릿 학습의 호불호와 학습 효과를 사전 검증할 수 있습니다."
+      ],
+      "buyingGuide": {
+        "pros": "한글 떼기 사교육비 부담을 줄여주며 체계적인 누리과정 연계 커리큘럼 제공.",
+        "considerations": "7일 무료체험 종료 후 무료 반납 택배 기사님이 직접 방문 수거하므로 부담 없음.",
+        "recommendedBaby": "유치원 입학을 앞두고 한글과 숫자에 호기심을 보이기 시작한 4~6세 아이."
+      },
+      "momReviews": [
+        "학습지 방문 선생님 부르기엔 부담스러웠는데, 밀크티 동화 보면서 혼자 '가나다'를 따라 쓰더니 한글을 뗐어요.",
+        "교재 퀄리티가 너무 좋아서 무료체험만으로도 값어치를 톡톡히 했습니다. 아이가 패드 공부 시간을 놀이로 생각해요.",
+        "선생님이 전화로 아이 진도 칭찬해 주시니까 아이가 어깨 으쓱해하며 스스로 패드 켜고 공부합니다."
+      ],
+      "summary": "한글·수학·동화·영어까지 전용 태블릿과 체험 교재 집앞 무료배송 및 1:1 맞춤 학습케어"
     },
     {
       "id": "prod_ch_nut_1",
@@ -1842,13 +2202,37 @@
       "priceNum": 34500,
       "rating": 4.9,
       "reviewCount": 10450,
-      "thumbnail": "📈",
+      "thumbnail": "src/images/products/prod_ch_nut_1.webp",
       "badgeText": "🚀 골든타임 성장 베스트",
       "description": "2차 성징 사춘기 전후 급성장기(PHV) 골밀도 강화 및 성장판 닫힘 지연 somatostatin 억제 영양",
-      "benefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
-      "testBenefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
+      "benefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
+      "testBenefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
       "url": "https://www.coupang.com/np/search?q=%EC%B2%AD%EC%86%8C%EB%85%84+%ED%82%A4%EC%84%B1%EC%9E%A5+%EC%B9%BC%EC%8A%98+%EB%A7%88%EA%B7%B8%EB%84%A4%EC%8A%88+D3+K2&channel=user&lptag=AF7865143",
-      "affiliateUrl": "https://www.coupang.com/np/search?q=%EC%B2%AD%EC%86%8C%EB%85%84+%ED%82%A4%EC%84%B1%EC%9E%A5+%EC%B9%BC%EC%8A%98+%EB%A7%88%EA%B7%B8%EB%84%A4%EC%8A%88+D3+K2&channel=user&lptag=AF7865143"
+      "affiliateUrl": "https://www.coupang.com/np/search?q=%EC%B2%AD%EC%86%8C%EB%85%84+%ED%82%A4%EC%84%B1%EC%9E%A5+%EC%B9%BC%EC%8A%98+%EB%A7%88%EA%B7%B8%EB%84%A4%EC%8A%88+D3+K2&channel=user&lptag=AF7865143",
+      "image": "src/images/products/prod_ch_nut_1.webp",
+      "imageFallback": "src/images/products/prod_ch_nut_1.svg",
+      "specs": [
+        "뼈 성장판 기질(Matrix) 형성을 돕는 비타민K2(MK-7) + 비타민D3 시너지 배합",
+        "사춘기 급성장기(PHV) 골밀도 강화를 위한 고순도 해조 칼슘 & 쌀 발효 마그네슘",
+        "칼슘이 혈관에 쌓이지 않고 뼈로 바로 흡수되도록 유도하는 특허 기술",
+        "알약을 못 삼키는 초중등 청소년도 부담 없이 씹어 먹는 상큼한 코코아맛 츄어블"
+      ],
+      "whyWePicked": [
+        "사춘기 급성장기(연간 8~12cm 성장)는 평생 골밀도의 40%가 완성되는 단 한 번의 골든타임입니다.",
+        "비타민 K2가 칼슘을 뼈 속 오스테오칼신 단백질과 결합시켜 뼈의 종적 성장을 촉진합니다.",
+        "학업 스트레스와 수면 부족으로 인한 뼈 성장판 조기 폐쇄를 방지하는 영양 균형을 완성합니다."
+      ],
+      "buyingGuide": {
+        "pros": "목넘김 힘든 큰 알약 대신 맛있는 츄어블정으로 매일 꾸준한 복용 가능.",
+        "considerations": "저녁 식사 직후 또는 취침 1시간 전 섭취 시 야간 성장호르몬 분비와 결합되어 효과 배가.",
+        "recommendedBaby": "2차 성징 징후가 나타나기 시작했거나 키가 또래보다 더디게 자라는 7~15세 청소년."
+      },
+      "momReviews": [
+        "초등학교 고학년 되면서 알약 못 먹는 아들 때문에 고민이었는데, 이건 씹어먹는 츄어블이라 매일 알아서 챙겨 먹어요.",
+        "성장판 검사하고 의사선생님이 K2 같이 든 칼슘제 먹이라 하셔서 골랐는데 1년 동안 8cm 훌쩍 컸습니다.",
+        "마그네슘 덕분인지 밤에 다리 쥐나는 것도 없어지고 아침에 일어날 때 개운해해요."
+      ],
+      "summary": "2차 성징 사춘기 전후 급성장기(PHV) 골밀도 강화 및 성장판 닫힘 지연 somatostatin 억제 영양"
     },
     {
       "id": "prod_ch_nut_2",
@@ -1864,13 +2248,37 @@
       "priceNum": 37800,
       "rating": 4.9,
       "reviewCount": 26800,
-      "thumbnail": "🐟",
-      "badgeText": "🌿 iHerb 전두엽 두뇌 1위",
+      "thumbnail": "src/images/products/prod_ch_nut_2.webp",
+      "badgeText": "🌿 글로벌 두뇌영양 1위",
       "description": "초등학생 전두엽 실행 집중력, 작업기억 용량 및 시각 피로 완화를 위한 노르웨이산 rTG 오메가3",
-      "benefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
-      "testBenefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
+      "benefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
+      "testBenefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
       "url": "https://kr.iherb.com/pr/nordic-naturals-daily-omega-kids-natural-fruit-flavor-500-mg-30-soft-gels/4181?rcode=IPZ1547",
-      "affiliateUrl": "https://kr.iherb.com/pr/nordic-naturals-daily-omega-kids-natural-fruit-flavor-500-mg-30-soft-gels/4181?rcode=IPZ1547"
+      "affiliateUrl": "https://kr.iherb.com/pr/nordic-naturals-daily-omega-kids-natural-fruit-flavor-500-mg-30-soft-gels/4181?rcode=IPZ1547",
+      "image": "src/images/products/prod_ch_nut_2.webp",
+      "imageFallback": "src/images/products/prod_ch_nut_2.svg",
+      "specs": [
+        "초등학생 전두엽 실행 집중력 및 작업기억 향상을 위한 고순도 DHA 480mg",
+        "흡수율과 생체 이용률이 가장 우수한 천연 rTG 형태 피쉬 오일 100%",
+        "중금속·미세플라스틱 걱정 없는 남태평양 소형 어종(멸치·정어리)만 포획 정제",
+        "입안에서 톡 터뜨려 먹거나 꿀꺽 삼킬 수 있는 천연 베리향 미니 소프트젤"
+      ],
+      "whyWePicked": [
+        "초등 시기 본격적인 학업과 독서에 필요한 전두엽 주의집중력 회로를 강화합니다.",
+        "스마트폰과 태블릿 학습으로 피로해진 아이들의 안구 망막 건조와 시력을 보호합니다.",
+        "산패도 및 순도 검사에서 세계 3대 인증(IFOS 5-Star)을 획득한 글로벌 최고 등급 오메가3입니다."
+      ],
+      "buyingGuide": {
+        "pros": "소프트젤 크기가 쌀알만 해서 초등학생이 목넘김에 부담 없이 쉽게 삼킬 수 있음.",
+        "considerations": "오메가3는 지용성이므로 식사 도중이나 기름진 식사 직후 복용 시 흡수율 최고.",
+        "recommendedBaby": "산만해서 책상에 15분 이상 앉아있기 힘들어하거나 눈을 자주 깜빡이는 7~12세 아이."
+      },
+      "momReviews": [
+        "젤 크기가 아주 작아서 알약 처음 삼켜보는 초등 2학년 아이도 물 한 모금에 쏙 잘 삼킵니다.",
+        "비린내에 엄청 예민한 아이인데 딸기향이 솔솔 나서 거부감 없이 2년째 매일 먹이고 있어요.",
+        "선생님께서 수업 시간에 딴청 피우는 게 눈에 띄게 줄고 책 읽을 때 집중하는 시간이 길어졌다고 칭찬해 주셨어요."
+      ],
+      "summary": "초등학생 전두엽 실행 집중력, 작업기억 용량 및 시각 피로 완화를 위한 노르웨이산 rTG 오메가3"
     },
     {
       "id": "prod_ch_dev_1",
@@ -1886,13 +2294,37 @@
       "priceNum": 58000,
       "rating": 4.9,
       "reviewCount": 4210,
-      "thumbnail": "🧪",
+      "thumbnail": "src/images/products/prod_ch_dev_1.webp",
       "badgeText": "🚀 초등 STEAM 교구 1위",
       "description": "위치·운동에너지 역학 법칙을 온몸으로 체험하며 스마트폰 중독 도파민을 이겨내는 과학 마블런",
-      "benefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
-      "testBenefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
-      "url": "https://www.coupang.com/np/search?q=%EA%B7%B8%EB%9E%98%EB%Bi%ED%8A%B8%EB%9E%99%EC%8A%A4+%EC%8A%A4%ED%83%80%ED%84%B0%ED%8C%A9&channel=user&lptag=AF7865143",
-      "affiliateUrl": "https://www.coupang.com/np/search?q=%EA%B7%B8%EB%9E%98%EB%Bi%ED%8A%B8%EB%9E%99%EC%8A%A4+%EC%8A%A4%ED%83%80%ED%84%B0%ED%8C%A9&channel=user&lptag=AF7865143"
+      "benefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
+      "testBenefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
+      "url": "https://www.coupang.com/np/search?q=%EA%B7%B8%EB%9E%98%EB%B9%84%ED%8A%B8%EB%9E%99%EC%8A%A4+%EC%8A%A4%ED%83%80%ED%84%B0%ED%8C%A9&channel=user&lptag=AF7865143",
+      "affiliateUrl": "https://www.coupang.com/np/search?q=%EA%B7%B8%EB%9E%98%EB%B9%84%ED%8A%B8%EB%9E%99%EC%8A%A4+%EC%8A%A4%ED%83%80%ED%84%B0%ED%8C%A9&channel=user&lptag=AF7865143",
+      "image": "src/images/products/prod_ch_dev_1.webp",
+      "imageFallback": "src/images/products/prod_ch_dev_1.svg",
+      "specs": [
+        "중력, 자기력, 운동역학 법칙을 직접 트랙을 설계하며 체득하는 STEAM 교구 1위",
+        "자석 대포, 스파이럴 트랙, 높낮이 타일 등 100개 이상의 다채로운 컴포넌트",
+        "스마트폰 게임의 단순 도파민을 대체하는 고차원 입체 문제해결력 프로젝트",
+        "독일 라벤스부르거 정품 제조 및 전 세계 수많은 영재 교육 기관 공식 채택"
+      ],
+      "whyWePicked": [
+        "구슬이 목표 지점까지 멈추지 않고 도달하도록 실패와 수정을 거치며 회복탄력성을 기릅니다.",
+        "초등 과학 교과서에 나오는 위치에너지-운동에너지 전환 원리를 손끝으로 직관적 이해합니다.",
+        "스스로 레일 각도와 타이밍을 계산하며 뇌의 기획·실행 기능(Executive Function)을 발달시킵니다."
+      ],
+      "buyingGuide": {
+        "pros": "확장팩(트랙커, 루프 등)을 추가해 거실 전체를 롤러코스터 과학실험실로 무한 확장 가능.",
+        "considerations": "작은 쇠구슬이 포함되어 있으므로 만 3세 미만 영유아가 있는 가정은 분리 보관.",
+        "recommendedBaby": "레고나 과학 실험을 좋아하고 스마트폰 게임 시간을 줄이고 싶은 7~12세 초등학생."
+      },
+      "momReviews": [
+        "방학 동안 게임기만 붙잡고 살던 아들이 그래비트랙스 펼쳐놓고 서너 시간 동안 꼼짝 않고 트랙 설계에 몰입하네요.",
+        "구슬이 왜 중간에 멈췄는지 원인을 찾고 각도를 고치면서 생각하는 힘이 부쩍 자란 게 느껴집니다.",
+        "아빠랑 아이가 머리 맞대고 신기록 세우며 협동 놀이하기에 이것만 한 교구가 없어요. 초등 입학 선물로 강력 추천합니다."
+      ],
+      "summary": "위치·운동에너지 역학 법칙을 온몸으로 체험하며 스마트폰 중독 도파민을 이겨내는 과학 마블런"
     },
     {
       "id": "prod_ch_gear_1",
@@ -1908,13 +2340,37 @@
       "priceNum": 89000,
       "rating": 4.8,
       "reviewCount": 6890,
-      "thumbnail": "🪑",
+      "thumbnail": "src/images/products/prod_ch_gear_1.webp",
       "badgeText": "🚀 숨은 키 2cm 보존",
       "description": "구부정한 척추 디스크 압박을 해소하여 숨은 키 1.8~2.2cm를 찾아주는 듀얼 요추 서포트 의자",
-      "benefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
-      "testBenefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
+      "benefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
+      "testBenefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
       "url": "https://www.coupang.com/np/search?q=%EC%B4%88%EB%93%B1+%EC%B2%99%EC%B6%94+%EC%9D%98%EC%9E%90+%EB%8F%85%EC%84%9C%EB%8C%80&channel=user&lptag=AF7865143",
-      "affiliateUrl": "https://www.coupang.com/np/search?q=%EC%B4%88%EB%93%B1+%EC%B2%99%EC%B6%94+%EC%9D%98%EC%9E%90+%EB%8F%85%EC%84%9C%EB%8C%80&channel=user&lptag=AF7865143"
+      "affiliateUrl": "https://www.coupang.com/np/search?q=%EC%B4%88%EB%93%B1+%EC%B2%99%EC%B6%94+%EC%9D%98%EC%9E%90+%EB%8F%85%EC%84%9C%EB%8C%80&channel=user&lptag=AF7865143",
+      "image": "src/images/products/prod_ch_gear_1.webp",
+      "imageFallback": "src/images/products/prod_ch_gear_1.svg",
+      "specs": [
+        "구부정한 등과 거북목을 지지해 숨은 키 1.8~2.2cm를 찾아주는 듀얼 요추 백레스트",
+        "키 110cm부터 170cm까지 신장 성장에 맞춰 조절 가능한 좌판 깊이 & 등받이 높이",
+        "무릎 연골 압박을 분산시키는 탈부착형 원형 발받침대 기본 장착",
+        "1단~6단 각도 조절 친환경 대나무 원목 거북목 방지 와이드 독서대 세트"
+      ],
+      "whyWePicked": [
+        "의자에 앉았을 때 발이 공중에 뜨면 골반이 틀어지므로 발받침대로 하체 안정성을 잡았습니다.",
+        "듀얼 등받이가 척추 좌우를 감싸주어 척추측만증과 디스크 압박을 분산시킵니다.",
+        "고개를 숙이지 않는 45도 독서대 각도로 경추 C자 커브를 보존하고 시력 저하를 방지합니다."
+      ],
+      "buyingGuide": {
+        "pros": "발받침대와 높낮이 조절로 초등학교 입학부터 중학교 졸업까지 6년 이상 장기 사용 가능.",
+        "considerations": "책상 높이와 의자 높이를 맞춰 팔꿈치 각도가 90도가 되도록 세팅할 것.",
+        "recommendedBaby": "책상에 앉으면 턱을 괴거나 다리를 꼬고 구부정하게 엎드려 공부하는 7~13세 아동."
+      },
+      "momReviews": [
+        "발이 땅에 안 닿아서 의자 위에서 뱅글뱅글 돌며 산만했던 아이가 발받침대 있는 의자로 바꾸니 바르게 딱 앉아있어요.",
+        "등받이가 허리를 쏙 받쳐줘서 구부정하던 자세가 꼿꼿해졌고, 독서대 덕분에 목 아프다는 소리가 쏙 들어갔습니다.",
+        "바퀴 회전 고정 기능이 있어 공부할 때 집중이 흐트러지지 않아 학습 태도 잡는 데 일등공신입니다."
+      ],
+      "summary": "구부정한 척추 디스크 압박을 해소하여 숨은 키 1.8~2.2cm를 찾아주는 듀얼 요추 서포트 의자"
     },
     {
       "id": "prod_ch_learn_1",
@@ -1930,13 +2386,37 @@
       "priceNum": 0,
       "rating": 4.9,
       "reviewCount": 16800,
-      "thumbnail": "📚",
+      "thumbnail": "src/images/products/prod_ch_learn_1.webp",
       "badgeText": "🎁 홈런 AI 10일 무료체험",
       "description": "초등 전과목 AI 학습기 + 학습 진단 검사 + 전과목 교재 100% 무료 증정 이벤트",
-      "benefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
-      "testBenefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
+      "benefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
+      "testBenefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
       "url": "https://click.linkprice.com/click.php?m=home-learn&a=A100708867&l=0000",
-      "affiliateUrl": "https://click.linkprice.com/click.php?m=home-learn&a=A100708867&l=0000"
+      "affiliateUrl": "https://click.linkprice.com/click.php?m=home-learn&a=A100708867&l=0000",
+      "image": "src/images/products/prod_ch_learn_1.webp",
+      "imageFallback": "src/images/products/prod_ch_learn_1.svg",
+      "specs": [
+        "전국 초등학교 95% 교실 수업에서 사용하는 교과 연계 100% 디지털 콘텐츠",
+        "아이 수준별 학습 결손을 진단해 주는 AI 생활기록부 & 취약 단원 맞춤 처방",
+        "유해 사이트 완벽 차단 및 학습 전용 소프트웨어가 탑재된 전용 학습기 집앞 무료 배송",
+        "초등 전학년 국·수·사·과 전과목 교재 100% 무료 증정 이벤트 포함"
+      ],
+      "whyWePicked": [
+        "학교 수업 교과 진도와 똑같이 예습·복습할 수 있어 아이의 학교 시험 및 수행평가 자신감을 높입니다.",
+        "AI 튜터가 시선 추적과 문제 풀이 습관을 분석하여 공부 집중도와 메타인지 능력을 교정합니다.",
+        "10일 동안 전과목 콘텐츠를 무제한 체험할 수 있으며 배송비와 반납비까지 완전 0원 무료입니다."
+      ],
+      "buyingGuide": {
+        "pros": "과목별 학원비 수십만 원을 절약할 수 있는 올인원 홈스쿨링 시스템.",
+        "considerations": "10일 체험 후 만족하지 않을 경우 무료 반납 신청하면 택배 기사님이 방문 수거.",
+        "recommendedBaby": "초등 입학 후 기초 학력 및 매일 30분 스스로 공부하는 자기주도 학습 습관이 필요한 7~12세."
+      },
+      "momReviews": [
+        "아이가 학교에서 선생님이 틀어주시는 화면이랑 똑같다면서 신기해하며 스스로 켜고 문제를 풀어요.",
+        "수학 연산이랑 단원평가 대비가 잘 되어 있어서 학원 안 보내고도 학교 단원평가 100점 맞아왔습니다.",
+        "10일 무료체험 신청해서 받아보고 마음에 안 들면 편하게 반납할 수 있으니 부담 없이 시작해 보기 참 좋아요."
+      ],
+      "summary": "초등 전과목 AI 학습기 + 학습 진단 검사 + 전과목 교재 100% 무료 증정 이벤트"
     }
   ],
   "products": [
@@ -1954,13 +2434,37 @@
       "priceNum": 26400,
       "rating": 4.9,
       "reviewCount": 14200,
-      "thumbnail": "🍼",
-      "badgeText": "🌿 iHerb 직구 베스트",
+      "thumbnail": "src/images/products/prod_nb_nut_1.webp",
+      "badgeText": "🌿 글로벌 안심인증 베스트",
       "description": "모유수유아 소아과 권장 필수 액상 비타민D 하루 1방울 및 신생아 배앓이 방지 프리미엄 유산균",
-      "benefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
-      "testBenefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
+      "benefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
+      "testBenefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
       "url": "https://kr.iherb.com/pr/california-gold-nutrition-baby-vitamin-d3-drops-400-iu-34-fl-oz-10-ml/65958?rcode=IPZ1547",
-      "affiliateUrl": "https://kr.iherb.com/pr/california-gold-nutrition-baby-vitamin-d3-drops-400-iu-34-fl-oz-10-ml/65958?rcode=IPZ1547"
+      "affiliateUrl": "https://kr.iherb.com/pr/california-gold-nutrition-baby-vitamin-d3-drops-400-iu-34-fl-oz-10-ml/65958?rcode=IPZ1547",
+      "image": "src/images/products/prod_nb_nut_1.webp",
+      "imageFallback": "src/images/products/prod_nb_nut_1.svg",
+      "specs": [
+        "1일 1방울(0.03ml)로 영유아 일일 권장량 400IU 100% 충족",
+        "스위스 DSM사 프리미엄 Quali-D 비타민D3 원료 사용",
+        "락토바실러스 루테리(L.reuteri) 배앓이 방지 특허 유산균 배합",
+        "감미료, 착색료, 합성향료, 보존료 4無 원칙"
+      ],
+      "whyWePicked": [
+        "모유에는 비타민D가 거의 없어 소아청소년과학회에서 생후 즉시 보충을 권고하는 필수 영양소입니다.",
+        "유로드롭 특수 드로퍼 기술로 거꾸로 들면 정확히 1방울만 떨어져 과다 복용 위험이 없습니다.",
+        "신생아 영아산통(배앓이) 감소 효과가 입증된 루테리 균주가 배합되어 밤잠 안정에 기여합니다."
+      ],
+      "buyingGuide": {
+        "pros": "분유, 모유, 쪽쪽이에 1방울만 톡 떨어뜨려 먹이기 매우 간편함.",
+        "considerations": "오일 제형이므로 직사광선을 피해 25도 이하 실온 보관 필수.",
+        "recommendedBaby": "완모(완전모유수유) 아기, 밤에 배앓이로 자주 보채는 생후 0~6개월 신생아."
+      },
+      "momReviews": [
+        "조리원에서 나오자마자 밤마다 영아산통으로 울던 아기였는데, 1주일 먹이고 나서 트림도 잘하고 밤잠 시간이 눈에 띄게 늘었어요.",
+        "스포이드 방식은 흘리기 쉬운데 이건 병을 기울이면 딱 한 방울만 똑 떨어져서 젖꼭지 위에 바르기 최고입니다.",
+        "소아과 정기검진 때 의사선생님께서도 권장하신 제품이라 둘째 때도 고민 없이 선택했습니다."
+      ],
+      "summary": "모유수유아 소아과 권장 필수 액상 비타민D 하루 1방울 및 신생아 배앓이 방지 프리미엄 유산균"
     },
     {
       "id": "prod_nb_dev_1",
@@ -1976,13 +2480,37 @@
       "priceNum": 19800,
       "rating": 4.9,
       "reviewCount": 8930,
-      "thumbnail": "👁️",
-      "badgeText": "🚀 쿠팡 로켓와우 1위",
+      "thumbnail": "src/images/products/prod_nb_dev_1.webp",
+      "badgeText": "🚀 에디터 셀렉트 1위",
       "description": "생후 0~3개월 시신경·두뇌 망막 자극 흑백 초점 병풍책과 무독성 구강기 안심 헝겊 인형",
-      "benefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
-      "testBenefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
+      "benefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
+      "testBenefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
       "url": "https://www.coupang.com/np/search?q=%EC%8B%A0%EC%83%9D%EC%95%84+%ED%9D%91%EB%B0%B1+%EC%B4%88%EC%A0%90%EC%B1%85+%ED%97%93%EA%B2%81%EC%B1%85&channel=user&lptag=AF7865143",
-      "affiliateUrl": "https://www.coupang.com/np/search?q=%EC%8B%A0%EC%83%9D%EC%95%84+%ED%9D%91%EB%B0%B1+%EC%B4%88%EC%A0%90%EC%B1%85+%ED%97%93%EA%B2%81%EC%B1%85&channel=user&lptag=AF7865143"
+      "affiliateUrl": "https://www.coupang.com/np/search?q=%EC%8B%A0%EC%83%9D%EC%95%84+%ED%9D%91%EB%B0%B1+%EC%B4%88%EC%A0%90%EC%B1%85+%ED%97%93%EA%B2%81%EC%B1%85&channel=user&lptag=AF7865143",
+      "image": "src/images/products/prod_nb_dev_1.webp",
+      "imageFallback": "src/images/products/prod_nb_dev_1.svg",
+      "specs": [
+        "생후 0~100일 망막 시신경 자극용 고대비 흑백 기하학 패턴 12면",
+        "백일 이후 시각 변별력 확장을 위한 원색 컬러 스토리 12면",
+        "무독성 유기농 순면(OEKO-TEX Class 1) 촉각 바스락 헝겊 인형",
+        "침이나 물에 젖어도 찢어지지 않는 방수 코팅 병풍형 보드북"
+      ],
+      "whyWePicked": [
+        "갓 태어난 신생아는 명암만 구별할 수 있어 고대비 흑백 초점책이 시각 피질 뇌 발달의 필수 자극원입니다.",
+        "아기 침대나 역류방지쿠션 옆에 병풍처럼 스스로 세워둘 수 있어 터미타임 유도에 최적입니다.",
+        "구강기 아기가 물고 빨아도 유해물질이 나오지 않는 오가닉 안전 인증 원단만 엄선했습니다."
+      ],
+      "buyingGuide": {
+        "pros": "터미타임(배밀이 연습) 시 아기 시선을 30분 이상 고정시켜 목 근육 발달 촉진.",
+        "considerations": "헝겊 인형은 미온수 손세탁 권장(세탁기 온수 탈수 시 바스락 소리 감소 가능).",
+        "recommendedBaby": "생후 0~4개월 누워있는 시간이 많고 시선 맞추기 연습이 필요한 아기."
+      },
+      "momReviews": [
+        "터미타임 힘들어하던 아이가 이 흑백 초점책만 펴주면 고개 번쩍 들고 초집중해서 쳐다봐요!",
+        "헝겊 인형에서 바스락 소리가 나니까 칭얼거리다가도 손을 뻗으며 만지작거리다 스르륵 잠드네요.",
+        "출산선물로 받았던 수많은 교구 중 가장 활용도 높고 사진 찍어줄 때도 너무 예쁘게 나옵니다."
+      ],
+      "summary": "생후 0~3개월 시신경·두뇌 망막 자극 흑백 초점 병풍책과 무독성 구강기 안심 헝겊 인형"
     },
     {
       "id": "prod_nb_gear_1",
@@ -1998,13 +2526,37 @@
       "priceNum": 28500,
       "rating": 4.8,
       "reviewCount": 16540,
-      "thumbnail": "🌙",
+      "thumbnail": "src/images/products/prod_nb_gear_1.webp",
       "badgeText": "🚀 꿀잠 수면 1위",
       "description": "나비잠 자세를 유지시켜 신생아 모로반사 깜짝 놀람을 막아주고 깊은 수면(SWS) 호르몬 분비 유도",
-      "benefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
-      "testBenefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
+      "benefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
+      "testBenefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
       "url": "https://www.coupang.com/np/search?q=%EC%8B%A0%EC%83%9D%EC%95%84+%EC%8A%A4%EC%99%80%EB%93%A4%EC%97%85+%EC%86%8D%EC%8B%B8%EA%B0%9C&channel=user&lptag=AF7865143",
-      "affiliateUrl": "https://www.coupang.com/np/search?q=%EC%8B%A0%EC%83%9D%EC%95%84+%EC%8A%A4%EC%99%80%EB%93%A4%EC%97%85+%EC%86%8D%EC%8B%B8%EA%B0%9C&channel=user&lptag=AF7865143"
+      "affiliateUrl": "https://www.coupang.com/np/search?q=%EC%8B%A0%EC%83%9D%EC%95%84+%EC%8A%A4%EC%99%80%EB%93%A4%EC%97%85+%EC%86%8D%EC%8B%B8%EA%B0%9C&channel=user&lptag=AF7865143",
+      "image": "src/images/products/prod_nb_gear_1.webp",
+      "imageFallback": "src/images/products/prod_nb_gear_1.svg",
+      "specs": [
+        "태아기 자궁 속 자세를 재현하는 자연스러운 나비잠(Arms-Up) 디자인",
+        "기저귀 교체가 간편한 상하 양방향 2-Way YKK 무독성 지퍼",
+        "100% 오가닉 코튼 40수 신축성 원단으로 통기성 및 체온 조절 탁월",
+        "국제고관절이형성증협회(IHDI) 인증 인체공학적 고관절 보호 설계"
+      ],
+      "whyWePicked": [
+        "신생아 모로반사(허우적거림)로 인한 잦은 깸을 완벽 차단하여 3~4시간 연속 숙면을 돕습니다.",
+        "팔을 위로 올린 자세로 손을 빨며 스스로 안정을 찾는 자기진정(Self-Soothing) 능력을 키워줍니다.",
+        "양방향 지퍼 구조로 새벽 수유 후 속싸개를 다 벗기지 않고 기저귀만 10초 만에 교체 가능합니다."
+      ],
+      "buyingGuide": {
+        "pros": "신생아 육아의 질을 바꿔주는 대표적인 '육아 꿀잠템'.",
+        "considerations": "몸에 딱 맞게 입혀야 모로반사 억제 효과가 있으므로 아기 몸무게 기준 정사이즈 추천.",
+        "recommendedBaby": "작은 소리에도 깜짝 놀라 팔을 번쩍 들며 우는 0~3개월 신생아."
+      },
+      "momReviews": [
+        "이거 입히기 전에는 30분마다 깨서 울었는데 입힌 첫날부터 4시간 연속으로 잤어요. 기적의 속싸개 맞습니다.",
+        "새벽에 지퍼 아래만 쓱 올려서 기저귀 갈아주면 아기가 잠에서 완전히 깨지 않아 수면 교육이 훨씬 쉬워졌어요.",
+        "일반 천 속싸개는 풀려서 질식 위험이 걱정됐는데, 이건 착용도 쉽고 고관절도 편안해 보여 안심입니다."
+      ],
+      "summary": "나비잠 자세를 유지시켜 신생아 모로반사 깜짝 놀람을 막아주고 깊은 수면(SWS) 호르몬 분비 유도"
     },
     {
       "id": "prod_nb_gear_2",
@@ -2020,13 +2572,37 @@
       "priceNum": 34000,
       "rating": 4.9,
       "reviewCount": 7420,
-      "thumbnail": "🛏️",
+      "thumbnail": "src/images/products/prod_nb_gear_2.webp",
       "badgeText": "🚀 두상·경추 보호",
       "description": "신생아 연약한 경추 C자 곡선 지지 및 열 많은 아기 태열·두상 변형 방지 에어쿨링 설계",
-      "benefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
-      "testBenefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
+      "benefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
+      "testBenefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
       "url": "https://www.coupang.com/np/search?q=%EC%8B%A0%EC%83%9D%EC%95%84+%EB%91%90%EC%83%81+%EB%B2%A0%EA%B0%9C+%EC%97%90%EC%96%B4%EB%A9%94%EC%89%AC&channel=user&lptag=AF7865143",
-      "affiliateUrl": "https://www.coupang.com/np/search?q=%EC%8B%A0%EC%83%9D%EC%95%84+%EB%91%90%EC%83%81+%EB%B2%A0%EA%B0%9C+%EC%97%90%EC%96%B4%EB%A9%94%EC%89%AC&channel=user&lptag=AF7865143"
+      "affiliateUrl": "https://www.coupang.com/np/search?q=%EC%8B%A0%EC%83%9D%EC%95%84+%EB%91%90%EC%83%81+%EB%B2%A0%EA%B0%9C+%EC%97%90%EC%96%B4%EB%A9%94%EC%89%AC&channel=user&lptag=AF7865143",
+      "image": "src/images/products/prod_nb_gear_2.webp",
+      "imageFallback": "src/images/products/prod_nb_gear_2.svg",
+      "specs": [
+        "뒷머리 압력을 고르게 분산하는 원형 서라운드 홀(Concave) 구조",
+        "열 많은 아기 태열 방지를 위한 독일 기술 3D 에어메쉬 100% 입체 통기 구조",
+        "연약한 신생아 목 경추 C자 커브를 지지하는 0.5cm 초저자극 넥 서포트",
+        "통째로 물세탁 가능한 위생적 워셔블 소재 (진드기·곰팡이 억제)"
+      ],
+      "whyWePicked": [
+        "신생아기 연한 머리뼈가 한쪽으로 눌려 납작해지는 사두증·단두증을 조기에 예방합니다.",
+        "체온 조절 능력이 미숙해 머리에 땀이 많은 아기들의 땀띠와 지루성 두피염을 방지합니다.",
+        "턱이 가슴 쪽으로 꺾이지 않는 인체공학 높이 설계로 수면 중 자연스러운 기도 확보를 보장합니다."
+      ],
+      "buyingGuide": {
+        "pros": "베개 통째로 세탁기에 돌려 30분 만에 건조될 정도로 위생 관리가 편함.",
+        "considerations": "엎드려 자는 자세에서는 사용을 금하며 반드시 천장을 보고 눕힐 때 사용.",
+        "recommendedBaby": "한쪽 방향으로만 고개를 돌려 자거나 뒷머리 태열 땀이 많은 생후 1~12개월 아기."
+      },
+      "momReviews": [
+        "아기가 한쪽으로만 누워 자서 두상이 삐뚤어질까 봐 조마조마했는데, 이 베개 쓰고 동글동글 예쁜 짱구 두상 유지 중이에요.",
+        "머리에 열이 많아 자고 일어나면 베개가 흠뻑 젖곤 했는데, 에어메쉬라 바람이 숭숭 통해 태열이 싹 가라앉았습니다.",
+        "샤워기로 쓱 뿌려 빨아도 물이 쏙 빠지고 금방 말라서 땀 많은 여름철에도 냄새 없이 깨끗하게 써요."
+      ],
+      "summary": "신생아 연약한 경추 C자 곡선 지지 및 열 많은 아기 태열·두상 변형 방지 에어쿨링 설계"
     },
     {
       "id": "prod_nb_learn_1",
@@ -2042,13 +2618,37 @@
       "priceNum": 0,
       "rating": 4.9,
       "reviewCount": 5200,
-      "thumbnail": "📖",
+      "thumbnail": "src/images/products/prod_nb_learn_1.webp",
       "badgeText": "🎁 공식 추천 0원 체험",
       "description": "임신·출산 학부모 대상 영아 첫 뇌신경 언어 자극 그림책 및 프리미엄 오감발달 키트 무료 배송",
-      "benefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
-      "testBenefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
+      "benefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
+      "testBenefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
       "url": "https://click.linkprice.com/click.php?m=wjbookclub&a=A100708867&l=0000",
-      "affiliateUrl": "https://click.linkprice.com/click.php?m=wjbookclub&a=A100708867&l=0000"
+      "affiliateUrl": "https://click.linkprice.com/click.php?m=wjbookclub&a=A100708867&l=0000",
+      "image": "src/images/products/prod_nb_learn_1.webp",
+      "imageFallback": "src/images/products/prod_nb_learn_1.svg",
+      "specs": [
+        "0~12개월 뇌신경 시냅스 폭발기 전두엽 자극 첫 그림책 3종 세트",
+        "영아 발달 단계별 오감 자극 사운드 놀이 키트 무료 집앞 배송",
+        "아동 발달 전문가의 1:1 우리 아이 기질 및 발달 상담 서비스 포함",
+        "100% 무료 체험 (체험 후 교재 회수 없음, 약정 및 추가 비용 0원)"
+      ],
+      "whyWePicked": [
+        "생후 1년 동안 완성되는 언어 청각 시냅스를 최적화하는 의성어·의태어 중심 리듬 그림책입니다.",
+        "수십만 원대 전집을 덜컥 구매하기 전, 우리 아이의 반응과 발달 성향을 0원으로 직접 테스트할 수 있습니다.",
+        "K-DST 영유아 건강검진 문진표와 연계된 부모 코칭 가이드가 함께 제공되어 홈스쿨링 첫걸음에 제격입니다."
+      ],
+      "buyingGuide": {
+        "pros": "비용 부담 없이 프리미엄 교육 전문 기업의 첫 아기책과 교구를 무료로 체험 가능.",
+        "considerations": "1회 신청 시 전문 상담사의 안내 전화가 진행되므로 편한 시간대 상담 지정 권장.",
+        "recommendedBaby": "첫 아이라 책 읽어주기를 어떻게 시작해야 할지 막막한 초보 부모 및 0~12개월 영아."
+      },
+      "momReviews": [
+        "전집 들이기 전에 아기가 좋아할지 몰라 망설였는데, 무료체험으로 받은 사운드북을 아이가 물고 빨며 너무 좋아해서 확신을 얻었어요.",
+        "상담사분이 아이 개월 수에 맞는 상호작용 놀이법을 친절하게 알려주셔서 육아 꿀팁 많이 배웠습니다.",
+        "체험판인데도 종이 질이 두껍고 모서리가 둥글려져 있어 신생아가 손에 쥐고 놀기에 아주 안전해요."
+      ],
+      "summary": "임신·출산 학부모 대상 영아 첫 뇌신경 언어 자극 그림책 및 프리미엄 오감발달 키트 무료 배송"
     },
     {
       "id": "prod_inf_nut_1",
@@ -2064,13 +2664,37 @@
       "priceNum": 24800,
       "rating": 4.9,
       "reviewCount": 9420,
-      "thumbnail": "🦴",
-      "badgeText": "🚀 쿠팡 로켓와우 1위",
+      "thumbnail": "src/images/products/prod_inf_nut_1.webp",
+      "badgeText": "🚀 에디터 셀렉트 1위",
       "description": "우유 안 먹는 아이도 저녁 식후 1포로 골격 형성 3대 핵심 미네랄 완벽 흡수",
-      "benefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
-      "testBenefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
+      "benefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
+      "testBenefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
       "url": "https://www.coupang.com/np/search?q=%EC%96%B4%EB%A6%B0%EC%9D%B4+%EC%B9%BC%EC%8A%98+%EB%B9%84%ED%83%80%EB%AF%BCD+%EC%95%84%EC%97%B0+%EA%B5%AC%EB%AF%B8&channel=user&lptag=AF7865143",
-      "affiliateUrl": "https://www.coupang.com/np/search?q=%EC%96%B4%EB%A6%B0%EC%9D%B4+%EC%B9%BC%EC%8A%98+%EB%B9%84%ED%83%80%EB%AF%BCD+%EC%95%84%EC%97%B0+%EA%B5%AC%EB%AF%B8&channel=user&lptag=AF7865143"
+      "affiliateUrl": "https://www.coupang.com/np/search?q=%EC%96%B4%EB%A6%B0%EC%9D%B4+%EC%B9%BC%EC%8A%98+%EB%B9%84%ED%83%80%EB%AF%BCD+%EC%95%84%EC%97%B0+%EA%B5%AC%EB%AF%B8&channel=user&lptag=AF7865143",
+      "image": "src/images/products/prod_inf_nut_1.webp",
+      "imageFallback": "src/images/products/prod_inf_nut_1.svg",
+      "specs": [
+        "위산 분비가 적은 소아도 공복에 속쓰림 없이 흡수되는 흡수율 1위 구연산 칼슘",
+        "뼈 형성 및 칼슘 흡수율을 3배 증대시키는 활성형 비타민D3 400IU 함유",
+        "성장기 세포 분열과 면역 기능에 필수적인 글루콘산 아연 복합 배합",
+        "입맛 까다로운 아이도 좋아하는 상큼한 천연 과일맛 젤리/시럽 제형"
+      ],
+      "whyWePicked": [
+        "탄산칼슘과 달리 흡수율이 월등히 높고 가스 차거나 변비 생기는 부작용이 없습니다.",
+        "우유를 거부하거나 유당불내증이 있는 영유아의 골격 형성기 칼슘 결핍을 완벽히 방어합니다.",
+        "저녁 식후 1포로 수면 중 분비되는 성장호르몬과 시너지를 내어 야간 뼈 성장을 극대화합니다."
+      ],
+      "buyingGuide": {
+        "pros": "츄어블 형태로 간식처럼 맛있게 씹어 먹거나 액상으로 주스에 타서 복용 가능.",
+        "considerations": "칼슘과 철분은 서로 흡수를 방해하므로 철분제 복용 시 2시간 이상 간격 유지.",
+        "recommendedBaby": "우유를 하루 200ml 미만으로 마시거나 키 성장이 하위 25% 미만인 1~3세 아이."
+      },
+      "momReviews": [
+        "우유 알레르기가 있어 칼슘 섭취가 늘 걱정이었는데, 이 젤리는 아이가 먼저 '곰돌이 영양제 달라'고 조를 정도로 잘 먹어요.",
+        "변비 생길까 봐 칼슘제 먹이기 꺼려졌는데, 구연산 칼슘이라 그런지 변비 하나 없이 응가도 황금색으로 잘 봅니다.",
+        "3개월 꾸준히 먹이고 영유아검진 갔더니 백분위가 10프로대에서 35프로로 껑충 뛰어올라 너무 뿌듯해요!"
+      ],
+      "summary": "우유 안 먹는 아이도 저녁 식후 1포로 골격 형성 3대 핵심 미네랄 완벽 흡수"
     },
     {
       "id": "prod_inf_nut_2",
@@ -2086,13 +2710,37 @@
       "priceNum": 22300,
       "rating": 4.9,
       "reviewCount": 18450,
-      "thumbnail": "🍊",
-      "badgeText": "🌿 iHerb 글로벌 직구 1위",
+      "thumbnail": "src/images/products/prod_inf_nut_2.webp",
+      "badgeText": "🌿 글로벌 안심인증 1위",
       "description": "미국 소아과 전문의 추천 배합, 액상형으로 체내 흡수율 3배 높은 영유아 성장기 칼마디",
-      "benefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
-      "testBenefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
+      "benefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
+      "testBenefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
       "url": "https://kr.iherb.com/pr/childlife-liquid-calcium-with-magnesium-natural-orange-flavor-16-fl-oz-473-ml/9434?rcode=IPZ1547",
-      "affiliateUrl": "https://kr.iherb.com/pr/childlife-liquid-calcium-with-magnesium-natural-orange-flavor-16-fl-oz-473-ml/9434?rcode=IPZ1547"
+      "affiliateUrl": "https://kr.iherb.com/pr/childlife-liquid-calcium-with-magnesium-natural-orange-flavor-16-fl-oz-473-ml/9434?rcode=IPZ1547",
+      "image": "src/images/products/prod_inf_nut_2.webp",
+      "imageFallback": "src/images/products/prod_inf_nut_2.svg",
+      "specs": [
+        "미국 영유아 전문 영양 브랜드 ChildLife 스테디셀러 (473ml 대용량)",
+        "칼슘:마그네슘 황금 비율 2:1 배합으로 체내 이용률 극대화",
+        "알약이나 젤리를 삼키기 힘든 12개월 이상 유아를 위한 크리미 요거트 액상",
+        "글루텐, 인공색소, 알레르기 유발 유제품 0%의 안심 포뮬러"
+      ],
+      "whyWePicked": [
+        "액상 제형이라 체내 흡수 속도가 가장 빠르며 목걸림 위험이 전혀 없습니다.",
+        "근육 긴장 완화와 숙면을 돕는 마그네슘이 함께 들어있어 야경증이나 밤보챔을 줄여줍니다.",
+        "천연 오렌지 향의 요거트 같은 맛으로 요구르트나 과일 퓨레에 섞어주기 매우 좋습니다."
+      ],
+      "buyingGuide": {
+        "pros": "가성비가 매우 뛰어나며 계량컵/스푼으로 아이 개월 수에 맞게 정밀 계량 복용 가능.",
+        "considerations": "개봉 후에는 반드시 냉장 보관해야 하며, 먹이기 전 충분히 흔들어 주어야 함.",
+        "recommendedBaby": "밤마다 성장통으로 다리가 아프다고 칭얼거리거나 깊은 잠을 못 자는 1~3세 아이."
+      },
+      "momReviews": [
+        "글로벌 공식 스토어 1위에는 다 이유가 있네요. 바닐라 요거트 맛이라 약 거부 심한 우리 아이도 숟가락째 넙죽 받아먹습니다.",
+        "밤에 다리 주물러달라고 자주 깨던 아이였는데 마그네슘이 같이 들어가서 그런지 통잠 자는 날이 많아졌어요.",
+        "냉장고에 넣어두고 아침마다 요거트에 한 숟가락씩 타서 주면 하루 영양 챙기기 끝이라 너무 간편합니다."
+      ],
+      "summary": "미국 소아과 전문의 추천 배합, 액상형으로 체내 흡수율 3배 높은 영유아 성장기 칼마디"
     },
     {
       "id": "prod_inf_dev_1",
@@ -2108,13 +2756,37 @@
       "priceNum": 23500,
       "rating": 4.8,
       "reviewCount": 6310,
-      "thumbnail": "🧩",
+      "thumbnail": "src/images/products/prod_inf_dev_1.webp",
       "badgeText": "🚀 소근육 집중 1위",
       "description": "손가락 정밀 조작과 시지각 협응력을 키워 전두엽 뇌 시냅스를 연결하는 친환경 천연원목 교구",
-      "benefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
-      "testBenefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
+      "benefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
+      "testBenefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
       "url": "https://www.coupang.com/np/search?q=%EB%AA%AC%ED%85%8C%EC%86%8C%EB%A6%AC+%EC%9B%90%EB%AA%A9+%EA%B5%90%EA%B5%AC+%EC%86%8C%EA%B7%BC%EC%9C%A1&channel=user&lptag=AF7865143",
-      "affiliateUrl": "https://www.coupang.com/np/search?q=%EB%AA%AC%ED%85%8C%EC%86%8C%EB%A6%AC+%EC%9B%90%EB%AA%A9+%EA%B5%90%EA%B5%AC+%EC%86%8C%EA%B7%BC%EC%9C%A1&channel=user&lptag=AF7865143"
+      "affiliateUrl": "https://www.coupang.com/np/search?q=%EB%AA%AC%ED%85%8C%EC%86%8C%EB%A6%AC+%EC%9B%90%EB%AA%A9+%EA%B5%90%EA%B5%AC+%EC%86%8C%EA%B7%BC%EC%9C%A1&channel=user&lptag=AF7865143",
+      "image": "src/images/products/prod_inf_dev_1.webp",
+      "imageFallback": "src/images/products/prod_inf_dev_1.svg",
+      "specs": [
+        "천연 너도밤나무 원목 및 물고 빨아도 안전한 수성 무독성 페인트 마감",
+        "12~36개월 영유아 손바닥 그립감에 최적화된 라운딩 블록 큐브",
+        "시지각-운동 협응력을 자극하는 입체 3차원 와이어 비즈 미로 롤러코스터",
+        "유럽 CE 및 한국 KC 어린이 안전 공급자 적합성 인증 완료"
+      ],
+      "whyWePicked": [
+        "엄지와 검지로 작은 비즈를 쥐고 이동시키는 조작 활동이 뇌의 언어·수리 중추 시냅스를 자극합니다.",
+        "평면 도형을 입체 구멍에 맞추어 넣는 과정을 통해 대상영속성과 공간 인지 능력을 형성합니다.",
+        "플라스틱 장난감과 달리 따뜻한 원목 촉감과 자연스러운 소리가 아이의 정서적 안정감을 높여줍니다."
+      ],
+      "buyingGuide": {
+        "pros": "내구성이 뛰어나 부러지지 않고 둘째, 셋째까지 물려줄 수 있는 클래식 몬테소리 교구.",
+        "considerations": "원목 특성상 물에 담가 세탁하지 말고 제균 티슈로 닦아 그늘에서 자연 건조.",
+        "recommendedBaby": "소근육 쥐는 힘이 약하거나 장난감에 5분 이상 집중하지 못하는 12~36개월 아이."
+      },
+      "momReviews": [
+        "스마트폰 영상 끊으려고 들였는데, 구슬을 이리저리 굴리고 도형 맞추면서 혼자 40분씩 앉아서 놀아요.",
+        "모서리가 하나도 날카롭지 않고 매끄럽게 마감되어 있어서 구강기 아기 손에 쥐여줘도 안심입니다.",
+        "문센 몬테소리 수업에서 쓰던 교구랑 똑같은데 집에서 매일 반복해서 놀아줄 수 있어 가성비 최고예요."
+      ],
+      "summary": "손가락 정밀 조작과 시지각 협응력을 키워 전두엽 뇌 시냅스를 연결하는 친환경 천연원목 교구"
     },
     {
       "id": "prod_inf_gear_1",
@@ -2130,13 +2802,37 @@
       "priceNum": 38000,
       "rating": 4.8,
       "reviewCount": 4890,
-      "thumbnail": "🚶",
+      "thumbnail": "src/images/products/prod_inf_gear_1.webp",
       "badgeText": "🚀 O다리 방지 보행",
       "description": "골반 수평과 대퇴골 각도를 지켜주는 속도조절 바퀴 설계로 O자 다리 예방 및 대근육 강화",
-      "benefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
-      "testBenefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
+      "benefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
+      "testBenefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
       "url": "https://www.coupang.com/np/search?q=%EA%B1%B8%EC%9D%8C%EB%A7%88+%ED%95%99%EC%8A%B5%EA%B8%B0+%EC%95%88%EC%A0%84+%ED%97%AC%EB%A9%A7&channel=user&lptag=AF7865143",
-      "affiliateUrl": "https://www.coupang.com/np/search?q=%EC%96%B4%EB%A6%B0%EC%9D%B4+%EA%B1%B8%EC%9D%8C%EB%A7%88+%ED%95%99%EC%8A%B5%EA%B8%B0&channel=user&lptag=AF7865143"
+      "affiliateUrl": "https://www.coupang.com/np/search?q=%EA%B1%B8%EC%9D%8C%EB%A7%88+%ED%95%99%EC%8A%B5%EA%B8%B0+%EC%95%88%EC%A0%84+%ED%97%AC%EB%A9%A7&channel=user&lptag=AF7865143",
+      "image": "src/images/products/prod_inf_gear_1.webp",
+      "imageFallback": "src/images/products/prod_inf_gear_1.svg",
+      "specs": [
+        "아이 걸음 속도에 맞춰 바퀴 회전 저항을 조절할 수 있는 2단계 감속 다이얼",
+        "고관절과 무릎 각도가 바깥으로 휘는 O자 다리(내반슬) 변형 방지 와이드 휠베이스",
+        "걸음마 보행기와 분리형 다기능 인지 놀이 테이블 2-in-1 구조",
+        "80g 초경량 충격 흡수 3D 통기성 에어쿠션 유아 머리보호 헬멧 세트"
+      ],
+      "whyWePicked": [
+        "바퀴가 미끄러져 앞으로 쏠려 넘어지는 낙상 사고를 감속 다이얼로 원천 차단합니다.",
+        "아기 걸음걸이 시 대퇴골 각도를 수평으로 유지시켜 곧은 1자 다리 골격 형성을 유도합니다.",
+        "뒤로 쿵 넘어지기 쉬운 걸음마 초기 뇌진탕 위험을 충격 흡수 초경량 헬멧으로 완벽 보호합니다."
+      ],
+      "buyingGuide": {
+        "pros": "잡고 서기 시작하는 10개월부터 걷기 이후 놀이 테이블까지 활용 기간이 2년 이상으로 김.",
+        "considerations": "처음 연습 시 물통이나 장난감으로 본체 하단 무게 중심을 잡아주면 더욱 안정적.",
+        "recommendedBaby": "잡고 일어서기 시작했거나 다리 힘이 부족해 자주 넘어지는 10~24개월 아기."
+      },
+      "momReviews": [
+        "속도 조절 안 되는 걸음마기는 앞으로 밀려서 턱 찧기 일쑤인데, 이건 바퀴를 뻑뻑하게 조절할 수 있어 정말 안전해요.",
+        "아이가 뒤로 꽈당 넘어졌을 때 안전 헬멧 덕분에 울지도 않고 머리도 멀쩡해서 가슴을 쓸어내렸습니다.",
+        "앞판 장난감만 떼서 바닥에 놔줘도 누르고 돌리며 잘 놀고, 바퀴 잠그면 미니 놀이책상이 되어 활용도 200%예요."
+      ],
+      "summary": "골반 수평과 대퇴골 각도를 지켜주는 속도조절 바퀴 설계로 O자 다리 예방 및 대근육 강화"
     },
     {
       "id": "prod_inf_learn_1",
@@ -2152,13 +2848,37 @@
       "priceNum": 0,
       "rating": 4.9,
       "reviewCount": 3820,
-      "thumbnail": "🗣️",
+      "thumbnail": "src/images/products/prod_inf_learn_1.webp",
       "badgeText": "🎁 말문 트이기 무료상담",
       "description": "12~36개월 언어 폭발기 어휘력 300% 확장 K-DST 언어발달 정밀 검사 연계 0원 상담 키트",
-      "benefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
-      "testBenefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
+      "benefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
+      "testBenefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
       "url": "https://click.linkprice.com/click.php?m=hansolfinden&a=A100708867&l=0000",
-      "affiliateUrl": "https://click.linkprice.com/click.php?m=hansolfinden&a=A100708867&l=0000"
+      "affiliateUrl": "https://click.linkprice.com/click.php?m=hansolfinden&a=A100708867&l=0000",
+      "image": "src/images/products/prod_inf_learn_1.webp",
+      "imageFallback": "src/images/products/prod_inf_learn_1.svg",
+      "specs": [
+        "12~36개월 언어 폭발기 어휘력 3배 확장을 위한 리듬 말놀이 보드북",
+        "소리 나는 특수 핀덴카 음원 연계 및 오감 자극 감각 놀이 키트",
+        "K-DST 영유아 발달 검사 연계 전문 교사의 1:1 발달 상담 리포트 제공",
+        "공식 제휴 무료 체험 신청 시 교재와 교구 일체 0원 무료 배송"
+      ],
+      "whyWePicked": [
+        "말문이 트이는 결정적 시기에 일상 대화 어휘를 챈트와 동요로 익혀 말문 트이기를 촉진합니다.",
+        "시각, 청각, 촉각을 동시에 자극하는 다중지능 이론 기반으로 두뇌 언어 회로를 확장합니다.",
+        "우리 아이의 언어 발달 속도가 또래 대비 어느 수준인지 공신력 있는 발달 상담으로 점검받을 수 있습니다."
+      ],
+      "buyingGuide": {
+        "pros": "비용 부담 없이 언어 자극 명품 교재를 집에서 직접 사용해보고 아이의 선호도 확인 가능.",
+        "considerations": "무료 신청 후 안내 해피콜 수신 시 상담 일정을 조율할 수 있음.",
+        "recommendedBaby": "18~36개월인데 옹알이 단계에 머물러 있거나 단어 연결(엄마 물 등)이 늦은 아이."
+      },
+      "momReviews": [
+        "두 돌인데 '엄마', '아빠'만 해서 마음 졸였는데, 말놀이 그림책 노래를 매일 틀어줬더니 한 달 만에 단어가 폭발했어요.",
+        "단순히 책만 오는 게 아니라 선생님이 오셔서 아이랑 놀아주며 언어 발달 상태를 짚어주셔서 큰 도움이 됐습니다.",
+        "노래 멜로디가 너무 신나서 아이가 책을 장난감처럼 들고 다니며 흥얼거려요."
+      ],
+      "summary": "12~36개월 언어 폭발기 어휘력 300% 확장 K-DST 언어발달 정밀 검사 연계 0원 상담 키트"
     },
     {
       "id": "prod_tod_nut_1",
@@ -2174,13 +2894,37 @@
       "priceNum": 29900,
       "rating": 4.9,
       "reviewCount": 11200,
-      "thumbnail": "🛡️",
+      "thumbnail": "src/images/products/prod_tod_nut_1.webp",
       "badgeText": "🚀 단체생활 면역 1위",
       "description": "어린이집·유치원 단체생활 감기·장염 방어 면역력 아연과 장내 마이크로바이옴 정상화 생유산균",
-      "benefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
-      "testBenefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
+      "benefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
+      "testBenefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
       "url": "https://www.coupang.com/np/search?q=%EC%96%B4%EB%A6%B0%EC%9D%B4+%EC%9C%A0%EC%82%B0%EA%B7%A0+%EC%95%84%EC%97%B0+%EB%A9%B4%EC%97%AD&channel=user&lptag=AF7865143",
-      "affiliateUrl": "https://www.coupang.com/np/search?q=%EC%96%B4%EB%A6%B0%EC%9D%B4+%EC%9C%A0%EC%82%B0%EA%B7%A0+%EC%95%84%EC%97%B0+%EB%A9%B4%EC%97%AD&channel=user&lptag=AF7865143"
+      "affiliateUrl": "https://www.coupang.com/np/search?q=%EC%96%B4%EB%A6%B0%EC%9D%B4+%EC%9C%A0%EC%82%B0%EA%B7%A0+%EC%95%84%EC%97%B0+%EB%A9%B4%EC%97%AD&channel=user&lptag=AF7865143",
+      "image": "src/images/products/prod_tod_nut_1.webp",
+      "imageFallback": "src/images/products/prod_tod_nut_1.svg",
+      "specs": [
+        "장 끝까지 살아남는 4중 코팅 특허 유산균 보장균수 100억 CFU",
+        "정상적인 면역 기능과 세포 분열을 위한 글루콘산 아연 일일 섭취량 100%",
+        "뉴질랜드 청정 초유 단백 분말(면역글로불린 IgG 20% 이상 함유) 배합",
+        "합성향료, 이산화규소, 스테아린산마그네슘 無첨가 안심 처방"
+      ],
+      "whyWePicked": [
+        "유치원, 어린이집 단체생활을 시작하며 잦은 감기, 수족구, 장염에 노출되는 시기 면역 장벽을 세워줍니다.",
+        "면역 세포의 70%가 집중된 장내 마이크로바이옴 생태계를 건강하게 조성합니다.",
+        "고소한 분유맛 분말 스틱 제형으로 아이들이 간식처럼 가루째 털어먹거나 우유에 타 먹기 편합니다."
+      ],
+      "buyingGuide": {
+        "pros": "면역 아연과 초유 단백까지 한 포로 해결되어 여러 영양제를 따로 챙길 필요가 없음.",
+        "considerations": "유산균은 열에 약하므로 뜨거운 우유나 물에 타지 말고 미온수나 차가운 음료에 혼합.",
+        "recommendedBaby": "어린이집 입소 후 콧물, 감기를 달고 살거나 배변이 불규칙한 4~6세 유아."
+      },
+      "momReviews": [
+        "어린이집 가고 나서 2주에 한 번씩 소아과 출석 도장을 찍었는데, 이 유산균 먹인 뒤로 감기 횟수가 확 줄었어요.",
+        "맛이 분유처럼 달콤고소해서 약 싫어하는 첫째도 아침마다 스스로 스틱 들고 와서 뜯어달라고 합니다.",
+        "화장실 갈 때마다 힘들어하고 토끼똥 싸던 아이가 매일 아침 황금 바나나똥을 시원하게 봐요!"
+      ],
+      "summary": "어린이집·유치원 단체생활 감기·장염 방어 면역력 아연과 장내 마이크로바이옴 정상화 생유산균"
     },
     {
       "id": "prod_tod_nut_2",
@@ -2196,13 +2940,37 @@
       "priceNum": 31500,
       "rating": 4.8,
       "reviewCount": 22100,
-      "thumbnail": "🍓",
-      "badgeText": "🌿 iHerb 직구 인기 구미",
+      "thumbnail": "src/images/products/prod_tod_nut_2.webp",
+      "badgeText": "🌿 글로벌 안심인증 구미",
       "description": "인공 색소·합성 감미료 0%, 두뇌 발달 필수 DHA와 뼈 형성 비타민D3가 함유된 맛있는 젤리",
-      "benefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
-      "testBenefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
+      "benefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
+      "testBenefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
       "url": "https://kr.iherb.com/pr/smartypants-kids-formula-cherry-lemon-orange-120-gummies/56345?rcode=IPZ1547",
-      "affiliateUrl": "https://kr.iherb.com/pr/smartypants-kids-formula-cherry-lemon-orange-120-gummies/56345?rcode=IPZ1547"
+      "affiliateUrl": "https://kr.iherb.com/pr/smartypants-kids-formula-cherry-lemon-orange-120-gummies/56345?rcode=IPZ1547",
+      "image": "src/images/products/prod_tod_nut_2.webp",
+      "imageFallback": "src/images/products/prod_tod_nut_2.svg",
+      "specs": [
+        "두뇌 및 망막 신경 발달을 위한 야생 어류 추출 고순도 오메가3 EPA & DHA",
+        "뼈 성장과 튼튼한 치아 형성을 돕는 비타민D3(콜레칼시페롤) 고함량 배합",
+        "인공 감미료, 합성 색소, 고과당 옥수수 시럽 0%",
+        "젤라틴 대신 천연 펙틴 베이스를 사용하여 치아에 달라붙지 않는 젤리"
+      ],
+      "whyWePicked": [
+        "생선을 안 먹는 편식 아이에게 두뇌 발달 필수 지방산 DHA를 젤리로 간편하게 공급합니다.",
+        "비타민 A, C, D, E, B6, B12, 엽산, 요오드 등 15가지 핵심 미량 영양소가 골고루 들어있습니다.",
+        "합성 젤라틴이 아닌 감귤 펙틴을 사용하여 치아에 달라붙지 않아 충치 걱정을 덜어줍니다."
+      ],
+      "buyingGuide": {
+        "pros": "아이들이 젤리 간식으로 착각할 정도로 기호성이 매우 뛰어나 영양제 거부감 제로.",
+        "considerations": "너무 맛있어서 과다 섭취하려 할 수 있으므로 하루 권장량(4구미) 준수 지도 필요.",
+        "recommendedBaby": "생선이나 채소 편식이 심하고 달콤한 간식만 찾는 4~6세 유아."
+      },
+      "momReviews": [
+        "오메가3 특유의 비린내가 전혀 안 나고 상큼한 딸기 레몬 젤리 맛이라 아이가 약인 줄도 모르고 먹어요.",
+        "치아 치료 중이라 젤리 주기 무서웠는데, 펙틴 성분이라 이빨에 끈적하게 달라붙지 않아서 너무 만족합니다.",
+        "영양제 먹일 때마다 실랑이하던 스트레스가 완전히 사라졌어요. 직구 장바구니 필수템입니다."
+      ],
+      "summary": "인공 색소·합성 감미료 0%, 두뇌 발달 필수 DHA와 뼈 형성 비타민D3가 함유된 맛있는 젤리"
     },
     {
       "id": "prod_tod_dev_1",
@@ -2218,13 +2986,37 @@
       "priceNum": 42000,
       "rating": 4.9,
       "reviewCount": 8150,
-      "thumbnail": "🏰",
+      "thumbnail": "src/images/products/prod_tod_dev_1.webp",
       "badgeText": "🚀 창의 공간수리 1위",
       "description": "평면 도형에서 입체 건축물로 변환하며 두뇌 두정엽 3차원 공간지각과 수학적 직관력 자극",
-      "benefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
-      "testBenefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
+      "benefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
+      "testBenefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
       "url": "https://www.coupang.com/np/search?q=%EC%9E%90%EC%84%9D+%EB%A7%88%EA%B7%B8%EB%84%A4%ED%8B%B1+%EB%B8%94%EB%A1%9D+120p&channel=user&lptag=AF7865143",
-      "affiliateUrl": "https://www.coupang.com/np/search?q=%EC%9E%90%EC%84%9D+%EB%A7%88%EA%B7%B8%EB%84%A4%ED%8B%B1+%EB%B8%94%EB%A1%9D+120p&channel=user&lptag=AF7865143"
+      "affiliateUrl": "https://www.coupang.com/np/search?q=%EC%9E%90%EC%84%9D+%EB%A7%88%EA%B7%B8%EB%84%A4%ED%8B%B1+%EB%B8%94%EB%A1%9D+120p&channel=user&lptag=AF7865143",
+      "image": "src/images/products/prod_tod_dev_1.webp",
+      "imageFallback": "src/images/products/prod_tod_dev_1.svg",
+      "specs": [
+        "영구 자석 N35 탑재로 360도 어느 각도에서나 척척 달라붙는 초강력 자력",
+        "투명 프리즘 다이아몬드 커팅 설계로 빛 투과 시 아름다운 무지개 그림자 연출",
+        "안전한 초음파 융착 기술로 자석 빠짐 및 삼킴 사고 원천 방지",
+        "정삼각형, 이등변삼각형, 정사각형, 사다리꼴 등 입체 기하학 풀세트 120피스"
+      ],
+      "whyWePicked": [
+        "2D 평면 전개도가 3D 입체 구조물로 순식간에 조립되며 공간지각력과 두정엽을 자극합니다.",
+        "블록끼리 힘들이지 않고 착착 붙어 소근육 조작 능력이 미숙한 4세 아이도 좌절 없이 성공 경험을 맛봅니다.",
+        "단순 조립을 넘어 창문, 성, 다리, 자동차 등 무한한 창의적 건축 놀이로 확장됩니다."
+      ],
+      "buyingGuide": {
+        "pros": "일반 레고보다 조립과 정리가 훨씬 쉽고 바퀴 섀시가 포함되어 자동차 놀이도 가능.",
+        "considerations": "자석 제품이므로 전자기기나 신용카드 근처 보관을 피할 것.",
+        "recommendedBaby": "소근육 협응력이 필요한 시기이자 집중력이 짧은 4~6세 유아."
+      },
+      "momReviews": [
+        "햇빛 비치는 창가에 지어놓으면 알록달록 스테인드글라스처럼 예뻐서 아이가 매일 성을 만들어요.",
+        "일반 블록은 높이 쌓으면 무너져서 짜증 냈는데, 이건 자석이 짱짱하게 잡아줘서 혼자서도 높은 탑을 척척 완성하네요.",
+        "120피스라 형제자매 둘이서 싸우지 않고 사이좋게 나눠 갖고 놀기에 피스 수가 딱 적당합니다."
+      ],
+      "summary": "평면 도형에서 입체 건축물로 변환하며 두뇌 두정엽 3차원 공간지각과 수학적 직관력 자극"
     },
     {
       "id": "prod_tod_gear_1",
@@ -2240,13 +3032,37 @@
       "priceNum": 65000,
       "rating": 4.8,
       "reviewCount": 9140,
-      "thumbnail": "⚡",
+      "thumbnail": "src/images/products/prod_tod_gear_1.webp",
       "badgeText": "🚀 성장판 수직 자극",
       "description": "층간소음 차단 탄성 번지로 관절 무리 없이 무릎 연골 성장판을 자극하고 성장호르몬 분비 촉진",
-      "benefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
-      "testBenefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
+      "benefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
+      "testBenefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
       "url": "https://www.coupang.com/np/search?q=%EC%96%B4%EB%A6%B0%EC%9D%B4+%EB%AC%B4%EC%86%8C%EC%9D%8C+%ED%8A%B8%EB%9E%A8%ED%8F%B4%EB%A6%B0+%EC%84%B1%EC%9E%A5%ED%8C%90&channel=user&lptag=AF7865143",
-      "affiliateUrl": "https://www.coupang.com/np/search?q=%EC%96%B4%EB%A6%B0%EC%9D%B4+%EB%AC%B4%EC%86%8C%EC%9D%8C+%ED%8A%B8%EB%9E%A8%ED%8F%B4%EB%A6%B0+%EC%84%B1%EC%9E%A5%ED%8C%90&channel=user&lptag=AF7865143"
+      "affiliateUrl": "https://www.coupang.com/np/search?q=%EC%96%B4%EB%A6%B0%EC%9D%B4+%EB%AC%B4%EC%86%8C%EC%9D%8C+%ED%8A%B8%EB%9E%A8%ED%8F%B4%EB%A6%B0+%EC%84%B1%EC%9E%A5%ED%8C%90&channel=user&lptag=AF7865143",
+      "image": "src/images/products/prod_tod_gear_1.webp",
+      "imageFallback": "src/images/products/prod_tod_gear_1.svg",
+      "specs": [
+        "삐걱거리는 쇠 스프링 대신 소음 제로 고탄성 특수 번지 로프 30줄 적용",
+        "층간소음 방지 두꺼운 흡음 충격 방진 고무 캡 다리 장착",
+        "3단계 높이 조절 가능한 안전 핸들바 부착으로 점핑 안정성 확보",
+        "최대 하중 100kg 내구성 테스트 통과 (부모와 아이 함께 운동 가능)"
+      ],
+      "whyWePicked": [
+        "수직 점핑 운동은 무릎 연골 성장판에 주기적인 물리적 자극을 주어 성장호르몬 분비를 촉진합니다.",
+        "아파트 층간소음 걱정 없이 미세먼지나 비 오는 날에도 집안에서 넘치는 에너지를 발산시킵니다.",
+        "신체 균형 감각과 전신 대근육 협응력을 길러주어 비만 예방과 바른 체형 형성에 탁월합니다."
+      ],
+      "buyingGuide": {
+        "pros": "스프링 사이에 발이 끼일 위험이 없는 안전 번지코드 방식이며 접이식 보관 가능.",
+        "considerations": "천장 조명이나 가구와 1.5m 이상 안전거리를 확보하고 핸들바를 잡고 뛰도록 지도.",
+        "recommendedBaby": "에너지가 넘쳐 소파나 침대에서 자꾸 뛰어내리는 4~6세 에너자이저 아이."
+      },
+      "momReviews": [
+        "아랫집 층간소음 항의받고 가슴 졸였는데, 번지코드 트램폴린 들이고 나서 발소리 소음 걱정 끝났어요!",
+        "밤마다 잠투정 심하던 아이가 저녁 먹고 20분만 신나게 뛰면 씻자마자 기절해서 꿀잠 잡니다.",
+        "쇠 스프링은 녹슬고 삐걱거리는데 이건 소리가 정말 하나도 안 나고 핸들바가 있어 4세 아이도 안전하게 타요."
+      ],
+      "summary": "층간소음 차단 탄성 번지로 관절 무리 없이 무릎 연골 성장판을 자극하고 성장호르몬 분비 촉진"
     },
     {
       "id": "prod_tod_learn_1",
@@ -2262,13 +3078,37 @@
       "priceNum": 0,
       "rating": 4.9,
       "reviewCount": 14500,
-      "thumbnail": "💻",
+      "thumbnail": "src/images/products/prod_tod_learn_1.webp",
       "badgeText": "🎁 천재교육 7일 무료체험",
       "description": "한글·수학·동화·영어까지 전용 태블릿과 체험 교재 집앞 무료배송 및 1:1 맞춤 학습케어",
-      "benefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
-      "testBenefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
+      "benefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
+      "testBenefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
       "url": "https://click.linkprice.com/click.php?m=milkti_i&a=A100708867&l=0000",
-      "affiliateUrl": "https://click.linkprice.com/click.php?m=milkti_i&a=A100708867&l=0000"
+      "affiliateUrl": "https://click.linkprice.com/click.php?m=milkti_i&a=A100708867&l=0000",
+      "image": "src/images/products/prod_tod_learn_1.webp",
+      "imageFallback": "src/images/products/prod_tod_learn_1.svg",
+      "specs": [
+        "4~6세 발달 단계 맞춤 한글, 수학, 영어, 동화, 기초 코딩 전과목 수록",
+        "아이 시력 보호를 위한 유아 전용 블루라이트 차단 케이스 전용 태블릿",
+        "오프라인 연계 한글 쓰기 노트 및 창의 놀이 학습 교재 집앞 무료 배송",
+        "유아 교육 전문 담임선생님의 주 1회 1:1 맞춤 화상 코칭 관리"
+      ],
+      "whyWePicked": [
+        "주입식 학습이 아닌 게임과 인터랙티브 터치 놀이로 자연스럽게 한글 글자를 눈에 익힙니다.",
+        "취학 전 필수 운필력(연필 쥐는 힘)을 전용 스마트펜 쓰기 연습으로 단계별로 길러줍니다.",
+        "기기 배송비부터 체험 교재까지 전액 0원으로 태블릿 학습의 호불호와 학습 효과를 사전 검증할 수 있습니다."
+      ],
+      "buyingGuide": {
+        "pros": "한글 떼기 사교육비 부담을 줄여주며 체계적인 누리과정 연계 커리큘럼 제공.",
+        "considerations": "7일 무료체험 종료 후 무료 반납 택배 기사님이 직접 방문 수거하므로 부담 없음.",
+        "recommendedBaby": "유치원 입학을 앞두고 한글과 숫자에 호기심을 보이기 시작한 4~6세 아이."
+      },
+      "momReviews": [
+        "학습지 방문 선생님 부르기엔 부담스러웠는데, 밀크티 동화 보면서 혼자 '가나다'를 따라 쓰더니 한글을 뗐어요.",
+        "교재 퀄리티가 너무 좋아서 무료체험만으로도 값어치를 톡톡히 했습니다. 아이가 패드 공부 시간을 놀이로 생각해요.",
+        "선생님이 전화로 아이 진도 칭찬해 주시니까 아이가 어깨 으쓱해하며 스스로 패드 켜고 공부합니다."
+      ],
+      "summary": "한글·수학·동화·영어까지 전용 태블릿과 체험 교재 집앞 무료배송 및 1:1 맞춤 학습케어"
     },
     {
       "id": "prod_ch_nut_1",
@@ -2284,13 +3124,37 @@
       "priceNum": 34500,
       "rating": 4.9,
       "reviewCount": 10450,
-      "thumbnail": "📈",
+      "thumbnail": "src/images/products/prod_ch_nut_1.webp",
       "badgeText": "🚀 골든타임 성장 베스트",
       "description": "2차 성징 사춘기 전후 급성장기(PHV) 골밀도 강화 및 성장판 닫힘 지연 somatostatin 억제 영양",
-      "benefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
-      "testBenefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
+      "benefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
+      "testBenefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
       "url": "https://www.coupang.com/np/search?q=%EC%B2%AD%EC%86%8C%EB%85%84+%ED%82%A4%EC%84%B1%EC%9E%A5+%EC%B9%BC%EC%8A%98+%EB%A7%88%EA%B7%B8%EB%84%A4%EC%8A%88+D3+K2&channel=user&lptag=AF7865143",
-      "affiliateUrl": "https://www.coupang.com/np/search?q=%EC%B2%AD%EC%86%8C%EB%85%84+%ED%82%A4%EC%84%B1%EC%9E%A5+%EC%B9%BC%EC%8A%98+%EB%A7%88%EA%B7%B8%EB%84%A4%EC%8A%88+D3+K2&channel=user&lptag=AF7865143"
+      "affiliateUrl": "https://www.coupang.com/np/search?q=%EC%B2%AD%EC%86%8C%EB%85%84+%ED%82%A4%EC%84%B1%EC%9E%A5+%EC%B9%BC%EC%8A%98+%EB%A7%88%EA%B7%B8%EB%84%A4%EC%8A%88+D3+K2&channel=user&lptag=AF7865143",
+      "image": "src/images/products/prod_ch_nut_1.webp",
+      "imageFallback": "src/images/products/prod_ch_nut_1.svg",
+      "specs": [
+        "뼈 성장판 기질(Matrix) 형성을 돕는 비타민K2(MK-7) + 비타민D3 시너지 배합",
+        "사춘기 급성장기(PHV) 골밀도 강화를 위한 고순도 해조 칼슘 & 쌀 발효 마그네슘",
+        "칼슘이 혈관에 쌓이지 않고 뼈로 바로 흡수되도록 유도하는 특허 기술",
+        "알약을 못 삼키는 초중등 청소년도 부담 없이 씹어 먹는 상큼한 코코아맛 츄어블"
+      ],
+      "whyWePicked": [
+        "사춘기 급성장기(연간 8~12cm 성장)는 평생 골밀도의 40%가 완성되는 단 한 번의 골든타임입니다.",
+        "비타민 K2가 칼슘을 뼈 속 오스테오칼신 단백질과 결합시켜 뼈의 종적 성장을 촉진합니다.",
+        "학업 스트레스와 수면 부족으로 인한 뼈 성장판 조기 폐쇄를 방지하는 영양 균형을 완성합니다."
+      ],
+      "buyingGuide": {
+        "pros": "목넘김 힘든 큰 알약 대신 맛있는 츄어블정으로 매일 꾸준한 복용 가능.",
+        "considerations": "저녁 식사 직후 또는 취침 1시간 전 섭취 시 야간 성장호르몬 분비와 결합되어 효과 배가.",
+        "recommendedBaby": "2차 성징 징후가 나타나기 시작했거나 키가 또래보다 더디게 자라는 7~15세 청소년."
+      },
+      "momReviews": [
+        "초등학교 고학년 되면서 알약 못 먹는 아들 때문에 고민이었는데, 이건 씹어먹는 츄어블이라 매일 알아서 챙겨 먹어요.",
+        "성장판 검사하고 의사선생님이 K2 같이 든 칼슘제 먹이라 하셔서 골랐는데 1년 동안 8cm 훌쩍 컸습니다.",
+        "마그네슘 덕분인지 밤에 다리 쥐나는 것도 없어지고 아침에 일어날 때 개운해해요."
+      ],
+      "summary": "2차 성징 사춘기 전후 급성장기(PHV) 골밀도 강화 및 성장판 닫힘 지연 somatostatin 억제 영양"
     },
     {
       "id": "prod_ch_nut_2",
@@ -2306,13 +3170,37 @@
       "priceNum": 37800,
       "rating": 4.9,
       "reviewCount": 26800,
-      "thumbnail": "🐟",
-      "badgeText": "🌿 iHerb 전두엽 두뇌 1위",
+      "thumbnail": "src/images/products/prod_ch_nut_2.webp",
+      "badgeText": "🌿 글로벌 두뇌영양 1위",
       "description": "초등학생 전두엽 실행 집중력, 작업기억 용량 및 시각 피로 완화를 위한 노르웨이산 rTG 오메가3",
-      "benefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
-      "testBenefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
+      "benefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
+      "testBenefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
       "url": "https://kr.iherb.com/pr/nordic-naturals-daily-omega-kids-natural-fruit-flavor-500-mg-30-soft-gels/4181?rcode=IPZ1547",
-      "affiliateUrl": "https://kr.iherb.com/pr/nordic-naturals-daily-omega-kids-natural-fruit-flavor-500-mg-30-soft-gels/4181?rcode=IPZ1547"
+      "affiliateUrl": "https://kr.iherb.com/pr/nordic-naturals-daily-omega-kids-natural-fruit-flavor-500-mg-30-soft-gels/4181?rcode=IPZ1547",
+      "image": "src/images/products/prod_ch_nut_2.webp",
+      "imageFallback": "src/images/products/prod_ch_nut_2.svg",
+      "specs": [
+        "초등학생 전두엽 실행 집중력 및 작업기억 향상을 위한 고순도 DHA 480mg",
+        "흡수율과 생체 이용률이 가장 우수한 천연 rTG 형태 피쉬 오일 100%",
+        "중금속·미세플라스틱 걱정 없는 남태평양 소형 어종(멸치·정어리)만 포획 정제",
+        "입안에서 톡 터뜨려 먹거나 꿀꺽 삼킬 수 있는 천연 베리향 미니 소프트젤"
+      ],
+      "whyWePicked": [
+        "초등 시기 본격적인 학업과 독서에 필요한 전두엽 주의집중력 회로를 강화합니다.",
+        "스마트폰과 태블릿 학습으로 피로해진 아이들의 안구 망막 건조와 시력을 보호합니다.",
+        "산패도 및 순도 검사에서 세계 3대 인증(IFOS 5-Star)을 획득한 글로벌 최고 등급 오메가3입니다."
+      ],
+      "buyingGuide": {
+        "pros": "소프트젤 크기가 쌀알만 해서 초등학생이 목넘김에 부담 없이 쉽게 삼킬 수 있음.",
+        "considerations": "오메가3는 지용성이므로 식사 도중이나 기름진 식사 직후 복용 시 흡수율 최고.",
+        "recommendedBaby": "산만해서 책상에 15분 이상 앉아있기 힘들어하거나 눈을 자주 깜빡이는 7~12세 아이."
+      },
+      "momReviews": [
+        "젤 크기가 아주 작아서 알약 처음 삼켜보는 초등 2학년 아이도 물 한 모금에 쏙 잘 삼킵니다.",
+        "비린내에 엄청 예민한 아이인데 딸기향이 솔솔 나서 거부감 없이 2년째 매일 먹이고 있어요.",
+        "선생님께서 수업 시간에 딴청 피우는 게 눈에 띄게 줄고 책 읽을 때 집중하는 시간이 길어졌다고 칭찬해 주셨어요."
+      ],
+      "summary": "초등학생 전두엽 실행 집중력, 작업기억 용량 및 시각 피로 완화를 위한 노르웨이산 rTG 오메가3"
     },
     {
       "id": "prod_ch_dev_1",
@@ -2328,13 +3216,37 @@
       "priceNum": 58000,
       "rating": 4.9,
       "reviewCount": 4210,
-      "thumbnail": "🧪",
+      "thumbnail": "src/images/products/prod_ch_dev_1.webp",
       "badgeText": "🚀 초등 STEAM 교구 1위",
       "description": "위치·운동에너지 역학 법칙을 온몸으로 체험하며 스마트폰 중독 도파민을 이겨내는 과학 마블런",
-      "benefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
-      "testBenefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
-      "url": "https://www.coupang.com/np/search?q=%EA%B7%B8%EB%9E%98%EB%Bi%ED%8A%B8%EB%9E%99%EC%8A%A4+%EC%8A%A4%ED%83%80%ED%84%B0%ED%8C%A9&channel=user&lptag=AF7865143",
-      "affiliateUrl": "https://www.coupang.com/np/search?q=%EA%B7%B8%EB%9E%98%EB%Bi%ED%8A%B8%EB%9E%99%EC%8A%A4+%EC%8A%A4%ED%83%80%ED%84%B0%ED%8C%A9&channel=user&lptag=AF7865143"
+      "benefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
+      "testBenefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
+      "url": "https://www.coupang.com/np/search?q=%EA%B7%B8%EB%9E%98%EB%B9%84%ED%8A%B8%EB%9E%99%EC%8A%A4+%EC%8A%A4%ED%83%80%ED%84%B0%ED%8C%A9&channel=user&lptag=AF7865143",
+      "affiliateUrl": "https://www.coupang.com/np/search?q=%EA%B7%B8%EB%9E%98%EB%B9%84%ED%8A%B8%EB%9E%99%EC%8A%A4+%EC%8A%A4%ED%83%80%ED%84%B0%ED%8C%A9&channel=user&lptag=AF7865143",
+      "image": "src/images/products/prod_ch_dev_1.webp",
+      "imageFallback": "src/images/products/prod_ch_dev_1.svg",
+      "specs": [
+        "중력, 자기력, 운동역학 법칙을 직접 트랙을 설계하며 체득하는 STEAM 교구 1위",
+        "자석 대포, 스파이럴 트랙, 높낮이 타일 등 100개 이상의 다채로운 컴포넌트",
+        "스마트폰 게임의 단순 도파민을 대체하는 고차원 입체 문제해결력 프로젝트",
+        "독일 라벤스부르거 정품 제조 및 전 세계 수많은 영재 교육 기관 공식 채택"
+      ],
+      "whyWePicked": [
+        "구슬이 목표 지점까지 멈추지 않고 도달하도록 실패와 수정을 거치며 회복탄력성을 기릅니다.",
+        "초등 과학 교과서에 나오는 위치에너지-운동에너지 전환 원리를 손끝으로 직관적 이해합니다.",
+        "스스로 레일 각도와 타이밍을 계산하며 뇌의 기획·실행 기능(Executive Function)을 발달시킵니다."
+      ],
+      "buyingGuide": {
+        "pros": "확장팩(트랙커, 루프 등)을 추가해 거실 전체를 롤러코스터 과학실험실로 무한 확장 가능.",
+        "considerations": "작은 쇠구슬이 포함되어 있으므로 만 3세 미만 영유아가 있는 가정은 분리 보관.",
+        "recommendedBaby": "레고나 과학 실험을 좋아하고 스마트폰 게임 시간을 줄이고 싶은 7~12세 초등학생."
+      },
+      "momReviews": [
+        "방학 동안 게임기만 붙잡고 살던 아들이 그래비트랙스 펼쳐놓고 서너 시간 동안 꼼짝 않고 트랙 설계에 몰입하네요.",
+        "구슬이 왜 중간에 멈췄는지 원인을 찾고 각도를 고치면서 생각하는 힘이 부쩍 자란 게 느껴집니다.",
+        "아빠랑 아이가 머리 맞대고 신기록 세우며 협동 놀이하기에 이것만 한 교구가 없어요. 초등 입학 선물로 강력 추천합니다."
+      ],
+      "summary": "위치·운동에너지 역학 법칙을 온몸으로 체험하며 스마트폰 중독 도파민을 이겨내는 과학 마블런"
     },
     {
       "id": "prod_ch_gear_1",
@@ -2350,13 +3262,37 @@
       "priceNum": 89000,
       "rating": 4.8,
       "reviewCount": 6890,
-      "thumbnail": "🪑",
+      "thumbnail": "src/images/products/prod_ch_gear_1.webp",
       "badgeText": "🚀 숨은 키 2cm 보존",
       "description": "구부정한 척추 디스크 압박을 해소하여 숨은 키 1.8~2.2cm를 찾아주는 듀얼 요추 서포트 의자",
-      "benefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
-      "testBenefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
+      "benefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
+      "testBenefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
       "url": "https://www.coupang.com/np/search?q=%EC%B4%88%EB%93%B1+%EC%B2%99%EC%B6%94+%EC%9D%98%EC%9E%90+%EB%8F%85%EC%84%9C%EB%8C%80&channel=user&lptag=AF7865143",
-      "affiliateUrl": "https://www.coupang.com/np/search?q=%EC%B4%88%EB%93%B1+%EC%B2%99%EC%B6%94+%EC%9D%98%EC%9E%90+%EB%8F%85%EC%84%9C%EB%8C%80&channel=user&lptag=AF7865143"
+      "affiliateUrl": "https://www.coupang.com/np/search?q=%EC%B4%88%EB%93%B1+%EC%B2%99%EC%B6%94+%EC%9D%98%EC%9E%90+%EB%8F%85%EC%84%9C%EB%8C%80&channel=user&lptag=AF7865143",
+      "image": "src/images/products/prod_ch_gear_1.webp",
+      "imageFallback": "src/images/products/prod_ch_gear_1.svg",
+      "specs": [
+        "구부정한 등과 거북목을 지지해 숨은 키 1.8~2.2cm를 찾아주는 듀얼 요추 백레스트",
+        "키 110cm부터 170cm까지 신장 성장에 맞춰 조절 가능한 좌판 깊이 & 등받이 높이",
+        "무릎 연골 압박을 분산시키는 탈부착형 원형 발받침대 기본 장착",
+        "1단~6단 각도 조절 친환경 대나무 원목 거북목 방지 와이드 독서대 세트"
+      ],
+      "whyWePicked": [
+        "의자에 앉았을 때 발이 공중에 뜨면 골반이 틀어지므로 발받침대로 하체 안정성을 잡았습니다.",
+        "듀얼 등받이가 척추 좌우를 감싸주어 척추측만증과 디스크 압박을 분산시킵니다.",
+        "고개를 숙이지 않는 45도 독서대 각도로 경추 C자 커브를 보존하고 시력 저하를 방지합니다."
+      ],
+      "buyingGuide": {
+        "pros": "발받침대와 높낮이 조절로 초등학교 입학부터 중학교 졸업까지 6년 이상 장기 사용 가능.",
+        "considerations": "책상 높이와 의자 높이를 맞춰 팔꿈치 각도가 90도가 되도록 세팅할 것.",
+        "recommendedBaby": "책상에 앉으면 턱을 괴거나 다리를 꼬고 구부정하게 엎드려 공부하는 7~13세 아동."
+      },
+      "momReviews": [
+        "발이 땅에 안 닿아서 의자 위에서 뱅글뱅글 돌며 산만했던 아이가 발받침대 있는 의자로 바꾸니 바르게 딱 앉아있어요.",
+        "등받이가 허리를 쏙 받쳐줘서 구부정하던 자세가 꼿꼿해졌고, 독서대 덕분에 목 아프다는 소리가 쏙 들어갔습니다.",
+        "바퀴 회전 고정 기능이 있어 공부할 때 집중이 흐트러지지 않아 학습 태도 잡는 데 일등공신입니다."
+      ],
+      "summary": "구부정한 척추 디스크 압박을 해소하여 숨은 키 1.8~2.2cm를 찾아주는 듀얼 요추 서포트 의자"
     },
     {
       "id": "prod_ch_learn_1",
@@ -2372,13 +3308,37 @@
       "priceNum": 0,
       "rating": 4.9,
       "reviewCount": 16800,
-      "thumbnail": "📚",
+      "thumbnail": "src/images/products/prod_ch_learn_1.webp",
       "badgeText": "🎁 홈런 AI 10일 무료체험",
       "description": "초등 전과목 AI 학습기 + 학습 진단 검사 + 전과목 교재 100% 무료 증정 이벤트",
-      "benefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
-      "testBenefitCue": "구경 시 4대 정밀 진단 티켓 100% 무료 지급!",
+      "benefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
+      "testBenefitCue": "✨ 상세 확인 시 4대 정밀진단 즉시 무료 오픈 (잠금해제)",
       "url": "https://click.linkprice.com/click.php?m=home-learn&a=A100708867&l=0000",
-      "affiliateUrl": "https://click.linkprice.com/click.php?m=home-learn&a=A100708867&l=0000"
+      "affiliateUrl": "https://click.linkprice.com/click.php?m=home-learn&a=A100708867&l=0000",
+      "image": "src/images/products/prod_ch_learn_1.webp",
+      "imageFallback": "src/images/products/prod_ch_learn_1.svg",
+      "specs": [
+        "전국 초등학교 95% 교실 수업에서 사용하는 교과 연계 100% 디지털 콘텐츠",
+        "아이 수준별 학습 결손을 진단해 주는 AI 생활기록부 & 취약 단원 맞춤 처방",
+        "유해 사이트 완벽 차단 및 학습 전용 소프트웨어가 탑재된 전용 학습기 집앞 무료 배송",
+        "초등 전학년 국·수·사·과 전과목 교재 100% 무료 증정 이벤트 포함"
+      ],
+      "whyWePicked": [
+        "학교 수업 교과 진도와 똑같이 예습·복습할 수 있어 아이의 학교 시험 및 수행평가 자신감을 높입니다.",
+        "AI 튜터가 시선 추적과 문제 풀이 습관을 분석하여 공부 집중도와 메타인지 능력을 교정합니다.",
+        "10일 동안 전과목 콘텐츠를 무제한 체험할 수 있으며 배송비와 반납비까지 완전 0원 무료입니다."
+      ],
+      "buyingGuide": {
+        "pros": "과목별 학원비 수십만 원을 절약할 수 있는 올인원 홈스쿨링 시스템.",
+        "considerations": "10일 체험 후 만족하지 않을 경우 무료 반납 신청하면 택배 기사님이 방문 수거.",
+        "recommendedBaby": "초등 입학 후 기초 학력 및 매일 30분 스스로 공부하는 자기주도 학습 습관이 필요한 7~12세."
+      },
+      "momReviews": [
+        "아이가 학교에서 선생님이 틀어주시는 화면이랑 똑같다면서 신기해하며 스스로 켜고 문제를 풀어요.",
+        "수학 연산이랑 단원평가 대비가 잘 되어 있어서 학원 안 보내고도 학교 단원평가 100점 맞아왔습니다.",
+        "10일 무료체험 신청해서 받아보고 마음에 안 들면 편하게 반납할 수 있으니 부담 없이 시작해 보기 참 좋아요."
+      ],
+      "summary": "초등 전과목 AI 학습기 + 학습 진단 검사 + 전과목 교재 100% 무료 증정 이벤트"
     }
   ]
 };
@@ -177612,10 +178572,10 @@
   "metadata": {
     "db_name": "Taller Bio Labs — User Input Cohort & Autonomous Self-Improvement DB",
     "db_version": "2.4.0",
-    "last_updated_utc": "2026-10-23T11:41:44.028Z",
-    "total_records": 157,
+    "last_updated_utc": "2026-10-31T02:50:24.130Z",
+    "total_records": 159,
     "subject_mode_counts": {
-      "child": 118,
+      "child": 120,
       "self": 39
     },
     "gender_counts": {
@@ -177626,12 +178586,12 @@
       "1-3y": 22,
       "4-6y": 26,
       "7-9y": 29,
-      "10-12y": 47,
+      "10-12y": 49,
       "13-16y": 27,
       "17-20y": 6
     },
     "bottleneck_habit_frequencies": {
-      "late_sleep": 113,
+      "late_sleep": 115,
       "picky_eater": 61,
       "poor_posture": 58,
       "sedentary": 49,
@@ -177732,6 +178692,66 @@
     }
   },
   "records": [
+    {
+      "id": "USR-MVVT00ZM",
+      "timestamp": "2026-10-31T02:50:24.130Z",
+      "targetSubject": "child",
+      "gender": "boy",
+      "birthDateStr": "",
+      "exactMonths": 120,
+      "ageYears": 10,
+      "currentHeight": 137,
+      "currentWeight": 35.5,
+      "recentGrowth6m": 3.2,
+      "fatherHeight": 173.5,
+      "motherHeight": 160.5,
+      "tannerPhase": "phase_2",
+      "habits": [
+        "late_sleep"
+      ],
+      "cognitiveAxes": [
+        "science_nature"
+      ],
+      "region": "United States — Northeast (NY · NJ · MA · PA)",
+      "kdcaPercentile": 50,
+      "zScore": 0,
+      "mph": 173.5,
+      "unmanagedHeight": 171.2,
+      "optimizedHeight": 180.5,
+      "potentialGainCm": 7.2,
+      "isOwnerTest": false,
+      "parentFreeNote": ""
+    },
+    {
+      "id": "USR-MVVFG3DF",
+      "timestamp": "2026-10-30T20:30:59.091Z",
+      "targetSubject": "child",
+      "gender": "boy",
+      "birthDateStr": "",
+      "exactMonths": 120,
+      "ageYears": 10,
+      "currentHeight": 137,
+      "currentWeight": 35.5,
+      "recentGrowth6m": 3.2,
+      "fatherHeight": 173.5,
+      "motherHeight": 160.5,
+      "tannerPhase": "phase_2",
+      "habits": [
+        "late_sleep"
+      ],
+      "cognitiveAxes": [
+        "science_nature"
+      ],
+      "region": "United States — Northeast (NY · NJ · MA · PA)",
+      "kdcaPercentile": 50,
+      "zScore": 0,
+      "mph": 173.5,
+      "unmanagedHeight": 171.2,
+      "optimizedHeight": 180.5,
+      "potentialGainCm": 7.2,
+      "isOwnerTest": false,
+      "parentFreeNote": ""
+    },
     {
       "id": "USR-MVKWGIC7",
       "timestamp": "2026-10-23T11:41:44.028Z",
@@ -178741,9 +179761,9 @@
     "version": "1.0.0",
     "partner_id": "AF7865143",
     "ultimate_objective": "Maximize Coupang Partners Expected Commission Revenue + 24h Rocket Cart Halo Conversion",
-    "last_updated_kst": "2026-10-30 22:11:00 KST",
-    "total_episodes": 104,
-    "total_cumulative_reward": 5409,
+    "last_updated_kst": "2026-10-31 13:14:02 KST",
+    "total_episodes": 146,
+    "total_cumulative_reward": 6795,
     "exploration_rate_epsilon": 0.18,
     "ucb_exploration_constant_c": 1.414,
     "winning_category_arm": "growth_nutrition_repeat_cart",
@@ -178766,13 +179786,13 @@
   "cta_arms": {
     "arm_rocket_review": {
       "id": "arm_rocket_review",
-      "label": "🛒 쿠팡 로켓배송 최저가·실제 학부모 후기 확인 ↗",
+      "label": "🛒 쿠팡 로켓배송 혜택가·실제 학부모 후기 확인 ↗",
       "badge": "🚀 로켓와우 내일도착 · 학부모 실구매 후기 검증",
-      "alpha": 198.92,
+      "alpha": 337.52,
       "beta": 13.68,
       "impressions": 345,
-      "clicks": 76,
-      "cumulative_reward": 2228,
+      "clicks": 118,
+      "cumulative_reward": 3614,
       "ucb_score": 2.277
     },
     "arm_wow_tomorrow": {
@@ -178788,7 +179808,7 @@
     },
     "arm_cart_bundle": {
       "id": "arm_cart_bundle",
-      "label": "🎁 쿠팡 로켓 장바구니 특가 · 오늘 할인율 확인 ↗",
+      "label": "🎁 쿠팡 로켓 장바구니 추천 · 오늘 혜택가 확인 ↗",
       "badge": "💡 쿠팡 팁: 장바구니에 담아두면 생필품과 함께 로켓묶음할인!",
       "alpha": 26.52,
       "beta": 16.68,
@@ -178799,7 +179819,7 @@
     },
     "arm_spec_verified": {
       "id": "arm_spec_verified",
-      "label": "🔬 식약처·KC 인증 스펙 확인 및 쿠팡 최저가 보기 ↗",
+      "label": "🔬 식약처·KC 인증 스펙 확인 및 쿠팡 혜택가 보기 ↗",
       "badge": "🏅 식약처 건강기능식품 · KC 안전인증 스펙 통과",
       "alpha": 29.52,
       "beta": 15.68,
@@ -178830,11 +179850,11 @@
       "commission_multiplier": 1.65,
       "avg_order_value_krw": 38000,
       "cart_halo_multiplier": 2.2,
-      "alpha": 248.03,
+      "alpha": 421.25,
       "beta": 12.1,
       "impressions": 435,
-      "clicks": 83,
-      "cumulative_reward": 2739,
+      "clicks": 125,
+      "cumulative_reward": 4125,
       "ucb_score": 3.352,
       "priority_rank": 1
     },
@@ -178998,7 +180018,7 @@
   },
   "recent_reward_history": [
     {
-      "timestampKst": "2026-10-30 22:11:00 KST",
+      "timestampKst": "2026-10-31 13:14:02 KST",
       "armId": "growth_nutrition_repeat_cart",
       "ctaArm": "arm_rocket_review",
       "productName": "칼슴",
@@ -179006,7 +180026,7 @@
       "utmSource": "direct"
     },
     {
-      "timestampKst": "2026-10-30 22:10:39 KST",
+      "timestampKst": "2026-10-31 13:12:10 KST",
       "armId": "growth_nutrition_repeat_cart",
       "ctaArm": "arm_rocket_review",
       "productName": "칼슴",
@@ -179014,7 +180034,7 @@
       "utmSource": "direct"
     },
     {
-      "timestampKst": "2026-10-30 22:01:33 KST",
+      "timestampKst": "2026-10-31 11:58:50 KST",
       "armId": "growth_nutrition_repeat_cart",
       "ctaArm": "arm_rocket_review",
       "productName": "칼슴",
@@ -179022,7 +180042,7 @@
       "utmSource": "direct"
     },
     {
-      "timestampKst": "2026-10-30 21:59:48 KST",
+      "timestampKst": "2026-10-31 11:56:34 KST",
       "armId": "growth_nutrition_repeat_cart",
       "ctaArm": "arm_rocket_review",
       "productName": "칼슴",
@@ -179030,15 +180050,7 @@
       "utmSource": "direct"
     },
     {
-      "timestampKst": "2026-10-30 21:59:29 KST",
-      "armId": "growth_nutrition_repeat_cart",
-      "ctaArm": "arm_rocket_review",
-      "productName": "테스트 상품",
-      "reward": 33,
-      "utmSource": "direct"
-    },
-    {
-      "timestampKst": "2026-10-30 21:59:28 KST",
+      "timestampKst": "2026-10-31 11:44:17 KST",
       "armId": "growth_nutrition_repeat_cart",
       "ctaArm": "arm_rocket_review",
       "productName": "칼슴",
@@ -179046,7 +180058,7 @@
       "utmSource": "direct"
     },
     {
-      "timestampKst": "2026-10-30 21:54:50 KST",
+      "timestampKst": "2026-10-31 11:44:01 KST",
       "armId": "growth_nutrition_repeat_cart",
       "ctaArm": "arm_rocket_review",
       "productName": "칼슴",
@@ -179054,7 +180066,7 @@
       "utmSource": "direct"
     },
     {
-      "timestampKst": "2026-10-30 21:54:15 KST",
+      "timestampKst": "2026-10-31 11:42:07 KST",
       "armId": "growth_nutrition_repeat_cart",
       "ctaArm": "arm_rocket_review",
       "productName": "칼슴",
@@ -179062,7 +180074,7 @@
       "utmSource": "direct"
     },
     {
-      "timestampKst": "2026-10-30 21:53:49 KST",
+      "timestampKst": "2026-10-31 11:41:46 KST",
       "armId": "growth_nutrition_repeat_cart",
       "ctaArm": "arm_rocket_review",
       "productName": "칼슴",
@@ -179070,7 +180082,7 @@
       "utmSource": "direct"
     },
     {
-      "timestampKst": "2026-10-30 21:52:28 KST",
+      "timestampKst": "2026-10-31 11:25:27 KST",
       "armId": "growth_nutrition_repeat_cart",
       "ctaArm": "arm_rocket_review",
       "productName": "칼슴",
@@ -179078,7 +180090,7 @@
       "utmSource": "direct"
     },
     {
-      "timestampKst": "2026-10-30 21:51:51 KST",
+      "timestampKst": "2026-10-31 11:25:06 KST",
       "armId": "growth_nutrition_repeat_cart",
       "ctaArm": "arm_rocket_review",
       "productName": "칼슴",
@@ -179086,7 +180098,7 @@
       "utmSource": "direct"
     },
     {
-      "timestampKst": "2026-10-30 21:51:33 KST",
+      "timestampKst": "2026-10-31 11:17:59 KST",
       "armId": "growth_nutrition_repeat_cart",
       "ctaArm": "arm_rocket_review",
       "productName": "칼슴",
@@ -179094,7 +180106,7 @@
       "utmSource": "direct"
     },
     {
-      "timestampKst": "2026-10-30 21:46:36 KST",
+      "timestampKst": "2026-10-31 11:17:38 KST",
       "armId": "growth_nutrition_repeat_cart",
       "ctaArm": "arm_rocket_review",
       "productName": "칼슴",
@@ -179102,7 +180114,7 @@
       "utmSource": "direct"
     },
     {
-      "timestampKst": "2026-10-30 21:46:13 KST",
+      "timestampKst": "2026-10-31 11:08:14 KST",
       "armId": "growth_nutrition_repeat_cart",
       "ctaArm": "arm_rocket_review",
       "productName": "칼슴",
@@ -179110,7 +180122,7 @@
       "utmSource": "direct"
     },
     {
-      "timestampKst": "2026-10-30 21:44:22 KST",
+      "timestampKst": "2026-10-31 11:07:27 KST",
       "armId": "growth_nutrition_repeat_cart",
       "ctaArm": "arm_rocket_review",
       "productName": "칼슴",
@@ -179118,7 +180130,7 @@
       "utmSource": "direct"
     },
     {
-      "timestampKst": "2026-10-30 21:44:03 KST",
+      "timestampKst": "2026-10-31 10:56:51 KST",
       "armId": "growth_nutrition_repeat_cart",
       "ctaArm": "arm_rocket_review",
       "productName": "칼슴",
@@ -179126,7 +180138,7 @@
       "utmSource": "direct"
     },
     {
-      "timestampKst": "2026-10-30 21:33:31 KST",
+      "timestampKst": "2026-10-31 10:56:23 KST",
       "armId": "growth_nutrition_repeat_cart",
       "ctaArm": "arm_rocket_review",
       "productName": "칼슴",
@@ -179134,7 +180146,7 @@
       "utmSource": "direct"
     },
     {
-      "timestampKst": "2026-10-30 21:33:12 KST",
+      "timestampKst": "2026-10-31 10:53:50 KST",
       "armId": "growth_nutrition_repeat_cart",
       "ctaArm": "arm_rocket_review",
       "productName": "칼슴",
@@ -179142,7 +180154,7 @@
       "utmSource": "direct"
     },
     {
-      "timestampKst": "2026-10-30 21:30:35 KST",
+      "timestampKst": "2026-10-31 10:53:18 KST",
       "armId": "growth_nutrition_repeat_cart",
       "ctaArm": "arm_rocket_review",
       "productName": "칼슴",
@@ -179150,7 +180162,7 @@
       "utmSource": "direct"
     },
     {
-      "timestampKst": "2026-10-30 21:30:09 KST",
+      "timestampKst": "2026-10-31 10:50:55 KST",
       "armId": "growth_nutrition_repeat_cart",
       "ctaArm": "arm_rocket_review",
       "productName": "칼슴",
@@ -179158,7 +180170,7 @@
       "utmSource": "direct"
     },
     {
-      "timestampKst": "2026-10-30 21:27:19 KST",
+      "timestampKst": "2026-10-31 10:50:44 KST",
       "armId": "growth_nutrition_repeat_cart",
       "ctaArm": "arm_rocket_review",
       "productName": "칼슴",
@@ -179166,7 +180178,7 @@
       "utmSource": "direct"
     },
     {
-      "timestampKst": "2026-10-30 21:26:46 KST",
+      "timestampKst": "2026-10-31 10:50:21 KST",
       "armId": "growth_nutrition_repeat_cart",
       "ctaArm": "arm_rocket_review",
       "productName": "칼슴",
@@ -179174,7 +180186,7 @@
       "utmSource": "direct"
     },
     {
-      "timestampKst": "2026-10-30 21:24:35 KST",
+      "timestampKst": "2026-10-31 10:50:04 KST",
       "armId": "growth_nutrition_repeat_cart",
       "ctaArm": "arm_rocket_review",
       "productName": "칼슴",
@@ -179182,7 +180194,7 @@
       "utmSource": "direct"
     },
     {
-      "timestampKst": "2026-10-30 21:20:41 KST",
+      "timestampKst": "2026-10-31 10:49:59 KST",
       "armId": "growth_nutrition_repeat_cart",
       "ctaArm": "arm_rocket_review",
       "productName": "칼슴",
@@ -179190,7 +180202,7 @@
       "utmSource": "direct"
     },
     {
-      "timestampKst": "2026-10-30 21:15:33 KST",
+      "timestampKst": "2026-10-31 10:49:56 KST",
       "armId": "growth_nutrition_repeat_cart",
       "ctaArm": "arm_rocket_review",
       "productName": "칼슴",
@@ -179198,7 +180210,7 @@
       "utmSource": "direct"
     },
     {
-      "timestampKst": "2026-10-30 21:14:53 KST",
+      "timestampKst": "2026-10-31 10:49:06 KST",
       "armId": "growth_nutrition_repeat_cart",
       "ctaArm": "arm_rocket_review",
       "productName": "칼슴",
@@ -179206,7 +180218,7 @@
       "utmSource": "direct"
     },
     {
-      "timestampKst": "2026-10-30 21:14:30 KST",
+      "timestampKst": "2026-10-31 10:47:57 KST",
       "armId": "growth_nutrition_repeat_cart",
       "ctaArm": "arm_rocket_review",
       "productName": "칼슴",
@@ -179214,7 +180226,7 @@
       "utmSource": "direct"
     },
     {
-      "timestampKst": "2026-10-30 21:13:04 KST",
+      "timestampKst": "2026-10-31 10:47:54 KST",
       "armId": "growth_nutrition_repeat_cart",
       "ctaArm": "arm_rocket_review",
       "productName": "칼슴",
@@ -179222,7 +180234,7 @@
       "utmSource": "direct"
     },
     {
-      "timestampKst": "2026-10-30 21:05:57 KST",
+      "timestampKst": "2026-10-31 10:44:02 KST",
       "armId": "growth_nutrition_repeat_cart",
       "ctaArm": "arm_rocket_review",
       "productName": "칼슴",
@@ -179230,7 +180242,7 @@
       "utmSource": "direct"
     },
     {
-      "timestampKst": "2026-10-30 21:05:26 KST",
+      "timestampKst": "2026-10-31 10:43:36 KST",
       "armId": "growth_nutrition_repeat_cart",
       "ctaArm": "arm_rocket_review",
       "productName": "칼슴",
@@ -179238,7 +180250,7 @@
       "utmSource": "direct"
     },
     {
-      "timestampKst": "2026-10-30 21:04:08 KST",
+      "timestampKst": "2026-10-31 10:40:07 KST",
       "armId": "growth_nutrition_repeat_cart",
       "ctaArm": "arm_rocket_review",
       "productName": "칼슴",
@@ -179246,7 +180258,7 @@
       "utmSource": "direct"
     },
     {
-      "timestampKst": "2026-10-30 21:03:16 KST",
+      "timestampKst": "2026-10-31 10:39:34 KST",
       "armId": "growth_nutrition_repeat_cart",
       "ctaArm": "arm_rocket_review",
       "productName": "칼슴",
@@ -179254,7 +180266,7 @@
       "utmSource": "direct"
     },
     {
-      "timestampKst": "2026-10-30 17:49:44 KST",
+      "timestampKst": "2026-10-31 10:28:36 KST",
       "armId": "growth_nutrition_repeat_cart",
       "ctaArm": "arm_rocket_review",
       "productName": "칼슴",
@@ -179262,7 +180274,7 @@
       "utmSource": "direct"
     },
     {
-      "timestampKst": "2026-10-30 17:47:46 KST",
+      "timestampKst": "2026-10-31 10:27:29 KST",
       "armId": "growth_nutrition_repeat_cart",
       "ctaArm": "arm_rocket_review",
       "productName": "칼슴",
@@ -179270,7 +180282,7 @@
       "utmSource": "direct"
     },
     {
-      "timestampKst": "2026-10-28 17:19:46 KST",
+      "timestampKst": "2026-10-31 10:22:10 KST",
       "armId": "growth_nutrition_repeat_cart",
       "ctaArm": "arm_rocket_review",
       "productName": "칼슴",
@@ -179278,7 +180290,7 @@
       "utmSource": "direct"
     },
     {
-      "timestampKst": "2026-10-28 15:18:59 KST",
+      "timestampKst": "2026-10-31 10:16:06 KST",
       "armId": "growth_nutrition_repeat_cart",
       "ctaArm": "arm_rocket_review",
       "productName": "칼슴",
@@ -179286,7 +180298,7 @@
       "utmSource": "direct"
     },
     {
-      "timestampKst": "2026-10-28 13:22:47 KST",
+      "timestampKst": "2026-10-31 10:11:37 KST",
       "armId": "growth_nutrition_repeat_cart",
       "ctaArm": "arm_rocket_review",
       "productName": "칼슴",
@@ -179294,7 +180306,7 @@
       "utmSource": "direct"
     },
     {
-      "timestampKst": "2026-10-28 13:21:43 KST",
+      "timestampKst": "2026-10-31 10:09:07 KST",
       "armId": "growth_nutrition_repeat_cart",
       "ctaArm": "arm_rocket_review",
       "productName": "칼슴",
@@ -179302,7 +180314,7 @@
       "utmSource": "direct"
     },
     {
-      "timestampKst": "2026-10-28 09:37:29 KST",
+      "timestampKst": "2026-10-31 10:00:25 KST",
       "armId": "growth_nutrition_repeat_cart",
       "ctaArm": "arm_rocket_review",
       "productName": "칼슴",
@@ -179310,7 +180322,15 @@
       "utmSource": "direct"
     },
     {
-      "timestampKst": "2026-10-28 09:03:22 KST",
+      "timestampKst": "2026-10-31 09:56:31 KST",
+      "armId": "growth_nutrition_repeat_cart",
+      "ctaArm": "arm_rocket_review",
+      "productName": "칼슴",
+      "reward": 33,
+      "utmSource": "direct"
+    },
+    {
+      "timestampKst": "2026-10-31 09:54:58 KST",
       "armId": "growth_nutrition_repeat_cart",
       "ctaArm": "arm_rocket_review",
       "productName": "칼슴",

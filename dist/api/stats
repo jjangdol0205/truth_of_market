@@ -3,7 +3,7 @@
   "mode": "static",
   "analytics": {
     "today": {
-      "date": "2026-10-30",
+      "date": "2026-10-31",
       "uv": 0,
       "pv": 0,
       "diagnoses": {
@@ -15,16 +15,16 @@
       "recentClicks": []
     },
     "total": {
-      "uv": 81,
-      "pv": 86,
+      "uv": 82,
+      "pv": 88,
       "diagnoses": {
-        "total": 41,
-        "growth": 41,
-        "learning": 12
+        "total": 45,
+        "growth": 45,
+        "learning": 16
       },
-      "affiliateClicks": 532,
+      "affiliateClicks": 536,
       "productClicks": {
-        "growth": 234,
+        "growth": 238,
         "learning": 49,
         "byReferrer": {
           "direct": {
@@ -33,11 +33,11 @@
           }
         }
       },
-      "bots": 69,
+      "bots": 71,
       "recentClicks": [
         {
-          "id": "CLK-1793365860865-313",
-          "timestampKst": "2026-10-30 22:11:00 KST",
+          "id": "CLK-1793420042259-223",
+          "timestampKst": "2026-10-31 13:14:02 KST",
           "category": "growth",
           "platform": "coupang",
           "productName": "칼슴",

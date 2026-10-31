@@ -244,23 +244,23 @@
           '</a>' +
         '</div>' +
 
-        '<!-- 상품 C: 키즈핏 육아 쇼핑몰 (쿠팡파트너스 / 아이허브 / 육아 CPA) 클릭·구매 시 검사결과 0원 잠금해제 -->' +
+        '<!-- 상품 C: 키즈핏 육아 쇼핑몰 (공식 스토어 / 에디터 픽) 클릭·구매 시 검사결과 0원 잠금해제 -->' +
         '<div style="background:linear-gradient(135deg,#FFFBEB 0%,#FEF3C7 100%);border:2px solid #F59E0B;border-radius:16px;padding:13px 15px;margin-bottom:12px;">' +
           '<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;margin-bottom:6px;">' +
             '<div style="font-size:14px;font-weight:900;color:#92400E;">🛍️ ③ [육아몰 클릭 시 0원 잠금해제] 추천 육아템 확인하고 검사결과·워크북 바로 열기</div>' +
             '<span style="background:#D97706;color:#FFFFFF;font-size:11px;font-weight:900;padding:2px 8px;border-radius:999px;">클릭 즉시 검사결과 해금!</span>' +
           '</div>' +
-          '<p style="margin:0 0 9px;font-size:12px;color:#78350F;line-height:1.45;">별도 결제 없이 아래 <strong>키즈핏 육아 쇼핑몰(쿠팡 로켓배송 · 아이허브 영양제 · 연령별 교구/도서 CPA)</strong> 상품 중 하나만 클릭(또는 구매)하시면 <strong>맞춤 정밀 검사결과 전체와 A4 프린트 워크북이 즉시 무료로 잠금해제</strong>됩니다!</p>' +
+          '<p style="margin:0 0 9px;font-size:12px;color:#78350F;line-height:1.45;">별도 결제 없이 아래 <strong>키즈핏 육아 쇼핑몰(공식 판매처 · 혜택가 확인 · 연령별 교구/도서 공식몰)</strong> 상품 중 하나만 클릭(또는 구매)하시면 <strong>맞춤 정밀 검사결과 전체와 A4 프린트 워크북이 즉시 무료로 잠금해제</strong>됩니다!</p>' +
           '<div style="display:flex;flex-direction:column;gap:7px;">' +
             '<a id="kf-btn-sponsored-coupang-unlock" href="https://www.coupang.com/np/search?q=%EC%96%B4%EB%A6%B0%EC%9D%B4+%EA%B5%AC%EC%97%B0%EC%82%B0+%EC%96%B4%EA%B3%A8%EC%B9%BC%EC%8A%98+%EB%B9%84%ED%83%80%EB%AF%BCD3+%EB%AC%B4%EC%86%8C%EC%9D%8C+%EC%8B%9C%EA%B0%81%ED%83%80%EC%9D%B4%EB%A8%B8+%EC%9B%90%EB%AA%A9%EB%8F%85%EC%84%9C%EB%8C%80&channel=user&lptag=AF7865143" target="_blank" rel="noopener sponsored" style="display:block;text-align:center;background:#D97706;color:#FFFFFF;font-weight:900;font-size:13px;padding:10px 14px;border-radius:10px;text-decoration:none;box-shadow:0 4px 12px rgba(217,119,6,0.25);">' +
               '🚀 [쿠팡 로켓 육아몰] 연령별 키성장 영양제·공룡쿠키틀·독서대 확인하고 검사결과 열기 →' +
             '</a>' +
             '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:7px;">' +
               '<a id="kf-btn-sponsored-iherb-unlock" href="https://kr.iherb.com/search?kw=%EC%96%B4%EB%A6%B0%EC%9D%B4+%EC%95%84%EC%97%B0+%EB%B9%84%ED%83%80%EB%AF%BCD3+%EC%B9%BC%EC%8A%98&rcode=IPZ1547" target="_blank" rel="noopener sponsored" style="display:block;text-align:center;background:#15803D;color:#FFFFFF;font-weight:900;font-size:12.5px;padding:9px 12px;border-radius:10px;text-decoration:none;">' +
-                '🌿 [아이허브 직구몰] 아기 액상 아연·D3 확인하고 결과 열기 →' +
+                '🌿 [글로벌 공식 스토어] 아기 액상 아연·D3 확인하고 결과 열기 →' +
               '</a>' +
               '<a id="kf-btn-sponsored-cpa-unlock" href="https://www.yes24.com/Product/Search?domain=ALL&query=%EC%B4%88%EB%93%B1+%EB%AC%B8%ED%95%B4%EB%A0%A5+%EB%91%90%EB%87%8C%EB%B0%9C%EB%8B%AC" target="_blank" rel="noopener sponsored" style="display:block;text-align:center;background:#1E40AF;color:#FFFFFF;font-weight:900;font-size:12.5px;padding:9px 12px;border-radius:10px;text-decoration:none;">' +
-                '📚 [육아 도서·교구 CPA] 연령별 두뇌 워크북 확인하고 결과 열기 →' +
+                '📚 [육아 도서·교구 공식몰] 연령별 두뇌 워크북 확인하고 결과 열기 →' +
               '</a>' +
             '</div>' +
           '</div>' +
@@ -434,11 +434,11 @@
     mall.style.cssText = 'max-width:980px;margin:18px auto;padding:20px;border-radius:24px;background:#FFFFFF;border:2px solid #F59E0B;box-shadow:0 12px 32px rgba(15,23,42,0.08);font-family:"Pretendard",-apple-system,sans-serif;';
     mall.innerHTML =
       '<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:10px;">' +
-        '<span style="background:#FEF3C7;color:#B45309;border:1px solid #FCD34D;font-size:12px;font-weight:900;padding:4px 12px;border-radius:999px;">🛍️ KIDS-FIT 공식 육아 큐레이션 쇼핑몰 (쿠팡 로켓 · 아이허브 · 육아 CPA)</span>' +
+        '<span style="background:#FEF3C7;color:#B45309;border:1px solid #FCD34D;font-size:12px;font-weight:900;padding:4px 12px;border-radius:999px;">🛍️ KIDS-FIT 공식 육아 큐레이션 쇼핑몰 (공식 판매처 · 혜택가 확인)</span>' +
         '<span style="background:#DCFCE7;color:#15803D;font-size:12px;font-weight:900;padding:4px 12px;border-radius:999px;">🎁 상품 클릭/구경 시 맞춤 정밀 검사결과 &amp; A4 워크북 100% 무료 잠금해제!</span>' +
       '</div>' +
       '<h3 style="margin:0 0 6px;font-size:19px;font-weight:900;color:#0F172A;line-height:1.35;">우리 아이 성장·두뇌 맞춤 베스트 육아템 스토어 (클릭 시 정밀 진단 결과 즉시 열람)</h3>' +
-      '<p style="margin:0 0 14px;font-size:13px;color:#475569;line-height:1.5;">아래 연령·증상별 검증된 육아 필수템(쿠팡 파트너스 · 아이허브 · 도서/체험 CPA) 중 관심 있는 상품을 1회 클릭하시면 <strong>내 아이 1:1 정밀 검사결과 및 A4 코칭 워크북 잠금이 즉시 해제</strong>됩니다.</p>' +
+      '<p style="margin:0 0 14px;font-size:13px;color:#475569;line-height:1.5;">아래 연령·증상별 검증된 육아 필수템(공식 스토어 · 공식 판매처 · 에디터 픽) 중 관심 있는 상품을 1회 클릭하시면 <strong>내 아이 1:1 정밀 검사결과 및 A4 코칭 워크북 잠금이 즉시 해제</strong>됩니다.</p>' +
       '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(265px,1fr));gap:12px;">' +
         '<a class="kf-mall-unlock-item" href="https://www.coupang.com/np/search?q=%EC%96%B4%EB%A6%B0%EC%9D%B4+%EA%B5%AC%EC%97%B0%EC%82%B0+%EC%96%B4%EA%B3%A8%EC%B9%BC%EC%8A%98+%EB%B9%84%ED%83%80%EB%AF%BCD3&channel=user&lptag=AF7865143" target="_blank" rel="noopener sponsored" style="display:flex;flex-direction:column;justify-content:space-between;background:#FFFBEB;border:1.5px solid #FCD34D;border-radius:16px;padding:14px;text-decoration:none;color:#0F172A;">' +
           '<div><span style="background:#D97706;color:#FFF;font-size:11px;font-weight:900;padding:2px 8px;border-radius:999px;">🚀 쿠팡 로켓 BEST 1</span>' +
@@ -447,7 +447,7 @@
           '<div style="background:#D97706;color:#FFF;text-align:center;padding:9px;border-radius:10px;font-size:13px;font-weight:900;">쿠팡 로켓 확인하고 검사결과 잠금해제 →</div>' +
         '</a>' +
         '<a class="kf-mall-unlock-item" href="https://kr.iherb.com/search?kw=%EC%96%B4%EB%A6%B0%EC%9D%B4+%EC%95%84%EC%97%B0+%EB%B9%84%ED%83%80%EB%AF%BCD3+%EC%9C%A0%EC%82%B0%EA%B7%A0&rcode=IPZ1547" target="_blank" rel="noopener sponsored" style="display:flex;flex-direction:column;justify-content:space-between;background:#F0FDF4;border:1.5px solid #86EFAC;border-radius:16px;padding:14px;text-decoration:none;color:#0F172A;">' +
-          '<div><span style="background:#15803D;color:#FFF;font-size:11px;font-weight:900;padding:2px 8px;border-radius:999px;">🌿 아이허브 직구 BEST 2</span>' +
+          '<div><span style="background:#15803D;color:#FFF;font-size:11px;font-weight:900;padding:2px 8px;border-radius:999px;">🌿 글로벌 공식 스토어 BEST 2</span>' +
           '<div style="font-size:15px;font-weight:900;margin:8px 0 4px;">입 짧은 아기 액상 글루콘산 아연 &amp; D3</div>' +
           '<div style="font-size:12px;color:#14532D;margin-bottom:10px;">미각 세포 활성화로 고기·채소 편식 개선</div></div>' +
           '<div style="background:#15803D;color:#FFF;text-align:center;padding:9px;border-radius:10px;font-size:13px;font-weight:900;">아이허브 확인하고 검사결과 열기 →</div>' +

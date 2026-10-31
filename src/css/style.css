@@ -4253,3 +4253,462 @@ html[data-edition="global-paid"] select.form-input:focus {
     font-size: 0.9rem;
   }
 }
+
+
+/* ==========================================================================
+   31. KIDSFIT IN-APP PRODUCT DETAIL MODAL & DRAWER STYLES (R3)
+   ========================================================================== */
+.kf-card-thumb {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #F8FAFC;
+  margin-bottom: 0.65rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kf-card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.kf-product-card:hover .kf-card-thumb img {
+  transform: scale(1.05);
+}
+
+.kf-product-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.kf-product-modal-card {
+  background: #FFFFFF;
+  width: 100%;
+  max-width: 680px;
+  max-height: 90vh;
+  border-radius: 24px;
+  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.25), 0 0 0 1px rgba(226, 232, 240, 0.8);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  animation: kfModalScaleIn 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes kfModalScaleIn {
+  from { opacity: 0; transform: scale(0.96) translateY(12px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.kf-modal-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.4rem;
+  border-bottom: 1px solid #E2E8F0;
+  background: #FAF8F5;
+}
+
+.kf-modal-tagline {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.kf-modal-badge {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #1D4ED8;
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+}
+
+.kf-modal-stage-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #059669;
+  background: #ECFDF5;
+  border: 1px solid #A7F3D0;
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+}
+
+.kf-modal-category-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #6366F1;
+  background: #EEF2FF;
+  border: 1px solid #C7D2FE;
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+}
+
+.kf-modal-close-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.8rem;
+  line-height: 1;
+  color: #64748B;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+  border-radius: 8px;
+  transition: all 0.15s ease;
+}
+
+.kf-modal-close-btn:hover {
+  background: #F1F5F9;
+  color: #0F172A;
+}
+
+.kf-modal-body-scroll {
+  padding: 1.4rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.kf-modal-image-specs-grid {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.kf-modal-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kf-modal-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.kf-modal-specs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.kf-modal-title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0F172A;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+}
+
+.kf-modal-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.kf-modal-rating {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #D97706;
+}
+
+.kf-modal-price {
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: #1D4ED8;
+}
+
+.kf-modal-specs-box {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+}
+
+.kf-specs-heading {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #334155;
+}
+
+.kf-modal-specs-summary {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.kf-modal-specs-summary li {
+  font-size: 0.78rem;
+  color: #475569;
+  line-height: 1.45;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4rem;
+}
+
+.kf-spec-bullet {
+  color: #10B981;
+  font-weight: 900;
+  font-size: 0.85rem;
+  line-height: 1.2;
+}
+
+.kf-section-heading {
+  margin: 0 0 0.75rem 0;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #0F172A;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  letter-spacing: -0.01em;
+}
+
+.kf-why-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.kf-why-item {
+  background: #FAF8F5;
+  border: 1px solid #E8E2D9;
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+}
+
+.kf-why-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #1E3A8A;
+  background: #DBEAFE;
+  padding: 0.18rem 0.55rem;
+  border-radius: 6px;
+  margin-bottom: 0.35rem;
+}
+
+.kf-why-text {
+  margin: 0;
+  font-size: 0.82rem;
+  color: #334155;
+  line-height: 1.5;
+}
+
+.kf-guide-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.kf-guide-card {
+  padding: 0.85rem;
+  border-radius: 12px;
+  border: 1px solid #E2E8F0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.kf-guide-card.pros {
+  background: #ECFDF5;
+  border-color: #A7F3D0;
+}
+
+.kf-guide-card.cons {
+  background: #FFFBEB;
+  border-color: #FDE68A;
+}
+
+.kf-guide-card.baby {
+  background: #EFF6FF;
+  border-color: #BFDBFE;
+}
+
+.kf-guide-label {
+  font-size: 0.76rem;
+  font-weight: 800;
+  color: #1E293B;
+}
+
+.kf-guide-text {
+  margin: 0;
+  font-size: 0.78rem;
+  color: #475569;
+  line-height: 1.45;
+}
+
+.kf-reviews-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.kf-review-bubble {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 0.85rem 1.1rem;
+  position: relative;
+}
+
+.kf-review-quote-mark {
+  font-size: 1.6rem;
+  font-family: Georgia, serif;
+  color: #94A3B8;
+  line-height: 1;
+  display: block;
+  margin-bottom: -0.3rem;
+}
+
+.kf-review-text {
+  margin: 0 0 0.4rem 0;
+  font-size: 0.82rem;
+  color: #1E293B;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.kf-review-author {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #059669;
+}
+
+.kf-modal-sticky-footer {
+  position: sticky;
+  bottom: 0;
+  background: #FFFFFF;
+  border-top: 1px solid #E2E8F0;
+  padding: 0.85rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  box-shadow: 0 -8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.kf-modal-cta-tip {
+  font-size: 0.74rem;
+  font-weight: 800;
+  color: #1D4ED8;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+}
+
+.kf-modal-cta-btn {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  background: linear-gradient(135deg, #1D4ED8 0%, #2563EB 100%);
+  color: #FFFFFF;
+  font-size: 0.96rem;
+  font-weight: 800;
+  padding: 0.88rem 1.25rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(29, 78, 216, 0.28);
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.kf-modal-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(29, 78, 216, 0.36);
+  background: linear-gradient(135deg, #1E40AF 0%, #1D4ED8 100%);
+}
+
+@media (max-width: 768px) {
+  .kf-product-modal-backdrop {
+    align-items: flex-end;
+    padding: 0;
+  }
+  .kf-product-modal-card {
+    max-height: 92vh;
+    border-radius: 24px 24px 0 0;
+    animation: kfDrawerSlideUp 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  @keyframes kfDrawerSlideUp {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+  }
+  .kf-modal-image-specs-grid {
+    grid-template-columns: 1fr;
+  }
+  .kf-modal-image {
+    max-width: 220px;
+    margin: 0 auto;
+  }
+  .kf-guide-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Curation Select Shop Top Cleanup */
+.clinical-authority-pill,
+#hero-section > .hero-headline,
+#hero-section > .hero-subtitle,
+.clinical-survey-trust-bar {
+  display: none !important;
+}
+#hero-section.hero-section.compact-hero {
+  padding-top: 0.6rem !important;
+}
+
+/* =========================================================================
+   PURE CURATION SHOPPING MALL MAIN SCREEN & BACK-ROOM DIAGNOSIS LOUNGE
+   ========================================================================= */
+body:not(.studio-mode-active):not(.diagnosis-lounge-active) #dual-pillar-intro-showcase,
+body:not(.studio-mode-active):not(.diagnosis-lounge-active) #hero-monthly-products-only-bar,
+body:not(.studio-mode-active):not(.diagnosis-lounge-active) #hero-app-download-bar,
+body:not(.studio-mode-active):not(.diagnosis-lounge-active) #studio-utility-return-bar,
+body:not(.studio-mode-active):not(.diagnosis-lounge-active) #quick-presets-bar,
+body:not(.studio-mode-active):not(.diagnosis-lounge-active) #quiz-section,
+body:not(.studio-mode-active):not(.diagnosis-lounge-active) #results-dashboard,
+body:not(.studio-mode-active):not(.diagnosis-lounge-active) section[aria-label="아동발달 및 신체성장 학술 칼럼 아카이브"] {
+  display: none !important;
+}
+
+body.diagnosis-lounge-active #kidsfit-parenting-select-shop,
+body.studio-mode-active #kidsfit-parenting-select-shop {
+  display: none !important;
+}
+
+body:not(.diagnosis-lounge-active):not(.studio-mode-active) #kf-backroom-diagnosis-lounge {
+  display: none !important;
+}
+
+body.diagnosis-lounge-active #kf-backroom-diagnosis-lounge {
+  display: block !important;
+}
+

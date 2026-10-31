@@ -1448,7 +1448,20 @@
     window.TallerApp = KidsFitApp;
   }
   if (typeof global !== 'undefined' && typeof window === 'undefined') {
-    global.KidsFitApp = KidsFitApp;
+    
+  // Expose Modal Controllers on global
+  if (typeof window !== 'undefined') {
+    window.openKidsFitProductModal = window.openKidsFitProductModal || function(pid) {
+      var modal = document.getElementById('kf-product-detail-modal');
+      if (modal) modal.style.display = 'block';
+    };
+    window.closeKidsFitProductModal = window.closeKidsFitProductModal || function() {
+      var modal = document.getElementById('kf-product-detail-modal');
+      if (modal) modal.style.display = 'none';
+    };
+  }
+
+  global.KidsFitApp = KidsFitApp;
     global.TallerApp = KidsFitApp;
   }
 

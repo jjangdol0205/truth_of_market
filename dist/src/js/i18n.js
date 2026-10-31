@@ -21,7 +21,7 @@
     ko: {
       // Header & Brand
       'brand.title': 'KIDS-FIT',
-      'brand.tagline': '소아·청소년 신체 성장 · 골연령 및 신경인지 학습 정밀 진단 센터',
+      'brand.tagline': '프리미엄 육아 필수템 큐레이션 셀렉트샵 & 맞춤 발달 리포트',
       'trust.badge': 'Built on Official Standards: 질병관리청 소아청소년 성장도표 & 보건복지부 영유아 발달선별검사(K-DST) 기준 적용',
       'nav.auxology': '신체 성장 · 골연령 궤적',
       'nav.endocrinology': '성장호르몬 · 수면 · 임상 영양',
@@ -34,8 +34,8 @@
 
       // Hero (Psychological Hook + Clinical Authority + Immediate CTA)
       'hero.badge': '질병관리청(KDCA) 표준 성장도표 · 보건복지부 K-DST · 소아내분비·뇌인지 학술논문 3,894편 교차 검증',
-      'hero.headline': '<span class="hero-single-line">"설마 크겠지" 미루는 사이,</span><br><span class="hero-headline-highlight hero-single-line">아이의 성장판과 전두엽 골든타임은 매년 닫혀가고 있습니다</span>',
-      'hero.subtitle': '또래보다 작은 키와 줄어들지 않는 학습 격차, 유전 탓만은 아닙니다. 수면·영양·자세 결손에 묶여 있던 숨은 잠재키(+6.7cm)와 5각 두뇌 학습 병목을 성장판이 닫히기 전에 1분 설문 데이터로 확인하세요.',
+      'hero.headline': '<span class="hero-single-line">실패 없는 시기별 육아 필수템,</span><br><span class="hero-headline-highlight hero-single-line">선배맘과 발달 에디터가 깐깐하게 골랐습니다</span>',
+      'hero.subtitle': '신생아부터 학령기까지 꼭 필요한 정착템만 모았습니다. 관심 아이템의 상세 가이드를 확인하시면 우리 아이 1:1 발달·성장 리포트가 무료로 열립니다.',
       'nav.forWhom': '신체 성장 정밀 진단',
       'nav.services': '두뇌·학습 정밀 진단',
       'hero.cta.parent': '소아 신체 성장 · 최종 예상키 1분 진단 시작하기',

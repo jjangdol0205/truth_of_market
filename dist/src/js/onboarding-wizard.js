@@ -1895,6 +1895,7 @@
     if (typeof document === 'undefined') return;
     if (document.body && document.body.classList) {
       document.body.classList.remove('studio-mode-active');
+      document.body.classList.remove('diagnosis-lounge-active');
     }
     const quizSection = document.getElementById('quiz-section');
     if (quizSection) {
